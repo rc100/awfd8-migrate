@@ -1,0 +1,33 @@
+<?php
+/**
+ * THEME SPECIFIC PREPROCESS FUNCTIONS
+ */
+
+require_once dirname(__FILE__) . '/includes/theme.inc';
+
+function awf_preprocess_html(&$variables) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+  $current_path = \Drupal::service('path.current')->getPath();
+  $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+  $xuacompatible = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'http-equiv' => 'x-ua-compatible',
+      'content' => 'ie=edge',
+    ],
+  ];
+  $variables['page']['#attached']['html_head'][] = [$xuacompatible, 'x-ua-compatible'];
+}
+
+function awf_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+  }
+}
+
+
+

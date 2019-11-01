@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Structures | Styleguide</title>
+
+  <link rel="stylesheet" href="fabricator/css/fabricator.css">
+
+  <!-- toolkit styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- /toolkit styles -->
+
+  <!-- vendor scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- /vendor scripts -->
+</head>
+<body>
+<a href="#main" class="visually-hidden element-focusable skip-link" id="top">Skip to main content</a>
+
+<!-- fabricator icons -->
+<svg style="display: none;">
+  <symbol id="f-icon-code" viewBox="0 0 512 512">
+    <path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+  </symbol>
+  <symbol id="f-icon-notes" viewBox="0 0 512 512">
+    <path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+  </symbol>
+  <symbol id="f-icon-labels" viewBox="0 0 512 512">
+    <path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+  </symbol>
+  <symbol id="f-icon-menu" viewBox="0 0 512 512">
+    <path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+  </symbol>
+  <symbol id="f-icon-settings" viewBox="0 0 512 512">
+    <path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+  </symbol>
+</svg>
+<!-- /fabricator icons -->
+<!-- fabricator menu -->
+<div class="f-menu">
+  <div class="f-controls">
+    <div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+      <svg>
+        <use xlink:href="#f-icon-labels"/>
+      </svg>
+    </div>
+    <div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+      <svg>
+        <use xlink:href="#f-icon-notes"/>
+      </svg>
+    </div>
+    <div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+      <svg>
+        <use xlink:href="#f-icon-code"/>
+      </svg>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a href="index.html" class="f-menu__heading">Overview</a>
+    </li>
+
+    <li>
+      <a href="elements.html" class="f-menu__heading">Elements</a>
+      <ul>
+        <li>
+          <a href="elements.html#blockquote">Blockquote</a>
+        </li>
+        <li>
+          <a href="elements.html#button">Button</a>
+        </li>
+        <li>
+          <a href="elements.html#checkbox">Checkbox</a>
+        </li>
+        <li>
+          <a href="elements.html#headings">Headings</a>
+        </li>
+        <li>
+          <a href="elements.html#intro">Intro</a>
+        </li>
+        <li>
+          <a href="elements.html#lazysizes">Lazysizes</a>
+        </li>
+        <li>
+          <a href="elements.html#lists">Lists</a>
+        </li>
+        <li>
+          <a href="elements.html#paragraph">Paragraph</a>
+        </li>
+        <li>
+          <a href="elements.html#radio">Radio</a>
+        </li>
+        <li>
+          <a href="elements.html#select">Select</a>
+        </li>
+        <li>
+          <a href="elements.html#svg">Svg</a>
+        </li>
+        <li>
+          <a href="elements.html#table">Table</a>
+        </li>
+        <li>
+          <a href="elements.html#text-input">Text Input</a>
+        </li>
+        <li>
+          <a href="elements.html#textarea">Textarea</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="components.html" class="f-menu__heading">Components</a>
+      <ul>
+        <li>
+          <a href="components.html#1-navigation">Navigation</a>
+        </li>
+        <li>
+          <a href="components.html#2-sticky">Sticky</a>
+        </li>
+        <li>
+          <a href="components.html#accordion">Accordion</a>
+        </li>
+        <li>
+          <a href="components.html#carousel">Carousel</a>
+        </li>
+        <li>
+          <a href="components.html#map">Map</a>
+        </li>
+        <li>
+          <a href="components.html#modal">Modal</a>
+        </li>
+        <li>
+          <a href="components.html#read-more">Read More</a>
+        </li>
+        <li>
+          <a href="components.html#share">Share</a>
+        </li>
+        <li>
+          <a href="components.html#skip-links">Skip Links</a>
+        </li>
+        <li>
+          <a href="components.html#tabs">Tabs</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="structures.html" class="f-menu__heading">Structures</a>
+      <ul>
+        <li>
+          <a href="structures.html#block">Block</a>
+        </li>
+        <li>
+          <a href="structures.html#columns">Columns</a>
+        </li>
+        <li>
+          <a href="structures.html#equal-heights">Equal Heights</a>
+        </li>
+        <li>
+          <a href="structures.html#footer">Footer</a>
+        </li>
+        <li>
+          <a href="structures.html#form">Form</a>
+        </li>
+        <li>
+          <a href="structures.html#grid">Grid</a>
+        </li>
+        <li>
+          <a href="structures.html#header">Header</a>
+        </li>
+        <li>
+          <a href="structures.html#sidebar">Sidebar</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="animations.html" class="f-menu__heading">Animations</a>
+      <ul>
+        <li>
+          <a href="animations.html#loading-button">Loading Button</a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li>
+      <a href="pages.html" class="f-menu__heading">Pages</a>
+      <ul>
+        <li>
+          <a href="pages/home.html" target="_blank">Home</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <li>
+    <a href="docs.html" class="f-menu__heading">Docs</a>
+    <ul>
+      <li>
+        <a href="docs.html#javascript">Javascript</a>
+      </li>
+    </ul>
+  </li>
+</div>
+<!-- /fabricator menu -->
+<div class="f-container">
+  <div class="f-control-bar">
+    <div class="f-control f-menu-toggle">
+      <svg><use xlink:href="#f-icon-menu"/></svg>
+    </div>
+  </div>
+
+  <div id="main">
+    
+<div class="f-page-title" data-f-toggle="labels">Structures</div>
+
+
+<div class="f-item-group" id="block">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Block</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;block&quot;&gt;
+  	&lt;h2 class&#x3D;&quot;block-title&quot;&gt;Block Title&lt;/h2&gt;
+  	&lt;div class&#x3D;&quot;content&quot;&gt;
+  		&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+  			condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.&lt;/p&gt; &lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;button-link&quot;&gt;Button
+  			Link&lt;/a&gt;
+  	&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="block">
+  	<h2 class="block-title">Block Title</h2>
+  	<div class="content">
+  		<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+  			condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p> <a href="" class="button-link">Button
+  			Link</a>
+  	</div>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="columns">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Columns</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;column-wrapper twelve&quot;&gt;
+  	&lt;div class&#x3D;&quot;span-3&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-3&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-9&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-9&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-4&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-4&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-8&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-8&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-6&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-6&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-6&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-6&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-5&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-5&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-3 offset-1&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-3.offset-1&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;span-3&quot;&gt;
+  		&lt;h4 class&#x3D;&quot;title&quot;&gt;.span-3&lt;/h4&gt;
+  
+  		&lt;div style&#x3D;&quot;background: gray;height: 50px;width: 100%;&quot;&gt;&lt;/div&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="column-wrapper twelve">
+  	<div class="span-3">
+  		<h4 class="title">.span-3</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="span-9">
+  		<h4 class="title">.span-9</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="clearfix"></div>
+  	<div class="span-4">
+  		<h4 class="title">.span-4</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="span-8">
+  		<h4 class="title">.span-8</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="clearfix"></div>
+  	<div class="span-6">
+  		<h4 class="title">.span-6</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="span-6">
+  		<h4 class="title">.span-6</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="clearfix"></div>
+  	<div class="span-5">
+  		<h4 class="title">.span-5</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="span-3 offset-1">
+  		<h4 class="title">.span-3.offset-1</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="span-3">
+  		<h4 class="title">.span-3</h4>
+  
+  		<div style="background: gray;height: 50px;width: 100%;"></div>
+  	</div>
+  	<div class="clearfix"></div>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="equal-heights">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Equal Heights</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/eqheights.js in ./init-script.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;three-column-grid&quot;&gt;
+  	&lt;div class&#x3D;&quot;eqheight&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, perspiciatis!&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;eqheight&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloribus eius et necessitatibus nostrum temporibus tenetur, unde ut velit vero.&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;eqheight&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur consequatur dolore qui suscipit temporibus? Commodi ea eveniet, fugit laboriosam libero, magnam minima quam quis sequi similique veritatis vero!
+  		Deleniti!&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="three-column-grid">
+  	<div class="eqheight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, perspiciatis!</div>
+  	<div class="eqheight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloribus eius et necessitatibus nostrum temporibus tenetur, unde ut velit vero.</div>
+  	<div class="eqheight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur consequatur dolore qui suscipit temporibus? Commodi ea eveniet, fugit laboriosam libero, magnam minima quam quis sequi similique veritatis vero!
+  		Deleniti!</div>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="footer">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Footer</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;p class&#x3D;&quot;copyright&quot;&gt;@3000 All Rights Reserved.&lt;/p&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <p class="copyright">@3000 All Rights Reserved.</p>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="form">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Form</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;form action&#x3D;&quot;&quot;&gt;
+  	&lt;div class&#x3D;&quot;form-item&quot;&gt;
+  		&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input&lt;/label&gt;
+  		&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; /&gt; &lt;/div&gt;
+  	&lt;div class&#x3D;&quot;form-actions&quot;&gt;
+  		&lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;submit&quot;&gt; &lt;/div&gt;
+  &lt;/form&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <form action="">
+  	<div class="form-item">
+  		<label for="textInput">Text input</label>
+  		<input type="text" id="textInput" /> </div>
+  	<div class="form-actions">
+  		<input type="submit" value="submit"> </div>
+  </form>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="grid">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Grid</div>
+  </div>
+  <div class="f-item-group" id="grid.1-two-column-grid">
+    <div class="f-item-heading-group" data-f-toggle="labels">
+      <div class="f-item-heading-nested">Two Column Grid</div>
+      <div class="f-item-controls">
+        <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+          <svg><use xlink:href="#f-icon-code"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+      <pre><code class="language-markup">&lt;div class&#x3D;&quot;two-column-grid&quot;&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;1&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;2&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;3&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;4&lt;/p&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    <div class="f-item-preview">
+      <div class="two-column-grid">
+    	<div>
+    		<p>1</p>
+    	</div>
+    	<div>
+    		<p>2</p>
+    	</div>
+    	<div>
+    		<p>3</p>
+    	</div>
+    	<div>
+    		<p>4</p>
+    	</div>
+    </div>
+    </div>
+  </div>
+  <div class="f-item-group" id="grid.2-three-column-grid">
+    <div class="f-item-heading-group" data-f-toggle="labels">
+      <div class="f-item-heading-nested">Three Column Grid</div>
+      <div class="f-item-controls">
+        <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+          <svg><use xlink:href="#f-icon-code"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+      <pre><code class="language-markup">&lt;div class&#x3D;&quot;three-column-grid&quot;&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;1&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;2&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;3&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;4&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;5&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;6&lt;/p&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    <div class="f-item-preview">
+      <div class="three-column-grid">
+    	<div>
+    		<p>1</p>
+    	</div>
+    	<div>
+    		<p>2</p>
+    	</div>
+    	<div>
+    		<p>3</p>
+    	</div>
+    	<div>
+    		<p>4</p>
+    	</div>
+    	<div>
+    		<p>5</p>
+    	</div>
+    	<div>
+    		<p>6</p>
+    	</div>
+    </div>
+    </div>
+  </div>
+  <div class="f-item-group" id="grid.3-four-column-grid">
+    <div class="f-item-heading-group" data-f-toggle="labels">
+      <div class="f-item-heading-nested">Four Column Grid</div>
+      <div class="f-item-controls">
+        <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+          <svg><use xlink:href="#f-icon-code"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+      <pre><code class="language-markup">&lt;div class&#x3D;&quot;four-column-grid&quot;&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;1&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;div class&#x3D;&quot;example-breakout&quot;&gt;BREAKOUT&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;3&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;4&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;5&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;6&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;7&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;8&lt;/p&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    <div class="f-item-preview">
+      <div class="four-column-grid">
+    	<div>
+    		<p>1</p>
+    	</div>
+    	<div>
+    		<div class="example-breakout">BREAKOUT</div>
+    	</div>
+    	<div>
+    		<p>3</p>
+    	</div>
+    	<div>
+    		<p>4</p>
+    	</div>
+    	<div>
+    		<p>5</p>
+    	</div>
+    	<div>
+    		<p>6</p>
+    	</div>
+    	<div>
+    		<p>7</p>
+    	</div>
+    	<div>
+    		<p>8</p>
+    	</div>
+    </div>
+    </div>
+  </div>
+  <div class="f-item-group" id="grid.4-semantic-grid-css">
+    <div class="f-item-heading-group" data-f-toggle="labels">
+      <div class="f-item-heading-nested">Semantic Grid Css</div>
+      <div class="f-item-controls">
+        <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+          <svg><use xlink:href="#f-icon-code"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+      <pre><code class="language-markup">&lt;div class&#x3D;&quot;four-column-gridcss&quot;&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;1&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;2&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;3&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;4&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;5&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;example-larger&quot;&gt;
+    		&lt;p&gt;6&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;7&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;8&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div&gt;
+    		&lt;p&gt;9&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;example-position&quot;&gt;
+    		&lt;p&gt;10&lt;/p&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    <div class="f-item-preview">
+      <div class="four-column-gridcss">
+    	<div>
+    		<p>1</p>
+    	</div>
+    	<div>
+    		<p>2</p>
+    	</div>
+    	<div>
+    		<p>3</p>
+    	</div>
+    	<div>
+    		<p>4</p>
+    	</div>
+    	<div>
+    		<p>5</p>
+    	</div>
+    	<div class="example-larger">
+    		<p>6</p>
+    	</div>
+    	<div>
+    		<p>7</p>
+    	</div>
+    	<div>
+    		<p>8</p>
+    	</div>
+    	<div>
+    		<p>9</p>
+    	</div>
+    	<div class="example-position">
+    		<p>10</p>
+    	</div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="header">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Header</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;h2&gt;&lt;a href&#x3D;&quot;/&quot; id&#x3D;&quot;logo&quot;&gt;Site Name or logo&lt;/a&gt;&lt;/h2&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <h2><a href="/" id="logo">Site Name or logo</a></h2>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="sidebar">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Sidebar</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;!-- use sidebar class on body tag --&gt;
+  &lt;div class&#x3D;&quot;one-sidebar&quot;&gt;
+  	&lt;main id&#x3D;&quot;main&quot;&gt;
+  		&lt;section id&#x3D;&quot;content&quot;&gt;
+  			&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+  				condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;
+  		&lt;/section&gt;
+  		&lt;aside class&#x3D;&quot;sidebar&quot;&gt;
+  			&lt;p&gt;Morbi convallis turpis id nunc iaculis vulputate. Vestibulum sagittis pellentesque nisl blandit mattis. Morbi finibus tincidunt fringilla. Suspendisse enim sapien, ultricies sit amet accumsan in, tempus at massa.&lt;/p&gt;
+  		&lt;/aside&gt;
+  	&lt;/main&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <!-- use sidebar class on body tag -->
+  <div class="one-sidebar">
+  	<main id="main">
+  		<section id="content">
+  			<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+  				condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+  		</section>
+  		<aside class="sidebar">
+  			<p>Morbi convallis turpis id nunc iaculis vulputate. Vestibulum sagittis pellentesque nisl blandit mattis. Morbi finibus tincidunt fringilla. Suspendisse enim sapien, ultricies sit amet accumsan in, tempus at massa.</p>
+  		</aside>
+  	</main>
+  </div>
+  </div>
+</div>
+
+
+  </div>
+
+</div>
+<a href="#top" class="visually-hidden element-focusable skip-link" id="bottom">Back to Top</a>
+<script src="fabricator/js/fabricator.js"></script>
+
+<!-- custom scripts -->
+<script src="js/init-script.js"></script>
+<!-- /custom scripts -->
+
+</body>
+</html>

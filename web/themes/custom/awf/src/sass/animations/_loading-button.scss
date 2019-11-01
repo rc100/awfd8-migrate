@@ -1,0 +1,18 @@
+@mixin loading-button {
+    background-image: url(../images/loading.gif);
+    background-position: -50% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    transition: all 300ms; 
+    &.load-triggered {
+	    background-position: 50% 50%;
+	    color: transparent;
+  	}
+}
+%loading-button {
+	@include loading-button;
+}
+
+.loading-button {
+	@extend %loading-button;
+}

@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Content state highlighting.
+ *
+ * Provide styling to highlight unpublished state of content.
+ *
+ */
+
+.unpublished {
+  overflow: visible;
+  height: 0;
+  background-color: transparent;
+  color: #d8d8d8;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 75px;
+  line-height: 1;
+  font-weight: bold;
+}

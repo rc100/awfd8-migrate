@@ -1,0 +1,110 @@
+.f-item-group {
+  @include clearfix;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+  padding-bottom: 4.8rem;
+  border-bottom: 1px solid color(light);
+
+  > .f-item-hidden + .f-item-group {
+    margin-top: 0;
+  }
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  & ~ & {
+    margin-top: 0;
+  }
+
+  & > & {
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  // transition for fadein effect from viewport
+  transition: opacity 300ms ease 50ms;
+  &.transparent {
+    opacity: 0;
+  }
+}
+
+.f-item-code {
+  margin-top: 3.2rem;
+}
+
+.f-item-preview {
+  @include clearfix;
+}
+
+.f-item-border-bottom {
+  border-bottom: 1px solid color(light);
+}
+
+.f-item-heading-group {
+  @include clearfix;
+  margin-bottom: 3.2rem;
+  vertical-align: middle;
+}
+
+.f-item-heading-nested,
+.f-item-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.f-item-heading-nested {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.f-page-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.f-item-controls {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+
+  .f-control {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    float: left;
+
+    &:hover {
+      use {
+        fill: color(normal);
+      }
+    }
+
+    use {
+      fill: color(light);
+    }
+  }
+}
+
+.f-item-hidden {
+  display: none;
+}
+
+.f-item-notes {
+  font-size: 1.4rem;
+}

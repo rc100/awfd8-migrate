@@ -1,0 +1,665 @@
+/**
+* @file
+* Navigation styles.
+*
+* Define some global navigation styles.
+*
+*/
+.menu-toggle {
+  float: right;
+  margin-top: 32px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  vertical-align: middle;
+  transition: .5s ease-in-out;
+  background: transparent;
+  @include breakpoint($min1024) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    pointer-events: none;
+    &:nth-child(1) {
+      top: 6px;
+    }
+    &:nth-child(2) {
+      top: 14px;
+    }
+    &:nth-child(3) {
+      top: 22px;
+    }
+  }
+  &.open,
+  &:hover,
+  &:focus {
+    background: transparent;
+    span {
+      background: $awforangedark;      
+    }
+  }
+  .fixed & {
+    span {
+      background: $awfbrown;
+    }
+    &.open,
+    &:hover,
+    &:focus {
+      span {
+        background: $awforangedark;      
+      }
+    }    
+  }
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 14px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        top: 14px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+@supports (-webkit-overflow-scrolling: touch) {
+/*  .open-menu {
+    overflow:hidden;
+  }
+  body.open-menu {
+    position: fixed;
+  }
+  body.open-menu #page {
+    height: 100vh;
+    position: relative;
+  }*/
+}
+.sub-nav-toggle,
+.sub-nav-toggle-back,
+.sub-nav-toggle-back.menu-link {
+  display: none;
+}
+
+.header-section {
+  display: block;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  &.fixed {
+    background: $white;
+    transition: background .2s ease-in;
+    .logo {
+      background: url(../images/awf_logo_orange.svg) 0 0/100% no-repeat!important; 
+    }
+  }
+  .inner-wrapper {
+    @include breakpoint($min1024) {
+      padding: 0 60px!important;
+    }    
+  }
+  nav {
+    display: inline-block;
+    width: calc(100% - 144px);
+    vertical-align: top;
+  }
+  a.branding {
+    width: 140px;
+    height: 72px;
+    padding: 0;
+    margin: 15px 0 0;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    .logo {
+      width: 140px!important;
+      margin: 0!important;
+      height: 72px;
+      display: block;
+      position: relative;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: url(../images/awf_logo_custom.png) 0 0/100% no-repeat;
+    }
+  }
+  &-nav {
+    position: absolute;
+    top: 0;
+  }
+  nav.mobile-menu {
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    &.open {
+      overflow-x: hidden;
+      z-index: 100;
+      background: $white;
+    }
+    & > ul.menu{
+      width: 100%;
+      display: block;
+      float: right;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      & > li.menu-item {
+        > a {
+          display: block;
+        }
+        &:hover {
+          a.menu-link {
+            color: $awfbrown;
+          }
+        }
+      }
+      & > li.menu-item > a.sub-nav-toggle {
+        display: block;
+        width: 100%;
+        padding: .8rem 1rem 1rem 14rem;
+        position: absolute;
+        top: 0;
+      }
+      & > li.menu-item:nth-child(3) > a.sub-nav-toggle {
+        padding-left: 13rem;   
+      }
+    }
+
+    li {
+      position: static;
+    }
+    ul.menu-level-1 {
+    }
+    .menu-item {
+      position: relative;
+      float: left;
+      display: block;
+      transition: all .4s;
+      transition-timing-function: ease-out;
+      width: 100%;
+      a{
+        transition: all .4s;
+        transition-timing-function: ease-out;
+      }
+      .menu {
+        position: absolute;
+        background: $white;
+        float: left;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        padding: 0;
+        transition: all .4s;
+        transition-timing-function: ease-out;
+      }
+      .menu-link{
+        padding: 1rem 3rem;
+        display: inline-block;
+      }
+    }
+    a.sub-nav-toggle,
+    a.sub-nav-toggle-back {
+      @include icon-caret;
+      &:before {
+        @include icon(awf);
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 1px;
+      }
+    }
+    .menu-level-1 a.sub-nav-toggle,
+    .menu a.sub-nav-toggle-back {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      transition: all .2s;
+      transition-timing-function: ease-out;
+      border: 1px solid $awforangedark;
+      border-radius: 3px;
+      display: block;
+      padding: 1rem .5rem;
+      height: 33px;
+      text-align: center;
+      margin-bottom: 5px;
+      @include icon-caret;
+      &:before {
+        @include icon(awf);
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 1px;
+      }
+      &:hover {
+        background: $awforangedark;
+        color: $white;
+      }
+    }
+
+    // level 2 toggle
+    .menu-level-1 a.sub-nav-toggle {
+      position: absolute;
+      right: 2.5rem;
+      top: 0;
+      padding: 0;
+      width: 33px;
+      font-size: 0;
+      float: right;
+      padding: 1rem .5rem .5rem;  
+    }
+    .menu a.sub-nav-toggle-back {
+      padding: .4rem .5rem 0 2rem;
+      float: left;
+      left: 3rem;
+      font-size: 1.4rem;
+      &:before {
+        transform: rotate(180deg);
+        display: block;
+        position: absolute;
+        left: .5rem;
+        bottom: 1rem;
+      }
+    }
+    .subnav>.menu-item>.menu.open {
+      left: 0;
+      width: 100%;
+      position: relative;
+    }
+
+    .subnav>.menu-item>a.sub-nav-toggle {
+      left: auto;
+      right: 100%;
+    }
+
+    .subnav > a.sub-nav-toggle-back.open,
+    .subnav > .menu-item>a {
+      left: -100%;
+      position: absolute;
+    }
+  }
+}
+
+.mainnav {
+  background: none!important;
+  box-shadow: 0 0 !important;
+  @include breakpoint($min1024) {
+  
+  }
+  .container {
+    padding: 0!important;
+    @include breakpoint($min1024) {
+      padding: 0;
+    }
+    .row {
+      width: auto;
+      @include inner-wrapper;
+      margin: 0;
+      @include breakpoint($min1024) {
+        padding: 0 0 0 60px;
+        margin: 0;
+      }   
+      @include breakpoint($screen-max) {
+        margin: 0 auto;
+      }   
+    }
+  }
+  .icon-search {
+    font-size: 0;
+    position: absolute;
+    right: 65px;
+    top: 38px;
+    @include breakpoint($min1024) {
+      position: absolute;
+      right: 130px;
+      top: 41px;
+    }
+    &:before {
+      font-size: 1.9rem;
+      color: $white;
+    }
+    &, &:hover {
+      text-decoration: none;
+    }
+    &:hover {
+      transition: all .2s ease-in;
+      &:before {
+        color: $awforangedark;
+      }
+    }
+    .fixed & {
+      &:before {
+        color: $awfbrown;
+      }
+      &:hover {
+        &:before {
+          color: $awforangedark;
+        }
+      }
+
+    }
+  }
+  .search-block-form {
+    top: 88px;
+    right: -30px;
+    width: 100vw;
+    height: 59px;
+    display: none;
+    position: absolute;
+    background: $white;
+    &.is-open {
+      display: block;
+      @include breakpoint($min500) {
+        right: 32px;
+        width: 340px;
+      }
+      @include breakpoint($min1024) {
+        right: 110px;
+      }
+      &:after {
+        display: none;
+        content: none;
+      }
+      form {
+        margin: 0;
+      }
+      .form-item,
+      .form-actions {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .form-item {
+        margin-right: 0;
+        width: 76%;
+        padding: 4px;
+        margin-left: 20px;
+        @include breakpoint($min760) {
+          width: 82%;
+          margin-left: 0;
+        }
+        input {
+          font-size: 16px;
+          padding: 5px;
+          margin: 5px;
+          height: 40px;
+          border-top: transparent;
+          border-left: transparent;
+          border-right: transparent;
+          border-bottom: 1px solid $medgray;
+          &:focus {
+            background: $white;
+            border-bottom: 1px solid $medgray;
+          }
+
+        }
+      }
+      .form-actions.form-wrapper {
+        width: 13%;
+        margin: 10px 0 0;
+        position: relative;
+        input {
+          background: none;
+          position: absolute;
+          top: 0;
+          color: transparent;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+        &:before {
+          content: "GO";
+          font-size: 18px;
+          color: $awforangedark;
+          padding: 5px 16px;
+          font-weight: 700;
+          display: block;
+        }
+        &:hover,
+        &:focus {
+          &:before {
+            color: $awfbrown;
+          }
+        }
+      }
+    } 
+  }
+}
+
+.region-header {
+  height: 0; //set this all the time for mobile-first, then remove it for desktop
+  max-height: 0;
+  transition: max-height .6s;
+  transition-timing-function: ease-out;
+  position: absolute;
+  width: 100%;
+  display: none;
+  @include breakpoint($min1024) {
+    display: block;
+    height: auto;
+    max-height: none;
+    transition: none;
+    overflow: visible; // Needed for newsletter form dropdown - Casey
+    width: auto;
+    top: 2rem;
+    right: 0;
+    nav{
+      display: inline-block;
+      vertical-align: top;
+      margin-top: .5rem;
+    }
+    .sub-nav-toggle,
+    .sub-nav-toggle-back{
+      display: none
+    }
+  }
+  span,
+  a{
+    @include breakpoint($min1024) {
+      font-size: 12px;
+    }
+  }
+  li {
+    list-style-type: none;
+  }
+  &.mobile {
+    width: 100vw;
+    margin: 0;
+    top: 100px;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    overflow: hidden;
+    transition: max-height .6s;
+    transition-timing-function: ease-out;
+    .region-header {
+      width: 100%;
+    }
+    &.open {
+      overflow: visible;
+      display: block;
+      background: rgba($white, 1);
+      transition-timing-function: ease-out;
+    }
+  }
+  .menu--main {
+    //mobile + desktop
+    a.menu-link {
+      font-size: 1.9rem;
+      color: $awforangedark;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: .25s color ease-out;
+      &:hover {
+        color: $awfbrown;
+      }
+    }
+    //desktop
+    @include breakpoint($min1024) {
+      right: 0;
+      float: none;
+      margin: 0 auto;
+      padding: 0;
+      list-style-type: none;
+      position: fixed;
+      display: block;
+      left: 0;
+      width: 440px;
+      ul {
+        padding-left: 0;
+      }
+      & > .menu  > li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        span,
+        a{
+          font-size: 1.3rem;
+          text-transform: uppercase;
+          @include nav-item-link;
+        }
+        & > a {
+          color: $white;
+          font-weight: 700;
+          .fixed & {
+            @include nav-item-link;
+          }
+        }
+        &:first-child,
+        &:nth-child(3) {
+          & > a {
+            @include icon-caret-after;
+            &:after {
+              transform: rotate(90deg);
+              @include icon(awf);
+              font-size: 10px;
+              display: inline-block;
+              margin-left: 8px;
+              position: relative;
+              bottom: 1px;
+            }
+          }
+        }
+        & > ul {
+          padding: 10px 20px 20px;
+          width: 800px;
+          background: #fff;
+          position: fixed;
+          margin: 100px auto 0;
+          display: none;
+          left: 0;
+          right: 0;
+          top: -50px;
+          bottom: 0;
+          opacity: 0;
+
+          li a {
+            text-transform: none;
+            font-weight: 300;              
+          }
+          & > li {
+            display: inline-block;
+            vertical-align: top;
+            width: 22%;
+            + li {
+              margin-left: 4%;
+            }
+            & > a {
+              font-weight: 700;
+            }
+          }
+          a {
+            font-size: 1.4rem;
+          }
+        }
+        &:nth-child(3) {
+          & > ul {
+            width: 600px;
+          }
+          & > ul > li {
+            width: 30%;
+            margin-left: 0;
+            &:nth-child(3n+1) {
+              margin-left: 8%;
+            }
+
+          }
+        }
+      }
+      .menu-item--expanded.is-open {
+        & > ul.menu.level-0 {
+          display: table;
+          opacity: 1;
+          top: 0;
+          transition-property: top, left;
+          transition-duration: 2s, 1s;
+          transition-delay: 2s, 1s;
+        }
+      }
+    }  
+  }
+}
+.region-donate {
+  padding: 10px;
+  background: $white;
+  display: block;
+  @include breakpoint($min1024) {
+    background: transparent;
+    padding: 10px 0 0 0;
+  }
+}
+.donate {
+  display: block;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 9px 20px;
+  min-height: 38px;
+  cursor: pointer;
+  font-weight: 700;
+  background: $awforangedark;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  color: $white;
+    border: 1px solid $awforangedark;
+  &:focus,
+  &:hover,
+  &:active {
+    color: $awforangedark;
+    background: $white;
+  }
+  .mobile.open & {
+    &:focus,
+    &:hover,
+    &:active {
+     color: $awfbrown;
+      background: $awforangedark;
+    }    
+  }
+}

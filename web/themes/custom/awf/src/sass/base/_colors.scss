@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Color variables.
+ *
+ * Provide base color palette variables.
+ *
+ */
+
+// Define color variables.
+$black: #333;
+$ltblue: #96b4ce;
+$blue: #326cb1;
+$medblue: #2f6baa;
+$ltgray: rgb(237, 236, 233);
+$medgray: #666;
+$gray: #333;
+$owhite: #f2f2f2;
+$white: #fff;
+$awfred: rgb(198, 74, 70);
+$awforangedark: rgb(233,114,0);
+$awforange: rgb(231,114,31);
+$awfbrown: rgb(75, 62, 54);
+$awfwarmgray: rgb(199,196,187);
+$awfdarkgreen: rgb(50,154,148);
+$awfpink: rgb(137,37,84);
+$awfyellowshade: rgb(218, 217,212);
+
+
+// Define generic color variables.
+$dark: $black;
+$light: $owhite;
+$highlight: $awforangedark;
+
+// Define style swatches for the styleguide.
+/*.light {
+  border-color: $light;
+}
+.dark {
+  border-color: $dark;
+}
+.highlight {
+  border-color: $highlight;
+}
+*/

@@ -1,0 +1,77 @@
+/**
+* @file
+* Share link button styles.
+*
+* Define some global share link button styles.
+*
+*/
+
+/*.share-buttons {
+  top: 30%;
+  z-index: 10000;
+  width: 5rem;
+  @include breakpoint($tablet) {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+  }
+  .social-share {
+    display: block;
+    width: 5rem;
+    padding: 12px 0;
+    transition: 0.15s ease-out;
+    cursor: pointer;
+    @include breakpoint($tablet) {
+      float: left;
+    }
+    @include hover {
+      @media screen and (min-width: 911px) {
+        width: 6rem;
+      }
+    }
+    &.linkedin {
+      background-color: #0077b5;
+      @include hover {
+        background-color: #046293;
+      }
+    }
+    &.pinterest {
+      background-color: #bd081c;
+      @include hover {
+        background-color: #8c0615;
+      }
+    }
+    &.google {
+      background-color: #dd4b39;
+      @include hover {
+        background-color: #c23321;
+      }
+    }
+    &.twitter {
+      background-color: #55acee;
+      @include hover {
+        background-color: #2795e9;
+      }
+    }
+    &.facebook {
+      background-color: #3b5998;
+      @include hover {
+        background-color: #2d4373;
+      }
+    }
+    &.email {
+      background-color: #777;
+      @include hover {
+        background-color: #5e5e5e;
+      }
+    }
+    svg {
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0 auto;
+      fill: #fff;
+      stroke: none;
+    }
+  }
+}*/

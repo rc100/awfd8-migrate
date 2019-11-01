@@ -1,0 +1,17 @@
+/*
+!src/
+!fonts/
+!images/
+!favicon.ico
+!dist/
+!includes/
+!images/
+!.gitignore
+!gulpfile.js
+!npm-shrinkwrap.json
+!awf.*
+!package.json
+!README.md
+!screenshot.png
+!webpack.config.js
+!templates/

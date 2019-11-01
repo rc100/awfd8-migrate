@@ -1,0 +1,68 @@
+{
+  "name": "chief_toolkit",
+  "version": "1.1.0",
+  "description": "CHIEF boilerplate with Gulp, Webpack and Jquery Plugins",
+  "license": "ISC",
+  "main": "index.html",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp --dev",
+    "install": "gulp",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "author": "Agency Chief",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agencychief/toolkit"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=2.0.0"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.24.7",
+    "css-loader": "^0.25.0",
+    "del": "^2.2.2",
+    "fabricator-assemble": "^1.2.0",
+    "fancybox": "^3.0.0",
+    "file-loader": "^0.9.0",
+    "glob": "^7.1.2",
+    "gmaps-marker-clusterer": "^1.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-util": "^3.0.8",
+    "html-webpack-plugin": "^2.24.1",
+    "jquery": "^3.3.1",
+    "jquery-match-height": "^0.7.0",
+    "jquery-shorten-plus": "git://github.com/rayestrada/jquery.shorten.git",
+    "jquery.scrollto": "^2.1.2",
+    "jquery.viewport": "^1.0.1",
+    "js-cookie": "^2.1.3",
+    "lazysizes": "^4.0.0",
+    "load-google-maps-api-2": "^1.0.2",
+    "owl.carousel": "^2.2.0",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2",
+    "standardize-sass": "^1.0.0",
+    "sticky-kit": "git://github.com/leafo/sticky-kit.git",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.15.0"
+  },
+  "dependencies": {
+    "browserslist": "^4.1.0",
+    "graceful-fs": "^4.1.11",
+    "jquery-lazyload": "^1.9.7",
+    "less": "^2.7.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "minimatch": "^3.0.4",
+    "modernizr": "^3.6.0"
+  }
+}

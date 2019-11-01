@@ -1,0 +1,576 @@
+/**
+* @file
+* Form element styles.
+*
+*/
+
+// Fully prefixed placeholder styling.
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+// Global form styles
+form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  > * {
+    @include trim();
+  }
+}
+.form-item,
+.form-actions {
+  margin: 20px 0;
+}
+
+// Global label styles.
+label {
+  margin-bottom: 5px;
+  font-family: $sans;
+}
+
+// Global input styles.
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  min-width: 280px;
+  padding: 6px;
+/*  border: $border;*/
+  box-sizing: border-box;
+  outline: none;
+  font-family: $sans;
+  border-radius: 0;
+  -webkit-appearance:none;
+  -webkit-border-radius:0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  @extend %element-invisible;
+  + label {
+    position: relative;
+    display: inline;
+    box-sizing: border-box;
+    font-weight: normal;
+    cursor: pointer;
+    &:before {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-bottom: -2px;
+      margin-right: 8px;
+      overflow: hidden;
+      border: 1px solid $highlight;
+      content: '';
+    }
+    &.js-focus:before {
+      box-shadow: 0 0 5px #444;
+    }
+  }
+  &:checked + label {
+    &:before {
+      background-color: $highlight;
+    }
+  }
+}
+input[type="radio"] + label:before {
+  border-radius: 50%;
+}
+
+// Global select box styles.
+.selectlist {
+  position: relative;
+  display: inline-block;
+  border: 1px solid $ltgray;
+  background-clip: padding-box;
+  background-color: #eee;
+}
+select {
+  position: relative;
+  z-index: 2;
+  display: block;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  -moz-padding-end: 10px;
+  min-width: 200px;
+  border: 1px solid $ltgray;
+  border-radius: 0;
+  background-color: #eee;
+  font-family: $sans;
+  line-height: 1em;
+  appearance: none;
+  cursor: pointer;
+  .selectlist & {
+    float: left;
+    margin: 0;
+    border: none;
+    background: transparent;
+    background-color: transparent;
+    line-height: 14px;
+  }
+}
+
+// Global button styles.
+button,
+input[type="submit"],
+input[type="button"] {
+  @extend %button;
+}
+.block-webform-homepage-donate-form {
+  display: block;
+  background-color: $awfdarkgreen;
+
+  form {
+    @include form-body;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &:after {
+    @include form-body-after;
+    bottom: 0;
+    left: 0;
+    background: url('../../src/svg/pattern_Donate.svg') 0 0 repeat-y;
+    background-size: 600%;
+    opacity: .6;
+    transition: all .5s ease-in-out;
+    @supports not (-ms-high-contrast: none) {
+      mix-blend-mode: multiply;
+   }
+    @include breakpoint($min500) {
+      background-size: 330%;
+    }
+    @include breakpoint($min760) {
+      background-size: 160%;
+    }
+    @include breakpoint($min1024) {
+      background-size: 120%;  
+    }
+    @include breakpoint($min1200) {
+      background-size: 100%;  
+    }
+    @include breakpoint($min1320) {
+      background-size: 80%;  
+    }
+  }
+  .form-item {
+    margin: 0;
+    padding: 0;
+    &.form-type-webform-markup {
+      width: 100%;
+      @include breakpoint($min1024) {
+        margin: 0;
+        padding: 0 15% 0 0;
+        width: calc(100% - 348px);
+      }
+    }
+    &.form-type-number {
+      position: relative;
+      margin-right: 0;
+      margin-top: 17px;
+      width: 74px;
+      @include breakpoint($min400) {
+        width: 85px;
+      }
+      @include breakpoint($min1024) {
+        margin-top: 0;
+        width: 100px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 4rem;
+        background: $white;
+        position: absolute;
+        left: 1rem;
+        border-bottom: 1px solid $ltgray;
+        top: 4rem;
+        @include breakpoint($min400) {
+          top: 4rem;
+        }
+      }
+      .field-prefix {
+        display: inline-block;
+        float: none;
+        font-size: 1.6rem;
+        margin-top: 7px;
+        margin-right: 1px;
+        @include breakpoint($min400) {
+          margin-right: 3px;
+        } 
+        @include breakpoint($min1024) {
+          margin-right: 1px;
+        } 
+
+      }
+      input {
+        text-align: center;
+        display: inline-block;
+        min-width: auto;
+        background: none;
+        -moz-appearance: textfield;
+        border: none;
+        font-size: 1.6rem;
+        width: 4.5rem;
+        padding: 0;
+        @include breakpoint($min400) {
+          width: 5rem;
+        }              
+      
+        @include breakpoint($min1024) {
+          font-size: 1.8rem; 
+        }     
+      }
+    }
+    &.form-type-select {
+      width: 116px;
+      margin-right: 35px;
+      margin-top: 19px;
+      @include breakpoint($min1024) {
+        margin-top: 0;
+      }
+      select {
+        background: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid $ltgray;
+        min-width: unset;
+      }
+    }
+    .field-prefix {
+      color: $white;
+    }
+
+    h4 {
+      margin: 0;
+      color: $white;
+      @include form-body-h4;
+      line-height: 1.2;
+      font-weight: 300;
+    }
+  }
+  .form-actions.form-wrapper {
+    padding: 0;
+    margin-top: 20px;
+    @include breakpoint($min760) {
+      margin: 0;
+    }
+    @include breakpoint($min1024) {
+      width: 97px;
+      clear: none;
+    }
+    input.form-submit {
+      width: 97px;
+      font-size: 14px;
+      background: $awfbrown;
+      transition: all .5s ease-in-out;
+      margin-top: 0;
+      @include breakpoint($min760) {
+        margin-top: 20px;
+      }
+      @include breakpoint($min1024) {
+        margin-top: 0;
+      }
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $awfbrown;
+      }
+    }
+  }
+}
+
+.block-webform-newsletter {
+  background: $awfbrown;
+  form {
+    background: $awfbrown;
+    @include form-body;
+    @include breakpoint($min760) {
+      padding: 60px 0 85px;
+    }
+    @include breakpoint($min1024) {
+      padding: 60px;
+    }
+    &:after {
+      @include form-body-after;
+      bottom: 0;
+      @include breakpoint($min760) {
+        background: url('../../src/svg/pattern_EmailSignup.svg') 0 100% no-repeat;
+        left: 10%;
+        background-size: 120%;
+      }
+      @include breakpoint($min1024) {
+        left: 25%;
+        background-size: 75%;
+      } 
+      @include breakpoint($min1200) {
+        left: 30%;
+        background-size: 70%;
+      } 
+      @include breakpoint($min1320) {
+        left: 40%;
+        background-size: 60%;
+      } 
+    }    
+  }
+
+  .messages.error {
+    z-index: 1;
+    position: relative;
+    background: $awfbrown;
+    display: block;
+    left: 0;
+    right: 0;
+    border: 0;
+    text-align: center;
+    line-height: 1.4;
+    padding: 10px 7% 0;
+    margin: 0 auto -30px;
+    @include breakpoint($min760) {
+      padding: 30px 7% 0;
+      margin: 0 auto -70px;  
+    }
+    &, li, em, .placeholder {
+      color: $white;
+    }
+    ul {
+      @include inner-wrapper;
+      padding-top: 50px;
+      @include breakpoint($min1024) {
+        padding: 20px 60px 0 60px!important
+      }
+    }
+  }
+  .webform-client-form {
+    .ajax-progress-throbber {
+      right: -38px;
+      top: 0;
+    }
+  }
+  .webform-confirmation {
+    padding: 50px;
+    div {
+      color: $white;
+      z-index: 100;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 5%;
+      @include breakpoint($min760) {
+        max-width: 700px;
+        padding: 0 10% 0;
+      }
+      @include breakpoint($min1024) {
+        max-width: 1024px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    a {
+      @include button-orange;
+    }
+  }
+  .ajax-progress-throbber {
+    position: absolute;
+    .throbber {
+      background: url('../../src/svg/spinner-1s.svg') 0 0/100% no-repeat;
+      height: 30px;
+      margin: 5px;
+      width: 30px;
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 4000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 4000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 4000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+
+      animation-name: spin;
+      animation-duration: 4000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+.webform-submission-newsletter-form {
+  h4 {
+    @include form-body-h4;
+    font-style: normal;
+  }
+
+  input.form-submit {
+    @include button-orange;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 45px;
+    vertical-align: top;
+  }
+  .form-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+    @include breakpoint($min760) {
+      margin-top: 0;
+      margin-bottom: 0;
+      &.form-type-webform-markup {
+        width: 100%;
+      }
+      &.form-type-textfield {
+        width: 22%;
+        margin-right: 3.6%;
+      }
+      &.form-type-email {
+        width: 45%;
+      }
+    }
+    &.form-type-email {
+      @include breakpoint($min1024) {
+        width: 28%;
+        margin-right: 3%;
+      }
+      @include breakpoint($min1200) {
+        width: 31%;
+      }
+      @include breakpoint($min1320) {
+        width: 31%;
+      }
+    }
+    input[type='email'],
+    input[type='text'] {
+      background: transparent;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 1px solid $white;
+      width: 100%;
+      color: transparent;
+      font-size: 16px;
+      @include breakpoint($min760) {
+        min-width: 100%;
+      }
+    }
+    ::-webkit-input-placeholder {
+       color:transparent;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color:transparent; 
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color:transparent; 
+    }
+
+    :-ms-input-placeholder {  
+       color:transparent;
+    }
+    ::-ms-expand {
+      display: none!important
+    }
+    h4 {
+      margin: 0 0 20px;
+      @include breakpoint($min760) {
+        margin-bottom: 40px;
+      }
+    }
+    label.element-invisible,
+    .marker, 
+    .form-required{
+      color: $awfwarmgray;        
+      &::-ms-expand {
+        display: none!important
+      }
+    }
+    .form-required{
+      @include element-invisible-off;
+      overflow: visible;
+      display: block;
+      white-space: nowrap;
+      padding: 0;
+      margin: 0;
+      font-size: .85em;
+      font-weight: normal;
+      position: absolute!important;
+      left: 5px;
+      top: 7px;
+      z-index: -1;
+      -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+      transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    }
+
+    &.form-type-textfield.with-value input,
+    &.form-type-email.with-value input,
+    &.form-type-textfield input:focus,
+    &.form-type-email input:focus {
+      color: $white;
+      font-size: .85em;
+    }
+    &.form-type-textfield.with-value label,
+    &.form-type-email.with-value  label,
+    &.form-type-textfield:active label,
+    &.form-type-email:active  label,
+    &.form-type-textfield:hover label,
+    &.form-type-email:hover label,
+    &.form-type-textfield:focus label,
+    &.form-type-email:focus label{
+      top: -20px;
+      font-size: .55em;
+    }  
+
+  }
+  .form-actions.form-wrapper  {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    @include breakpoint($min1024) {
+      display: inline-block;
+      margin-top: -10px;
+      vertical-align: bottom;
+    }    
+  }
+}
+
+.webform-submission-newsletter-form,
+.webform-submission-homepage-donate-form-form {
+  @include form-body;
+/*  & > div {
+    @include breakpoint($min760) {
+      padding: 0;
+    }
+    @include breakpoint($min1024) {
+      padding: 0 60px;
+    }    
+  }*/
+  h2, 
+  h3 {
+    color: $white;
+  }
+}
