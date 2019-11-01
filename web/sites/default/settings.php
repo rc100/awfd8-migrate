@@ -36,3 +36,14 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'standard';
+$databases['default']['default'] = array (
+  'database' => 'drupal8',
+  'username' => 'drupal8',
+  'password' => 'drupal8',
+  'prefix' => '',
+  'host' => 'database',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = '6Ej1OJ2lV5kgF6B2mFq32KSFxly0K9ADDsH5yzlu6eTmVniVhg-Iob_Mx7WWKNkjnNsi2epidg';
