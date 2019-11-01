@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Styles are loosely organized using the SMACSS technique.
+ *
+ * Import Sass mixins, variables, modules, etc.
+ */
+
+// Add breakpoint mixins.
+@import "breakpoint";
+// Add standardize reset stylesheet.
+@import "standardize";
+// Add base settings.
+@import "base/base";
+// Add elements.
+@import "elements/elements";
+// Add components.
+@import "components/components";
+// Add structure styles.
+@import "structures/structures";
+// Add Animations
+@import "animations/animations";
+// Add print stylesheets
+@import "print";

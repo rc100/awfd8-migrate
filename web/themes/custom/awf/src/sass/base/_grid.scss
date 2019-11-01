@@ -1,0 +1,159 @@
+/**
+ * @file
+ * A column based grid solution using floats.
+ *
+ * Define variables and mixins to generate a grid.
+ *
+ */
+
+// Define grid variables.
+$grid-columns: 16;
+$grid-column-gap: 20px;
+$grid-row-gap: $grid-column-gap;
+
+// Convert a number into a negative value.
+@function negative ($number) {
+  @if type-of($number) != number {
+    @return $number;
+  } @else if $number != 0 {
+    @return -$number;
+  }
+}
+
+// Define a column wrapper.
+//
+// $row-gap: Vertical space between rows.
+// $column-gap: Horizontal space between columns.
+@mixin colwrapper($row-gap: $grid-row-gap, $column-gap: $grid-column-gap) {
+  position: relative;
+  margin-top: negative($row-gap);
+  margin-left: negative($column-gap);
+  @include clearfix();
+}
+
+// Define a column item.
+//
+// $columns: Number of columns this should span.
+// $grid: Context of how many columns the container spans.
+// $column-gap: Horizontal space between columns.
+// $offset: Number of columns this should be offset.
+// $float: left or none.
+@mixin col($columns: 1, $grid: $grid-columns, $column-gap: $grid-column-gap, $offset: 0, $float: left) {
+  @if $float != none {
+    float: $float;
+  }
+  width: calc((#{$columns} / #{$grid}) * 100% - #{$column-gap});
+  margin-left: calc((#{$offset} / #{$grid}) * 100% + #{$column-gap});
+}
+
+// Define a standalone offset based on the grid.
+//
+// $offset: Number of columns this should be offset.
+// $grid: Context of how many columns the container spans.
+// $column-gap: Horizontal space between columns.
+@mixin offset($offset: 1, $grid: $grid-columns, $column-gap: $grid-column-gap) {
+  margin-left: calc((#{$offset} / #{$grid}) * 100% + #{$column-gap});
+}
+
+// Change the column width of an item.
+//
+// $original_columns: Number of original columns that this spans.
+// $add_columns_left: Number of columns to add to left.
+// $add_columns_right: Number of columns to add to right.
+// $column-gap: Horizontal space between columns.
+@mixin changecol($original_columns, $add_columns_left, $add_columns_right, $column-gap: $grid-column-gap) {
+  position: relative;
+  width: auto;
+  margin-left: calc((100% / #{$original_columns}) * #{$add_columns_left} - #{$column-gap});
+  margin-right: calc((100% / #{$original_columns}) * #{$add_columns_right} - #{$column-gap});
+}
+
+// Generate column span classes based on grid size.
+//
+// $grid: Number of grid column span classes to generate.
+@mixin generate-grid-classes($grid: $grid-columns) {
+  @for $i from 1 through $grid {
+    .span-#{$i} {
+      @include col($i, $grid);
+      @for $k from 1 through $grid {
+        &.offset-#{$k} {
+          @include offset($k, $grid);
+        }
+      }
+    }
+  }
+}
+
+// Generate grid span classes for 12 column grid.
+@include breakpoint($desktop) {
+  .column-wrapper {
+    &.twelve {
+      @include colwrapper(null);
+      @include generate-grid-classes(12);
+    }
+  }
+}
+
+// Generate centering classes based on grid size.
+//
+// $grid: Number of grid center classes to generate.
+@mixin generate-center-classes($grid: $grid-columns) {
+  @for $i from 1 through $grid {
+    .center-#{$i} {
+      @include col($i, $grid, 0, ((#{$grid} - #{$i}) / 2), none);
+    }
+  }
+}
+
+// Generate center classes for 12 column grid.
+@include breakpoint($desktop) {
+  @include generate-center-classes(12);
+}
+
+// Style a uniform grid.
+//
+// $number: Number of columns for grid
+// $row-gap: Vertical space between rows.
+// $column-gap: Horizontal space between columns.
+@mixin tm-grid($number, $row-gap: $grid-row-gap, $column-gap: $grid-column-gap) {
+  @include colwrapper($row-gap, $column-gap);
+  > * {
+    @include col(1, $number, $column-gap);
+    margin-top: $row-gap;
+    background-color: #eee;
+    > * {
+      @include trim();
+    }
+    &:nth-child(#{$number}n+1) {
+      clear: left;
+    }
+  }
+}
+
+// Create generic classes for frequently used grids.
+@include breakpoint($desktop) {
+  .two-column-grid {
+    @include tm-grid(2);
+  }
+  .three-column-grid {
+    @include tm-grid(3);
+  }
+  .four-column-grid {
+    @include tm-grid(4);
+  }
+}
+@include breakpoint($tablet-only) {
+  .two-column-grid,
+  .three-column-grid,
+  .four-column-grid {
+    @include tm-grid(2);
+  }
+}
+
+// Example: breakout column grid item using changecol().
+.example-breakout {
+  background-color: $highlight;
+  @include breakpoint($desktop) {
+    @include changecol(1, -1, -1);
+  }
+}

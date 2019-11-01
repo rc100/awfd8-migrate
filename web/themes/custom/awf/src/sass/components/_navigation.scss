@@ -1,0 +1,445 @@
+/**
+* @file
+* Navigation styles.
+*
+* Define some global navigation styles.
+*
+*/
+
+.header-section {
+/*  display: block;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  .inner-wrapper {
+    @include breakpoint($min1024) {
+      padding: 0 60px!important;
+    }    
+  }
+  nav {
+    z-index: 0!important;
+    &.absolute,
+    &.fixed {
+      position: fixed!important;
+    }
+  }
+  a.branding {
+    width: 140px;
+    height: 72px;
+    padding: 0;
+    margin: 15px 0 0;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    .logo {
+      width: 140px!important;
+      margin: 0!important;
+      height: 72px;
+      display: block;
+      position: relative;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: url(../images/awf_logo_custom.png) 0 0/100% no-repeat;
+    }
+  }*/
+/*  .region-header {
+    display: none;
+    @include breakpoint($min1024) {
+      display: block;  
+    }
+  }*/
+/*  &.fixed,
+  &.mobile-fixed,
+  .not-front & {
+    background: $white;
+    transition: background .2s ease-in;
+    .logo {
+      background: url(../images/awf_logo_orange.svg) 0 0/100% no-repeat!important; 
+    }
+    .mainnav .mainmenu li a,
+    a.icon-search:before {
+      color: $awfbrown;
+      &:hover,
+      &.active {
+        color: $awforangedark;
+      }
+    }
+
+    .btn-navbar {
+      .icon-bar {
+        background: $awfbrown;
+      }
+      &:hover {
+        background: $awforangedark;        
+      }
+    }
+  }*/
+}
+
+
+header nav {
+/*  transition: background .2s ease-in;
+  height: 100px;
+  vertical-align: top;
+  width: calc(100% - 144px);
+  display: inline-block;
+  &.menu--main {
+    @include breakpoint($min1024) {
+      right: 0;
+      float: none;
+      margin: 20px auto 0;
+      padding: 0;
+      list-style-type: none;
+      position: fixed;
+      display: block;
+      left: 0;
+      width: 440px;
+    }
+    ul {
+      padding-left: 0;
+    }
+    & > .menu {
+      & > li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        span,
+        a{
+          font-size: 1.3rem;
+          text-transform: uppercase;
+          color: $white;
+          &:hover,
+          &:active,
+          &.active {
+            color: $awforangedark;
+          }
+        }
+        &:first-child,
+        &:nth-child(3) {
+          & > a,
+          & > span {
+            @include icon-caret-after;
+            &:after {
+              transform: rotate(90deg);
+              @include icon(awf);
+              font-size: 10px;
+              display: inline-block;
+              margin-left: 8px;
+              position: relative;
+              bottom: 1px;
+            }
+          }
+        }
+        .subnav-section {
+          position: fixed;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+          display: none;
+          top: 0;
+
+        }
+        &.is-open {
+          .subnav-section {
+            display: block;
+            opacity: 1;
+            top: 68px;
+            transition-property: top, left;
+            transition-duration: 3s, 1s;
+            transition-delay: 1s, 1s;
+          }
+        }
+
+        & > div > ul {
+          padding: 10px;
+          @include breakpoint($min1024) {
+            width: 860px;
+            background: $white;
+            position: relative;
+            margin: 20px auto 0;
+            display: flex;
+            flex: 1 0 100%;
+            li a {
+              text-transform: none;
+              font-weight: 300;              
+            }
+            & > li {
+              display: inline-block;
+              vertical-align: top;
+              flex: 1 0 25%;
+              & > a {
+                font-weight: 700;
+              }
+            }
+            a {
+              &{
+                font-size: 1.4rem;
+                color: $awfbrown!important;
+              }
+              &:hover,
+              &:focus,
+              &.active {
+                &, &:after, & p {
+                  color: $awforangedark!important;
+                }
+              }        
+            }
+          }
+        }
+
+      }
+    }
+  } */
+/*  &.fixed {
+    height: 100px!important;
+    .mainnav .mainmenu li a,
+    .icon-search {
+      &, &:before{
+        color: $awfbrown!important;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        &, &:before{
+          color: $awforangedark!important;
+        }
+      }
+    }
+   
+    .btn-navbar {
+      .icon-bar {
+        background: $awforangedark!important;
+      }    
+    }
+    .donate {
+      &:hover,
+      &:focus {
+        color: $awforangedark!important;
+        background: $white!important;
+        border: 1px solid $awforangedark;
+      }
+    }
+  }*/
+/*  .btn-navbar {
+    display: block;
+    float: right;
+    margin-top: 30px;
+    height: 34px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    background: 0;
+    border: none;
+    padding: 0;
+    @include breakpoint($min1024) {
+      display: none;
+    }
+    .icon-bar {
+      background: $white;
+      border: 1px solid transparent;
+      box-shadow: none;
+      height: 6px;
+      width: 30px;
+      display: block;
+      + .icon-bar {
+        margin-top: 3px;
+      }
+    }
+    &:hover,
+    &:focus {
+      background: transparent;
+      .icon-bar {
+        background: $awforangedark;
+      }
+    }
+  }
+  .subnav {
+    background: none!important;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all .1s ease-in;
+    display: none;
+    &.show {
+      opacity: 1;
+      display: block;
+      overflow: visible!important;
+      left: 0;
+    }
+    @include breakpoint($min1024) {
+      height: 100%!important;
+    }
+    & > .container {
+      background: $white;
+      margin: 0 auto;    
+    }
+    .row ul.four.columns {
+      @include breakpoint($min1024) {
+        width: 100%;
+      }    
+    }
+
+    &[data-rel=whatwedo] {
+      & > .container {
+        width: 950px;
+        min-height: 251px;
+        height: auto;
+        position: relative;
+      }
+
+      ul.columns {
+        float: none!important;
+      
+        li {
+          display: inline-block;
+          width: 24.2%;
+          vertical-align: top;
+          height: unset;
+          a {
+            line-height: 1.4;
+            margin-bottom: 12px;
+            letter-spacing: -.02rem;
+            padding-left: 7px;
+            font-weight: 800;
+          }
+          .view-redesign-drop-down ul li {
+            display: none;
+            @include breakpoint($min1024) {
+              width: 100%;
+              display: block;
+              position: relative;
+            }
+          }
+          ul li {
+            display: block;
+            padding-bottom: 2px;
+            margin-bottom: 7px;
+            height: 100%!important;
+            width: 100%!important;
+            background: transparent; 
+            a {
+              margin-bottom: 0;
+              font-weight: 300!important;
+            }
+          }
+          .box {
+            float: none!important;
+            margin: 0!important;
+            &:hover,
+            &:focus {
+              background:transparent;
+            }
+          }
+        }
+      }
+    }
+    &[data-rel=aboutus] {
+      & > .container {
+        width: 600px;
+      }
+      ul {
+        padding: 0 10px 10px;
+      }
+      li {
+        width: 22%!important;
+        height: 30px!important;
+        a {
+          line-height: 1.2rem!important;
+        }
+        &:nth-child(3n+2) {
+          width: 32%!important;
+        }
+        &:nth-child(3n+3) {
+          width: 24%!important;
+        }
+      }
+    }
+  }*/
+}
+
+
+nav .mobile-holder {
+/*    background: $white;
+    display: none;
+  position: absolute;
+  top: 100px;
+  width: 100vw;
+  left: 0;
+  height: calc(100vh - 100px);
+  position: fixed;
+  transition: background .2s ease-in;
+  &.is-open {
+    background: $white;
+    display: block;
+  }
+  ul, li, li a{
+    background: $white;    
+  }
+  .mobile-nav {
+    font-size: 1.1rem;
+    a {
+      border-bottom: solid 1px transparent;
+    }
+  }
+  ul li {
+    a {
+      text-decoration: none;
+      &:active, 
+      &:link, 
+      &:visited {
+        color: $awforangedark;
+      }
+      &:hover,
+      &:focus {
+        color: $awfbrown;
+      }
+    }
+    &.has-children,
+    &.last.sub {
+      a span.sprite.arrow-right-grey {
+        background-image: none;
+        background-position: 0 0;
+        @include icon-caret-after;
+        &:after {
+          @include icon(awf);
+          font-size: 12px;
+          display: inline-block;
+          margin-left: 10px;
+          position: relative;
+          bottom: 1px;
+        }
+      }
+      a span.sprite.arrow-left-orange {
+        background-image: none;
+        background-position: 0 0;
+        @include icon-caret;
+        &:before {
+          transform: rotate(180deg);
+          @include icon(awf);
+          font-size: 12px;
+          display: inline-block;
+          margin-left: 10px;
+          position: relative;
+          bottom: 1px;
+          vertical-align: top;
+        }
+      }
+    }
+    a.donatebtn {
+      display: block;
+      width: 100%;
+      @include button-orange;
+      background: $awforangedark;
+      color: $white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      &:hover,
+      &:focus {
+        background: $awfbrown;
+      }
+    }
+  }*/
+}
+

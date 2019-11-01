@@ -1,0 +1,82 @@
+/**
+* @file
+* Table styles.
+*
+*/
+
+/*table {
+  width: 100% !important;
+  border: 0 solid lightgray;
+  tr {
+    border: 0 solid lightgray;
+    &:nth-child(even) {
+      background: #f7f7f7;
+    }
+  }
+  td,
+  th {
+    padding: 0.5em 1em;
+    border-color: lightgray;
+    text-align: left;
+    > * {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  thead th,
+  tbody th {
+    background: #e7e7e7;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.92em;
+  }
+  th.js-empty-header-cell {
+    visibility: hidden;
+  }
+}
+
+// Responsive data tables with headers.
+@include breakpoint($all-devices) {
+  table.data {
+    display: block;
+    overflow: hidden;
+  }
+  table.data thead,
+  table.data th {
+    display: none;
+  }
+  table.data tbody,
+  table.data tbody th,
+  table.data tr,
+  table.data td,
+  table.data caption {
+    float: left;
+    display: block;
+    width: 100%;
+  }
+  table.data tr {
+    padding: 20px 10px;
+    border-width: 1px;
+    + tr {
+      border-top-width: 0;
+    }
+    > th,
+    > td {
+      border-width: 0;
+    }
+  }
+  table.data td.js-labeled:before {
+    display: block;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid lightgray;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.92em;
+    content: attr(data-th);
+  }
+}*/

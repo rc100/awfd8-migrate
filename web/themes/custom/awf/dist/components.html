@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components | Styleguide</title>
+
+  <link rel="stylesheet" href="fabricator/css/fabricator.css">
+
+  <!-- toolkit styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- /toolkit styles -->
+
+  <!-- vendor scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- /vendor scripts -->
+</head>
+<body>
+<a href="#main" class="visually-hidden element-focusable skip-link" id="top">Skip to main content</a>
+
+<!-- fabricator icons -->
+<svg style="display: none;">
+  <symbol id="f-icon-code" viewBox="0 0 512 512">
+    <path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+  </symbol>
+  <symbol id="f-icon-notes" viewBox="0 0 512 512">
+    <path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+  </symbol>
+  <symbol id="f-icon-labels" viewBox="0 0 512 512">
+    <path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+  </symbol>
+  <symbol id="f-icon-menu" viewBox="0 0 512 512">
+    <path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+  </symbol>
+  <symbol id="f-icon-settings" viewBox="0 0 512 512">
+    <path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+  </symbol>
+</svg>
+<!-- /fabricator icons -->
+<!-- fabricator menu -->
+<div class="f-menu">
+  <div class="f-controls">
+    <div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+      <svg>
+        <use xlink:href="#f-icon-labels"/>
+      </svg>
+    </div>
+    <div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+      <svg>
+        <use xlink:href="#f-icon-notes"/>
+      </svg>
+    </div>
+    <div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+      <svg>
+        <use xlink:href="#f-icon-code"/>
+      </svg>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a href="index.html" class="f-menu__heading">Overview</a>
+    </li>
+
+    <li>
+      <a href="elements.html" class="f-menu__heading">Elements</a>
+      <ul>
+        <li>
+          <a href="elements.html#blockquote">Blockquote</a>
+        </li>
+        <li>
+          <a href="elements.html#button">Button</a>
+        </li>
+        <li>
+          <a href="elements.html#checkbox">Checkbox</a>
+        </li>
+        <li>
+          <a href="elements.html#headings">Headings</a>
+        </li>
+        <li>
+          <a href="elements.html#intro">Intro</a>
+        </li>
+        <li>
+          <a href="elements.html#lazysizes">Lazysizes</a>
+        </li>
+        <li>
+          <a href="elements.html#lists">Lists</a>
+        </li>
+        <li>
+          <a href="elements.html#paragraph">Paragraph</a>
+        </li>
+        <li>
+          <a href="elements.html#radio">Radio</a>
+        </li>
+        <li>
+          <a href="elements.html#select">Select</a>
+        </li>
+        <li>
+          <a href="elements.html#svg">Svg</a>
+        </li>
+        <li>
+          <a href="elements.html#table">Table</a>
+        </li>
+        <li>
+          <a href="elements.html#text-input">Text Input</a>
+        </li>
+        <li>
+          <a href="elements.html#textarea">Textarea</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="components.html" class="f-menu__heading">Components</a>
+      <ul>
+        <li>
+          <a href="components.html#1-navigation">Navigation</a>
+        </li>
+        <li>
+          <a href="components.html#2-sticky">Sticky</a>
+        </li>
+        <li>
+          <a href="components.html#accordion">Accordion</a>
+        </li>
+        <li>
+          <a href="components.html#carousel">Carousel</a>
+        </li>
+        <li>
+          <a href="components.html#map">Map</a>
+        </li>
+        <li>
+          <a href="components.html#modal">Modal</a>
+        </li>
+        <li>
+          <a href="components.html#read-more">Read More</a>
+        </li>
+        <li>
+          <a href="components.html#share">Share</a>
+        </li>
+        <li>
+          <a href="components.html#skip-links">Skip Links</a>
+        </li>
+        <li>
+          <a href="components.html#tabs">Tabs</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="structures.html" class="f-menu__heading">Structures</a>
+      <ul>
+        <li>
+          <a href="structures.html#block">Block</a>
+        </li>
+        <li>
+          <a href="structures.html#columns">Columns</a>
+        </li>
+        <li>
+          <a href="structures.html#equal-heights">Equal Heights</a>
+        </li>
+        <li>
+          <a href="structures.html#footer">Footer</a>
+        </li>
+        <li>
+          <a href="structures.html#form">Form</a>
+        </li>
+        <li>
+          <a href="structures.html#grid">Grid</a>
+        </li>
+        <li>
+          <a href="structures.html#header">Header</a>
+        </li>
+        <li>
+          <a href="structures.html#sidebar">Sidebar</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="animations.html" class="f-menu__heading">Animations</a>
+      <ul>
+        <li>
+          <a href="animations.html#loading-button">Loading Button</a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li>
+      <a href="pages.html" class="f-menu__heading">Pages</a>
+      <ul>
+        <li>
+          <a href="pages/home.html" target="_blank">Home</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <li>
+    <a href="docs.html" class="f-menu__heading">Docs</a>
+    <ul>
+      <li>
+        <a href="docs.html#javascript">Javascript</a>
+      </li>
+    </ul>
+  </li>
+</div>
+<!-- /fabricator menu -->
+<div class="f-container">
+  <div class="f-control-bar">
+    <div class="f-control f-menu-toggle">
+      <svg><use xlink:href="#f-icon-menu"/></svg>
+    </div>
+  </div>
+
+  <div id="main">
+    
+<div class="f-page-title" data-f-toggle="labels">Components</div>
+
+
+<div class="f-item-group" id="1-navigation">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Navigation</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/menu.js (for keyboard accessibility)</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div id&#x3D;&quot;navigation&quot;&gt;
+  	&lt;ul class&#x3D;&quot;menu&quot;&gt;
+  		&lt;li class&#x3D;&quot;active&quot;&gt;&lt;a href&#x3D;&quot;&quot; class&#x3D;&quot;active&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+  		&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Menu Item 2&lt;/a&gt;
+  			&lt;ul class&#x3D;&quot;menu&quot;&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item 1&lt;/a&gt;&lt;/li&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item 2&lt;/a&gt;&lt;/li&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item 3&lt;/a&gt;&lt;/li&gt;
+  			&lt;/ul&gt;
+  		&lt;/li&gt;
+  		&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Menu Item 3&lt;/a&gt;
+  			&lt;ul class&#x3D;&quot;menu&quot;&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item A&lt;/a&gt;&lt;/li&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item B&lt;/a&gt;&lt;/li&gt;
+  				&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Submenu Item C&lt;/a&gt;&lt;/li&gt;
+  			&lt;/ul&gt;
+  		&lt;/li&gt;
+  		&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Menu Item 4&lt;/a&gt;&lt;/li&gt;
+  		&lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Menu Item 5&lt;/a&gt;&lt;/li&gt;
+  	&lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div id="navigation">
+  	<ul class="menu">
+  		<li class="active"><a href="" class="active">Menu Item 1</a></li>
+  		<li><a href="">Menu Item 2</a>
+  			<ul class="menu">
+  				<li><a href="">Submenu Item 1</a></li>
+  				<li><a href="">Submenu Item 2</a></li>
+  				<li><a href="">Submenu Item 3</a></li>
+  			</ul>
+  		</li>
+  		<li><a href="">Menu Item 3</a>
+  			<ul class="menu">
+  				<li><a href="">Submenu Item A</a></li>
+  				<li><a href="">Submenu Item B</a></li>
+  				<li><a href="">Submenu Item C</a></li>
+  			</ul>
+  		</li>
+  		<li><a href="">Menu Item 4</a></li>
+  		<li><a href="">Menu Item 5</a></li>
+  	</ul>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="2-sticky">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Sticky</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/sticky.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;make-sticky&quot;&gt;
+  	&lt;h2&gt;This is a sticky element that is going to hang around for awhile.&lt;/h2&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="make-sticky">
+  	<h2>This is a sticky element that is going to hang around for awhile.</h2>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="accordion">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Accordion</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/accordion.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;custom-accordion&quot;&gt;
+  	&lt;h3 class&#x3D;&quot;accordion-trigger&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;span class&#x3D;&quot;plus&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;This is the accordion title and trigger&lt;/a&gt;
+  	&lt;/h3&gt;
+  	&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
+  		&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+  			nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.&lt;/p&gt;
+  	&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;custom-accordion&quot;&gt;
+  	&lt;h3 class&#x3D;&quot;accordion-trigger&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;span class&#x3D;&quot;plus&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;This is another accordion title and trigger&lt;/a&gt;
+  	&lt;/h3&gt;
+  	&lt;div class&#x3D;&quot;accordion-content&quot;&gt;
+  		&lt;p&gt;Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+  			Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+  			clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+  			et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.&lt;/p&gt;
+  	&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="custom-accordion">
+  	<h3 class="accordion-trigger"><a href="#"><span class="plus"><i></i></span>This is the accordion title and trigger</a>
+  	</h3>
+  	<div class="accordion-content">
+  		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+  			nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+  	</div>
+  </div>
+  <div class="custom-accordion">
+  	<h3 class="accordion-trigger"><a href="#"><span class="plus"><i></i></span>This is another accordion title and trigger</a>
+  	</h3>
+  	<div class="accordion-content">
+  		<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+  			Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+  			clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+  			et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
+  	</div>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="carousel">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Carousel</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: JQuery</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;ul class&#x3D;&quot;owl-carousel&quot;&gt;
+  	&lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur corporis, eligendi est eveniet ipsa ipsum iusto labore odio quae quam, similique sunt tempora totam ut? Ex nobis quae tempora?&lt;/li&gt;
+  	&lt;li&gt;Accusamus aspernatur dolore dolores dolorum illum in libero, nemo neque praesentium quas qui sapiente? Ab, cum doloribus eius, hic impedit ipsum laudantium obcaecati quos recusandae repellendus sequi totam voluptatem voluptates?&lt;/li&gt;
+  	&lt;li&gt;Debitis earum enim impedit labore quis tenetur voluptatum. Atque aut consequatur, debitis dolores eius id laborum mollitia officia praesentium quae reprehenderit tenetur? Accusamus atque dicta eveniet laboriosam nisi sint veniam!&lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;!-- Required script for carousel --&gt;
+  &lt;script src&#x3D;&quot;js/init-carousel.js&quot;&gt;&lt;/script&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <ul class="owl-carousel">
+  	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur corporis, eligendi est eveniet ipsa ipsum iusto labore odio quae quam, similique sunt tempora totam ut? Ex nobis quae tempora?</li>
+  	<li>Accusamus aspernatur dolore dolores dolorum illum in libero, nemo neque praesentium quas qui sapiente? Ab, cum doloribus eius, hic impedit ipsum laudantium obcaecati quos recusandae repellendus sequi totam voluptatem voluptates?</li>
+  	<li>Debitis earum enim impedit labore quis tenetur voluptatum. Atque aut consequatur, debitis dolores eius id laborum mollitia officia praesentium quae reprehenderit tenetur? Accusamus atque dicta eveniet laboriosam nisi sint veniam!</li>
+  </ul>
+  
+  <!-- Required script for carousel -->
+  <script src="js/init-carousel.js"></script>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="map">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Map</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: Get an API key from <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">here</a></p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;style&gt;
+  	#googlemap,
+  	#markercluster {
+  		height: 400px;
+  		width: auto;
+  	}
+  &lt;/style&gt;
+  
+  &lt;div id&#x3D;&quot;googlemap&quot;&gt;&lt;/div&gt;
+  
+  &lt;p&gt;Marker cluster example:&lt;/p&gt;
+  &lt;div id&#x3D;&quot;markercluster&quot;&gt;&lt;/div&gt;
+  
+  &lt;!-- Required script for map --&gt;
+  &lt;script src&#x3D;&quot;js/init-map.js&quot;&gt;&lt;/script&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <style>
+  	#googlemap,
+  	#markercluster {
+  		height: 400px;
+  		width: auto;
+  	}
+  </style>
+  
+  <div id="googlemap"></div>
+  
+  <p>Marker cluster example:</p>
+  <div id="markercluster"></div>
+  
+  <!-- Required script for map -->
+  <script src="js/init-map.js"></script>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="modal">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Modal</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: JQuery</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;style&gt;
+  	#modal-content {
+  		display: none;
+  	}
+  &lt;/style&gt;
+  &lt;p&gt;&lt;a href&#x3D;&quot;#modal-content&quot; class&#x3D;&quot;fancybox&quot;&gt;Fancybox link&lt;/a&gt;&lt;/p&gt;
+  &lt;div id&#x3D;&quot;modal-content&quot;&gt;Some Fancybox content with a &lt;a href&#x3D;&quot;#modal-content&quot;&gt;link&lt;/a&gt;.&lt;/div&gt;
+  
+  &lt;!-- Required script for modal --&gt;
+  &lt;script src&#x3D;&quot;js/init-modal.js&quot;&gt;&lt;/script&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <style>
+  	#modal-content {
+  		display: none;
+  	}
+  </style>
+  <p><a href="#modal-content" class="fancybox">Fancybox link</a></p>
+  <div id="modal-content">Some Fancybox content with a <a href="#modal-content">link</a>.</div>
+  
+  <!-- Required script for modal -->
+  <script src="js/init-modal.js"></script>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="read-more">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Read More</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/shorten.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;shorten&quot;&gt;
+  	&lt;p&gt;Accusamus accusantium adipisci aliquam animi at aut deleniti deserunt dignissimos distinctio dolore doloremque dolorum ducimus earum eveniet exercitationem impedit ipsa iste laborum libero maiores, nam nesciunt nobis non nostrum odio pariatur
+  		perferendis quasi quidem ratione recusandae reiciendis repudiandae sed sit totam ullam voluptate voluptates! Ad aliquid at aut consequatur eius eligendi est et eveniet excepturi harum ipsam laudantium libero minima molestias numquam optio
+  		perspiciatis placeat recusandae reiciendis repellendus repudiandae sapiente tempora, tenetur unde velit vero voluptatem. Accusantium autem dicta dignissimos est expedita iusto modi nam non tempora voluptatibus. A beatae consequuntur dolorem, eaque
+  		eligendi esse, hic id inventore libero maiores maxime omnis optio pariatur perferendis quia quo reiciendis reprehenderit!&lt;/p&gt;
+  	&lt;p&gt;A, alias architecto at dicta dignissimos dolor ea exercitationem facilis fuga hic illum labore modi nulla officiis omnis perferendis perspiciatis placeat qui rem reprehenderit. Aliquam consequuntur eos laudantium officia reiciendis suscipit vel
+  		voluptate! At aut fugiat itaque, magni nesciunt velit. A ad aperiam dicta doloremque error excepturi, explicabo facere fugiat labore laboriosam molestiae necessitatibus nemo neque, nesciunt nihil officiis
+  		&lt;strong&gt;quibusdam quod ratione&lt;/strong&gt; saepe temporibus totam veniam veritatis. Delectus excepturi facilis illum quia voluptate voluptatem!
+  	&lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="shorten">
+  	<p>Accusamus accusantium adipisci aliquam animi at aut deleniti deserunt dignissimos distinctio dolore doloremque dolorum ducimus earum eveniet exercitationem impedit ipsa iste laborum libero maiores, nam nesciunt nobis non nostrum odio pariatur
+  		perferendis quasi quidem ratione recusandae reiciendis repudiandae sed sit totam ullam voluptate voluptates! Ad aliquid at aut consequatur eius eligendi est et eveniet excepturi harum ipsam laudantium libero minima molestias numquam optio
+  		perspiciatis placeat recusandae reiciendis repellendus repudiandae sapiente tempora, tenetur unde velit vero voluptatem. Accusantium autem dicta dignissimos est expedita iusto modi nam non tempora voluptatibus. A beatae consequuntur dolorem, eaque
+  		eligendi esse, hic id inventore libero maiores maxime omnis optio pariatur perferendis quia quo reiciendis reprehenderit!</p>
+  	<p>A, alias architecto at dicta dignissimos dolor ea exercitationem facilis fuga hic illum labore modi nulla officiis omnis perferendis perspiciatis placeat qui rem reprehenderit. Aliquam consequuntur eos laudantium officia reiciendis suscipit vel
+  		voluptate! At aut fugiat itaque, magni nesciunt velit. A ad aperiam dicta doloremque error excepturi, explicabo facere fugiat labore laboriosam molestiae necessitatibus nemo neque, nesciunt nihil officiis
+  		<strong>quibusdam quod ratione</strong> saepe temporibus totam veniam veritatis. Delectus excepturi facilis illum quia voluptate voluptatem!
+  	</p>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="share">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Share</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/share.js
+  social network svgs: <a href="https://sharingbuttons.io/">https://sharingbuttons.io/</a></p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;share-buttons&quot;&gt;
+  	&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Sharing Buttons&lt;/span&gt;
+  	&lt;a role&#x3D;&quot;button&quot; tabindex&#x3D;&quot;1&quot; class&#x3D;&quot;social-share linkedin&quot; href&#x3D;&quot;#&quot;&gt;
+  		&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Share to LinkedIn&lt;/span&gt;
+  		&lt;svg xmlns&#x3D;&quot;https://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+  			&lt;path d&#x3D;&quot;M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z&quot; /&gt;
+  		&lt;/svg&gt;
+  	&lt;/a&gt;
+  
+  	&lt;a role&#x3D;&quot;button&quot; tabindex&#x3D;&quot;1&quot; class&#x3D;&quot;social-share google&quot; href&#x3D;&quot;#&quot;&gt;
+  		&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Share to Google+&lt;/span&gt;
+  		&lt;svg xmlns&#x3D;&quot;https://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+  			&lt;path d&#x3D;&quot;M11.37 12.93c-.73-.52-1.4-1.27-1.4-1.5 0-.43.03-.63.98-1.37 1.23-.97 1.9-2.23 1.9-3.57 0-1.22-.36-2.3-1-3.05h.5c.1 0 .2-.04.28-.1l1.36-.98c.16-.12.23-.34.17-.54-.07-.2-.25-.33-.46-.33H7.6c-.66 0-1.34.12-2 .35-2.23.76-3.78 2.66-3.78 4.6 0 2.76 2.13 4.85 5 4.9-.07.23-.1.45-.1.66 0 .43.1.83.33 1.22h-.08c-2.72 0-5.17 1.34-6.1 3.32-.25.52-.37 1.04-.37 1.56 0 .5.13.98.38 1.44.6 1.04 1.84 1.86 3.55 2.28.87.23 1.82.34 2.8.34.88 0 1.7-.1 2.5-.34 2.4-.7 3.97-2.48 3.97-4.54 0-1.97-.63-3.15-2.33-4.35zm-7.7 4.5c0-1.42 1.8-2.68 3.9-2.68h.05c.45 0 .9.07 1.3.2l.42.28c.96.66 1.6 1.1 1.77 1.8.05.16.07.33.07.5 0 1.8-1.33 2.7-3.96 2.7-1.98 0-3.54-1.23-3.54-2.8zM5.54 3.9c.33-.38.75-.58 1.23-.58h.05c1.35.05 2.64 1.55 2.88 3.35.14 1.02-.08 1.97-.6 2.55-.32.37-.74.56-1.23.56h-.03c-1.32-.04-2.63-1.6-2.87-3.4-.13-1 .08-1.92.58-2.5zM23.5 9.5h-3v-3h-2v3h-3v2h3v3h2v-3h3&quot; /&gt;
+  		&lt;/svg&gt;
+  	&lt;/a&gt;
+  
+  	&lt;a role&#x3D;&quot;button&quot; tabindex&#x3D;&quot;1&quot; class&#x3D;&quot;social-share twitter&quot; href&#x3D;&quot;#&quot;&gt;
+  		&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Share to Twitter&lt;/span&gt;
+  		&lt;svg xmlns&#x3D;&quot;https://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+  			&lt;path d&#x3D;&quot;M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z&quot; /&gt;
+  		&lt;/svg&gt;
+  	&lt;/a&gt;
+  	&lt;a role&#x3D;&quot;button&quot; tabindex&#x3D;&quot;1&quot; class&#x3D;&quot;social-share facebook&quot; href&#x3D;&quot;#&quot;&gt;
+  		&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Share to Facebook&lt;/span&gt;
+  		&lt;svg xmlns&#x3D;&quot;https://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+  			&lt;path d&#x3D;&quot;M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z&quot; /&gt;
+  		&lt;/svg&gt;
+  	&lt;/a&gt;
+  	&lt;a role&#x3D;&quot;button&quot; tabindex&#x3D;&quot;1&quot; class&#x3D;&quot;social-share email&quot; href&#x3D;&quot;#&quot;&gt;
+  		&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Share to Email&lt;/span&gt;
+  		&lt;svg xmlns&#x3D;&quot;https://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 24 24&quot;&gt;
+  			&lt;path d&#x3D;&quot;M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z&quot; /&gt;
+  		&lt;/svg&gt;
+  	&lt;/a&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <div class="share-buttons">
+  	<span class="visually-hidden">Sharing Buttons</span>
+  	<a role="button" tabindex="1" class="social-share linkedin" href="#">
+  		<span class="visually-hidden">Share to LinkedIn</span>
+  		<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  			<path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z" />
+  		</svg>
+  	</a>
+  
+  	<a role="button" tabindex="1" class="social-share google" href="#">
+  		<span class="visually-hidden">Share to Google+</span>
+  		<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  			<path d="M11.37 12.93c-.73-.52-1.4-1.27-1.4-1.5 0-.43.03-.63.98-1.37 1.23-.97 1.9-2.23 1.9-3.57 0-1.22-.36-2.3-1-3.05h.5c.1 0 .2-.04.28-.1l1.36-.98c.16-.12.23-.34.17-.54-.07-.2-.25-.33-.46-.33H7.6c-.66 0-1.34.12-2 .35-2.23.76-3.78 2.66-3.78 4.6 0 2.76 2.13 4.85 5 4.9-.07.23-.1.45-.1.66 0 .43.1.83.33 1.22h-.08c-2.72 0-5.17 1.34-6.1 3.32-.25.52-.37 1.04-.37 1.56 0 .5.13.98.38 1.44.6 1.04 1.84 1.86 3.55 2.28.87.23 1.82.34 2.8.34.88 0 1.7-.1 2.5-.34 2.4-.7 3.97-2.48 3.97-4.54 0-1.97-.63-3.15-2.33-4.35zm-7.7 4.5c0-1.42 1.8-2.68 3.9-2.68h.05c.45 0 .9.07 1.3.2l.42.28c.96.66 1.6 1.1 1.77 1.8.05.16.07.33.07.5 0 1.8-1.33 2.7-3.96 2.7-1.98 0-3.54-1.23-3.54-2.8zM5.54 3.9c.33-.38.75-.58 1.23-.58h.05c1.35.05 2.64 1.55 2.88 3.35.14 1.02-.08 1.97-.6 2.55-.32.37-.74.56-1.23.56h-.03c-1.32-.04-2.63-1.6-2.87-3.4-.13-1 .08-1.92.58-2.5zM23.5 9.5h-3v-3h-2v3h-3v2h3v3h2v-3h3" />
+  		</svg>
+  	</a>
+  
+  	<a role="button" tabindex="1" class="social-share twitter" href="#">
+  		<span class="visually-hidden">Share to Twitter</span>
+  		<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  			<path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+  		</svg>
+  	</a>
+  	<a role="button" tabindex="1" class="social-share facebook" href="#">
+  		<span class="visually-hidden">Share to Facebook</span>
+  		<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  			<path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+  		</svg>
+  	</a>
+  	<a role="button" tabindex="1" class="social-share email" href="#">
+  		<span class="visually-hidden">Share to Email</span>
+  		<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  			<path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z" />
+  		</svg>
+  	</a>
+  </div>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="skip-links">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Skip Links</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/skip-links.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;p&gt;&lt;a class&#x3D;&quot;skip-links&quot; href&#x3D;&quot;#navigation&quot;&gt;Navigation&lt;/a&gt;&lt;/p&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <p><a class="skip-links" href="#navigation">Navigation</a></p>
+  </div>
+</div>
+
+
+<div class="f-item-group" id="tabs">
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">Tabs</div>
+    <div class="f-item-controls">
+      <span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+        <svg><use xlink:href="#f-icon-notes"/></svg>
+      </span>
+      <span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+        <svg><use xlink:href="#f-icon-code"/></svg>
+      </span>
+    </div>
+  </div>
+  <div class="f-item-notes" data-f-toggle="notes">
+    <p>Required: ./includes/tabs.js</p>
+  
+  </div>
+  <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    <pre><code class="language-markup">&lt;h4&gt;TAB GROUP 1&lt;/h4&gt;
+  &lt;div class&#x3D;&quot;tm-tabs&quot;&gt;
+  	&lt;div class&#x3D;&quot;tab-content&quot;&gt;
+  		&lt;h3 class&#x3D;&quot;tab-label&quot;&gt;Tab One&lt;/h3&gt;
+  		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?&lt;/p&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;tab-content&quot;&gt;
+  		&lt;h3 class&#x3D;&quot;tab-label&quot;&gt;Tab Two&lt;/h3&gt;
+  		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laboriosam laborum nulla. Accusamus adipisci impedit inventore minus officia quo temporibus vero. Alias aperiam atque commodi consequatur corporis culpa doloremque dolores
+  			explicabo facilis fugiat illum iure magnam neque nihil nobis optio porro, quam quidem quod ratione reiciendis saepe similique, suscipit, veniam?&lt;/p&gt;
+  	&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;h4&gt;TAB GROUP 2&lt;/h4&gt;
+  &lt;div class&#x3D;&quot;tm-tabs&quot;&gt;
+  	&lt;div class&#x3D;&quot;tab-content&quot;&gt;
+  		&lt;h3 class&#x3D;&quot;tab-label&quot;&gt;Tab One&lt;/h3&gt;
+  		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?&lt;/p&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;tab-content&quot;&gt;
+  		&lt;h3 class&#x3D;&quot;tab-label&quot;&gt;Tab Two&lt;/h3&gt;
+  		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laboriosam laborum nulla. Accusamus adipisci impedit inventore minus officia quo temporibus vero. Alias aperiam atque commodi consequatur corporis culpa doloremque dolores
+  			explicabo facilis fugiat illum iure magnam neque nihil nobis optio porro, quam quidem quod ratione reiciendis saepe similique, suscipit, veniam?&lt;/p&gt;
+  	&lt;/div&gt;
+  	&lt;div class&#x3D;&quot;tab-content&quot;&gt;
+  		&lt;h3 class&#x3D;&quot;tab-label&quot;&gt;Tab Three&lt;/h3&gt;
+  		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?&lt;/p&gt;
+  	&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  </div>
+  <div class="f-item-preview">
+    <h4>TAB GROUP 1</h4>
+  <div class="tm-tabs">
+  	<div class="tab-content">
+  		<h3 class="tab-label">Tab One</h3>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?</p>
+  	</div>
+  	<div class="tab-content">
+  		<h3 class="tab-label">Tab Two</h3>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laboriosam laborum nulla. Accusamus adipisci impedit inventore minus officia quo temporibus vero. Alias aperiam atque commodi consequatur corporis culpa doloremque dolores
+  			explicabo facilis fugiat illum iure magnam neque nihil nobis optio porro, quam quidem quod ratione reiciendis saepe similique, suscipit, veniam?</p>
+  	</div>
+  </div>
+  
+  <h4>TAB GROUP 2</h4>
+  <div class="tm-tabs">
+  	<div class="tab-content">
+  		<h3 class="tab-label">Tab One</h3>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?</p>
+  	</div>
+  	<div class="tab-content">
+  		<h3 class="tab-label">Tab Two</h3>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit laboriosam laborum nulla. Accusamus adipisci impedit inventore minus officia quo temporibus vero. Alias aperiam atque commodi consequatur corporis culpa doloremque dolores
+  			explicabo facilis fugiat illum iure magnam neque nihil nobis optio porro, quam quidem quod ratione reiciendis saepe similique, suscipit, veniam?</p>
+  	</div>
+  	<div class="tab-content">
+  		<h3 class="tab-label">Tab Three</h3>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aspernatur consectetur corporis dicta doloremque dolores, eius eos error exercitationem explicabo fuga incidunt ipsam laborum nisi non odio officiis reiciendis
+  			repellendus saepe sapiente similique soluta totam ut velit vero vitae! A ab aliquid architecto aspernatur consequuntur cum delectus ea earum eius eligendi enim eos eveniet facilis fuga fugit impedit iusto laborum magni maiores minus molestiae
+  			necessitatibus nemo non nostrum obcaecati officiis perferendis placeat porro provident quia, quidem quo rerum sapiente sequi sit suscipit ullam. Delectus dolor id possimus quo repellendus! Accusantium adipisci animi aut excepturi laboriosam
+  			necessitatibus, qui repellat vel?</p>
+  	</div>
+  </div>
+  </div>
+</div>
+
+
+  </div>
+
+</div>
+<a href="#top" class="visually-hidden element-focusable skip-link" id="bottom">Back to Top</a>
+<script src="fabricator/js/fabricator.js"></script>
+
+<!-- custom scripts -->
+<script src="js/init-script.js"></script>
+<!-- /custom scripts -->
+
+</body>
+</html>

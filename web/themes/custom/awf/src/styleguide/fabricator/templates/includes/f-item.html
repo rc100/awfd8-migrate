@@ -1,0 +1,22 @@
+<div class="f-item-group" id="{{@key}}">
+  {{#if items}}
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">{{name}}</div>
+  </div>
+  {{#each items}}
+  <div class="f-item-group" id="{{@key}}">
+    <div class="f-item-heading-group" data-f-toggle="labels">
+      <div class="f-item-heading-nested">{{name}}</div>
+      {{> f-item-controls}}
+    </div>
+    {{> f-item-content this}}
+  </div>
+  {{/each}}
+  {{else}}
+  <div class="f-item-heading-group" data-f-toggle="labels">
+    <div class="f-item-heading">{{name}}</div>
+    {{> f-item-controls}}
+  </div>
+  {{> f-item-content this}}
+  {{/if}}
+</div>

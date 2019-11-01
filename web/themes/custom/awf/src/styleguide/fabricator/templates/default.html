@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{title}}</title>
+
+  {{#if fabricator}}
+  <link rel="stylesheet" href="fabricator/css/fabricator.css">
+  {{/if}}
+
+  <!-- toolkit styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- /toolkit styles -->
+
+  <!-- vendor scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- /vendor scripts -->
+</head>
+<body>
+<a href="#main" class="visually-hidden element-focusable skip-link" id="top">Skip to main content</a>
+
+{{#if fabricator}}
+{{> f-icons}}
+{{> f-menu}}
+<div class="f-container">
+  {{> f-control-bar}}
+  {{/if}}
+
+  <div id="main">
+    {% body %}
+  </div>
+
+  {{#if fabricator}}
+</div>
+<a href="#top" class="visually-hidden element-focusable skip-link" id="bottom">Back to Top</a>
+<script src="fabricator/js/fabricator.js"></script>
+{{/if}}
+
+<!-- custom scripts -->
+<script src="js/init-script.js"></script>
+<!-- /custom scripts -->
+
+</body>
+</html>

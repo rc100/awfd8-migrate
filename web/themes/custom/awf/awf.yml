@@ -1,0 +1,44 @@
+name: awf
+type: theme
+description: Custom awf theme based on Classy
+core: 8.x
+version: '8.x-1.0'
+
+# Defines the base theme for templates and classes, but we will remove the stylesheets
+base theme: classy
+
+# Removes classy styles from theme
+libraries-override:
+  classy/base: false
+  system/base: false
+  core/normalize: false
+  core/html5shiv: false
+
+# Defines libraries group in which we can add css/js.
+libraries:
+  - awf/global-styling
+
+# Regions
+regions:
+  alert: Alert
+  header: Header
+  nav_overlay: 'Navigation Overlay'
+  search_overlay: 'Search Overlay'
+  preface: Preface
+  content_preface: 'Content Preface'
+  content: Content
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  postscript: Postscript
+  footer: Footer
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  disabled: Disabled
+
+# define custom css for wysiwyg
+ckeditor_stylesheets:
+ - dist/css/styles.css
+
+entity_print:
+  node:
+    all: 'awf/print-styling'

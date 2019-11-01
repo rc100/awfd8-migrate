@@ -1,4 +1,4 @@
-name: awfd8
+name: awfd8_core
 recipe: drupal8
 config:
   webroot: web
