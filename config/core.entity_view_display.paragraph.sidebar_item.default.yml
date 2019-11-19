@@ -1,0 +1,31 @@
+uuid: 57a191d8-f5a9-4875-877f-22d0494bd1e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_item.field_block_reference
+    - field.field.paragraph.sidebar_item.field_supplemental_reference
+    - paragraphs.paragraphs_type.sidebar_item
+  module:
+    - plugin
+id: paragraph.sidebar_item.default
+targetEntityType: paragraph
+bundle: sidebar_item
+mode: default
+content:
+  field_block_reference:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: plugin_block_built
+    region: content
+  field_supplemental_reference:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

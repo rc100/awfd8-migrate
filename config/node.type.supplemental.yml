@@ -1,0 +1,17 @@
+uuid: e5290e22-40a5-48d2-bdaa-ae0c6c4d045b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Supplemental Sidebar'
+type: supplemental
+description: 'Use <em>supplemental sidebars</em> to add items that can be referenced on individual pages for use in the sidebar (e.g., All Wildlife block)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,39 @@
+uuid: 90021518-2999-401d-918a-570776fee465
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sidebar_type
+field_name: field_sidebar_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: featured-page
+      label: 'Featured Page'
+    -
+      value: static-text
+      label: 'Static Text'
+    -
+      value: career
+      label: Career
+    -
+      value: promo
+      label: Promo
+    -
+      value: video
+      label: 'Static Video'
+    -
+      value: unformatted
+      label: Unformatted
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

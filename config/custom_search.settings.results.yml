@@ -1,0 +1,22 @@
+node_search:
+  advanced:
+    types:
+      supplemental: supplemental
+      tweet: tweet
+      blog: blog
+      news: news
+    languages:
+      en: en
+      und: und
+      zxx: zxx
+user_search:
+  advanced:
+    types:
+      supplemental: supplemental
+      tweet: tweet
+      blog: blog
+      news: news
+    languages:
+      en: en
+      und: und
+      zxx: zxx

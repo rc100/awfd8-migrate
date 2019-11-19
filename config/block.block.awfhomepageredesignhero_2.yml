@@ -1,0 +1,31 @@
+uuid: 33b2c718-86f8-4599-bfca-af10b356b7e4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f3e08f12-fa1c-4186-a3ca-fe3321184b0b'
+  module:
+    - block_content
+    - system
+  theme:
+    - awf
+id: awfhomepageredesignhero_2
+theme: awf
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:f3e08f12-fa1c-4186-a3ca-fe3321184b0b'
+settings:
+  id: 'block_content:f3e08f12-fa1c-4186-a3ca-fe3321184b0b'
+  label: 'AWF Homepage Redesign: Hero'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

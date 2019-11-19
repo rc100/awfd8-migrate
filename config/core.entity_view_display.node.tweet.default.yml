@@ -1,0 +1,25 @@
+uuid: aece1c08-7775-4d6b-97fb-07245cf795b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tweet.body
+    - node.type.tweet
+  module:
+    - text
+    - user
+id: node.tweet.default
+targetEntityType: node
+bundle: tweet
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  links: true

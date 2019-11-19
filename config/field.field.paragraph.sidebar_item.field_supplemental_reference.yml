@@ -1,0 +1,30 @@
+uuid: b9745812-063f-4dec-9675-3138b2a69145
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_supplemental_reference
+    - node.type.supplemental
+    - node.type.tweet
+    - paragraphs.paragraphs_type.sidebar_item
+id: paragraph.sidebar_item.field_supplemental_reference
+field_name: field_supplemental_reference
+entity_type: paragraph
+bundle: sidebar_item
+label: 'Supplemental Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      supplemental: supplemental
+      tweet: tweet
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: supplemental
+field_type: entity_reference

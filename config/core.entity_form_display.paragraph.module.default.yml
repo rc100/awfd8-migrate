@@ -1,0 +1,55 @@
+uuid: 1ab06a84-cc2c-4b24-9b95-fb60c5f015bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.module.field_block_reference
+    - field.field.paragraph.module.field_description
+    - field.field.paragraph.module.field_image
+    - field.field.paragraph.module.field_layout_style
+    - paragraphs.paragraphs_type.module
+  module:
+    - inline_entity_form
+    - plugin
+    - text
+id: paragraph.module.default
+targetEntityType: paragraph
+bundle: module
+mode: default
+content:
+  field_block_reference:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: 'plugin_selector:plugin_select_list'
+    region: content
+  field_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_layout_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

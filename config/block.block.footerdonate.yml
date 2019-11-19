@@ -1,0 +1,25 @@
+uuid: 7adafe4b-aada-49a9-914e-efb93d4381f8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f948f372-54fd-44f3-84da-c6aa8c1f3610'
+  module:
+    - block_content
+  theme:
+    - awf
+id: footerdonate
+theme: awf
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:f948f372-54fd-44f3-84da-c6aa8c1f3610'
+settings:
+  id: 'block_content:f948f372-54fd-44f3-84da-c6aa8c1f3610'
+  label: 'Footer Donate'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
