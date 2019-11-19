@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ff921dac6f7fbc2b57b86679667a0f9",
+    "content-hash": "258b43872b798a891cb08a9466619a92",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2961,16 +2961,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.7.8",
+            "version": "8.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "476f491b85306c09101106d9b66a5dbe73c21bf0"
+                "reference": "881e60062ea86a8f6809a298f09f56afd20b3cf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/476f491b85306c09101106d9b66a5dbe73c21bf0",
-                "reference": "476f491b85306c09101106d9b66a5dbe73c21bf0",
+                "url": "https://api.github.com/repos/drupal/core/zipball/881e60062ea86a8f6809a298f09f56afd20b3cf3",
+                "reference": "881e60062ea86a8f6809a298f09f56afd20b3cf3",
                 "shasum": ""
             },
             "require": {
@@ -3202,7 +3202,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-10-02T18:41:30+00:00"
+            "time": "2019-11-06T18:00:38+00:00"
         },
         {
             "name": "drupal/crop",
@@ -6003,6 +6003,54 @@
                 "source": "http://git.drupal.org/project/search_api.git",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/search_api_attachments",
+            "version": "1.0.0-beta14",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_attachments.git",
+                "reference": "8.x-1.0-beta14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-8.x-1.0-beta14.zip",
+                "reference": "8.x-1.0-beta14",
+                "shasum": "ced89509f2660fc5c0c6fc0ceddac8cf54d341c7"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta14",
+                    "datestamp": "1562252286",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "izus",
+                    "homepage": "https://www.drupal.org/user/514568"
+                }
+            ],
+            "description": "Extract and index file fields content.",
+            "homepage": "https://www.drupal.org/project/search_api_attachments",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api_attachments"
             }
         },
         {
@@ -10807,6 +10855,7 @@
         "drupal/plupload": 10,
         "drupal/purge": 10,
         "drupal/rules": 15,
+        "drupal/search_api_attachments": 10,
         "drupal/smtp": 10,
         "drupal/view_unpublished": 15,
         "drupal/viewfield": 10
