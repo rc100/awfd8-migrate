@@ -1,0 +1,31 @@
+uuid: 44b7bbdf-8b30-4b38-843d-408a052b5152
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cc4214fc-5278-4d71-8cf4-792f2468306f'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: awfhomepageredesigncampaign
+theme: bartik
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:cc4214fc-5278-4d71-8cf4-792f2468306f'
+settings:
+  id: 'block_content:cc4214fc-5278-4d71-8cf4-792f2468306f'
+  label: 'AWF Homepage Redesign: Campaign'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

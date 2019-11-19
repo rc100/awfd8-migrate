@@ -1,0 +1,31 @@
+uuid: 54942ac9-1ff4-4338-a692-67cef0fc7081
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:01a2162b-1435-40ec-8648-7aeb67451efe'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: awfhomepageredesignhero
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'block_content:01a2162b-1435-40ec-8648-7aeb67451efe'
+settings:
+  id: 'block_content:01a2162b-1435-40ec-8648-7aeb67451efe'
+  label: 'AWF Homepage Redesign: Hero'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

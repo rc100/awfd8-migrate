@@ -1,0 +1,23 @@
+uuid: 72941b16-9785-4066-b70a-f0fee05e6e3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_global
+    - node.type.supplemental
+id: node.supplemental.field_is_global
+field_name: field_is_global
+entity_type: node
+bundle: supplemental
+label: 'Global promotion'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

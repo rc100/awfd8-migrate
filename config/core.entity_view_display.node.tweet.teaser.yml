@@ -1,0 +1,31 @@
+uuid: a8e9a723-2e94-4052-8934-c56310903be0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tweet.body
+    - node.type.tweet
+  module:
+    - text
+    - user
+id: node.tweet.teaser
+targetEntityType: node
+bundle: tweet
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

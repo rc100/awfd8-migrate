@@ -1,0 +1,28 @@
+uuid: be37ac73-fabf-4967-8c90-fab36c8c1000
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - awf
+id: awf_awfhomepageredesigncampaign
+theme: awf
+region: disabled
+weight: -7
+provider: null
+plugin: 'block_content:cc4214fc-5278-4d71-8cf4-792f2468306f'
+settings:
+  id: 'block_content:cc4214fc-5278-4d71-8cf4-792f2468306f'
+  label: 'AWF Homepage Redesign: Campaign'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

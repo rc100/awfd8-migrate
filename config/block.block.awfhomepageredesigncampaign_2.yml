@@ -1,0 +1,31 @@
+uuid: e59e6083-1c39-445d-a7bd-a0f7d8d5abb4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b5bb24fa-0ea4-413f-9a49-e156211125e4'
+  module:
+    - block_content
+    - system
+  theme:
+    - awf
+id: awfhomepageredesigncampaign_2
+theme: awf
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:b5bb24fa-0ea4-413f-9a49-e156211125e4'
+settings:
+  id: 'block_content:b5bb24fa-0ea4-413f-9a49-e156211125e4'
+  label: 'AWF Homepage Redesign: Campaign'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

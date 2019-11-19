@@ -1,0 +1,20 @@
+uuid: 3793e704-b8ff-4f62-8bfc-d5a1b307f044
+langcode: en
+status: true
+dependencies:
+  theme:
+    - awf
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: awf_page_title
+theme: awf
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
