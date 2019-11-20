@@ -4,12 +4,21 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_basic_legacy_revision_id
+    - field.field.node.page.field_basic_page_files
+    - field.field.node.page.field_basic_page_images
+    - field.field.node.page.field_basic_page_legacy_alias
+    - field.field.node.page.field_basic_page_legacy_id
+    - field.field.node.page.field_basic_page_tags
     - field.field.node.page.field_heading
     - field.field.node.page.field_module
     - field.field.node.page.field_sidebar_item
+    - image.style.thumbnail
     - node.type.page
   module:
     - field_group
+    - file
+    - image
     - paragraphs
     - path
     - text
@@ -49,6 +58,53 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_basic_legacy_revision_id:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_basic_page_files:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_basic_page_images:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_basic_page_legacy_alias:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_basic_page_legacy_id:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_basic_page_tags:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_heading:
     weight: 1
     settings:

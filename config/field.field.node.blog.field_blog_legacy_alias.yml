@@ -1,0 +1,19 @@
+uuid: 4311385f-9bd4-4be3-8520-565bc82bad07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_legacy_alias
+    - node.type.blog
+id: node.blog.field_blog_legacy_alias
+field_name: field_blog_legacy_alias
+entity_type: node
+bundle: blog
+label: 'Legacy Alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

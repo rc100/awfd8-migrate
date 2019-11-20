@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_date
+    - field.field.node.news.field_legacy_alias
     - field.field.node.news.field_news_featured_image
     - field.field.node.news.field_news_files
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_images
+    - field.field.node.news.field_news_legacy_alias
+    - field.field.node.news.field_news_legacy_id
     - field.field.node.news.field_news_published_location
     - field.field.node.news.field_news_tags
     - image.style.thumbnail
@@ -45,6 +48,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_legacy_alias:
+    weight: 131
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_news_featured_image:
     weight: 125
     settings:
@@ -75,6 +86,21 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_news_legacy_alias:
+    weight: 132
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_news_legacy_id:
+    weight: 130
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_news_published_location:
     weight: 124

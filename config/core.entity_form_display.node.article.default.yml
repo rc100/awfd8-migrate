@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_article_legacy_alias
+    - field.field.node.article.field_article_legacy_id
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - image.style.thumbnail
@@ -42,6 +44,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_article_legacy_alias:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_article_legacy_id:
+    weight: 121
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_image:
     type: image_image
     weight: 4
