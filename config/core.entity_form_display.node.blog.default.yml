@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.blog.field_all_tags
     - field.field.node.blog.field_blog_files
     - field.field.node.blog.field_blog_images
+    - field.field.node.blog.field_blog_legacy_alias
+    - field.field.node.blog.field_blog_legacy_id
     - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
@@ -62,6 +64,21 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_blog_legacy_alias:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_blog_legacy_id:
+    weight: 128
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_date:
     weight: 123
