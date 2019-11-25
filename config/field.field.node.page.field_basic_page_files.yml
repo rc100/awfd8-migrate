@@ -1,0 +1,27 @@
+uuid: ce8c85ee-b2b2-4741-9606-60fc5cac7696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_page_files
+    - node.type.page
+  module:
+    - file
+id: node.page.field_basic_page_files
+field_name: field_basic_page_files
+entity_type: node
+bundle: page
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

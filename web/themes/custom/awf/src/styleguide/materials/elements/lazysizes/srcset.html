@@ -1,0 +1,9 @@
+---
+notes: |
+  Required: 'lazysizes' in ./init-script.js
+  Replace attribute 'src' and 'srcset' with 'data-src' and 'data-srcset'.
+  Add the 'lazyload' class on any lazy-loading element
+---
+<h3>Image tag with srcset</h3>
+
+<img data-srcset="images/nashbridgeslogo-small.jpg 600w, images/nashbridgeslogo.jpg 1024w" sizes="100vw" data-src="images/nashbridgeslogo-small.jpg" class="lazyload"/>

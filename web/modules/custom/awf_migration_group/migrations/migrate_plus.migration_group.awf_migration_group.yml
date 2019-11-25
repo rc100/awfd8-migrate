@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: awf_group
+label: 'AWF Migration Group'
+description: 'AWF Migration Group'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: migrate

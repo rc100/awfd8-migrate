@@ -1,0 +1,14 @@
+uuid: 38761a98-26ef-487e-af71-06ce03f95fc9
+name: 'African Wildlife Foundation'
+mail: ronald.mulero@agencychief.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/4
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

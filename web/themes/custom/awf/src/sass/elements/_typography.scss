@@ -1,0 +1,114 @@
+/**
+* @file
+* Typographic styles.
+*
+*/
+
+// Define baseline lineheight.
+$lineheight: 1.5;
+
+// Define a border style.
+$border: 1px solid #ccc;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+// Convert a pixel to rem value
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue / 10) + rem;
+}
+
+// Set global styles for the document.
+body {
+  //this is for homepage only until other pages are assigned.
+  &.path-frontpage {
+    @include font-size(18);
+    min-width: $min-width;
+    color: $awfbrown;
+    font-family: $base-font-family;
+    line-height: $lineheight;
+    @include breakpoint($all-devices) {
+      &.noscroll {
+        position: fixed;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    //Define heading styles.
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.2;
+      font-weight: 300;
+    }
+    h1,
+    h2,
+    h3 {
+      font-family: $base-heading-font;
+
+    }
+    h4,
+    h5,
+    h6 {
+      font-family: $base-font-family;
+    }
+    p {
+      font-size: .85em; 
+    }
+
+
+    h2 {
+        color: $awfbrown;
+        font-size: 3.5rem;
+        @include breakpoint($min1200) {
+          font-size: 4.2rem;  
+        }
+      &.block-title {
+        @include element-invisible;
+      }
+    }
+    p, 
+    span , 
+    li{
+      color: $awfbrown;
+    }
+
+    // Define a link style.
+    a {
+      text-decoration: none;
+    }
+
+    // Define a horizontal rule style.
+    hr {
+      border-bottom: $border;
+    }
+
+    // Define a blockquote style.
+    blockquote {
+      border-left: $border;
+      padding-left: $indent-amount;
+      font-size: 1.5em;
+      line-height: 1.25em;
+      p {
+        margin: 0.5em 0;
+      }
+    }
+    cite {
+      @include font-size(16);
+      display: block;
+    }
+
+    // Define an intro style.
+    .intro {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+    .lazyload {
+      transition: all 700ms;  
+    }
+  }
+}
+
+

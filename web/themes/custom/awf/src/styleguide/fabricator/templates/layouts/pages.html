@@ -1,0 +1,15 @@
+---
+fabricator: true
+---
+
+<div class="f-page-title" data-f-toggle="labels">Pages</div>
+
+<ul>
+  {{#each layouts.pages.items}}
+
+  <li>
+    <a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
+  </li>
+
+  {{/each}}
+</ul>

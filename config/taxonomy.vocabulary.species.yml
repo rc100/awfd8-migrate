@@ -1,0 +1,8 @@
+uuid: 437a7c75-fda2-4322-87d7-5c314c8ac270
+langcode: en
+status: true
+dependencies: {  }
+name: Species
+vid: species
+description: ''
+weight: 0

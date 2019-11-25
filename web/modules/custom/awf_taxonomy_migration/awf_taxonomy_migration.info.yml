@@ -1,0 +1,9 @@
+name: AWF Taxonomy Migration
+type: module
+description: AWF Taxonomy Vocabularies and Terms Migration.
+core: 8.x
+package: AWF Migration
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools

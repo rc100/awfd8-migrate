@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains awf_migration_group.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function awf_migration_group_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the awf_migration_group module.
+    case 'help.page.awf_migration_group':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('AWF Migration Group.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

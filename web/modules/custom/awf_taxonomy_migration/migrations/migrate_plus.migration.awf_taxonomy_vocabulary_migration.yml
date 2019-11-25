@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+id: awf_taxonomy_vocabulary_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Taxonomy Vocabularies Migration'
+source:
+  plugin: d7_taxonomy_vocabulary
+process:
+  vid:
+    -
+      plugin: machine_name
+      source: name
+    -
+      plugin: make_unique_entity_field
+      entity_type: taxonomy_vocabulary
+      field: vid
+      length: 32
+      migrated: true
+    -
+      plugin: forum_vocabulary
+      machine_name: forums
+  label: name
+  name:
+    -
+      plugin: skip_on_value
+      method: row
+      source: name
+      value:
+        - Animal
+        - Careers
+        - Landscape
+        - Media Folders
+  description: description
+  hierarchy: hierarchy
+  weight: weight
+destination:
+  plugin: 'entity:taxonomy_vocabulary'
+migration_dependencies: {  }

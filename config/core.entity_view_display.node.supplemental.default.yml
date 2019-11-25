@@ -1,0 +1,44 @@
+uuid: 6ddd2f4c-8e4d-47db-9475-dd787dc713c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.supplemental.body
+    - field.field.node.supplemental.field_is_global
+    - field.field.node.supplemental.field_remove_title
+    - field.field.node.supplemental.field_sidebar_image
+    - field.field.node.supplemental.field_sidebar_type
+    - field.field.node.supplemental.field_view_more
+    - node.type.supplemental
+  module:
+    - text
+    - user
+id: node.supplemental.default
+targetEntityType: node
+bundle: supplemental
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_remove_title:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  field_is_global: true
+  field_sidebar_image: true
+  field_sidebar_type: true
+  field_view_more: true
+  langcode: true
+  links: true

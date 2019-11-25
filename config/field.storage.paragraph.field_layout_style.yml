@@ -1,0 +1,27 @@
+uuid: d2607e47-4b9e-46c8-aa81-edcda13ba5f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_layout_style
+field_name: field_layout_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: full
+      label: Full
+    -
+      value: two-column
+      label: 'Two Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

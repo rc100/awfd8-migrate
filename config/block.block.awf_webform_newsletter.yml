@@ -1,0 +1,31 @@
+uuid: 015df4ea-8f37-4689-97be-9494cbb3f077
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.newsletter
+  module:
+    - system
+    - webform
+  theme:
+    - awf
+id: awf_webform_newsletter
+theme: awf
+region: content
+weight: -3
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Webform: Newsletter'
+  provider: webform
+  label_display: visible
+  webform_id: newsletter
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

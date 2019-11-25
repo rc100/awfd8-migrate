@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+id: awf_basic_page_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Taxonomy Terms Migration'
+source:
+  plugin: d7_node
+  node_type: basic_page
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_vlue: "en"
+  title: title
+  field_heading: text
+  status: status
+  created: created
+  changed: changed
+  promoted: promoted
+  # 'body/value': body_value
+  # 'body/format': body_format
+  body: body
+  revision_uid: revision_uid
+  revision_log: revision_log
+  revision_timestamp: timestamp
+destination:
+  plugin: entity:node
+  default_bundle: page
+migration_dependencies:
+  required:
+    - awf_taxonomy_vocabulary_migration
+  optional:
+    - d7_field_instance
+
+
+
+
+# title : text
+# field_heading : text
+# body : long text and summary
+# field_module : field collection
+# metatags : path module
+# redirect : meta tag module form elements
+# xmlsitemap : xml sitemap module element
+# group_sidebar_items : fieldset 
+#   item : field_sidebar_item
