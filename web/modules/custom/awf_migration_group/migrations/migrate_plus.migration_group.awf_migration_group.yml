@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-id: awf_group
+id: awf_migration_group
 label: 'AWF Migration Group'
 description: 'AWF Migration Group'
 source_type: 'Drupal 7'
