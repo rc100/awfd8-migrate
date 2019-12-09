@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\migrate\Row;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
 
 /**
  * Implements hook_help().
@@ -21,4 +24,32 @@ function awf_taxonomy_migration_example_help($route_name, RouteMatchInterface $r
 
     default:
   }
+}
+
+
+function awf_taxonomy_migration_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+
+	if($migration->id() == 'awf_about_page_migration') {
+
+		$tags = [
+			'field_tags_animal',
+			'field_tags_country',
+			'field_tags_region',
+			'field_tags_projects',
+			'field_tags_land_habitat',
+			'field_tags_community',
+			'field_tags_economic',
+			'field_tags_landscape',
+		];
+		foreach($tags as $tag){
+			if( !empty($row->getSourceProperty($tag))){
+				print('asg ' . $tag);
+				print_r($row->getSourceProperty($tag));
+			}
+
+		}
+
+	}
+
+
 }
