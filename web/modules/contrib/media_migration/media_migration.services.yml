@@ -1,0 +1,14 @@
+services:
+  media_migration.event_subscriber:
+    class: Drupal\media_migration\EventSubscriber\MediaMigrationSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
+
+  plugin.manager.media_wysiwyg:
+    class: Drupal\media_migration\MediaWysiwygPluginManager
+    parent: default_plugin_manager
+
+  media_migration.migrate_plugin_alterer:
+    class: Drupal\media_migration\MigratePluginAlterer
+    arguments: ['@plugin.manager.migration', '@plugin.manager.migrate.source', '@plugin.manager.media_wysiwyg', '@messenger']
