@@ -41,7 +41,8 @@ web/sites/simpletest
 # Logs and databases #
 ######################
 *.log
-*.sql
+*test*.sql
+
 
 # OS generated files #
 ######################
