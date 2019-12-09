@@ -1,4 +1,4 @@
-langcode: en
+# langcode: en
 status: true
 dependencies:
   module:
@@ -15,37 +15,31 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
-  plugin: d7_field_collection_item
-  key: migrate
+  plugin: d7_field_collection_item_asg
   field_name: field_module
+  # field_name: field_description
 process:
-  field_layout_style:
-    plugin: iterator
-    source: field_layout_style
-    process:
-      value: text
-    revision_id: revision_id
+  type:
+    plugin: default_value
+    default_value: module
+  field_description: field_description
+  revision_id: revision_id
   field_image:
     plugin: iterator
     source: field_image
     process:
-      value: value
-    revision_id: revision_id
-  field_description:
-    plugin: iterator
-    source: field_description
-    process:
-      value: value
-    revision_id: revision_id
-  field_block_reference:
-    plugin: iterator
-    source: field_block_reference
-    process:
-      value: value
-    revision_id: revision_id
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_layout_style: field_layout_style
+  #field_block_reference will probubly be populated by the node migrations
+  # field_block_reference: field_block_reference
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: field_module
+  # plugin: entity:paragraph
 migration_dependencies:
   required: { }
   optional: { }
