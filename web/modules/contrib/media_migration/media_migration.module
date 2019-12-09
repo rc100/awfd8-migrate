@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Media migration module.
+ */
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function media_migration_migration_plugins_alter(array &$migrations) {
+  \Drupal::service('media_migration.migrate_plugin_alterer')->alter($migrations);
+}
