@@ -42,6 +42,7 @@ web/sites/simpletest
 ######################
 *.log
 *test*.sql
+*.sql
 
 
 # OS generated files #
@@ -58,3 +59,7 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# Lando #
+###########
+.lando.yml
