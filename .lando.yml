@@ -1,7 +1,0 @@
-name: awfd8core
-recipe: drupal8
-config:
-  webroot: web
-services:
-  legacy:
-    type: mysql

@@ -1,0 +1,4 @@
+name: awfd8-sandbox
+recipe: drupal8
+config:
+  webroot: web
