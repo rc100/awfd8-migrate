@@ -63,3 +63,7 @@ Thumbs.db
 # Lando #
 ###########
 .lando.yml
+
+# Secrets #
+###########
+secrets.json
