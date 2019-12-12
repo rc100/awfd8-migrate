@@ -16,6 +16,7 @@
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
+
 .element-invisible,
 .visually-hidden,
 %element-invisible {
@@ -30,6 +31,7 @@
   width: auto;
   overflow: auto;
 }
+
 .element-invisible-off,
 %element-invisible-off {
   @include element-invisible-off;
@@ -38,11 +40,13 @@
 // Makes an element visually hidden by default, but visible when focused.
 @mixin element-focusable {
   @include element-invisible;
+
   &:active,
   &:focus {
     @include element-invisible-off;
   }
 }
+
 .element-focusable,
 %element-focusable {
   @include element-focusable();
@@ -55,6 +59,7 @@
   color: #fff;
   text-align: center;
   height: 0;
+
   &:focus {
     height: auto;
     padding: 10px;
@@ -68,6 +73,7 @@
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+
   &:focus {
     top: 5px;
     left: 5px;
@@ -90,4 +96,3 @@
 #main {
   outline: none;
 }
-

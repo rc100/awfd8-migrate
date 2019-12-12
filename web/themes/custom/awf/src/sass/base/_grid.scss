@@ -13,9 +13,9 @@ $grid-row-gap: $grid-column-gap;
 
 // Convert a number into a negative value.
 @function negative ($number) {
-  @if type-of($number) != number {
+  @if type-of($number) !=number {
     @return $number;
-  } @else if $number != 0 {
+  } @else if $number !=0 {
     @return -$number;
   }
 }
@@ -39,9 +39,10 @@ $grid-row-gap: $grid-column-gap;
 // $offset: Number of columns this should be offset.
 // $float: left or none.
 @mixin col($columns: 1, $grid: $grid-columns, $column-gap: $grid-column-gap, $offset: 0, $float: left) {
-  @if $float != none {
+  @if $float !=none {
     float: $float;
   }
+
   width: calc((#{$columns} / #{$grid}) * 100% - #{$column-gap});
   margin-left: calc((#{$offset} / #{$grid}) * 100% + #{$column-gap});
 }
@@ -75,6 +76,7 @@ $grid-row-gap: $grid-column-gap;
   @for $i from 1 through $grid {
     .span-#{$i} {
       @include col($i, $grid);
+
       @for $k from 1 through $grid {
         &.offset-#{$k} {
           @include offset($k, $grid);
@@ -117,13 +119,16 @@ $grid-row-gap: $grid-column-gap;
 // $column-gap: Horizontal space between columns.
 @mixin tm-grid($number, $row-gap: $grid-row-gap, $column-gap: $grid-column-gap) {
   @include colwrapper($row-gap, $column-gap);
-  > * {
+
+  >* {
     @include col(1, $number, $column-gap);
     margin-top: $row-gap;
     background-color: #eee;
-    > * {
+
+    >* {
       @include trim();
     }
+
     &:nth-child(#{$number}n+1) {
       clear: left;
     }
@@ -135,14 +140,18 @@ $grid-row-gap: $grid-column-gap;
   .two-column-grid {
     @include tm-grid(2);
   }
+
   .three-column-grid {
     @include tm-grid(3);
   }
+
   .four-column-grid {
     @include tm-grid(4);
   }
 }
+
 @include breakpoint($tablet-only) {
+
   .two-column-grid,
   .three-column-grid,
   .four-column-grid {
@@ -153,6 +162,7 @@ $grid-row-gap: $grid-column-gap;
 // Example: breakout column grid item using changecol().
 .example-breakout {
   background-color: $highlight;
+
   @include breakpoint($desktop) {
     @include changecol(1, -1, -1);
   }

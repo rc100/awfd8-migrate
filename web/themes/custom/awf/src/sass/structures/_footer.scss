@@ -6,59 +6,73 @@
 
 footer.section-footer {
   background: $ltgray;
-  height: auto;//@footerHeight;
+  height: auto; //@footerHeight;
   padding: 25px 0;
+
   @include breakpoint($min1024) {
     padding-bottom: 50px;
-  }  
+  }
+
   * {
     font-family: $base-font-family;
   }
+
   .container {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     max-width: 1320px;
     margin: 0 auto;
+
     @include breakpoint($min760) {
-      padding-left: 20px!important;
-      padding-right: 20px!important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
     }
+
     @include breakpoint($min1024) {
-      padding-left: 60px!important;
-      padding-right: 60px!important;
+      padding-left: 60px !important;
+      padding-right: 60px !important;
     }
-    & > .inner-wrapper {
+
+    &>.inner-wrapper {
       display: flex;
       flex-flow: row wrap;
       position: relative;
       clear: both;
+
       @include breakpoint($min1024) {
         display: block;
       }
+
       .menu--footer,
       .menu--footer-utility,
       .block-footer-social-links,
       .block-footer-donate {
         flex: 1 0 100%;
       }
+
       .menu--footer {
         order: 1;
         margin-bottom: 0;
         width: 100%;
+
         @include breakpoint($min1024) {
-          width: calc(100% - 230px)!important;
+          width: calc(100% - 230px) !important;
           display: inline-block;
-        }      
+        }
+
         @include breakpoint($min1320) {
-          width: calc(100% - 300px)!important;
+          width: calc(100% - 300px) !important;
         }
       }
+
       .menu--footer-utility {
         order: 2;
       }
+
       .block-footer-social-links {
         order: 3;
         margin-bottom: 20px;
+
         @include breakpoint($min1024) {
           vertical-align: top;
           text-align: center !important;
@@ -66,25 +80,31 @@ footer.section-footer {
           float: right;
           margin-bottom: 0;
         }
+
         @include breakpoint($min1024) {
           width: 225px;
           margin-left: 4px;
-        }      
+        }
+
         @include breakpoint($min1320) {
           width: 295px;
         }
       }
+
       .social-nav {
         padding: 0;
       }
+
       .block-footer-donate {
         order: 4;
+
         @include breakpoint($min1024) {
           margin-top: -30px;
         }
       }
     }
   }
+
   .menu--footer-utility {
     &:before {
       @include breakpoint($min1024) {
@@ -96,13 +116,16 @@ footer.section-footer {
         height: 1px;
       }
     }
+
     ul {
       margin-bottom: 20px;
-      padding: 20px 0 0 0;
+      padding: 20px 0 0;
+
       @include breakpoint($min1024) {
         margin-top: 0;
         width: 55%;
       }
+
       li {
         margin: 0 20px 0 0;
       }
@@ -112,34 +135,43 @@ footer.section-footer {
   .menu--footer ul {
     padding: 0;
     list-style-type: none;
+
     li {
-      margin-left: 0!important;
+      margin-left: 0 !important;
+
       a {
         text-align: left;
       }
+
       &:first-child {
         a {
           color: $awforangedark;
+
           &:hover,
           &:focus,
           &:active {
             color: $awfbrown;
           }
         }
+
         margin-bottom: 15px;
+
         @include breakpoint($min760) {
           margin-right: 7%;
         }
+
         @include breakpoint($min1024) {
           margin-right: 6%;
           margin-bottom: 0;
         }
+
         @include breakpoint($min1320) {
           margin-right: 15%;
         }
       }
+
       &.separator {
-        display: none!important;
+        display: none !important;
       }
     }
   }
@@ -147,26 +179,29 @@ footer.section-footer {
   .menu--footer ul,
   .menu--footer-utility ul {
     li {
-      display: block!important;
+      display: block !important;
       float: none;
       margin-left: 0;
       margin-bottom: 10px;
       font-size: .75em;
+
       @include breakpoint($min1024) {
         display: inline-block;
         float: left;
         margin-right: 2%;
       }
+
       @include breakpoint($min1320) {
         margin-right: 3%;
       }
 
-      a{
+      a {
         display: block;
         font-style: normal;
         text-transform: uppercase;
         font-weight: 700;
         color: $awfbrown;
+
         &:hover,
         &:focus,
         &:active {
@@ -177,34 +212,40 @@ footer.section-footer {
     }
   }
 
-  .block-footer-social-links ul{
+  .block-footer-social-links ul {
     margin-top: -10px;
     list-style-type: none;
-    width:100%;
-    text-align: left!important;
+    width: 100%;
+    text-align: left !important;
+
     @include breakpoint($min760) {
       padding-left: 0;
     }
+
     @include breakpoint($min1024) {
       padding-left: 30px;
-      text-align: center!important;
-      width:auto;
-      float:right;  
+      text-align: center !important;
+      width: auto;
+      float: right;
       margin-top: 5px;
     }
+
     li {
       float: left;
       margin-right: 10px;
-      margin-left: 0!important;
+      margin-left: 0 !important;
+
       @include breakpoint($min1024) {
-        margin-left: 10px!important;
+        margin-left: 10px !important;
         margin-right: 0;
       }
+
       @include breakpoint($min1320) {
-        margin-left: 30px!important;
-      
+        margin-left: 30px !important;
+
       }
-    }    
+    }
+
     a {
       font-size: 0;
       text-decoration: none;
@@ -212,16 +253,18 @@ footer.section-footer {
       background: $awforange;
       display: block;
       color: $white;
-      text-indent: 0!important;
+      text-indent: 0 !important;
       padding: 5px 10px;
       width: 35px;
       height: 34px;
+
       &:before {
         @include icon(awf);
         font-size: 16px;
         margin-top: 4px;
         display: block;
       }
+
       &:hover,
       &:focus,
       &:active {
@@ -230,31 +273,38 @@ footer.section-footer {
       }
     }
   }
+
   .donations {
     min-width: 183px;
     margin-bottom: 100px;
+
     @include breakpoint($min1024) {
       float: right;
     }
   }
+
   .donate-nav {
     list-style-type: none;
     text-indent: -9999px;
     overflow: hidden;
     margin: 0;
     padding: 0;
+
     @include breakpoint($min1024) {
       width: 183px;
       float: right;
     }
+
     li {
       a {
         margin-right: 20px;
       }
+
       &:last-child {
         a {
-        margin-right: 0;
+          margin-right: 0;
         }
+
         @include breakpoint($min1024) {
           padding-top: 3px;
         }
@@ -262,4 +312,3 @@ footer.section-footer {
     }
   }
 }
-
