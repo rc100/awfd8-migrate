@@ -6,6 +6,9 @@
 
 	if( isset($_ENV['PANTHEON_ENVIRONMENT']) ){
 
+
+//  typically this is /var/www
+		print( 'asg ' . $_SERVER['HOME'] . '/files/private/secrets.json' );
 		$secretsFile = $_SERVER['HOME'] . '/files/private/secrets.json';
 		if(file_exists($secretsFile)) {
 			$secrets = json_decode(file_get_contents($secretsFile), 1);
