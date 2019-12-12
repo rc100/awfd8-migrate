@@ -7,20 +7,16 @@ var gutil = require('gulp-util');
 var del = require('del');
 var gulpif = require('gulp-if');
 var webpack = require('webpack');
-
 var assemble = require('fabricator-assemble');
-
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-
 var csso = require('gulp-csso');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
-
 var imagemin = require('gulp-imagemin');
-
 var svgSprite = require('gulp-svg-sprite');
+var sasslint = require('gulp-sass-lint');
 
 // configuration
 var config = {
@@ -86,6 +82,16 @@ gulp.task('styles:chief', function () {
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:chief']);
+
+gulp.task('lint', function(){
+  return gulp.src('src/sass/**/*.scss')
+    .pipe(sasslint({
+      files: {ignore: 'src/sass/_print.scss'},
+      configFile: '.sass-lint.yml',
+    }))
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError())
+});
 
 // scripts
 gulp.task('scripts', function (done) {
@@ -158,6 +164,7 @@ gulp.task('assemble', function (done) {
   });
   done();
 });
+
 
 // server
 gulp.task('serve', function () {
