@@ -50,6 +50,14 @@ footer.section-footer {
         flex: 1 0 100%;
       }
 
+      .block-footer-donate {
+        order: 3;
+
+        @include breakpoint($min1024) {
+          margin-top: -30px;
+        }
+      }
+
       .menu--footer {
         order: 1;
         margin-bottom: 0;
@@ -67,6 +75,10 @@ footer.section-footer {
 
       .menu--footer-utility {
         order: 2;
+
+        @include breakpoint($min1024) {
+          margin-top: 4rem;
+        }
       }
 
       .block-footer-social-links {
@@ -94,14 +106,6 @@ footer.section-footer {
       .social-nav {
         padding: 0;
       }
-
-      .block-footer-donate {
-        order: 4;
-
-        @include breakpoint($min1024) {
-          margin-top: -30px;
-        }
-      }
     }
   }
 
@@ -119,10 +123,11 @@ footer.section-footer {
 
     ul {
       margin-bottom: 20px;
-      padding: 20px 0 0;
+      padding: 0;
 
       @include breakpoint($min1024) {
         margin-top: 0;
+        padding: 20px 0 0;
         width: 55%;
       }
 
