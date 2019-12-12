@@ -18,7 +18,7 @@
 				!empty($parsed_url['migrate_source_db__username']) && 
 				!empty($parsed_url['migrate_source_db__pass']) && 
 				!empty($parsed_url['migrate_source_db__host']) && 
-				!empty($parsed_url['migrate_source_db__port']) && ) {
+				!empty($parsed_url['migrate_source_db__port']) ) {
 				$databases['migrate']['default'] = [
 				  'database' => $parsed_url['migrate_source_db__database'],
 				  'username' => $parsed_url['migrate_source_db__username'],
@@ -33,8 +33,18 @@
 		}
 
 	} else {
-		$secetsFile = $_SERVER['HOME'] . '/lando_config/secret/secrets.json';
+		
+		$secetsFile = '/app/lando_config/secret/secrets.json';
 		if(file_exists($secetsFile)) {
-			
+			$databases['migrate']['default'] = [
+				'database' => 'database',
+				'username' => 'mysql',
+				'password' => 'mysql',
+				'host' => 'legacy',
+				'port' => '3306',
+				'driver' => 'mysql',
+				'prefix' => '',
+				'collation' => 'utf8mb4_general_ci',
+			];
 		}
 	}
