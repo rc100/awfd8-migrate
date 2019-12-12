@@ -52,7 +52,6 @@ gulp.task('styles:fabricator', function () {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix({
-      browsers: ['last 2 versions'],
       grid: false
     }))
     .pipe(gulpif(!config.dev, csso()))
@@ -72,7 +71,6 @@ gulp.task('styles:chief', function () {
       ]
     }).on('error', sass.logError))
     .pipe(prefix({
-      browsers: ['last 2 versions'],
       grid: false
     }))
     .pipe(gulpif(!config.dev, csso()))
