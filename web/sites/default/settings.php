@@ -38,7 +38,10 @@ if (file_exists($local_settings)) {
  */
 $settings['install_profile'] = 'standard';
 
-$migration_connection = __DIR__ . "/migration_connection.php";
-if (file_exists($migration_connection)) {
+$migration_connection = __DIR__ . "/settings.migrate-on-pantheon.php";
+if (file_exists($migration_connection) ) {
 	include $migration_connection;
 }
+
+
+
