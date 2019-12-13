@@ -13,6 +13,9 @@ dependencies:
     - field.field.node.country.field_heading
     - field.field.node.country.field_image
     - field.field.node.country.field_klm
+    - field.field.node.country.field_legacy_alias
+    - field.field.node.country.field_legacy_id
+    - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
     - field.field.node.country.field_order_number
     - field.field.node.country.field_photo_credit
@@ -119,6 +122,28 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_legacy_alias:
+    weight: 141
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 142
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_legacy_revision_id:
+    weight: 143
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_main_image:
     weight: 123

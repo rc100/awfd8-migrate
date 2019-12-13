@@ -13,6 +13,9 @@ dependencies:
     - field.field.node.country.field_heading
     - field.field.node.country.field_image
     - field.field.node.country.field_klm
+    - field.field.node.country.field_legacy_alias
+    - field.field.node.country.field_legacy_id
+    - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
     - field.field.node.country.field_order_number
     - field.field.node.country.field_photo_credit
@@ -114,6 +117,32 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_legacy_alias:
+    weight: 121
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_legacy_id:
+    weight: 122
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_legacy_revision_id:
+    weight: 123
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_main_image:
     weight: 103
