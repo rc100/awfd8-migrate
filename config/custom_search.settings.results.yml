@@ -6,6 +6,7 @@ node_search:
       blog: blog
       news: news
       safari: safari
+      resource: resource
     languages:
       en: en
       und: und
@@ -18,6 +19,7 @@ user_search:
       blog: blog
       news: news
       safari: safari
+      resource: resource
     languages:
       en: en
       und: und
