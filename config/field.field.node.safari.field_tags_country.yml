@@ -1,0 +1,29 @@
+uuid: 28849ab3-3c09-4ea3-833a-a8894e5b09ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_country
+    - node.type.safari
+    - taxonomy.vocabulary.country
+id: node.safari.field_tags_country
+field_name: field_tags_country
+entity_type: node
+bundle: safari
+label: 'Countries Tagged'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
