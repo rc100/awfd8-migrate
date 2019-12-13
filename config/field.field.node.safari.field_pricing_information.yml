@@ -1,0 +1,19 @@
+uuid: 0fea3036-df15-418d-bb48-db3fda32dc78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pricing_information
+    - node.type.safari
+id: node.safari.field_pricing_information
+field_name: field_pricing_information
+entity_type: node
+bundle: safari
+label: 'Pricing Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

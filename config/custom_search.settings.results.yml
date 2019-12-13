@@ -5,6 +5,7 @@ node_search:
       tweet: tweet
       blog: blog
       news: news
+      safari: safari
     languages:
       en: en
       und: und
@@ -16,6 +17,7 @@ user_search:
       tweet: tweet
       blog: blog
       news: news
+      safari: safari
     languages:
       en: en
       und: und

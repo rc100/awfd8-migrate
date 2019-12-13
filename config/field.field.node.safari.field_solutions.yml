@@ -1,0 +1,19 @@
+uuid: 7c143fa4-ce28-4d40-861c-3fd272dbd373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solutions
+    - node.type.safari
+id: node.safari.field_solutions
+field_name: field_solutions
+entity_type: node
+bundle: safari
+label: Inclusions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
