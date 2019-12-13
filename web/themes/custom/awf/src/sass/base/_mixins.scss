@@ -6,8 +6,6 @@
  *
  */
 
-
-
 // Clear a container that has nested floated elements.
 @mixin clearfix {
   &:after {
@@ -16,6 +14,7 @@
     content: "";
   }
 }
+
 %clearfix {
   @include clearfix();
 }
@@ -24,6 +23,7 @@
 @mixin box-shadow {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
+
 %box-shadow {
   @include box-shadow();
 }
@@ -34,17 +34,21 @@
   max-width: $screen-tablet - 60px;
   margin: 0 30px;
   @include clearfix;
+
   @include breakpoint($tablet-only) {
     margin: 0 auto;
   }
+
   @include breakpoint($desktop) {
     max-width: $screen-max - 120px;
     margin: 0 60px;
   }
+
   @include breakpoint($lg-desktop) {
     margin: 0 auto;
   }
 }
+
 .inner-wrapper,
 %inner-wrapper {
   @include inner-wrapper();
@@ -52,6 +56,7 @@
 
 // Define a mixin for declaring hover and focus state together.
 @mixin hover {
+
   &:hover,
   &:focus,
   &.js-focus {
@@ -66,15 +71,17 @@
   margin: 0;
   padding: 0;
   @include clearfix;
+
   li {
-    @if $type == float {
+    @if $type==float {
       float: left;
       display: block;
-    } @else if $type == inline {
+    } @else if $type==inline {
       display: inline;
-    } @else if $type == inline-block {
+    } @else if $type==inline-block {
       display: inline-block;
     }
+
     list-style-type: none;
     list-style-image: none;
   }
@@ -85,23 +92,26 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
+
 %scroll {
   @include scroll();
 }
 
 // Trims the margin for top/bottom or left/right.
 @mixin trim($direction: v) {
-  @if $direction == v {
+  @if $direction==v {
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
-  } @else if $direction == h {
+  } @else if $direction==h {
     &:first-child {
       margin-left: 0;
     }
+
     &:last-child {
       margin-right: 0;
     }
@@ -116,6 +126,7 @@
   left: 0;
   right: 0;
 }
+
 %fill {
   @include fill();
 }
@@ -137,17 +148,20 @@
   line-height: 40px;
   appearance: none;
   cursor: pointer;
+
   @include hover {
     background-color: lighten($highlight, 10);
   }
 }
 
 @mixin text-decoration-none {
+
   &:hover,
   &:focus {
-    text-decoration: none
+    text-decoration: none;
   }
 }
+
 @mixin button-font-size {
   font-size: .85em;
   text-transform: uppercase;
@@ -163,23 +177,26 @@
   text-align: center;
   @include text-decoration-none;
 }
+
 @mixin button-bottom-line {
   @include button-body;
 }
+
 @mixin button-brown {
   @include button-body;
   @include button-font-size;
   padding-left: 20px;
   padding-right: 20px;
   min-height: 38px;
-  color: $white;  
+  color: $white;
   background: $awfbrown;
   transition: all .2s ease-in;
+
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
-    color: $awfbrown;  
+    color: $awfbrown;
     background: $white;
   }
 }
@@ -194,18 +211,20 @@
   cursor: pointer;
   background: $awforangedark;
   transition: all .2s ease-in;
+
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
-    color: $awforangedark; 
+    color: $awforangedark;
     background: $white;
   }
 }
+
 @mixin button-orange-line {
   @include button-body;
   @include button-font-size;
-  color: $awforangedark; 
+  color: $awforangedark;
 
   &:after {
     position: absolute;
@@ -215,34 +234,33 @@
     right: 3px;
     height: 3px;
     background: $awforangedark;
-    transition: 
-      transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
-      right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
-      left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+    transition: transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s, right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s, left 0.4s cubic-bezier(.04, .48, 0, 1) 0.6s;
     transform-origin: left;
   }
+
   .line {
     position: absolute;
     background: $awforangedark;
+
     &.-right,
     &.-left {
       width: 3px;
       bottom: -3px;
       top: -3px;
-      transform: scale3d(1,0,1);
-    }  
+      transform: scale3d(1, 0, 1);
+    }
 
     &.-top,
     &.-bottom {
       height: 3px;
       left: -3px;
       right: -3px;
-      transform: scale3d(0,1,1);
+      transform: scale3d(0, 1, 1);
     }
 
     &.-right {
       right: -3px;
-      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.23s;
       transform-origin: top;
     }
 
@@ -260,29 +278,30 @@
 
     &.-bottom {
       bottom: -3px;
-      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transition: transform 0.3s cubic-bezier(1, 0, .65, 1.01);
       transform-origin: right;
-    }  
+    }
   }
+
   &:hover,
   &:focus,
   &:active {
-   border-bottom: 2px solid transparent;
-   transition: all .2s ease-in;
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in;
+
     &:after {
-      transform: scale3d(0,1,1);
+      transform: scale3d(0, 1, 1);
       right: -3px;
       left: -3px;
       transform-origin: right;
-      transition: 
-        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
-        right 0.2s cubic-bezier(1,0,.65,1.01),
-        left 0s 0.3s;
+      transition: transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, .65, 1.01), left 0s 0.3s;
     }
+
     .line {
-      transform: scale3d(1,1,1);
+      transform: scale3d(1, 1, 1);
+
       &.-right {
-        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.2s;
         transform-origin: bottom;
       }
 
@@ -297,7 +316,7 @@
       }
 
       &.-bottom {
-        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
         transform-origin: left;
       }
     }
@@ -308,23 +327,27 @@
   overflow: hidden;
   color: $white;
   padding: 50px 0;
+
   @include breakpoint($min760) {
     padding: 60px 0;
   }
+
   @include breakpoint($min1024) {
-    padding: 80px 60px 60px 60px;
+    padding: 80px 60px 60px;
   }
 
   position: relative;
   @include inner-wrapper;
-  > div {
+
+  >div {
     z-index: 1;
-  }  
+  }
 }
 
 @mixin form-body-h4 {
   font-size: 26px;
-  font-family: $base-heading-font!important;
+  font-family: $base-heading-font !important;
+
   @include breakpoint($min1024) {
     font-size: 28px;
   }
@@ -335,13 +358,12 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  display: block; 
+  display: block;
 }
 
-@mixin view-link-title-img {
-}
 @mixin view-link-orange {
-  color: $awforangedark!important;
+  color: $awforangedark !important;
+
   &:hover,
   &:focus {
     color: $awfbrown;
@@ -356,9 +378,10 @@
 
 @mixin nav-item-link {
   color: $awfbrown;
+
   &:hover,
   &:active,
   &.active {
     color: $awforangedark;
-  }  
+  }
 }

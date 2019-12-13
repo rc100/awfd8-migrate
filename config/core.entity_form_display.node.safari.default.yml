@@ -1,0 +1,318 @@
+uuid: f2ce5326-7d68-498e-b919-2e15e13d78f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.safari.body
+    - field.field.node.safari.field_bushtracks_safari
+    - field.field.node.safari.field_challenges
+    - field.field.node.safari.field_coords
+    - field.field.node.safari.field_date
+    - field.field.node.safari.field_image
+    - field.field.node.safari.field_land_habitat
+    - field.field.node.safari.field_legacy_alias
+    - field.field.node.safari.field_legacy_id
+    - field.field.node.safari.field_legacy_revision_id
+    - field.field.node.safari.field_location
+    - field.field.node.safari.field_main_image
+    - field.field.node.safari.field_pricing_information
+    - field.field.node.safari.field_safari_capaciy
+    - field.field.node.safari.field_solutions
+    - field.field.node.safari.field_status
+    - field.field.node.safari.field_tags_africa
+    - field.field.node.safari.field_tags_community
+    - field.field.node.safari.field_tags_country
+    - field.field.node.safari.field_tags_economic
+    - field.field.node.safari.field_tags_region
+    - image.style.thumbnail
+    - node.type.safari
+  module:
+    - datetime
+    - field_group
+    - image
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_overview:
+      children:
+        - field_main_image
+        - body
+      parent_name: ''
+      weight: 1
+      format_type: accordion
+      format_settings:
+        label: Overview
+        effect: none
+        id: ''
+        classes: 'group-overview field-group-fieldset'
+      label: Overview
+    group_safari_details:
+      children:
+        - group_safari_details_child
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        label: 'Safari Details'
+        effect: none
+        id: ''
+        classes: 'group-details field-group-fieldset'
+      label: 'Safari Details'
+    group_safari_details_child:
+      children:
+        - title
+        - field_date
+        - field_coords
+        - field_image
+        - field_location
+        - field_safari_capaciy
+        - field_pricing_information
+        - field_status
+      parent_name: group_safari_details
+      weight: 20
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Safari Details Child'
+id: node.safari.default
+targetEntityType: node
+bundle: safari
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bushtracks_safari:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_challenges:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_coords:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image:
+    weight: 24
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_land_habitat:
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_legacy_alias:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_legacy_revision_id:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_location:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_main_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_pricing_information:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_safari_capaciy:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_solutions:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_status:
+    weight: 28
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tags_africa:
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_community:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_country:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_economic:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_region:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 24
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 26
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 25
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 22
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

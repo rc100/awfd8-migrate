@@ -12,11 +12,13 @@
   background-color: #f8fff0;
   color: #234600;
 }
+
 .warning,
 %warning {
   background-color: #fffce5;
   color: #840;
 }
+
 .error,
 %error {
   background-color: #fef5f1;
@@ -27,8 +29,10 @@
 .messages {
   position: relative;
   margin: 10px 0;
-  padding: 10px 10px 10px 50px; /* LTR */
+  padding: 10px 10px 10px 50px;
+  /* LTR */
   border: 1px solid #be7;
+
   &:before {
     position: absolute;
     top: 20px;
@@ -40,34 +44,42 @@
     text-align: center;
     content: "✓";
   }
+
   &--status {
     @extend %ok;
   }
+
   &--warning {
     @extend %warning;
     border-color: #ed5;
+
     &:before {
       color: #ed5;
       content: "!";
     }
   }
+
   &--error {
     @extend .messages;
     @extend %error;
     border-color: #ed541d;
+
     &:before {
       color: #ed541d;
       content: "×";
     }
+
     p.error {
       color: #333;
     }
   }
 }
+
 h3.message__title,
 .messages__list {
   margin: 0;
 }
+
 .messages__item {
   list-style-image: none;
 }

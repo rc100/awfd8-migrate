@@ -1,0 +1,19 @@
+uuid: b55dee3b-bc21-4fc6-a559-fc0b5f40db8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_alias
+    - node.type.safari
+id: node.safari.field_legacy_alias
+field_name: field_legacy_alias
+entity_type: node
+bundle: safari
+label: 'Legacy Alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

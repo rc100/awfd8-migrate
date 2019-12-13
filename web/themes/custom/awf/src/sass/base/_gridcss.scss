@@ -56,9 +56,10 @@
 // $row-gap: Vertical space between rows.
 // $column-gap: Horizontal space between columns.
 // $flow: row, column or dense.
-@mixin tm-gridcss($number, $row-gap: $grid-row-gap, $column-gap: $grid-column-gap, $flow:null) {
+@mixin tm-gridcss($number, $row-gap: $grid-row-gap, $column-gap: $grid-column-gap, $flow: null) {
   @include gridcss('grid-template-columns', repeat($number, 1fr), $row-gap, $column-gap, $flow);
-  > * > * {
+
+  >*>* {
     @include trim();
   }
 }
@@ -66,7 +67,8 @@
 // Example: create a uniform grid using tm-gridcss().
 .four-column-gridcss {
   @include tm-gridcss(4, $flow: dense);
-  > * {
+
+  >* {
     background: #eee;
   }
 }

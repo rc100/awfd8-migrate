@@ -10,20 +10,25 @@
 
 %fadein-selector {
   transition: opacity 300ms ease 50ms;
+
   &.js-transparent {
     opacity: 0;
   }
 }
+
 .lazyload {
   opacity: .2;
 }
+
 .lazyloaded {
   opacity: 1;
   transition: opacity 300ms ease 50ms;
 }
+
 .btn-orange {
   @include button-orange;
 }
+
 .btn-orange-line {
   margin: 20px 0;
   display: block;
