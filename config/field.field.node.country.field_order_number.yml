@@ -1,0 +1,21 @@
+uuid: 0a346720-819a-4a7a-88a6-390d49010ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.country
+  module:
+    - options
+id: node.country.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: country
+label: 'Order Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

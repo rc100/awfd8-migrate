@@ -1,0 +1,19 @@
+uuid: 983dbbb9-ded1-47f8-b575-a98570aa9fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_text
+    - node.type.country
+id: node.country.field_project_text
+field_name: field_project_text
+entity_type: node
+bundle: country
+label: 'Project Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
