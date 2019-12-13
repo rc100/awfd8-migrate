@@ -13,29 +13,37 @@ main {
     }
   }
 }
+
 .path-frontpage {
+
   /*  Nav */
-  &.home{
+  &.home {
     background: $white;
+
     nav {
       top: 0;
     }
+
     footer {
       background: $ltgray;
     }
   }
+
   h1.page-title {
     .field--name-title {
       @include element-invisible;
     }
   }
 }
+
 /*  Preface Area: This will need to be in its region in D8 */
 .block-awf-homepage-redesign-hero {
   position: relative;
-  & > .field {
+
+  &>.field {
     margin: 0;
   }
+
   .inner-wrapper {
     overflow: hidden;
     max-width: 100%;
@@ -43,30 +51,29 @@ main {
     height: 90vh;
     max-height: 700px;
     background: rgba($awfbrown, 1);
+
     @include breakpoint($min500) {
-/*        height: 90vh;
-      max-height: unset;*/
-/*        height: 700px;*/
       max-height: 730px;
     }
+
     @include breakpoint($min760) {
       max-width: 1320px;
     }
+
     @include breakpoint($min1024) {
       height: 90vh;
       max-height: unset;
-    }  
+    }
+
     @include breakpoint($min1200) {
-       max-width: 1680px;
-    }  
+      max-width: 1680px;
+    }
+
     @include breakpoint($min1320) {
       max-width: unset;
-/*        padding: 0 60px;*/
-    }  
-/*      @include breakpoint($min1920) {
-      max-width: 2000px;
-    }  */
+    }
   }
+
   .image-wrapper {
     overflow: hidden;
     position: absolute;
@@ -80,109 +87,120 @@ main {
     @include breakpoint($min760) {
       max-height: 900px;
     }
+
     @include breakpoint($min1024) {
 
       height: 90vh;
       max-height: unset;
-    }  
-    @include breakpoint($min1200) {
-    }  
+    }
 
     &:before {
       background: linear-gradient(to bottom, rgba($awfbrown, .8) 0%, transparent 100%);
-      height: 50%;
-      width: 100%;
-      z-index: 2;        
-    }
-    &:before {
       content: '';
       top: 0;
+      height: 50%;
+      width: 100%;
+      z-index: 2;
+
       @include breakpoint($min1024) {
         width: 100%;
       }
     }
+
     img,
     &:before {
       display: block;
       position: absolute;
-    }      
+    }
   }
+
   .content-wrapper {
     z-index: 3;
     position: relative;
     display: block;
     height: 100%;
-    margin-left: 30px;      
-    margin-right: 30px;      
+    margin-left: 30px;
+    margin-right: 30px;
+
     @include breakpoint($min760) {
       max-width: 700px;
-      margin-left: auto;      
-      margin-right: auto;      
+      margin-left: auto;
+      margin-right: auto;
     }
+
     @include breakpoint($min1024) {
       max-width: 1320px;
       left: 120px;
     }
+
     @include breakpoint($min1320) {
       left: 60px;
     }
+
     &-text {
       position: absolute;
       bottom: 60px;
       width: 100%;
+
       @include breakpoint($min500) {
         width: 80%;
       }
+
       @include breakpoint($min760) {
         width: 60%;
       }
+
       @include breakpoint($min1024) {
         bottom: 100px;
       }
     }
   }
+
   h1 {
     color: $white;
-    font-size: 2.4em;  
-    letter-spacing: -1px; 
+    font-size: 2.4em;
+    letter-spacing: -1px;
     line-height: 1.2;
     text-shadow: 0 0 50px rgba(0, 0, 0, .5);
-    @include breakpoint($min500) {
-      font-size: 2.8em;  
-    }
-    @include breakpoint($min760) {
-      font-size: 3.3em;  
-    }
-    @include breakpoint($min1024) {
-      font-size: 3.6em;  
-    }
-    @include breakpoint($min1320) {
-    }
-  }
-  h1, p {
 
+    @include breakpoint($min500) {
+      font-size: 2.8em;
+    }
+
+    @include breakpoint($min760) {
+      font-size: 3.3em;
+    }
+
+    @include breakpoint($min1024) {
+      font-size: 3.6em;
+    }
   }
 }
+
 .section-campaign .inner-wrapper {
   @include breakpoint($min1024) {
-    padding: 0 60px; 
+    padding: 0 60px;
   }
+
   .text-wrapper,
   .image-wrapper {
     @include breakpoint($min1024) {
       -ms-flex-preferred-size: 50%;
-      width: 100%;    
+      width: 100%;
       max-width: 600px;
       flex: 1 0 46%;
 
     }
   }
+
   .image-wrapper {
     margin-top: -60px;
     overflow-y: hidden;
+
     @include breakpoint($min760) {
       max-height: 700px;
     }
+
     @include breakpoint($min1024) {
       max-height: 660px;
       order: 2;
@@ -190,46 +208,54 @@ main {
       margin-bottom: -60px;
       z-index: 1;
     }
+
     a {
       display: block;
       overflow: hidden;
     }
+
     img {
       @include breakpoint($min760) {
         top: -150px;
-      }        
+      }
+
       @include breakpoint($min1024) {
         top: 0;
         min-width: 395px;
-      }        
+      }
+
       @include breakpoint($min1320) {
         top: -120px;
-      }        
+      }
     }
   }
+
   .text-wrapper {
     vertical-align: middle;
     padding: 40px 0;
+
     @include breakpoint($min1024) {
       order: 1;
       margin-right: 40px;
       padding: 120px 0 0;
-    }  
-    @include breakpoint($min1320) {
-    } 
-    h2, p {
-      @include breakpoint($min1024) {
-        max-width: 500px; 
-      } 
     }
+
+    h2,
+    p {
+      @include breakpoint($min1024) {
+        max-width: 500px;
+      }
+    }
+
     h2 {
       margin: 0;
     }
 
   }
 }
+
 .block-awf-homepage-redesign-mission {
-  & > .field {
+  &>.field {
     margin: 0;
   }
 }
@@ -237,19 +263,22 @@ main {
 .section-mission {
   position: relative;
   overflow: hidden;
-  background-color: rgba($ltgray, .7); 
+  background-color: rgba($ltgray, .7);
   padding-top: 60px;
   margin-bottom: -40px;
   padding-bottom: 40px;
+
   @include breakpoint($min760) {
     padding-bottom: 80px;
     margin-bottom: 0;
   }
+
   @include breakpoint($min1024) {
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 110px;
-  }  
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -258,15 +287,18 @@ main {
     top: 0;
     background: url('../../src/svg/pattern_MultiFacetedApproach.svg') 0 0 repeat-y;
     display: none;
+
     @include breakpoint($min760) {
       display: block;
       left: 0;
       background-size: 100%;
     }
+
     @include breakpoint($min1200) {
       background-size: 112%;
     }
   }
+
   .view-content {
     display: flex;
     flex-flow: row wrap;
@@ -274,58 +306,72 @@ main {
     position: relative;
     overflow: hidden;
     width: calc(100vw - 30px);
+
     @include breakpoint($min500) {
       max-width: auto;
     }
 
     @include breakpoint($min760) {
-       max-width: auto;
+      max-width: auto;
     }
-    img {
-      positon: relative;
 
+    img {
+      position: relative;
     }
   }
+
   .views-row {
     position: relative;
     overflow: hidden;
-    background: gainsboro;
+    background: #dcdcdc;
     flex: 1 0 100%;
     margin-bottom: 30px;
+
     @include breakpoint($min760) {
       width: 100%;
       flex: 1 0 48%;
       margin-right: 4%;
       margin-bottom: 4%;
+
       &:nth-child(even) {
         margin-right: 0;
       }
     }
+
     @include breakpoint($min1024) {
-      margin-right: 3%;    
+      margin-right: 3%;
+
       &:nth-child(even) {
         margin-right: 0;
       }
     }
+
     @include breakpoint($min1200) {
       flex: 1 0 22%;
-      &, &:nth-child(2) {
+
+      &,
+      &:nth-child(2) {
         margin-right: 2.4%;
       }
+
       &:last-child {
         margin-right: 0;
       }
     }
+
     @include breakpoint($min1320) {
       flex: 1 0 22%;
-      &, &:nth-child(2) {
+
+      &,
+      &:nth-child(2) {
         margin-right: 2.2%;
       }
     }
-      
+
     .field-listing-image {
       top: 0;
     }
+
     .field-listing-title {
       position: absolute;
       z-index: 1;
@@ -334,37 +380,45 @@ main {
       bottom: 0;
       z-index: 2;
       font-size: 24px;
+
       @include breakpoint($min1024) {
         font-size: 26px;
       }
     }
+
     img {
       top: 0;
       left: -100px;
       min-width: 550px;
+
       @include breakpoint($min500) {
         min-width: 600px;
         left: 0;
       }
+
       @include breakpoint($min760) {
         top: -20%;
         left: -40%;
         height: auto;
       }
+
       @include breakpoint($min760) {
         min-width: 600px;
         height: auto;
       }
+
       @include breakpoint($min1024) {
         top: 0%;
         left: 0%;
         min-width: 500px;
         height: auto;
       }
+
       @include breakpoint($min1200) {
         left: -40%;
       }
     }
+
     .image-wrapper {
       &:before {
         content: '';
@@ -376,30 +430,38 @@ main {
         transition: height 0.3s ease-out;
         z-index: 1;
       }
+
       &:hover:before {
         height: 100%;
-      }      
+      }
     }
-    &:nth-child(1) .image-wrapper:before{
+
+    &:nth-child(1) .image-wrapper:before {
       background: linear-gradient(to bottom, transparent 0%, $awfpink 100%);
     }
-    &:nth-child(2) .image-wrapper:before{
+
+    &:nth-child(2) .image-wrapper:before {
       background: linear-gradient(to bottom, transparent 0%, $awfbrown 100%);
     }
-    &:nth-child(3) .image-wrapper:before{
+
+    &:nth-child(3) .image-wrapper:before {
       background: linear-gradient(to bottom, transparent 0%, $awforangedark 100%);
     }
-    &:nth-child(4) .image-wrapper:before{
+
+    &:nth-child(4) .image-wrapper:before {
       background: linear-gradient(to bottom, transparent 0%, $awfdarkgreen 100%);
-    }    
+    }
+
     a {
       display: block;
       position: relative;
       height: 320px;
+
       @include breakpoint($min760) {
         min-height: auto;
         height: 330px;
       }
+
       @include breakpoint($min1200) {
         height: 260px;
       }
@@ -407,7 +469,8 @@ main {
     }
 
   }
-  .btn-orange-line .image-wrapper:before{
+
+  .btn-orange-line .image-wrapper:before {
     margin-bottom: 60px;
   }
 }
@@ -418,16 +481,18 @@ main {
   .image-wrapper {
     overflow: hidden;
     display: block;
+
     img {
       display: block;
-      transition: all .5s ease-in-out;      
+      transition: all .5s ease-in-out;
     }
+
     &:hover,
     &:focus {
       img {
         transform: scale(1.05);
       }
-    } 
+    }
   }
 }
 
@@ -436,114 +501,141 @@ main {
   display: flex;
   flex-flow: row wrap;
   z-index: 1;
+
   @include breakpoint($min1024) {
     min-height: 400px;
   }
+
   @include breakpoint($screen-max) {
     padding: 0 60px;
   }
 
   p {
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
+
     @include breakpoint($min1024) {
-      margin-bottom: 60px;  
-    } 
+      margin-bottom: 60px;
+    }
   }
-  
+
   h2 {
     line-height: 1.2;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+
     @include breakpoint($min1024) {
       width: 100%;
       max-width: 400px;
-    } 
+    }
+
     @include breakpoint($min1200) {
       max-width: 500px;
     }
   }
 }
+
 .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 {
   @include inner-wrapper;
   display: flex;
   flex-flow: row wrap;
   clear: both;
+
   @include breakpoint($min1024) {
     padding: 0 60px;
     display: block;
   }
+
   .view-header {
     width: 100%;
     clear: both;
     order: 1;
     margin-top: 80px;
+
     @include breakpoint($min1024) {
       margin-top: 0;
       padding-top: 90px;
     }
+
     h2 {
       margin-bottom: 0;
     }
-    h3, p {
+
+    h3,
+    p {
       max-width: 500px;
     }
   }
-  & > .view-content {
+
+  &>.view-content {
     order: 2;
     margin-bottom: 30px;
+
     @include breakpoint($min1024) {
       width: 66%;
     }
+
     a {
       line-height: 1.5;
       display: block;
       margin-bottom: 0;
       color: $highlight;
+
       &:hover h4,
-      &:focus h4{
+      &:focus h4 {
         text-decoration: underline;
       }
+
       .field--listing-title {
         @include view-link-orange;
       }
+
       &:hover,
       &:focus {
         span.field--listing-date {
-         text-decoration: none;
+          text-decoration: none;
         }
       }
 
     }
+
     p {
       a {
-        &, 
-        &:hover, 
+
+        &,
+        &:hover,
         &:active {
           color: $awfbrown;
           text-decoration: none;
         }
       }
     }
+
     .image-wrapper {
-      background: yellow;
+      background: #ff0;
+
       @include breakpoint($min1024) {
         height: 320px;
       }
+
       @include breakpoint($min1320) {
         height: 450px;
       }
     }
+
     .field--listing-title {
       font-size: 18px;
       line-height: 1.2;
+
       @include breakpoint($min1024) {
         font-size: 24px;
       }
 
     }
   }
-  & > .view-footer {
+
+  &>.view-footer {
     order: 4;
-    width: 100%;   
+    width: 100%;
+
     @include breakpoint($min1024) {
       float: right;
       position: absolute;
@@ -551,8 +643,10 @@ main {
       display: inline-block;
     }
   }
-  & > .attachment.attachment-before {
+
+  &>.attachment.attachment-before {
     order: 5;
+
     @include breakpoint($min1024) {
       order: 3;
       width: 30%;
@@ -564,167 +658,207 @@ main {
       display: inline-block;
     }
   }
-  & > .attachment.attachment-after {
+
+  &>.attachment.attachment-after {
     order: 4;
+
     @include breakpoint($min1024) {
       order: 3;
       width: 66%;
     }
   }
+
   h3 {
     margin-bottom: 15px;
     font-size: 1.9rem;
+
     @include breakpoint($min1024) {
       font-size: 2.3rem;
     }
   }
+
   .view-display-id-attachment_2 {
     margin-bottom: 60px;
+
     @include breakpoint($min1024) {
       margin-bottom: 0;
       margin-right: 60px;
     }
+
     .view-header {
       margin-top: 0;
+
       @include breakpoint($min1200) {
         margin-top: 8px;
-      } 
+      }
     }
+
     .view-content,
     .view-footer {
       display: block;
     }
+
     .view-content {
       margin-bottom: 30px;
     }
+
     .views-row {
       border-bottom: 1px solid $awfyellowshade;
       padding-top: 25px;
       padding-bottom: 15px;
+
       &:first-child {
         border-top: 1px solid $awfyellowshade;
       }
+
       h4 {
         color: #e97200 !important;
         font-size: 18px;
         line-height: 1.2;
-        margin-bottom: .7rem;    
+        margin-bottom: .7rem;
       }
+
       a {
         font-size: 18px;
-        @include view-link-title-img;
       }
+
       .views-field-title {
         margin-bottom: 10px;
       }
+
       .views-field-field-date {
-        &, div {
+
+        &,
+        div {
           @include view-field-field-date;
         }
       }
 
     }
+
     .view-footer {
       a {
         width: 200px;
       }
     }
   }
+
   .view-display-id-attachment_1 {
     margin-bottom: 40px;
+
     @include breakpoint($min1024) {
       margin-bottom: 100px;
     }
 
     .view-content {
       display: flex;
-      flex-flow: row wrap;        
+      flex-flow: row wrap;
     }
+
     .views-row {
       margin-bottom: 30px;
       width: 100%;
+
       @include breakpoint($min1024) {
         margin-bottom: 0;
         max-width: 48%;
+
         &:first-child {
           margin-right: 4%;
         }
       }
     }
+
     .view-footer {
       margin: -25px 0 100px;
+
       @include breakpoint($min1024) {
         margin: 0;
-      }      
+      }
     }
+
     a {
       .image-wrapper {
         max-height: 300px;
+
         @include breakpoint($min760) {
           max-height: none;
           height: 370px;
         }
+
         @include breakpoint($min1024) {
           height: 190px;
         }
+
         @include breakpoint($min1320) {
           height: 220px;
         }
 
       }
+
       .field--listing-title {
         @include view-link-orange;
         font-size: 18px;
         line-height: 1.2;
       }
+
       &,
       &:hover,
       &:focus {
         .field--listing-date {
           text-decoration: none;
         }
-      }       
+      }
     }
   }
+
   .field--listing-date {
     @include view-field-field-date;
   }
+
   .field--listing-date,
   .views-field.views-field-type,
   .field--listing-title {
     margin-bottom: 12px;
     display: block;
   }
+
   .field--type-image {
     margin: 0;
   }
 
   @include breakpoint($min1024) {
+
     .view-footer,
-    .view-content {        
+    .view-content {
       display: inline-block;
     }
+
     .view-footer {
       width: 33%;
       top: 0;
       right: 0;
     }
+
     .field--listing-date {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
-  } 
+  }
+
   .views-row {
     .image-wrapper {
       margin-bottom: 15px;
     }
+
     &:hover,
     &:focus {
       .image-wrapper img {
         transform: scale(1.1);
       }
+
       .field--listing-title {
         text-decoration: underline;
       }
-    }  
+    }
   }
 }
