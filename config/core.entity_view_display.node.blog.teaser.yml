@@ -30,6 +30,12 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_all_tags: true
+  field_blog_files: true
+  field_blog_images: true
+  field_blog_legacy_alias: true
+  field_blog_legacy_id: true
   field_date: true
   field_featured_image: true
+  field_image_link_view_more: true
   langcode: true
