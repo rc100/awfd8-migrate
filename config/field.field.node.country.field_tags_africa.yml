@@ -1,0 +1,29 @@
+uuid: 6c534d9a-729e-40ac-8e60-7571af2c090c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_africa
+    - node.type.country
+    - taxonomy.vocabulary.show_me_an_africa
+id: node.country.field_tags_africa
+field_name: field_tags_africa
+entity_type: node
+bundle: country
+label: 'Show me an Africa'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      show_me_an_africa: show_me_an_africa
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

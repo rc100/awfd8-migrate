@@ -7,6 +7,7 @@ node_search:
       news: news
       safari: safari
       resource: resource
+      country: country
     languages:
       en: en
       und: und
@@ -20,6 +21,7 @@ user_search:
       news: news
       safari: safari
       resource: resource
+      country: country
     languages:
       en: en
       und: und
