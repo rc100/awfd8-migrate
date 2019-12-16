@@ -1,0 +1,27 @@
+uuid: 01171b16-dc96-441b-9062-b642c141d1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_klm
+    - node.type.country
+  module:
+    - file
+id: node.country.field_klm
+field_name: field_klm
+entity_type: node
+bundle: country
+label: GeoJSON
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
