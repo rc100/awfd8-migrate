@@ -39,13 +39,11 @@ process:
     source: field_tags_region
   field_date:
     -
-      plugin: extract
+      plugin: asg_array_to_string
       source: field_date
-      index:
-        - 0
     -
       plugin: format_date
-      from_format: 'Y-m-d H:i:s'
+      from_format: 'Y-m-d g:i:s'
       to_format: 'm/d/Y'
       settings:
         validate_format: true
