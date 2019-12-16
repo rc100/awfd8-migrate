@@ -37,16 +37,14 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
-  field_date:
+  field_news_date:
     -
       plugin: asg_array_to_string
       source: field_date
     -
       plugin: format_date
-      from_format: 'Y-m-d g:i:s'
-      to_format: 'm/d/Y'
-      settings:
-        validate_format: true
+      from_format: 'Y-m-d H:i:s'
+      to_format: 'Y-m-d\TH:i:s'
   field_news_published_location: field_sub_heading
   # field_news_featured_image: 
   field_news_image_link: field_view_more

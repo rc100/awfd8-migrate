@@ -18,11 +18,13 @@ class AsgArrayToString extends ProcessPluginBase {
 
 	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property){
 
-		if(is_array($value)){
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - array - ' . implode(', ', $value));
-			return $value[0];
+		if(is_array($value)){	
+			// \Drupal::logger('awf_taxonomy_migration')->alert('asg - array to string - ' . $value['value']);
+			$keys = array_keys($value);
+			return $value[$keys[0]];
+		
 		} else {
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - string - ' . $value);
+			// \Drupal::logger('awf_taxonomy_migration')->alert('asg - string - ' . $value);
 			return $value;
 		}
 
