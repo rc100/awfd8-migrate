@@ -1,0 +1,33 @@
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_users_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Users Migration'
+source:
+  plugin: d7_user
+process:
+  name: name
+  mail: mail
+  pass: pass
+  status: status
+  created: created
+  access: access
+  timezone: timezone
+  init: init
+  signature: signature
+  signature_format: signature_format
+  login: login
+  timezone: timezone
+  language: language
+  picture: picture
+destination:
+  plugin: entity:user
