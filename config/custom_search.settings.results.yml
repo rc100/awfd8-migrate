@@ -8,6 +8,7 @@ node_search:
       safari: safari
       resource: resource
       country: country
+      donate_page: donate_page
     languages:
       en: en
       und: und
@@ -22,6 +23,7 @@ user_search:
       safari: safari
       resource: resource
       country: country
+      donate_page: donate_page
     languages:
       en: en
       und: und

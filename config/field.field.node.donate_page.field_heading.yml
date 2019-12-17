@@ -1,0 +1,21 @@
+uuid: 50070c5f-34e3-4599-840a-8e9496bf543a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.donate_page
+  module:
+    - text
+id: node.donate_page.field_heading
+field_name: field_heading
+entity_type: node
+bundle: donate_page
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
