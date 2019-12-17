@@ -9,6 +9,7 @@ node_search:
       resource: resource
       country: country
       donate_page: donate_page
+      staff: staff
     languages:
       en: en
       und: und
@@ -24,6 +25,7 @@ user_search:
       resource: resource
       country: country
       donate_page: donate_page
+      staff: staff
     languages:
       en: en
       und: und
