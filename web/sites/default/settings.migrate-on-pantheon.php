@@ -1,9 +1,5 @@
 <?php
 
-	isset($_ENV['PANTHEON_ENVIRONMENT']) ? $secretsFile = $_SERVER['HOME'] . '/files/private/secrets.json' : 
-	$_SERVER['HOME'] . '/lando_config/secret/secrets.json';
-
-
 	if( isset($_ENV['PANTHEON_ENVIRONMENT']) ){
 
 		$secretsFile = $_SERVER['HOME'] . '/files/private/secrets.json';

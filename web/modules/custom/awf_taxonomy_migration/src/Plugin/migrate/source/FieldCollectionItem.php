@@ -40,7 +40,7 @@ class FieldCollectionItem extends FieldableEntity {
       ]);
       $query->condition('fci.field_name', $this->configuration['field_name']);
     }
-    \Drupal::logger('awf_taxonomy_migration')->alert('asg migration found / triggered. v6');
+    // \Drupal::logger('awf_taxonomy_migration')->alert('asg migration found / triggered. v6');
     return $query;
   }
   /**

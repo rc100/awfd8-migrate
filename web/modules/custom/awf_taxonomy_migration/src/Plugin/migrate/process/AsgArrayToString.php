@@ -9,24 +9,24 @@ use Drupal\migrate\Row;
 
 /**
  * @MigrateProcessPlugin(
- *	id = "asg_print"
+ *	id = "asg_array_to_string"
  * 
  * )
 **/
 
-class AsgPrintValue extends ProcessPluginBase {
+class AsgArrayToString extends ProcessPluginBase {
 
 	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property){
 
-		if(is_array($value)){
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - array - ' . implode(', ', $value));
+		if(is_array($value)){	
+			// \Drupal::logger('awf_taxonomy_migration')->alert('asg - array to string - ' . $value['value']);
+			$keys = array_keys($value);
+			return $value[$keys[0]];
+		
 		} else {
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - string - ' . $value);
+			// \Drupal::logger('awf_taxonomy_migration')->alert('asg - string - ' . $value);
+			return $value;
 		}
-		 
-		 // \Drupal::logger('awf_taxonomy_migration')->alert('asg migration found / triggered. v6');
-
-		return $value;
 
 	}
 
