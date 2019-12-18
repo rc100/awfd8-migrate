@@ -31,11 +31,10 @@ process:
   language: language
   picture: picture
   roles:
-    plugin: static_map
-    bypass: true
+    plugin: migration_lookup
+    migration: d7_user_role
     source: roles
-    map:
-      5: new_role_name
-      3: editor
 destination:
   plugin: entity:user
+# migration_dependencies:
+  # d7_user_role
