@@ -40,7 +40,16 @@ class AsgUsers extends DrupalSqlBase {
 	public function prepareRow(Row $row){
 
 		//add additional row queries here, based on what you added in fields
-		return parent::prepareRow();
+
+		$uid = $row->getSourceProperty('uid');
+
+		$query = $this->select('users_roles', 'r');
+		$query->fields('r', ['rid']);
+		$query->condition('r.uid', $uid, '=');
+		$record = $query->execute()->fetchAllKeyed();
+		$row->setSourceProperty('roles', array_keys($record));
+		return parent::prepareRow($row);
+		
 	}
 
 	public function getIds() {

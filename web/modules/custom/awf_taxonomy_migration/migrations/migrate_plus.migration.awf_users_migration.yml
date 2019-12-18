@@ -13,7 +13,8 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Users Migration'
 source:
-  plugin: d7_user
+  plugin: asg_user
+  target: migrate
 process:
   name: name
   mail: mail
@@ -29,5 +30,12 @@ process:
   timezone: timezone
   language: language
   picture: picture
+  roles:
+    plugin: static_map
+    bypass: true
+    source: roles
+    map:
+      5: new_role_name
+      3: editor
 destination:
   plugin: entity:user
