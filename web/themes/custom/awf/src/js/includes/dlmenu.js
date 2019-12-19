@@ -244,14 +244,14 @@
   //   };
   // }
   var framework = $('html, body');
-  
+
   // search section
   var searchSection = $('.search-block-form');
   var searchContent = $('.search-content');
   searchContent.addClass('headerItems');
-  
+
   function awfMobileMenu() {
-  
+
     var isMobile = menutoggle.is(':visible');
     var subnavtoggle = $('.sub-nav-toggle');
     var subnavtoggleback = $('.sub-nav-toggle-back');
@@ -262,7 +262,7 @@
     var subNavBack = $('a.sub-nav-toggle-back');
     subNavBack.text($(this).parent().parent().find('a.menu-link:first-child').text());
 
-    if (isMobile) {     
+    if (isMobile) {
       menublock.addClass('mobile-menu');
       headergroup.addClass('mobile');
       menuExpandedlink.addClass('expanded-link');
@@ -302,7 +302,7 @@
       });
 
       subnavtoggleback.off('click keyup').on('click keyup', function() {
-        $('.menu-link.expanded-link').removeClass('previous-link');        
+        $('.menu-link.expanded-link').removeClass('previous-link');
         subnavtoggleback.text($(this).parent().parent().parent().siblings('a.menu-link.expanded-link').text());
         $(this).removeClass('open');
         $(this).parent().removeClass('open');
@@ -338,7 +338,7 @@
     framework.removeClass('open-menu');
     var isMobile = menutoggle.is(':visible');
     if(!isMobile) {
-      $('nav.navigation.menu--main > ul.menu > li.menu-item').removeClass('is-open');
+      $('nav.navigation.menu--main-menu > ul.menu > li.menu-item').removeClass('is-open');
     }
   };
   //search button
@@ -348,21 +348,21 @@
     searchSection.parent('.toggle-class').toggleClass('toggle-class');
     !searchSection.hasClass('is-open') || searchSection.find('input[type="text"]').focus();
 
-    return false;   
+    return false;
   });
 
   function closeAllHeaderItems() {
     hideHeaderNavs();
     $('.search-block-form.open').removeClass('open');
-    
+
     var isMobile = menutoggle.is(':visible');
     if(!isMobile) {
       searchSection.removeClass('is-open');
 
     }
   };
-  var headerNavs = $("nav.navigation.menu--main > ul.menu > li.menu-item.menu-item--expanded > a.is-active");
-  
+  var headerNavs = $("nav.navigation.menu--main-menu > ul.menu > li.menu-item.menu-item--expanded > a.is-active");
+
   headerNavs.on("click", function(e) {
     console.log('here');
     e.preventDefault();
@@ -370,7 +370,7 @@
     closeAllHeaderItems();
     $(this).parent('li.menu-item.menu-item--expanded').addClass('is-open');
   });
-     
+
   //add fixed white background
   function updatePos() {
       var scroll = $(window).scrollTop();
