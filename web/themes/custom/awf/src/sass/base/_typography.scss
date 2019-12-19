@@ -1,0 +1,74 @@
+/**
+* @file
+* Typographic styles.
+*
+*/
+
+// Define baseline lineheight.
+$lineheight: 1.5;
+
+//Define heading styles.
+h1 {
+  color: $awfred;
+  font-family: $sans;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 0 0 1.25rem 0;
+}
+
+
+h2 {
+  font-family: $base-heading-font;
+  color: $awfbrown;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+
+  @include breakpoint($min1200) {
+    font-size: 4.2rem;
+  }
+
+  &.block-title {
+    @include element-invisible;
+  }
+}
+
+h3 {
+  font-family: $base-heading-font;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: $base-font-family;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+h5 {
+  font-family: $base-font-family;
+}
+
+h6 {
+  font-family: $base-font-family;
+}
+
+p {
+  margin: 0 0 1.25rem 0;
+}
+
+cite {
+  font-size: 1.6rem;
+  display: block;
+}
+
+// Define an intro style.
+.intro {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.lazyload {
+  transition: all 700ms;
+}

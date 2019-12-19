@@ -333,7 +333,7 @@
   }
 
   @include breakpoint($min1024) {
-    padding: 80px 60px 60px;
+    padding: 70px 60px 75px;
   }
 
   position: relative;
@@ -341,15 +341,6 @@
 
   >div {
     z-index: 1;
-  }
-}
-
-@mixin form-body-h4 {
-  font-size: 26px;
-  font-family: $base-heading-font !important;
-
-  @include breakpoint($min1024) {
-    font-size: 28px;
   }
 }
 

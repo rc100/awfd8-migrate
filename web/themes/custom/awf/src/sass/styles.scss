@@ -5,19 +5,43 @@
  * Import Sass mixins, variables, modules, etc.
  */
 
-// Add breakpoint mixins.
+// Compile Sass
+// Modules
 @import "breakpoint";
-// Add standardize reset stylesheet.
-@import "standardize";
-// Add base settings.
+
+// Base Variables
+@import "base/variables/breakpoints";
+@import "base/variables/colors";
+@import "base/variables/fonts";
+
+// Mixins & Extends
+@import "base/mixins";
+@import "base/extendables";
+
+// Base Styles
+@import "base/accessibility";
 @import "base/base";
-// Add elements.
-@import "elements/elements";
-// Add components.
-@import "components/components";
-// Add structure styles.
-@import "structures/structures";
-// Add Animations
-@import "animations/animations";
-// Add print stylesheets
-@import "print";
+@import "base/typography";
+
+// Styles
+@import "styles/admin";
+@import "styles/front";
+@import "styles/block";
+
+// Atoms
+@import "styles/atoms/a";
+@import "styles/atoms/blockquote";
+@import "styles/atoms/breadcrumbs";
+@import "styles/atoms/button";
+@import "styles/atoms/fields";
+@import "styles/atoms/form";
+@import "styles/atoms/hr";
+@import "styles/atoms/loading-button";
+
+// Components
+@import "styles/components/block--homepage-hero";
+@import "styles/components/dlmenu";
+
+// Regions
+@import "styles/regions/footer";
+@import "styles/regions/main";

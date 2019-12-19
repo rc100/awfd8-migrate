@@ -1,0 +1,15 @@
+/**
+ * @file
+ * Sass extendables
+ *
+ * Define the custom extends for your project here.
+ *
+ */
+
+%content-width,
+.content-width {
+  max-width: 940px;
+  min-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
