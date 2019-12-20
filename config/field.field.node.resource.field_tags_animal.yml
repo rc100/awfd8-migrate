@@ -1,16 +1,16 @@
-uuid: a4ade94e-9e76-4a8d-b832-61651589dacc
+uuid: a4efc35a-2f29-4f3b-8bde-10f753d6d10d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags_country
-    - node.type.country
-    - taxonomy.vocabulary.country
-id: node.country.field_tags_country
-field_name: field_tags_country
+    - field.storage.node.field_tags_animal
+    - node.type.resource
+    - taxonomy.vocabulary.species
+id: node.resource.field_tags_animal
+field_name: field_tags_animal
 entity_type: node
-bundle: country
-label: 'Country Name'
+bundle: resource
+label: 'Animals Tagged'
 description: ''
 required: false
 translatable: true
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      country: country
+      species: species
     sort:
       field: name
       direction: asc

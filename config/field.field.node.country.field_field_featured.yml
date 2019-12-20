@@ -9,7 +9,7 @@ id: node.country.field_field_featured
 field_name: field_field_featured
 entity_type: node
 bundle: country
-label: field_featured
+label: Featured
 description: ''
 required: false
 translatable: false
