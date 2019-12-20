@@ -28,4 +28,14 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_heading: true
+  field_image: true
+  field_land_habitat: true
+  field_order_number: true
+  field_staff_type: true
+  field_tags_animal: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_region: true
   langcode: true
