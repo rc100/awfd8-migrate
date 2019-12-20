@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.country.field_solutions_description
     - field.field.node.country.field_sub_heading
     - field.field.node.country.field_tags_africa
+    - field.field.node.country.field_tags_animal
     - field.field.node.country.field_tags_country
     - field.field.node.country.field_tags_region
     - image.style.thumbnail
@@ -187,6 +188,7 @@ third_party_settings:
       label: 'Map Information'
     group_tags:
       children:
+        - field_tags_animal
         - field_tags_region
         - field_tags_africa
       parent_name: ''
@@ -365,13 +367,16 @@ content:
     type: string_textfield
     region: content
   field_tags_africa:
-    weight: 33
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 47
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
+    region: content
+  field_tags_animal:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_tags_country:
     weight: 1
@@ -383,13 +388,10 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_tags_region:
-    weight: 32
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 46
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   langcode:
     type: language_select

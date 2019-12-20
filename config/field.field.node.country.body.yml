@@ -11,7 +11,7 @@ id: node.country.body
 field_name: body
 entity_type: node
 bundle: country
-label: Body
+label: 'Overview Text'
 description: ''
 required: false
 translatable: true
