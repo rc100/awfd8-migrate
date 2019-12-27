@@ -11,6 +11,7 @@ node_search:
       donate_page: donate_page
       staff: staff
       hostory: hostory
+      history: history
     languages:
       en: en
       und: und
@@ -28,6 +29,7 @@ user_search:
       donate_page: donate_page
       staff: staff
       hostory: hostory
+      history: history
     languages:
       en: en
       und: und

@@ -1,4 +1,4 @@
-uuid: 89452939-4a54-4dba-a6b4-7728a9d416fe
+uuid: 3a5903b5-3121-4513-a505-4ae2efa1fab0
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Hostory
-type: hostory
+name: History
+type: history
 description: ''
 help: ''
 new_revision: true

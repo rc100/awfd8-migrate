@@ -1,16 +1,16 @@
-uuid: a5903c0e-0943-43cb-a24e-f88ea4eec9e7
+uuid: 25b5710b-d469-40fe-bace-520aa8efc6c4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.hostory
+    - node.type.history
   module:
     - text
-id: node.hostory.body
+id: node.history.body
 field_name: body
 entity_type: node
-bundle: hostory
+bundle: history
 label: Body
 description: ''
 required: false
