@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.tweet.body
+    - field.field.node.tweet.field_legacy_alias
+    - field.field.node.tweet.field_legacy_id
     - node.type.tweet
   module:
     - path
@@ -28,6 +30,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_legacy_alias:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 122
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   langcode:
     type: language_select
     weight: 2

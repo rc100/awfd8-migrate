@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.donate_page.field_description
     - field.field.node.donate_page.field_form_url
     - field.field.node.donate_page.field_heading
+    - field.field.node.donate_page.field_legacy_alias
+    - field.field.node.donate_page.field_legacy_id
     - node.type.donate_page
   module:
     - link
@@ -55,6 +57,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_legacy_alias:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   langcode:
     type: language_select

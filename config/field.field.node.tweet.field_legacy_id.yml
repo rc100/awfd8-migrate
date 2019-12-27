@@ -1,0 +1,23 @@
+uuid: edc83ab6-e187-4c42-92af-d63b56a38cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.tweet
+id: node.tweet.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: tweet
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

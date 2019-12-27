@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.staff.field_heading
     - field.field.node.staff.field_image
     - field.field.node.staff.field_land_habitat
+    - field.field.node.staff.field_legacy_alias
+    - field.field.node.staff.field_legacy_id
     - field.field.node.staff.field_order_number
     - field.field.node.staff.field_staff_type
     - field.field.node.staff.field_tags_animal
@@ -82,6 +84,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_legacy_alias:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_order_number:
     weight: 5
