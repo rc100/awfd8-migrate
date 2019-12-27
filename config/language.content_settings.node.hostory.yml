@@ -1,0 +1,11 @@
+uuid: 3b6f1384-fca0-4b30-ba1e-fe42e28bc915
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hostory
+id: node.hostory
+target_entity_type_id: node
+target_bundle: hostory
+default_langcode: site_default
+language_alterable: false

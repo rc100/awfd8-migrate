@@ -1,0 +1,22 @@
+uuid: a5903c0e-0943-43cb-a24e-f88ea4eec9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.hostory
+  module:
+    - text
+id: node.hostory.body
+field_name: body
+entity_type: node
+bundle: hostory
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

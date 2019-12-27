@@ -1,0 +1,18 @@
+uuid: 89452939-4a54-4dba-a6b4-7728a9d416fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Hostory
+type: hostory
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
