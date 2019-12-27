@@ -10,6 +10,7 @@ node_search:
       country: country
       donate_page: donate_page
       staff: staff
+      hostory: hostory
     languages:
       en: en
       und: und
@@ -26,6 +27,7 @@ user_search:
       country: country
       donate_page: donate_page
       staff: staff
+      hostory: hostory
     languages:
       en: en
       und: und

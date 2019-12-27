@@ -1,0 +1,29 @@
+uuid: ca95ab89-b4c8-44b6-81c6-a8ec98e9c02a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hostory.body
+    - node.type.hostory
+  module:
+    - text
+    - user
+id: node.hostory.default
+targetEntityType: node
+bundle: hostory
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
