@@ -1,16 +1,19 @@
-uuid: be9f532e-17df-452d-b045-ff55880d5b25
+uuid: c4c1a51b-ef66-475f-b477-fc54473470e1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.hostory.body
-    - node.type.hostory
+    - field.field.node.history.body
+    - field.field.node.history.field_legacy_alias
+    - field.field.node.history.field_legacy_id
+    - field.field.node.history.field_legacy_revision_id
+    - node.type.history
   module:
     - path
     - text
-id: node.hostory.default
+id: node.history.default
 targetEntityType: node
-bundle: hostory
+bundle: history
 mode: default
 content:
   body:
@@ -28,6 +31,28 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_legacy_alias:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 122
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_legacy_revision_id:
+    weight: 124
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   langcode:
     type: language_select
     weight: 2
