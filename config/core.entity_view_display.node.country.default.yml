@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.country.body
     - field.field.node.country.field_alternate_thumbnail
+    - field.field.node.country.field_bullet_point_paragraph
     - field.field.node.country.field_challenges
     - field.field.node.country.field_coords
     - field.field.node.country.field_fact_text
+    - field.field.node.country.field_facts_paragraph
     - field.field.node.country.field_featured_text
     - field.field.node.country.field_field_featured
     - field.field.node.country.field_heading
@@ -20,6 +22,9 @@ dependencies:
     - field.field.node.country.field_order_number
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
+    - field.field.node.country.field_sidebar_item_paragraph
+    - field.field.node.country.field_solution_bpoint_paragraph
+    - field.field.node.country.field_solution_paragraph
     - field.field.node.country.field_solution_text
     - field.field.node.country.field_solutions_description
     - field.field.node.country.field_sub_heading
@@ -29,6 +34,7 @@ dependencies:
     - field.field.node.country.field_tags_region
     - node.type.country
   module:
+    - entity_reference_revisions
     - file
     - image
     - options
@@ -55,6 +61,15 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_bullet_point_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 126
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_challenges:
     weight: 106
     label: above
@@ -77,6 +92,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_facts_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 125
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_featured_text:
     weight: 113
@@ -175,6 +199,33 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_sidebar_item_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 129
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_solution_bpoint_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 128
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_solution_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 127
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_solution_text:
     weight: 108
