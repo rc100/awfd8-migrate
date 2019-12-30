@@ -1,0 +1,31 @@
+uuid: b95b80ae-c3d3-47c6-b8ca-e5edacc363ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.facts.field_facts_description
+    - field.field.paragraph.facts.field_facts_label
+    - paragraphs.paragraphs_type.facts
+  module:
+    - text
+id: paragraph.facts.default
+targetEntityType: paragraph
+bundle: facts
+mode: default
+content:
+  field_facts_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_facts_label:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

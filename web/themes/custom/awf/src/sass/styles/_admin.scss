@@ -1,0 +1,68 @@
+// Small administrative fixes to the Drupal system
+
+// Adding underline under admin menu items
+ul.tabs {
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+
+  li {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  li::before {
+    display: none !important;
+  }
+
+  a {
+    border: 0 !important;
+  }
+
+  a:hover {
+    color: #000 !important;
+  }
+}
+
+.tabs a.is-active {
+  background: #fff;
+}
+
+// Fixing contextual link dropdowns if overriden in theme
+ul.contextual-links li {
+  display: block !important;
+  float: none !important;
+  position: relative !important;
+}
+
+.contextual-links a {
+  border: 0 !important;
+  color: #000 !important;
+  letter-spacing: initial !important;
+  text-transform: none !important;
+  width: auto !important;
+  height: auto !important;
+
+  &:hover {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+}
+
+.contextual ul li::before {
+  display: none !important;
+}
+
+// Removing dropdown arrow from expanded menu items
+.menu-item--expanded,
+.menu-item--collapsed {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+// Adding visible styling to unpublished nodes
+.node--unpublished {
+  background-color: #fff4f4;
+}

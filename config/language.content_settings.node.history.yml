@@ -1,0 +1,11 @@
+uuid: e665c240-9a39-4429-adcb-a2433ed1b2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.history
+id: node.history
+target_entity_type_id: node
+target_bundle: history
+default_langcode: site_default
+language_alterable: false

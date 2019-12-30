@@ -1,0 +1,21 @@
+uuid: fb92da47-6371-4b63-81ed-3853a62c0ebb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_history_year
+    - paragraphs.paragraphs_type.history
+  module:
+    - datetime
+id: paragraph.history.field_history_year
+field_name: field_history_year
+entity_type: paragraph
+bundle: history
+label: history_year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

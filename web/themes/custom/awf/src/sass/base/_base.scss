@@ -1,9 +1,28 @@
-// Import all base styles
-@import "fonts";
-@import "colors";
-@import "breakpoints";
-@import "mixins";
-@import "accessibility";
-/*@import "grid";
-@import "gridcss";
-*/
+// Base Styles
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+  font-size: 62.5%;
+  text-size-adjust: 100%;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: $black;
+  font-size: 15px;
+  font-family: $sans;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+ul.menu {
+  margin-left: 0;
+}

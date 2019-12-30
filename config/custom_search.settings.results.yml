@@ -8,6 +8,10 @@ node_search:
       safari: safari
       resource: resource
       country: country
+      donate_page: donate_page
+      staff: staff
+      hostory: hostory
+      history: history
     languages:
       en: en
       und: und
@@ -22,6 +26,10 @@ user_search:
       safari: safari
       resource: resource
       country: country
+      donate_page: donate_page
+      staff: staff
+      hostory: hostory
+      history: history
     languages:
       en: en
       und: und

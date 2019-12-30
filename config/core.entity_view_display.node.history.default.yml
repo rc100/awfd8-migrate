@@ -1,0 +1,58 @@
+uuid: 1eff44f9-0dc9-48a8-b573-057f7bb038a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.history.body
+    - field.field.node.history.field_legacy_alias
+    - field.field.node.history.field_legacy_id
+    - field.field.node.history.field_legacy_revision_id
+    - node.type.history
+  module:
+    - text
+    - user
+id: node.history.default
+targetEntityType: node
+bundle: history
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_legacy_alias:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_legacy_id:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_legacy_revision_id:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

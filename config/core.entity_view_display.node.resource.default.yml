@@ -4,13 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.resource.body
+    - field.field.node.resource.field_article_legacy_alias
     - field.field.node.resource.field_author
     - field.field.node.resource.field_books_type
     - field.field.node.resource.field_file
     - field.field.node.resource.field_image
     - field.field.node.resource.field_land_habitat
+    - field.field.node.resource.field_legacy_id
     - field.field.node.resource.field_newsletter_link
     - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_tags_animal
     - field.field.node.resource.field_tags_country
     - field.field.node.resource.field_tags_economic
     - field.field.node.resource.field_tags_projects
@@ -34,6 +37,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_article_legacy_alias:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_author:
     weight: 106
@@ -75,6 +86,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_legacy_id:
+    weight: 114
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_newsletter_link:
     weight: 107
     label: above
@@ -89,6 +109,14 @@ content:
     region: content
   field_resource_type:
     weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_animal:
+    weight: 113
     label: above
     settings:
       link: true

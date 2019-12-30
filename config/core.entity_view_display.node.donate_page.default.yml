@@ -1,0 +1,78 @@
+uuid: bad00dab-dbbf-472c-ac4f-1ffbb0ce1f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.donate_page.body
+    - field.field.node.donate_page.field_description
+    - field.field.node.donate_page.field_form_url
+    - field.field.node.donate_page.field_heading
+    - field.field.node.donate_page.field_legacy_alias
+    - field.field.node.donate_page.field_legacy_id
+    - node.type.donate_page
+  module:
+    - link
+    - text
+    - user
+id: node.donate_page.default
+targetEntityType: node
+bundle: donate_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_form_url:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_heading:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_legacy_alias:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_legacy_id:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

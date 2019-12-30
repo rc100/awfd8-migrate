@@ -1,0 +1,23 @@
+uuid: 99da1b10-95a0-46c9-9af1-e9714eeffbfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.donate_page
+id: node.donate_page.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: donate_page
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

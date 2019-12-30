@@ -1,0 +1,19 @@
+uuid: 04f61cc6-9c1d-4597-8988-110fb50be8e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_collapsible_heading
+    - paragraphs.paragraphs_type.animal_habitat
+id: paragraph.animal_habitat.field_collapsible_heading
+field_name: field_collapsible_heading
+entity_type: paragraph
+bundle: animal_habitat
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

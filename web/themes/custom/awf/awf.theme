@@ -1,10 +1,15 @@
 <?php
+
 /**
- * THEME SPECIFIC PREPROCESS FUNCTIONS
+ * @file
+ * Functions to support theming in the nasa_as theme.
  */
 
 require_once dirname(__FILE__) . '/includes/theme.inc';
 
+/**
+ * Implements template_preprocess for the template.
+ */
 function awf_preprocess_html(&$variables) {
   if ($node = \Drupal::request()->attributes->get('node')) {
     $variables['attributes']['class'][] = 'page-node-' . $node->id();
@@ -20,14 +25,25 @@ function awf_preprocess_html(&$variables) {
     ],
   ];
   $variables['page']['#attached']['html_head'][] = [$xuacompatible, 'x-ua-compatible'];
+
+  // Add node id as a class.
+  $request = \Drupal::request();
+  $node = ($request->attributes->get('_route') == 'entity.node.canonical'
+            ? $request->attributes->get('node')
+            : NULL
+          );
+
+  if ($node) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
 }
 
+/**
+ * Implements theme_suggestions_page_alter() for theming.
+ */
 function awf_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add content type suggestions.
   if ($node = \Drupal::request()->attributes->get('node')) {
     array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
   }
 }
-
-
-

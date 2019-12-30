@@ -1,0 +1,99 @@
+// Base site layouts
+
+body {
+  &.path-frontpage {
+    min-width: $min-width;
+    color: $awfbrown;
+    font-family: $base-font-family;
+    line-height: $lineheight;
+
+    @include breakpoint($all-devices) {
+      &.noscroll {
+        position: fixed;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    //Define heading styles.
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.2;
+      font-weight: 300;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: $base-heading-font;
+
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-family: $base-font-family;
+    }
+
+
+
+    h2 {
+      color: $awfbrown;
+      font-size: 3.5rem;
+
+      @include breakpoint($min1200) {
+        font-size: 4.2rem;
+      }
+
+      &.block-title {
+        @include element-invisible;
+      }
+    }
+
+    p,
+    span,
+    li {
+      color: $awfbrown;
+    }
+
+    cite {
+      font-size: 1.6rem;
+      display: block;
+    }
+
+    // Define an intro style.
+    .intro {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+
+    .lazyload {
+      transition: all 700ms;
+    }
+  }
+}
+
+.path-frontpage {
+
+  /*  Nav */
+  &.home {
+    background: $white;
+
+    nav {
+      top: 0;
+    }
+
+    footer {
+      background: $ltgray;
+    }
+  }
+
+  h1.page-title {
+    .field--name-title {
+      @include element-invisible;
+    }
+  }
+}
