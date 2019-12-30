@@ -1,0 +1,19 @@
+uuid: 960c4cc5-07f3-4ebb-834f-31109d002fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_solution_bullet_heading
+    - paragraphs.paragraphs_type.solution_bulletpoint
+id: paragraph.solution_bulletpoint.field_solution_bullet_heading
+field_name: field_solution_bullet_heading
+entity_type: paragraph
+bundle: solution_bulletpoint
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: e5ecb069-99b0-4ebd-8766-2471e60d9691
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_schedule_day
+field_name: field_schedule_day
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

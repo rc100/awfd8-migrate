@@ -1,0 +1,19 @@
+uuid: fd552b5d-4230-4a54-bd9a-322cf51b1d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overview_fact_bottom
+    - paragraphs.paragraphs_type.overview_facts
+id: paragraph.overview_facts.field_overview_fact_bottom
+field_name: field_overview_fact_bottom
+entity_type: paragraph
+bundle: overview_facts
+label: Bottom
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

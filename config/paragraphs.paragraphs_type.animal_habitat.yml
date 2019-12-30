@@ -1,0 +1,9 @@
+uuid: 67b6cbdd-2380-4079-a245-8ab28203b58c
+langcode: en
+status: true
+dependencies: {  }
+id: animal_habitat
+label: Animal
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
