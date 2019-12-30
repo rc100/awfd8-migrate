@@ -1,0 +1,29 @@
+// Breadcrumbs
+
+.breadcrumb {
+  display: block;
+  color: $tan;
+  font-size: 1.2rem;
+  margin-right: 5px;
+
+  font-weight: 400;
+
+  a {
+    color: $tan;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  li::before {
+    content: " > ";
+    margin: 0 0.5rem;
+  }
+}
+
+.region-content-preface {
+  @extend %content-width;
+}

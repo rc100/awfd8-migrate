@@ -1,0 +1,13 @@
+// Button styles
+
+.btn-orange {
+  @include button-orange;
+}
+
+.btn-orange-line {
+  margin: 20px 0;
+  display: block;
+  height: 47px;
+  max-width: 170px;
+  @include button-orange-line;
+}
