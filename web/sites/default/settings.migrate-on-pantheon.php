@@ -28,24 +28,15 @@
 		
 		$secetsFile = '/app/lando_config/secret/secrets.json';
 		if(file_exists($secetsFile)) {
-			// $databases['migrate']['default'] = [
-			// 	'database' => 'database',
-			// 	'username' => 'mysql',
-			// 	'password' => 'mysql',
-			// 	'host' => 'legacy',
-			// 	'port' => '3306',
-			// 	'driver' => 'mysql',
-			// 	'prefix' => '',
-			// 	'collation' => 'utf8mb4_general_ci',
-			// ];
 			$databases['migrate']['default'] = [
 				'database' => 'drupal7',
 				'username' => 'drupal7',
 				'password' => 'drupal7',
-				'host' => '162.241.224.59',
-				'port' => '32824',
+				'host' => 'database.awfd7.internal',
+				'port' => '3306',
 				'driver' => 'mysql',
 				'prefix' => '',
+				'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
 				'collation' => 'utf8mb4_general_ci',
 			];
 		}

@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_resource_page_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Resource Page Migration'
+source:
+  plugin: custom_node_source
+  node_type: resource
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "en"
+  title: title
+  status: status
+  created: created
+  changed: changed
+  promoted: promoted
+  revision_uid: revision_uid
+  revision_log: revision_log
+  revision_timestamp: timestamp
+  body: body
+  field_author: field_author
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_newsletter_link: field_newsletter_link
+  field_tags_economic: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_migration
+    source: field_tags_economic
+  # field_image: field_image
+  # field_file: field_file
+  field_land_habitat: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_region
+  field_resource_type:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_resource_type
+  field_books_type: field_books_type
+  # field_basic_page_tags: 
+  #   plugin: migration_lookup
+  #   migration: awf_taxonomy_term_migration
+  #   source: field_tags_region
+  field_resource_legacy_id: nid
+  field_resource_legacy_revisionid: vid
+  field_resource_legacy_alias: alias
+  path: alias
+destination:
+  plugin: entity:node
+  default_bundle: resource
+migration_dependencies:
+  required:
+    - awf_taxonomy_term_migration

@@ -29,7 +29,11 @@ process:
   login: login
   timezone: timezone
   language: language
-  picture: picture
+  user_picture/target_id:
+    plugin: file_import
+    source: image
+    id_only: true
+    skip_on_missing_source: true
   roles:
     plugin: migration_lookup
     migration: d7_user_role
