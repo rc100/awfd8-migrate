@@ -17,6 +17,8 @@ dependencies:
     - field.field.node.safari.field_main_image
     - field.field.node.safari.field_pricing_information
     - field.field.node.safari.field_safari_capaciy
+    - field.field.node.safari.field_schedule_paragraph
+    - field.field.node.safari.field_sidebar_item_paragraph
     - field.field.node.safari.field_solutions
     - field.field.node.safari.field_status
     - field.field.node.safari.field_tags_africa
@@ -31,6 +33,7 @@ dependencies:
     - datetime
     - field_group
     - image
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -69,6 +72,7 @@ third_party_settings:
     group_schedule:
       children:
         - field_image
+        - field_schedule_paragraph
       parent_name: ''
       weight: 2
       format_type: details
@@ -92,7 +96,8 @@ third_party_settings:
         required_fields: true
       label: 'Booking Information'
     group_sidebar_items:
-      children: {  }
+      children:
+        - field_sidebar_item_paragraph
       parent_name: ''
       weight: 4
       format_type: details
@@ -170,7 +175,7 @@ content:
     type: datetime_default
     region: content
   field_image:
-    weight: 3
+    weight: 35
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -236,6 +241,30 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_schedule_paragraph:
+    type: entity_reference_paragraphs
+    weight: 36
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_sidebar_item_paragraph:
+    weight: 33
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   field_solutions:
     weight: 4

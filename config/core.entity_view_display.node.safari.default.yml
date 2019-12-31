@@ -17,6 +17,8 @@ dependencies:
     - field.field.node.safari.field_main_image
     - field.field.node.safari.field_pricing_information
     - field.field.node.safari.field_safari_capaciy
+    - field.field.node.safari.field_schedule_paragraph
+    - field.field.node.safari.field_sidebar_item_paragraph
     - field.field.node.safari.field_solutions
     - field.field.node.safari.field_status
     - field.field.node.safari.field_tags_africa
@@ -28,6 +30,7 @@ dependencies:
     - node.type.safari
   module:
     - datetime
+    - entity_reference_revisions
     - image
     - text
     - user
@@ -151,6 +154,24 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_schedule_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 125
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sidebar_item_paragraph:
+    weight: 124
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_solutions:
     weight: 111
