@@ -8,14 +8,6 @@
   position: relative;
 }
 
-%fadein-selector {
-  transition: opacity 300ms ease 50ms;
-
-  &.js-transparent {
-    opacity: 0;
-  }
-}
-
 .lazyload {
   opacity: .2;
 }
@@ -23,4 +15,24 @@
 .lazyloaded {
   opacity: 1;
   transition: opacity 300ms ease 50ms;
+}
+
+.content-wrapper-top>div {
+  color: $awfgray;
+  display: inline-block;
+  margin-right: 2rem;
+
+  &:before {
+    background-color: $awfgray;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 0.5rem;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
