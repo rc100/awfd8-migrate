@@ -3,12 +3,10 @@
 a {
   color: $highlight;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
-// main {
-//   .region {
-//     a {
-//       color: $highlight;
-//     }
-//   }
-// }

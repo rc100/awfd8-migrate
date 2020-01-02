@@ -9,7 +9,7 @@ dependencies:
 id: awf_awfhomepageredesignhero
 theme: awf
 region: disabled
-weight: -8
+weight: -12
 provider: null
 plugin: 'block_content:01a2162b-1435-40ec-8648-7aeb67451efe'
 settings:

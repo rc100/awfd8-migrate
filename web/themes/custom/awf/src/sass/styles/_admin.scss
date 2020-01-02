@@ -66,3 +66,11 @@ ul.contextual-links li {
 .node--unpublished {
   background-color: #fff4f4;
 }
+
+.user-logged-in .header-section {
+  margin-top: 40px;
+
+  @include breakpoint(min-width 975px) {
+    margin-top: 79px;
+  }
+}

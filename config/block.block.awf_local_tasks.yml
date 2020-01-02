@@ -9,7 +9,7 @@ _core:
 id: awf_local_tasks
 theme: awf
 region: content
-weight: -10
+weight: -11
 provider: null
 plugin: local_tasks_block
 settings:

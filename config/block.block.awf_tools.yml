@@ -12,8 +12,8 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: awf_tools
 theme: awf
-region: preface
-weight: -10
+region: disabled
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
