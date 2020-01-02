@@ -1,18 +1,20 @@
-uuid: 6804dec1-7b07-4729-a7fc-0952c067268f
+uuid: 558331b1-1deb-4ab9-8690-8925f37fb2d2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_solution_text
-field_name: field_solution_text
+id: node.field_donate_heading
+field_name: field_donate_heading
 entity_type: node
-type: string_long
+type: string
 settings:
+  max_length: 255
+  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
