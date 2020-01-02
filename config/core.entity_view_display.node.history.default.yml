@@ -3,24 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.history.body
+    - field.field.node.history.field_history_paragraph
     - field.field.node.history.field_legacy_alias
     - field.field.node.history.field_legacy_id
     - field.field.node.history.field_legacy_revision_id
     - node.type.history
   module:
-    - text
+    - entity_reference_revisions
     - user
 id: node.history.default
 targetEntityType: node
 bundle: history
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
+  field_history_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   field_legacy_alias:

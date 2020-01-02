@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_about_the_author
+    - field.field.user.user.field_display_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - text
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -20,6 +23,23 @@ content:
     region: content
   contact:
     weight: 5
+    region: content
+  field_about_the_author:
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_display_name:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   language:
     weight: 0

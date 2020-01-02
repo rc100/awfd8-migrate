@@ -1,3 +1,6 @@
+uuid: eff04278-a596-457b-97ae-afa122ea33e2
+langcode: en
+status: true
 dependencies:
   module:
     - awf_taxonomy_migration
@@ -27,16 +30,7 @@ process:
   signature: signature
   signature_format: signature_format
   login: login
-  timezone: timezone
   language: language
-  # user_picture:
-  #   plugin: iterator
-  #   source: picture
-  #   process:
-  #     target_id:
-  #       plugin: migration_lookup
-  #       migration: awf_files_migration
-  #       source: fid
   user_picture:
     -
       plugin: asg_print
@@ -54,7 +48,7 @@ process:
   field_about_the_author/value: field_about_the_author_value
   field_about_the_author/summary: field_about_the_author_summary
   field_about_the_author/format: field_about_the_author_format
-  field_display_name: 
+  field_display_name:
     -
       plugin: asg_print
       source: field_display_name
@@ -62,6 +56,5 @@ process:
       plugin: get
       source: field_display_name
 destination:
-  plugin: entity:user
-# migration_dependencies:
-  # d7_user_role
+  plugin: 'entity:user'
+migration_dependencies: null

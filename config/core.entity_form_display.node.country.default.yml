@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.country.body
     - field.field.node.country.field_alternate_thumbnail
+    - field.field.node.country.field_bullet_point_paragraph
     - field.field.node.country.field_challenges
     - field.field.node.country.field_coords
     - field.field.node.country.field_fact_text
+    - field.field.node.country.field_facts_paragraph
     - field.field.node.country.field_featured_text
     - field.field.node.country.field_field_featured
     - field.field.node.country.field_heading
@@ -20,6 +22,9 @@ dependencies:
     - field.field.node.country.field_order_number
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
+    - field.field.node.country.field_sidebar_item_paragraph
+    - field.field.node.country.field_solution_bpoint_paragraph
+    - field.field.node.country.field_solution_paragraph
     - field.field.node.country.field_solution_text
     - field.field.node.country.field_solutions_description
     - field.field.node.country.field_sub_heading
@@ -33,6 +38,7 @@ dependencies:
     - field_group
     - file
     - image
+    - paragraphs
     - path
     - text
 third_party_settings:
@@ -52,7 +58,8 @@ third_party_settings:
         required_fields: true
       label: Masthead
     group_facts:
-      children: {  }
+      children:
+        - field_solution_paragraph
       parent_name: ''
       weight: 6
       format_type: details
@@ -76,6 +83,7 @@ third_party_settings:
     group_overview:
       children:
         - body
+        - field_bullet_point_paragraph
       parent_name: ''
       weight: 8
       format_type: details
@@ -100,6 +108,7 @@ third_party_settings:
     group_solutions:
       children:
         - field_solutions_description
+        - field_solution_bpoint_paragraph
       parent_name: ''
       weight: 12
       format_type: details
@@ -145,7 +154,8 @@ third_party_settings:
         required_fields: true
       label: 'Get Involved'
     group_sidebar_items:
-      children: {  }
+      children:
+        - field_sidebar_item_paragraph
       parent_name: ''
       weight: 19
       format_type: details
@@ -228,6 +238,18 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_bullet_point_paragraph:
+    type: entity_reference_paragraphs
+    weight: 10
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_challenges:
     weight: 11
     settings:
@@ -251,6 +273,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_facts_paragraph:
+    type: entity_reference_paragraphs
+    weight: 48
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_featured_text:
     weight: 24
@@ -341,6 +375,42 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_sidebar_item_paragraph:
+    type: entity_reference_paragraphs
+    weight: 52
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_solution_bpoint_paragraph:
+    type: entity_reference_paragraphs
+    weight: 14
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_solution_paragraph:
+    type: entity_reference_paragraphs
+    weight: 50
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_solution_text:
     weight: 15

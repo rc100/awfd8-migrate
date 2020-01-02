@@ -1,0 +1,58 @@
+uuid: ae735277-7d9f-4c48-8ca7-397e5a1d8512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schedule_paragraph
+    - node.type.safari
+    - paragraphs.paragraphs_type.schedule
+  module:
+    - entity_reference_revisions
+id: node.safari.field_schedule_paragraph
+field_name: field_schedule_paragraph
+entity_type: node
+bundle: safari
+label: Schedule
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      schedule: schedule
+    target_bundles_drag_drop:
+      animal_habitat:
+        weight: 11
+        enabled: false
+      bullet_point:
+        weight: 12
+        enabled: false
+      facts:
+        weight: 13
+        enabled: false
+      history:
+        weight: 14
+        enabled: false
+      module:
+        weight: 15
+        enabled: false
+      overview_facts:
+        weight: 16
+        enabled: false
+      schedule:
+        enabled: true
+        weight: 17
+      sidebar_item:
+        weight: 18
+        enabled: false
+      solution:
+        weight: 19
+        enabled: false
+      solution_bulletpoint:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

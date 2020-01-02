@@ -19,20 +19,19 @@ use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
 class AsgUsers extends DrupalSqlBase {
 
 	public function query(){
-
+		$keys = array_keys($this->baseFields());
+		// array_push($keys, 'user_picture');
 		return $this->select('users', 'u')
-			->fields('u', array_keys($this->baseFields()))
+			->fields('u', $keys)
 			->condition('uid', 0, '>');
 	}
 
 
 	public function fields() {
 		$fields = $this->baseFields();
-
-		// $fields['first_name'] = $this->('First Name');
-		// $fields['last_name'] = $this->('Last Name');
-		// $fields['biography'] = $this->('Biography');
-
+		$fields['field_about_the_author/value'] = $this->t('About the author');
+		$fields['field_about_the_author/summary'] = $this->t('Summary');
+		$fields['field_about_the_author/format'] = $this->t('HTML Format');
 		return $fields;
 
 	}
@@ -40,7 +39,6 @@ class AsgUsers extends DrupalSqlBase {
 	public function prepareRow(Row $row){
 
 		//add additional row queries here, based on what you added in fields
-
 		$uid = $row->getSourceProperty('uid');
 
 		$query = $this->select('users_roles', 'r');
@@ -48,6 +46,29 @@ class AsgUsers extends DrupalSqlBase {
 		$query->condition('r.uid', $uid, '=');
 		$record = $query->execute()->fetchAllKeyed();
 		$row->setSourceProperty('roles', array_keys($record));
+
+		$query = null;
+		$query = $this->select('field_data_field_about_the_author', 'fdfa')
+			->fields('fdfa', ['entity_id', 
+				'field_about_the_author_value', 
+				'field_about_the_author_summary', 
+				'field_about_the_author_format'])
+			->condition('entity_id', $uid)
+			->execute();
+		$about = $query->fetchAll();
+
+		$query = null;
+		$query = $this->select('field_data_field_display_name', 'fdfdn')
+			->fields('fdfdn', ['field_display_name_value'])
+			->condition('entity_id', $uid)
+			->execute();
+		$displayName = $query->fetchField();
+
+		$row->setSourceProperty('field_about_the_author_value', $about[0]['field_about_the_author_value']);
+		$row->setSourceProperty('field_about_the_author_summary', $about[0]['field_about_the_author_summary']);
+		$row->setSourceProperty('field_about_the_author_format', $about[0]['field_about_the_author_format']);
+		$row->setSourceProperty('field_display_name', $displayName);
+
 		return parent::prepareRow($row);
 		
 	}
