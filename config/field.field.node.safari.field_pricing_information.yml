@@ -1,10 +1,12 @@
-uuid: 0fea3036-df15-418d-bb48-db3fda32dc78
+uuid: 1c533bcf-fb0a-40e6-99d7-e83591f79fc9
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_pricing_information
     - node.type.safari
+  module:
+    - text
 id: node.safari.field_pricing_information
 field_name: field_pricing_information
 entity_type: node
@@ -16,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long

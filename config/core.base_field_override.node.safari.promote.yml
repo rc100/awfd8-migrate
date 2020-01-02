@@ -1,23 +1,22 @@
-uuid: f490795d-ef53-4193-871f-1fd88695ce20
+uuid: 7ea23f8f-85da-44db-8255-563453aafe83
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_status
     - node.type.safari
-id: node.safari.field_status
-field_name: field_status
+id: node.safari.promote
+field_name: promote
 entity_type: node
 bundle: safari
-label: 'Sold Out'
+label: 'Promoted to front page'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
 default_value_callback: ''
 settings:
-  on_label: Active
-  off_label: Inactive
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

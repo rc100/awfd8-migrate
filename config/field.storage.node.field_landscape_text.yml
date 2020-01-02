@@ -1,18 +1,16 @@
-uuid: d05639b3-a4e6-4101-883b-91e62579a7a3
+uuid: 1c4e0719-be8a-4c13-b62e-66761697606a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_fact_text
-field_name: field_fact_text
+    - text
+id: node.field_landscape_text
+field_name: field_landscape_text
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
