@@ -1,0 +1,27 @@
+uuid: e521ffac-ab54-48f9-9ecb-2460f0be2dc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - menu_block
+  theme:
+    - awf
+id: mainmenu
+theme: awf
+region: nav_overlay
+weight: -13
+provider: null
+plugin: 'menu_block:main-menu'
+settings:
+  id: 'menu_block:main-menu'
+  label: 'Main Menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'main-menu:'
+  suggestion: main_menu
+visibility: {  }

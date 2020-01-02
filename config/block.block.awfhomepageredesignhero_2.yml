@@ -12,7 +12,7 @@ dependencies:
 id: awfhomepageredesignhero_2
 theme: awf
 region: content
-weight: -6
+weight: -12
 provider: null
 plugin: 'block_content:f3e08f12-fa1c-4186-a3ca-fe3321184b0b'
 settings:

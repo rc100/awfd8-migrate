@@ -11,7 +11,7 @@ _core:
 id: awf_search
 theme: awf
 region: nav_overlay
-weight: -8
+weight: -12
 provider: null
 plugin: search_form_block
 settings:
