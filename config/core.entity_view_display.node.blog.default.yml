@@ -15,11 +15,36 @@ dependencies:
     - node.type.blog
   module:
     - datetime
+    - field_group
     - file
     - image
+    - layout_builder
     - link
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_content_wrapper:
+      children:
+        - field_date
+        - field_all_tags
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Content Wrapper'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: content-wrapper-top
+      label: 'Content Wrapper'
 id: node.blog.default
 targetEntityType: node
 bundle: blog
@@ -28,20 +53,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_all_tags:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_blog_files:
-    weight: 5
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -49,7 +74,7 @@ content:
     type: file_default
     region: content
   field_blog_images:
-    weight: 6
+    weight: 7
     label: above
     settings:
       image_style: ''
@@ -57,25 +82,8 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_blog_legacy_alias:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_blog_legacy_id:
-    weight: 7
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_date:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       timezone_override: ''
@@ -85,7 +93,7 @@ content:
     region: content
   field_featured_image:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -93,7 +101,7 @@ content:
     third_party_settings: {  }
     region: content
   field_image_link_view_more:
-    weight: 3
+    weight: 4
     label: above
     settings:
       trim_length: 80
@@ -105,5 +113,7 @@ content:
     type: link
     region: content
 hidden:
+  field_blog_legacy_alias: true
+  field_blog_legacy_id: true
   langcode: true
   links: true
