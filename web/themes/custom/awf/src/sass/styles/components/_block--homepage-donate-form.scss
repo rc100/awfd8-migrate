@@ -1,0 +1,211 @@
+// Donate form
+// This block occurs globally not just on the hompepage.
+
+.block-webform-homepage-donate-form {
+  display: block;
+  background-color: $awfdarkgreen;
+
+  form {
+    @include form-body;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &:after {
+    @include form-body-after;
+    bottom: 0;
+    left: 0;
+    background: url('../../src/svg/pattern_Donate.svg') 0 0 repeat-y;
+    background-size: 600%;
+    opacity: .6;
+    transition: all .5s ease-in-out;
+
+    @supports not (-ms-high-contrast: none) {
+      mix-blend-mode: multiply;
+    }
+
+    @include breakpoint($min500) {
+      background-size: 330%;
+    }
+
+    @include breakpoint($min760) {
+      background-size: 160%;
+    }
+
+    @include breakpoint($min1024) {
+      background-size: 120%;
+    }
+
+    @include breakpoint($min1200) {
+      background-size: 100%;
+    }
+
+    @include breakpoint($min1320) {
+      background-size: 80%;
+    }
+  }
+
+  .form-item {
+    margin: 0;
+    padding: 0;
+
+    &.form-type-webform-markup {
+      width: 100%;
+
+      @include breakpoint($min1024) {
+        margin: 0;
+        padding: 0 15% 0 0;
+        width: calc(100% - 348px);
+      }
+    }
+
+    &.form-type-number {
+      position: relative;
+      margin-right: 0;
+      margin-top: 17px;
+      width: 74px;
+
+      @include breakpoint($min400) {
+        width: 85px;
+      }
+
+      @include breakpoint($min1024) {
+        margin-top: 0;
+        width: 100px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 5.2rem;
+        background: $white;
+        position: absolute;
+        left: 1rem;
+        border-bottom: 1px solid $ltgray;
+        top: 4rem;
+
+        @include breakpoint($min400) {
+          top: 4rem;
+        }
+      }
+
+      .field-prefix {
+        display: inline-block;
+        float: none;
+        font-size: 2.2rem;
+        margin-top: 7px;
+        margin-right: 1px;
+
+        @include breakpoint($min400) {
+          margin-right: 3px;
+        }
+
+        @include breakpoint($min1024) {
+          margin-right: 1px;
+        }
+
+      }
+
+      input {
+        color: $white;
+        text-align: center;
+        display: inline-block;
+        min-width: auto;
+        background: none;
+        -moz-appearance: textfield;
+        border: 0;
+        font-size: 2.2rem;
+        width: 4.5rem;
+        padding: 0;
+
+        @include breakpoint($min400) {
+          width: 5rem;
+        }
+      }
+    }
+
+    &.form-type-select {
+      width: 116px;
+      margin-right: 35px;
+      margin-top: 19px;
+
+      @include breakpoint($min1024) {
+        margin-top: 0;
+      }
+
+      select {
+        background: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid $ltgray;
+        color: $white;
+        font-size: 2.2rem;
+        min-width: unset;
+      }
+    }
+
+    .field-prefix {
+      color: $white;
+    }
+
+    h4 {
+
+      font-size: 26px;
+      font-family: $base-heading-font !important;
+
+      margin: 0;
+      color: $white;
+      line-height: 1;
+      font-weight: 300;
+    }
+  }
+
+  .form-actions.form-wrapper {
+    padding: 0;
+    margin-top: 20px;
+
+    @include breakpoint($min760) {
+      margin: 0;
+    }
+
+    @include breakpoint($min1024) {
+      width: 97px;
+      clear: none;
+    }
+
+    input.form-submit {
+      width: 97px;
+      font-size: 14px;
+      font-weight: 800;
+      background: $awfbrown;
+      text-transform: uppercase;
+      transition: all .5s ease-in-out;
+      margin-top: 0;
+
+      @include breakpoint($min760) {
+        margin-top: 20px;
+      }
+
+      @include breakpoint($min1024) {
+        margin-top: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background: $white;
+        color: $awfbrown;
+      }
+    }
+  }
+}
+
+.webform-submission-homepage-donate-form-form {
+  @include form-body;
+
+  h2,
+  h3 {
+    color: $white;
+  }
+}

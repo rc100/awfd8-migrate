@@ -19,8 +19,20 @@
   }
 }
 
+main .layout-content {
+  margin: 0 20px;
+
+  .path-frontpage & {
+    margin: 0;
+  }
+}
+
 .layout-container {
   background-color: $ltgray;
+
+  .path-frontpage & {
+    background-color: $white;
+  }
 }
 
 .section-campaign .inner-wrapper {
@@ -106,223 +118,7 @@
   }
 }
 
-.section-mission {
-  position: relative;
-  overflow: hidden;
-  background-color: rgba($ltgray, .7);
-  padding-top: 60px;
-  margin-bottom: -40px;
-  padding-bottom: 40px;
-
-  @include breakpoint($min760) {
-    padding-bottom: 80px;
-    margin-bottom: 0;
-  }
-
-  @include breakpoint($min1024) {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 110px;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background: url('../../src/svg/pattern_MultiFacetedApproach.svg') 0 0 repeat-y;
-    display: none;
-
-    @include breakpoint($min760) {
-      display: block;
-      left: 0;
-      background-size: 100%;
-    }
-
-    @include breakpoint($min1200) {
-      background-size: 112%;
-    }
-  }
-
-  .view-content {
-    display: flex;
-    flex-flow: row wrap;
-    z-index: 100;
-    position: relative;
-    overflow: hidden;
-    width: calc(100vw - 30px);
-
-    @include breakpoint($min500) {
-      max-width: auto;
-    }
-
-    @include breakpoint($min760) {
-      max-width: auto;
-    }
-
-    img {
-      position: relative;
-    }
-  }
-
-  .views-row {
-    position: relative;
-    overflow: hidden;
-    background: #dcdcdc;
-    flex: 1 0 100%;
-    margin-bottom: 30px;
-
-    @include breakpoint($min760) {
-      width: 100%;
-      flex: 1 0 48%;
-      margin-right: 4%;
-      margin-bottom: 4%;
-
-      &:nth-child(even) {
-        margin-right: 0;
-      }
-    }
-
-    @include breakpoint($min1024) {
-      margin-right: 3%;
-
-      &:nth-child(even) {
-        margin-right: 0;
-      }
-    }
-
-    @include breakpoint($min1200) {
-      flex: 1 0 22%;
-
-      &,
-      &:nth-child(2) {
-        margin-right: 2.4%;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    @include breakpoint($min1320) {
-      flex: 1 0 22%;
-
-      &,
-      &:nth-child(2) {
-        margin-right: 2.2%;
-      }
-    }
-
-    .field-listing-image {
-      top: 0;
-    }
-
-    .field-listing-title {
-      position: absolute;
-      z-index: 1;
-      color: $white;
-      margin: 20px;
-      bottom: 0;
-      z-index: 2;
-      font-size: 24px;
-
-      @include breakpoint($min1024) {
-        font-size: 26px;
-      }
-    }
-
-    img {
-      top: 0;
-      left: -100px;
-      min-width: 550px;
-
-      @include breakpoint($min500) {
-        min-width: 600px;
-        left: 0;
-      }
-
-      @include breakpoint($min760) {
-        top: -20%;
-        left: -40%;
-        height: auto;
-      }
-
-      @include breakpoint($min760) {
-        min-width: 600px;
-        height: auto;
-      }
-
-      @include breakpoint($min1024) {
-        top: 0%;
-        left: 0%;
-        min-width: 500px;
-        height: auto;
-      }
-
-      @include breakpoint($min1200) {
-        left: -40%;
-      }
-    }
-
-    .image-wrapper {
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 50%;
-        width: 101%;
-        bottom: 0;
-        transition: height 0.3s ease-out;
-        z-index: 1;
-      }
-
-      &:hover:before {
-        height: 100%;
-      }
-    }
-
-    &:nth-child(1) .image-wrapper:before {
-      background: linear-gradient(to bottom, transparent 0%, $awfpink 100%);
-    }
-
-    &:nth-child(2) .image-wrapper:before {
-      background: linear-gradient(to bottom, transparent 0%, $awfbrown 100%);
-    }
-
-    &:nth-child(3) .image-wrapper:before {
-      background: linear-gradient(to bottom, transparent 0%, $awforangedark 100%);
-    }
-
-    &:nth-child(4) .image-wrapper:before {
-      background: linear-gradient(to bottom, transparent 0%, $awfdarkgreen 100%);
-    }
-
-    a {
-      display: block;
-      position: relative;
-      height: 320px;
-
-      @include breakpoint($min760) {
-        min-height: auto;
-        height: 330px;
-      }
-
-      @include breakpoint($min1200) {
-        height: 260px;
-      }
-
-    }
-
-  }
-
-  .btn-orange-line .image-wrapper:before {
-    margin-bottom: 60px;
-  }
-}
-
 .view-homepage-multi-view.view-id-homepage_multi_view,
-.section-mission .views-row,
 .section-campaign {
   .image-wrapper {
     overflow: hidden;
@@ -342,7 +138,6 @@
   }
 }
 
-.section-mission .inner-wrapper,
 .section-campaign .inner-wrapper {
   display: flex;
   flex-flow: row wrap;
