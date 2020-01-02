@@ -87,6 +87,7 @@ $icon-youtube: "\ea9d";
     content: $icon-caret;
   }
 }
+
 @mixin icon-caret-after {
   &:after {
     content: $icon-caret;
