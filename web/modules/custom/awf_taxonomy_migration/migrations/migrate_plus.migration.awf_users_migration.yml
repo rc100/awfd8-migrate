@@ -39,14 +39,12 @@ process:
   #       source: fid
   user_picture:
     -
-      plugin: asg_print
+      plugin: migration_lookup
+      migration: awf_files_migration
       source: picture
     -
       plugin: skip_on_empty
       method: process
-    -
-      plugin: get
-      source: picture
   roles:
     plugin: migration_lookup
     migration: d7_user_role
