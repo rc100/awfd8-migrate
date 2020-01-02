@@ -43,16 +43,17 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_migration
     source: field_tags_economic
-  field_image:
-    -
-      plugin: asg_print
-      source: field_image
-    -
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: get
-      source: field_image
+  # field_image:
+  #   -
+  #     plugin: asg_print
+  #     source: field_image
+  #   -
+  #     plugin: skip_on_empty
+  #     method: process
+  #   -
+  #     plugin: get
+  #     source: field_image
+  field_image: field_image
   field_file: field_file
   field_land_habitat: 
     plugin: migration_lookup

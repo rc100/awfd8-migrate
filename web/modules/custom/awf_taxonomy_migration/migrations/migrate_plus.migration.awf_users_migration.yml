@@ -55,9 +55,9 @@ process:
   field_about_the_author/summary: field_about_the_author_summary
   field_about_the_author/format: field_about_the_author_format
   field_display_name: 
-    -
-      plugin: asg_print
-      source: field_display_name
+    # -
+    #   plugin: asg_print
+    #   source: field_display_name
     -
       plugin: get
       source: field_display_name
