@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: awf_main_menu
 theme: awf
-region: nav_overlay
-weight: -9
+region: disabled
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:
