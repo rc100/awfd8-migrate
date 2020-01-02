@@ -8,13 +8,13 @@ dependencies:
     - field.field.node.country.field_bullet_point_paragraph
     - field.field.node.country.field_challenges
     - field.field.node.country.field_coords
-    - field.field.node.country.field_fact_text
     - field.field.node.country.field_facts_paragraph
     - field.field.node.country.field_featured_text
     - field.field.node.country.field_field_featured
     - field.field.node.country.field_heading
     - field.field.node.country.field_image
     - field.field.node.country.field_klm
+    - field.field.node.country.field_landscape_text
     - field.field.node.country.field_legacy_alias
     - field.field.node.country.field_legacy_id
     - field.field.node.country.field_legacy_revision_id
@@ -25,13 +25,13 @@ dependencies:
     - field.field.node.country.field_sidebar_item_paragraph
     - field.field.node.country.field_solution_bpoint_paragraph
     - field.field.node.country.field_solution_paragraph
-    - field.field.node.country.field_solution_text
     - field.field.node.country.field_solutions_description
     - field.field.node.country.field_sub_heading
     - field.field.node.country.field_tags_africa
     - field.field.node.country.field_tags_animal
     - field.field.node.country.field_tags_country
     - field.field.node.country.field_tags_region
+    - field.field.node.country.field_tooltip_text
     - image.style.thumbnail
     - node.type.country
   module:
@@ -61,7 +61,7 @@ third_party_settings:
       children:
         - field_solution_paragraph
       parent_name: ''
-      weight: 6
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -72,7 +72,7 @@ third_party_settings:
     group_gallery:
       children: {  }
       parent_name: ''
-      weight: 7
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -85,7 +85,7 @@ third_party_settings:
         - body
         - field_bullet_point_paragraph
       parent_name: ''
-      weight: 8
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -97,7 +97,7 @@ third_party_settings:
       children:
         - field_challenges
       parent_name: ''
-      weight: 10
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -107,10 +107,10 @@ third_party_settings:
       label: Challenges
     group_solutions:
       children:
-        - field_solutions_description
         - field_solution_bpoint_paragraph
+        - field_solutions_description
       parent_name: ''
-      weight: 12
+      weight: 7
       format_type: details
       format_settings:
         id: ''
@@ -120,9 +120,9 @@ third_party_settings:
       label: Solutions
     group_landscapes:
       children:
-        - field_solution_text
+        - field_landscape_text
       parent_name: ''
-      weight: 14
+      weight: 8
       format_type: details
       format_settings:
         id: ''
@@ -134,7 +134,7 @@ third_party_settings:
       children:
         - field_project_text
       parent_name: ''
-      weight: 16
+      weight: 9
       format_type: details
       format_settings:
         id: ''
@@ -145,7 +145,7 @@ third_party_settings:
     group_get_involved:
       children: {  }
       parent_name: ''
-      weight: 18
+      weight: 10
       format_type: details
       format_settings:
         id: ''
@@ -157,7 +157,7 @@ third_party_settings:
       children:
         - field_sidebar_item_paragraph
       parent_name: ''
-      weight: 19
+      weight: 11
       format_type: details
       format_settings:
         id: ''
@@ -172,7 +172,7 @@ third_party_settings:
         - field_alternate_thumbnail
         - field_featured_text
       parent_name: ''
-      weight: 20
+      weight: 12
       format_type: details
       format_settings:
         id: ''
@@ -186,9 +186,9 @@ third_party_settings:
         - field_coords
         - field_image
         - field_sub_heading
-        - field_fact_text
+        - field_tooltip_text
       parent_name: ''
-      weight: 25
+      weight: 13
       format_type: details
       format_settings:
         id: ''
@@ -202,7 +202,7 @@ third_party_settings:
         - field_tags_region
         - field_tags_africa
       parent_name: ''
-      weight: 31
+      weight: 14
       format_type: details
       format_settings:
         id: ''
@@ -210,6 +210,20 @@ third_party_settings:
         open: false
         required_fields: true
       label: Tags
+    group_legacy_tags:
+      children:
+        - field_legacy_alias
+        - field_legacy_id
+        - field_legacy_revision_id
+      parent_name: ''
+      weight: 23
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: 'Legacy Tags'
 id: node.country.default
 targetEntityType: node
 bundle: country
@@ -226,7 +240,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 36
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -251,12 +265,12 @@ content:
     third_party_settings: {  }
     region: content
   field_challenges:
-    weight: 11
+    weight: 53
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_coords:
     weight: 27
@@ -266,33 +280,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_fact_text:
-    weight: 30
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_facts_paragraph:
-    type: entity_reference_paragraphs
-    weight: 48
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
   field_featured_text:
-    weight: 24
+    weight: 57
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_field_featured:
     weight: 21
@@ -324,8 +318,16 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_landscape_text:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_legacy_alias:
-    weight: 42
+    weight: 24
     settings:
       size: 60
       placeholder: ''
@@ -333,14 +335,14 @@ content:
     type: string_textfield
     region: content
   field_legacy_id:
-    weight: 43
+    weight: 25
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_legacy_revision_id:
-    weight: 44
+    weight: 26
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -369,12 +371,12 @@ content:
     type: string_textfield
     region: content
   field_project_text:
-    weight: 17
+    weight: 55
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_sidebar_item_paragraph:
     type: entity_reference_paragraphs
@@ -412,21 +414,13 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
-  field_solution_text:
-    weight: 15
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_solutions_description:
-    weight: 13
+    weight: 54
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_sub_heading:
     weight: 29
@@ -463,16 +457,24 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_tooltip_text:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   langcode:
     type: language_select
-    weight: 34
+    weight: 15
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 39
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -480,21 +482,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 37
+    weight: 18
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 41
+    weight: 22
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 38
+    weight: 19
     region: content
     third_party_settings: {  }
   title:
@@ -507,7 +509,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 35
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -515,8 +517,9 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 40
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_facts_paragraph: true

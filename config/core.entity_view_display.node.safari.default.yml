@@ -57,11 +57,11 @@ content:
     type: boolean
     region: content
   field_challenges:
-    weight: 112
+    weight: 128
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_coords:
     weight: 104
@@ -141,11 +141,11 @@ content:
     type: image
     region: content
   field_pricing_information:
-    weight: 107
+    weight: 126
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_safari_capaciy:
     weight: 106
@@ -174,11 +174,11 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solutions:
-    weight: 111
+    weight: 127
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_status:
     weight: 108

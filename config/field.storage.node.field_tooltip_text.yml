@@ -1,15 +1,16 @@
-uuid: 35199c3d-2f42-4e49-a2ea-08631d10d226
+uuid: 85ba6910-a315-425e-896f-5cc2c5d70f7a
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_challenges
-field_name: field_challenges
+id: node.field_tooltip_text
+field_name: field_tooltip_text
 entity_type: node
-type: text_long
-settings: {  }
+type: text
+settings:
+  max_length: 60
 module: text
 locked: false
 cardinality: 1
