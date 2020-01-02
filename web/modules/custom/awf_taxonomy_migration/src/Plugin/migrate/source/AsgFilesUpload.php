@@ -30,7 +30,14 @@ class AsgFilesUpload extends SqlBase {
 	public function prepareRow(Row $row){
 		
 		$filename = $row->getSourceProperty('filename');
-		$filename = $_SERVER['DOCUMENT_ROOT'] . '/web/sites/default/files' . $filename;
+		//  isset($_ENV['PANTHEON_ENVIRONMENT'])
+		if(  true  ){
+			$sitepath = 'https://d7-legacy-awf-website.pantheonsite.io/sites/default/files';
+		} else {
+			$sitepath = $_SERVER['DOCUMENT_ROOT'] . '/web/sites/default/files';
+		}
+		
+		$filename = $sitepath . $filename;
 		$row->setSourceProperty('uri', $row->getSourceProperty('uri'));
 		$row->setSourceProperty('filepath', $filename);
 		return parent::prepareRow($row);
