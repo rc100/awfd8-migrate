@@ -12,23 +12,22 @@ dependencies:
     - field.field.node.donate_page.field_legacy_revision_id
     - node.type.donate_page
   module:
-    - link
     - text
     - user
 id: node.donate_page.default
-targetEntityType: node
+targetEntityType: nodel,k
 bundle: donate_page
 mode: default
 content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_description:
-    weight: 104
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -81,9 +80,13 @@ content:
     type: number_integer
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_form_url: true
+  field_heading: true
+  field_legacy_alias: true
+  field_legacy_id: true
   langcode: true
