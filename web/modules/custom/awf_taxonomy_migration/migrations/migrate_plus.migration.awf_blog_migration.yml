@@ -20,6 +20,10 @@ source:
 process:
   nid: nid
   vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
   langcode:
     plugin: default_value
     source: language
@@ -33,10 +37,38 @@ process:
   revision_log: revision_log
   revision_timestamp: timestamp
   body: body
-  field_all_tags: 
+  field_tags_animal:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_animal
+  field_tags_community:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_community
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_tags_economic:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_economic
+  field_land_habitat: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region: 
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
+  field_tags_africa: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_africa
+  field_tags_projects: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_projects
   field_blog_legacy_alias: alias
   field_blog_legacy_id: nid
   path: alias

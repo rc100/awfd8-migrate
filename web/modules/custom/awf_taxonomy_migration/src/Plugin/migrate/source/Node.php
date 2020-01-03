@@ -28,6 +28,7 @@ class Node extends D7Node {
 		$query = $this->select('url_alias','ua')->fields('ua', ['alias']);
 		$query->condition('ua.source', 'node/'  . $nid);
 		$alias = $query->execute()->fetchfield();
+
 		if(!empty($alias)) {
 			$row->setSourceProperty('alias', '/' . $alias);
 		} else {
