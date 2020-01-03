@@ -15,7 +15,7 @@ dependencies:
     - text
     - user
 id: node.donate_page.default
-targetEntityType: nodel,k
+targetEntityType: node
 bundle: donate_page
 mode: default
 content:
