@@ -17,6 +17,7 @@ libraries-override:
 # Defines libraries group in which we can add css/js.
 libraries:
   - awf/global-styling
+  - awf/fonts
 
 # Regions
 regions:
