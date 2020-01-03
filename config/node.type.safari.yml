@@ -7,12 +7,12 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - main-menu
+    parent: 'main-menu:menu_link_content:86550fe1-0e8a-49ee-8f64-97cc6d29707b'
 name: Safari
 type: safari
 description: ''
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

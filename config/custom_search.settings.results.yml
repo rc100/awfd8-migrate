@@ -12,6 +12,7 @@ node_search:
       staff: staff
       hostory: hostory
       history: history
+      career: career
     languages:
       en: en
       und: und
@@ -30,6 +31,7 @@ user_search:
       staff: staff
       hostory: hostory
       history: history
+      career: career
     languages:
       en: en
       und: und

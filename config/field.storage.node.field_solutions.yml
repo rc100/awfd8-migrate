@@ -1,18 +1,18 @@
-uuid: adaf1bae-abe8-4f9e-b8b4-bb4277151a3d
+uuid: c3dcf112-fd02-4ac9-a3ce-5bca2f6ab500
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_solutions
 field_name: field_solutions
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

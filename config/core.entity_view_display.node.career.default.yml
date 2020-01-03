@@ -1,0 +1,122 @@
+uuid: c392efa3-ec6f-4060-9c11-cb0a185aaf33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.career.body
+    - field.field.node.career.field_career_type
+    - field.field.node.career.field_date
+    - field.field.node.career.field_featured
+    - field.field.node.career.field_featured_text
+    - field.field.node.career.field_legacy_alias
+    - field.field.node.career.field_legacy_id
+    - field.field.node.career.field_legacy_revision_id
+    - field.field.node.career.field_location
+    - field.field.node.career.field_status
+    - field.field.node.career.field_sub_heading
+    - node.type.career
+  module:
+    - datetime
+    - text
+    - user
+id: node.career.default
+targetEntityType: node
+bundle: career
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_career_type:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_featured:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_featured_text:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_legacy_alias:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_legacy_id:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_legacy_revision_id:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_location:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_status:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sub_heading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

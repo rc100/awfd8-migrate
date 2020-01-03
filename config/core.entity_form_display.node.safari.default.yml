@@ -45,8 +45,8 @@ third_party_settings:
         - field_coords
         - field_location
         - field_safari_capaciy
-        - field_pricing_information
         - field_status
+        - field_pricing_information
       parent_name: ''
       weight: 0
       format_type: details
@@ -125,6 +125,21 @@ third_party_settings:
         open: false
         required_fields: true
       label: Tags
+    group_legacy_tabs:
+      children:
+        - field_legacy_alias
+        - field_legacy_id
+        - field_legacy_revision_id
+      parent_name: ''
+      weight: 15
+      format_type: details
+      format_settings:
+        label: 'Legacy Information'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Legacy Information'
 id: node.safari.default
 targetEntityType: node
 bundle: safari
@@ -141,24 +156,24 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_bushtracks_safari:
-    weight: 15
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_challenges:
-    weight: 5
+    weight: 39
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_coords:
     weight: 3
@@ -189,7 +204,7 @@ content:
     type: options_select
     region: content
   field_legacy_alias:
-    weight: 21
+    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -197,14 +212,14 @@ content:
     type: string_textfield
     region: content
   field_legacy_id:
-    weight: 22
+    weight: 17
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_legacy_revision_id:
-    weight: 23
+    weight: 18
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -227,12 +242,12 @@ content:
     type: image_image
     region: content
   field_pricing_information:
-    weight: 6
+    weight: 37
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_safari_capaciy:
     weight: 5
@@ -267,12 +282,12 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_solutions:
-    weight: 4
+    weight: 38
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
   field_status:
     weight: 7
@@ -322,14 +337,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 12
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 13
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -337,21 +352,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 12
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -364,7 +379,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
@@ -372,7 +387,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 14
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -8,11 +8,11 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: 'main:'
+    parent: 'main:menu_link_content:4a3ef003-020e-46e2-911f-f230374b22a3'
 name: 'Donate Page'
 type: donate_page
 description: ''
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

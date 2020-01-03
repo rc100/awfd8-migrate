@@ -1,17 +1,16 @@
-uuid: d05639b3-a4e6-4101-883b-91e62579a7a3
+uuid: a416ea9a-c45d-4f0e-ae2f-b6e3ef18d72d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_fact_text
-field_name: field_fact_text
+    - taxonomy
+id: node.field_career_type
+field_name: field_career_type
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

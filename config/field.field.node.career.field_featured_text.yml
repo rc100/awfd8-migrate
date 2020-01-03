@@ -1,17 +1,17 @@
-uuid: 50070c5f-34e3-4599-840a-8e9496bf543a
+uuid: 586ae686-ebeb-44a8-bc54-b1f2d2ca91ec
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_heading
-    - node.type.donate_page
+    - field.storage.node.field_featured_text
+    - node.type.career
   module:
     - text
-id: node.donate_page.field_heading
-field_name: field_heading
+id: node.career.field_featured_text
+field_name: field_featured_text
 entity_type: node
-bundle: donate_page
-label: Heading
+bundle: career
+label: 'Featured Text'
 description: ''
 required: false
 translatable: true

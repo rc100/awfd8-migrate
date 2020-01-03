@@ -1,0 +1,22 @@
+uuid: 7ea23f8f-85da-44db-8255-563453aafe83
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.safari
+id: node.safari.promote
+field_name: promote
+entity_type: node
+bundle: safari
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
