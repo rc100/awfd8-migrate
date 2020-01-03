@@ -121,6 +121,7 @@
   h1 {
     color: $white;
     font-size: 2.4em;
+    font-family: $serif;
     letter-spacing: -1px;
     line-height: 1.2;
     text-shadow: 0 0 50px rgba(0, 0, 0, .5);
@@ -134,7 +135,7 @@
     }
 
     @include breakpoint($min1024) {
-      font-size: 3.6em;
+      font-size: 6.7rem;
     }
   }
 }

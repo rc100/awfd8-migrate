@@ -12,3 +12,11 @@
   margin: 0 auto;
   width: 100%;
 }
+
+%fadein-selector {
+  transition: opacity 300ms ease 50ms;
+
+  &.js-transparent {
+    opacity: 0;
+  }
+}

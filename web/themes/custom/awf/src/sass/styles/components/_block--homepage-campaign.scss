@@ -1,0 +1,133 @@
+// 1-image block and CTA text on the homepage
+
+.section-campaign .inner-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 1;
+
+  @include breakpoint($min1024) {
+    min-height: 400px;
+  }
+
+  @include breakpoint($screen-max) {
+    padding: 0 60px;
+  }
+
+  p {
+    margin-bottom: 40px;
+
+    @include breakpoint($min1024) {
+      margin-bottom: 60px;
+    }
+  }
+
+  h2 {
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @include breakpoint($min1024) {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @include breakpoint($min1200) {
+      max-width: 500px;
+    }
+  }
+}
+
+.section-campaign .inner-wrapper {
+  @include breakpoint($min1024) {
+    padding: 0 60px;
+  }
+
+  .text-wrapper,
+  .image-wrapper {
+    @include breakpoint($min1024) {
+      -ms-flex-preferred-size: 50%;
+      width: 100%;
+      max-width: 600px;
+      flex: 1 0 46%;
+
+    }
+  }
+
+  .image-wrapper {
+    margin-top: -60px;
+    overflow-y: hidden;
+
+    @include breakpoint($min760) {
+      max-height: 700px;
+    }
+
+    @include breakpoint($min1024) {
+      max-height: 660px;
+      order: 2;
+      margin-top: -80px;
+      margin-bottom: -60px;
+      z-index: 1;
+    }
+
+    a {
+      display: block;
+      overflow: hidden;
+    }
+
+    img {
+      @include breakpoint($min760) {
+        top: -150px;
+      }
+
+      @include breakpoint($min1024) {
+        top: 0;
+        min-width: 395px;
+      }
+
+      @include breakpoint($min1320) {
+        top: -120px;
+      }
+    }
+  }
+
+  .text-wrapper {
+    vertical-align: middle;
+    padding: 40px 0;
+
+    @include breakpoint($min1024) {
+      order: 1;
+      margin-right: 40px;
+      padding: 120px 0 0;
+    }
+
+    h2,
+    p {
+      @include breakpoint($min1024) {
+        max-width: 500px;
+      }
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+  }
+}
+
+.section-campaign {
+  .image-wrapper {
+    overflow: hidden;
+    display: block;
+
+    img {
+      display: block;
+      transition: all .5s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
