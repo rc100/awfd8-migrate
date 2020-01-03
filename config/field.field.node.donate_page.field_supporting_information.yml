@@ -1,12 +1,14 @@
-uuid: ad79fe18-01ab-4b53-b485-28d8e64dcccd
+uuid: 400d520e-380c-43bb-8ca2-70b4d7d421af
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_description
+    - field.storage.node.field_supporting_information
     - node.type.donate_page
-id: node.donate_page.field_description
-field_name: field_description
+  module:
+    - text
+id: node.donate_page.field_supporting_information
+field_name: field_supporting_information
 entity_type: node
 bundle: donate_page
 label: 'Supporting Information'
@@ -16,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long
