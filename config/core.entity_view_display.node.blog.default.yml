@@ -18,14 +18,10 @@ dependencies:
     - field_group
     - file
     - image
-    - layout_builder
     - link
     - text
     - user
 third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
   field_group:
     group_content_wrapper:
       children:
