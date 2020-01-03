@@ -134,11 +134,12 @@ third_party_settings:
       weight: 15
       format_type: details
       format_settings:
+        label: 'Legacy Information'
+        required_fields: true
         id: ''
         classes: ''
         open: false
-        required_fields: true
-      label: 'Legacy Tabs'
+      label: 'Legacy Information'
 id: node.safari.default
 targetEntityType: node
 bundle: safari
