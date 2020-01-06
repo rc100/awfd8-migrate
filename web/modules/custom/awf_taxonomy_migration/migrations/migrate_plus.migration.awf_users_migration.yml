@@ -16,6 +16,7 @@ source:
   plugin: asg_user
   target: migrate
 process:
+  uid: uid
   name: name
   mail: mail
   pass: pass

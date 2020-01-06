@@ -20,6 +20,10 @@ source:
 process:
   nid: nid
   vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
   langcode:
     plugin: default_value
     source: language
@@ -33,22 +37,81 @@ process:
   revision_log: revision_log
   revision_timestamp: timestamp
   body: body
-  field_all_tags: 
+  field_tags_animal:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_animal
+  field_tags_community:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_community
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_tags_economic:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_economic
+  field_land_habitat: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region: 
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
+  field_tags_africa: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_africa
+  field_tags_projects: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_projects
   field_blog_legacy_alias: alias
   field_blog_legacy_id: nid
   path: alias
-  field_featured_image:
-    plugin: iterator
-    source: field_main_image
-    process:
-      target_id: fid
-      alt: alt
-      title: title
-      width: width
-      height: height
+  # field_featured_image:
+  #   -
+  #     plugin: skip_on_empty
+  #     method: process
+  #     source: field_main_image
+  #   -
+  #     plugin: migration_lookup
+  #     migration: awf_files_migration
+  # field_image_temp:
+  #   plugin: sub_process
+  #   source: field_main_image
+  #   process:
+  #     target_id:
+  #       -
+  #         plugin: asg_print
+  #         source: fid
+  #       -
+  #         plugin: migration_lookup
+  #         migration: awf_files_migration
+  #         source: fid
+  #     alt: alt
+  #     title: title
+  #     width: width
+  #     height: height
+  field_image_temp:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: field_main_image
+    -
+      plugin: asg_print
+      source: field_main_image
+    -
+      plugin: extract
+      source: field_main_image
+      index: 
+        - 0
+    -
+      plugin: migration_lookup
+      migration: awf_files_migration
   field_image_link_view_more: field_view_more
 destination:
   plugin: entity:node
