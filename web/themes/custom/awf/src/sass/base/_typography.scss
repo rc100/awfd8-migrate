@@ -4,17 +4,13 @@
 *
 */
 
-// Define baseline lineheight.
-$lineheight: 1.5;
-
-//Define heading styles.
 h1 {
   color: $awfred;
   font-family: $sans;
   font-weight: 400;
   font-size: 4rem;
   line-height: 4rem;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 2rem;
 }
 
 
@@ -22,47 +18,39 @@ h2 {
   font-family: $sans;
   font-weight: 600;
   font-size: 1.6rem;
-  margin: 0 0 .313rem 0;
+  margin: 0 0 0.313rem;
   line-height: 2.4rem;
 }
 
 h3 {
-  // font-family: $base-heading-font;
-  // line-height: 1.2;
-  // font-weight: 300;
   font-family: $sans;
   font-weight: 500;
   font-size: 3.2rem;
-  margin: 0 0 1.563rem 0;
+  margin: 0 0 1.563rem;
 }
 
 h4 {
-  // font-family: $base-font-family;
-  // line-height: 1.2;
-  // font-weight: 300;
   font-weight: 400;
   font-size: 2.8rem;
-  margin: 0 0 .9375rem 0;
+  margin: 0 0 0.9375rem;
 }
 
 h5 {
-  // font-family: $base-font-family;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 2.72rem;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem;
 }
 
 h6 {
-  // font-family: $base-font-family;
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.4rem;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 0.5rem;
 }
 
 p {
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1.25rem;
 }
 
 cite {

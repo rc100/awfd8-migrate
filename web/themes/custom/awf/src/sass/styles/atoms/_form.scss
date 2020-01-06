@@ -310,6 +310,13 @@ input[type="button"] {
 }
 
 .webform-submission-newsletter-form {
+  @include form-body;
+
+  h2,
+  h3 {
+    color: $white;
+  }
+
   h4 {
     font-size: 26px;
     font-family: $base-heading-font !important;
@@ -468,14 +475,5 @@ input[type="button"] {
       margin-top: -10px;
       vertical-align: bottom;
     }
-  }
-}
-
-.webform-submission-newsletter-form {
-  @include form-body;
-
-  h2,
-  h3 {
-    color: $white;
   }
 }

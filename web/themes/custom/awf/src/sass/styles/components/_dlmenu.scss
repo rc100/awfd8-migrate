@@ -162,6 +162,10 @@
     top: 0;
   }
 
+  ul.menu {
+    text-align: center;
+  }
+
   nav.mobile-menu {
     overflow: hidden;
     width: 100%;
@@ -181,6 +185,7 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
+      text-align: left;
 
       &>li.menu-item {
         >a {
@@ -657,8 +662,6 @@
         }
 
         .menu-item--expanded {
-          border: 2px solid red;
-
           a {
             @include icon-caret-after;
 
