@@ -58,6 +58,7 @@ process:
       - '@d7_path'
       - '@destination_path'
     file_exists: 'replace'
+  fid: fid
 destination:
   plugin: entity:file
 migration_dependencies:
