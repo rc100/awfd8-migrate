@@ -7,6 +7,7 @@
 
   @include breakpoint($min1024) {
     min-height: 400px;
+    padding: 0 60px;
   }
 
   @include breakpoint($screen-max) {
@@ -33,12 +34,6 @@
     @include breakpoint($min1200) {
       max-width: 500px;
     }
-  }
-}
-
-.section-campaign .inner-wrapper {
-  @include breakpoint($min1024) {
-    padding: 0 60px;
   }
 
   .text-wrapper,
