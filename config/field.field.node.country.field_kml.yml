@@ -1,14 +1,14 @@
-uuid: 01171b16-dc96-441b-9062-b642c141d1e0
+uuid: 86e50a55-99a1-4555-a13e-a4acf9d3f400
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_klm
+    - field.storage.node.field_kml
     - node.type.country
   module:
     - file
-id: node.country.field_klm
-field_name: field_klm
+id: node.country.field_kml
+field_name: field_kml
 entity_type: node
 bundle: country
 label: GeoJSON
@@ -18,8 +18,8 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: txt
+  file_directory: kml
+  file_extensions: 'kml kmz geojson'
   max_filesize: ''
   description_field: false
   handler: 'default:file'

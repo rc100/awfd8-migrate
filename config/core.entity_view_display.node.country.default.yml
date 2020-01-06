@@ -13,13 +13,12 @@ dependencies:
     - field.field.node.country.field_field_featured
     - field.field.node.country.field_heading
     - field.field.node.country.field_image
-    - field.field.node.country.field_klm
+    - field.field.node.country.field_kml
     - field.field.node.country.field_landscape_text
     - field.field.node.country.field_legacy_alias
     - field.field.node.country.field_legacy_id
     - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
-    - field.field.node.country.field_order_number
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
     - field.field.node.country.field_sidebar_item_paragraph
@@ -32,6 +31,7 @@ dependencies:
     - field.field.node.country.field_tags_country
     - field.field.node.country.field_tags_region
     - field.field.node.country.field_tooltip_text
+    - field.field.node.country.field_weight
     - node.type.country
   module:
     - entity_reference_revisions
@@ -127,8 +127,8 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_klm:
-    weight: 114
+  field_kml:
+    weight: 136
     label: above
     settings:
       use_description_as_link_text: true
@@ -176,13 +176,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_order_number:
-    weight: 111
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_photo_credit:
     weight: 104
@@ -279,6 +272,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_weight:
+    weight: 137
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 100

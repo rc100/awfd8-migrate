@@ -1,14 +1,14 @@
-uuid: 0a346720-819a-4a7a-88a6-390d49010ab7
+uuid: ea545dd7-6782-4fb5-8512-8b3a54d44841
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_order_number
+    - field.storage.node.field_weight
     - node.type.country
   module:
     - options
-id: node.country.field_order_number
-field_name: field_order_number
+id: node.country.field_weight
+field_name: field_weight
 entity_type: node
 bundle: country
 label: 'Order Number'
