@@ -1,0 +1,8 @@
+uuid: 195a8551-97c4-4e5a-b7a1-a521f52eddc4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Page Types'
+vid: landing_page_types
+description: ''
+weight: 0
