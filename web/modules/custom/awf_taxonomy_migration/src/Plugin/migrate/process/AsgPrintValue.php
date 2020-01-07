@@ -19,7 +19,10 @@ class AsgPrintValue extends ProcessPluginBase {
 	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property){
 
 		if(is_array($value)){
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - array - ' . implode(', ', $value));
+
+			$keys = array_keys($value);
+
+			\Drupal::logger('awf_taxonomy_migration')->alert('asg - array - keys=['. implode(', ', $keys) .'] values=[' . implode(', ', $value) . ']');
 		} else {
 			\Drupal::logger('awf_taxonomy_migration')->alert('asg - string - ' . $value);
 		}

@@ -18,13 +18,13 @@ source:
     public: 'public://'
 process:
   d7_file_name:
-    # -
-    #   plugin: skip_external_videos
-    #   source: uri
-    # -
+    -
+      plugin: asg_print
+      source: uri
+    -
       plugin: str_replace
-      search: ["public://", "private://"]
-      replace: ["", "private/"]
+      search: ["public://public://", "public://", "private://"]
+      replace: ["public:/", "", "private/"]
       source: uri
   d7_path:
     -
@@ -44,7 +44,7 @@ process:
       plugin: urlencode
   # fid: fid
   filename: filename
-  filemime: filemime
+  # filemime: filemime
   # filesize: filesize
   status:
     plugin: default_value
