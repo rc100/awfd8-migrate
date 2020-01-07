@@ -5,27 +5,71 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_alternate_thumbnail
+    - field.field.node.landing_page.field_challenges
+    - field.field.node.landing_page.field_description
+    - field.field.node.landing_page.field_featured_text
+    - field.field.node.landing_page.field_heading
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_land_habitat
+    - field.field.node.landing_page.field_legacy_alias
+    - field.field.node.landing_page.field_legacy_id
+    - field.field.node.landing_page.field_legacy_revision_id
+    - field.field.node.landing_page.field_main_image
+    - field.field.node.landing_page.field_parent
+    - field.field.node.landing_page.field_photo_credit
+    - field.field.node.landing_page.field_project_text
+    - field.field.node.landing_page.field_resource_text
+    - field.field.node.landing_page.field_sidebar_item_paragraph
+    - field.field.node.landing_page.field_solution_paragraph
+    - field.field.node.landing_page.field_solutions
+    - field.field.node.landing_page.field_sub_heading_formatted
+    - field.field.node.landing_page.field_tags_animal
+    - field.field.node.landing_page.field_tags_community
+    - field.field.node.landing_page.field_tags_country
+    - field.field.node.landing_page.field_tags_economic
+    - field.field.node.landing_page.field_tags_landing_page
+    - field.field.node.landing_page.field_tags_policy
+    - field.field.node.landing_page.field_tags_projects
+    - field.field.node.landing_page.field_tags_region
+    - field.field.node.landing_page.field_weight
     - node.type.landing_page
   module:
-    - text
     - user
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
 mode: teaser
-content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
+  body: true
+  field_alternate_thumbnail: true
+  field_challenges: true
+  field_description: true
+  field_featured_text: true
+  field_heading: true
+  field_image: true
+  field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_main_image: true
+  field_parent: true
+  field_photo_credit: true
+  field_project_text: true
+  field_resource_text: true
+  field_sidebar_item_paragraph: true
+  field_solution_paragraph: true
+  field_solutions: true
+  field_sub_heading_formatted: true
+  field_tags_animal: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_landing_page: true
+  field_tags_policy: true
+  field_tags_projects: true
+  field_tags_region: true
+  field_weight: true
   langcode: true
+  links: true
