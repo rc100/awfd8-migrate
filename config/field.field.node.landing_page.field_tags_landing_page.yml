@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_tags_landing_page
     - node.type.landing_page
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.landing_page_types
 id: node.landing_page.field_tags_landing_page
 field_name: field_tags_landing_page
 entity_type: node
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      landing_page_types: landing_page_types
     sort:
       field: name
       direction: asc
