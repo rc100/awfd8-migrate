@@ -51,3 +51,20 @@
 span.field-label {
   padding: 0 1em 0 0;
 }
+
+.field-inline-content {
+  * {
+    display: inline-block;
+  }
+  .field__item + .field__item:before {
+    content: ',';
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    margin-right: 4px;
+  }
+}
+
+.field--label-inline {
+  @include clearfix;
+}
