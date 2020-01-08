@@ -1,8 +1,9 @@
-uuid: 97229f2f-7450-4ee0-951f-aa228f3f1b62
+uuid: dfecd2c1-dab9-4319-8dff-4cf16ec9b8a9
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.resource.body
     - field.field.node.resource.field_article_legacy_alias
     - field.field.node.resource.field_author
@@ -26,52 +27,44 @@ dependencies:
     - options
     - text
     - user
-id: node.resource.default
+id: node.resource.full
 targetEntityType: node
 bundle: resource
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_article_legacy_alias:
-    weight: 115
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_author:
-    weight: 106
-    label: above
+    weight: 5
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_books_type:
-    weight: 105
-    label: above
+    weight: 4
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_file:
-    weight: 104
-    label: above
+    weight: 2
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
   field_image:
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -79,25 +72,16 @@ content:
     type: image
     region: content
   field_land_habitat:
-    weight: 112
-    label: above
+    weight: 11
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_legacy_id:
-    weight: 114
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_newsletter_link:
-    weight: 107
-    label: above
+    weight: 6
+    label: visually_hidden
     settings:
       trim_length: 80
       url_only: false
@@ -108,57 +92,55 @@ content:
     type: link
     region: content
   field_resource_type:
-    weight: 102
-    label: above
+    weight: 3
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags_animal:
-    weight: 113
-    label: above
+    weight: 12
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags_country:
-    weight: 110
-    label: above
+    weight: 9
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags_economic:
-    weight: 111
-    label: above
+    weight: 10
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags_projects:
-    weight: 108
-    label: above
+    weight: 7
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_tags_region:
-    weight: 109
-    label: above
+    weight: 8
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  field_article_legacy_alias: true
+  field_legacy_id: true
   langcode: true
+  links: true
