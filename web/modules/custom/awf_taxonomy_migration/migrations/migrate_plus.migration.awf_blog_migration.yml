@@ -72,40 +72,27 @@ process:
   field_blog_legacy_alias: alias
   field_blog_legacy_id: nid
   path: alias
-  # field_featured_image:
-  #   -
-  #     plugin: skip_on_empty
-  #     method: process
-  #     source: field_main_image
-  #   -
-  #     plugin: migration_lookup
-  #     migration: awf_files_migration
   field_featured_image:
+    -
+      plugin: asg_print
+      source: field_main_image
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: awf_files_to_media_migration
+          no_stub: true
+          source: fid
+  field_image_temp:
     plugin: sub_process
     source: field_main_image
     process:
       target_id:
         plugin: migration_lookup
         migration: awf_files_migration
+        no_stub: true
         source: fid
-      alt: alt
-      title: title
-      width: width
-      height: height
-  field_image_temp:
-    plugin: sub_process
-    source: field_main_image
-    process:
-      target_id:
-        -
-          plugin: asg_print
-          source: fid
-        -
-          plugin: migration_lookup
-          migration: awf_files_migration
-          no_stub: true
-        -
-          plugin: asg_print
       alt:
         plugin: default_value
         default_value: 'Alt Title'
