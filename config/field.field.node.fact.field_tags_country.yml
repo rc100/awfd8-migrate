@@ -10,7 +10,7 @@ id: node.fact.field_tags_country
 field_name: field_tags_country
 entity_type: node
 bundle: fact
-label: 'Country Name'
+label: 'Countries Tagged'
 description: ''
 required: false
 translatable: true
