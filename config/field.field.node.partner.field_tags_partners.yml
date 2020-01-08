@@ -1,16 +1,16 @@
-uuid: a8bc6fcd-d01b-4bba-aec2-f33dc865bab1
+uuid: 17a74014-4140-40f5-9a73-9365177fa982
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags_economic
-    - node.type.project
-    - taxonomy.vocabulary.economic
-id: node.project.field_tags_economic
-field_name: field_tags_economic
+    - field.storage.node.field_tags_partners
+    - node.type.partner
+    - taxonomy.vocabulary.partners
+id: node.partner.field_tags_partners
+field_name: field_tags_partners
 entity_type: node
-bundle: project
-label: 'Economic Tagged'
+bundle: partner
+label: 'Partner Category'
 description: ''
 required: false
 translatable: true
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      economic: economic
+      partners: partners
     sort:
       field: name
       direction: asc

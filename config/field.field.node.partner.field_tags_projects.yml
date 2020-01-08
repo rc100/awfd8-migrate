@@ -1,15 +1,15 @@
-uuid: e1b5c574-dc9d-427b-97a4-fe8839d55fd4
+uuid: ecdd2873-c61c-40d7-b3c3-688c8af462b2
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_tags_projects
-    - node.type.project
+    - node.type.partner
     - taxonomy.vocabulary.projects
-id: node.project.field_tags_projects
+id: node.partner.field_tags_projects
 field_name: field_tags_projects
 entity_type: node
-bundle: project
+bundle: partner
 label: 'Projects Tagged'
 description: ''
 required: false

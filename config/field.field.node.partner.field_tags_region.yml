@@ -1,15 +1,15 @@
-uuid: 76932b8a-0a4c-45b0-9e65-67fc15d5a0e7
+uuid: 22d81c29-43c3-4591-a028-2ebf7eba4f2a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_tags_region
-    - node.type.project
+    - node.type.partner
     - taxonomy.vocabulary.region
-id: node.project.field_tags_region
+id: node.partner.field_tags_region
 field_name: field_tags_region
 entity_type: node
-bundle: project
+bundle: partner
 label: 'Regions Tagged'
 description: ''
 required: false

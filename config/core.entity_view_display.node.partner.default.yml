@@ -1,26 +1,29 @@
-uuid: 5fb822bb-777c-4fa2-a179-2c1fb2244fa1
+uuid: 337d6224-2557-42ce-83d6-fedc59b63118
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
-    - field.field.node.project.field_image
-    - field.field.node.project.field_land_habitat
-    - field.field.node.project.field_tags_animal
-    - field.field.node.project.field_tags_community
-    - field.field.node.project.field_tags_country
-    - field.field.node.project.field_tags_economic
-    - field.field.node.project.field_tags_partners
-    - field.field.node.project.field_tags_projects
-    - field.field.node.project.field_tags_region
-    - node.type.project
+    - field.field.node.partner.body
+    - field.field.node.partner.field_image
+    - field.field.node.partner.field_land_habitat
+    - field.field.node.partner.field_legacy_alias
+    - field.field.node.partner.field_legacy_id
+    - field.field.node.partner.field_legacy_revision_id
+    - field.field.node.partner.field_tags_animal
+    - field.field.node.partner.field_tags_community
+    - field.field.node.partner.field_tags_country
+    - field.field.node.partner.field_tags_economic
+    - field.field.node.partner.field_tags_partners
+    - field.field.node.partner.field_tags_projects
+    - field.field.node.partner.field_tags_region
+    - node.type.partner
   module:
     - image
     - text
     - user
-id: node.project.default
+id: node.partner.default
 targetEntityType: node
-bundle: project
+bundle: partner
 mode: default
 content:
   body:
@@ -49,6 +52,9 @@ content:
     region: content
 hidden:
   field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
   field_tags_animal: true
   field_tags_community: true
   field_tags_country: true

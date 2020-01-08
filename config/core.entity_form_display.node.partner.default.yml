@@ -1,20 +1,23 @@
-uuid: cb7f3a8c-fe09-4c72-9bc8-fac990157da7
+uuid: f5536147-c915-4085-947c-da7d17ccf54e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
-    - field.field.node.project.field_image
-    - field.field.node.project.field_land_habitat
-    - field.field.node.project.field_tags_animal
-    - field.field.node.project.field_tags_community
-    - field.field.node.project.field_tags_country
-    - field.field.node.project.field_tags_economic
-    - field.field.node.project.field_tags_partners
-    - field.field.node.project.field_tags_projects
-    - field.field.node.project.field_tags_region
+    - field.field.node.partner.body
+    - field.field.node.partner.field_image
+    - field.field.node.partner.field_land_habitat
+    - field.field.node.partner.field_legacy_alias
+    - field.field.node.partner.field_legacy_id
+    - field.field.node.partner.field_legacy_revision_id
+    - field.field.node.partner.field_tags_animal
+    - field.field.node.partner.field_tags_community
+    - field.field.node.partner.field_tags_country
+    - field.field.node.partner.field_tags_economic
+    - field.field.node.partner.field_tags_partners
+    - field.field.node.partner.field_tags_projects
+    - field.field.node.partner.field_tags_region
     - image.style.thumbnail
-    - node.type.project
+    - node.type.partner
   module:
     - field_group
     - image
@@ -40,9 +43,23 @@ third_party_settings:
         open: false
         required_fields: true
       label: Tags
-id: node.project.default
+    group_legacy_information:
+      children:
+        - field_legacy_alias
+        - field_legacy_id
+        - field_legacy_revision_id
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Legacy Information'
+id: node.partner.default
 targetEntityType: node
-bundle: project
+bundle: partner
 mode: default
 content:
   body:
@@ -56,7 +73,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -69,31 +86,53 @@ content:
     type: image_image
     region: content
   field_land_habitat:
-    weight: 10
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_legacy_alias:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_legacy_revision_id:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_tags_animal:
-    weight: 7
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tags_community:
-    weight: 12
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tags_country:
-    weight: 8
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tags_economic:
-    weight: 13
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -105,27 +144,27 @@ content:
     type: options_select
     region: content
   field_tags_projects:
-    weight: 14
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tags_region:
-    weight: 9
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -133,21 +172,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -160,7 +199,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -168,7 +207,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

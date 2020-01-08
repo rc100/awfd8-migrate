@@ -1,11 +1,11 @@
-uuid: 89f22f65-0cdd-4735-8c34-a7277cb57032
+uuid: 69cb0aa8-57d7-4597-a738-b6a5086ff4c5
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.project
-id: node.project
+    - node.type.partner
+id: node.partner
 target_entity_type_id: node
-target_bundle: project
+target_bundle: partner
 default_langcode: site_default
 language_alterable: false

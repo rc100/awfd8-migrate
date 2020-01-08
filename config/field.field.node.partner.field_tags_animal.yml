@@ -1,16 +1,16 @@
-uuid: 50661685-d605-4a61-b2de-a0355caf90b3
+uuid: 1da03e7e-8265-4069-8e50-9c3e9d4f2a0c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags_community
-    - node.type.project
-    - taxonomy.vocabulary.community
-id: node.project.field_tags_community
-field_name: field_tags_community
+    - field.storage.node.field_tags_animal
+    - node.type.partner
+    - taxonomy.vocabulary.species
+id: node.partner.field_tags_animal
+field_name: field_tags_animal
 entity_type: node
-bundle: project
-label: 'Community Tagged'
+bundle: partner
+label: 'Animals Tagged'
 description: ''
 required: false
 translatable: true
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      community: community
+      species: species
     sort:
       field: name
       direction: asc

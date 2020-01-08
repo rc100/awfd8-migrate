@@ -1,16 +1,16 @@
-uuid: af09d1ae-1a4e-4b65-a48e-8c3c5361f881
+uuid: e73c661f-314a-46b8-aa12-bb5ec227b0d0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.project
+    - node.type.partner
   module:
     - text
-id: node.project.body
+id: node.partner.body
 field_name: body
 entity_type: node
-bundle: project
+bundle: partner
 label: Body
 description: ''
 required: false

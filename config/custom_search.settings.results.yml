@@ -16,6 +16,7 @@ node_search:
       landing_page: landing_page
       fact: fact
       project: project
+      partner: partner
     languages:
       en: en
       und: und
@@ -38,6 +39,7 @@ user_search:
       landing_page: landing_page
       fact: fact
       project: project
+      partner: partner
     languages:
       en: en
       und: und
