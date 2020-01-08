@@ -64,6 +64,15 @@ class AsgUsers extends DrupalSqlBase {
 			->execute();
 		$displayName = $query->fetchField();
 
+		// $user_picture = [
+		// 	'fid' => $row->getSourceProperty('picture'),
+		// 	'title' => $displayName,
+		// 	'alt' => $displayName,
+		// 	'width' => '',
+		// 	'height' => ''
+		// ];
+		
+		// $row->setSourceProperty('picture', $user_picture);
 		$row->setSourceProperty('field_about_the_author_value', $about[0]['field_about_the_author_value']);
 		$row->setSourceProperty('field_about_the_author_summary', $about[0]['field_about_the_author_summary']);
 		$row->setSourceProperty('field_about_the_author_format', $about[0]['field_about_the_author_format']);
