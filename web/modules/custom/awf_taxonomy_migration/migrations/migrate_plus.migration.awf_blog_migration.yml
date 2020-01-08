@@ -84,27 +84,27 @@ process:
           migration: awf_files_to_media_migration
           no_stub: true
           source: fid
-  field_image_temp:
-    plugin: sub_process
-    source: field_main_image
-    process:
-      target_id:
-        plugin: migration_lookup
-        migration: awf_files_migration
-        no_stub: true
-        source: fid
-      alt:
-        plugin: default_value
-        default_value: 'Alt Title'
-      title:
-        plugin: default_value
-        default_value: 'Image Title'
-      width:
-        plugin: default_value
-        default_value: 500
-      height:
-        plugin: default_value
-        default_value: 500
+  # field_image_temp:
+  #   plugin: sub_process
+  #   source: field_main_image
+  #   process:
+  #     target_id:
+  #       plugin: migration_lookup
+  #       migration: awf_files_migration
+  #       no_stub: true
+  #       source: fid
+  #     alt:
+  #       plugin: default_value
+  #       default_value: 'Alt Title'
+  #     title:
+  #       plugin: default_value
+  #       default_value: 'Image Title'
+  #     width:
+  #       plugin: default_value
+  #       default_value: 500
+  #     height:
+  #       plugin: default_value
+  #       default_value: 500
   field_image_link_view_more: field_view_more
 destination:
   plugin: entity:node

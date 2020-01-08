@@ -40,12 +40,25 @@ process:
   #       source: fid
   user_picture:
     -
+      plugin: asg_print
+      source: picture
+    -
       plugin: skip_on_empty
       method: process
     -
-      plugin: migration_lookup
-      migration: awf_files_migration
-      source: picture
+      target_id: picture
+    #   plugin: migration_lookup
+    #   migration: awf_files_migration
+    #   source: picture
+    # -
+    #   plugin: sub_process
+    #   source: picture
+    #   process:
+    #     target_id:
+    #       plugin: migration_lookup
+    #       migration: awf_files_migration
+    #       no_stub: true
+    #       source: fid
   roles:
     plugin: migration_lookup
     migration: d7_user_role
