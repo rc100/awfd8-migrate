@@ -14,6 +14,7 @@ node_search:
       history: history
       career: career
       landing_page: landing_page
+      fact: fact
     languages:
       en: en
       und: und
@@ -34,6 +35,7 @@ user_search:
       history: history
       career: career
       landing_page: landing_page
+      fact: fact
     languages:
       en: en
       und: und

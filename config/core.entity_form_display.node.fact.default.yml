@@ -1,0 +1,213 @@
+uuid: f7f2f7be-051a-4943-b58f-5863bbf29ae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fact.body
+    - field.field.node.fact.field_heading_unformatted
+    - field.field.node.fact.field_land_habitat
+    - field.field.node.fact.field_legacy_alias
+    - field.field.node.fact.field_legacy_id
+    - field.field.node.fact.field_legacy_revision_id
+    - field.field.node.fact.field_tags_africa
+    - field.field.node.fact.field_tags_animal
+    - field.field.node.fact.field_tags_community
+    - field.field.node.fact.field_tags_country
+    - field.field.node.fact.field_tags_economic
+    - field.field.node.fact.field_tags_projects
+    - field.field.node.fact.field_tags_region
+    - node.type.fact
+  module:
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tags:
+      children:
+        - field_tags_animal
+        - field_tags_country
+        - field_tags_region
+        - field_tags_community
+        - field_tags_economic
+        - field_land_habitat
+        - field_tags_africa
+        - field_tags_projects
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Tags
+    group_legacy_information:
+      children:
+        - field_legacy_alias
+        - field_legacy_id
+        - field_legacy_revision_id
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Legacy Information'
+id: node.fact.default
+targetEntityType: node
+bundle: fact
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_heading_unformatted:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_land_habitat:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_legacy_alias:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_legacy_id:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_legacy_revision_id:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tags_africa:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_animal:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_community:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_country:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_economic:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_projects:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags_region:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 12
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 19
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
