@@ -7,52 +7,42 @@
 (function ($) {
   // DOC READY
   $(function () {
-    function socialWindow(url) {
-      window.open(url, '', 'resizable=no,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=no,dependent=no,width=700,height=700');
-    }
+    $('body').has('.share-container').each(function(){
+      setTimeout(function(){
+        //--------------------------
+        // SHARETHIS a11y
+        //--------------------------
 
-    function setShareLinks() {
-      var pageUrl = encodeURIComponent(document.URL);
-      var metaName = encodeURIComponent($("meta[property='og:site_name']").attr("content"));
-      var metaImg = encodeURIComponent($("meta[property='og:image']").attr("content"));
+        // Loop through an array of data-network names
+        ['facebook', 'twitter', 'linkedin', 'sharethis'].forEach(function( platform ) {
+          // Adds a11y to sharing icons
+          $('.st-btn[data-network="' + platform + '"').attr({
+            'title' : 'social ' + platform.charAt(0).toUpperCase() + platform.slice(1) + '',
+            'aria-label' : 'Open ' + platform + ' sharing modal',
+            'tabindex' : '0',
+            'role' : 'content-info',
+          });
 
-      $(".social-share.linkedin").on("click", function (e) {
-        e.preventDefault();
-        url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
-        socialWindow(url);
-      });
+          // Adds enter key functionality to work like a click
+          $('.st-btn[data-network="' + platform + '"').keypress( function( e ) {
+            if ( e.which && e.which == 13 ) { //  13 is character code for enter
+              // event.preventDefault();
+              $(this).click();
+            }
+          });
+        });
 
-      $(".social-share.pinterest").on("click", function (e) {
-        e.preventDefault();
-        url = "https://pinterest.com/pin/create/link/?url=" + pageUrl + "&media=" + metaImg + "&description=" + metaName;
-        socialWindow(url);
-      });
-
-      $(".social-share.google").on("click", function (e) {
-        e.preventDefault();
-        url = "https://plus.google.com/share?url=" + pageUrl;
-        socialWindow(url);
-      });
-
-      $(".social-share.facebook").on("click", function (e) {
-        e.preventDefault();
-        url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
-        socialWindow(url);
-      });
-
-      $(".social-share.twitter").on("click", function (e) {
-        e.preventDefault();
-        url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + metaName;
-        socialWindow(url);
-      });
-
-      $(".social-share.email").on("click", function (e) {
-        e.preventDefault();
-        window.location = "mailto:?subject=" + metaName + "&body=" + pageUrl;
-      });
-    }
-
-    // Initialize share links.
-    setShareLinks();
+// 	// Checks to see if container is empty because of browser social blocking
+        if ($('.sharethis-inline-share-buttons').is(':empty')) {
+          $('.share').addClass('no-social');
+          $('.sharethis-inline-share-buttons').append('<div class="no-social">Your browser may be blocking social sharing.</div>');
+        }
+      }, 100);
+    });
+    $('.share-container a.share').on('click',function(e){
+      e.preventDefault();
+      $(this).toggleClass('share-enabled');
+    });
   });
+
 })(jQuery);
