@@ -17,6 +17,7 @@ node_search:
       fact: fact
       project: project
       partner: partner
+      landscape: landscape
     languages:
       en: en
       und: und
@@ -40,6 +41,7 @@ user_search:
       fact: fact
       project: project
       partner: partner
+      landscape: landscape
     languages:
       en: en
       und: und
