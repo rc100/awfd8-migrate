@@ -28,10 +28,10 @@
   span {
     display: block;
     position: absolute;
-    height: 3px;
+    height: 5px;
     width: 100%;
     background: $white;
-    border-radius: 3px;
+    border-radius: 0;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -175,6 +175,7 @@
     &.open {
       overflow-x: hidden;
       z-index: 100;
+      top: 0;
       background: $white;
     }
 
@@ -191,20 +192,16 @@
         >a {
           display: block;
         }
-
-        &:hover {
-          a.menu-link {
-            color: $awfbrown;
-          }
-        }
       }
 
       &>li.menu-item>a.sub-nav-toggle {
         display: block;
+        height: 100%;
         width: 100%;
-        padding: .8rem 1rem 1rem 14rem;
+        padding: 0.8rem 1rem 1rem 14rem;
         position: absolute;
         top: 0;
+        cursor: pointer;
       }
 
       &>li.menu-item:nth-child(3)>a.sub-nav-toggle {
@@ -225,8 +222,16 @@
       width: 100%;
 
       a {
+        color: $awfbrown;
         transition: all .4s;
         transition-timing-function: ease-out;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: $awforangedark !important;
+          text-decoration: none;
+        }
       }
 
       .menu {
@@ -242,50 +247,29 @@
       }
 
       .menu-link {
-        padding: 1rem 3rem;
         display: inline-block;
+        padding: 1.15rem 2rem;
+        text-align: left;
+        width: 100%;
       }
     }
 
-    a.sub-nav-toggle,
-    a.sub-nav-toggle-back {
+    // .menu-level-1 a.sub-nav-toggle,
+    .menu a.sub-nav-toggle-back {
       @include icon-caret;
 
-      &:before {
-        @include icon(awf);
-        font-size: 1.2rem;
-        position: relative;
-        bottom: 1px;
-      }
-    }
-
-    .menu-level-1 a.sub-nav-toggle,
-    .menu a.sub-nav-toggle-back {
       position: relative;
       z-index: 1;
       cursor: pointer;
       transition: all .2s;
       transition-timing-function: ease-out;
-      border: 1px solid $awforangedark;
-      border-radius: 3px;
+      border: 0;
+      border-radius: 0;
       display: block;
       padding: 1rem .5rem;
-      height: 33px;
+      height: 37px;
       text-align: center;
       margin-bottom: 5px;
-      @include icon-caret;
-
-      &:before {
-        @include icon(awf);
-        font-size: 1.2rem;
-        position: relative;
-        bottom: 1px;
-      }
-
-      &:hover {
-        background: $awforangedark;
-        color: $white;
-      }
     }
 
     // level 2 toggle
@@ -297,22 +281,16 @@
       width: 33px;
       font-size: 0;
       float: right;
-      padding: 1rem .5rem .5rem;
+      padding: 1rem 0.5rem 0.5rem;
     }
 
     .menu a.sub-nav-toggle-back {
-      padding: .4rem .5rem 0 2rem;
-      float: left;
-      left: 3rem;
-      font-size: 1.4rem;
-
-      &:before {
-        transform: rotate(180deg);
-        display: block;
-        position: absolute;
-        left: .5rem;
-        bottom: 1rem;
-      }
+      padding: 0.4rem 0.5rem 0 2rem;
+      left: 0;
+      font-size: 1.5rem;
+      text-align: left;
+      text-transform: uppercase;
+      width: 100%;
     }
 
     .subnav>.menu-item>.menu.open {
@@ -364,7 +342,7 @@
   .icon-search {
     font-size: 0;
     position: absolute;
-    right: 65px;
+    right: 50px;
     top: 38px;
 
     @include breakpoint($min1024) {
@@ -401,7 +379,6 @@
           color: $awforangedark;
         }
       }
-
     }
   }
 
@@ -424,6 +401,7 @@
 
       @include breakpoint($min1024) {
         right: 110px;
+        margin-top: -8px;
       }
 
       &:after {
@@ -536,13 +514,6 @@
     }
   }
 
-  // span,
-  // a {
-  //   @include breakpoint($min1024) {
-  //     font-size: 12px;
-  //   }
-  // }
-
   li {
     list-style-type: none;
   }
@@ -568,6 +539,10 @@
       background: rgba($white, 1);
       transition-timing-function: ease-out;
       width: 100%;
+    }
+
+    ul.menu > .menu-item--expanded > a.expanded-link {
+      @include icon-caret-after;
     }
   }
 
@@ -605,44 +580,20 @@
         padding-left: 0;
       }
 
-      // .menu-item--expanded {
-      //   a {
-      //     @include icon-caret-after;
-
-      //     &:after {
-      //       transform: rotate(90deg);
-      //       font-size: 10px;
-      //       display: inline-block;
-      //       margin-left: 8px;
-      //       position: relative;
-      //       bottom: 1px;
-      //     }
-      //   }
-      // }
       &>.menu {
 
-        >.menu-item--expanded {
+        >.menu-item--expanded > a {
+          @include icon-caret-after;
 
-          a {
-            @include icon-caret-after;
-
-            &:after {
-              transform: rotate(90deg);
-              font-family: '#{$icomoon-font-family}' !important;
-              content: "\e900";
-              font-size: 10px;
-              display: inline-block;
-              margin-left: 8px;
-              position: relative;
-              bottom: 1px;
-            }
+          &:after {
+            transform: rotate(90deg);
           }
         }
       }
 
       &>.menu>li {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 17px;
         position: relative;
 
         span,
@@ -658,21 +609,6 @@
 
           .fixed & {
             @include nav-item-link;
-          }
-        }
-
-        .menu-item--expanded {
-          a {
-            @include icon-caret-after;
-
-            &:after {
-              transform: rotate(90deg);
-              font-size: 10px;
-              display: inline-block;
-              margin-left: 8px;
-              position: relative;
-              bottom: 1px;
-            }
           }
         }
 
@@ -730,8 +666,9 @@
         }
       }
 
+      // Show secondary navigation on desktop on main menu click.
       .menu-item--expanded.is-open {
-        &>ul.menu.level-0 {
+        &>ul.menu {
           display: table;
           opacity: 1;
           top: 0;
@@ -748,7 +685,6 @@
   padding: 10px;
   background: $white;
   display: block;
-  top: 40px;
   position: relative;
 
   @include breakpoint($min1024) {
@@ -767,7 +703,7 @@
   font-size: 1.44rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 9px 20px 8px;
+  padding: 9px 20px;
   min-height: 38px;
   cursor: pointer;
   font-weight: 700;
@@ -786,12 +722,12 @@
   }
 
   .mobile.open & {
-
     &:focus,
     &:hover,
     &:active {
-      color: $awfbrown;
-      background: $awforangedark;
+      color: $awforangedark;
+      background: $awfbrown;
+      border-color: $awfbrown;
     }
   }
 }
@@ -811,6 +747,17 @@ body.path-notfrontpage {
   .region-header .menu--main-menu>.menu>li>a,
   .mainnav .icon-search:before {
     color: $awfbrown;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $awforangedark;
+    }
+  }
+
+  .menu-toggle span {
+
+    background: $awfbrown;
 
     &:focus,
     &:hover,

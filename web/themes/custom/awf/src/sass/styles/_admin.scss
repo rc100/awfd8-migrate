@@ -4,9 +4,7 @@
 ul.tabs {
   border-bottom: 1px solid #ccc;
   font-size: 16px;
-
-  margin-left: 0 !important;
-  margin-top: 0 !important;
+  margin: 0 !important;
 
   li {
     padding: 0 !important;
@@ -72,5 +70,10 @@ ul.contextual-links li {
 
   @include breakpoint(min-width 975px) {
     margin-top: 79px;
+  }
+
+  nav.mobile-menu.open,
+  .region-donate {
+    top: 40px;
   }
 }

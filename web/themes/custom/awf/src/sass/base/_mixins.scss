@@ -76,9 +76,13 @@
     @if $type==float {
       float: left;
       display: block;
-    } @else if $type==inline {
+    }
+
+    @else if $type==inline {
       display: inline;
-    } @else if $type==inline-block {
+    }
+
+    @else if $type==inline-block {
       display: inline-block;
     }
 
@@ -107,7 +111,9 @@
     &:last-child {
       margin-bottom: 0;
     }
-  } @else if $direction==h {
+  }
+
+  @else if $direction==h {
     &:first-child {
       margin-left: 0;
     }
@@ -375,5 +381,38 @@
   &:active,
   &.active {
     color: $awforangedark;
+  }
+}
+
+@mixin icon-caret {
+  &:before {
+    font-family: '#{$icomoon-font-family}' !important;
+    content: "\e900";
+    font-size: 9px;
+    font-weight: 500;
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 5px;
+    position: relative;
+    bottom: 1px;
+    transform: rotate(180deg);
+  }
+}
+
+@mixin icon-caret-after {
+  &:after {
+    font-family: '#{$icomoon-font-family}' !important;
+    content: "\e900";
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    bottom: 1px;
+
+    @include breakpoint($min1024) {
+      font-size: 10px;
+      margin-left: 8px;
+    }
   }
 }
