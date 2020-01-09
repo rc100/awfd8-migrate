@@ -1,0 +1,21 @@
+uuid: 6be4f089-ea50-4e34-aa50-e20bd4e5588f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_number
+    - node.type.staff
+  module:
+    - options
+id: node.staff.field_order_number
+field_name: field_order_number
+entity_type: node
+bundle: staff
+label: 'Order Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

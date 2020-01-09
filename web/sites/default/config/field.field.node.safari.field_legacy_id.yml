@@ -1,0 +1,23 @@
+uuid: 06c06723-35b1-4743-95b3-d76aba9d069d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.safari
+id: node.safari.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: safari
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

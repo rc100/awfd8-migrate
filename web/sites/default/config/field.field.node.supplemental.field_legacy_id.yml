@@ -1,0 +1,23 @@
+uuid: ee7121ba-bc68-4019-a37d-f3f3f50f6461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.supplemental
+id: node.supplemental.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: supplemental
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

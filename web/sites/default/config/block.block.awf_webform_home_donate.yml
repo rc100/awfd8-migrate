@@ -1,0 +1,31 @@
+uuid: 9c6b1eeb-5b78-4451-ad96-5050225443a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.homepage_donate_form
+  module:
+    - system
+    - webform
+  theme:
+    - awf
+id: awf_webform_home_donate
+theme: awf
+region: content
+weight: -3
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Webform: Homepage: Donate Form'
+  provider: webform
+  label_display: visible
+  webform_id: homepage_donate_form
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,61 @@
+uuid: 7baaf396-1b3c-4440-9671-fddf45dcca69
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_blog_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Blog Migration'
+source:
+  plugin: custom_node_source
+  node_type: blog
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: en
+  title: title
+  status: status
+  created: created
+  changed: changed
+  promoted: promoted
+  revision_uid: revision_uid
+  revision_log: revision_log
+  revision_timestamp: timestamp
+  body: body
+  field_all_tags:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_region
+  field_blog_legacy_alias: alias
+  field_blog_legacy_id: nid
+  path: alias
+  field_featured_image:
+    plugin: iterator
+    source: field_main_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_image_link_view_more: field_view_more
+destination:
+  plugin: 'entity:node'
+  default_bundle: blog
+migration_dependencies:
+  required:
+    - awf_paragraphs_migration
+  optional:
+    - d7_field_instance

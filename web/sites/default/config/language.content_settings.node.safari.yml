@@ -1,0 +1,11 @@
+uuid: 8ff1f201-35c4-4d9b-99ad-7e5d2445a8bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.safari
+id: node.safari
+target_entity_type_id: node
+target_bundle: safari
+default_langcode: site_default
+language_alterable: false

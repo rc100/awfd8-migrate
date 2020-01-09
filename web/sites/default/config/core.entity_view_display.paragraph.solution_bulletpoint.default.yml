@@ -1,0 +1,40 @@
+uuid: 68c52667-f1bc-468b-8ace-4bb32d5d5bb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.solution_bulletpoint.field_solution_bullet_heading
+    - field.field.paragraph.solution_bulletpoint.field_solution_bullet_landscape
+    - field.field.paragraph.solution_bulletpoint.field_solution_bulletpoint_icon
+    - paragraphs.paragraphs_type.solution_bulletpoint
+  module:
+    - options
+    - text
+id: paragraph.solution_bulletpoint.default
+targetEntityType: paragraph
+bundle: solution_bulletpoint
+mode: default
+content:
+  field_solution_bullet_heading:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_solution_bullet_landscape:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_solution_bulletpoint_icon:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

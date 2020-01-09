@@ -1,0 +1,21 @@
+uuid: 208a4206-c970-4963-9d51-fb2bbeec3aa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout_style
+    - paragraphs.paragraphs_type.module
+  module:
+    - options
+id: paragraph.module.field_layout_style
+field_name: field_layout_style
+entity_type: paragraph
+bundle: module
+label: 'Layout Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

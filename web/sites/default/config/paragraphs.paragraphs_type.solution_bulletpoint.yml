@@ -1,0 +1,9 @@
+uuid: bfe70f04-c4c0-4008-9faf-fad2f159f038
+langcode: en
+status: true
+dependencies: {  }
+id: solution_bulletpoint
+label: 'Solution Bulletpoint'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

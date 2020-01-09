@@ -1,0 +1,41 @@
+uuid: 04840aa6-53e8-40fb-a66f-4c19647529ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_tags
+    - node.type.news
+    - taxonomy.vocabulary.community
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.economic
+    - taxonomy.vocabulary.land_habitat
+    - taxonomy.vocabulary.projects
+    - taxonomy.vocabulary.show_me_an_africa
+    - taxonomy.vocabulary.species
+id: node.news.field_news_tags
+field_name: field_news_tags
+entity_type: node
+bundle: news
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      community: community
+      country: country
+      economic: economic
+      land_habitat: land_habitat
+      projects: projects
+      show_me_an_africa: show_me_an_africa
+      species: species
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: country
+field_type: entity_reference

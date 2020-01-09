@@ -1,0 +1,20 @@
+uuid: 46515e84-6bd4-4a79-b407-b308197dff5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_supplemental_reference
+field_name: field_supplemental_reference
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

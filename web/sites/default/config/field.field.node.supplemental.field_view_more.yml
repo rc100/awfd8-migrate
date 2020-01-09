@@ -1,0 +1,23 @@
+uuid: b6e739f4-2728-49bc-a3a4-8a1f0823e978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_more
+    - node.type.supplemental
+  module:
+    - link
+id: node.supplemental.field_view_more
+field_name: field_view_more
+entity_type: node
+bundle: supplemental
+label: 'View More Link'
+description: 'Enter the title and URL to where this supplemental sidebar item should link. If you wish to link only the image, simply enter the URL and no title. If you wish to create a full link (e.g., Read more about this article >) then enter the Title and the URL.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

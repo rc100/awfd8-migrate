@@ -12,7 +12,7 @@
 // require('./includes/viewport');
 require('./includes/dlmenu');
 // require('./includes/menu');
-// require('./includes/share');
+require('./includes/share');
 // require('./includes/shorten');
 // require('./includes/skip-links');
 require('./includes/form');

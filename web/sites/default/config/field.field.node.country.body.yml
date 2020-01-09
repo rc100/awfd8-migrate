@@ -1,0 +1,23 @@
+uuid: 841bfe99-d7de-43c5-85e1-c825a25d4e15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.country
+  module:
+    - text
+id: node.country.body
+field_name: body
+entity_type: node
+bundle: country
+label: 'Overview Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

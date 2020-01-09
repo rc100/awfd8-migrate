@@ -1,0 +1,40 @@
+uuid: 8f656896-429f-49a4-95d1-a6aa55ed8eac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bullet_point.field_bullet_point_heading
+    - field.field.paragraph.bullet_point.field_bullet_point_icon
+    - field.field.paragraph.bullet_point.field_bullet_point_text
+    - paragraphs.paragraphs_type.bullet_point
+  module:
+    - options
+    - text
+id: paragraph.bullet_point.default
+targetEntityType: paragraph
+bundle: bullet_point
+mode: default
+content:
+  field_bullet_point_heading:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_bullet_point_icon:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bullet_point_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

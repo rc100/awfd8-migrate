@@ -1,0 +1,50 @@
+uuid: 74c99b66-1071-4225-8e55-6cf9cb50ebac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.module.field_block_reference
+    - field.field.paragraph.module.field_description
+    - field.field.paragraph.module.field_image
+    - field.field.paragraph.module.field_layout_style
+    - paragraphs.paragraphs_type.module
+  module:
+    - options
+    - plugin
+    - text
+id: paragraph.module.default
+targetEntityType: paragraph
+bundle: module
+mode: default
+content:
+  field_block_reference:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: plugin_block_built
+    region: content
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_layout_style:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

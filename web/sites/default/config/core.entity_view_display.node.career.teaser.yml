@@ -1,0 +1,70 @@
+uuid: 3425421f-8d6c-4386-b484-108d84f1ec96
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.career.body
+    - field.field.node.career.field_career_type
+    - field.field.node.career.field_date
+    - field.field.node.career.field_featured
+    - field.field.node.career.field_featured_text
+    - field.field.node.career.field_legacy_alias
+    - field.field.node.career.field_legacy_id
+    - field.field.node.career.field_legacy_revision_id
+    - field.field.node.career.field_location
+    - field.field.node.career.field_status
+    - field.field.node.career.field_sub_heading
+    - node.type.career
+  module:
+    - datetime
+    - text
+    - user
+id: node.career.teaser
+targetEntityType: node
+bundle: career
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_location:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_sub_heading:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_career_type: true
+  field_featured: true
+  field_featured_text: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_status: true
+  langcode: true
+  links: true
