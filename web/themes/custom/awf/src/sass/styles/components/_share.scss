@@ -1,0 +1,32 @@
+// Social Sharing buttons
+
+.share-container {
+  position: relative;
+  .share ~ div {
+    display:none !important;
+    > .st-btn {
+      display: inline-block !important;
+    }
+  }
+  .share.share-enabled ~ div {
+    display:block !important;
+  }
+  .sharethis-inline-share-buttons {
+    position: absolute;
+    right: 30px;
+  }
+}
+a.share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 16px;
+  height: 16px;
+  background: url(../images/sharebutton.png) top center no-repeat;
+  background-size: 100% 200%;
+  &:hover,
+  &:focus {
+    background-position: bottom center;
+  }
+}
