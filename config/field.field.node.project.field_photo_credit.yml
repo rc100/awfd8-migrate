@@ -1,0 +1,19 @@
+uuid: b12e6765-8f3a-4874-b719-75506dac2db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo_credit
+    - node.type.project
+id: node.project.field_photo_credit
+field_name: field_photo_credit
+entity_type: node
+bundle: project
+label: 'Photo Credit'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 34b940c5-8bdb-40a2-b01f-b9d2fc0d7db5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Project
+type: project
+description: 'Use <em>project</em> to add a new project page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

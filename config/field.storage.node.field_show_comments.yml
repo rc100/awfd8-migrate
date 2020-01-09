@@ -1,11 +1,11 @@
-uuid: 8d16bd6b-d84d-4319-a72c-350c474c82b0
+uuid: 0bb3b116-b02f-4cd7-99a3-a249c1def75b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_featured
-field_name: field_featured
+id: node.field_show_comments
+field_name: field_show_comments
 entity_type: node
 type: boolean
 settings: {  }
