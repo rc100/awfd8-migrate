@@ -18,6 +18,7 @@ node_search:
       project: project
       partner: partner
       landscape: landscape
+      region: region
     languages:
       en: en
       und: und
@@ -42,6 +43,7 @@ user_search:
       project: project
       partner: partner
       landscape: landscape
+      region: region
     languages:
       en: en
       und: und
