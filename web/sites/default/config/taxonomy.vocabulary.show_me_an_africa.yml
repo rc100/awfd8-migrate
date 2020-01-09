@@ -1,0 +1,8 @@
+uuid: 8a2cbbbd-c6d9-4552-a30e-3b3595552418
+langcode: en
+status: true
+dependencies: {  }
+name: 'Show me an Africa'
+vid: show_me_an_africa
+description: ''
+weight: 0

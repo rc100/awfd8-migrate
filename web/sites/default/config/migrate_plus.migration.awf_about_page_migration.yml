@@ -1,0 +1,71 @@
+uuid: 9e9ae56d-e185-44a3-acd5-e8f690faee06
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_about_page_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF About Page - Basic Page Migration'
+source:
+  plugin: custom_node_source
+  node_type: about_page
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: en
+  title: title
+  status: status
+  created: created
+  changed: changed
+  promoted: promoted
+  body: body
+  field_heading: field_heading
+  revision_uid: revision_uid
+  revision_log: revision_log
+  revision_timestamp: timestamp
+  field_basic_page_tags:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_region
+  field_basic_page_legacy_id: nid
+  field_basic_legacy_revision_id: vid
+  field_basic_page_legacy_alias: alias
+  field_basic_page_section:
+    plugin: iterator
+    source: field_module
+    process:
+      temporary_ids:
+        plugin: migration_lookup
+        migration: awf_paragraphs_migration
+        source: revision_id
+      target_id:
+        plugin: extract
+        source: '@temporary_ids'
+        index:
+          - 0
+      target_revision_id:
+        plugin: extract
+        source: '@temporary_ids'
+        index:
+          - 1
+  path: alias
+destination:
+  plugin: 'entity:node'
+  default_bundle: page
+migration_dependencies:
+  required:
+    - awf_paragraphs_migration
+  optional:
+    - d7_field_instance

@@ -1,0 +1,39 @@
+uuid: 90672620-23b5-4c90-88e1-632185d90e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.overview_facts.field_overview_fact_bottom
+    - field.field.paragraph.overview_facts.field_overview_fact_number
+    - field.field.paragraph.overview_facts.field_overview_facts_top
+    - paragraphs.paragraphs_type.overview_facts
+id: paragraph.overview_facts.default
+targetEntityType: paragraph
+bundle: overview_facts
+mode: default
+content:
+  field_overview_fact_bottom:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_overview_fact_number:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_overview_facts_top:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

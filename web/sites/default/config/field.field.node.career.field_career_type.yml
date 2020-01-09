@@ -1,0 +1,21 @@
+uuid: cb0f18be-a485-4659-b2ad-b0ac3ba5488d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_career_type
+    - node.type.career
+id: node.career.field_career_type
+field_name: field_career_type
+entity_type: node
+bundle: career
+label: 'Career Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

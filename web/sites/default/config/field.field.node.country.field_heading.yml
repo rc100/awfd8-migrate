@@ -1,0 +1,21 @@
+uuid: f41caf45-3ed4-433d-906b-b46cb2c87eef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.country
+  module:
+    - text
+id: node.country.field_heading
+field_name: field_heading
+entity_type: node
+bundle: country
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

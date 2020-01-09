@@ -1,0 +1,19 @@
+uuid: 40602527-4142-47c3-b040-65081737e870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_alias
+    - node.type.tweet
+id: node.tweet.field_legacy_alias
+field_name: field_legacy_alias
+entity_type: node
+bundle: tweet
+label: 'Legacy Alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

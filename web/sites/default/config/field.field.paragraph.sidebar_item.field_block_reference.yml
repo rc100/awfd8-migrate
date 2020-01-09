@@ -1,0 +1,21 @@
+uuid: 83337bf3-4fed-4efa-873e-e7d6d62c9690
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.sidebar_item
+  module:
+    - plugin
+id: paragraph.sidebar_item.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: sidebar_item
+label: 'Block Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: 'plugin:block'

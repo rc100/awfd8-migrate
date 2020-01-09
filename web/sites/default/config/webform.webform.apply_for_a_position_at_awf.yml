@@ -1,0 +1,177 @@
+uuid: 55141ffa-a6d9-44fa-be1a-16acfe580c1a
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: apply_for_a_position_at_awf
+title: 'Apply for a Position at AWF'
+description: ''
+category: ''
+elements: "header:\n  '#type': processed_text\n  '#admin_title': Header\n  '#text': '<p>Thank you for your interest in a position at African Wildlife Foundation. Please take a few minutes to fill out the following application. After you have submitted your application, we will review your qualifications and get back to you.</p>'\n  '#format': full_html\ntitle:\n  '#type': select\n  '#title': 'Title:'\n  '#options':\n    1921: 'Cameroon Country Coordinator'\n    1960: 'Climate and Ecosystem Services Manager'\n    1995: 'Senior Director of Strategic Communications'\n    1956: 'Web Design and Development Specialist'\n  '#required': true\n  '#default_value': '[current-page:query:career_id]'\nupload_application_materials:\n  '#type': processed_text\n  '#admin_title': 'Resume and Cover Letter'\n  '#text': '<h4>Upload Application Materials</h4><p><span style=\"line-height: 1.6em;\">Please upload any materials you feel best represent you in your application for this position. Please pay careful attention to requirements listed in the job posting, such as a request for writing samples, references, etc. All positions require, minimally, a professionally presented cover letter and resume. Materials should be submitted as PDF or Microsoft Word documents, unless otherwise specified, and should be submitted as a single attachment.</span></p><p><strong>Minimum requirements:</strong>&nbsp;Cover Letter and Resume<br><strong>Upload format:</strong>&nbsp;Single file in pdf, doc, docx format<br><strong>Max file size:</strong> 2mb<br>Please allow at least 30 seconds for document to upload. If you are experiencing&nbsp;issues&nbsp;uploading documents, please contact <a href=\"mailto:africanwildlife@awf.org\">africanwildlife@awf.org</a>.</p>'\n  '#format': full_html\nresume_and_cover_letter:\n  '#type': managed_file\n  '#title': 'Resume and Cover Letter'\n  '#required': true\n  '#file_placeholder': 'Drag and drop your file here to upload'\n  '#max_filesize': '2'\n  '#file_extensions': 'pdf doc docx'\npage_2:\n  '#type': webform_wizard_page\n  '#title': 'Page 2'\n  '#next_button_label': NEXT\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\n  email_:\n    '#type': email\n    '#title': 'Email:'\n    '#required': true\n  country_of_residence_:\n    '#type': select\n    '#title': 'Country of Residence:'\n    '#options':\n      AF: Afghanistan\n      AX: 'Aland Islands'\n      AL: Albania\n      DZ: Algeria\n      AS: 'American Samoa'\n      AD: Andorra\n      AO: Angola\n      AI: Anguilla\n      AQ: Antarctica\n      AG: 'Antigua and Barbuda'\n      AR: Argentina\n      AM: Armenia\n      AW: Aruba\n      AU: Australia\n      AT: Austria\n      AZ: Azerbaijan\n      BS: Bahamas\n      BH: Bahrain\n      BD: Bangladesh\n      BB: Barbados\n      BY: Belarus\n      BE: Belgium\n      BZ: Belize\n      BJ: Benin\n      BM: Bermuda\n      BT: Bhutan\n      BO: Bolivia\n      BA: 'Bosnia and Herzegovina'\n      BW: Botswana\n      BV: 'Bouvet Island'\n      BR: Brazil\n      IO: 'British Indian Ocean Territory'\n      VG: 'British Virgin Islands'\n      BN: Brunei\n      BG: Bulgaria\n      BF: 'Burkina Faso'\n      BI: Burundi\n      KH: Cambodia\n      CM: Cameroon\n      CA: Canada\n      CV: 'Cape Verde'\n      KY: 'Cayman Islands'\n      CF: 'Central African Republic'\n      TD: Chad\n      CL: Chile\n      CN: China\n      CX: 'Christmas Island'\n      CC: 'Cocos (Keeling) Islands'\n      CO: Colombia\n      KM: Comoros\n      CG: 'Congo (Brazzaville)'\n      CD: 'Congo (Kinshasa)'\n      CK: 'Cook Islands'\n      CR: 'Costa Rica'\n      HR: Croatia\n      CU: Cuba\n      CW: Curaçao\n      CY: Cyprus\n      CZ: 'Czech Republic'\n      DK: Denmark\n      DJ: Djibouti\n      DM: Dominica\n      DO: 'Dominican Republic'\n      EC: Ecuador\n      EG: Egypt\n      SV: 'El Salvador'\n      GQ: 'Equatorial Guinea'\n      ER: Eritrea\n      EE: Estonia\n      ET: Estonia\n      FK: 'Falkland Islands'\n      FO: 'Faroe Islands'\n      FJ: Fiji\n      FI: Finland\n      FR: France\n      GF: 'French Guiana'\n      PF: 'French Polynesia'\n      TF: 'French Southern Territories'\n      GA: Gabon\n      GM: Gambia\n      GE: Georgia\n      DE: Germany\n      GH: Ghana\n      GI: Gibraltar\n      GR: Greece\n      GL: Greenland\n      GD: Grenada\n      GP: Guadeloupe\n      GU: Guam\n      GT: Guatemala\n      GG: Guernsey\n      GN: Guinea\n      GW: Guinea-Bissau\n      GY: Guyana\n      HT: Haiti\n      HM: 'Heard Island and McDonald Islands'\n      HN: Honduras\n      HK: 'Hong Kong S.A.R., China'\n      HU: Hungary\n      IS: Iceland\n      IN: India\n      ID: Indonesia\n      IR: Iran\n      IQ: Iraq\n      IE: Ireland\n      IM: 'Isle of Man'\n      IL: Isreal\n      IT: Italy\n      CI: 'Ivory Coast'\n      JM: Jamaica\n      JP: Japan\n      JE: Jersey\n      JO: Jordan\n      KZ: Kazakhstan\n      KE: Kenya\n      KI: Kiribati\n      KW: Kuwait\n      KG: Kyrgyzstan\n      LA: Laos\n      LV: Latvia\n      LB: Lebanon\n      LS: Lesotho\n      LR: Liberia\n      LY: Libya\n      LI: Liechtenstein\n      LT: Lithuania\n      LU: Luxembourg\n      MO: 'Macao S.A.R., China'\n      MK: Macedonia\n      MG: Madagascar\n      MW: Malawi\n      MY: Malaysia\n      MV: Maldives\n      ML: Mali\n      MT: Malta\n      MH: 'Marshall Islands'\n      MQ: Martinique\n      MR: Mauritania\n      MU: Mauritius\n      YT: Mayotte\n      MX: Mexico\n      FM: Micronesia\n      MD: Moldova\n      MC: Mongolia\n      ME: Montenegro\n      MS: Montserrat\n      MA: Morocco\n      MZ: Mozambique\n      MM: Myanmar\n      NA: Namibia\n      NR: Nauru\n      NP: Nepal\n      NL: Netherlands\n      AN: 'Netherlands Antilles'\n      NC: 'New Caledonia'\n      NZ: 'New Zealand'\n      NI: Nicaragua\n      NE: Niger\n      NG: Nigeria\n      NU: Niue\n      NF: 'Norfolk Island'\n      MP: 'Northern Mariana Islands'\n      KP: 'North Korea'\n      'NO': Norway\n      OM: Oman\n      PK: Pakistan\n      PW: Palau\n      PS: 'Palestinian Territory'\n      PA: Panama\n      PG: 'Papua New Guinea'\n      PY: Paraguay\n      PE: Peru\n      PH: Philippines\n      PN: Pitcairn\n      PL: Poland\n      PT: Portugal\n      PR: 'Puerto Rico'\n      QA: Qatar\n      RE: Reunion\n      RO: Romania\n      RU: Russia\n      RW: Rwanda\n      BL: 'Saint Barthélemy'\n      SH: 'Saint Helena'\n      KN: 'Saint Kitts and Nevis'\n      LC: 'Saint Lucia'\n      MF: 'Saint Martin (French part)'\n      PM: 'Saint Pierre and Miquelon'\n      VC: 'Saint Vincent and the Grenadines'\n      WS: Samoa\n      SM: 'San Marino'\n      ST: 'Sao Tome and Principe'\n      SA: 'Saudi Arabia'\n      SN: Senegal\n      RS: Serbia\n      SC: Seychelles\n      SL: 'Sierra Leone'\n      SG: Singapore\n      SK: Slovakia\n      SI: Slovenia\n      SB: 'Solomon Islands'\n      SO: Somalia\n      ZA: 'South Africa'\n      GS: 'South Georgia and the South Sandwich Islands'\n      KR: 'South Korea'\n      ES: Spain\n      LK: 'Sri Lanka'\n      SD: Sudan\n      SR: Suriname\n      SJ: 'Svalbard and Jan Mayen'\n      SZ: Swaziland\n      SE: Sweden\n      CH: Switzerland\n      SY: Syria\n      TW: Taiwan\n      TJ: Tajikistan\n      TZ: Tanzania\n      TH: Thailand\n      TL: Timor-Leste\n      TG: Togo\n      TK: Tokelau\n      TO: Tonga\n      TT: 'Trinidad and Tobago'\n      TN: Tunisia\n      TR: Turkey\n      TM: Turkmenistan\n      TC: 'Turks and Caicos Islands'\n      TV: Tuvalu\n      VI: 'U.S. Virgin Islands'\n      UG: Uganda\n      UA: Ukraine\n      AE: 'United Arab Emirates'\n      GB: 'United Kingdom'\n      US: 'United States'\n      UM: 'United States Minor Outlying Islands'\n      UY: Uruguay\n      UZ: Uzbekistan\n      VU: Vanuatu\n      VA: Vatican\n      VE: Venezuela\n      VN: Vietnam\n      WF: 'Wallis and Futuna'\n      EH: 'Western Sahara'\n      YE: Yemen\n      ZM: Zambia\n      ZW: Zimbabwe\n    '#required': true\n  willing_to_relocate_:\n    '#type': select\n    '#title': 'Willing to Relocate?'\n    '#options':\n      'yes': 'Yes'\n      'no': 'No'\n  available_start_date:\n    '#type': date\n    '#title': 'Available Start Date'\n    '#datepicker': true\n    '#date_date_format': 'D, m/d/Y'\n  required_salary:\n    '#type': textfield\n    '#title': 'Required Salary'\n  desired_salary:\n    '#type': textfield\n    '#title': 'Desired Salary'\n  how_did_you_hear_about_awf:\n    '#type': select\n    '#title': \"How did you hear about AWF?\\t\"\n    '#options':\n      'Printed Ad': 'Printed Ad'\n      'Online Job Board': 'Online Job Board'\n      LinkedIn: LinkedIn\n      AWF.org: AWF.org\n      'Social Media': 'Social Media'\n      'Word of Mouth': 'Word of Mouth'\n      'Contacted by AWF Recruiter': 'Contacted by AWF Recruiter'\n      'University Posting/Career Fair': 'University Posting/Career Fair'\n      Other: Other\n  voluntary_self_identification_information:\n    '#type': processed_text\n    '#admin_title': 'Voluntary Self-Identification Information'\n    '#text': '<h4>Voluntary Self-Identification Information</h4><p>Completion of this information is voluntary and is not a requirement. This information will in no&nbsp;way affect the decision regarding your application. This information will be kept confidential.</p>'\n    '#format': full_html\n  voluntary_self_ident_info:\n    '#type': fieldset\n    '#title': 'Voluntary Self-Ident Info'\n    '#title_display': invisible\n    gender:\n      '#type': select\n      '#title': Gender\n      '#options':\n        male: Male\n        female: Female\n    race_ethnicity:\n      '#type': select\n      '#title': 'Race&Ethnicity'\n      '#options':\n        decline_ident: '|I decline to identity my race & ethnicity'\n    ethnicity:\n      '#type': select\n      '#title': Ethnicity\n      '#options':\n        hispanic: 'Hispanic or Latino'\n        non_hispanic: 'Not Hispanic or Latino'\n    race:\n      '#type': select\n      '#title': Race\n      '#description': 'Select one or more values'\n      '#options':\n        - 'American Indian or Alaska Native'\n        - Asian\n        - 'Black or African American'\n        - 'Native Hawaiian or Other Pacific Islander'\n        - White\n        - 'Two or More Races'\napplicant_information:\n  '#type': processed_text\n  '#admin_title': 'Personal Information'\n  '#text': '<h4>Personal Information</h4>'\n  '#format': full_html\nplease_specify:\n  '#type': textfield\n  '#title': 'Please specify'\nsection_503_disability_status:\n  '#type': processed_text\n  '#admin_title': 'Section 503 Disability Status'\n  '#text': '<h4>Section 503 Disability Status</h4><p>If this employer is not a federal contractor or subcontractor, they are not reqired to report on applicant Section 503 Disability Status.</p>'\n  '#format': full_html\nsection_503_disability_stat:\n  '#type': fieldset\n  '#title': 'Section 503 Disability Stat'\n  '#title_display': invisible\n  invitation:\n    '#type': select\n    '#title': Invitation\n    '#options':\n      invitation: 'I have read the above invitation to self-identify as an individual with a disability.'\n  disability:\n    '#type': select\n    '#title': Disability\n    '#options':\n      have_dis: 'Yes, I have a disability (or previously had a disability)'\n      non_dis: 'No, I don''t have a disability'\n      skip: 'I don''t wish to answer'\n  disability_specification:\n    '#type': textfield\n    '#title': 'Please specify'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

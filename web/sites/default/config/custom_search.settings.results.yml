@@ -1,0 +1,40 @@
+node_search:
+  advanced:
+    types:
+      supplemental: supplemental
+      tweet: tweet
+      blog: blog
+      news: news
+      safari: safari
+      resource: resource
+      country: country
+      donate_page: donate_page
+      staff: staff
+      hostory: hostory
+      history: history
+      career: career
+      landing_page: landing_page
+    languages:
+      en: en
+      und: und
+      zxx: zxx
+user_search:
+  advanced:
+    types:
+      supplemental: supplemental
+      tweet: tweet
+      blog: blog
+      news: news
+      safari: safari
+      resource: resource
+      country: country
+      donate_page: donate_page
+      staff: staff
+      hostory: hostory
+      history: history
+      career: career
+      landing_page: landing_page
+    languages:
+      en: en
+      und: und
+      zxx: zxx

@@ -1,0 +1,21 @@
+uuid: 7de96559-c82d-42b8-8ad4-a3fc5306ea16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_text
+    - node.type.country
+  module:
+    - text
+id: node.country.field_featured_text
+field_name: field_featured_text
+entity_type: node
+bundle: country
+label: 'Featured Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

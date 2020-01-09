@@ -1,0 +1,17 @@
+uuid: 3a5903b5-3121-4513-a505-4ae2efa1fab0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: History
+type: history
+description: 'Use <em>history</em> to add a new AWF history block.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,23 @@
+uuid: 83d22d95-9990-4ff1-9a41-367ec4021724
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tweet
+  module:
+    - text
+id: node.tweet.body
+field_name: body
+entity_type: node
+bundle: tweet
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

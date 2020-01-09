@@ -1,0 +1,19 @@
+uuid: ce6b7386-0fc3-468b-880f-f3c0c87ba3b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_safari_capaciy
+    - node.type.safari
+id: node.safari.field_safari_capaciy
+field_name: field_safari_capaciy
+entity_type: node
+bundle: safari
+label: Capacity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 594d08f3-6901-4533-919a-0babcbb82c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.history
+id: node.history.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: history
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

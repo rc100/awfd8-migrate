@@ -1,0 +1,21 @@
+uuid: 3280dcef-4cc8-4ed2-a8d9-31f5413ec13f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bullet_point_icon
+    - paragraphs.paragraphs_type.bullet_point
+  module:
+    - options
+id: paragraph.bullet_point.field_bullet_point_icon
+field_name: field_bullet_point_icon
+entity_type: paragraph
+bundle: bullet_point
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

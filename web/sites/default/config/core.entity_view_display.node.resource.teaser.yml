@@ -1,0 +1,42 @@
+uuid: 9fb66474-6e12-4627-a7ef-8c06178d83f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.resource.body
+    - node.type.resource
+  module:
+    - text
+    - user
+id: node.resource.teaser
+targetEntityType: node
+bundle: resource
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_author: true
+  field_books_type: true
+  field_file: true
+  field_image: true
+  field_land_habitat: true
+  field_newsletter_link: true
+  field_resource_type: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
+  langcode: true
