@@ -1,0 +1,25 @@
+// Lists
+
+.block-main-page-content {
+
+  ol,
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-left: 1.25rem;
+      text-indent: -2rem;
+      padding-left: 2rem;
+
+      &:before {
+        background-color: $tan;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        margin-right: 1rem;
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+}

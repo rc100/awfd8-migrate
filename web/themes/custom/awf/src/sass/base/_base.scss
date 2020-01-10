@@ -12,7 +12,6 @@ html {
   text-size-adjust: 100%;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -25,4 +24,15 @@ body {
 
 ul.menu {
   margin-left: 0;
+}
+
+img,
+picture,
+object,
+figure,
+input,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

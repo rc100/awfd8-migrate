@@ -1,0 +1,53 @@
+// Safari content type
+
+.page-node-type-safari {
+  .field--name-field-schedule-paragraph {
+    .paragraph--type--schedule {
+      border-top: solid 1px #E5E5E5;
+      display: flex;
+      flex-direction: column;
+      min-height: 125px;
+      position: relative;
+      padding-top: 15px;
+
+      @include breakpoint($min760) {
+        flex-direction: row;
+      }
+    }
+
+    .field--name-field-schedule-day {
+      background: $maroon;
+      color: $white;
+      display: flex;
+      height: 120px;
+      min-width: 120px;
+      min-height: 120px;
+      margin-right: 1.5rem;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint($min760) {
+        background-image: url('../images/schedule.png');
+        background-size: 120px 120px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .field--name-field-solutions .field__label,
+  .field--name-field-challenges .field__label {
+    color: $awfgray;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin: 0 0 .8rem 0;
+  }
+
+  .content-wrapper-top>div {
+    margin: .25rem 2rem 1.5rem 0;
+
+    .field__item {
+      display: inline;
+    }
+  }
+}

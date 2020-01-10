@@ -37,6 +37,7 @@
 @import "styles/atoms/form";
 @import "styles/atoms/hr";
 @import "styles/atoms/images";
+@import "styles/atoms/list";
 @import "styles/atoms/loading-button";
 
 // Components
@@ -47,6 +48,9 @@
 @import "styles/components/block--homepage-mission";
 @import "styles/components/dlmenu";
 @import "styles/components/share";
+
+// Content types
+@import "styles/content_types/safari";
 
 // Regions
 @import "styles/regions/footer";

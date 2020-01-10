@@ -17,12 +17,23 @@
   transition: opacity 300ms ease 50ms;
 }
 
-.content-wrapper-top>div {
-  color: $awfgray;
-  display: inline-block;
-  margin: 0.25rem 2rem 0 0;
+.content-wrapper-top {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-bottom: 2rem;
 
-  &:before {
+  @include breakpoint($min760) {
+    flex-direction: row;
+  }
+
+  >div {
+    color: $awfgray;
+    display: inline-block;
+    margin: 0.25rem 2rem 0 0;
+  }
+
+  >div:before {
     background-color: $awfgray;
     border-radius: 50%;
     content: '';
@@ -32,7 +43,61 @@
     margin-right: 0.5rem;
   }
 
-  &:last-of-type {
+  >div:last-of-type {
     margin-right: 0;
+  }
+
+  div.left {
+    width: 100%;
+
+    &:before {
+      display: none;
+    }
+
+    >div:before {
+      background-color: $awfgray;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  div.right {
+    width: 100%;
+
+    &:before {
+      display: none;
+    }
+
+    p {
+      display: inline;
+    }
+
+    >div:before {
+      background-color: $awfgray;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.content-wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  >div {
+    width: 100%;
+  }
+
+  @include breakpoint($min760) {
+    flex-direction: row;
   }
 }
