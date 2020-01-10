@@ -1,0 +1,51 @@
+uuid: 02c23545-da79-4452-bfce-d67f73eb8c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fact.body
+    - field.field.node.fact.field_heading_unformatted
+    - field.field.node.fact.field_land_habitat
+    - field.field.node.fact.field_legacy_alias
+    - field.field.node.fact.field_legacy_id
+    - field.field.node.fact.field_legacy_revision_id
+    - field.field.node.fact.field_tags_africa
+    - field.field.node.fact.field_tags_animal
+    - field.field.node.fact.field_tags_community
+    - field.field.node.fact.field_tags_country
+    - field.field.node.fact.field_tags_economic
+    - field.field.node.fact.field_tags_projects
+    - field.field.node.fact.field_tags_region
+    - node.type.fact
+  module:
+    - text
+    - user
+id: node.fact.teaser
+targetEntityType: node
+bundle: fact
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_heading_unformatted: true
+  field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
+  langcode: true
+  links: true

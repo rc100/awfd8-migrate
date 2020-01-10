@@ -1,0 +1,19 @@
+uuid: c517c39e-2824-42ed-ad16-360030f04856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_alias
+    - node.type.landscape
+id: node.landscape.field_legacy_alias
+field_name: field_legacy_alias
+entity_type: node
+bundle: landscape
+label: 'Legacy Alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

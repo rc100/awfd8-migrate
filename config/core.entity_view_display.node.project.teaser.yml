@@ -1,0 +1,71 @@
+uuid: b2e21d81-1c77-40d0-9795-cd09c930e83f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.body
+    - field.field.node.project.field_alternate_thumbnail
+    - field.field.node.project.field_basic_legacy_revision_id
+    - field.field.node.project.field_featured
+    - field.field.node.project.field_heading_short
+    - field.field.node.project.field_kml
+    - field.field.node.project.field_land_habitat
+    - field.field.node.project.field_legacy_alias
+    - field.field.node.project.field_legacy_id
+    - field.field.node.project.field_main_image
+    - field.field.node.project.field_photo_credit
+    - field.field.node.project.field_show_comments
+    - field.field.node.project.field_sidebar_item
+    - field.field.node.project.field_sub_heading_formatted
+    - field.field.node.project.field_tags_africa
+    - field.field.node.project.field_tags_animal
+    - field.field.node.project.field_tags_categories
+    - field.field.node.project.field_tags_community
+    - field.field.node.project.field_tags_country
+    - field.field.node.project.field_tags_economic
+    - field.field.node.project.field_tags_projects
+    - field.field.node.project.field_tags_region
+    - field.field.node.project.field_weight
+    - node.type.project
+  module:
+    - text
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_alternate_thumbnail: true
+  field_basic_legacy_revision_id: true
+  field_featured: true
+  field_heading_short: true
+  field_kml: true
+  field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_main_image: true
+  field_photo_credit: true
+  field_show_comments: true
+  field_sidebar_item: true
+  field_sub_heading_formatted: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_categories: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
+  field_weight: true
+  langcode: true
+  links: true

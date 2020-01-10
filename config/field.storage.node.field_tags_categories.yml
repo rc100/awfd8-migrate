@@ -1,14 +1,16 @@
-uuid: 8d16bd6b-d84d-4319-a72c-350c474c82b0
+uuid: 9590a985-9678-46ff-82f6-b1dcce18195b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_featured
-field_name: field_featured
+    - taxonomy
+id: node.field_tags_categories
+field_name: field_tags_categories
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

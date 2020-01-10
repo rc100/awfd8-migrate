@@ -1,0 +1,22 @@
+uuid: 006b88c6-7216-407a-b721-ce210628ba86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.landscape
+  module:
+    - text
+id: node.landscape.body
+field_name: body
+entity_type: node
+bundle: landscape
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

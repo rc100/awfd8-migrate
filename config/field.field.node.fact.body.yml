@@ -1,0 +1,22 @@
+uuid: 3ce2461f-176e-40ac-9d32-515a4e925653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fact
+  module:
+    - text
+id: node.fact.body
+field_name: body
+entity_type: node
+bundle: fact
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

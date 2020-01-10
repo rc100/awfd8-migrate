@@ -1,0 +1,23 @@
+uuid: 1f9e6e47-c12e-4763-9f47-95fc32e1e71b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.landscape
+id: node.landscape.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: landscape
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

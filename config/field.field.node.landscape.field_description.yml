@@ -1,0 +1,21 @@
+uuid: 57a572d2-f750-4453-9f4a-0c3300cb556c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.landscape
+  module:
+    - text
+id: node.landscape.field_description
+field_name: field_description
+entity_type: node
+bundle: landscape
+label: Overview
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 18e565bb-1ae9-4556-9128-9ea189b8e35e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_text
+    - node.type.landscape
+  module:
+    - text
+id: node.landscape.field_project_text
+field_name: field_project_text
+entity_type: node
+bundle: landscape
+label: 'Project Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

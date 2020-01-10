@@ -1,0 +1,21 @@
+uuid: 567941b8-1bfd-4191-b7a8-8f6d0f59444b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solutions
+    - node.type.landscape
+  module:
+    - text
+id: node.landscape.field_solutions
+field_name: field_solutions
+entity_type: node
+bundle: landscape
+label: 'Solutions description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

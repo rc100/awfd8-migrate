@@ -14,6 +14,11 @@ node_search:
       history: history
       career: career
       landing_page: landing_page
+      fact: fact
+      project: project
+      partner: partner
+      landscape: landscape
+      region: region
     languages:
       en: en
       und: und
@@ -34,6 +39,11 @@ user_search:
       history: history
       career: career
       landing_page: landing_page
+      fact: fact
+      project: project
+      partner: partner
+      landscape: landscape
+      region: region
     languages:
       en: en
       und: und

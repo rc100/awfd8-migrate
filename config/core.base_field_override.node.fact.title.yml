@@ -1,0 +1,18 @@
+uuid: b3d99a6e-a930-4bd0-9653-49ba2100f55e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fact
+id: node.fact.title
+field_name: title
+entity_type: node
+bundle: fact
+label: 'Fact Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

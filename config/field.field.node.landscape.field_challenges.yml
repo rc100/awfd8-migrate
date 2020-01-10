@@ -1,0 +1,21 @@
+uuid: cd5be26c-bc52-4cc6-a5a4-cacbda0e65b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_challenges
+    - node.type.landscape
+  module:
+    - text
+id: node.landscape.field_challenges
+field_name: field_challenges
+entity_type: node
+bundle: landscape
+label: Challenges
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
