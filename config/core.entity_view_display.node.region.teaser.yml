@@ -5,27 +5,65 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.region.body
+    - field.field.node.region.field_alternate_thumbnail
+    - field.field.node.region.field_bullet_point_paragraph
+    - field.field.node.region.field_challenges
+    - field.field.node.region.field_coords
+    - field.field.node.region.field_featured
+    - field.field.node.region.field_featured_text
+    - field.field.node.region.field_heading_unformatted
+    - field.field.node.region.field_image
+    - field.field.node.region.field_kml
+    - field.field.node.region.field_legacy_alias
+    - field.field.node.region.field_legacy_id
+    - field.field.node.region.field_legacy_revision_id
+    - field.field.node.region.field_main_image
+    - field.field.node.region.field_photo_credit
+    - field.field.node.region.field_project_text
+    - field.field.node.region.field_sidebar_item_paragraph
+    - field.field.node.region.field_solution_paragraph
+    - field.field.node.region.field_solutions_description
+    - field.field.node.region.field_sub_heading
+    - field.field.node.region.field_tags_africa
+    - field.field.node.region.field_tags_animal
+    - field.field.node.region.field_tags_country
+    - field.field.node.region.field_tags_region
+    - field.field.node.region.field_tooltip_text
+    - field.field.node.region.field_weight
     - node.type.region
   module:
-    - text
     - user
 id: node.region.teaser
 targetEntityType: node
 bundle: region
 mode: teaser
-content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
+  body: true
+  field_alternate_thumbnail: true
+  field_bullet_point_paragraph: true
+  field_challenges: true
+  field_coords: true
+  field_featured: true
+  field_featured_text: true
+  field_heading_unformatted: true
+  field_image: true
+  field_kml: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_main_image: true
+  field_photo_credit: true
+  field_project_text: true
+  field_sidebar_item_paragraph: true
+  field_solution_paragraph: true
+  field_solutions_description: true
+  field_sub_heading: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_country: true
+  field_tags_region: true
+  field_tooltip_text: true
+  field_weight: true
   langcode: true
+  links: true

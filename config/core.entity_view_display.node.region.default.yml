@@ -45,12 +45,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     region: content
   field_alternate_thumbnail:
-    weight: 114
+    weight: 11
     label: above
     settings:
       image_style: ''
@@ -59,7 +59,7 @@ content:
     type: image
     region: content
   field_bullet_point_paragraph:
-    weight: 107
+    weight: 15
     label: above
     settings:
       view_mode: default
@@ -68,14 +68,14 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_challenges:
-    weight: 108
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_coords:
-    weight: 116
+    weight: 17
     label: above
     settings:
       link_to_entity: false
@@ -83,7 +83,7 @@ content:
     type: string
     region: content
   field_featured:
-    weight: 112
+    weight: 9
     label: above
     settings:
       format: default
@@ -93,22 +93,22 @@ content:
     type: boolean
     region: content
   field_featured_text:
-    weight: 123
+    weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_heading_unformatted:
-    weight: 105
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_image:
-    weight: 117
+    weight: 18
     label: above
     settings:
       image_style: ''
@@ -117,42 +117,16 @@ content:
     type: image
     region: content
   field_kml:
-    weight: 115
+    weight: 21
     label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
-  field_legacy_alias:
-    weight: 126
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_legacy_id:
-    weight: 124
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_legacy_revision_id:
-    weight: 125
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_main_image:
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -160,23 +134,23 @@ content:
     type: image
     region: content
   field_photo_credit:
-    weight: 104
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_project_text:
-    weight: 110
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sidebar_item_paragraph:
-    weight: 111
-    label: above
+    weight: 4
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -184,7 +158,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solution_paragraph:
-    weight: 106
+    weight: 14
     label: above
     settings:
       view_mode: default
@@ -193,14 +167,14 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solutions_description:
-    weight: 109
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sub_heading:
-    weight: 118
+    weight: 19
     label: above
     settings:
       link_to_entity: false
@@ -208,7 +182,7 @@ content:
     type: string
     region: content
   field_tags_africa:
-    weight: 122
+    weight: 7
     label: above
     settings:
       link: true
@@ -216,7 +190,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_animal:
-    weight: 120
+    weight: 5
     label: above
     settings:
       link: true
@@ -224,7 +198,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_country:
-    weight: 121
+    weight: 6
     label: above
     settings:
       link: true
@@ -232,31 +206,30 @@ content:
     type: entity_reference_label
     region: content
   field_tags_region:
-    weight: 102
+    type: entity_reference_label
+    weight: 8
+    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_tooltip_text:
-    weight: 119
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_weight:
-    weight: 113
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
   langcode: true
+  links: true
