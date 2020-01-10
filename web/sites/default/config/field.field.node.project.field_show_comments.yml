@@ -1,0 +1,23 @@
+uuid: a991b07e-37ed-43b7-ae39-26af1a44bce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_comments
+    - node.type.project
+id: node.project.field_show_comments
+field_name: field_show_comments
+entity_type: node
+bundle: project
+label: 'Show Comments'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

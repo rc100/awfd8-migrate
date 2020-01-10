@@ -1,0 +1,29 @@
+uuid: 17a74014-4140-40f5-9a73-9365177fa982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_partners
+    - node.type.partner
+    - taxonomy.vocabulary.partners
+id: node.partner.field_tags_partners
+field_name: field_tags_partners
+entity_type: node
+bundle: partner
+label: 'Partner Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

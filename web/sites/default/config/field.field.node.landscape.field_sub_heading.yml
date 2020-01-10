@@ -1,0 +1,19 @@
+uuid: e845ab7a-44be-4df4-951b-303f71ad79d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_heading
+    - node.type.landscape
+id: node.landscape.field_sub_heading
+field_name: field_sub_heading
+entity_type: node
+bundle: landscape
+label: 'Tooltip heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

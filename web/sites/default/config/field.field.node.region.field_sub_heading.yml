@@ -1,0 +1,19 @@
+uuid: 30a3c09d-c3c3-44ca-8567-3fcaadd2e9ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_heading
+    - node.type.region
+id: node.region.field_sub_heading
+field_name: field_sub_heading
+entity_type: node
+bundle: region
+label: 'Tooltip heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

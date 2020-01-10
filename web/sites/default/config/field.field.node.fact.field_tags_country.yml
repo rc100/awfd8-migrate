@@ -1,0 +1,29 @@
+uuid: 1e6aa4ea-a56d-44db-8b2e-c2526843f211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_country
+    - node.type.fact
+    - taxonomy.vocabulary.country
+id: node.fact.field_tags_country
+field_name: field_tags_country
+entity_type: node
+bundle: fact
+label: 'Countries Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

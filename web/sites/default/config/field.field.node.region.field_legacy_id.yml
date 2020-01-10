@@ -1,0 +1,23 @@
+uuid: cfca5757-2c74-4883-8ffc-57b841137c43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.region
+id: node.region.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: region
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

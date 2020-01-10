@@ -1,0 +1,27 @@
+uuid: 136f2412-1a88-4483-a9a5-1f0bf09befe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kml
+    - node.type.region
+  module:
+    - file
+id: node.region.field_kml
+field_name: field_kml
+entity_type: node
+bundle: region
+label: KML
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: kml
+  file_extensions: 'kml kmz'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

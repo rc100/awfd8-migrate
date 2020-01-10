@@ -1,0 +1,138 @@
+uuid: 0c47c45c-aee6-4531-a67e-0da15f1128d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.body
+    - field.field.node.project.field_alternate_thumbnail
+    - field.field.node.project.field_basic_legacy_revision_id
+    - field.field.node.project.field_featured
+    - field.field.node.project.field_heading_short
+    - field.field.node.project.field_kml
+    - field.field.node.project.field_land_habitat
+    - field.field.node.project.field_legacy_alias
+    - field.field.node.project.field_legacy_id
+    - field.field.node.project.field_main_image
+    - field.field.node.project.field_photo_credit
+    - field.field.node.project.field_show_comments
+    - field.field.node.project.field_sidebar_item
+    - field.field.node.project.field_sub_heading_formatted
+    - field.field.node.project.field_tags_africa
+    - field.field.node.project.field_tags_animal
+    - field.field.node.project.field_tags_categories
+    - field.field.node.project.field_tags_community
+    - field.field.node.project.field_tags_country
+    - field.field.node.project.field_tags_economic
+    - field.field.node.project.field_tags_projects
+    - field.field.node.project.field_tags_region
+    - field.field.node.project.field_weight
+    - node.type.project
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - options
+    - text
+    - user
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_alternate_thumbnail:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_featured:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_heading_short:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_kml:
+    weight: 9
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_main_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_photo_credit:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sidebar_item:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_sub_heading_formatted:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_weight:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_basic_legacy_revision_id: true
+  field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_show_comments: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_categories: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
+  langcode: true
+  links: true

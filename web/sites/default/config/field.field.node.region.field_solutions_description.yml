@@ -1,0 +1,21 @@
+uuid: c32072bd-86ae-4544-be8a-a796fe6a79ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solutions_description
+    - node.type.region
+  module:
+    - text
+id: node.region.field_solutions_description
+field_name: field_solutions_description
+entity_type: node
+bundle: region
+label: 'Landscape text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

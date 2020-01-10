@@ -1,0 +1,23 @@
+uuid: de4a99bc-89e6-4f31-88f7-f038c075b8a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_revision_id
+    - node.type.partner
+id: node.partner.field_legacy_revision_id
+field_name: field_legacy_revision_id
+entity_type: node
+bundle: partner
+label: 'Legacy Revision ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

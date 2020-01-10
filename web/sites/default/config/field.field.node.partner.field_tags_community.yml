@@ -1,0 +1,29 @@
+uuid: 8a7aaf3e-d15d-4af5-bd15-c4a7dc15d182
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_community
+    - node.type.partner
+    - taxonomy.vocabulary.community
+id: node.partner.field_tags_community
+field_name: field_tags_community
+entity_type: node
+bundle: partner
+label: 'Community Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      community: community
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

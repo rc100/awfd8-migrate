@@ -1,0 +1,23 @@
+uuid: 42783c7a-2852-4f4c-ba96-d6de0f294abe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.region
+id: node.region.field_featured
+field_name: field_featured
+entity_type: node
+bundle: region
+label: Featured
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
