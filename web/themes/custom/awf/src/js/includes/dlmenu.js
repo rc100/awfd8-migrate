@@ -351,6 +351,7 @@
     searchSection.removeClass('is-open');
     closeAllHeaderItems();
     $(this).parent('li.menu-item.menu-item--expanded').toggleClass('is-open');
+    alert('shit');
   });
 
   //add fixed white background
