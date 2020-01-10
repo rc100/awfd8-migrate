@@ -1,15 +1,17 @@
-uuid: 0bb3b116-b02f-4cd7-99a3-a249c1def75b
+uuid: 198ad736-d48d-45d2-8d53-3abad4eae82a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_show_comments
-field_name: field_show_comments
+    - text
+id: node.field_heading_short
+field_name: field_heading_short
 entity_type: node
-type: boolean
-settings: {  }
-module: core
+type: text
+settings:
+  max_length: 255
+module: text
 locked: false
 cardinality: 1
 translatable: true

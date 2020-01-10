@@ -1,21 +1,21 @@
-uuid: 7dc7a71e-f287-45ff-9bff-1edb2aa04802
+uuid: 01c3582e-e28d-42af-9111-919d8b31239b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_heading
+    - field.storage.node.field_heading_short
     - node.type.project
   module:
     - text
-id: node.project.field_heading
-field_name: field_heading
+id: node.project.field_heading_short
+field_name: field_heading_short
 entity_type: node
 bundle: project
 label: Heading
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: text
