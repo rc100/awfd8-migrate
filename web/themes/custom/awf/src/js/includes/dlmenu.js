@@ -1,10 +1,4 @@
-(function($) { // (function ($, Drupal, window, document, undefined) {
-  // // To understand behaviors, see https://drupal.org/node/756722#behaviors
-  //     Drupal.behaviors.accessiblemenu = {
-  //         attach: function(context, settings) {
-
-  //Code here
-  //
+(function($) {
 
   $('.menu').on('mouseenter focus', '.menu-item--expanded > a', function(e) {
     var el = $(this);
@@ -36,13 +30,6 @@
       }
     }, 100);
   });
-
-
-  //     }
-  // };
-
-  //
-  // })(jQuery, Drupal, this, this.document);
 
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -220,13 +207,6 @@
     };
   });
 
-  //
-  // (function ($, Drupal, window) {
-  //     Drupal.behaviors.mobilenav_behavior = {
-  //         attach: function(context, settings) {
-
-  //Code here
-
   function awfMobileMenuParts() {
     // $('#block-mainmenu li.menu-item--expanded').append('<a class="sub-nav-toggle"><span class="element-invisible">Open Sub-navigation</span></a>');
     $('<a class="sub-nav-toggle"><span class="element-invisible">Open Sub-navigation</span></a>').insertAfter('#block-mainmenu li.menu-item--expanded > a.menu-link');
@@ -261,7 +241,7 @@
     var menuExpandedlink = $('#block-mainmenu .menu li.menu-item.menu-item--expanded a.menu-link');
     var menulink = $('#block-mainmenu .menu li.menu-item .menu-link');
     var menuset = $('#block-mainmenu .menu .main-navigation');
-    var subnav = $("#block-mainmenu .menu li.menu-item--expanded .main-navigation");
+    var subnav = $('#block-mainmenu .menu li.menu-item--expanded .main-navigation');
     var subNavBack = $('a.sub-nav-toggle-back');
     subNavBack.text($(this).parent().parent().find('a.menu-link:first-child').text());
 
@@ -363,14 +343,14 @@
 
     }
   };
-  var headerNavs = $("nav.navigation.menu--main-menu > ul.menu > li.menu-item.menu-item--expanded > a.is-active");
 
-  headerNavs.on("click", function(e) {
-    console.log('here');
+  var headerNavs = $('nav.navigation.menu--main-menu > ul.menu > li.menu-item.menu-item--expanded > a');
+
+  headerNavs.on('click', function(e) {
     e.preventDefault();
     searchSection.removeClass('is-open');
     closeAllHeaderItems();
-    $(this).parent('li.menu-item.menu-item--expanded').addClass('is-open');
+    $(this).parent('li.menu-item.menu-item--expanded').toggleClass('is-open');
   });
 
   //add fixed white background

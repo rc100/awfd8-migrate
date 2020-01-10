@@ -79,21 +79,10 @@ $icon-youtube: "\ea9d";
   @include crisp();
 }
 
-
-@mixin icon-caret {
+.icon-caret {
   &:before {
     content: $icon-caret;
   }
-}
-
-@mixin icon-caret-after {
-  &:after {
-    content: $icon-caret;
-  }
-}
-
-.icon-caret {
-  @include icon-caret;
 }
 
 

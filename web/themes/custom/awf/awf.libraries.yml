@@ -6,6 +6,7 @@ global-styling:
   js:
     dist/js/init-script.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
 
 fonts:

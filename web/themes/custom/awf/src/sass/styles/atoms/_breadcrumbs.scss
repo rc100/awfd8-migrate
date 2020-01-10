@@ -6,7 +6,11 @@
   font-size: 1.2rem;
   font-weight: 400;
   margin-right: 5px;
-  padding: 2.75rem 0 2.5rem;
+  padding: 1.5rem 2rem;
+
+  @include breakpoint($min1024) {
+    padding: 2.75rem 0 2.5rem;
+  }
 
   a {
     color: $tan;

@@ -76,6 +76,7 @@ footer.section-footer {
 
       .menu--footer-utility {
         order: 2;
+        margin-top: 1.5rem;
 
         @include breakpoint($min1024) {
           margin-top: 3.5rem;
@@ -191,12 +192,13 @@ footer.section-footer {
       float: none;
       font-size: 1.35rem;
       margin-left: 0;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
       padding-top: 3px;
 
       @include breakpoint($min1024) {
         display: inline-block;
         float: left;
+        margin-bottom: 10px;
         margin-right: 2%;
       }
 
