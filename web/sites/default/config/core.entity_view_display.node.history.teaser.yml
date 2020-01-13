@@ -15,15 +15,11 @@ id: node.history.teaser
 targetEntityType: node
 bundle: history
 mode: teaser
-content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
   field_history_paragraph: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
   langcode: true
+  links: true
