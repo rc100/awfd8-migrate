@@ -5,18 +5,14 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.field_all_tags
-    - field.field.node.blog.field_blog_files
     - field.field.node.blog.field_blog_images
     - field.field.node.blog.field_blog_legacy_alias
     - field.field.node.blog.field_blog_legacy_id
-    - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
     - image.style.thumbnail
     - node.type.blog
   module:
-    - datetime
-    - file
     - image
     - link
     - path
@@ -52,13 +48,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_blog_files:
-    weight: 126
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
   field_blog_images:
     weight: 127
     settings:
@@ -81,12 +70,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_date:
-    weight: 123
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   field_featured_image:
     weight: 122
