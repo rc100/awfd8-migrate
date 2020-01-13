@@ -5,15 +5,19 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.field_all_tags
-    - field.field.node.blog.field_blog_images
     - field.field.node.blog.field_blog_legacy_alias
     - field.field.node.blog.field_blog_legacy_id
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
-    - image.style.thumbnail
+    - field.field.node.blog.field_land_habitat
+    - field.field.node.blog.field_tags_africa
+    - field.field.node.blog.field_tags_community
+    - field.field.node.blog.field_tags_country
+    - field.field.node.blog.field_tags_economic
+    - field.field.node.blog.field_tags_projects
+    - field.field.node.blog.field_tags_region
     - node.type.blog
   module:
-    - image
     - link
     - path
     - text
@@ -48,14 +52,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_blog_images:
-    weight: 127
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_blog_legacy_alias:
     weight: 129
     settings:
@@ -88,6 +84,76 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_land_habitat:
+    weight: 132
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_africa:
+    weight: 135
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_community:
+    weight: 133
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_country:
+    weight: 130
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_economic:
+    weight: 134
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_projects:
+    weight: 136
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_region:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
