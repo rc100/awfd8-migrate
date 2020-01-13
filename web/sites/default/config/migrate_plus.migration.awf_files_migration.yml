@@ -16,15 +16,58 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Files and Images Migration'
 source:
-  plugin: d7_file_asg
+  plugin: d7_file
+  constants:
+    file_origin: 'https://d7-legacy-awf-website.pantheonsite.io/sites/default/files/'
+    public: 'public://'
 process:
-  fid: fid
+  d7_file_name:
+    -
+      plugin: asg_print
+      source: uri
+    -
+      plugin: str_replace
+      search:
+        - 'public://public://'
+        - 'public://'
+        - 'private://'
+      replace:
+        - 'public:/'
+        - ''
+        - private/
+      source: uri
+  d7_path:
+    -
+      plugin: concat
+      source:
+        - constants/file_origin
+        - '@d7_file_name'
+    -
+      plugin: urlencode
+  destination_path:
+    -
+      plugin: concat
+      source:
+        - constants/public
+        - '@d7_file_name'
+    -
+      plugin: urlencode
   filename: filename
-  filemime: filemime
-  status: status
-  created: timestamp
-  changed: timestamp
-  uri: uri
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+  uri:
+    plugin: file_copy
+    source:
+      - '@d7_path'
+      - '@destination_path'
+    file_exists: replace
+  fid: fid
 destination:
   plugin: 'entity:file'
-migration_dependencies: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -19,6 +19,7 @@ source:
   plugin: asg_user
   target: migrate
 process:
+  uid: uid
   name: name
   mail: mail
   pass: pass
@@ -32,15 +33,10 @@ process:
   login: login
   language: language
   user_picture:
-    -
-      plugin: asg_print
-      source: picture
-    -
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: get
-      source: picture
+    plugin: migration_lookup
+    migration: awf_files_migration
+    no_stub: true
+    source: picture
   roles:
     plugin: migration_lookup
     migration: d7_user_role
