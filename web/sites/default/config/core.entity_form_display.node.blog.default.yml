@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
     - field.field.node.blog.field_land_habitat
+    - field.field.node.blog.field_media_file_multi
     - field.field.node.blog.field_tags_africa
     - field.field.node.blog.field_tags_community
     - field.field.node.blog.field_tags_country
@@ -18,6 +19,7 @@ dependencies:
     - field.field.node.blog.field_tags_region
     - node.type.blog
   module:
+    - file
     - link
     - path
     - text
@@ -94,6 +96,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_media_file_multi:
+    weight: 137
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_tags_africa:
     weight: 135
