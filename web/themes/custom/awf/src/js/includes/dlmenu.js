@@ -351,7 +351,6 @@
     searchSection.removeClass('is-open');
     closeAllHeaderItems();
     $(this).parent('li.menu-item.menu-item--expanded').toggleClass('is-open');
-    alert('shit');
   });
 
   //add fixed white background
@@ -359,7 +358,6 @@
     var scroll = $(window).scrollTop();
     console.log(scroll);
     if (scroll > 10) {
-      //alert();
       headerSection.addClass('fixed');
     } else {
       headerSection.removeClass('fixed');
