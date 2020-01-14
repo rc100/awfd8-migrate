@@ -26,6 +26,7 @@ module:
   crop: 0
   csv_serialization: 0
   ctools: 0
+  date_popup: 0
   datetime: 0
   dblog: 0
   diff: 0
