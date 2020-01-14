@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
-    - field.field.node.blog.field_all_tags
     - field.field.node.blog.field_blog_legacy_alias
     - field.field.node.blog.field_blog_legacy_id
     - field.field.node.blog.field_featured_image
@@ -42,16 +41,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_all_tags:
-    weight: 125
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_blog_legacy_alias:
     weight: 129
     settings:
