@@ -9,8 +9,25 @@ dependencies:
     - field.field.node.history.field_legacy_revision_id
     - node.type.history
   module:
+    - field_group
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_legacy:
+      children:
+        - field_legacy_alias
+        - field_legacy_id
+        - field_legacy_revision_id
+      parent_name: ''
+      weight: 10
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Legacy Information'
 id: node.history.default
 targetEntityType: node
 bundle: history
@@ -35,7 +52,7 @@ content:
     third_party_settings: {  }
     region: content
   field_legacy_alias:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -43,14 +60,14 @@ content:
     type: string_textfield
     region: content
   field_legacy_id:
-    weight: 10
+    weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_legacy_revision_id:
-    weight: 12
+    weight: 14
     settings:
       placeholder: ''
     third_party_settings: {  }
