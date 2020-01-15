@@ -82,7 +82,7 @@
     {{ page.alert }}
   </div>
 
-  <main role="main">
+  <main role="main" class="{% if page.sidebar_second %}has-sidebar-right{% endif %}">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
