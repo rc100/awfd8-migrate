@@ -74,6 +74,7 @@
   set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
+    'landscape-article',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
@@ -81,16 +82,45 @@
   ]
 %}
 
-<article{{ attributes.addClass(classes).removeAttribute('role') }}>
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_sidebar_item_paragraph') }}
-  </div>
-</article>
+<div class="article-wrapper">
+  <article{{ attributes.addClass(classes) }}>
+    {% if content.field_solution_paragraph|render|striptags %}
+      <div class="facts">
+        <h2 class="header">Facts</h2>
+        {{ content.field_solution_paragraph}}
+      </div>
+    {% endif %}
+  </article>
 
-{% if content.field_sidebar_item_paragraph|render|striptags %}
-<aside>
-  <div>
-    {{ content.field_sidebar_item_paragraph }}
-  </div>
-</aside>
-{% endif %}
+  <article{{ attributes.addClass(classes) }}>
+    {% if content.field_description|render|striptags %}
+      <div class="overview">
+        <h2 class="header">Overview</h2>
+        {{ content.field_description}}
+      </div>
+    {% endif %}
+  </article>
+
+  <article{{ attributes.addClass(classes) }}>
+    {% if content.field_challenges|render|striptags %}
+      <div class="challenges">
+        <h2 class="header">Challenges</h2>
+        {{ content.field_challenges}}
+      </div>
+    {% endif %}
+  </article>
+
+  <article{{ attributes.addClass(classes) }}>
+    {% if content.field_solution_paragraph|render|striptags or content.field_bullet_point_paragraph|render|striptags  %}
+      <div class="solutions">
+        <h2 class="header">Solutions</h2>
+        {{ content.field_solutions}}
+        {{ content.field_bullet_point_paragraph }}
+      </div>
+    {% endif %}
+  </article>
+
+  <article{{ attributes.addClass(classes) }}>
+    {{ content|without('field_sidebar_item_paragraph', 'field_description', 'field_challenges', 'field_solution_paragraph', 'field_solutions', 'field_bullet_point_paragraph') }}
+  </article>
+</div>
