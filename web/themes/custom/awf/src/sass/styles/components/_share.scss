@@ -30,3 +30,34 @@ a.share {
     background-position: bottom center;
   }
 }
+
+// preface instance
+.preface-sharing {
+  display: none;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  @include breakpoint($min760){
+    display: flex;
+  }
+  .sharethis-label {
+    margin-right: auto;
+    color: $ltrgray;
+    text-transform: uppercase;
+    font-weight: 700;
+    p:after {
+      content:'';
+      background-image: url(../images/main-sprite.png);
+      background-repeat: no-repeat;
+      background-position: 0 -1284px;
+      display: inline-block;
+      width: 12px;
+      height: 11px;
+    }
+  }
+  .sharethis-inline-share-buttons {
+    z-index: 2 !important;
+    .st-btn {
+      display: inline-block !important;
+    }
+  }
+}
