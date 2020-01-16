@@ -28,6 +28,7 @@ regions:
   preface: Preface
   content_preface: 'Content Preface'
   content: Content
+  sidebar_second: 'Sidebar Right'
   postscript: Postscript
   footer: Footer
   footer_first: 'Footer First'
