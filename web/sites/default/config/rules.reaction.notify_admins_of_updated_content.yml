@@ -1,0 +1,104 @@
+uuid: 57095fd6-aa77-478f-9645-fee762d261e5
+langcode: en
+status: true
+dependencies: {  }
+id: notify_admins_of_updated_content
+label: 'Notify Admins of Updated Content'
+events:
+  -
+    event_name: 'rules_entity_update:node'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 1f2cd307-0f00-42c5-8570-f8fe563f32e7
+  conditions:
+    id: rules_and
+    uuid: af588221-e185-48e1-8e2f-152cf4ab6bd7
+    conditions:
+      -
+        id: rules_condition
+        uuid: 7e6397cc-4869-47a4-993f-57bbb5f3af1b
+        context_values:
+          node: 'Blog, Career. News'
+        context_mapping: {  }
+        context_processors:
+          node:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: 'entity_bundle:node'
+        negate: false
+      -
+        id: rules_condition
+        uuid: 34e8e9d4-bfc5-4216-ae77-72d7654339ed
+        context_values:
+          roles:
+            - 'blogger,'
+            - 'human resources,'
+            - 'communications,'
+            - 'media relations'
+          operation: any
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: b5999c97-1fd0-4808-8ba1-5f8c5f97a45f
+    actions:
+      -
+        id: rules_action
+        uuid: 7cb231f8-ebee-475f-aedb-8133943ca047
+        context_values:
+          to:
+            - 'jlouden@awf.org,'
+            - 'davidonate@awf.org,'
+            - 'gmargaryan@awf.org,'
+            - 'HSehmi@awf.org,'
+            - elewis@awf.org
+          subject: 'AWF Website: New [node:content-type] Story Ready for Publishing'
+          message: 'The [node:content-type] story, [node:title] ([node:url]), has been submitted for publishing.  You can publish through this link:'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 042d60cb-751b-4187-9cf7-ca8d8857b0f3
+        context_values:
+          subject: 'AWF Website: ''[node:title]'' is Being Reviewed'
+          message: 'Hi [node:author],  Your article ''[node:title]'' is being reviewed and you will be notified within 48 hours once it''s published.'
+          reply: ''
+          language: ''
+        context_mapping:
+          to: '@node.node_route_context:node.uid.entity.mail'
+        context_processors:
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
