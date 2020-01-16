@@ -72,8 +72,11 @@ ul.contextual-links li {
     margin-top: 79px;
   }
 
-  nav.mobile-menu.open,
-  .region-donate {
+  nav.mobile-menu.open {
     top: 40px;
+  }
+
+  .region-header .menu--main-menu .menu-item--expanded.is-open>ul.menu {
+    top: 79px;
   }
 }
