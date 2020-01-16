@@ -80,6 +80,8 @@
         "drupal/views_data_export": "^1.0@beta",
         "drupal/webform": "^5.5",
         "drupal/workbench_moderation": "^1.5",
+        "drupal/workflow": "^1.1",
+        "drupal/workflow_ui": "^1.1",
         "drupal/xmlsitemap": "^1.0@alpha",
         "drush/drush": "^9.7",
         "rvtraveller/qs-composer-installer": "^1.1",
