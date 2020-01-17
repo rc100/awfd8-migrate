@@ -91,7 +91,6 @@ module:
   redirect: 0
   reroute_email: 0
   rest: 0
-  rules: 0
   search: 0
   search_api: 0
   search_api_attachments: 0
