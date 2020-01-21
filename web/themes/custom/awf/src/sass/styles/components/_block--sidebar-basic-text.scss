@@ -1,9 +1,13 @@
+// Basic Text Block that occurs in the sidebar
+
 .layout-sidebar-second .block.basic-text {
   background: $white;
   padding: 0 20px 20px;
+
   .field {
     margin-top: 0;
   }
+
   h2 {
     font-size: 2.4rem;
     font-weight: 400;

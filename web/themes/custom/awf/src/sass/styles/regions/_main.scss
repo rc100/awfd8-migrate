@@ -15,7 +15,7 @@
     padding: 2rem;
   }
 
-  article + aside {
+  article+aside {
     min-width: 220px;
     margin: 2rem 0;
 
@@ -57,17 +57,21 @@ main .layout-content {
 // WHEN SIDEBAR IS PRESENT
 main.has-sidebar-right {
   @extend %content-width;
+
   @include breakpoint($min760) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     #main-content {
       width: 100%;
     }
+
     .layout-content {
       width: 74.468205%;
       margin: 0;
     }
+
     .layout-sidebar-second {
       margin-top: 6rem;
       width: 23.404293%;
