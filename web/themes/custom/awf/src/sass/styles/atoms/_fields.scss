@@ -56,7 +56,8 @@ span.field-label {
   * {
     display: inline-block;
   }
-  .field__item + .field__item:before {
+
+  .field__item+.field__item:before {
     content: ',';
     display: inline-block;
     position: relative;

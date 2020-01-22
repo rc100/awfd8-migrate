@@ -37,7 +37,6 @@ dependencies:
     - entity_reference_revisions
     - file
     - image
-    - options
     - text
     - user
 id: node.country.default
@@ -64,7 +63,7 @@ content:
   field_bullet_point_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 126
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -72,18 +71,10 @@ content:
     region: content
   field_challenges:
     weight: 130
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_coords:
-    weight: 115
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_facts_paragraph:
     type: entity_reference_revisions_entity_view
@@ -101,32 +92,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_field_featured:
-    weight: 110
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_heading:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_image:
-    weight: 116
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_kml:
     weight: 136
     label: above
@@ -137,56 +102,6 @@ content:
     region: content
   field_landscape_text:
     weight: 133
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_legacy_alias:
-    weight: 121
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_legacy_id:
-    weight: 122
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_legacy_revision_id:
-    weight: 123
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_main_image:
-    weight: 103
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_photo_credit:
-    weight: 104
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_project_text:
-    weight: 132
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -204,7 +119,7 @@ content:
   field_solution_bpoint_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 128
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -213,7 +128,7 @@ content:
   field_solution_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 127
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -221,69 +136,32 @@ content:
     region: content
   field_solutions_description:
     weight: 131
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_sub_heading:
-    weight: 117
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_tags_africa:
-    weight: 120
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_animal:
-    weight: 124
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_country:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_region:
-    weight: 119
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tooltip_text:
-    weight: 135
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_weight:
-    weight: 137
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_coords: true
+  field_field_featured: true
+  field_heading: true
+  field_image: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_main_image: true
+  field_photo_credit: true
+  field_project_text: true
+  field_sub_heading: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_country: true
+  field_tags_region: true
+  field_tooltip_text: true
+  field_weight: true
   langcode: true

@@ -2,20 +2,25 @@
 
 .share-container {
   position: relative;
-  .share ~ div {
-    display:none !important;
-    > .st-btn {
+
+  .share~div {
+    display: none !important;
+
+    >.st-btn {
       display: inline-block !important;
     }
   }
-  .share.share-enabled ~ div {
-    display:block !important;
+
+  .share.share-enabled~div {
+    display: block !important;
   }
+
   .sharethis-inline-share-buttons {
     position: absolute;
     right: 30px;
   }
 }
+
 a.share {
   position: absolute;
   top: 0;
@@ -23,8 +28,9 @@ a.share {
   z-index: 5;
   width: 16px;
   height: 16px;
-  background: url(../images/sharebutton.png) top center no-repeat;
+  background: url('../images/sharebutton.png') top center no-repeat;
   background-size: 100% 200%;
+
   &:hover,
   &:focus {
     background-position: bottom center;
@@ -36,17 +42,20 @@ a.share {
   display: none;
   margin-top: 2rem;
   font-size: 1.4rem;
-  @include breakpoint($min760){
+
+  @include breakpoint($min760) {
     display: flex;
   }
+
   .sharethis-label {
     margin-right: auto;
     color: $ltrgray;
     text-transform: uppercase;
     font-weight: 700;
+
     p:after {
-      content:'';
-      background-image: url(../images/main-sprite.png);
+      content: '';
+      background-image: url('../images/main-sprite.png');
       background-repeat: no-repeat;
       background-position: 0 -1284px;
       display: inline-block;
@@ -54,8 +63,10 @@ a.share {
       height: 11px;
     }
   }
+
   .sharethis-inline-share-buttons {
     z-index: 2 !important;
+
     .st-btn {
       display: inline-block !important;
     }

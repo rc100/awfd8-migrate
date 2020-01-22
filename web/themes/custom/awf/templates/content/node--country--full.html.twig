@@ -92,11 +92,11 @@
     </article>
   {% endif %}
 
-  {% if content.field_description|render|striptags %}
+  {% if content.body|render|striptags %}
   <article{{ attributes.addClass(classes) }}>
     <div class="overview">
       <h2 class="header">Overview</h2>
-      {{ content.field_description}}
+      {{ content.body}}
     </div>
   </article>
   {% endif %}
@@ -110,17 +110,18 @@
     </article>
   {% endif %}
 
-  {% if content.field_solution_paragraph|render|striptags or content.field_bullet_point_paragraph|render|striptags %}
+  {% if content.field_solution_bullet_heading|render|striptags or content.field_solutions_description|render|striptags or content.field_solution_bpoint_paragraph|render|striptags %}
     <article{{ attributes.addClass(classes) }}>
       <div class="solutions">
         <h2 class="header">Solutions</h2>
-        {{ content.field_solutions}}
-        {{ content.field_bullet_point_paragraph }}
+        {{ content.field_solution_bullet_heading }}
+        {{ content.field_solutions_description }}
+        {{ content.field_solution_bpoint_paragraph }}
       </div>
     </article>
   {% endif %}
 
   <article{{ attributes.addClass(classes) }}>
-    {{ content|without('field_sidebar_item_paragraph', 'field_description', 'field_challenges', 'field_solution_paragraph', 'field_solutions', 'field_bullet_point_paragraph') }}
+    {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_solution_bullet_heading', 'field_solutions_description', 'field_solution_bpoint_paragraph') }}
   </article>
 </div>

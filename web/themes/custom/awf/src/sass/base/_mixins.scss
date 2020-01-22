@@ -76,13 +76,9 @@
     @if $type==float {
       float: left;
       display: block;
-    }
-
-    @else if $type==inline {
+    } @else if $type==inline {
       display: inline;
-    }
-
-    @else if $type==inline-block {
+    } @else if $type==inline-block {
       display: inline-block;
     }
 
@@ -111,9 +107,7 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  @else if $direction==h {
+  } @else if $direction==h {
     &:first-child {
       margin-left: 0;
     }
