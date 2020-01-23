@@ -15,7 +15,7 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF News Migration'
 source:
-  plugin: custom_node_source
+  plugin: asg_node_source
   node_type: news
 process:
   nid: nid

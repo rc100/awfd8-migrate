@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
     - field.field.node.blog.field_land_habitat
+    - field.field.node.blog.field_meta_tags
     - field.field.node.blog.field_tags_africa
     - field.field.node.blog.field_tags_community
     - field.field.node.blog.field_tags_country
@@ -33,6 +34,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
@@ -44,6 +50,7 @@ hidden:
   field_featured_image: true
   field_image_link_view_more: true
   field_land_habitat: true
+  field_meta_tags: true
   field_tags_africa: true
   field_tags_community: true
   field_tags_country: true
