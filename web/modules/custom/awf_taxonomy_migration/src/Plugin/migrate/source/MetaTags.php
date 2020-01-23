@@ -9,19 +9,19 @@ use Drupal\node\Plugin\migrate\source\d7\Node as D7Node;
 /**
  * 
  * @MigrateSource(
- * 		id = "asg_node_source",
- * 		source_module = "node"
+ * 		id = "metatags_node_source",
+ * 		source_module = "metatag"
  * )
  * 
  */
 
 
-class Node extends D7Node {
+class MetaTags extends D7Node {
 
 	public function fields(){
 		return [
-			'alias' => $this->t('Path alias'),
-			'metatags' => $this->t('Meta Tags'),
+		'alias' => $this->t('Path alias'),
+		'metatags' => $this->t('Meta Tags'),
 		] + parent::fields();
 	}
 
@@ -29,6 +29,7 @@ class Node extends D7Node {
 	public function prepareRow(Row $row) {
 		$nid = $row->getSourceProperty('nid');
 		$vid = $row->getSourceProperty('vid');
+
 		$query = $this->select('url_alias','ua')->fields('ua', ['alias']);
 		$query->condition('ua.source', 'node/'  . $nid);
 		$alias = $query->execute()->fetchfield();
@@ -39,46 +40,12 @@ class Node extends D7Node {
 			$row->setSourceProperty('alias', '/unknown');
 		}
 
-		// get metatags from table by id
-		$query = null;
-		$query = $this->select('metatag', 'mt')
-			->fields('mt', ['data'])
-			->condition('mt.entity_id', $nid)
-			->condition('mt.revision_id', $vid)
-			->execute();
-		$results = $query->fetchfield();
-
-		// set metatags to row
-		if(!empty($results)) {
-
-			// unserialize to read values
-			$resultsArray = unserialize($results);
-			$newResults = [];
-
-			// Map the old metatag names to the new d8 ones
-			$map = $this->metaTagsMap();
-			foreach($resultsArray as $resultKey => $resultValue) {
-
-				if(is_array($resultValue)){
-					$resultValue = implode(', ', $resultValue);
-				}
-
-				if (!empty($map[$resultKey])) {
-					$newResults[$map[$resultKey]] = $resultValue;
-				}
-			}
-
-			// Researialize to for D8 and save
-			$returnValue = serialize($newResults);
-			$row->setSourceProperty('metatags', $returnValue);
-		}
-
 
 		return parent::prepareRow($row);
 
 	}
 
-		// mapp the old metatag names to the new ones
+	// mapp the old metatag names to the new ones
 	public function metaTagsMap(){
 		$map = [
 			// From the main Metatag module.

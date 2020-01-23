@@ -16,7 +16,7 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Resource Page Migration'
 source:
-  plugin: custom_node_source
+  plugin: asg_node_source
   node_type: resource
 process:
   nid: nid
@@ -44,8 +44,34 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_migration
     source: field_tags_economic
-  field_image: field_image
-  field_file: field_file
+  field_image:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: awf_files_migration
+          nostub: true
+          source: fid
+  field_file:
+    -
+      plugin: asg_print
+      source: field_media
+    -
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: awf_files_migration
+          nostub: true
+          source: fid
   field_land_habitat:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
