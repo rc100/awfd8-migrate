@@ -30,9 +30,6 @@ class MetaTags extends D7Node {
 		$nid = $row->getSourceProperty('nid');
 		$vid = $row->getSourceProperty('vid');
 
-		\Drupal::logger('awf_taxonomy_migration')->alert('asg - vid - ' . $vid);
-
-
 		$query = $this->select('url_alias','ua')->fields('ua', ['alias']);
 		$query->condition('ua.source', 'node/'  . $nid);
 		$alias = $query->execute()->fetchfield();

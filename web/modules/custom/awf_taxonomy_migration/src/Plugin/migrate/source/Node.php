@@ -68,11 +68,9 @@ class Node extends D7Node {
 				}
 			}
 
-			\Drupal::logger('awf_taxonomy_migration')->alert('asg - serialized - ' . implode(', ', $newResults));
 			// Researialize to for D8 and save
 			$returnValue = serialize($newResults);
 			$row->setSourceProperty('metatags', $returnValue);
-
 		}
 
 
