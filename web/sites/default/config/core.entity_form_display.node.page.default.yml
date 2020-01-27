@@ -9,13 +9,20 @@ dependencies:
     - field.field.node.page.field_basic_page_images
     - field.field.node.page.field_basic_page_legacy_alias
     - field.field.node.page.field_basic_page_legacy_id
-    - field.field.node.page.field_basic_page_tags
     - field.field.node.page.field_heading
+    - field.field.node.page.field_land_habitat
     - field.field.node.page.field_module
     - field.field.node.page.field_sidebar_item
+    - field.field.node.page.field_tags_animal
+    - field.field.node.page.field_tags_community
+    - field.field.node.page.field_tags_country
+    - field.field.node.page.field_tags_economic
+    - field.field.node.page.field_tags_projects
+    - field.field.node.page.field_tags_region
     - image.style.thumbnail
     - node.type.page
   module:
+    - content_moderation
     - field_group
     - file
     - image
@@ -36,6 +43,24 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Sidebar Items'
+    group_tags:
+      children:
+        - field_tags_animal
+        - field_tags_country
+        - field_tags_region
+        - field_tags_projects
+        - field_land_habitat
+        - field_tags_community
+        - field_tags_economic
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Tags
 _core:
   default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
 id: node.page.default
@@ -97,16 +122,6 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_basic_page_tags:
-    weight: 30
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_heading:
     weight: 1
     settings:
@@ -114,6 +129,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_land_habitat:
+    weight: 105
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_module:
     type: entity_reference_paragraphs
@@ -139,12 +164,78 @@ content:
       default_paragraph_type: sidebar_item
     third_party_settings: {  }
     region: content
+  field_tags_animal:
+    weight: 101
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_community:
+    weight: 106
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_country:
+    weight: 102
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_economic:
+    weight: 107
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_projects:
+    weight: 104
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_region:
+    weight: 103
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 4
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
