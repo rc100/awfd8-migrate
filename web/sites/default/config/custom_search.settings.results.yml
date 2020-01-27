@@ -19,6 +19,7 @@ node_search:
       partner: partner
       landscape: landscape
       region: region
+      species: species
     languages:
       en: en
       und: und
@@ -44,6 +45,7 @@ user_search:
       partner: partner
       landscape: landscape
       region: region
+      species: species
     languages:
       en: en
       und: und
