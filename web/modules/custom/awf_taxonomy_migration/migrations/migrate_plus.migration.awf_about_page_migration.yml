@@ -67,7 +67,7 @@ process:
   field_basic_page_legacy_id: nid
   field_basic_legacy_revision_id: vid
   field_basic_page_legacy_alias: alias
-  field_basic_page_section:
+  field_module:
     plugin: iterator
     source: field_module
     process:
