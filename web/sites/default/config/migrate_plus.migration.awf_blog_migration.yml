@@ -79,7 +79,13 @@ process:
         migration: awf_files_to_media_migration
         no_stub: true
         source: fid
-  field_image_link_view_more: field_view_more
+  field_image_link_view_more:
+    plugin: sub_process
+    source: field_view_more
+    process:
+      uri: url
+      title: title
+      options: attributes
   field_meta_tags: metatags
 destination:
   plugin: 'entity:node'

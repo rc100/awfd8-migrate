@@ -6,6 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.supplemental.body
     - field.field.node.supplemental.field_is_global
+    - field.field.node.supplemental.field_legacy_alias
+    - field.field.node.supplemental.field_legacy_id
+    - field.field.node.supplemental.field_meta_tags
     - field.field.node.supplemental.field_remove_title
     - field.field.node.supplemental.field_sidebar_image
     - field.field.node.supplemental.field_sidebar_type
@@ -22,18 +25,21 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_is_global: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_meta_tags: true
   field_remove_title: true
   field_sidebar_image: true
   field_sidebar_type: true

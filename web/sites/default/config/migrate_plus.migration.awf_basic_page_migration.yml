@@ -35,6 +35,34 @@ process:
   title: title
   body: body
   field_heading: field_heading
+  field_tags_community:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_community
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_tags_economic:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_economic
+  field_land_habitat:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_region
+  field_tags_africa:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_africa
+  field_tags_projects:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_projects
   field_basic_page_legacy_id: nid
   field_basic_legacy_revision_id: vid
   field_basic_page_legacy_alias: alias

@@ -85,9 +85,8 @@ process:
     migration: awf_taxonomy_term_migration
     source: field_resource_type
   field_books_type: field_books_type
-  field_resource_legacy_id: nid
-  field_resource_legacy_revisionid: vid
-  field_resource_legacy_alias: alias
+  field_legacy_id: nid
+  field_article_legacy_alias: alias
   path: alias
 destination:
   plugin: 'entity:node'
