@@ -18,31 +18,10 @@ dependencies:
     - field.field.node.blog.field_tags_region
     - node.type.blog
   module:
-    - field_group
     - link
     - metatag
     - text
     - user
-third_party_settings:
-  field_group:
-    group_content_wrapper:
-      children:
-        - field_date
-        - field_all_tags
-      parent_name: ''
-      weight: 0
-      format_type: html_element
-      format_settings:
-        label: 'Content Wrapper'
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: content-wrapper-top
-      label: 'Content Wrapper'
 id: node.blog.default
 targetEntityType: node
 bundle: blog
@@ -57,9 +36,9 @@ content:
     region: content
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     weight: 1
@@ -114,7 +93,7 @@ content:
     region: content
   field_tags_country:
     weight: 8
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
