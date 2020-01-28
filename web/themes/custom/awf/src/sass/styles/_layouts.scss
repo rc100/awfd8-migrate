@@ -1,0 +1,86 @@
+// General layout related stylings
+
+.region-content {
+  @extend %content-width;
+
+  article {
+    background: $white;
+    max-width: 940px;
+
+    >div {
+      padding: 2rem;
+    }
+  }
+
+  article+aside {
+    min-width: 220px;
+    margin: 2rem 0;
+
+    @include breakpoint($min760) {
+      margin: 0 0 0 2rem;
+    }
+  }
+
+  .path-frontpage & {
+    max-width: 100% !important;
+  }
+
+  .block-main-page-content {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($min760) {
+      flex-direction: row;
+    }
+  }
+}
+
+.two-col {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($min760) {
+    flex-direction: row;
+  }
+
+  .left {
+    h2.header {
+      color: $red;
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 2.72rem;
+      margin: 0 0 .8rem;
+    }
+  }
+
+  .right {
+    max-width: 100%;
+
+    @include breakpoint($min760) {
+      margin-left: 2rem;
+      max-width: 220px;
+    }
+
+    >div {
+      margin: 2rem 0;
+    }
+
+    >div:first-of-type {
+      margin-top: 0;
+    }
+
+    >div:last-child {
+      margin-bottom: 2rem;
+
+      @include breakpoint($min760) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  article {
+    >div {
+      padding: 3rem 3.5rem !important;
+    }
+  }
+}

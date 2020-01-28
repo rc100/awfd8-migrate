@@ -1,42 +1,4 @@
-/**
- * @file
- * Positioning for a responsive layout.
- *
- * Define CSS classes to create a fluid grid layout with optional sidebar.
- *
- */
-
-.region-content {
-  @extend %content-width;
-
-  article {
-    background: $white;
-    max-width: 940px;
-    padding: 2rem;
-  }
-
-  article+aside {
-    min-width: 220px;
-    margin: 2rem 0;
-
-    @include breakpoint($min760) {
-      margin: 0 0 0 2rem;
-    }
-  }
-
-  .path-frontpage & {
-    max-width: 100% !important;
-  }
-
-  .block-main-page-content {
-    display: flex;
-    flex-direction: column;
-
-    @include breakpoint($min760) {
-      flex-direction: row;
-    }
-  }
-}
+// Main related stylings
 
 main .layout-content {
   margin: 0 20px;

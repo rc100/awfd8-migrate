@@ -1,0 +1,21 @@
+uuid: e4dca225-0d44-44cb-95c4-b28e4a2675d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solutions
+    - node.type.species
+  module:
+    - text
+id: node.species.field_solutions
+field_name: field_solutions
+entity_type: node
+bundle: species
+label: 'Solutions description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
