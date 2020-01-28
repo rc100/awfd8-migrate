@@ -1,0 +1,49 @@
+uuid: e4c450b6-f3c2-4838-b8c5-fef7638d6987
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_paragraphs_sidebar_migration
+class: null
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Paragraphs Migration'
+source:
+  plugin: d7_field_collection_item_asg
+process:
+  type:
+    plugin: default_value
+    default_value: sidebar_item
+  revision_id: revision_id
+  field_block_ref:
+    plugin: get
+    source: field_block_reference
+  field_supplemental_reference:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: field_supplemental_reference
+    -
+      plugin: asg_print
+    -
+      plugin: migration_lookup
+      migration:
+        - awf_about_page_migration
+        - awf_basic_page_migration
+        - awf_news_page_migration
+        - awf_resource_page_migration
+        - awf_blog_migration
+        - awf_supplemental_migration
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: field_sidebar_item
+migration_dependencies:
+  required: {  }
+  optional: {  }

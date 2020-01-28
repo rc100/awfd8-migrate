@@ -20,6 +20,7 @@ node_search:
       landscape: landscape
       region: region
       species: species
+      supplemental_sidebar: supplemental_sidebar
     languages:
       en: en
       und: und
@@ -46,6 +47,7 @@ user_search:
       landscape: landscape
       region: region
       species: species
+      supplemental_sidebar: supplemental_sidebar
     languages:
       en: en
       und: und
