@@ -1,0 +1,27 @@
+uuid: 5be28354-fa0c-4d31-806a-cd78493eff67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kml
+    - node.type.species
+  module:
+    - file
+id: node.species.field_kml
+field_name: field_kml
+entity_type: node
+bundle: species
+label: GeoJSON
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: kml
+  file_extensions: 'kml kmz geojson'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

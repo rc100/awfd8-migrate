@@ -1,0 +1,58 @@
+uuid: 135fbdeb-267a-4b51-9e90-4654914fca6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview_paragraph
+    - node.type.species
+    - paragraphs.paragraphs_type.overview_facts
+  module:
+    - entity_reference_revisions
+id: node.species.field_overview_paragraph
+field_name: field_overview_paragraph
+entity_type: node
+bundle: species
+label: 'Animal Overview Facts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      overview_facts: overview_facts
+    target_bundles_drag_drop:
+      animal_habitat:
+        weight: 11
+        enabled: false
+      bullet_point:
+        weight: 12
+        enabled: false
+      facts:
+        weight: 13
+        enabled: false
+      history:
+        weight: 14
+        enabled: false
+      module:
+        weight: 15
+        enabled: false
+      overview_facts:
+        enabled: true
+        weight: 16
+      schedule:
+        weight: 17
+        enabled: false
+      sidebar_item:
+        weight: 18
+        enabled: false
+      solution:
+        weight: 19
+        enabled: false
+      solution_bulletpoint:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions
