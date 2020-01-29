@@ -6,9 +6,21 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
     - field.field.node.news.field_date
+    - field.field.node.news.field_legacy_alias
+    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_featured_image
-    - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_files
+    - field.field.node.news.field_news_images
+    - field.field.node.news.field_news_legacy_alias
+    - field.field.node.news.field_news_legacy_id
     - field.field.node.news.field_news_published_location
+    - field.field.node.news.field_tags_africa
+    - field.field.node.news.field_tags_community
+    - field.field.node.news.field_tags_country
+    - field.field.node.news.field_tags_economic
+    - field.field.node.news.field_tags_projects
+    - field.field.node.news.field_tags_region
+    - field.field.node.news.field_view_more
     - node.type.news
   module:
     - text
@@ -26,6 +38,11 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -34,12 +51,18 @@ content:
 hidden:
   field_date: true
   field_legacy_alias: true
+  field_meta_tags: true
   field_news_featured_image: true
   field_news_files: true
-  field_news_image: true
   field_news_images: true
   field_news_legacy_alias: true
   field_news_legacy_id: true
   field_news_published_location: true
-  field_news_tags: true
+  field_tags_africa: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
+  field_view_more: true
   langcode: true

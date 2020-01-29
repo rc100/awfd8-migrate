@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.resource.field_image
     - field.field.node.resource.field_land_habitat
     - field.field.node.resource.field_legacy_id
+    - field.field.node.resource.field_meta_tags
     - field.field.node.resource.field_newsletter_link
     - field.field.node.resource.field_resource_type
     - field.field.node.resource.field_tags_animal
@@ -23,6 +24,7 @@ dependencies:
     - file
     - image
     - link
+    - metatag
     - options
     - text
     - user
@@ -94,6 +96,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_meta_tags:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_newsletter_link:
     weight: 107

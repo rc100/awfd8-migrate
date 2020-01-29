@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.page.field_basic_page_legacy_id
     - field.field.node.page.field_heading
     - field.field.node.page.field_land_habitat
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_module
     - field.field.node.page.field_sidebar_item
     - field.field.node.page.field_tags_animal
@@ -26,6 +27,7 @@ dependencies:
     - field_group
     - file
     - image
+    - metatag
     - paragraphs
     - path
     - text
@@ -139,6 +141,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_meta_tags:
+    weight: 108
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_module:
     type: entity_reference_paragraphs
