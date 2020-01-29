@@ -47,8 +47,24 @@ process:
       from_format: 'Y-m-d H:i:s'
       to_format: 'Y-m-d\TH:i:s'
   field_news_published_location: field_sub_heading
-  field_news_image_link: field_view_more
+  field_news_featured_image:
+    plugin: sub_process
+    source: field_image
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: awf_files_migration
+        no_stub: true
+        source: fid
+  field_view_more:
+    plugin: sub_process
+    source: field_view_more
+    process:
+      uri: url
+      title: title
+      options: attributes
   path: alias
+  field_meta_tags: metatags
   field_news_legacy_alias: alias
   field_news_legacy_id: nid
 destination:

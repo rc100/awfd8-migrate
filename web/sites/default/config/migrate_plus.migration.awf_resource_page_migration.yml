@@ -39,7 +39,13 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_country
-  field_newsletter_link: field_newsletter_link
+  field_newsletter_link:
+    plugin: sub_process
+    source: field_newsletter_link
+    process:
+      uri: url
+      title: title
+      options: attributes
   field_tags_economic:
     plugin: migration_lookup
     migration: awf_taxonomy_migration
@@ -59,11 +65,9 @@ process:
           source: fid
   field_file:
     -
-      plugin: asg_print
-      source: field_media
-    -
       plugin: skip_on_empty
       method: process
+      source: field_media
     -
       plugin: sub_process
       process:
@@ -85,6 +89,7 @@ process:
     migration: awf_taxonomy_term_migration
     source: field_resource_type
   field_books_type: field_books_type
+  field_meta_tags: metatags
   field_legacy_id: nid
   field_article_legacy_alias: alias
   path: alias

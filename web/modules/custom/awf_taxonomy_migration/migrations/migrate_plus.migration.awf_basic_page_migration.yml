@@ -62,6 +62,7 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_projects
+  field_meta_tags: metatags
   field_basic_page_legacy_id: nid
   field_basic_legacy_revision_id: vid
   field_basic_page_legacy_alias: alias
