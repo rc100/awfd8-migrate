@@ -1,0 +1,32 @@
+// Blog content type
+
+.page-node-type-blog {
+
+  .field--name-field-tags-country.field__items {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .field--name-field-about-the-author .field__label {
+    @extend h6;
+  }
+
+  .field--name-user-picture img {
+    width: 112px;
+  }
+
+  .two-col {
+    .left article>div {
+      padding: 0;
+    }
+
+    .right {
+      width: 100%;
+      max-width: 100%;
+
+      @include breakpoint($desktop) {
+        width: 55.319238%;
+      }
+    }
+  }
+}
