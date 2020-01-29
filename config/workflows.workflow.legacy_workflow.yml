@@ -1,0 +1,55 @@
+uuid: 08bbfa67-4008-4ab7-b8fc-40ba0794426a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+    - node.type.career
+    - node.type.news
+  module:
+    - content_moderation
+id: legacy_workflow
+label: 'Legacy Workflow'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    needs_review:
+      published: false
+      default_revision: true
+      label: 'Needs Review'
+      weight: -1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    draft:
+      label: Draft
+      from:
+        - draft
+      to: needs_review
+      weight: -2
+    needs_review_to_draft:
+      label: 'Needs Review'
+      from:
+        - needs_review
+      to: draft
+      weight: 0
+    needs_review_to_publish:
+      label: 'Needs Review'
+      from:
+        - needs_review
+      to: published
+      weight: 1
+  entity_types:
+    node:
+      - blog
+      - career
+      - news
+  default_moderation_state: draft

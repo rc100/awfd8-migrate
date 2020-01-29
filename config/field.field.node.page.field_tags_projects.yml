@@ -1,0 +1,21 @@
+uuid: f286732a-8b84-4563-a9a2-5ccdffad7e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_projects
+    - node.type.page
+id: node.page.field_tags_projects
+field_name: field_tags_projects
+entity_type: node
+bundle: page
+label: 'Projects Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

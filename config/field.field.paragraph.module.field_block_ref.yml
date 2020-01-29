@@ -1,0 +1,23 @@
+uuid: 61c6c438-ab2a-455e-b13e-138960ae853a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_ref
+    - paragraphs.paragraphs_type.module
+id: paragraph.module.field_block_ref
+field_name: field_block_ref
+entity_type: paragraph
+bundle: module
+label: Reference
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

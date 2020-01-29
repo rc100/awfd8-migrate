@@ -1,0 +1,23 @@
+uuid: 9827c14e-40df-4a83-bde0-0ed97a91b422
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.species
+id: node.species.field_featured
+field_name: field_featured
+entity_type: node
+bundle: species
+label: Featured
+description: 'Featured animals appear in the Wildlife Conservation overview page carousel. First check that this animal should be featured and then select the order number in which this animal should be placed in the carousel.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

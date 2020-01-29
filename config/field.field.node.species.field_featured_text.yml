@@ -1,0 +1,21 @@
+uuid: 06f02c1e-b931-4e45-ab8e-821c38cf253c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_text
+    - node.type.species
+  module:
+    - text
+id: node.species.field_featured_text
+field_name: field_featured_text
+entity_type: node
+bundle: species
+label: 'Featured Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

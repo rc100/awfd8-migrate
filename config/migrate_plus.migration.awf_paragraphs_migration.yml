@@ -17,7 +17,6 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
-  field_name: field_module
 process:
   type:
     plugin: default_value

@@ -4,21 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
-    - field.field.node.blog.field_all_tags
-    - field.field.node.blog.field_blog_files
-    - field.field.node.blog.field_blog_images
     - field.field.node.blog.field_blog_legacy_alias
     - field.field.node.blog.field_blog_legacy_id
-    - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
-    - image.style.thumbnail
+    - field.field.node.blog.field_land_habitat
+    - field.field.node.blog.field_meta_tags
+    - field.field.node.blog.field_tags_africa
+    - field.field.node.blog.field_tags_community
+    - field.field.node.blog.field_tags_country
+    - field.field.node.blog.field_tags_economic
+    - field.field.node.blog.field_tags_projects
+    - field.field.node.blog.field_tags_region
     - node.type.blog
+    - workflows.workflow.legacy_workflow
   module:
-    - datetime
-    - file
-    - image
+    - content_moderation
     - link
+    - metatag
     - path
     - text
 id: node.blog.default
@@ -33,6 +36,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -41,30 +45,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_all_tags:
-    weight: 125
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_blog_files:
-    weight: 126
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
-  field_blog_images:
-    weight: 127
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_blog_legacy_alias:
     weight: 129
     settings:
@@ -80,18 +60,13 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_date:
-    weight: 123
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_featured_image:
     weight: 122
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -103,12 +78,94 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_land_habitat:
+    weight: 132
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_meta_tags:
+    weight: 137
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_tags_africa:
+    weight: 135
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_community:
+    weight: 133
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_country:
+    weight: 130
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_economic:
+    weight: 134
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_projects:
+    weight: 136
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_region:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
@@ -152,6 +209,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:

@@ -10,7 +10,7 @@ field_name: field_tooltip_text
 entity_type: node
 type: text
 settings:
-  max_length: 60
+  max_length: 255
 module: text
 locked: false
 cardinality: 1
