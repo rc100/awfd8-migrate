@@ -18,8 +18,10 @@ source:
   plugin: asg_node_source
   node_type: news
 process:
-  nid: nid
-  vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
   langcode:
     plugin: default_value
     source: language

@@ -18,8 +18,6 @@ source:
   plugin: asg_node_source
   node_type: about_page
 process:
-  nid: nid
-  vid: vid
   langcode:
     plugin: default_value
     source: language
