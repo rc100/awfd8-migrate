@@ -51,38 +51,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_alternate_thumbnail:
-    weight: 111
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_challenges:
     weight: 105
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_description:
     weight: 123
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_featured_text:
     weight: 112
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_heading:
-    weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -104,56 +88,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_legacy_alias:
-    weight: 127
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_legacy_id:
-    weight: 128
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_legacy_revision_id:
-    weight: 129
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_main_image:
-    weight: 104
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_parent:
-    weight: 125
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_photo_credit:
-    weight: 102
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_project_text:
     weight: 108
@@ -180,7 +114,7 @@ content:
     region: content
   field_solution_paragraph:
     weight: 107
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -189,7 +123,7 @@ content:
     region: content
   field_solutions:
     weight: 106
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -233,14 +167,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_tags_landing_page:
-    weight: 126
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_tags_policy:
     weight: 122
     label: above
@@ -274,8 +200,17 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_alternate_thumbnail: true
+  field_heading: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_main_image: true
+  field_parent: true
+  field_photo_credit: true
+  field_tags_landing_page: true
   langcode: true
