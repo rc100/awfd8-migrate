@@ -4,43 +4,24 @@ status: true
 dependencies:
   config:
     - field.field.node.blog.body
-    - field.field.node.blog.field_all_tags
-    - field.field.node.blog.field_blog_files
-    - field.field.node.blog.field_blog_images
     - field.field.node.blog.field_blog_legacy_alias
     - field.field.node.blog.field_blog_legacy_id
-    - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_image_link_view_more
+    - field.field.node.blog.field_land_habitat
+    - field.field.node.blog.field_meta_tags
+    - field.field.node.blog.field_tags_africa
+    - field.field.node.blog.field_tags_community
+    - field.field.node.blog.field_tags_country
+    - field.field.node.blog.field_tags_economic
+    - field.field.node.blog.field_tags_projects
+    - field.field.node.blog.field_tags_region
     - node.type.blog
   module:
-    - datetime
-    - field_group
-    - file
-    - image
     - link
+    - metatag
     - text
     - user
-third_party_settings:
-  field_group:
-    group_content_wrapper:
-      children:
-        - field_date
-        - field_all_tags
-      parent_name: ''
-      weight: 0
-      format_type: html_element
-      format_settings:
-        label: 'Content Wrapper'
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: content-wrapper-top
-      label: 'Content Wrapper'
 id: node.blog.default
 targetEntityType: node
 bundle: blog
@@ -53,40 +34,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_all_tags:
-    weight: 4
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+  content_moderation_control:
+    weight: -20
     region: content
-  field_blog_files:
-    weight: 6
-    label: above
-    settings:
-      use_description_as_link_text: true
+    settings: {  }
     third_party_settings: {  }
-    type: file_default
-    region: content
-  field_blog_images:
-    weight: 7
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_date:
-    weight: 3
-    label: hidden
-    settings:
-      timezone_override: ''
-      date_format: 'F d, Y'
-    third_party_settings: {  }
-    type: datetime_custom
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     weight: 1
@@ -107,6 +59,69 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_land_habitat:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_tags_africa:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_community:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_country:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_economic:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_projects:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags_region:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   field_blog_legacy_alias: true

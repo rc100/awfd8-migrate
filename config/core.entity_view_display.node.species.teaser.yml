@@ -1,0 +1,88 @@
+uuid: 840a4517-0b1c-4530-986a-a5b8ecedcded
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.species.body
+    - field.field.node.species.field_alternate_thumbnail
+    - field.field.node.species.field_challenges
+    - field.field.node.species.field_conservation_status
+    - field.field.node.species.field_facts_paragraph
+    - field.field.node.species.field_featured
+    - field.field.node.species.field_featured_text
+    - field.field.node.species.field_heading
+    - field.field.node.species.field_kml
+    - field.field.node.species.field_legacy_alias
+    - field.field.node.species.field_legacy_id
+    - field.field.node.species.field_legacy_revision_id
+    - field.field.node.species.field_main_image
+    - field.field.node.species.field_overview_paragraph
+    - field.field.node.species.field_photo_credit
+    - field.field.node.species.field_project_text
+    - field.field.node.species.field_sidebar_item_paragraph
+    - field.field.node.species.field_size
+    - field.field.node.species.field_solution_paragraph
+    - field.field.node.species.field_solutions
+    - field.field.node.species.field_sound
+    - field.field.node.species.field_species
+    - field.field.node.species.field_tags_africa
+    - field.field.node.species.field_tags_animal
+    - field.field.node.species.field_tags_country
+    - field.field.node.species.field_tags_region
+    - field.field.node.species.field_weight
+    - node.type.species
+  module:
+    - image
+    - text
+    - user
+id: node.species.teaser
+targetEntityType: node
+bundle: species
+mode: teaser
+content:
+  field_alternate_thumbnail:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_challenges:
+    type: text_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 50
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_conservation_status: true
+  field_facts_paragraph: true
+  field_featured: true
+  field_featured_text: true
+  field_heading: true
+  field_kml: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_main_image: true
+  field_overview_paragraph: true
+  field_photo_credit: true
+  field_project_text: true
+  field_sidebar_item_paragraph: true
+  field_size: true
+  field_solution_paragraph: true
+  field_solutions: true
+  field_sound: true
+  field_species: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_country: true
+  field_tags_region: true
+  field_weight: true
+  langcode: true
+  links: true

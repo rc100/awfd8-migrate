@@ -36,7 +36,6 @@ dependencies:
     - entity_reference_revisions
     - file
     - image
-    - options
     - text
     - user
 id: node.landscape.default
@@ -45,7 +44,7 @@ bundle: landscape
 mode: default
 content:
   body:
-    label: above
+    label: hidden
     type: text_default
     weight: 1
     settings: {  }
@@ -62,7 +61,7 @@ content:
     region: content
   field_bullet_point_paragraph:
     weight: 6
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -71,18 +70,10 @@ content:
     region: content
   field_challenges:
     weight: 5
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_coords:
-    weight: 19
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_description:
     weight: 18
@@ -91,38 +82,12 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_featured:
-    weight: 9
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_featured_text:
     weight: 24
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_heading:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_image:
-    weight: 20
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_kml:
     weight: 23
@@ -140,21 +105,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_photo_credit:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_project_text:
-    weight: 16
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_resource_text:
     weight: 17
@@ -174,7 +124,7 @@ content:
     region: content
   field_solution_paragraph:
     weight: 0
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -183,68 +133,27 @@ content:
     region: content
   field_solutions:
     weight: 15
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_sub_heading:
-    weight: 21
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_tags_africa:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_animal:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_country:
-    weight: 14
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_region:
-    weight: 13
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tooltip_text:
-    weight: 22
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_weight:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
 hidden:
+  field_coords: true
+  field_featured: true
+  field_heading: true
+  field_image: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_photo_credit: true
+  field_project_text: true
+  field_sub_heading: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_country: true
+  field_tags_region: true
+  field_tooltip_text: true
+  field_weight: true
   langcode: true
   links: true

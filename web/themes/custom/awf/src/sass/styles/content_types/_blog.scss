@@ -16,6 +16,10 @@
   }
 
   .two-col {
+    .left {
+      flex-shrink: 0;
+    }
+
     .left article>div {
       padding: 0;
     }

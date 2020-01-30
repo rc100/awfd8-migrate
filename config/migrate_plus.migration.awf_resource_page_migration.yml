@@ -16,7 +16,7 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Resource Page Migration'
 source:
-  plugin: custom_node_source
+  plugin: asg_node_source
   node_type: resource
 process:
   nid: nid
@@ -39,22 +39,43 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_country
-  field_newsletter_link: field_newsletter_link
+  field_newsletter_link:
+    plugin: sub_process
+    source: field_newsletter_link
+    process:
+      uri: url
+      title: title
+      options: attributes
   field_tags_economic:
     plugin: migration_lookup
     migration: awf_taxonomy_migration
     source: field_tags_economic
   field_image:
     -
-      plugin: asg_print
+      plugin: skip_on_empty
+      method: process
       source: field_image
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: awf_files_migration
+          nostub: true
+          source: fid
+  field_file:
     -
       plugin: skip_on_empty
       method: process
+      source: field_media
     -
-      plugin: get
-      source: field_image
-  field_file: field_file
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: awf_files_migration
+          nostub: true
+          source: fid
   field_land_habitat:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
@@ -68,9 +89,9 @@ process:
     migration: awf_taxonomy_term_migration
     source: field_resource_type
   field_books_type: field_books_type
-  field_resource_legacy_id: nid
-  field_resource_legacy_revisionid: vid
-  field_resource_legacy_alias: alias
+  field_meta_tags: metatags
+  field_legacy_id: nid
+  field_article_legacy_alias: alias
   path: alias
 destination:
   plugin: 'entity:node'

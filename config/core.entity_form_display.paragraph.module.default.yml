@@ -3,25 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.module.field_block_reference
+    - field.field.paragraph.module.field_block_ref
     - field.field.paragraph.module.field_description
     - field.field.paragraph.module.field_image
     - field.field.paragraph.module.field_layout_style
     - paragraphs.paragraphs_type.module
   module:
     - inline_entity_form
-    - plugin
     - text
 id: paragraph.module.default
 targetEntityType: paragraph
 bundle: module
 mode: default
 content:
-  field_block_reference:
+  field_block_ref:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: 'plugin_selector:plugin_select_list'
+    type: options_select
     region: content
   field_description:
     weight: 2

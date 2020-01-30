@@ -1,0 +1,29 @@
+uuid: 4953e6cd-2193-472b-b3f1-5b00a1536779
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_country
+    - node.type.blog
+    - taxonomy.vocabulary.country
+id: node.blog.field_tags_country
+field_name: field_tags_country
+entity_type: node
+bundle: blog
+label: 'Country Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,166 @@
+uuid: d6e6e9b2-608b-4726-ae52-a97ea272634c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.species.body
+    - field.field.node.species.field_alternate_thumbnail
+    - field.field.node.species.field_challenges
+    - field.field.node.species.field_conservation_status
+    - field.field.node.species.field_facts_paragraph
+    - field.field.node.species.field_featured
+    - field.field.node.species.field_featured_text
+    - field.field.node.species.field_heading
+    - field.field.node.species.field_kml
+    - field.field.node.species.field_legacy_alias
+    - field.field.node.species.field_legacy_id
+    - field.field.node.species.field_legacy_revision_id
+    - field.field.node.species.field_main_image
+    - field.field.node.species.field_overview_paragraph
+    - field.field.node.species.field_photo_credit
+    - field.field.node.species.field_project_text
+    - field.field.node.species.field_sidebar_item_paragraph
+    - field.field.node.species.field_size
+    - field.field.node.species.field_solution_paragraph
+    - field.field.node.species.field_solutions
+    - field.field.node.species.field_sound
+    - field.field.node.species.field_species
+    - field.field.node.species.field_tags_africa
+    - field.field.node.species.field_tags_animal
+    - field.field.node.species.field_tags_country
+    - field.field.node.species.field_tags_region
+    - field.field.node.species.field_weight
+    - node.type.species
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - options
+    - text
+    - user
+id: node.species.full
+targetEntityType: node
+bundle: species
+mode: full
+content:
+  field_challenges:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_conservation_status:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_facts_paragraph:
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_main_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_overview_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_photo_credit:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_project_text:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sidebar_item_paragraph:
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_solution_paragraph:
+    weight: 11
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_solutions:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sound:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+  field_tags_animal:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  body: true
+  field_alternate_thumbnail: true
+  field_featured: true
+  field_featured_text: true
+  field_kml: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_size: true
+  field_species: true
+  field_tags_africa: true
+  field_tags_country: true
+  field_tags_region: true
+  field_weight: true
+  langcode: true
+  links: true

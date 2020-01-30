@@ -5,6 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.resource.body
+    - field.field.node.resource.field_article_legacy_alias
+    - field.field.node.resource.field_author
+    - field.field.node.resource.field_books_type
+    - field.field.node.resource.field_file
+    - field.field.node.resource.field_image
+    - field.field.node.resource.field_land_habitat
+    - field.field.node.resource.field_legacy_id
+    - field.field.node.resource.field_meta_tags
+    - field.field.node.resource.field_newsletter_link
+    - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_tags_animal
+    - field.field.node.resource.field_tags_country
+    - field.field.node.resource.field_tags_economic
+    - field.field.node.resource.field_tags_projects
+    - field.field.node.resource.field_tags_region
     - node.type.resource
   module:
     - text
@@ -28,13 +43,17 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_article_legacy_alias: true
   field_author: true
   field_books_type: true
   field_file: true
   field_image: true
   field_land_habitat: true
+  field_legacy_id: true
+  field_meta_tags: true
   field_newsletter_link: true
   field_resource_type: true
+  field_tags_animal: true
   field_tags_country: true
   field_tags_economic: true
   field_tags_projects: true

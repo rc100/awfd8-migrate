@@ -37,7 +37,7 @@ content:
     region: content
   field_form_url:
     weight: 3
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -47,39 +47,16 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_legacy_alias:
-    weight: 4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_legacy_id:
-    weight: 5
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_legacy_revision_id:
-    weight: 6
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_supporting_information:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
 hidden:
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
   langcode: true
   links: true
