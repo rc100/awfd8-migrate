@@ -1,8 +1,9 @@
-uuid: 00cfa030-21b6-4142-89de-f34dea93b05f
+uuid: d6e6e9b2-608b-4726-ae52-a97ea272634c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.species.body
     - field.field.node.species.field_alternate_thumbnail
     - field.field.node.species.field_challenges
@@ -38,20 +39,11 @@ dependencies:
     - options
     - text
     - user
-id: node.species.default
+id: node.species.full
 targetEntityType: node
 bundle: species
-mode: default
+mode: full
 content:
-  field_alternate_thumbnail:
-    weight: 11
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_challenges:
     weight: 8
     label: hidden
@@ -75,27 +67,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  field_featured_text:
-    weight: 14
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_heading:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_kml:
-    weight: 15
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_default
     region: content
   field_main_image:
     weight: 1
@@ -124,7 +101,7 @@ content:
     type: string
     region: content
   field_project_text:
-    weight: 13
+    weight: 12
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -140,7 +117,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solution_paragraph:
-    weight: 12
+    weight: 11
     label: hidden
     settings:
       view_mode: default
@@ -172,7 +149,10 @@ content:
     region: content
 hidden:
   body: true
+  field_alternate_thumbnail: true
   field_featured: true
+  field_featured_text: true
+  field_kml: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
