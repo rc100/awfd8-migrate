@@ -16,11 +16,15 @@ migration_tags:
 migration_group: awf_migration_group
 label: 'AWF Blog Migration'
 source:
-  plugin: custom_node_source
+  plugin: asg_node_source
   node_type: blog
 process:
   nid: nid
   vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
   langcode:
     plugin: default_value
     source: language
@@ -33,24 +37,56 @@ process:
   revision_uid: revision_uid
   revision_log: revision_log
   revision_timestamp: timestamp
+  author: author
   body: body
-  field_all_tags:
+  field_tags_community:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_community
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_tags_economic:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_economic
+  field_land_habitat:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
+  field_tags_africa:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_africa
+  field_tags_projects:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_projects
   field_blog_legacy_alias: alias
   field_blog_legacy_id: nid
   path: alias
   field_featured_image:
-    plugin: iterator
+    plugin: sub_process
     source: field_main_image
     process:
-      target_id: fid
-      alt: alt
+      target_id:
+        plugin: migration_lookup
+        migration: awf_files_to_media_migration
+        no_stub: true
+        source: fid
+  field_image_link_view_more:
+    plugin: sub_process
+    source: field_view_more
+    process:
+      uri: url
       title: title
-      width: width
-      height: height
-  field_image_link_view_more: field_view_more
+      options: attributes
+  field_meta_tags: metatags
 destination:
   plugin: 'entity:node'
   default_bundle: blog

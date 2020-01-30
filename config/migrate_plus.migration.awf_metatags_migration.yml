@@ -1,0 +1,42 @@
+uuid: f9b20936-55d3-4b8f-bbf6-54dc6c963fdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_metatags_migration
+class: null
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Paragraphs Migration'
+source:
+  plugin: d7_field_collection_item_asg
+  field_name: field_module
+process:
+  type:
+    plugin: default_value
+    default_value: module
+  field_description: field_description
+  revision_id: revision_id
+  field_image:
+    plugin: iterator
+    source: field_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_layout_style: field_layout_style
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: field_module
+migration_dependencies:
+  required: {  }
+  optional: {  }

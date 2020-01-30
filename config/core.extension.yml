@@ -26,6 +26,7 @@ module:
   crop: 0
   csv_serialization: 0
   ctools: 0
+  date_popup: 0
   datetime: 0
   dblog: 0
   diff: 0
@@ -80,6 +81,7 @@ module:
   page_cache: 0
   panels: 0
   path: 0
+  path_alias: 0
   pathologic: 0
   plugin: 0
   plupload: 0
@@ -89,7 +91,6 @@ module:
   redirect: 0
   reroute_email: 0
   rest: 0
-  rules: 0
   search: 0
   search_api: 0
   search_api_attachments: 0
@@ -113,6 +114,8 @@ module:
   views_ui: 0
   webform: 0
   webform_ui: 0
+  workflow: 0
+  workflow_ui: 0
   workflows: 0
   menu_link_content: 1
   pathauto: 1

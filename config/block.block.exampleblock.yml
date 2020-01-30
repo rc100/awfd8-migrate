@@ -1,0 +1,25 @@
+uuid: e6e262aa-40a9-4e4c-8757-506b8d6f36f8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e0ad7bab-0ea5-484a-9055-34ab73c034fc'
+  module:
+    - block_content
+  theme:
+    - awf
+id: exampleblock
+theme: awf
+region: disabled
+weight: 0
+provider: null
+plugin: 'block_content:e0ad7bab-0ea5-484a-9055-34ab73c034fc'
+settings:
+  id: 'block_content:e0ad7bab-0ea5-484a-9055-34ab73c034fc'
+  label: 'Example block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

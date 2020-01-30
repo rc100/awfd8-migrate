@@ -8,8 +8,28 @@ dependencies:
     - field.field.paragraph.solution.field_solution_text
     - paragraphs.paragraphs_type.solution
   module:
+    - field_group
     - options
     - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_solution_heading
+        - field_solution_text
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: content-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper'
 id: paragraph.solution.default
 targetEntityType: paragraph
 bundle: solution

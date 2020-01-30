@@ -29,11 +29,81 @@ dependencies:
     - field.field.node.safari.field_tags_region
     - node.type.safari
   module:
-    - datetime
     - entity_reference_revisions
+    - field_group
     - image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_content_wrapper_top:
+      children:
+        - group_left
+        - group_right
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: content-wrapper-top
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper Top'
+    group_left:
+      children:
+        - field_coords
+        - field_location
+        - field_safari_capaciy
+      parent_name: group_content_wrapper_top
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: left
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+    group_right:
+      children:
+        - field_pricing_information
+      parent_name: group_content_wrapper_top
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+    group_content_:
+      children:
+        - field_solutions
+        - field_challenges
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: content-wrapper-bottom
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper Bottom'
 id: node.safari.default
 targetEntityType: node
 bundle: safari
@@ -42,98 +112,45 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_bushtracks_safari:
-    weight: 119
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_challenges:
-    weight: 128
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_coords:
-    weight: 104
-    label: above
+    weight: 109
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_date:
-    weight: 103
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_image:
-    weight: 110
-    label: above
+    weight: 4
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  field_land_habitat:
-    weight: 115
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_legacy_alias:
-    weight: 120
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_legacy_id:
-    weight: 121
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_legacy_revision_id:
-    weight: 122
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_location:
-    weight: 105
-    label: above
+    weight: 110
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_main_image:
-    weight: 109
-    label: above
+    weight: 2
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -141,15 +158,15 @@ content:
     type: image
     region: content
   field_pricing_information:
-    weight: 126
-    label: above
+    weight: 112
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_safari_capaciy:
-    weight: 106
-    label: above
+    weight: 111
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -157,15 +174,15 @@ content:
     region: content
   field_schedule_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 125
-    label: above
+    weight: 8
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_sidebar_item_paragraph:
-    weight: 124
+    weight: 7
     label: above
     settings:
       view_mode: default
@@ -174,74 +191,29 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solutions:
-    weight: 127
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_status:
-    weight: 108
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_tags_africa:
-    weight: 118
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_animal:
-    weight: 123
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_community:
-    weight: 116
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_country:
-    weight: 113
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_economic:
-    weight: 117
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_region:
-    weight: 114
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_bushtracks_safari: true
+  field_date: true
+  field_land_habitat: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_status: true
+  field_tags_africa: true
+  field_tags_animal: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_region: true
   langcode: true

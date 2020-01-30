@@ -1,0 +1,29 @@
+uuid: b5d6a68e-fb13-43e3-9cbe-4c508cdfea80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_land_habitat
+    - node.type.blog
+    - taxonomy.vocabulary.land_habitat
+id: node.blog.field_land_habitat
+field_name: field_land_habitat
+entity_type: node
+bundle: blog
+label: 'Land & Habitat Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      land_habitat: land_habitat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

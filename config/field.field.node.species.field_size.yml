@@ -1,0 +1,29 @@
+uuid: 1bd80c3b-1efc-4dd6-8efb-51f22a3d3296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_size
+    - node.type.species
+    - taxonomy.vocabulary.size
+id: node.species.field_size
+field_name: field_size
+entity_type: node
+bundle: species
+label: Size
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      size: size
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
