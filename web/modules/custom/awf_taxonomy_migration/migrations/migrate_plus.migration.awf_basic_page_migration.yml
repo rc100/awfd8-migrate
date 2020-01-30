@@ -16,10 +16,8 @@ migration_group: awf_migration_group
 label: 'AWF Taxonomy Terms Migration'
 source:
   plugin: asg_node_source
-  node_type: basic_page
+  node_type: page
 process:
-  nid: nid
-  vid: vid
   langcode:
     plugin: default_value
     source: language
