@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.species.field_tags_animal
     - field.field.node.species.field_tags_country
     - field.field.node.species.field_tags_region
+    - field.field.node.species.field_weight
     - image.style.thumbnail
     - node.type.species
   module:
@@ -160,6 +161,7 @@ third_party_settings:
       children:
         - field_featured
         - field_featured_text
+        - field_weight
         - field_alternate_thumbnail
       parent_name: ''
       weight: 11
@@ -209,7 +211,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_alternate_thumbnail:
-    weight: 27
+    weight: 28
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -409,6 +411,12 @@ content:
     region: content
   field_tags_region:
     weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_weight:
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select

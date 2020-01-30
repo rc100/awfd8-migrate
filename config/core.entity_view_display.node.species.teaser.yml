@@ -30,8 +30,10 @@ dependencies:
     - field.field.node.species.field_tags_animal
     - field.field.node.species.field_tags_country
     - field.field.node.species.field_tags_region
+    - field.field.node.species.field_weight
     - node.type.species
   module:
+    - image
     - text
     - user
 id: node.species.teaser
@@ -39,22 +41,25 @@ targetEntityType: node
 bundle: species
 mode: teaser
 content:
-  body:
+  field_alternate_thumbnail:
+    type: image
+    weight: 1
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
+  field_challenges:
+    type: text_trimmed
+    weight: 0
     region: content
-  links:
-    weight: 100
-    settings: {  }
+    label: hidden
+    settings:
+      trim_length: 50
     third_party_settings: {  }
-    region: content
 hidden:
-  field_alternate_thumbnail: true
-  field_challenges: true
+  body: true
   field_conservation_status: true
   field_facts_paragraph: true
   field_featured: true
@@ -78,4 +83,6 @@ hidden:
   field_tags_animal: true
   field_tags_country: true
   field_tags_region: true
+  field_weight: true
   langcode: true
+  links: true
