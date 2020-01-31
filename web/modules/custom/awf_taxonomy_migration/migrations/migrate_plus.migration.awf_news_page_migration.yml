@@ -22,6 +22,7 @@ process:
     plugin: migration_lookup
     migration: awf_users_migration
     source: node_uid
+  revision_uid: revision_uid
   langcode:
     plugin: default_value
     source: language
