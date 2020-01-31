@@ -18,6 +18,11 @@ source:
   plugin: asg_node_source
   node_type: basic_page
 process:
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
+  revision_uid: revision_uid
   langcode:
     plugin: default_value
     source: language

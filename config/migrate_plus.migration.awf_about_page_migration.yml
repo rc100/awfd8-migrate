@@ -19,8 +19,11 @@ source:
   plugin: asg_node_source
   node_type: about_page
 process:
-  nid: nid
-  vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
+  revision_uid: revision_uid
   langcode:
     plugin: default_value
     source: language
@@ -32,7 +35,6 @@ process:
   promoted: promoted
   body: body
   field_heading: field_heading
-  revision_uid: revision_uid
   revision_log: revision_log
   revision_timestamp: timestamp
   field_tags_community:

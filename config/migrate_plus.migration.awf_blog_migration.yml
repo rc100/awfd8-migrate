@@ -19,8 +19,6 @@ source:
   plugin: asg_node_source
   node_type: blog
 process:
-  nid: nid
-  vid: vid
   uid:
     plugin: migration_lookup
     migration: awf_users_migration
