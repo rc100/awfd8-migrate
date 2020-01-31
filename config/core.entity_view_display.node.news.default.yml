@@ -23,12 +23,32 @@ dependencies:
     - node.type.news
   module:
     - datetime
+    - field_group
     - file
     - image
     - link
     - metatag
     - text
     - user
+third_party_settings:
+  field_group:
+    group_content_wrapper_top:
+      children:
+        - field_date
+        - field_news_published_location
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: content-wrapper-top
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper Top'
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -37,42 +57,34 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_date:
     weight: 102
-    label: above
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: html_month_day_year
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_legacy_alias:
-    weight: 111
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_meta_tags:
-    weight: 113
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_news_featured_image:
-    weight: 105
-    label: above
+    weight: 3
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -80,49 +92,32 @@ content:
     type: image
     region: content
   field_news_files:
-    weight: 108
-    label: above
+    weight: 5
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
   field_news_images:
-    weight: 109
-    label: above
+    weight: 6
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  field_news_legacy_alias:
-    weight: 112
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_news_legacy_id:
-    weight: 110
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_news_published_location:
-    weight: 104
-    label: above
+    weight: 103
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_tags_africa:
-    weight: 119
+    weight: 13
     label: above
     settings:
       link: true
@@ -130,7 +125,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_community:
-    weight: 117
+    weight: 11
     label: above
     settings:
       link: true
@@ -138,7 +133,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_country:
-    weight: 115
+    weight: 9
     label: above
     settings:
       link: true
@@ -146,7 +141,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_economic:
-    weight: 118
+    weight: 12
     label: above
     settings:
       link: true
@@ -154,7 +149,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_projects:
-    weight: 120
+    weight: 14
     label: above
     settings:
       link: true
@@ -162,7 +157,7 @@ content:
     type: entity_reference_label
     region: content
   field_tags_region:
-    weight: 116
+    weight: 10
     label: above
     settings:
       link: true
@@ -170,7 +165,7 @@ content:
     type: entity_reference_label
     region: content
   field_view_more:
-    weight: 114
+    weight: 8
     label: above
     settings:
       trim_length: 80
@@ -182,9 +177,12 @@ content:
     type: link
     region: content
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_legacy_alias: true
+  field_news_legacy_alias: true
+  field_news_legacy_id: true
   langcode: true
