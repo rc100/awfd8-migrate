@@ -1,12 +1,14 @@
-// Landscape content type
+// Priority landscape content type
+// Note this is the same styling as country
+// Duplicative content type.
 
-.page-node-type-landscape,
-.page-node-type-country {
+.page-node-type-landscape {
 
   .landscape-article {
     margin-bottom: 20px;
   }
 
+  .field--name-field-bullet-point-icon .field__item,
   .field--name-field-solution-bullet-heading .field__item {
     font-weight: 600;
   }
