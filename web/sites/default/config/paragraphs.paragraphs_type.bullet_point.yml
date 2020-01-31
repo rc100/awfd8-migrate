@@ -1,9 +1,0 @@
-uuid: 18d3fe0d-829f-4dcb-86e6-8f11e2cf7b21
-langcode: en
-status: true
-dependencies: {  }
-id: bullet_point
-label: 'Bullet Point'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

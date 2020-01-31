@@ -1,9 +1,0 @@
-uuid: e43b8eba-1c77-47ae-8412-a462a2685473
-langcode: en
-status: true
-dependencies: {  }
-id: sidebar_item
-label: 'Sidebar Item'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }
