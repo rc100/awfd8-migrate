@@ -19,8 +19,11 @@ source:
   plugin: asg_node_source
   node_type: news
 process:
-  nid: nid
-  vid: vid
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
+  revision_uid: revision_uid
   langcode:
     plugin: default_value
     source: language
@@ -30,7 +33,6 @@ process:
   created: created
   changed: changed
   promoted: promoted
-  revision_uid: revision_uid
   revision_log: revision_log
   revision_timestamp: timestamp
   body: body
