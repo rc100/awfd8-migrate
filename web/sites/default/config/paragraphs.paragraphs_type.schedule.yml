@@ -1,9 +1,0 @@
-uuid: a8a2da9a-edb8-4961-b3c9-4b2ea5f0023e
-langcode: en
-status: true
-dependencies: {  }
-id: schedule
-label: Schedule
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

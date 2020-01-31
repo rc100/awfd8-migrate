@@ -1,8 +1,0 @@
-uuid: 9214acb2-a3d6-4512-8612-3ef542d8174f
-langcode: en
-status: true
-dependencies: {  }
-id: footer-utility
-label: 'Footer Utility'
-description: 'For Footer Utility Menu such as site map and privacy policy'
-locked: false
