@@ -22,6 +22,14 @@ h2 {
   line-height: 2.4rem;
 }
 
+h2.header {
+  color: $red;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.72rem;
+  margin: 0 0 .8rem;
+}
+
 h3 {
   font-family: $sans;
   font-weight: 500;
@@ -70,3 +78,4 @@ cite {
 .red {
   color: $red;
 }
+

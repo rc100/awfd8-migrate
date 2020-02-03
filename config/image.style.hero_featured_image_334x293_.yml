@@ -1,0 +1,15 @@
+uuid: bfbf14bd-d8e9-4388-b4af-97eb7b797775
+langcode: en
+status: true
+dependencies: {  }
+name: hero_featured_image_334x293_
+label: 'Hero Featured Image (334x293)'
+effects:
+  28d4f444-42bd-4c3e-9230-e21925466742:
+    uuid: 28d4f444-42bd-4c3e-9230-e21925466742
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 334
+      height: 293
+      anchor: center-center

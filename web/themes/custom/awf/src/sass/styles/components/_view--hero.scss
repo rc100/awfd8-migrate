@@ -36,3 +36,57 @@
     }
   }
 }
+
+.view-hero-project {
+  background-image: url('../images/hero/africa.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: auto;
+  min-height: 280px;
+  padding: 40px 0;
+
+  @include breakpoint($min760) {
+    min-height: 380px;
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 700;
+  }
+
+  .view-content {
+    @extend %content-width;
+
+    padding: 0 20px;
+
+    @include breakpoint($min1024) {
+      padding: 0;
+    }
+  }
+
+  .content-wrapper {
+    color: $white;
+    padding: 0;
+    width: 100%;
+
+    @include breakpoint($min760) {
+      padding: 0 2rem;
+    }
+  }
+
+  .views-field-field-main-image {
+    display: none;
+
+    @include breakpoint($min760) {
+      display: block;
+      width: auto !important;
+    }
+  }
+
+  .views-field-field-main-image img {
+    border: solid 1px $white;
+    padding: 2px;
+    min-width: 340px;
+    min-height: inherit;
+  }
+}
