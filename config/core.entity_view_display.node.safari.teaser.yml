@@ -5,6 +5,30 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.safari.body
+    - field.field.node.safari.field_bushtracks_safari
+    - field.field.node.safari.field_challenges
+    - field.field.node.safari.field_coords
+    - field.field.node.safari.field_date
+    - field.field.node.safari.field_image
+    - field.field.node.safari.field_land_habitat
+    - field.field.node.safari.field_legacy_alias
+    - field.field.node.safari.field_legacy_id
+    - field.field.node.safari.field_legacy_revision_id
+    - field.field.node.safari.field_location
+    - field.field.node.safari.field_main_image
+    - field.field.node.safari.field_pricing_information
+    - field.field.node.safari.field_primary_tag
+    - field.field.node.safari.field_safari_capaciy
+    - field.field.node.safari.field_schedule_paragraph
+    - field.field.node.safari.field_sidebar_item_paragraph
+    - field.field.node.safari.field_solutions
+    - field.field.node.safari.field_status
+    - field.field.node.safari.field_tags_africa
+    - field.field.node.safari.field_tags_animal
+    - field.field.node.safari.field_tags_community
+    - field.field.node.safari.field_tags_country
+    - field.field.node.safari.field_tags_economic
+    - field.field.node.safari.field_tags_region
     - node.type.safari
   module:
     - text
@@ -40,10 +64,14 @@ hidden:
   field_location: true
   field_main_image: true
   field_pricing_information: true
+  field_primary_tag: true
   field_safari_capaciy: true
+  field_schedule_paragraph: true
+  field_sidebar_item_paragraph: true
   field_solutions: true
   field_status: true
   field_tags_africa: true
+  field_tags_animal: true
   field_tags_community: true
   field_tags_country: true
   field_tags_economic: true

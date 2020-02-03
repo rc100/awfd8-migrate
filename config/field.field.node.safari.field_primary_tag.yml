@@ -1,0 +1,25 @@
+uuid: 0bb7341e-500f-462b-950d-74401307374b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_tag
+    - node.type.safari
+id: node.safari.field_primary_tag
+field_name: field_primary_tag
+entity_type: node
+bundle: safari
+label: primary_tag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: all_terms
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

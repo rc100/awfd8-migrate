@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.safari.field_location
     - field.field.node.safari.field_main_image
     - field.field.node.safari.field_pricing_information
+    - field.field.node.safari.field_primary_tag
     - field.field.node.safari.field_safari_capaciy
     - field.field.node.safari.field_schedule_paragraph
     - field.field.node.safari.field_sidebar_item_paragraph
@@ -30,6 +31,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.safari
   module:
+    - content_moderation
     - datetime
     - field_group
     - image
@@ -250,6 +252,16 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_primary_tag:
+    weight: 101
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_safari_capaciy:
     weight: 5
     settings:
@@ -343,6 +355,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

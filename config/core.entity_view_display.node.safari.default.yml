@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.safari.field_location
     - field.field.node.safari.field_main_image
     - field.field.node.safari.field_pricing_information
+    - field.field.node.safari.field_primary_tag
     - field.field.node.safari.field_safari_capaciy
     - field.field.node.safari.field_schedule_paragraph
     - field.field.node.safari.field_sidebar_item_paragraph
@@ -163,6 +164,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_primary_tag:
+    weight: 113
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_safari_capaciy:
     weight: 111
