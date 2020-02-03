@@ -17,6 +17,7 @@ conditions:
       country: country
       landing_page: landing_page
       landscape: landscape
+      project: project
     negate: 0
     uuid: 8284fadc-310b-4008-9f02-f12b9a2070f0
     context_mapping:
@@ -39,6 +40,21 @@ reactions:
         unique: 0
         context_id: hero
         uuid: 337db2f0-3963-42cb-a7cf-7708e1080ed6
+      fd4d4210-794d-4cf1-a7e1-5a2028b94f99:
+        id: 'views_block:hero-block_2'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: preface
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: hero
+        uuid: fd4d4210-794d-4cf1-a7e1-5a2028b94f99
     id: blocks
     saved: false
     uuid: 632cba82-f4dd-43dd-8374-8441d8f0e3a9
