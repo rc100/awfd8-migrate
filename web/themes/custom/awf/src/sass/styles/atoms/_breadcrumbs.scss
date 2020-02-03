@@ -6,7 +6,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   margin-right: 5px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 0;
 
   @include breakpoint($min1024) {
     padding: 2.75rem 0 2.5rem;
@@ -30,4 +30,14 @@
 
 .region-content-preface {
   @extend %content-width;
+  visibility: hidden;
+
+  @include breakpoint($min760) {
+    padding: 0 20px;
+    visibility: visible;
+  }
+
+  @include breakpoint($min1024) {
+    padding: 0;
+  }
 }
