@@ -21,7 +21,7 @@ leaflet:
       src/sass/components/leaflet.css: {}
   js:
     src/js/includes/leaflet.js: {}
-    src/js/includes/jquery-plugins.all.js: {}
+    src/js/includes/plugin-mutator.js: {}
     src/js/includes/gotmap.js: {}
     src/js/includes/maps.js: {}
     src/js/includes/boot-maps.js: {}
