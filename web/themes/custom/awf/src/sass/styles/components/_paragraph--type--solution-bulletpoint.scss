@@ -1,13 +1,11 @@
 // Paragraph - Solution Bulletpoint
 
 .paragraph--type--solution-bulletpoint {
+  display: flex;
+  width: 100%;
 
   .field--name-field-solution-bullet-heading {
     font-weight: 600;
-  }
-
-  .field--icon {
-    display: flex;
   }
 
   .icon {
