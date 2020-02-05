@@ -74,7 +74,7 @@
   set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
-    'landscape-article',
+    'article-block',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
@@ -84,10 +84,18 @@
 
 <div class="article-wrapper">
   {% if content.field_solution_paragraph|render|striptags %}
-    <article{{ attributes.addClass(classes) }}>
-      <div class="facts">
-        <h2 class="header">Quick Facts:</h2>
-        {{ content.field_solution_paragraph}}
+    <article{{ attributes.addClass(classes, 'land-block') }}>
+      <div class="heading-bar">
+        <p>LAND</p>
+      </div>
+      <div class="two-col">
+        <div class="left facts">
+          <h2 class="header">Quick Facts:</h2>
+          {{ content.field_solution_paragraph }}
+        </div>
+        <div class="right map">
+          {{ content.field_kml }}
+        </div>
       </div>
     </article>
   {% endif %}
@@ -128,7 +136,7 @@
       {% endif %}
 
       <article{{ attributes.addClass(classes) }}>
-        {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_solution_bullet_heading', 'field_solutions_description', 'field_solution_bpoint_paragraph', 'field_bullet_point_paragraph','field_sidebar_item_paragraph') }}
+        {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_solution_bullet_heading', 'field_solutions_description', 'field_solution_bpoint_paragraph', 'field_bullet_point_paragraph','field_sidebar_item_paragraph', 'field_kml') }}
       </article>
 
   <!-- If there is a sidebar, enable two col styles-->
