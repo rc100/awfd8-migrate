@@ -1,12 +1,11 @@
 // Paragraph - Solution
 
 .paragraph--type--solution {
+  display: flex;
+  width: 100%;
+
   .field--name-field-solution-heading {
     font-weight: 600;
-  }
-
-  .field--icon {
-    display: flex;
   }
 
   .icon {
