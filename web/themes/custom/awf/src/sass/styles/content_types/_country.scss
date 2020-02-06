@@ -2,7 +2,38 @@
 
 .page-node-type-country {
 
-  .landscape-article {
+  .land-block .two-col {
+    padding: 0;
+
+    .left,
+    .right {
+      width: 100%;
+      max-width: 100%;
+
+      @include breakpoint($min760) {
+        width: 50%;
+      }
+    }
+
+    .left {
+      padding: 2rem;
+    }
+  }
+
+  .heading-bar {
+    background: $awftan;
+    padding: 12px 10px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .gotmap {
+    height: 100%;
+  }
+
+  .article-block {
     margin-bottom: 20px;
   }
 

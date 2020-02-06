@@ -41,17 +41,22 @@
 {%
   set classes = [
     'field',
-    'field__item',
-    'field--icon',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
   ]
 %}
 
-{% for item in items %}
-  <div{{ item.attributes.addClass(classes) }}>
-    <div class="icon icon--{{item.content|render|lower|clean_class}}">
-      <span class="element-invisible">{{ item.content }}</span>
-    </div>
+{% if content|render|striptags %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if multiple %}
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
   </div>
-{% endfor %}
+{% endif %}

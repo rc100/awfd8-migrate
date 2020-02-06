@@ -74,7 +74,7 @@
   set classes = [
     'node',
     'node--type-' ~ node.bundle|clean_class,
-    'landscape-article',
+    'article-block',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
@@ -125,7 +125,7 @@
   {% if content.field_sidebar_item_paragraph|render|striptags %}
       </div><!-- /.left -->
       <div class="right">
-        {{ content.field_sidebar_item_paragraph}}
+        {{ content.field_sidebar_item_paragraph }}
       </div><!-- /.right -->
     </div><!-- /.two-col -->
   {% endif %}
