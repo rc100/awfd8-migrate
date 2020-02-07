@@ -3,11 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.file.image.field_caption
     - field.field.file.image.field_image_alt_text
     - field.field.file.image.field_image_title_text
+    - field.field.file.image.field_redirect
+    - field.field.file.image.field_tags_africa
+    - field.field.file.image.field_tags_animal
+    - field.field.file.image.field_tags_community
+    - field.field.file.image.field_tags_country
+    - field.field.file.image.field_tags_economic
+    - field.field.file.image.field_tags_land_habitat
+    - field.field.file.image.field_tags_projects
+    - field.field.file.image.field_tags_region
+    - field.field.file.image.field_title_text
     - file_entity.type.image
   module:
+    - entity_reference_revisions
     - path
+    - text
 _core:
   default_config_hash: HYzof_QiEoo7449yRhD_uJoLXMEAmSafqexxGS9OmjQ
 id: file.image.default
@@ -19,6 +32,14 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_caption:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_image_alt_text:
     type: string_textfield
@@ -35,6 +56,104 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_redirect:
+    weight: 41
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_tags_africa:
+    weight: 36
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_animal:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_community:
+    weight: 38
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_country:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_economic:
+    weight: 39
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_land_habitat:
+    weight: 40
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_projects:
+    weight: 37
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags_region:
+    weight: 34
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title_text:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   filename:
     type: string_textfield

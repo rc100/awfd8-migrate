@@ -1,0 +1,20 @@
+uuid: 7d2b0019-6117-4f0e-ab75-1874efaa3588
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - taxonomy
+id: file.field_tags_africa
+field_name: field_tags_africa
+entity_type: file
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

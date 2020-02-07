@@ -1,0 +1,20 @@
+uuid: d3fe21f1-b30f-435c-a1a3-492c46ec6a2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - taxonomy
+id: file.field_tags_projects
+field_name: field_tags_projects
+entity_type: file
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

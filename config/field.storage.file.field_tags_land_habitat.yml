@@ -1,0 +1,20 @@
+uuid: b314a02e-0508-496b-8c1e-b16f449e76c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - taxonomy
+id: file.field_tags_land_habitat
+field_name: field_tags_land_habitat
+entity_type: file
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
