@@ -58,7 +58,6 @@ function awf_preprocess_html(&$variables) {
 function awf_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['author_about'] = $node->getOwner()->field_about_the_author->view();
-  $variables['landing_page_type'] = $node->get('field_tags_landing_page')->target_id;
 }
 
 /**
