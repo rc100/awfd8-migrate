@@ -112,15 +112,15 @@
     @include breakpoint($min1024) {
       max-width: 580px;
       min-height: 260px;
-    }
 
-    &:before {
-      content: '';
-      height: 261px;
-      width: 273px;
-      position: absolute;
-      left: 0;
-      background: transparent url('../images/infographics/wildlife.png') 0 0 no-repeat;
+      &:before {
+        content: '';
+        height: 261px;
+        width: 273px;
+        position: absolute;
+        left: 0;
+        background: transparent url('../images/infographics/wildlife.png') 0 0 no-repeat;
+      }
     }
   }
 }
