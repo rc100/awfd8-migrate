@@ -1,0 +1,44 @@
+uuid: 81a541bc-7a7a-46f7-a81c-cf20d2381c9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: landing_page
+label: 'Landing Page'
+group: Hero
+description: 'The brown-backed section that appears under the hero on the Overview type Landing Pages.'
+requireAllConditions: true
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: 0
+    uuid: b7126d9e-362f-4f00-b990-679a56af6e6d
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      e0dbfa71-8914-4d8d-b01b-c910d7374d20:
+        id: 'views_block:hero-block_3'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_preface
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: landing_page
+        uuid: e0dbfa71-8914-4d8d-b01b-c910d7374d20
+    id: blocks
+    saved: false
+    uuid: f906dbd8-8210-46b9-ac58-f1a378f98180
+    include_default_blocks: 1
+weight: 0

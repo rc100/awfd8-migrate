@@ -21,3 +21,39 @@
     }
   }
 }
+
+
+// Rather than preprocessing the field, just hide it via a class.
+.landing-overview {
+  .field--name-title {
+    visibility: hidden;
+  }
+
+  .region-content-preface {
+    position: relative;
+    color: $white;
+    min-height: 250px;
+
+    @include breakpoint($min1024) {
+      min-height: 350px;
+    }
+
+    &:before {
+      content: "";
+      background: #322c2a url('../images/hero/brown-pattern.jpg') 0 0 repeat;
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 220vw;
+      margin-left: -100vw;
+      overflow: hidden;
+    }
+
+    h1,
+    h6 {
+      color: $red;
+    }
+  }
+}

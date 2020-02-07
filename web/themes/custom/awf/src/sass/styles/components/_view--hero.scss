@@ -96,3 +96,31 @@
     min-height: inherit;
   }
 }
+
+.view-hero-landing {
+  margin: 4rem 0;
+
+  @include breakpoint($min760) {
+    margin: 0 0 4rem 0;
+  }
+
+  &.view-hero .views-row {
+    flex-direction: column;
+    margin: 0 0 0 auto;
+    width: 100%;
+
+    @include breakpoint($min1024) {
+      max-width: 580px;
+      min-height: 260px;
+
+      &:before {
+        content: '';
+        height: 261px;
+        width: 273px;
+        position: absolute;
+        left: 0;
+        background: transparent url('../images/infographics/wildlife.png') 0 0 no-repeat;
+      }
+    }
+  }
+}

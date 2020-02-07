@@ -27,17 +27,3 @@
     margin: 0 0.25rem;
   }
 }
-
-.region-content-preface {
-  @extend %content-width;
-  visibility: hidden;
-
-  @include breakpoint($min760) {
-    padding: 0 20px;
-    visibility: visible;
-  }
-
-  @include breakpoint($min1024) {
-    padding: 0;
-  }
-}
