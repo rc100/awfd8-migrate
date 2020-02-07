@@ -36,11 +36,29 @@ function awf_preprocess_html(&$variables) {
   if ($node) {
     $variables['attributes']['class'][] = 'page-node-' . $node->id();
   }
+
+  // Landing page content type.
+  if ($node != NULL && ($node->getType() == 'landing_page')) {
+    $landing_page_type = $node->get('field_tags_landing_page')->target_id;
+
+    // If overview page type add class.
+    if ($landing_page_type == '550') {
+      $variables['attributes']['class'][] = 'landing-overview';
+    }
+    // If sub page type add class.
+    elseif ($landing_page_type == '551') {
+      $variables['attributes']['class'][] = 'landing-subpage';
+    }
+  }
 }
 
+/**
+ * Implements template_preprocess for the template.
+ */
 function awf_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['author_about'] = $node->getOwner()->field_about_the_author->view();
+  $variables['landing_page_type'] = $node->get('field_tags_landing_page')->target_id;
 }
 
 /**

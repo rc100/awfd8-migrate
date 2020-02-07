@@ -89,20 +89,23 @@
     <div class="left">
   {% endif %}
 
-    {% if content.field_description|render|striptags %}
-      <article{{ attributes.addClass(classes) }}>
-        <div class="solutions">
-          <h2 class="header">Overview</h2>
-          {{ content.field_description}}
-        </div>
-      </article>
+    {# If landing page tags 'sub page' is selected or is empty #}
+    {% if landing_page_type == '551' or landing_page_type == null %}
+      {% if content.field_description|render|striptags %}
+        <article{{ attributes.addClass(classes) }}>
+          <div class="solutions">
+            <h2 class="header">Overview</h2>
+            {{ content.field_description }}
+          </div>
+        </article>
+      {% endif %}
     {% endif %}
 
     {% if content.field_challenges|render|striptags %}
       <article{{ attributes.addClass(classes) }}>
         <div class="challenges">
           <h2 class="header">Challenges</h2>
-          {{ content.field_challenges}}
+          {{ content.field_challenges }}
         </div>
       </article>
     {% endif %}
@@ -112,13 +115,13 @@
         <div class="solutions">
           <h2 class="header">Solutions:</h2>
           {{ content.field_solutions }}
-          {{ content.field_solution_paragraph}}
+          {{ content.field_solution_paragraph }}
         </div>
       </article>
     {% endif %}
 
     <article{{ attributes.addClass(classes) }}>
-      {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_bullet_point_paragraph','field_sidebar_item_paragraph', 'field_description', 'field_solutions') }}
+      {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_bullet_point_paragraph','field_sidebar_item_paragraph', 'field_description', 'field_solutions', 'field_tags_policy', 'field_tags_landing_page', 'field_tags_community') }}
     </article>
 
   <!-- If there is a sidebar, enable two col styles-->
