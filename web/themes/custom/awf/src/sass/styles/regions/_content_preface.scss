@@ -1,10 +1,43 @@
 // Content preface styles
 
 .region-content-preface {
-  display: flex;
+  @extend %content-width;
 
-  .block-preface-social-sharing {
-    margin-left: auto;
-    width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+  @include breakpoint($min1024) {
+    padding: 0;
   }
+
+  // .block-preface-social-sharing {
+  //   margin-left: auto;
+  //   width: 330px;
+  // }
+
+  .block-preface-social-sharing,
+  .block-breadcrumbs {
+    height: 0;
+    visibility: hidden;
+    width: 50%;
+
+    @include breakpoint($min760) {
+      height: auto;
+      visibility: visible;
+    }
+  }
+
+  .block-views {
+    width: 100%;
+  }
+}
+
+// On the overview landing page the social share appears
+// at the bottom of the brown block.
+.landing-overview .block-preface-social-sharing {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
 }
