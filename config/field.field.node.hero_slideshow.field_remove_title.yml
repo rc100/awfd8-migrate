@@ -1,0 +1,23 @@
+uuid: 093ad6d2-06fa-4d43-aeb9-db610c262d94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_remove_title
+    - node.type.hero_slideshow
+id: node.hero_slideshow.field_remove_title
+field_name: field_remove_title
+entity_type: node
+bundle: hero_slideshow
+label: 'Do not display title'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

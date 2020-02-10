@@ -1,0 +1,11 @@
+uuid: e4eec75b-c600-49b5-964e-192204a1a1ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hero_slideshow
+id: node.hero_slideshow
+target_entity_type_id: node
+target_bundle: hero_slideshow
+default_langcode: site_default
+language_alterable: false

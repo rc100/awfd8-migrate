@@ -21,6 +21,7 @@ node_search:
       region: region
       species: species
       supplemental_sidebar: supplemental_sidebar
+      hero_slideshow: hero_slideshow
     languages:
       en: en
       und: und
@@ -48,6 +49,7 @@ user_search:
       region: region
       species: species
       supplemental_sidebar: supplemental_sidebar
+      hero_slideshow: hero_slideshow
     languages:
       en: en
       und: und
