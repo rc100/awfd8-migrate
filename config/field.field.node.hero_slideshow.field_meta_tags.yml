@@ -1,0 +1,21 @@
+uuid: 127fd793-c2a8-4593-9071-2ea2ac75e803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.hero_slideshow
+  module:
+    - metatag
+id: node.hero_slideshow.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: hero_slideshow
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

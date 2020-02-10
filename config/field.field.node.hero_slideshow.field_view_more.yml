@@ -1,0 +1,23 @@
+uuid: a6063b81-770a-4dc1-8c65-b0703e8013e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_more
+    - node.type.hero_slideshow
+  module:
+    - link
+id: node.hero_slideshow.field_view_more
+field_name: field_view_more
+entity_type: node
+bundle: hero_slideshow
+label: 'View More Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

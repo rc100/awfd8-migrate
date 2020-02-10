@@ -1,0 +1,18 @@
+uuid: 84f70756-4339-475e-a3a2-5a7ecbecf512
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Hero Slideshow'
+type: hero_slideshow
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
