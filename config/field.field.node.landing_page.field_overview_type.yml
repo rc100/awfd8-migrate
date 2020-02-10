@@ -1,0 +1,23 @@
+uuid: 70f82f54-bfdf-41ba-8f43-911a9cb96a4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview_type
+    - node.type.landing_page
+  module:
+    - options
+id: node.landing_page.field_overview_type
+field_name: field_overview_type
+entity_type: node
+bundle: landing_page
+label: 'Overview Type'
+description: 'Set which image appears in the Landing Page overview block. '
+required: false
+translatable: false
+default_value:
+  -
+    value: wildlife
+default_value_callback: ''
+settings: {  }
+field_type: list_string
