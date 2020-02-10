@@ -124,3 +124,15 @@
     }
   }
 }
+
+.overview-people .view-hero-landing.view-hero .views-row {
+  &:before {
+    background: transparent url('../images/infographics/people.png') 0 0 no-repeat;
+  }
+}
+
+.overview-land .view-hero-landing.view-hero .views-row {
+  &:before {
+    background: transparent url('../images/infographics/land.png') 0 0 no-repeat;
+  }
+}
