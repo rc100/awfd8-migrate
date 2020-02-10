@@ -83,14 +83,15 @@
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_sidebar_item_paragraph') }}
+    {{ content|without('field_sidebar_item_paragraph', 'field_supplemental_reference') }}
   </div>
 </article>
 
-{% if content.field_sidebar_item_paragraph|render|striptags %}
+{% if content.field_sidebar_item_paragraph|render|striptags or content.field_supplemental_reference|render|striptags %}
 <aside>
   <div>
     {{ content.field_sidebar_item_paragraph }}
+    {{ content.field_supplemental_reference }}
   </div>
 </aside>
 {% endif %}

@@ -40,10 +40,19 @@ function awf_preprocess_html(&$variables) {
   // Landing page content type.
   if ($node != NULL && ($node->getType() == 'landing_page')) {
     $landing_page_type = $node->get('field_tags_landing_page')->target_id;
+    $overview_landing_page_type = $node->get('field_overview_type')->value;
 
-    // If overview page type add class.
+    // If overview landing page add class.
     if ($landing_page_type == '550') {
       $variables['attributes']['class'][] = 'landing-overview';
+
+      // If overview field filled out add class.
+      if ($overview_landing_page_type == 'people') {
+        $variables['attributes']['class'][] = 'overview-people';
+      }
+      elseif ($overview_landing_page_type == 'land') {
+        $variables['attributes']['class'][] = 'overview-land';
+      }
     }
     // If sub page type add class.
     elseif ($landing_page_type == '551') {
