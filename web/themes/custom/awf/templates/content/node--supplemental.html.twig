@@ -70,6 +70,8 @@
  *   in different view modes.
  */
 #}
+{% set has_value = content.field_remove_title['#items'].value %}
+
 {%
   set classes = [
     'node',
@@ -80,18 +82,19 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
 
-<article{{ attributes.addClass(classes).removeAttribute('role') }}>
+  {{ content.field_sidebar_image }}
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item') }}
-  </div>
-</article>
 
-{% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags %}
-<aside>
-  <div>
-    {{ content.field_sidebar_item_paragraph }}
-    {{ content.field_sidebar_item }}
+    {# Do not display link #}
+    {% if has_value == '1' %}
+      {{ content|without('field_sidebar_image', 'field_remove_title', 'field_view_more') }}
+    {# Display link #}
+    {% elseif has_value == '0' %}
+      {{ content|without('field_sidebar_image', 'field_remove_title') }}
+    {% endif %}
   </div>
-</aside>
-{% endif %}
+
+</article>
