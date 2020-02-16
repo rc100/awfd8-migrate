@@ -103,6 +103,7 @@ process:
     source: field_tags_projects
 destination:
   plugin: 'entity:file'
+  default_bundle: image
 migration_dependencies:
   required: {  }
   optional: {  }

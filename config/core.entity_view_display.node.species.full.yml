@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.species.field_facts_paragraph
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
+    - field.field.node.species.field_gallery
     - field.field.node.species.field_heading
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
     - field.field.node.species.field_legacy_id
     - field.field.node.species.field_legacy_revision_id
     - field.field.node.species.field_main_image
+    - field.field.node.species.field_meta_tags
     - field.field.node.species.field_overview_paragraph
     - field.field.node.species.field_photo_credit
     - field.field.node.species.field_project_text
@@ -152,10 +154,12 @@ hidden:
   field_alternate_thumbnail: true
   field_featured: true
   field_featured_text: true
+  field_gallery: true
   field_kml: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   field_size: true
   field_species: true
   field_tags_africa: true

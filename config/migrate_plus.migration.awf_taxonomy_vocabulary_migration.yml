@@ -35,7 +35,6 @@ process:
       method: row
       source: name
       value:
-        - Animal
         - Careers
         - Landscape
         - 'Media Folders'
