@@ -27,7 +27,7 @@ process:
   field_supplemental_reference:
     -
       plugin: skip_on_empty
-      method: row
+      method: process
       source: field_supplemental_reference
     -
       plugin: asg_print
@@ -40,6 +40,7 @@ process:
         - awf_resource_page_migration
         - awf_blog_migration
         - awf_supplemental_migration
+        - awf_species_page_migration
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: field_sidebar_item
