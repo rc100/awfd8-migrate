@@ -1,0 +1,58 @@
+// Supplemental content type
+// appears as blocks on pages such as the Basic page.
+
+.node--type-supplemental {
+  display: flex;
+  min-height: 221px;
+  min-width: 220px;
+  position: relative;
+
+  .field--name-field-sidebar-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: .75;
+      position: absolute;
+      z-index: 1;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    .media--type-image {
+      height: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .field--name-field-sidebar-image:before {
+      opacity: .6;
+    }
+  }
+
+  .node__content {
+    align-self: flex-end;
+    color: $white;
+    padding: 2rem 0 2rem 2rem !important;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.region-content .node--type-supplemental {
+
+  >div,
+  article>div {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
