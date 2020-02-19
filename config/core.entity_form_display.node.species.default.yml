@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
     - field.field.node.species.field_gallery
+    - field.field.node.species.field_habitat_paragraph
     - field.field.node.species.field_heading
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
@@ -89,6 +90,7 @@ third_party_settings:
     group_habitat:
       children:
         - field_kml
+        - field_habitat_paragraph
       parent_name: ''
       weight: 5
       format_type: details
@@ -268,6 +270,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: viewfield_select
+    region: content
+  field_habitat_paragraph:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_heading:
     weight: 25
