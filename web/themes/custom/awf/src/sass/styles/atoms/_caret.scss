@@ -1,0 +1,14 @@
+// Caret styles
+
+.carrot,
+.caret {
+  &:before {
+    content: "› ";
+    font-size: 2.16rem;
+    font-style: normal;
+    float: left;
+    position: relative;
+    top: -7px;
+    margin-right: 0.75rem;
+  }
+}
