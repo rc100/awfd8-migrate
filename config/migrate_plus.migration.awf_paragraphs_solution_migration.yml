@@ -17,6 +17,7 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
+  field_name: field_solution
 process:
   type:
     plugin: default_value
@@ -27,7 +28,7 @@ process:
   field_solution_text: field_solution_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: field_solution_paragraph
+  default_bundle: solution
 migration_dependencies:
   required: {  }
   optional: {  }

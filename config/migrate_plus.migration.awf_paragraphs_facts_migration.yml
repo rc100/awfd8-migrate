@@ -21,19 +21,13 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: field_facts
+    default_value: facts
   revision_id: revision_id
   field_facts_label: field_fact_label
-  field_facts_description:
-    plugin: sub_process
-    source: field_fact_text
-    process:
-      value: value
-      format: format
-    revision_id: revision_id
+  field_facts_description: field_fact_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: field_facts_paragraph
+  default_bundle: facts
 migration_dependencies:
   required: {  }
   optional: {  }

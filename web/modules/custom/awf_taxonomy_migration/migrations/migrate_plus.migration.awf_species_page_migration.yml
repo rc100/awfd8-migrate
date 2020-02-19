@@ -245,20 +245,44 @@ process:
           plugin: extract
           index:
             - 1
-      # temporary_ids:
-      #   plugin: migration_lookup
-      #   migration: awf_paragraphs_sidebar_migration
-      #   source: revision_id
-      # target_id:
-      #   plugin: extract
-      #   source: '@temporary_ids'
-      #   index:
-      #     - 0
-      # target_revision_id:
-      #   plugin: extract
-      #   source: '@temporary_ids'
-      #   index: 
-      #     - 1
+  field_habitat_paragraph:
+    plugin: sub_process
+    source: field_animal_habitat
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing habitat revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_habitat_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: asg_print
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id: 
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing habitat revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_habitat_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
   field_tags_community:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
@@ -324,3 +348,4 @@ migration_dependencies:
     - awf_paragraphs_overview_migration
     - awf_paragraphs_facts_migration
     - awf_paragraphs_solution_migration
+    - awf_paragraphs_habitat_migration

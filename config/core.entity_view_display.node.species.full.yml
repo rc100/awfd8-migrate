@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
     - field.field.node.species.field_gallery
+    - field.field.node.species.field_habitat_paragraph
     - field.field.node.species.field_heading
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
@@ -155,6 +156,7 @@ hidden:
   field_featured: true
   field_featured_text: true
   field_gallery: true
+  field_habitat_paragraph: true
   field_kml: true
   field_legacy_alias: true
   field_legacy_id: true

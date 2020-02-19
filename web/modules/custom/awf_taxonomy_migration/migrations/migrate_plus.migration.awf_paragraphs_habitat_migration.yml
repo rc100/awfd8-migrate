@@ -14,20 +14,22 @@ migration_tags:
   - 'Drupal 7'
 migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
-source:
+source: 
   plugin: d7_field_collection_item_asg
-  field_name: field_facts
+  field_name: field_animal_habitat
 process:
   type: 
     plugin: default_value
-    default_value: facts
+    default_value: animal_habitat
   revision_id: revision_id
-  field_facts_label: field_fact_label
-  field_facts_description: field_fact_text
+  field_animal_body: field_collapsible_body
+  field_collapsible_heading: field_collapsible_heading
+  # Field on Drupal7 is empty. Not being used
+  # field_animal_reference:  field_collapsible_reference
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   # asg change. should be default default_value = facts
-  default_bundle: facts
+  default_bundle: animal_habitat
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }
