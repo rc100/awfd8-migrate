@@ -58,7 +58,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 1.25rem;
+  margin: 0 0 2rem;
 }
 
 cite {
@@ -75,7 +75,13 @@ cite {
 .lazyload {
   transition: all 700ms;
 }
-.red {
-  color: $red;
+
+.subhead {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
 }
 
+.italic {
+  font-style: italic;
+}
