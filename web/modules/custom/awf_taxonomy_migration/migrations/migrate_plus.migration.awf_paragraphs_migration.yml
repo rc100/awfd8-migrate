@@ -16,6 +16,7 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
+  field_name: field_module
 process:
   type:
     plugin: default_value
@@ -36,7 +37,7 @@ process:
   # field_block_reference: field_block_reference
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: field_module
+  default_bundle: module
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }

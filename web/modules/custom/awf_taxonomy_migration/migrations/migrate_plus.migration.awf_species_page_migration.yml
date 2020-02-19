@@ -62,27 +62,38 @@ process:
     plugin: sub_process
     source: field_overview_facts
     process:
-      temporary_ids:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_overview_migration
           source: revision_id
         -
-          plugin: asg_print
-      target_id:
+          plugin: asg_reset_keys
         -
-
           plugin: extract
-          source: '@temporary_ids'
           index:
             - 0
-        -
-          plugin: asg_print
       target_revision_id:
-        plugin: extract
-        source: '@temporary_ids'
-        index:
-          - 1
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_overview_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
   field_sound:
     source: field_sound
     plugin: sub_process
@@ -98,18 +109,32 @@ process:
     process:
       target_id:
         -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing facts revision_id'
+        -
           plugin: migration_lookup
           migration: awf_paragraphs_facts_migration
           source: revision_id
+        -
+          plugin: asg_reset_keys
         -
           plugin: extract
           index:
             - 0
       target_revision_id:
         -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing facts revision_id'
+        -
           plugin: migration_lookup
           migration: awf_paragraphs_facts_migration
           source: revision_id
+        -
+          plugin: asg_reset_keys
         -
           plugin: extract
           index:
@@ -153,42 +178,87 @@ process:
     process:
       target_id:
         -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing solution revision_id'
+        -
           plugin: migration_lookup
           migration: awf_paragraphs_solution_migration
           source: revision_id
+        -
+          plugin: asg_reset_keys
         -
           plugin: extract
           index:
             - 0
       target_revision_id:
         -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing solution revision_id'
+        -
           plugin: migration_lookup
           migration: awf_paragraphs_solution_migration
           source: revision_id
+        -
+          plugin: asg_reset_keys
         -
           plugin: extract
           index:
             - 1
   field_project_text: field_project_text
-#for some stupid stupid reason, this feel successd more times, the more you run it.
   field_sidebar_item_paragraph:
     plugin: sub_process
     source: field_sidebar_item
     process:
-      temporary_ids:
-        plugin: migration_lookup
-        migration: awf_paragraphs_sidebar_migration
-        source: revision_id
       target_id:
-        plugin: extract
-        source: '@temporary_ids'
-        index:
-          - 0
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing sidebar_item revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_sidebar_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
       target_revision_id:
-        plugin: extract
-        source: '@temporary_ids'
-        index: 
-          - 1
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing sidebar_item revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_sidebar_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+      # temporary_ids:
+      #   plugin: migration_lookup
+      #   migration: awf_paragraphs_sidebar_migration
+      #   source: revision_id
+      # target_id:
+      #   plugin: extract
+      #   source: '@temporary_ids'
+      #   index:
+      #     - 0
+      # target_revision_id:
+      #   plugin: extract
+      #   source: '@temporary_ids'
+      #   index: 
+      #     - 1
   field_tags_community:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
@@ -241,12 +311,16 @@ process:
     migration: awf_taxonomy_term_migration
     source: field_size
   field_meta_tags: metatags
+  field_legacy_alias: alias
+  field_legacy_revision_id: vid
+  field_legacy_id: nid
 destination:
   plugin: entity:node
   default_bundle: species
 migration_dependencies:
   required:
     - awf_paragraphs_migration
+    - awf_paragraphs_sidebar_migration
     - awf_paragraphs_overview_migration
     - awf_paragraphs_facts_migration
     - awf_paragraphs_solution_migration

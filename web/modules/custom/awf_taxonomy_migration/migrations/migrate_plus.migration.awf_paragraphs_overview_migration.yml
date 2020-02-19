@@ -16,6 +16,7 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
+  field_name: field_overview_facts
 process:
   type:
     plugin: default_value
@@ -26,7 +27,7 @@ process:
   field_overview_fact_bottom: field_fact_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: field_overview_paragraph
+  default_bundle: overview_facts
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }

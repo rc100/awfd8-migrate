@@ -31,6 +31,7 @@ class FieldCollectionItem extends FieldableEntity {
         'archived',
       ]);
     if (isset($this->configuration['field_name'])) {
+        // \Drupal::logger('awf_taxonomy_migration')->alert('asg config - ' . $this->configuration['field_name']);
       $query->innerJoin('field_data_' . $this->configuration['field_name'], 'fd', 'fd.' . $this->configuration['field_name'] . '_value = fci.item_id');
       $query->fields('fd', [
         'entity_type',
@@ -39,8 +40,11 @@ class FieldCollectionItem extends FieldableEntity {
         $this->configuration['field_name'] . '_revision_id',
       ]);
       $query->condition('fci.field_name', $this->configuration['field_name']);
+    
+    } else {
+           \Drupal::logger('awf_taxonomy_migration')->alert('asg config - no config');
     }
-    // \Drupal::logger('awf_taxonomy_migration')->alert('asg migration found / triggered. v6');
+
     return $query;
   }
   /**

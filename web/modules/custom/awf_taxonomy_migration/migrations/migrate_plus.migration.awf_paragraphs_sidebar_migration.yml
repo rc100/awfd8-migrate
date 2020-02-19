@@ -16,6 +16,7 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
+  field_name: field_sidebar_item
 process:
   type:
     plugin: default_value
@@ -43,7 +44,7 @@ process:
         - awf_species_page_migration
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: field_sidebar_item
+  default_bundle: sidebar_item
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }
