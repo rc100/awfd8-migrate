@@ -1,0 +1,70 @@
+uuid: 74b53e9f-c1df-458a-8abd-35efd9bb29d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery
+    - node.type.species
+    - views.view.galleries_file
+  module:
+    - viewfield
+id: node.species.field_gallery
+field_name: field_gallery
+entity_type: node
+bundle: species
+label: Gallery
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: block_1
+    arguments: ''
+    items_to_display: ''
+    target_uuid: cdf17465-8bf4-42a5-b5c8-8f1cc8b9c593
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    galleries_file: galleries_file
+    admin_migration_tracking: '0'
+    all_terms: '0'
+    blog: '0'
+    blog_terms: '0'
+    careers: '0'
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    facts: '0'
+    featured_animals: '0'
+    file_entity_files: '0'
+    frontpage: '0'
+    gallery_pages: '0'
+    hero: '0'
+    hero_slideshow: '0'
+    history: '0'
+    homepage_multi_view: '0'
+    media_library: '0'
+    moderated_content: '0'
+    news: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+    workflow_entity_history: '0'
+  allowed_display_types:
+    block: block
+    attachment: '0'
+    data_export: '0'
+    embed: '0'
+    entity_reference: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

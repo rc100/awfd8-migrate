@@ -10,7 +10,7 @@ id: node.species.field_tags_animal
 field_name: field_tags_animal
 entity_type: node
 bundle: species
-label: 'Admin Name'
+label: 'Animal Name'
 description: ''
 required: true
 translatable: true

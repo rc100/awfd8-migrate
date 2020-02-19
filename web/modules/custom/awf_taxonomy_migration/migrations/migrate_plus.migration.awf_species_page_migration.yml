@@ -1,0 +1,326 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - awf_taxonomy_migration
+  enforced:
+    modules:
+      - awf_taxonomy_migration
+id: awf_species_page_migration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: {  }
+cck_plugin_method: {  }
+migration_tags:
+  - 'Drupal 7'
+migration_group: awf_migration_group
+label: 'AWF Blog Migration'
+source:
+  plugin: asg_node_source
+  node_type: animal
+process:
+  uid:
+    plugin: migration_lookup
+    migration: awf_users_migration
+    source: node_uid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "en"
+  title: title
+  status: status
+  created: created
+  changed: changed
+  promoted: promoted
+  revision_uid: revision_uid
+  revision_log: revision_log
+  revision_timestamp: timestamp
+  field_blog_legacy_alias: alias
+  field_blog_legacy_id: nid
+  path: alias
+  body: body
+  field_tags_animal:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_species
+  field_main_image:
+    plugin: sub_process
+    source: field_main_image
+    process: 
+      target_id:
+        -
+          plugin: migration_lookup
+          migration: awf_files_migration
+          source: fid
+      alt: alt
+      width: width
+      height: height
+      title: title
+  field_photo_credit: field_photo_credit
+  field_heading: field_heading
+  field_conservation_status: field_conservation_status
+  field_overview_paragraph:
+    plugin: sub_process
+    source: field_overview_facts
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_overview_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_overview_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+  field_sound:
+    source: field_sound
+    plugin: sub_process
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: awf_files_migration
+        nostub: true
+        source: fid
+  field_facts_paragraph:
+    plugin: sub_process
+    source: field_facts
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing facts revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_facts_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing facts revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_facts_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+  field_kml:
+    plugin: sub_process
+    source: field_kml
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: awf_files_migration
+        nostub: true
+        source: fid
+      display: display
+  # Are we not migrating the animal habitat paragraph type?
+  # field_animal_habitat:
+  #   plugin: migration_lookup
+  #   migration: awf_taxonomy_migration
+  #   source: field_animal_habitat
+
+  field_gallery:
+    plugin: sub_process
+    source: field_gallery
+    process:
+      target_id:
+        plugin: static_map
+        source: moddelta
+        map:
+          'views:galleries-block': 'break'
+      display_id:
+        -
+          plugin: static_map
+          source: moddelta
+          map:
+            'views:galleries-block': 'block'
+  field_challenges: field_challenges
+  field_solutions: field_solutions
+  field_solution_paragraph:
+    plugin: sub_process
+    source:  field_solution
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing solution revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_solution_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing solution revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_solution_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+  field_project_text: field_project_text
+  field_sidebar_item_paragraph:
+    plugin: sub_process
+    source: field_sidebar_item
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing sidebar_item revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_sidebar_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing sidebar_item revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_sidebar_migration
+          source: revision_id
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+      # temporary_ids:
+      #   plugin: migration_lookup
+      #   migration: awf_paragraphs_sidebar_migration
+      #   source: revision_id
+      # target_id:
+      #   plugin: extract
+      #   source: '@temporary_ids'
+      #   index:
+      #     - 0
+      # target_revision_id:
+      #   plugin: extract
+      #   source: '@temporary_ids'
+      #   index: 
+      #     - 1
+  field_tags_community:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_community
+  field_tags_country:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_country
+  field_tags_economic:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_economic
+  field_land_habitat: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_land_habitat
+  field_tags_region: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_region
+  field_tags_africa: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_africa
+  field_tags_projects: 
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_tags_projects
+  field_featured: field_featured
+  field_featured_text: field_featured_text
+  field_weight: field_weight
+  field_alternate_thumbnail:
+    plugin: sub_process
+    source: field_alternate_thumbnail
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: awf_files_migration
+        source: fid
+      width: width
+      height: height
+      alt: alt
+      title: title
+  field_species:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_species
+  field_size:
+    plugin: migration_lookup
+    migration: awf_taxonomy_term_migration
+    source: field_size
+  field_meta_tags: metatags
+  field_legacy_alias: alias
+  field_legacy_revision_id: vid
+  field_legacy_id: nid
+destination:
+  plugin: entity:node
+  default_bundle: species
+migration_dependencies:
+  required:
+    - awf_paragraphs_migration
+    - awf_paragraphs_sidebar_migration
+    - awf_paragraphs_overview_migration
+    - awf_paragraphs_facts_migration
+    - awf_paragraphs_solution_migration

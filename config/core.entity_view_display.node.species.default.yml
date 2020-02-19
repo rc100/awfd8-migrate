@@ -10,12 +10,14 @@ dependencies:
     - field.field.node.species.field_facts_paragraph
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
+    - field.field.node.species.field_gallery
     - field.field.node.species.field_heading
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
     - field.field.node.species.field_legacy_id
     - field.field.node.species.field_legacy_revision_id
     - field.field.node.species.field_main_image
+    - field.field.node.species.field_meta_tags
     - field.field.node.species.field_overview_paragraph
     - field.field.node.species.field_photo_credit
     - field.field.node.species.field_project_text
@@ -35,9 +37,11 @@ dependencies:
     - entity_reference_revisions
     - file
     - image
+    - metatag
     - options
     - text
     - user
+    - viewfield
 id: node.species.default
 targetEntityType: node
 bundle: species
@@ -82,6 +86,16 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_gallery:
+    weight: 17
+    label: above
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
   field_heading:
     weight: 0
     label: hidden
@@ -105,6 +119,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_meta_tags:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_overview_paragraph:
     type: entity_reference_revisions_entity_view

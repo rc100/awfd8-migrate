@@ -6,7 +6,7 @@ dependencies:
   enforced:
     modules:
       - awf_taxonomy_migration
-id: awf_paragraphs_migration
+id: awf_paragraphs_solution_migration
 class: null
 field_plugin_method: {  }
 cck_plugin_method: {  }
@@ -16,28 +16,18 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
-  field_name: field_module
+  field_name: field_solution
 process:
   type:
     plugin: default_value
-    default_value: module
-  field_description: field_description
+    default_value: solution
   revision_id: revision_id
-  field_image:
-    plugin: iterator
-    source: field_image
-    process:
-      target_id: fid
-      alt: alt
-      title: title
-      width: width
-      height: height
-  field_layout_style: field_layout_style
-  #field_block_reference will probubly be populated by the node migrations
-  # field_block_reference: field_block_reference
+  field_solution_heading: field_solution_heading
+  field_solution_icon: field_icon
+  field_solution_text: field_solution_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: module
+  default_bundle: solution
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }

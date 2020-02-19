@@ -6,7 +6,7 @@ dependencies:
   enforced:
     modules:
       - awf_taxonomy_migration
-id: awf_paragraphs_migration
+id: awf_paragraphs_habitat_migration
 class: null
 field_plugin_method: {  }
 cck_plugin_method: {  }
@@ -16,28 +16,18 @@ migration_group: awf_migration_group
 label: 'AWF Paragraphs Migration'
 source:
   plugin: d7_field_collection_item_asg
-  field_name: field_module
+  field_name: field_facts
 process:
-  type:
+  type: 
     plugin: default_value
-    default_value: module
-  field_description: field_description
+    default_value: facts
   revision_id: revision_id
-  field_image:
-    plugin: iterator
-    source: field_image
-    process:
-      target_id: fid
-      alt: alt
-      title: title
-      width: width
-      height: height
-  field_layout_style: field_layout_style
-  #field_block_reference will probubly be populated by the node migrations
-  # field_block_reference: field_block_reference
+  field_facts_label: field_fact_label
+  field_facts_description: field_fact_text
 destination:
   plugin: 'entity_reference_revisions:paragraph'
-  default_bundle: module
+  # asg change. should be default default_value = facts
+  default_bundle: facts
   # plugin: entity:paragraph
 migration_dependencies:
   required: { }
