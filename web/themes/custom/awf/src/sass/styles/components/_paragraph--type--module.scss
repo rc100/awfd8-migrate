@@ -1,0 +1,19 @@
+// Paragraph - Module
+
+.field--name-field-module {
+  .field__item + .field__item {
+    padding-top: 2.5rem;
+  }
+}
+
+.paragraph--type--module {
+  &:after {
+    background: $lighttan;
+    content: '';
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+  }
+}
