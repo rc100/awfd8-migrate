@@ -20,4 +20,22 @@
   .full.mb15 {
     padding: 1rem 0;
   }
+
+  .eight.columns.alpha {
+    width: 100%;
+    display: inline-block;
+
+    @include breakpoint($min760) {
+      width: 48%;
+    }
+  }
+
+  .eight+.eight {
+    width: 100%;
+
+    @include breakpoint($min760) {
+      float: right;
+      width: 50%;
+    }
+  }
 }
