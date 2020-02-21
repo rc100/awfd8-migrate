@@ -1,0 +1,25 @@
+uuid: 10c6cf36-4065-49ae-9fd1-23e86ee93b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.safari
+  module:
+    - views
+  theme:
+    - awf
+id: views_block__safari_block_1
+theme: awf
+region: disabled
+weight: 0
+provider: null
+plugin: 'views_block:safari-block_1'
+settings:
+  id: 'views_block:safari-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }
