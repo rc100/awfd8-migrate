@@ -33,8 +33,16 @@ process:
       width: width
       height: height
   field_layout_style: field_layout_style
-  #field_block_reference will probubly be populated by the node migrations
-  # field_block_reference: field_block_reference
+  # field_block_ref: 
+  #   -
+  #     plugin: asg_print
+  #     source: field_block_reference
+  #   -
+  #     plugin: asg_views_map
+  field_view_reference:
+    -
+      plugin: asg_views_map
+      source: field_block_reference
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: module

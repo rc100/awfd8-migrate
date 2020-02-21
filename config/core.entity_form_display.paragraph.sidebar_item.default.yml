@@ -5,25 +5,29 @@ dependencies:
   config:
     - field.field.paragraph.sidebar_item.field_block_ref
     - field.field.paragraph.sidebar_item.field_supplemental_reference
+    - field.field.paragraph.sidebar_item.field_view_reference
     - paragraphs.paragraphs_type.sidebar_item
+  module:
+    - viewfield
 id: paragraph.sidebar_item.default
 targetEntityType: paragraph
 bundle: sidebar_item
 mode: default
 content:
-  field_block_ref:
-    weight: 2
+  field_supplemental_reference:
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_supplemental_reference:
+  field_view_reference:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: viewfield_select
     region: content
 hidden:
   created: true
+  field_block_ref: true
   status: true
   uid: true

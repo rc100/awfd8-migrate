@@ -22,16 +22,19 @@ process:
     plugin: default_value
     default_value: sidebar_item
   revision_id: revision_id
-  field_block_ref: 
-    plugin: get
-    source: field_block_reference
+  # field_block_ref: 
+  #   plugin: get
+  #   source: field_block_reference
+
+  field_view_reference:
+    -
+      plugin: asg_views_map
+      source: field_block_reference
   field_supplemental_reference:
     -
       plugin: skip_on_empty
       method: process
       source: field_supplemental_reference
-    -
-      plugin: asg_print
     -
       plugin: migration_lookup
       migration:

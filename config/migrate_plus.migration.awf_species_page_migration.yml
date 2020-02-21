@@ -151,20 +151,9 @@ process:
         source: fid
       display: display
   field_gallery:
-    plugin: sub_process
-    source: field_gallery
-    process:
-      target_id:
-        plugin: static_map
-        source: moddelta
-        map:
-          'views:galleries-block': break
-      display_id:
-        -
-          plugin: static_map
-          source: moddelta
-          map:
-            'views:galleries-block': block
+    -
+      plugin: asg_views_map
+      source: field_gallery
   field_challenges: field_challenges
   field_solutions: field_solutions
   field_solution_paragraph:
@@ -256,8 +245,6 @@ process:
           source: revision_id
         -
           plugin: asg_reset_keys
-        -
-          plugin: asg_print
         -
           plugin: extract
           index:
