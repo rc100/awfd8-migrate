@@ -119,6 +119,10 @@ class AsgViewsMap extends ProcessPluginBase {
 				$block = 'block_9';
 				break;
 
+			case 'references_1'
+				$block = 'entity_reference_1';
+				break;
+
 			default:
 			
 				break;
