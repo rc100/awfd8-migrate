@@ -1,0 +1,15 @@
+uuid: 0c0c8374-a89e-4296-a32f-d1260a4833a1
+langcode: en
+status: true
+dependencies: {  }
+name: featured_animals
+label: featured_animals
+effects:
+  7236f2c9-7925-426e-a4d3-ae3c32d40dbd:
+    uuid: 7236f2c9-7925-426e-a4d3-ae3c32d40dbd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 125
+      height: 70
+      anchor: center-center
