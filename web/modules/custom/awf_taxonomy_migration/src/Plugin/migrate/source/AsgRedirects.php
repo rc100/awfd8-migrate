@@ -36,12 +36,19 @@ class AsgRedirects extends PathRedirect {
 		$current_redirect = $row->getSourceProperty('redirect');
 		$explode_current_redirect = explode("/", $current_redirect);
 
-
+		
 		$map_contents_array = array(
-			'basic_page',
-			'about_page',
-			'blog',
-			'news'
+			'basic_page' => 'basic_page',
+			'about_page' => 'about_page',
+			'blog' => 'blog',
+			// 'news_page',
+			// 'resource_page',
+			'supplemental' => 'supplemental',
+			// 'species_page',
+
+			'news' => 'news_page',
+			'resouce' => 'resource_page',
+			'animal' => 'species_page'		
 		);
 
 		if($explode_current_redirect[0] == 'node') {
@@ -52,10 +59,12 @@ class AsgRedirects extends PathRedirect {
 				->execute()
 				->fetchField();
 		
-			if (in_array($resource_type, $map_contents_array)) {
+
+
+			if (in_array($resource_type, array_keys($map_contents_array))) {
 
 				$new_node_id = Database::getConnection('default', 'default')
-					->select('migrate_map_awf_' . $resource_type . '_migration', 'm')
+					->select('migrate_map_awf_' . $map_contents_array[$resource_type] . '_migration', 'm')
 					->fields('m', ['destid1'])
 					->condition('sourceid1', $explode_current_redirect[1])
 					->execute()
