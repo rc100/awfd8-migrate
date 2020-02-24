@@ -1,0 +1,31 @@
+uuid: fd86f16a-b232-4f20-bc8e-51431e971aaf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1f60c7e2-4b2a-4d67-a0db-8afc3d53cbcf'
+  module:
+    - block_content
+    - system
+  theme:
+    - awf
+id: contactinfosafari
+theme: awf
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:1f60c7e2-4b2a-4d67-a0db-8afc3d53cbcf'
+settings:
+  id: 'block_content:1f60c7e2-4b2a-4d67-a0db-8afc3d53cbcf'
+  label: 'Contact Info - Safari'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about/safaris
+    negate: false
+    context_mapping: {  }

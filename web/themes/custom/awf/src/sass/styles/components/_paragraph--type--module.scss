@@ -21,6 +21,10 @@
     padding: 1rem 0;
   }
 
+  .row {
+    overflow: auto;
+  }
+
   .eight.columns.alpha {
     width: 100%;
     display: inline-block;
