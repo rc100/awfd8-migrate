@@ -1,0 +1,13 @@
+// Sidebar styling
+
+.region-sidebar-second {
+  padding: 2rem;
+
+  @include breakpoint($min760) {
+    padding: 0;
+  }
+
+  .field {
+    margin: 0;
+  }
+}
