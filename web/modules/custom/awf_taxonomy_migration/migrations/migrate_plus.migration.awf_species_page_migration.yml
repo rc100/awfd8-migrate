@@ -59,58 +59,54 @@ process:
   field_heading: field_heading
   field_conservation_status: field_conservation_status
   field_overview_paragraph:
-    -
-      plugin: asg_print
-      source: field_overview_facts
-    -
-      plugin: sub_process
-      process:
-        target_id:
-          -
-            plugin: skip_on_empty
-            source: revision_id
-            method: process
-            message: 'ASG Missing overview revision_id'
-          -
-            plugin: migration_lookup
-            migration: awf_paragraphs_overview_migration
-            source: revision_id
-          -
-            plugin: asg_print
-          -
-            plugin: asg_reset_keys
-          -
-            plugin: extract
-            index:
-              - 0
-          -
-            plugin: skip_on_empty
-            method: process
-            message: 'ASG Migration lookup failed - target_id'
-          # --idlist=nodeid,nid
-        target_revision_id:
-          -
-            plugin: skip_on_empty
-            source: revision_id
-            method: process
-            message: 'ASG Missing overview revision_id'
-          -
-            plugin: migration_lookup
-            migration: awf_paragraphs_overview_migration
-            source: revision_id
-          -
-            plugin: asg_print
-          -
-            plugin: asg_reset_keys
-          -
-            plugin: extract
-            index:
-              - 1
-          -
-            plugin: skip_on_empty
-            method: process
-            message: 'ASG Migration lookup failed - target_id'
-          # --idlist=nodeid,nid
+    plugin: sub_process
+    process:
+      target_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_overview_migration
+          source: revision_id
+        -
+          plugin: asg_print
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 0
+        -
+          plugin: skip_on_empty
+          method: process
+          message: 'ASG Migration lookup failed - target_id'
+        # --idlist=nodeid,nid
+      target_revision_id:
+        -
+          plugin: skip_on_empty
+          source: revision_id
+          method: process
+          message: 'ASG Missing overview revision_id'
+        -
+          plugin: migration_lookup
+          migration: awf_paragraphs_overview_migration
+          source: revision_id
+        -
+          plugin: asg_print
+        -
+          plugin: asg_reset_keys
+        -
+          plugin: extract
+          index:
+            - 1
+        -
+          plugin: skip_on_empty
+          method: process
+          message: 'ASG Migration lookup failed - target_id'
+        # --idlist=nodeid,nid
   field_sound:
     source: field_sound
     plugin: sub_process
