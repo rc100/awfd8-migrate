@@ -59,41 +59,44 @@ process:
   field_heading: field_heading
   field_conservation_status: field_conservation_status
   field_overview_paragraph:
-    plugin: sub_process
-    source: field_overview_facts
-    process:
-      target_id:
-        -
-          plugin: skip_on_empty
-          source: revision_id
-          method: process
-          message: 'ASG Missing overview revision_id'
-        -
-          plugin: migration_lookup
-          migration: awf_paragraphs_overview_migration
-          source: revision_id
-        -
-          plugin: asg_reset_keys
-        -
-          plugin: extract
-          index:
-            - 0
-      target_revision_id:
-        -
-          plugin: skip_on_empty
-          source: revision_id
-          method: process
-          message: 'ASG Missing overview revision_id'
-        -
-          plugin: migration_lookup
-          migration: awf_paragraphs_overview_migration
-          source: revision_id
-        -
-          plugin: asg_reset_keys
-        -
-          plugin: extract
-          index:
-            - 1
+    -
+      plugin: asg_print
+      source: field_overview_facts
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          -
+            plugin: skip_on_empty
+            source: revision_id
+            method: process
+            message: 'ASG Missing overview revision_id'
+          -
+            plugin: migration_lookup
+            migration: awf_paragraphs_overview_migration
+            source: revision_id
+          -
+            plugin: asg_reset_keys
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: skip_on_empty
+            source: revision_id
+            method: process
+            message: 'ASG Missing overview revision_id'
+          -
+            plugin: migration_lookup
+            migration: awf_paragraphs_overview_migration
+            source: revision_id
+          -
+            plugin: asg_reset_keys
+          -
+            plugin: extract
+            index:
+              - 1
   field_sound:
     source: field_sound
     plugin: sub_process
