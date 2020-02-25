@@ -76,11 +76,18 @@ process:
             migration: awf_paragraphs_overview_migration
             source: revision_id
           -
+            plugin: asg_print
+          -
             plugin: asg_reset_keys
           -
             plugin: extract
             index:
               - 0
+          -
+            plugin: skip_on_empty
+            method: process
+            message: 'ASG Migration lookup failed - target_id'
+          # --idlist=nodeid,nid
         target_revision_id:
           -
             plugin: skip_on_empty
@@ -92,11 +99,18 @@ process:
             migration: awf_paragraphs_overview_migration
             source: revision_id
           -
+            plugin: asg_print
+          -
             plugin: asg_reset_keys
           -
             plugin: extract
             index:
               - 1
+          -
+            plugin: skip_on_empty
+            method: process
+            message: 'ASG Migration lookup failed - target_id'
+          # --idlist=nodeid,nid
   field_sound:
     source: field_sound
     plugin: sub_process
