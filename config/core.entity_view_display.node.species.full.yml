@@ -133,7 +133,7 @@ content:
     region: content
   field_sidebar_item_paragraph:
     weight: 10
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''

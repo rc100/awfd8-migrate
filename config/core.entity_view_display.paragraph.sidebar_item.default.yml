@@ -36,9 +36,9 @@ content:
     weight: 3
     label: above
     settings:
-      view_title: hidden
-      always_build_output: false
-      empty_view_title: hidden
+      view_title: inline
+      always_build_output: true
+      empty_view_title: inline
     third_party_settings: {  }
     type: viewfield_default
     region: content

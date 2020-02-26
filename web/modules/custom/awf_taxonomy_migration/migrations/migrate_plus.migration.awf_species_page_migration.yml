@@ -51,10 +51,13 @@ process:
           plugin: migration_lookup
           migration: awf_files_migration
           source: fid
-      alt: alt
-      width: width
-      height: height
-      title: title
+    alt:
+      plugin: default_value
+      source: alt
+      default_vlue: "asg alt"
+    width: width
+    height: height
+    title: title
   field_photo_credit: field_photo_credit
   field_heading: field_heading
   field_conservation_status: field_conservation_status
