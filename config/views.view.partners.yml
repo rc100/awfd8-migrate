@@ -580,8 +580,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: 'three columns alpha'
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -644,8 +644,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: 'twelve columns omega'
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -799,7 +799,7 @@ display:
               field: field_tags_partners
               rendered: true
               rendered_strip: false
-          row_class: ''
+          row_class: row
           default_row_class: false
       row:
         type: fields

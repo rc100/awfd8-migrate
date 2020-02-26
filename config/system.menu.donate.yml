@@ -1,0 +1,8 @@
+uuid: 145fed17-1917-4343-bf71-d775b6c78bed
+langcode: en
+status: true
+dependencies: {  }
+id: donate
+label: Donate
+description: 'Creates menu for donate pages'
+locked: false
