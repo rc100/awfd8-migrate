@@ -22,7 +22,23 @@
   }
 
   .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: auto;
+
+
+    @include breakpoint($min760) {
+      flex-direction: row;
+    }
+
+    .three.columns {
+      width: 17.021304%;
+    }
+
+    .twelve.columns {
+      width: 74.468205%;
+    }
   }
 
   .eight.columns.alpha {
