@@ -207,7 +207,7 @@ process:
           index:
             - 1
   field_project_text: field_project_text
-  field_sidebar_item_paragraph:
+  field_sidebar_items_paragraph:
     plugin: sub_process
     source: field_sidebar_item
     process:

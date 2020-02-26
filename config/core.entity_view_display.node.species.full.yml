@@ -23,7 +23,7 @@ dependencies:
     - field.field.node.species.field_overview_paragraph
     - field.field.node.species.field_photo_credit
     - field.field.node.species.field_project_text
-    - field.field.node.species.field_sidebar_item_paragraph
+    - field.field.node.species.field_sidebar_items_paragraph
     - field.field.node.species.field_size
     - field.field.node.species.field_solution_paragraph
     - field.field.node.species.field_solutions
@@ -74,7 +74,7 @@ content:
     region: content
   field_gallery:
     type: viewfield_default
-    weight: 14
+    weight: 13
     region: content
     label: above
     settings:
@@ -84,7 +84,7 @@ content:
     third_party_settings: {  }
   field_habitat_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 13
+    weight: 12
     region: content
     label: above
     settings:
@@ -125,31 +125,31 @@ content:
     type: string
     region: content
   field_project_text:
-    weight: 12
+    weight: 11
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_sidebar_item_paragraph:
-    weight: 10
+  field_sidebar_items_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 16
+    region: content
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_size:
     type: entity_reference_label
-    weight: 16
+    weight: 15
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   field_solution_paragraph:
-    weight: 11
+    weight: 10
     label: hidden
     settings:
       view_mode: default
@@ -173,7 +173,7 @@ content:
     region: content
   field_species:
     type: entity_reference_rss_category
-    weight: 15
+    weight: 14
     region: content
     label: above
     settings: {  }

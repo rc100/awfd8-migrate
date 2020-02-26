@@ -1,21 +1,21 @@
-uuid: d3b957c1-4998-4e69-b172-fe273207d8da
+uuid: 10e9c1d5-657d-4f7a-8a53-eb0a2ea5d2d7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sidebar_item_paragraph
+    - field.storage.node.field_sidebar_items_paragraph
     - node.type.species
     - paragraphs.paragraphs_type.sidebar_item
   module:
     - entity_reference_revisions
-id: node.species.field_sidebar_item_paragraph
-field_name: field_sidebar_item_paragraph
+id: node.species.field_sidebar_items_paragraph
+field_name: field_sidebar_items_paragraph
 entity_type: node
 bundle: species
-label: Item
+label: Items
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

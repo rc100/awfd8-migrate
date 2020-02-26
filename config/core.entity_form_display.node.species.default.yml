@@ -22,7 +22,7 @@ dependencies:
     - field.field.node.species.field_overview_paragraph
     - field.field.node.species.field_photo_credit
     - field.field.node.species.field_project_text
-    - field.field.node.species.field_sidebar_item_paragraph
+    - field.field.node.species.field_sidebar_items_paragraph
     - field.field.node.species.field_size
     - field.field.node.species.field_solution_paragraph
     - field.field.node.species.field_solutions
@@ -362,17 +362,17 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_sidebar_item_paragraph:
-    weight: 18
+  field_sidebar_items_paragraph:
+    type: entity_reference_paragraphs
+    weight: 32
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: sidebar_item
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_paragraphs
     region: content
   field_size:
     weight: 26
