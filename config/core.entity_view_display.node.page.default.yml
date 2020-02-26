@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_about_page
     - field.field.node.page.field_basic_legacy_revision_id
     - field.field.node.page.field_basic_page_files
     - field.field.node.page.field_basic_page_images
@@ -42,6 +43,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_about_page:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_basic_page_files:
     weight: 3
     label: above

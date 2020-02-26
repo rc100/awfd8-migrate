@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_about_page
     - field.field.node.page.field_basic_legacy_revision_id
     - field.field.node.page.field_basic_page_files
     - field.field.node.page.field_basic_page_images
@@ -35,14 +36,26 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
+    weight: 0
     region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
-  links:
-    weight: 101
+  field_about_page:
+    type: boolean
+    weight: 19
     region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_basic_legacy_revision_id: true
   field_basic_page_files: true
