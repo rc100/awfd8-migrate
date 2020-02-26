@@ -1,0 +1,54 @@
+uuid: 8f3191f3-a7f4-48d4-8121-7f5db1847db9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ways_to_give.field_heading_unformatted
+    - field.field.node.ways_to_give.field_legacy_alias
+    - field.field.node.ways_to_give.field_legacy_id
+    - field.field.node.ways_to_give.field_legacy_revision_id
+    - field.field.node.ways_to_give.field_view_more
+    - field.field.node.ways_to_give.field_weight
+    - node.type.ways_to_give
+  module:
+    - link
+    - options
+    - user
+id: node.ways_to_give.default
+targetEntityType: node
+bundle: ways_to_give
+mode: default
+content:
+  field_heading_unformatted:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_view_more:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_weight:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  langcode: true
+  links: true

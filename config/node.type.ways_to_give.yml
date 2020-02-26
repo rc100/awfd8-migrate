@@ -1,0 +1,17 @@
+uuid: 775e355e-987a-4427-9bf6-dce28412b2c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Ways to Give'
+type: ways_to_give
+description: 'Use <em>ways to give</em> to add a new block about how members can donate.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: 73c8e944-1fd2-43d4-b6fd-590981b78867
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reasons
+id: node.reasons.promote
+field_name: promote
+entity_type: node
+bundle: reasons
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

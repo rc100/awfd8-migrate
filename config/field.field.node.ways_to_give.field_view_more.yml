@@ -1,0 +1,23 @@
+uuid: b21c800f-04e3-49a4-8a78-4c24f54c4ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_more
+    - node.type.ways_to_give
+  module:
+    - link
+id: node.ways_to_give.field_view_more
+field_name: field_view_more
+entity_type: node
+bundle: ways_to_give
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

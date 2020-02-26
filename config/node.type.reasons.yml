@@ -1,0 +1,17 @@
+uuid: b4d0a3ca-a077-4f57-8c48-fae232523fd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Reasons
+type: reasons
+description: 'Use <em>reasons</em> to add a new reason for users to donate to AWF.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

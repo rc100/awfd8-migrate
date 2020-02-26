@@ -1,0 +1,29 @@
+uuid: f98b5c7b-7a3f-44a9-86a4-219ae4bdc081
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_region
+    - node.type.reasons
+    - taxonomy.vocabulary.region
+id: node.reasons.field_tags_region
+field_name: field_tags_region
+entity_type: node
+bundle: reasons
+label: 'Regions Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

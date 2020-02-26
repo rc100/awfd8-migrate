@@ -1,0 +1,23 @@
+uuid: af69ae0c-f109-4386-8c3f-a92dc5bf496b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.ways_to_give
+id: node.ways_to_give.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: ways_to_give
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
