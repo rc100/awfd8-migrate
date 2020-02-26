@@ -1,0 +1,29 @@
+uuid: 3b84eba8-2048-4468-9bc1-fc2ba93ad4e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags_projects
+    - node.type.reasons
+    - taxonomy.vocabulary.projects
+id: node.reasons.field_tags_projects
+field_name: field_tags_projects
+entity_type: node
+bundle: reasons
+label: 'Projects Tagged'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      projects: projects
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

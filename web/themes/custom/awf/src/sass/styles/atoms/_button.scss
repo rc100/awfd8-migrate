@@ -11,3 +11,7 @@
   max-width: 170px;
   @include button-orange-line;
 }
+
+.btn-teal {
+  @include button-teal;
+}

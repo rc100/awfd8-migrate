@@ -222,6 +222,27 @@
   }
 }
 
+@mixin button-teal {
+  @include button-body;
+  color: $white;
+  cursor: pointer;
+  background: $teal;
+  font-size: 2.25rem;
+  font-weight: 700;
+  min-height: 38px;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s ease-in;
+  width: 205px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
 @mixin button-orange-line {
   @include button-body;
   @include button-font-size;

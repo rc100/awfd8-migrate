@@ -1,0 +1,79 @@
+// Career content type
+
+.node--type-career {
+  width: 100%;
+  max-width: 700px;
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .blog-details {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 7px;
+    margin-bottom: 7px;
+    flex-direction: column;
+
+    @include breakpoint($min760) {
+      flex-direction: row;
+    }
+  }
+
+  .bottom-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .field--name-field-date,
+  .field--name-field-location,
+  .field--name-body,
+  .learn-more {
+    display: inline-block;
+  }
+
+  .country--icon::before,
+  .calendar--icon::before {
+    background-size: 27px 29px;
+    display: inline-block;
+    content: '';
+    margin-right: 8px;
+    width: 27px;
+    height: 29px;
+  }
+
+  &.node--view-mode-full {
+    .blog-details {
+      min-height: 105px;
+    }
+
+    .left span {
+      align-items: center;
+      display: inline-flex;
+      width: 100%;
+    }
+
+    .right {
+      justify-content: flex-end;
+      display: inline-flex;
+    }
+
+    .field--name-body {
+      padding: 0 2rem;
+      margin: 0;
+    }
+
+    .all {
+      text-align: right;
+      display: block;
+      font-size: 2.25rem;
+    }
+
+    .datetime {
+      margin-left: 0.5rem;
+    }
+  }
+}

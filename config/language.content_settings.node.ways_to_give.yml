@@ -1,0 +1,11 @@
+uuid: 09376cb1-3ef4-487c-9a15-43914db07334
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ways_to_give
+id: node.ways_to_give
+target_entity_type_id: node
+target_bundle: ways_to_give
+default_langcode: site_default
+language_alterable: false

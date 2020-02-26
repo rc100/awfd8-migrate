@@ -1,0 +1,23 @@
+uuid: ca3137d3-9e7a-4626-812e-5604a58efa90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_revision_id
+    - node.type.ways_to_give
+id: node.ways_to_give.field_legacy_revision_id
+field_name: field_legacy_revision_id
+entity_type: node
+bundle: ways_to_give
+label: 'Legacy Revision ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

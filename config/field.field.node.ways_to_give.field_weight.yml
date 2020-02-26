@@ -1,0 +1,21 @@
+uuid: 98163411-dc62-4d74-a765-9bdc3fe94630
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.ways_to_give
+  module:
+    - options
+id: node.ways_to_give.field_weight
+field_name: field_weight
+entity_type: node
+bundle: ways_to_give
+label: 'Order Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
