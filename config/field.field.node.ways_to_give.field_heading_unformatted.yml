@@ -1,0 +1,19 @@
+uuid: abc7970d-5ea2-423f-bd9f-4efce12156b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading_unformatted
+    - node.type.ways_to_give
+id: node.ways_to_give.field_heading_unformatted
+field_name: field_heading_unformatted
+entity_type: node
+bundle: ways_to_give
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
