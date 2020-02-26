@@ -140,6 +140,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_size:
+    type: entity_reference_label
+    weight: 16
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_solution_paragraph:
     weight: 11
     label: hidden
@@ -165,7 +173,7 @@ content:
     region: content
   field_species:
     type: entity_reference_rss_category
-    weight: 22
+    weight: 15
     region: content
     label: above
     settings: {  }
@@ -188,7 +196,6 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_meta_tags: true
-  field_size: true
   field_tags_africa: true
   field_tags_country: true
   field_tags_region: true
