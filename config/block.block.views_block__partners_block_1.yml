@@ -1,0 +1,24 @@
+uuid: 3b997e6d-603a-4058-8ee2-5073f5bd50fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - views
+  theme:
+    - awf
+id: views_block__partners_block_1
+theme: awf
+region: disabled
+weight: 0
+provider: null
+plugin: 'views_block:partners-block_1'
+settings:
+  id: 'views_block:partners-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

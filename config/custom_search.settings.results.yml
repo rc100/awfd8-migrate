@@ -22,6 +22,8 @@ node_search:
       species: species
       supplemental_sidebar: supplemental_sidebar
       hero_slideshow: hero_slideshow
+      reasons: reasons
+      ways_to_give: ways_to_give
     languages:
       en: en
       und: und
@@ -50,6 +52,8 @@ user_search:
       species: species
       supplemental_sidebar: supplemental_sidebar
       hero_slideshow: hero_slideshow
+      reasons: reasons
+      ways_to_give: ways_to_give
     languages:
       en: en
       und: und
