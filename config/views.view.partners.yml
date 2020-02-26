@@ -70,8 +70,8 @@ display:
               field: field_tags_partners
               rendered: true
               rendered_strip: false
-          row_class: ''
-          default_row_class: true
+          row_class: row
+          default_row_class: false
       row:
         type: fields
       fields:
@@ -272,7 +272,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
