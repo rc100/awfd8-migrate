@@ -1,0 +1,24 @@
+uuid: 2d13875e-5691-4114-991b-4c6a5c08146a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - views
+  theme:
+    - awf
+id: views_block__partners_block_2
+theme: awf
+region: disabled
+weight: 0
+provider: null
+plugin: 'views_block:partners-block_2'
+settings:
+  id: 'views_block:partners-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
