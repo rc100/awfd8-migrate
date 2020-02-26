@@ -1,0 +1,23 @@
+uuid: 0176f9c3-58e4-4b8b-a2da-40da0c36861d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.reasons
+  module:
+    - text
+id: node.reasons.body
+field_name: body
+entity_type: node
+bundle: reasons
+label: 'Reason Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

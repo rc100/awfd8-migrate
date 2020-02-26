@@ -1,0 +1,18 @@
+uuid: c77e0231-6e69-4e96-85b5-2485b1090007
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reasons
+id: node.reasons.title
+field_name: title
+entity_type: node
+bundle: reasons
+label: 'Reason Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
