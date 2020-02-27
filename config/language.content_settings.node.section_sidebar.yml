@@ -1,0 +1,11 @@
+uuid: bdc119e6-e719-4c25-af10-6d0a53b21c62
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.section_sidebar
+id: node.section_sidebar
+target_entity_type_id: node
+target_bundle: section_sidebar
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,30 @@
+uuid: 0cf771f4-5e80-4627-98c7-25eca10c8821
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sidebar_layout
+field_name: field_sidebar_layout
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Default
+    -
+      value: '1'
+      label: 'White Background'
+    -
+      value: '2'
+      label: 'Purple Background'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
