@@ -19,5 +19,5 @@ settings:
   handler: 'default:block'
   handler_settings:
     target_bundles: null
-    auto_create: false
+    auto_create: true
 field_type: entity_reference

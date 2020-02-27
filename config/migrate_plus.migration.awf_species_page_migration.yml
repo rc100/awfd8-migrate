@@ -52,49 +52,63 @@ process:
           plugin: migration_lookup
           migration: awf_files_migration
           source: fid
-      alt: alt
-      width: width
-      height: height
-      title: title
+    alt:
+      plugin: default_value
+      source: alt
+      default_vlue: 'asg alt'
+    width: width
+    height: height
+    title: title
   field_photo_credit: field_photo_credit
   field_heading: field_heading
   field_conservation_status: field_conservation_status
   field_overview_paragraph:
-    plugin: sub_process
-    source: field_overview_facts
-    process:
-      target_id:
-        -
-          plugin: skip_on_empty
-          source: revision_id
-          method: process
-          message: 'ASG Missing overview revision_id'
-        -
-          plugin: migration_lookup
-          migration: awf_paragraphs_overview_migration
-          source: revision_id
-        -
-          plugin: asg_reset_keys
-        -
-          plugin: extract
-          index:
-            - 0
-      target_revision_id:
-        -
-          plugin: skip_on_empty
-          source: revision_id
-          method: process
-          message: 'ASG Missing overview revision_id'
-        -
-          plugin: migration_lookup
-          migration: awf_paragraphs_overview_migration
-          source: revision_id
-        -
-          plugin: asg_reset_keys
-        -
-          plugin: extract
-          index:
-            - 1
+    -
+      plugin: sub_process
+      source: field_overview_facts
+      process:
+        target_id:
+          -
+            plugin: asg_print
+            source: value
+          -
+            plugin: skip_on_empty
+            source: revision_id
+            method: process
+            message: 'ASG Missing overview revision_id'
+          -
+            plugin: migration_lookup
+            migration: awf_paragraphs_overview_migration
+            source: value
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: asg_print
+          -
+            plugin: asg_reset_keys
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: skip_on_empty
+            source: revision_id
+            method: process
+            message: 'ASG Missing overview revision_id'
+          -
+            plugin: migration_lookup
+            migration: awf_paragraphs_overview_migration
+            source: value
+          -
+            plugin: asg_print
+          -
+            plugin: asg_reset_keys
+          -
+            plugin: extract
+            index:
+              - 1
   field_sound:
     source: field_sound
     plugin: sub_process
@@ -111,13 +125,13 @@ process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing facts revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_facts_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -133,7 +147,7 @@ process:
         -
           plugin: migration_lookup
           migration: awf_paragraphs_facts_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -151,20 +165,9 @@ process:
         source: fid
       display: display
   field_gallery:
-    plugin: sub_process
-    source: field_gallery
-    process:
-      target_id:
-        plugin: static_map
-        source: moddelta
-        map:
-          'views:galleries-block': break
-      display_id:
-        -
-          plugin: static_map
-          source: moddelta
-          map:
-            'views:galleries-block': block
+    -
+      plugin: asg_views_map
+      source: field_gallery
   field_challenges: field_challenges
   field_solutions: field_solutions
   field_solution_paragraph:
@@ -174,13 +177,13 @@ process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing solution revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_solution_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -190,13 +193,13 @@ process:
       target_revision_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing solution revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_solution_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -204,20 +207,20 @@ process:
           index:
             - 1
   field_project_text: field_project_text
-  field_sidebar_item_paragraph:
+  field_sidebar_item_paragra:
     plugin: sub_process
     source: field_sidebar_item
     process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing sidebar_item revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_sidebar_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -233,7 +236,7 @@ process:
         -
           plugin: migration_lookup
           migration: awf_paragraphs_sidebar_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -247,17 +250,15 @@ process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing habitat revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_habitat_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
-        -
-          plugin: asg_print
         -
           plugin: extract
           index:
@@ -265,13 +266,13 @@ process:
       target_revision_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing habitat revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_habitat_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -338,9 +339,6 @@ destination:
   default_bundle: species
 migration_dependencies:
   required:
-    - awf_paragraphs_migration
-    - awf_paragraphs_sidebar_migration
     - awf_paragraphs_overview_migration
     - awf_paragraphs_facts_migration
     - awf_paragraphs_solution_migration
-    - awf_paragraphs_habitat_migration

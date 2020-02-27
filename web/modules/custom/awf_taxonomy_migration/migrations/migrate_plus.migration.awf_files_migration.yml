@@ -19,9 +19,9 @@ source:
 process:
   d7_file_name:
     -
-      plugin: asg_print
-      source: uri
-    -
+    #   plugin: asg_print
+    #   source: uri
+    # -
       plugin: str_replace
       search: ["public://public://", "public://", "private://"]
       replace: ["public:/", "", "private/"]
@@ -63,33 +63,57 @@ process:
   field_image_alt_text: field_image_alt_text
   field_title_text: field_file_image_title_text
   field_tags_animal:
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_tags_animal
+    -
+      plugin: asg_print
+      source: field_tags_animal
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_tags_animal
   field_tags_community:
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_tags_community
+    -
+      plugin: asg_print
+      source: field_tags_community
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_tags_community
   field_tags_country:
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_tags_country
+    -
+      plugin: asg_print
+      source: field_tags_country
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_tags_country
   field_tags_economic:
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_tags_economic
+    -
+      plugin: asg_print
+      source: field_tags_economic
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_tags_economic
   field_land_habitat: 
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_land_habitat
+    -
+      plugin: asg_print
+      source: field_land_habitat
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_land_habitat
   field_tags_region: 
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
   field_tags_africa: 
-    plugin: migration_lookup
-    migration: awf_taxonomy_term_migration
-    source: field_tags_africa
+    -
+      plugin: asg_print
+      source: field_tags_africa
+    -
+      plugin: migration_lookup
+      migration: awf_taxonomy_term_migration
+      source: field_tags_africa
   field_tags_projects: 
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration

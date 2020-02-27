@@ -7,10 +7,12 @@ dependencies:
     - field.field.paragraph.module.field_description
     - field.field.paragraph.module.field_image
     - field.field.paragraph.module.field_layout_style
+    - field.field.paragraph.module.field_view_reference
     - paragraphs.paragraphs_type.module
   module:
     - inline_entity_form
     - text
+    - viewfield
 id: paragraph.module.default
 targetEntityType: paragraph
 bundle: module
@@ -47,6 +49,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_view_reference:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
     region: content
 hidden:
   created: true

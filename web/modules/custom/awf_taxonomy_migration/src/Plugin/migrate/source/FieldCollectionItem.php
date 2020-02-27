@@ -53,7 +53,7 @@ class FieldCollectionItem extends FieldableEntity {
   public function prepareRow(Row $row) {
     // If field specified, get field revision ID so there aren't issues mapping.
     if (isset($this->configuration['field_name'])) {
-      $row->setSourceProperty('revision_id', $row->getSourceProperty($this->configuration['field_name'] . '_revision_id'));
+      // $row->setSourceProperty('revision_id', $row->getSourceProperty($this->configuration['field_name'] . '_revision_id'));
     }
     // Get Field API field values.
     foreach (array_keys($this->getFields('field_collection_item', $row->getSourceProperty('field_name'))) as $field) {

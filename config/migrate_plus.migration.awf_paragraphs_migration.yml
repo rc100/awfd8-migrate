@@ -34,6 +34,10 @@ process:
       width: width
       height: height
   field_layout_style: field_layout_style
+  field_view_reference:
+    -
+      plugin: asg_views_map
+      source: field_block_reference
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: module

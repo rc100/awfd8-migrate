@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.sidebar_item.field_block_ref
     - field.field.paragraph.sidebar_item.field_supplemental_reference
+    - field.field.paragraph.sidebar_item.field_view_reference
     - paragraphs.paragraphs_type.sidebar_item
+  module:
+    - viewfield
 id: paragraph.sidebar_item.default
 targetEntityType: paragraph
 bundle: sidebar_item
@@ -28,5 +31,15 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_view_reference:
+    weight: 3
+    label: above
+    settings:
+      view_title: inline
+      always_build_output: true
+      empty_view_title: inline
+    third_party_settings: {  }
+    type: viewfield_default
     region: content
 hidden: {  }
