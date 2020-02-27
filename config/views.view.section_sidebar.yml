@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_description
     - field.storage.node.field_sidebar_layout
     - node.type.section_sidebar
+    - views.view.supplemental
   module:
     - node
     - options
@@ -315,6 +316,12 @@ display:
           id: view
           table: views
           field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'supplemental:promo'
+          inherit_arguments: false
           plugin_id: view
       footer: {  }
       empty: {  }
