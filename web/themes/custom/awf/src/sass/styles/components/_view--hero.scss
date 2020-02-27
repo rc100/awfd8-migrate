@@ -101,7 +101,7 @@
   margin: 4rem 0;
 
   @include breakpoint($min760) {
-    margin: 0 0 4rem 0;
+    margin: 0 0 4rem;
   }
 
   &.view-hero .views-row {

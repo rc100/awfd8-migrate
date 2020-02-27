@@ -6,8 +6,9 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - main-menu
+    parent: 'main-menu:'
 name: 'Ways to Give'
 type: ways_to_give
 description: 'Use <em>ways to give</em> to add a new block about how members can donate.'
