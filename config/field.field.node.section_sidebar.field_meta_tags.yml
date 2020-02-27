@@ -1,0 +1,21 @@
+uuid: 15e2244c-48ad-43dc-ac03-75e23fae91f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.section_sidebar
+  module:
+    - metatag
+id: node.section_sidebar.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: section_sidebar
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

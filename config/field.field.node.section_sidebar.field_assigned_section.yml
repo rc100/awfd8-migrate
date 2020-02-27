@@ -1,0 +1,21 @@
+uuid: e282d286-7039-4d16-953e-a89c0ecfc10b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assigned_section
+    - node.type.section_sidebar
+  module:
+    - options
+id: node.section_sidebar.field_assigned_section
+field_name: field_assigned_section
+entity_type: node
+bundle: section_sidebar
+label: 'Assigned Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

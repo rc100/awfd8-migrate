@@ -1,0 +1,21 @@
+uuid: 444ab85e-88af-41eb-805c-7a1c97af3dfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.section_sidebar
+  module:
+    - text
+id: node.section_sidebar.field_description
+field_name: field_description
+entity_type: node
+bundle: section_sidebar
+label: 'Text Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

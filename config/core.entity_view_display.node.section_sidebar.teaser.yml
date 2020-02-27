@@ -1,0 +1,33 @@
+uuid: e79f2370-8654-4163-b475-8cdf091e9b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.section_sidebar.field_assigned_section
+    - field.field.node.section_sidebar.field_block_reference
+    - field.field.node.section_sidebar.field_description
+    - field.field.node.section_sidebar.field_meta_tags
+    - field.field.node.section_sidebar.field_sidebar_layout
+    - field.field.node.section_sidebar.field_weight
+    - node.type.section_sidebar
+  module:
+    - user
+id: node.section_sidebar.teaser
+targetEntityType: node
+bundle: section_sidebar
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_assigned_section: true
+  field_block_reference: true
+  field_description: true
+  field_meta_tags: true
+  field_sidebar_layout: true
+  field_weight: true
+  langcode: true
