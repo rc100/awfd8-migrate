@@ -2,6 +2,10 @@
 
 .carrot,
 .caret {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+
   &:before {
     content: "› ";
     font-size: 2.16rem;
@@ -10,5 +14,12 @@
     position: relative;
     top: -7px;
     margin-right: 0.75rem;
+  }
+}
+
+.more.carrot {
+  &:before {
+    line-height: 1.2rem;
+    top: 0;
   }
 }
