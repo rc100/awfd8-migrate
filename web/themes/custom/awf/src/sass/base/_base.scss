@@ -178,3 +178,14 @@ svg {
   padding: 20px;
   position: relative;
 }
+
+.right {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.more {
+  font-size: 1.2rem;
+  font-style: italic;
+}
