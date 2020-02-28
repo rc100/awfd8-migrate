@@ -203,9 +203,41 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  entity_reference_1:
+    display_plugin: entity_reference
+    id: entity_reference_1
+    display_title: 'Entity Reference'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      pager:
+        type: some
+        options:
+          items_per_page: 0
+          offset: 0
+      row:
+        type: entity_reference
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: '-'
+          hide_empty: false
+      style:
+        type: entity_reference
+        options:
+          search_fields:
+            title: title
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  promo:
     display_plugin: block
-    id: block_1
+    id: promo
     display_title: 'Sitewide Promotion'
     position: 2
     display_options:
@@ -458,35 +490,3 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_sidebar_image'
-  entity_reference_1:
-    display_plugin: entity_reference
-    id: entity_reference_1
-    display_title: 'Entity Reference'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      pager:
-        type: some
-        options:
-          items_per_page: 0
-          offset: 0
-      row:
-        type: entity_reference
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: '-'
-          hide_empty: false
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            title: title
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
