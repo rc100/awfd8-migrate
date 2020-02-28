@@ -16,3 +16,4 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view files'
+  - 'view media'
