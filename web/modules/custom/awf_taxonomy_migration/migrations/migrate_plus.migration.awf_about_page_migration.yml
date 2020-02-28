@@ -77,13 +77,13 @@ process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing field_module revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -93,13 +93,13 @@ process:
       target_revision_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing field_module revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -132,13 +132,13 @@ process:
       target_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing field_module revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_sidebar_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
@@ -148,13 +148,13 @@ process:
       target_revision_id:
         -
           plugin: skip_on_empty
-          source: revision_id
+          source: value
           method: process
           message: 'ASG Missing field_module revision_id'
         -
           plugin: migration_lookup
           migration: awf_paragraphs_sidebar_migration
-          source: revision_id
+          source: value
         -
           plugin: asg_reset_keys
         -
