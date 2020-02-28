@@ -54,7 +54,7 @@ gulp.task('styles:fabricator', function () {
     .pipe(prefix({
       grid: false
     }))
-    .pipe(gulpif(!config.dev, csso()))
+    // .pipe(gulpif(!config.dev, csso()))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest + '/fabricator/css'))
     .pipe(gulpif(config.dev, reload({stream: true})));
@@ -73,7 +73,7 @@ gulp.task('styles:chief', function () {
     .pipe(prefix({
       grid: false
     }))
-    .pipe(gulpif(!config.dev, csso()))
+    // .pipe(gulpif(!config.dev, csso()))
     .pipe(gulpif(config.dev, sourcemaps.write()))
     .pipe(gulp.dest(config.dest + '/css'))
     .pipe(gulpif(config.dev, reload({stream: true})));
