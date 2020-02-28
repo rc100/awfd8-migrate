@@ -1,0 +1,22 @@
+uuid: ad17e4e9-da2b-4797-b05c-4a2f72fa8594
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: about_page_paths
+label: 'About Page Paths Pattern'
+type: 'canonical_entities:node'
+pattern: 'about/[node:title]'
+selection_criteria:
+  6f71453c-b7b5-40a6-97b1-1faf0a7df23f:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6f71453c-b7b5-40a6-97b1-1faf0a7df23f
+selection_logic: and
+weight: -8
+relationships: {  }

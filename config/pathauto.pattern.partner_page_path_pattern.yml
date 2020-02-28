@@ -1,0 +1,22 @@
+uuid: c7a9549a-5a35-4b1b-b35e-c15c5cbad229
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: partner_page_path_pattern
+label: 'Partner Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  9a88a6b2-3261-4827-a396-689ad41da2fd:
+    id: node_type
+    bundles:
+      partner: partner
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9a88a6b2-3261-4827-a396-689ad41da2fd
+selection_logic: and
+weight: -5
+relationships: {  }

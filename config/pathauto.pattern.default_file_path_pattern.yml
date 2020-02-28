@@ -1,0 +1,14 @@
+uuid: e04ac6d4-64e5-44a7-bf46-411409d43560
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: default_file_path_pattern
+label: 'Default file path pattern'
+type: 'canonical_entities:file'
+pattern: 'file/[file:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: -10
+relationships: {  }

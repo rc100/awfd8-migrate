@@ -1,0 +1,22 @@
+uuid: 6a8fbadf-6a92-4553-b7ce-61c5852ee53e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: project_page_path_pattern
+label: 'Project Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'projects/[node:field_tags_projects]'
+selection_criteria:
+  397ffef8-6c83-4746-9b18-23839f2a8ad5:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 397ffef8-6c83-4746-9b18-23839f2a8ad5
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: 64fa4598-425d-4114-8194-f8dda527e9e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: donate_page_path_pattern
+label: 'Donate Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'donate/[node:title]'
+selection_criteria:
+  e557f001-9028-4607-9876-aeb433662a73:
+    id: node_type
+    bundles:
+      donate_page: donate_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e557f001-9028-4607-9876-aeb433662a73
+selection_logic: and
+weight: -5
+relationships: {  }

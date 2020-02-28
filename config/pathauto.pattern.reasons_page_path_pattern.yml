@@ -1,0 +1,22 @@
+uuid: b4c3ea54-b0e9-4836-a696-c8feb52db2d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: reasons_page_path_pattern
+label: 'Reasons Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  6f0aaf68-50f2-499c-8559-b05a8b743f7a:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6f0aaf68-50f2-499c-8559-b05a8b743f7a
+selection_logic: and
+weight: -5
+relationships: {  }

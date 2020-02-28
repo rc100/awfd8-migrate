@@ -1,0 +1,22 @@
+uuid: 5006f50a-0a9a-498d-8c8b-15be4dd8c9f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: section_sidebar_path_pattern
+label: 'Section Sidebar Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  36402163-d1ba-412b-863b-efb9b3ccf1e1:
+    id: node_type
+    bundles:
+      section_sidebar: section_sidebar
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 36402163-d1ba-412b-863b-efb9b3ccf1e1
+selection_logic: and
+weight: -5
+relationships: {  }

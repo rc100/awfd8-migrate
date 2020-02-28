@@ -1,0 +1,14 @@
+uuid: 75fdf52e-96ae-4c88-8685-f4b8ccfff565
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: default_page_path_pattern
+label: 'Default Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -9
+relationships: {  }
