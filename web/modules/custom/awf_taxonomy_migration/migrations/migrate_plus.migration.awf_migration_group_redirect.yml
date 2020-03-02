@@ -17,10 +17,11 @@ source:
 process:
   rid: rid
   uid: uid
+  # redirect_source/path: source
   redirect_source/path: source
   redirect_source/query:
     plugin: d7_redirect_source_query
-    source: source_options
+    source: redirect_options
   redirect_redirect/uri:
     plugin: d7_path_redirect
     source:
