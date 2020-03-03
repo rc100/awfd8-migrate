@@ -1,6 +1,8 @@
 // View -- Hero
 
 .view-hero {
+  position: relative;
+
   .views-row {
     display: flex;
   }
@@ -33,6 +35,30 @@
 
     @include breakpoint($min760) {
       max-width: 460px;
+    }
+  }
+}
+
+.page-node-type-species .view-hero {
+  .views-field-title {
+    align-self: flex-end;
+    color: $white;
+    font-family: $crimson;
+    font-size: 7rem;
+    font-weight: 500;
+    letter-spacing: -2.8px;
+    left: 0;
+    line-height: 7rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 2rem 13rem 2rem;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    // text-shadow: 1px 1px 3px #322c2a;
+
+    @include breakpoint($min760) {
+      max-width: 1200px;
     }
   }
 }

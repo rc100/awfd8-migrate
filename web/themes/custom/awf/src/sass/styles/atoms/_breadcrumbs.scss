@@ -26,4 +26,25 @@
     content: " > ";
     margin: 0 0.25rem;
   }
+
+  .page-node-type-species & {
+    color: $white;
+    margin-top: -15rem;
+    position: absolute;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    a {
+      color: $white;
+    }
+
+    li:first-of-type::before {
+      display: none;
+    }
+
+    li::before {
+      content: " / ";
+      margin: 0 0.5rem;
+    }
+  }
 }
