@@ -23,7 +23,7 @@ process:
   redirect_source/path: source
   redirect_source/query:
     plugin: d7_redirect_source_query
-    source: redirect_options
+    source: source_options
   redirect_redirect/uri:
     plugin: d7_path_redirect
     source:
