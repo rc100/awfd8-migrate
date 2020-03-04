@@ -92,14 +92,21 @@
         {% if content.field_overview_paragraph or content.field_image or content.field_challenges %}
           <li><a href="#challenges">Challenges</a></li>
         {% endif %}
-        {% if content.body|render|striptags %}
+        {% if content.field_solutions or content.field_solution_paragraph %}
           <li><a href="#solutions">Solutions</a></li>
+        {% endif %}
+        {% if content.field_habitat_paragraph %}
+          <li><a href="#behaviors-diet">Behaviors & Diet</a></li>
+        {% endif %}
+        {% if content.field_habitat_paragraph %}
+          <li><a href="#habitats">Habitats</a></li>
         {% endif %}
       </ul>
     </div>
 
     <div class="overview" id="overview">
       {{ content.field_about }}
+      {{ content.field_conservation_status }}
       {{ content.field_facts_paragraph }}
     </div>
 
@@ -120,13 +127,23 @@
       <div>{{ content.field_solution_paragraph }}</div>
     </div>
 
-    <div class="solutions" id="solutions">
-      <h2>Solutions</h2>
-      <div>{{ content.field_solutions }}</div>
-      <div>{{ content.field_solution_paragraph }}</div>
+    <div class="behaviors-diet" id="behaviors-diet">
+      <div class="left">
+        <h2>Behaviors</h2>
+        {{ content.field_behaviors }}
+      </div>
+      <div class="right">
+        <h2>Diet</h2>
+        {{ content.field_diet }}
+      </div>
     </div>
 
-    {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item', 'field_about', 'field_facts_paragraph','field_overview_paragraph', 'field_challenges', 'field_image', 'field_solutions', 'field_solution_paragraph', 'field_main_image') }}
+    <div class="habitats" id="habitats">
+      <h2>Habitats</h2>
+      {{ content.field_habitats }}
+    </div>
+
+    {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item', 'field_about', 'field_facts_paragraph','field_overview_paragraph', 'field_challenges', 'field_image', 'field_solutions', 'field_solution_paragraph', 'field_main_image', 'field_habitat_paragraph', 'field_conservation_status', 'field_behaviors', 'field_diet', 'field_habitats') }}
   </div>
 </article>
 
