@@ -1,0 +1,9 @@
+uuid: de37ca3a-739e-4e31-9438-5deac359439a
+langcode: en
+status: true
+dependencies: {  }
+id: item
+label: Item
+icon_uuid: null
+description: 'Generic paragraph type that has a label and a body field.'
+behavior_plugins: {  }

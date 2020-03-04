@@ -1,0 +1,61 @@
+uuid: 5611630d-48aa-4bb3-92d7-18df8042e275
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_behaviors
+    - node.type.species
+    - paragraphs.paragraphs_type.item
+  module:
+    - entity_reference_revisions
+id: node.species.field_behaviors
+field_name: field_behaviors
+entity_type: node
+bundle: species
+label: Behaviors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      item: item
+    target_bundles_drag_drop:
+      animal_habitat:
+        weight: 11
+        enabled: false
+      bullet_point:
+        weight: 12
+        enabled: false
+      facts:
+        weight: 13
+        enabled: false
+      history:
+        weight: 14
+        enabled: false
+      module:
+        weight: 15
+        enabled: false
+      item:
+        enabled: true
+        weight: 16
+      overview_facts:
+        weight: 17
+        enabled: false
+      schedule:
+        weight: 18
+        enabled: false
+      sidebar_item:
+        weight: 19
+        enabled: false
+      solution:
+        weight: 20
+        enabled: false
+      solution_bulletpoint:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

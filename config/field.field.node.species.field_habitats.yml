@@ -1,0 +1,61 @@
+uuid: 58896780-10be-4d2c-b8d9-aa8525120813
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_habitats
+    - node.type.species
+    - paragraphs.paragraphs_type.item
+  module:
+    - entity_reference_revisions
+id: node.species.field_habitats
+field_name: field_habitats
+entity_type: node
+bundle: species
+label: Habitats
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      item: item
+    target_bundles_drag_drop:
+      animal_habitat:
+        weight: 12
+        enabled: false
+      bullet_point:
+        weight: 13
+        enabled: false
+      facts:
+        weight: 14
+        enabled: false
+      history:
+        weight: 15
+        enabled: false
+      item:
+        enabled: true
+        weight: 16
+      module:
+        weight: 17
+        enabled: false
+      overview_facts:
+        weight: 18
+        enabled: false
+      schedule:
+        weight: 19
+        enabled: false
+      sidebar_item:
+        weight: 20
+        enabled: false
+      solution:
+        weight: 21
+        enabled: false
+      solution_bulletpoint:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions
