@@ -431,3 +431,22 @@
     }
   }
 }
+
+@mixin fullbackground($color) {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220vw;
+    background-color: $color;
+    margin-left: -100vw;
+    overflow: hidden;
+    z-index: -1;
+  }
+}

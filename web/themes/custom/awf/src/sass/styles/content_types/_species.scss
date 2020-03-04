@@ -1,0 +1,260 @@
+// Species content type
+
+.page-node-type-species {
+  color: #4B3E36;
+
+  h2 {
+    font-family: $crimson;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4.6rem;
+    letter-spacing: -0.46px;
+  }
+
+  h2.subhead {
+    font-family: $crimson;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  // Layout
+  #block-awf-page-title {
+    display: none;
+  }
+
+  .two-col {
+    justify-content: space-between;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .left {
+    max-width: 600px;
+  }
+
+  .right {
+    max-width: 500px;
+  }
+
+  // Submenu
+  .sub-menu {
+    @include fullbackground(#4B3E36);
+    margin-top: -2rem;
+
+    a {
+      color: #FFFEF9;
+      font-size: 1.3rem;
+      letter-spacing: 0.81px;
+      line-height: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      min-height: 50px;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
+
+  // First section
+  // Overview
+  .overview {
+    .field--name-field-about {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin: 7.5rem auto 0;
+      max-width: 645px;
+      text-align: center;
+
+      h2 {
+        margin-bottom: 3rem;
+        font-size: 3.2rem;
+        letter-spacing: -0.46px;
+        line-height: 4.6rem;
+      }
+    }
+
+    .field--name-field-facts-paragraph {
+      border: 1px solid $awftan;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: stretch;
+      margin-top: 6rem;
+
+      >.field__item {
+        border-bottom: 1px solid $awftan;
+        border-right: 1px solid $awftan;
+        display: inline-block;
+        width: calc(100% / 3);
+        padding: 1rem 1.75rem;
+
+        // If the third to last child is odd
+        &:nth-last-child(3):nth-child(odd) {
+          border-bottom: 0;
+        }
+
+        // If the second to last child is even or odd
+        &:nth-last-child(2):nth-child(even),
+        &:nth-last-child(2):nth-child(odd) {
+          border-bottom: 0;
+        }
+
+        // If the last child is odd or even
+        &:nth-last-child(1):nth-child(odd),
+        &:nth-last-child(1):nth-child(even) {
+          border-bottom: 0;
+        }
+
+        &:nth-child(3n) {
+          border-right: 0;
+        }
+      }
+
+      .paragraph--type--facts {
+        font-size: 1.2rem;
+        letter-spacing: 1.85px;
+        text-transform: uppercase;
+        display: flex;
+      }
+
+      .field--name-field-facts-label,
+      .field--name-field-facts-description {
+        display: inline-block;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .field--name-field-facts-label {
+        color: $awforange;
+        margin-right: 0.75rem;
+      }
+
+      .field--name-field-facts-description {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  // Second section
+  // Challenges
+  .challenges {
+    @include clearfix;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+    // Brown block
+    .field--name-field-overview-paragraph {
+      background: #4B3E36;
+      padding: 4rem;
+      color: $white;
+      position: absolute;
+      margin-top: 6rem;
+
+      .paragraph--type--overview-facts {
+        border-bottom: 1px solid #979797;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .field--name-field-overview-facts-top,
+      .field--name-field-overview-fact-bottom {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1.69px;
+        line-height: 1.2rem;
+      }
+
+      .field--name-field-overview-fact-number {
+        color: #E97200;
+        font-size: 6.5rem;
+        font-weight: 300;
+        letter-spacing: -1.3px;
+        line-height: 7rem;
+        margin: 0;
+      }
+
+      >.field__item {
+        &:last-of-type .paragraph--type--overview-facts {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0
+        }
+      }
+    }
+
+    // Image
+    .field--name-field-image {
+      margin-left: 4rem;
+    }
+
+    // Right text block
+    .right {
+      margin-top: 4.5rem;
+    }
+
+    .field--name-field-challenges {
+      padding-top: 1.5rem;
+    }
+  }
+
+  // Third section
+  // Solutions
+  .solutions {
+    @include fullbackground($ltgray);
+
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+    h2,
+    .field--name-field-solutions {
+      margin-left: 6rem;
+    }
+
+    .field--name-field-solution-heading {
+      @extend h2.subhead;
+    }
+
+    .field--name-field-solution-paragraph {
+      column-count: 2;
+
+      .field__item {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+  }
+
+  // Fourth section
+  // Behaviors & Diets
+  .field--name-field-habitat-paragraph {
+    border: 2px solid teal;
+
+    .paragraph--type--animal-habitat {
+      border: 2px solid skyblue;
+    }
+  }
+
+  .field--name-field-animal-body {}
+
+  // Fifth section
+  // Habitats
+
+}

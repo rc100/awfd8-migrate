@@ -1,0 +1,44 @@
+uuid: 2e684294-b681-4504-bfb3-0f892ceb1b54
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: species
+label: Species
+group: Hero
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      species: species
+    negate: 0
+    uuid: d467c0f2-eb61-4916-b559-f2b5c627dfd8
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      3355dd7a-edeb-4bfd-8f83-6227aa9895bb:
+        id: 'views_block:hero-block_5'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: preface
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: species
+        uuid: 3355dd7a-edeb-4bfd-8f83-6227aa9895bb
+    id: blocks
+    saved: false
+    uuid: 0bd8b4ff-f91b-4438-88ab-81ff077a5fd6
+    include_default_blocks: 1
+weight: 0

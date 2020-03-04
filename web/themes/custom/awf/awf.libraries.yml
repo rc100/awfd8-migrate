@@ -12,7 +12,7 @@ global-styling:
 fonts:
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Crimson+Text|Source+Sans+Pro:400,400i,600,700,700i': { type: external }
+      'https://fonts.googleapis.com/css?family=Crimson+Text|Source+Sans+Pro:300,400,400i,600,700,700i': { type: external }
 
 leaflet:
   version: 1.0
@@ -27,4 +27,5 @@ leaflet:
     src/js/includes/boot-maps.js: {}
   dependencies:
     - core/drupal
+    - core/jquery.once
     - core/jquery

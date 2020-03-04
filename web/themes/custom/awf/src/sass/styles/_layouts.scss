@@ -22,6 +22,11 @@
     }
   }
 
+  .page-node-type-species &,
+  .page-node-type-species & article {
+    max-width: 1280px;
+  }
+
   .path-frontpage & {
     max-width: 100% !important;
   }

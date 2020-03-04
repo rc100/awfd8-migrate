@@ -1,0 +1,21 @@
+uuid: 3732e16d-3923-4b73-bcfc-297c59f38a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about
+    - node.type.species
+  module:
+    - text
+id: node.species.field_about
+field_name: field_about
+entity_type: node
+bundle: species
+label: About
+description: 'A short blurb about the species.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
