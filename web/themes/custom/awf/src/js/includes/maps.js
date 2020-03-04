@@ -88,15 +88,14 @@
 			pMapGeoJ.addTo(pMap);
 
 			$.ajax({
-			dataType: "json",
-			url: $('#'+pMapOptions.ele).attr('data-GeoData'),
-			success: function(data) {
-		    $(data.features).each(function(key, data) {
+			  dataType: "json",
+			  url: $('#'+pMapOptions.ele).attr('data-GeoData')
+			}).done(function(data) {
+		      $(data.features).each(function(key, data) {
 		        pMapGeoJ.addData(data);
 		        pMapGeoJ.setStyle(pMapOptions.geoStyles);
-		    });
-			}
-			}).error(function() {});
+		      });
+		    })
 
 			bindEvents();
 		}

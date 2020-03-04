@@ -28,3 +28,4 @@ leaflet:
   dependencies:
     - core/drupal
     - core/jquery
+    - core/underscore
