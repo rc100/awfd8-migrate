@@ -38,6 +38,8 @@
   }
 
   .right {
+    justify-content: flex-start;
+    flex-direction: column;
     max-width: 500px;
   }
 
@@ -244,17 +246,30 @@
 
   // Fourth section
   // Behaviors & Diets
-  .field--name-field-habitat-paragraph {
-    border: 2px solid teal;
+  .behaviors-diet {
+    display: flex;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 
-    .paragraph--type--animal-habitat {
-      border: 2px solid skyblue;
+    .left,
+    .right {
+      margin-left: 6rem;
     }
   }
 
-  .field--name-field-animal-body {}
-
   // Fifth section
   // Habitats
+  .habitats {
+    @include fullbackground($teal);
+
+    color: $white;
+    text-align: center;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+    h2 {
+      color: $white;
+    }
+  }
 
 }
