@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.species.field_habitat_paragraph
     - field.field.node.species.field_habitats
     - field.field.node.species.field_heading
+    - field.field.node.species.field_horizontal_image
     - field.field.node.species.field_image
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
@@ -37,14 +38,16 @@ dependencies:
     - field.field.node.species.field_tags_animal
     - field.field.node.species.field_tags_country
     - field.field.node.species.field_tags_region
+    - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
-    - image.style.thumbnail
+    - image.style.vertical_image
     - node.type.species
   module:
     - content_moderation
     - field_group
     - file
     - image
+    - imce
     - metatag
     - paragraphs
     - path
@@ -120,6 +123,8 @@ third_party_settings:
       children:
         - field_solutions
         - field_solution_paragraph
+        - field_vertical_image
+        - field_horizontal_image
       parent_name: ''
       weight: 5
       format_type: details
@@ -344,6 +349,16 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  field_horizontal_image:
+    weight: 11
+    settings:
+      preview_image_style: horizontal_image
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: false
+    type: image_image
+    region: content
   field_image:
     weight: 27
     settings:
@@ -490,6 +505,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_vertical_image:
+    weight: 10
+    settings:
+      preview_image_style: vertical_image
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: false
+    type: image_image
     region: content
   field_weight:
     weight: 27
