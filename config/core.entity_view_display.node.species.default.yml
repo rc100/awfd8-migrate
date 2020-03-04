@@ -6,13 +6,16 @@ dependencies:
     - field.field.node.species.body
     - field.field.node.species.field_about
     - field.field.node.species.field_alternate_thumbnail
+    - field.field.node.species.field_behaviors
     - field.field.node.species.field_challenges
     - field.field.node.species.field_conservation_status
+    - field.field.node.species.field_diet
     - field.field.node.species.field_facts_paragraph
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
     - field.field.node.species.field_gallery
     - field.field.node.species.field_habitat_paragraph
+    - field.field.node.species.field_habitats
     - field.field.node.species.field_heading
     - field.field.node.species.field_image
     - field.field.node.species.field_kml
@@ -66,6 +69,15 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_behaviors:
+    type: entity_reference_revisions_entity_view
+    weight: 19
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_challenges:
     weight: 6
     label: hidden
@@ -75,10 +87,19 @@ content:
     region: content
   field_conservation_status:
     weight: 2
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_diet:
+    type: entity_reference_revisions_entity_view
+    weight: 20
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_facts_paragraph:
     weight: 5
@@ -109,6 +130,15 @@ content:
   field_habitat_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 15
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_habitats:
+    type: entity_reference_revisions_entity_view
+    weight: 21
     label: above
     settings:
       view_mode: default

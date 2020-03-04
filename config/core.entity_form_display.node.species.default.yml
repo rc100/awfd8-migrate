@@ -6,13 +6,16 @@ dependencies:
     - field.field.node.species.body
     - field.field.node.species.field_about
     - field.field.node.species.field_alternate_thumbnail
+    - field.field.node.species.field_behaviors
     - field.field.node.species.field_challenges
     - field.field.node.species.field_conservation_status
+    - field.field.node.species.field_diet
     - field.field.node.species.field_facts_paragraph
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
     - field.field.node.species.field_gallery
     - field.field.node.species.field_habitat_paragraph
+    - field.field.node.species.field_habitats
     - field.field.node.species.field_heading
     - field.field.node.species.field_image
     - field.field.node.species.field_kml
@@ -64,7 +67,7 @@ third_party_settings:
     group_overview_facts:
       children: {  }
       parent_name: ''
-      weight: 6
+      weight: 25
       format_type: details
       format_settings:
         id: ''
@@ -88,8 +91,8 @@ third_party_settings:
       label: 'Quick Facts'
     group_habitat:
       children:
+        - field_habitats
         - field_kml
-        - field_habitat_paragraph
       parent_name: ''
       weight: 7
       format_type: details
@@ -193,6 +196,7 @@ third_party_settings:
       label: 'Animal Stats'
     group_le:
       children:
+        - field_habitat_paragraph
         - field_legacy_alias
         - field_legacy_id
         - field_legacy_revision_id
@@ -205,6 +209,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Legacy Information'
+    group_b:
+      children:
+        - field_behaviors
+        - field_diet
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Behaviors and Diet'
 id: node.species.default
 targetEntityType: node
 bundle: species
@@ -232,6 +249,18 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_behaviors:
+    type: entity_reference_paragraphs
+    weight: 35
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_challenges:
     weight: 29
     settings:
@@ -245,6 +274,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_diet:
+    type: entity_reference_paragraphs
+    weight: 36
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_facts_paragraph:
     weight: 28
@@ -291,6 +332,18 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  field_habitats:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_image:
     weight: 27
     settings:
@@ -300,14 +353,14 @@ content:
     type: image_image
     region: content
   field_kml:
-    weight: 8
+    weight: 10
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_legacy_alias:
-    weight: 24
+    weight: 32
     settings:
       size: 60
       placeholder: ''
@@ -315,14 +368,14 @@ content:
     type: string_textfield
     region: content
   field_legacy_id:
-    weight: 25
+    weight: 33
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_legacy_revision_id:
-    weight: 26
+    weight: 34
     settings:
       placeholder: ''
     third_party_settings: {  }
