@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.species.field_habitat_paragraph
     - field.field.node.species.field_habitats
     - field.field.node.species.field_heading
+    - field.field.node.species.field_horizontal_image
     - field.field.node.species.field_image
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
@@ -38,7 +39,9 @@ dependencies:
     - field.field.node.species.field_tags_animal
     - field.field.node.species.field_tags_country
     - field.field.node.species.field_tags_region
+    - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
+    - image.style.vertical_image
     - node.type.species
   module:
     - entity_reference_revisions
@@ -121,12 +124,21 @@ content:
     third_party_settings: {  }
   field_habitats:
     type: entity_reference_revisions_entity_view
-    weight: 14
+    weight: 15
     region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
+    third_party_settings: {  }
+  field_horizontal_image:
+    type: image
+    weight: 14
+    region: content
+    label: hidden
+    settings:
+      image_style: horizontal_image
+      image_link: ''
     third_party_settings: {  }
   field_image:
     type: image
@@ -178,6 +190,15 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_vertical_image:
+    type: image
+    weight: 16
+    region: content
+    label: hidden
+    settings:
+      image_style: vertical_image
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   body: true
   field_alternate_thumbnail: true
