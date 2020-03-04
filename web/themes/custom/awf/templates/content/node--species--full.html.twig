@@ -95,7 +95,7 @@
         {% if content.field_solutions or content.field_solution_paragraph %}
           <li><a href="#solutions">Solutions</a></li>
         {% endif %}
-        {% if content.field_habitat_paragraph %}
+        {% if content.field_behaviors or content.field_diet %}
           <li><a href="#behaviors-diet">Behaviors & Diet</a></li>
         {% endif %}
         {% if content.field_habitat_paragraph %}
@@ -110,40 +110,61 @@
       {{ content.field_facts_paragraph }}
     </div>
 
-    <div class="challenges two-col" id="challenges">
-      <div class="left">
-        {{ content.field_overview_paragraph }}
-        {{ content.field_image }}
+    {% if content.field_overview_paragraph or content.field_image or content.field_challenges %}
+      <div class="challenges two-col" id="challenges">
+        <div class="left">
+          {{ content.field_overview_paragraph }}
+          {{ content.field_image }}
+        </div>
+        <div class="right">
+          <h2>Challenges</h2>
+          {{ content.field_challenges }}
+        </div>
       </div>
-      <div class="right">
-        <h2>Challenges</h2>
-        {{ content.field_challenges }}
+    {% endif %}
+
+    {% if content.field_solutions or content.field_solution_paragraph %}
+      <div class="solutions" id="solutions">
+        <h2>Solutions</h2>
+        <div>{{ content.field_solutions }}</div>
+        <div>{{ content.field_solution_paragraph }}</div>
+
+        <div class="images two-col">
+          <div class="left">
+            {{ content.field_vertical_image }}
+          </div>
+          <div class="right">
+            {{ content.field_horizontal_image }}
+          </div>
+        </div>
       </div>
-    </div>
+    {% endif %}
 
-    <div class="solutions" id="solutions">
-      <h2>Solutions</h2>
-      <div>{{ content.field_solutions }}</div>
-      <div>{{ content.field_solution_paragraph }}</div>
-    </div>
-
-    <div class="behaviors-diet" id="behaviors-diet">
-      <div class="left">
-        <h2>Behaviors</h2>
-        {{ content.field_behaviors }}
+    {% if content.field_behaviors or content.field_diet %}
+      <div class="behaviors-diet" id="behaviors-diet">
+        {% if content.field_behaviors %}
+          <div class="left">
+            <h2>Behaviors</h2>
+            {{ content.field_behaviors }}
+          </div>
+        {% endif %}
+        {% if content.field_diet %}
+          <div class="right">
+            <h2>Diet</h2>
+            {{ content.field_diet }}
+          </div>
+        {% endif %}
       </div>
-      <div class="right">
-        <h2>Diet</h2>
-        {{ content.field_diet }}
+    {% endif %}
+
+    {% if content.field_habitats %}
+      <div class="habitats" id="habitats">
+        <h2>Habitats</h2>
+        {{ content.field_habitats }}
       </div>
-    </div>
+    {% endif %}
 
-    <div class="habitats" id="habitats">
-      <h2>Habitats</h2>
-      {{ content.field_habitats }}
-    </div>
-
-    {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item', 'field_about', 'field_facts_paragraph','field_overview_paragraph', 'field_challenges', 'field_image', 'field_solutions', 'field_solution_paragraph', 'field_main_image', 'field_habitat_paragraph', 'field_conservation_status', 'field_behaviors', 'field_diet', 'field_habitats') }}
+    {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item', 'field_about', 'field_facts_paragraph','field_overview_paragraph', 'field_challenges', 'field_image', 'field_solutions', 'field_solution_paragraph', 'field_main_image', 'field_habitat_paragraph', 'field_conservation_status', 'field_behaviors', 'field_diet', 'field_habitats', 'field_vertical_image', 'field_horizontal_image') }}
   </div>
 </article>
 
