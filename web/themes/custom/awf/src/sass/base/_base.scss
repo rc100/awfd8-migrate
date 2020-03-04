@@ -181,7 +181,7 @@ svg {
   position: relative;
 }
 
-.right {
+.right:not(.map) {
   display: flex;
 
   justify-content: flex-end;
