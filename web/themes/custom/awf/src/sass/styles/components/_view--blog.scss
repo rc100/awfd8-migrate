@@ -1,0 +1,17 @@
+// View -- Blog
+
+.view-recent-blogs {
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  .view-content {
+    display: flex;
+  }
+
+  .views-row {
+    width: calc(100% / 3);
+  }
+}
