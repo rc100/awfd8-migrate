@@ -1,0 +1,44 @@
+uuid: a226f8b8-0bf7-4132-a13c-ea67a6095930
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: species_content_type
+label: Species
+group: 'Content Type'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      species: species
+    negate: 0
+    uuid: 716838d6-5375-4442-b1fb-819d064c492f
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      bea8a00e-d831-4689-9a19-5e9cf1f3fe60:
+        id: 'views_block:blog-block_2'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: view-recent-blogs
+        unique: 0
+        context_id: species_content_type
+        uuid: bea8a00e-d831-4689-9a19-5e9cf1f3fe60
+    id: blocks
+    saved: false
+    uuid: 332e0cdb-9afa-4830-9cd9-638901093ecc
+    include_default_blocks: 1
+weight: 0

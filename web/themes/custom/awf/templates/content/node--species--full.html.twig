@@ -129,14 +129,16 @@
         <div>{{ content.field_solutions }}</div>
         <div>{{ content.field_solution_paragraph }}</div>
 
-        <div class="images two-col">
-          <div class="left">
-            {{ content.field_vertical_image }}
+        {% if content.field_vertical_image or content.field_horizontal_image %}
+          <div class="images two-col">
+            <div class="left">
+              {{ content.field_vertical_image }}
+            </div>
+            <div class="right">
+              {{ content.field_horizontal_image }}
+            </div>
           </div>
-          <div class="right">
-            {{ content.field_horizontal_image }}
-          </div>
-        </div>
+        {% endif %}
       </div>
     {% endif %}
 
