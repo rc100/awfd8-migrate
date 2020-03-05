@@ -1,0 +1,21 @@
+uuid: 34b3cb3c-b703-42a5-a782-4bef6cf11d34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_schedule_description
+    - paragraphs.paragraphs_type.history_list_item
+  module:
+    - text
+id: paragraph.history_list_item.field_schedule_description
+field_name: field_schedule_description
+entity_type: paragraph
+bundle: history_list_item
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

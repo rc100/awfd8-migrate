@@ -1,0 +1,33 @@
+uuid: ec6f7cfe-a66d-4481-aa14-190895a65314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.history_list.field_decade
+    - field.field.paragraph.history_list.field_year_and_description
+    - paragraphs.paragraphs_type.history_list
+  module:
+    - entity_reference_revisions
+id: paragraph.history_list.default
+targetEntityType: paragraph
+bundle: history_list
+mode: default
+content:
+  field_decade:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_year_and_description:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
