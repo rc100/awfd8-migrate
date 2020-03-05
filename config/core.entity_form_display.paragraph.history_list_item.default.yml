@@ -1,0 +1,34 @@
+uuid: e2a4b107-7ba4-44d3-afe7-3598d2963899
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.history_list_item.field_schedule_day
+    - field.field.paragraph.history_list_item.field_schedule_description
+    - paragraphs.paragraphs_type.history_list_item
+  module:
+    - text
+id: paragraph.history_list_item.default
+targetEntityType: paragraph
+bundle: history_list_item
+mode: default
+content:
+  field_schedule_day:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_schedule_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

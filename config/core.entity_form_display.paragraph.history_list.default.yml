@@ -1,0 +1,38 @@
+uuid: d7b3e5e0-28e4-49fd-89a5-e697bb7bd7f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.history_list.field_decade
+    - field.field.paragraph.history_list.field_year_and_description
+    - paragraphs.paragraphs_type.history_list
+  module:
+    - paragraphs
+id: paragraph.history_list.default
+targetEntityType: paragraph
+bundle: history_list
+mode: default
+content:
+  field_decade:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_year_and_description:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
