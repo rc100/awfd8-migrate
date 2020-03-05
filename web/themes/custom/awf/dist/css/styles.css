@@ -3217,6 +3217,19 @@ a.share {
       background-size: 40px 40px;
       display: inline-block; }
 
+.view-recent-blogs {
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .view-recent-blogs .view-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .view-recent-blogs .views-row {
+    width: calc(100% / 3); }
+
 .view-hero {
   position: relative; }
   .view-hero .views-row {
