@@ -29,3 +29,4 @@ leaflet:
     - core/drupal
     - core/jquery.once
     - core/jquery
+    - core/underscore
