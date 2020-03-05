@@ -15,7 +15,9 @@ dependencies:
     - field.field.node.career.field_status
     - field.field.node.career.field_sub_heading
     - node.type.career
+    - workflows.workflow.legacy_workflow
   module:
+    - content_moderation
     - datetime
     - field_group
     - path
@@ -143,7 +145,7 @@ content:
   field_status:
     weight: 15
     settings:
-      display_label: true
+      display_label: false
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
@@ -161,6 +163,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path
