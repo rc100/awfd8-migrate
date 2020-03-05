@@ -27,7 +27,7 @@ process:
     source: language
     default_value: "en"
   title: title
-  status: 1
+  status: status
   created: created
   changed: changed
   promoted: promoted
@@ -36,10 +36,6 @@ process:
   revision_timestamp: timestamp
   author: author
   body: body
-  # field_tags_animal:
-  #   plugin: migration_lookup
-  #   migration: awf_taxonomy_term_migration
-  #   source: field_tags_animal
   field_tags_community:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
