@@ -27,7 +27,7 @@ process:
     source: language
     default_value: "en"
   title: title
-  status: status
+  status: 1
   created: created
   changed: changed
   promoted: promoted
