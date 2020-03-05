@@ -390,6 +390,9 @@ svg {
   font-size: 1.2rem;
   font-style: italic; }
 
+.text-right {
+  float: right; }
+
 /**
 * @file
 * Typographic styles.
@@ -3405,6 +3408,191 @@ a.share {
 
 .overview-land .view-hero-landing.view-hero .views-row:before {
   background: transparent url("../images/infographics/land.png") 0 0 no-repeat; }
+
+.webform-submission-leadership-gift-form-form,
+.webform-submission-main-donate-form-form,
+.webform-submission-get-involved-form {
+  background-color: #ddd;
+  min-height: 360px;
+  padding: 20px 20px 57px 20px; }
+  .webform-submission-leadership-gift-form-form .fieldset-legend,
+  .webform-submission-main-donate-form-form .fieldset-legend,
+  .webform-submission-get-involved-form .fieldset-legend {
+    display: none; }
+  .webform-submission-leadership-gift-form-form .form-item,
+  .webform-submission-main-donate-form-form .form-item,
+  .webform-submission-get-involved-form .form-item {
+    border: 0;
+    position: relative; }
+    .webform-submission-leadership-gift-form-form .form-item p,
+    .webform-submission-main-donate-form-form .form-item p,
+    .webform-submission-get-involved-form .form-item p {
+      font-size: 1.6rem; }
+  .webform-submission-leadership-gift-form-form .form-checkboxes .form-item,
+  .webform-submission-leadership-gift-form-form .form-radios .form-item,
+  .webform-submission-main-donate-form-form .form-checkboxes .form-item,
+  .webform-submission-main-donate-form-form .form-radios .form-item,
+  .webform-submission-get-involved-form .form-checkboxes .form-item,
+  .webform-submission-get-involved-form .form-radios .form-item {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em; }
+  .webform-submission-leadership-gift-form-form .form-type-radio,
+  .webform-submission-main-donate-form-form .form-type-radio,
+  .webform-submission-get-involved-form .form-type-radio {
+    display: inline;
+    height: 4rem; }
+    .webform-submission-leadership-gift-form-form .form-type-radio label, .webform-submission-leadership-gift-form-form .form-type-radio .field .field-label, .field .webform-submission-leadership-gift-form-form .form-type-radio .field-label,
+    .webform-submission-main-donate-form-form .form-type-radio label,
+    .webform-submission-main-donate-form-form .form-type-radio .field .field-label,
+    .field .webform-submission-main-donate-form-form .form-type-radio .field-label,
+    .webform-submission-get-involved-form .form-type-radio label,
+    .webform-submission-get-involved-form .form-type-radio .field .field-label,
+    .field .webform-submission-get-involved-form .form-type-radio .field-label {
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 5px; }
+  .webform-submission-leadership-gift-form-form label.option, .webform-submission-leadership-gift-form-form .field .option.field-label, .field .webform-submission-leadership-gift-form-form .option.field-label,
+  .webform-submission-main-donate-form-form label.option,
+  .webform-submission-main-donate-form-form .field .option.field-label,
+  .field .webform-submission-main-donate-form-form .option.field-label,
+  .webform-submission-get-involved-form label.option,
+  .webform-submission-get-involved-form .field .option.field-label,
+  .field .webform-submission-get-involved-form .option.field-label {
+    width: auto; }
+  .webform-submission-leadership-gift-form-form input,
+  .webform-submission-main-donate-form-form input,
+  .webform-submission-get-involved-form input {
+    background-color: #edece9;
+    border: 2px solid #329a94;
+    color: #4B3E38;
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    height: 50px;
+    padding-left: 30px;
+    width: 100%;
+    max-width: 275px; }
+  .webform-submission-leadership-gift-form-form input[type="radio"] + label, .webform-submission-leadership-gift-form-form .field input[type="radio"] + .field-label, .field .webform-submission-leadership-gift-form-form input[type="radio"] + .field-label,
+  .webform-submission-main-donate-form-form input[type="radio"] + label,
+  .webform-submission-main-donate-form-form .field input[type="radio"] + .field-label,
+  .field .webform-submission-main-donate-form-form input[type="radio"] + .field-label,
+  .webform-submission-get-involved-form input[type="radio"] + label,
+  .webform-submission-get-involved-form .field input[type="radio"] + .field-label,
+  .field .webform-submission-get-involved-form input[type="radio"] + .field-label {
+    position: relative;
+    display: inline;
+    font-weight: 700 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+    cursor: pointer; }
+  .webform-submission-leadership-gift-form-form input[type="radio"] + label::before, .webform-submission-leadership-gift-form-form .field input[type="radio"] + .field-label::before, .field .webform-submission-leadership-gift-form-form input[type="radio"] + .field-label::before,
+  .webform-submission-main-donate-form-form input[type="radio"] + label::before,
+  .webform-submission-main-donate-form-form .field input[type="radio"] + .field-label::before,
+  .field .webform-submission-main-donate-form-form input[type="radio"] + .field-label::before,
+  .webform-submission-get-involved-form input[type="radio"] + label::before,
+  .webform-submission-get-involved-form .field input[type="radio"] + .field-label::before,
+  .field .webform-submission-get-involved-form input[type="radio"] + .field-label::before {
+    background-color: transparent;
+    background-image: url("../images/radio-off.png");
+    background-position: center center;
+    border: 0;
+    width: 25px;
+    height: 27px;
+    background-size: contain;
+    margin-right: 0.5rem;
+    margin-bottom: -1rem; }
+  .webform-submission-leadership-gift-form-form input[type="radio"]:checked + label::before, .webform-submission-leadership-gift-form-form .field input[type="radio"]:checked + .field-label::before, .field .webform-submission-leadership-gift-form-form input[type="radio"]:checked + .field-label::before,
+  .webform-submission-main-donate-form-form input[type="radio"]:checked + label::before,
+  .webform-submission-main-donate-form-form .field input[type="radio"]:checked + .field-label::before,
+  .field .webform-submission-main-donate-form-form input[type="radio"]:checked + .field-label::before,
+  .webform-submission-get-involved-form input[type="radio"]:checked + label::before,
+  .webform-submission-get-involved-form .field input[type="radio"]:checked + .field-label::before,
+  .field .webform-submission-get-involved-form input[type="radio"]:checked + .field-label::before {
+    background-image: url("../images/radio-on.png"); }
+  .webform-submission-leadership-gift-form-form .field-prefix,
+  .webform-submission-main-donate-form-form .field-prefix,
+  .webform-submission-get-involved-form .field-prefix {
+    color: #8e8e8e;
+    font-size: 29px;
+    left: 12px;
+    position: absolute;
+    top: 0px; }
+  .webform-submission-leadership-gift-form-form ul.check li,
+  .webform-submission-main-donate-form-form ul.check li,
+  .webform-submission-get-involved-form ul.check li {
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 25px; }
+  .webform-submission-leadership-gift-form-form ul.check li::before,
+  .webform-submission-main-donate-form-form ul.check li::before,
+  .webform-submission-get-involved-form ul.check li::before {
+    background-color: transparent;
+    background-image: url("../images/check.png");
+    background-position: center center;
+    border-radius: 0;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    margin-right: 0.5rem; }
+  .webform-submission-leadership-gift-form-form .form-type-number,
+  .webform-submission-main-donate-form-form .form-type-number,
+  .webform-submission-get-involved-form .form-type-number {
+    display: inline-block;
+    margin: 0; }
+    .webform-submission-leadership-gift-form-form .form-type-number label, .webform-submission-leadership-gift-form-form .form-type-number .field .field-label, .field .webform-submission-leadership-gift-form-form .form-type-number .field-label,
+    .webform-submission-main-donate-form-form .form-type-number label,
+    .webform-submission-main-donate-form-form .form-type-number .field .field-label,
+    .field .webform-submission-main-donate-form-form .form-type-number .field-label,
+    .webform-submission-get-involved-form .form-type-number label,
+    .webform-submission-get-involved-form .form-type-number .field .field-label,
+    .field .webform-submission-get-involved-form .form-type-number .field-label {
+      display: none; }
+  .webform-submission-leadership-gift-form-form .form-number:focus,
+  .webform-submission-main-donate-form-form .form-number:focus,
+  .webform-submission-get-involved-form .form-number:focus {
+    -webkit-box-shadow: 0 0 6px #666;
+            box-shadow: 0 0 6px #666; }
+  .webform-submission-leadership-gift-form-form .form-actions:before,
+  .webform-submission-main-donate-form-form .form-actions:before,
+  .webform-submission-get-involved-form .form-actions:before {
+    content: '';
+    background-image: url("../images/heart.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    position: absolute;
+    left: 5.5rem;
+    display: inline-block;
+    z-index: 3;
+    margin-top: 1.25rem; }
+  .webform-submission-leadership-gift-form-form .webform-button--submit,
+  .webform-submission-main-donate-form-form .webform-button--submit,
+  .webform-submission-get-involved-form .webform-button--submit {
+    background-color: #329a94;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    max-width: 200px; }
+    .webform-submission-leadership-gift-form-form .webform-button--submit:before,
+    .webform-submission-main-donate-form-form .webform-button--submit:before,
+    .webform-submission-get-involved-form .webform-button--submit:before {
+      content: '';
+      background-image: url("../images/heart.png");
+      background-position: center center;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      margin-right: 0.5rem; }
+  .webform-submission-leadership-gift-form-form input:hover[type="submit"],
+  .webform-submission-main-donate-form-form input:hover[type="submit"],
+  .webform-submission-get-involved-form input:hover[type="submit"] {
+    background-color: #329a94; }
 
 .page-node-type-blog .field--name-field-tags-country.field__items {
   display: inline-block;
