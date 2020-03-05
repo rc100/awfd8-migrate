@@ -14,6 +14,10 @@
   .form-item {
     border: 0;
     position: relative;
+
+    p {
+      font-size: 1.6rem;
+    }
   }
 
   .form-checkboxes .form-item,
@@ -24,13 +28,13 @@
 
   .form-type-radio {
     display: inline;
-    height: 40px;
-  }
+    height: 4rem;
 
-  .form-type-radio label {
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 5px;
+    label {
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 5px;
+    }
   }
 
   label.option {
@@ -60,6 +64,22 @@
     cursor: pointer;
   }
 
+  input[type="radio"]+label::before {
+    background-color: transparent;
+    background-image: url('../images/radio-off.png');
+    background-position: center center;
+    border: 0;
+    width: 25px;
+    height: 27px;
+    background-size: contain;
+    margin-right: 0.5rem;
+    margin-bottom: -1rem;
+  }
+
+  input[type="radio"]:checked+label::before {
+    background-image: url('../images/radio-on.png');
+  }
+
   .field-prefix {
     color: #8e8e8e;
     font-size: 29px;
@@ -72,7 +92,18 @@
     color: #696969;
     font-size: 14px;
     margin-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 25px;
+  }
+
+  ul.check li::before {
+    background-color: transparent;
+    background-image: url('../images/check.png');
+    background-position: center center;
+    border-radius: 0;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    margin-right: 0.5rem;
   }
 
   .form-type-number {
@@ -84,10 +115,45 @@
     }
   }
 
+  .form-number:focus {
+    box-shadow: 0 0 6px $medgray;
+  }
+
+  .form-actions {
+    &:before {
+      content: '';
+      background-image: url('../images/heart.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      position: absolute;
+      left: 5.5rem;
+      display: inline-block;
+      z-index: 3;
+      margin-top: 1.25rem;
+    }
+  }
+
   .webform-button--submit {
     background-color: $teal;
     color: $white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
     max-width: 200px;
+
+    &:before {
+      content: '';
+      background-image: url('../images/heart.png');
+      background-position: center center;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      margin-right: 0.5rem;
+    }
   }
 
   input:hover[type="submit"] {
