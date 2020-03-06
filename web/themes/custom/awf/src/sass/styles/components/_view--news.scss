@@ -1,0 +1,14 @@
+.news-blog-listing {
+  padding-bottom: 4rem;
+  .views-row {
+    background: #FFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    article > div {
+      padding: 0;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+  }
+}
