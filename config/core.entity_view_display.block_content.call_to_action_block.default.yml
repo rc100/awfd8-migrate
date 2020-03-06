@@ -7,8 +7,10 @@ dependencies:
     - field.field.block_content.call_to_action_block.body
     - field.field.block_content.call_to_action_block.field_background_image
     - field.field.block_content.call_to_action_block.field_link
+    - image.style.full_cta
   module:
     - link
+    - media
     - text
 id: block_content.call_to_action_block.default
 targetEntityType: block_content
@@ -22,6 +24,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_background_image:
+    type: media_thumbnail
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: full_cta
+      image_link: ''
+    third_party_settings: {  }
   field_link:
     weight: 1
     label: hidden
@@ -35,5 +46,4 @@ content:
     type: link
     region: content
 hidden:
-  field_background_image: true
   langcode: true

@@ -1,0 +1,27 @@
+// Where we work block
+// Eg. Species page
+
+.block-where-we-work {
+  @extend %content-width-wide;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
+
+  @include breakpoint($min760) {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+
+  p {
+    max-width: 590px;
+  }
+
+  .column {
+    column-count: 5;
+
+    a {
+      display: block;
+      break-inside: avoid;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
