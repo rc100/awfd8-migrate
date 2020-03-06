@@ -29,3 +29,22 @@ leaflet:
     - core/drupal
     - core/jquery.once
     - core/jquery
+wherewework:
+  version: 1.0
+  js:
+    src/js/includes/utils.js: {}
+    src/js/includes/plugin-mutator.js: {}
+    src/js/includes/boot-ready.js: {}
+    src/js/includes/customs.all.min.js: {}
+    src/js/includes/scroll2.js: {}
+    src/js/includes/wherewework.js: {}
+    src/js/lib/jquery.easing.1.3.js: {}
+    src/js/lib/waypoints.min.js: {}
+    src/js/lib/jquery.idTabs.js: {}
+    src/js/lib/jquery.flexslider.js: {}
+    src/js/lib/jquery.transit.min.js: {}
+    src/js/lib/jquery.rwdImageMaps.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/underscore
