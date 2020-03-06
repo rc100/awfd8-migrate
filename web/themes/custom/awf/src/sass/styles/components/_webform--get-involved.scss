@@ -1,0 +1,162 @@
+// Webform for Get Involved
+
+.webform-submission-leadership-gift-form-form,
+.webform-submission-main-donate-form-form,
+.webform-submission-get-involved-form {
+  background-color: #ddd;
+  min-height: 360px;
+  padding: 20px 20px 57px 20px;
+
+  .fieldset-legend {
+    display: none;
+  }
+
+  .form-item {
+    border: 0;
+    position: relative;
+
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .form-checkboxes .form-item,
+  .form-radios .form-item {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  .form-type-radio {
+    display: inline;
+    height: 4rem;
+
+    label {
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 5px;
+    }
+  }
+
+  label.option {
+    width: auto;
+  }
+
+  input {
+    background-color: #edece9;
+    border: 2px solid #329a94;
+    color: #4B3E38;
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    height: 50px;
+    padding-left: 30px;
+    width: 100%;
+    max-width: 275px;
+  }
+
+  input[type="radio"]+label {
+    position: relative;
+    display: inline;
+    font-weight: 700 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  input[type="radio"]+label::before {
+    background-color: transparent;
+    background-image: url('../images/radio-off.png');
+    background-position: center center;
+    border: 0;
+    width: 25px;
+    height: 27px;
+    background-size: contain;
+    margin-right: 0.5rem;
+    margin-bottom: -1rem;
+  }
+
+  input[type="radio"]:checked+label::before {
+    background-image: url('../images/radio-on.png');
+  }
+
+  .field-prefix {
+    color: #8e8e8e;
+    font-size: 29px;
+    left: 12px;
+    position: absolute;
+    top: 0px;
+  }
+
+  ul.check li {
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  ul.check li::before {
+    background-color: transparent;
+    background-image: url('../images/check.png');
+    background-position: center center;
+    border-radius: 0;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    margin-right: 0.5rem;
+  }
+
+  .form-type-number {
+    display: inline-block;
+    margin: 0;
+
+    label {
+      display: none;
+    }
+  }
+
+  .form-number:focus {
+    box-shadow: 0 0 6px $medgray;
+  }
+
+  .form-actions {
+    &:before {
+      content: '';
+      background-image: url('../images/heart.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      position: absolute;
+      left: 5.5rem;
+      display: inline-block;
+      z-index: 3;
+      margin-top: 1.25rem;
+    }
+  }
+
+  .webform-button--submit {
+    background-color: $teal;
+    color: $white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    max-width: 200px;
+
+    &:before {
+      content: '';
+      background-image: url('../images/heart.png');
+      background-position: center center;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      margin-right: 0.5rem;
+    }
+  }
+
+  input:hover[type="submit"] {
+    background-color: $teal;
+  }
+}
