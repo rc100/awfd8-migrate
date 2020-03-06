@@ -2,16 +2,57 @@
 
 .view-recent-blogs {
   position: relative;
-  padding-top: 7rem;
-  padding-bottom: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   max-width: 1024px;
   margin: 0 auto;
 
-  .view-content {
-    display: flex;
+  @include breakpoint($min760) {
+    padding-top: 7rem;
+    padding-bottom: 10rem;
   }
 
-  .views-row {
-    width: calc(100% / 3);
+  .view-header {
+    max-width: 590px;
+    margin-bottom: 3rem;
+  }
+
+  .view-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint($min760) {
+      flex-direction: row;
+    }
+
+    a {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+    }
+
+    .views-row {
+      width: 100%;
+      margin-bottom: 4rem;
+
+      @include breakpoint($min760) {
+        width: calc(95% / 3);
+        margin-bottom: 0;
+      }
+    }
+
+    .views-field-created {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      letter-spacing: 1.17px;
+      margin-top: 1rem;
+    }
+  }
+
+  .view-footer {
+    @include breakpoint($min760) {
+      margin-top: 5rem;
+    }
   }
 }

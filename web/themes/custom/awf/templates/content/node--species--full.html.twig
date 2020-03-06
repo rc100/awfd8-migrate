@@ -163,13 +163,13 @@
       <div class="habitats" id="habitats">
         <h2>Habitats</h2>
         {{ content.field_habitats }}
+        <div class="map">
+          {{ attach_library('awf/leaflet') }}
+          <div class="gotmap">
+            <div id="PageMap" class="PageMap fill" data-zoom="4" data-geodata="{{ file_url(node.field_kml.entity.uri.value) }}"></div>
+          </div>
+        </div>
       </div>
-      <div class="map">
-      {{ attach_library('awf/leaflet') }}
-      <div class="gotmap">
-        <div id="PageMap" class="PageMap fill" data-zoom="4" data-geodata="{{ file_url(node.field_kml.entity.uri.value) }}"></div>
-      </div>
-    </div>
     {% endif %}
 
     {{ content|without('field_sidebar_item_paragraph', 'field_sidebar_item', 'field_about', 'field_facts_paragraph','field_overview_paragraph', 'field_challenges', 'field_image', 'field_solutions', 'field_solution_paragraph', 'field_main_image', 'field_habitat_paragraph', 'field_conservation_status', 'field_behaviors', 'field_diet', 'field_habitats', 'field_vertical_image', 'field_horizontal_image') }}
