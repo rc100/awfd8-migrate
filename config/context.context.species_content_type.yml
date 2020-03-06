@@ -30,13 +30,58 @@ reactions:
         views_label: ''
         items_per_page: none
         region: content
-        weight: '0'
+        weight: '3'
         context_mapping: {  }
         theme: awf
         css_class: view-recent-blogs
         unique: 0
         context_id: species_content_type
         uuid: bea8a00e-d831-4689-9a19-5e9cf1f3fe60
+      69bf766b-18ea-4c78-848d-5b47d55037d6:
+        id: 'block_content:31289694-a8a9-4465-9cd6-5cb92befc5b9'
+        label: 'Our Call'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '2'
+        context_mapping: {  }
+        theme: awf
+        css_class: our-call
+        unique: 0
+        context_id: species_content_type
+        uuid: 69bf766b-18ea-4c78-848d-5b47d55037d6
+      a69241e8-1492-417d-9a08-cf794c3cd1fa:
+        id: 'block_content:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
+        label: 'Where We Work'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: species_content_type
+        uuid: a69241e8-1492-417d-9a08-cf794c3cd1fa
+      fe922635-2d79-4ee9-ba13-ac1e052f7c0e:
+        id: system_main_block
+        label: 'Main page content'
+        provider: system
+        label_display: 0
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: species_content_type
+        uuid: fe922635-2d79-4ee9-ba13-ac1e052f7c0e
     id: blocks
     saved: false
     uuid: 332e0cdb-9afa-4830-9cd9-638901093ecc

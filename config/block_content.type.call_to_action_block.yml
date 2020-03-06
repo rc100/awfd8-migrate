@@ -1,0 +1,8 @@
+uuid: cd44d17f-ebcf-4a44-bb6e-b95da7a86e8c
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action_block
+label: 'Call To Action Block'
+revision: 1
+description: 'A Call To Action Block, which allows for a background image, a link field, and a description field. '
