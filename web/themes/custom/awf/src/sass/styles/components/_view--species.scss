@@ -1,0 +1,26 @@
+// View -- Wildlife Conservation page
+
+.view-display-id-page_2 {
+  border: 2px solid orange;
+
+
+  ul li {
+    text-indent: 0 !important;
+    display: inline-block;
+  }
+
+  ul li:before {
+    display: none !important;
+  }
+
+  div {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .field--name-field-tags-animal {
+    background: #dad9d4;
+    height: 40px;
+    width: 100%;
+  }
+}
