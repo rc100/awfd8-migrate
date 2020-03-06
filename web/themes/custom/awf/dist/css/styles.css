@@ -1536,15 +1536,15 @@ hr.tight {
     margin-left: 1.25rem;
     text-indent: -2rem;
     padding-left: 2rem; }
-    .block-main-page-content ol li:before,
-    .block-main-page-content ul li:before {
-      background-color: #878475;
-      border-radius: 50%;
-      content: '';
-      display: inline-block;
-      margin-right: 1rem;
-      width: 9px;
-      height: 9px; }
+  .block-main-page-content ol li:not(.pager__item):before,
+  .block-main-page-content ul li:not(.pager__item):before {
+    background-color: #878475;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    margin-right: 1rem;
+    width: 9px;
+    height: 9px; }
 
 .region-sidebar-second ul {
   margin: 0;
@@ -3445,6 +3445,17 @@ a.share {
 
 .overview-land .view-hero-landing.view-hero .views-row:before {
   background: transparent url("../images/infographics/land.png") 0 0 no-repeat; }
+
+.news-blog-listing {
+  padding-bottom: 4rem; }
+  .news-blog-listing .views-row {
+    background: #FFF;
+    padding: 2rem;
+    margin-bottom: 2rem; }
+    .news-blog-listing .views-row article > div {
+      padding: 0; }
+    .news-blog-listing .views-row img {
+      margin-bottom: 2rem; }
 
 .webform-submission-leadership-gift-form-form,
 .webform-submission-main-donate-form-form,
