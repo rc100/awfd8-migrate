@@ -1,0 +1,17 @@
+uuid: b0cb90ff-4a69-4c05-bc77-f9ba42e00383
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full_cta
+label: 'Full CTA (1440x400)'
+effects:
+  030f9119-e53a-4143-b6bc-33e60af30b3d:
+    uuid: 030f9119-e53a-4143-b6bc-33e60af30b3d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 400
+      crop_type: focal_point
