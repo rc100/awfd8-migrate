@@ -1,0 +1,25 @@
+uuid: 34a80dc8-3102-4657-93ca-187dc461ab2d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
+  module:
+    - block_content
+  theme:
+    - awf
+id: wherewework
+theme: awf
+region: disabled
+weight: 0
+provider: null
+plugin: 'block_content:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
+settings:
+  id: 'block_content:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
+  label: 'Where We Work'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
