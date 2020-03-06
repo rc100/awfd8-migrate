@@ -13,6 +13,11 @@
   width: 100%;
 }
 
+%content-width-wide {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 %fadein-selector {
   transition: opacity 300ms ease 50ms;
 

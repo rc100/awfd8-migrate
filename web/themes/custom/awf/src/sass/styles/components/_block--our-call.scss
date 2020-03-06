@@ -1,0 +1,48 @@
+// Our Call block
+// Eg. Species page
+
+.block-our-call {
+  @extend %content-width-wide;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+  color: $white;
+
+  @include breakpoint($min760) {
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+  }
+
+  .field--name-body {
+    margin: 0 auto;
+    max-width: 590px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .field--name-field-background-image img {
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: absolute;
+    right: 50%;
+    width: 100vw;
+    max-height: 400px;
+    background-size: auto;
+    width: inherit;
+    max-width: inherit;
+
+    @include breakpoint($min1024) {
+      width: 100vw;
+    }
+  }
+
+  .field--type-link {
+    width: 175px;
+    display: inline-block;
+  }
+}

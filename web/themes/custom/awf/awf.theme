@@ -88,3 +88,15 @@ function awf_preprocess_block(&$vars) {
     $vars["page_title"] = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
 }
+
+/**
+ * Implements theme_suggestions_block_alter() for block types theming.
+ */
+function awf_as_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $elements = $variables['elements'];
+  if (isset($elements['content']['#block_content'])) {
+    $bundle = $elements['content']['#block_content']->bundle();
+    $variables['blocksuggestion'] = $bundle;
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
