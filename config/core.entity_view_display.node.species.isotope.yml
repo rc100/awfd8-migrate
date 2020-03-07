@@ -41,30 +41,54 @@ dependencies:
     - field.field.node.species.field_tags_region
     - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
-    - image.style.medium
+    - image.style.species_featured
     - node.type.species
   module:
     - image
+    - options
     - user
 id: node.species.isotope
 targetEntityType: node
 bundle: species
 mode: isotope
 content:
+  field_conservation_status:
+    type: list_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_main_image:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
+      image_style: species_featured
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
+  field_size:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_species:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_tags_animal:
     weight: 1
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -74,7 +98,6 @@ hidden:
   field_alternate_thumbnail: true
   field_behaviors: true
   field_challenges: true
-  field_conservation_status: true
   field_diet: true
   field_facts_paragraph: true
   field_featured: true
@@ -94,11 +117,9 @@ hidden:
   field_photo_credit: true
   field_project_text: true
   field_sidebar_items_paragraph: true
-  field_size: true
   field_solution_paragraph: true
   field_solutions: true
   field_sound: true
-  field_species: true
   field_tags_africa: true
   field_tags_country: true
   field_tags_region: true

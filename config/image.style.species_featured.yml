@@ -1,0 +1,15 @@
+uuid: d87e4c92-0e99-4548-aba7-929d90da083e
+langcode: en
+status: true
+dependencies: {  }
+name: species_featured
+label: 'Species Featured (220x220)'
+effects:
+  119da1e6-b820-4b03-ac46-e31aae6bb2c0:
+    uuid: 119da1e6-b820-4b03-ac46-e31aae6bb2c0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 220
+      anchor: center-center
