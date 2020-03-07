@@ -1,0 +1,47 @@
+uuid: ceeaa1e9-1b32-4a12-9485-87659d132e6b
+langcode: en
+status: true
+dependencies: {  }
+id: partner_administration
+label: 'partner administration'
+weight: 10
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access media browser'
+  - 'access site in maintenance mode'
+  - 'add media from remote sources'
+  - 'administer files'
+  - 'administer media browser'
+  - 'create files'
+  - 'create partner content'
+  - 'crop any image'
+  - 'crop own images'
+  - 'delete own audio files'
+  - 'delete own document files'
+  - 'delete own image files'
+  - 'delete own partner content'
+  - 'delete own video files'
+  - 'edit any document files'
+  - 'edit any partner content'
+  - 'edit own audio files'
+  - 'edit own document files'
+  - 'edit own image files'
+  - 'edit own partner content'
+  - 'edit own video files'
+  - 'moderate content from draft to needs_review'
+  - 'moderate content from needs_review to draft'
+  - 'use text format full_html'
+  - 'use workbench_moderation my drafts tab'
+  - 'use workbench_moderation needs review tab'
+  - 'view all unpublished content'
+  - 'view files'
+  - 'view moderation messages'
+  - 'view own files'
+  - 'view own private files'
+  - 'view own unpublished content'
+  - 'view revisions'
+  - 'view the administration theme'

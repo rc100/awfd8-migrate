@@ -5,15 +5,17 @@ dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonymous user'
+label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
-  - 'create temp workflow_transition'
+  - 'diff view changes'
+  - 'download any document files'
+  - 'download any image files'
   - 'search content'
-  - 'use text format restricted_html'
-  - 'view files'
-  - 'view media'
+  - 'use custom search'
+  - 'use custom search blocks'
+  - 'use text format filtered_html'
+  - 'view any homepage_compaign bean'

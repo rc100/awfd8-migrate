@@ -1,0 +1,14 @@
+uuid: db2fdbef-92de-4a15-b88e-0b6c2da565e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.human_resources
+  module:
+    - user
+id: user_remove_role_action.human_resources
+label: 'Remove the human resources role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: human_resources

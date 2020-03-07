@@ -1,0 +1,14 @@
+uuid: f465278d-b13b-4526-9969-f4edcf8bc34d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.junior_content_editor_our_staff
+  module:
+    - user
+id: user_add_role_action.junior_content_editor_our_staff
+label: 'Add the junior content editor - our staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: junior_content_editor_our_staff

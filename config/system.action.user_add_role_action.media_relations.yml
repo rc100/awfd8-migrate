@@ -1,0 +1,14 @@
+uuid: a2986707-2523-45df-83c7-c0109bdc239a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.media_relations
+  module:
+    - user
+id: user_add_role_action.media_relations
+label: 'Add the media relations role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: media_relations
