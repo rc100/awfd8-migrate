@@ -3519,20 +3519,31 @@ a.share {
     .news-blog-listing .views-row img {
       margin-bottom: 2rem; }
 
-.view-display-id-page_2 {
-  border: 2px solid orange; }
-  .view-display-id-page_2 ul li {
-    text-indent: 0 !important;
-    display: inline-block; }
-  .view-display-id-page_2 ul li:before {
-    display: none !important; }
-  .view-display-id-page_2 div {
-    padding: 0 !important;
-    margin: 0 !important; }
-  .view-display-id-page_2 .field--name-field-tags-animal {
-    background: #dad9d4;
-    height: 40px;
-    width: 100%; }
+.view-display-id-page_2 ul li {
+  text-indent: 0 !important;
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  margin-left: 0; }
+
+.view-display-id-page_2 ul li:before {
+  display: none !important; }
+
+.view-display-id-page_2 .field {
+  padding: 0;
+  margin: 0; }
+
+.view-display-id-page_2 .field--name-field-tags-animal {
+  background: #dad9d4;
+  color: #322c2a;
+  min-height: 40px;
+  width: 100%; }
+  .view-display-id-page_2 .field--name-field-tags-animal .field__item {
+    padding: 12px 10px !important; }
+
+.view-display-id-page_2 a:hover,
+.view-display-id-page_2 a:focus {
+  text-decoration: none; }
 
 .webform-submission-leadership-gift-form-form,
 .webform-submission-main-donate-form-form,
