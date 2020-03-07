@@ -67,6 +67,7 @@ function awf_preprocess_html(&$variables) {
 function awf_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['author_about'] = $node->getOwner()->field_about_the_author->view();
+  $variables['user_picture'] = $node->getOwner()->user_picture->view('compact');
 }
 
 /**
