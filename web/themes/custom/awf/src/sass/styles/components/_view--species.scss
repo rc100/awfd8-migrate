@@ -1,26 +1,36 @@
 // View -- Wildlife Conservation page
 
 .view-display-id-page_2 {
-  border: 2px solid orange;
-
-
   ul li {
     text-indent: 0 !important;
     display: inline-block;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    margin-left: 0;
   }
 
   ul li:before {
     display: none !important;
   }
 
-  div {
-    padding: 0 !important;
-    margin: 0 !important;
+  .field {
+    padding: 0;
+    margin: 0;
   }
 
   .field--name-field-tags-animal {
     background: #dad9d4;
-    height: 40px;
+    color: #322c2a;
+    min-height: 40px;
     width: 100%;
+
+    .field__item {
+      padding: 12px 10px !important;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
   }
 }

@@ -81,22 +81,13 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<a href="{{ url }}">
+  <article{{ attributes.addClass(classes) }} data-animals="{{ content.field_tags_animal.0['#title']|render|lower|clean_class }}" data-size="{{ content.field_size.0['#title']|render|lower|clean_class }}" data-danger="{{ content.field_conservation_status.0|render|lower|clean_class }}" data-species="{{ content.field_species.0['#title']|render|lower|clean_class }}">
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-    {{ content.field_tags_animal.uri }}
-  </div>
+    <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_size','field_conservation_status', 'field_species', 'field_size')}}
+    </div>
+  </a>
 
 </article>
 
-
-
-<!--
-<li class="four columns box isotope-item" data-animals="aardvark" data-size="medium" data-danger="least-threatened" data-species="aardvark" data-danger-order="4" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
-   <a href="/wildlife-conservation/aardvark">
-    <div class="tanbar bottom"><p>Aardvark</p></div>
-  <figure>
-   <img src="https://www.awf.org/sites/default/files/styles/twotwenty_square/public/media/gallery/wildlife/Aardvark/Aardvark_masthead.jpg?itok=vc8t1ucm" width="220" height="220" alt="Aardvark Charl Pretorius" title="Aardvark">   </figure>
-  </a>
-</li> -->
