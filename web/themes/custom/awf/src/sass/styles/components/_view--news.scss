@@ -1,14 +1,26 @@
 .news-blog-listing {
   padding-bottom: 4rem;
   .views-row {
-    background: #FFF;
-    padding: 2rem;
+    background: $white;
+    max-width: 700px;
+    padding: 2rem 2rem 4rem;
     margin-bottom: 2rem;
     article > div {
       padding: 0;
     }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+    .content-wrapper-top {
+      border-top: 1px solid $verylightgray;
+      padding-top: 1rem;
+    }
     img {
       margin-bottom: 2rem;
+    }
+    .read-more {
+      font-style: italic;
     }
   }
 }
