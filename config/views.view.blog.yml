@@ -443,8 +443,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: custom
-            custom_date_format: m.d.y
+            date_format: html_month_day_year
+            custom_date_format: ''
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -471,7 +471,7 @@ display:
           tokenize: false
           content:
             value: '<a href="/news" class="btn-orange-line">View More Stories</a>'
-            format: full_html
+            format: basic_html
           plugin_id: text
       title: ''
       pager:
@@ -1259,7 +1259,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"share-container\"><a href=\"{{ view_node_1 }}\" class=\"share\"><span class=\"visually-hidden\">Display share options for {{ title }}</span></a><div class=\"sharethis-inline-share-buttons\" data-title=\"{{ title }}\" data-url=\"{{ view_node_1 }}\"></div></div>\r\n<div class=\"title\"><h5><a href=\"{{ view_node_1 }}\">{{ title }}</a></h5><hr class=\"tight\"></div>\r\n<div class=\"content-wrapper-top\">{{ changed }}{{ uid }}</div>"
+            text: "<div class=\"share-container\"><a href=\"{{ view_node_1 }}\" class=\"share\"><span class=\"visually-hidden\">Display share options for {{ title }}</span></a><div class=\"sharethis-inline-share-buttons\" data-title=\"{{ title }}\" data-url=\"{{ view_node_1 }}\"></div></div>\r\n<div class=\"title\"><h2><a href=\"{{ view_node_1 }}\">{{ title }}</a></h2></div>\r\n<div class=\"content-wrapper-top\">{{ changed }}{{ uid }}</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1464,8 +1464,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: read-more
           element_default_classes: true
           empty: ''
           hide_empty: false

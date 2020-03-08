@@ -31,6 +31,11 @@ a.share {
   background: url('../images/sharebutton.png') top center no-repeat;
   background-size: 100% 200%;
 
+  .news-blog-listing & {
+    top: -2rem;
+    right: -2rem;
+  }
+
   &:hover,
   &:focus {
     background-position: bottom center;

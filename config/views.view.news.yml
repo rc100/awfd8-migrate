@@ -1463,7 +1463,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"share-container\"><a href=\"{{ view_node_1 }}\" class=\"share\"><span class=\"visually-hidden\">Display share options for {{ title_1 }}</span></a><div class=\"sharethis-inline-share-buttons\" data-title=\"{{ title_1 }}\" data-url=\"{{ view_node_1 }}\" data-image=\"{{ field_news_featured_image_1 }}\"></div></div>\r\n<div class=\"title\"><h5><a href=\"{{ view_node_1 }}\">{{ title_1 }}</a></h5><hr class=\"tight\"></div>\r\n<div class=\"content-wrapper-top\">{{ field_date }}{{ field_news_published_location }}</div>"
+            text: "<div class=\"share-container\"><a href=\"{{ view_node_1 }}\" class=\"share\"><span class=\"visually-hidden\">Display share options for {{ title_1 }}</span></a><div class=\"sharethis-inline-share-buttons\" data-title=\"{{ title_1 }}\" data-url=\"{{ view_node_1 }}\" data-image=\"{{ field_news_featured_image_1 }}\"></div></div>\r\n<div class=\"title\"><h2><a href=\"{{ view_node_1 }}\">{{ title_1 }}</a></h2></div>\r\n<div class=\"content-wrapper-top\">{{ field_date }}{{ field_news_published_location }}</div>"
             make_link: false
             path: ''
             absolute: false
