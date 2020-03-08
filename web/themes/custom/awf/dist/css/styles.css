@@ -2531,9 +2531,14 @@ ul.gray-bullets li {
   .block-where-we-work p {
     max-width: 590px; }
   .block-where-we-work .column {
-    -webkit-column-count: 5;
-       -moz-column-count: 5;
-            column-count: 5; }
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2; }
+    @media (min-width: 760px) {
+      .block-where-we-work .column {
+        -webkit-column-count: 5;
+           -moz-column-count: 5;
+                column-count: 5; } }
     .block-where-we-work .column a {
       display: block;
       -webkit-column-break-inside: avoid;
@@ -4264,7 +4269,6 @@ a.share {
     z-index: 1;
     color: #fff;
     text-align: center;
-    padding-bottom: 10rem;
     padding-top: 10rem; }
     .page-node-type-species .habitats:before {
       content: "";
@@ -4281,9 +4285,22 @@ a.share {
     .page-node-type-species .habitats:before {
       background-image: url("../../src/svg/pattern_teal.svg");
       background-repeat: no-repeat;
-      background-position: top right; }
+      background-position: top right;
+      height: 75%; }
     .page-node-type-species .habitats h2 {
       color: #fff; }
+    .page-node-type-species .habitats .map {
+      height: 100%;
+      min-height: 475px;
+      margin-top: 5rem; }
+      @media (min-width: 760px) {
+        .page-node-type-species .habitats .map {
+          min-height: 520px; } }
+    .page-node-type-species .habitats #PageMap {
+      min-height: 475px; }
+      @media (min-width: 760px) {
+        .page-node-type-species .habitats #PageMap {
+          min-height: 520px; } }
 
 .node--type-supplemental {
   display: -webkit-box;

@@ -16,7 +16,11 @@
   }
 
   .column {
-    column-count: 5;
+    column-count: 2;
+
+    @include breakpoint($min760) {
+      column-count: 5;
+    }
 
     a {
       display: block;

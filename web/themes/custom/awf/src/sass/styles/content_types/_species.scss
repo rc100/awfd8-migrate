@@ -352,17 +352,34 @@
 
     color: $white;
     text-align: center;
-    padding-bottom: 10rem;
     padding-top: 10rem;
 
     &:before {
       background-image: url('../../src/svg/pattern_teal.svg');
       background-repeat: no-repeat;
       background-position: top right;
+      height: 75%;
     }
 
     h2 {
       color: $white;
+    }
+
+    .map {
+      height: 100%;
+      min-height: 475px;
+      margin-top: 5rem;
+
+      @include breakpoint($min760) {
+        min-height: 520px;
+      }
+    }
+
+    #PageMap {
+      min-height: 475px;
+      @include breakpoint($min760) {
+        min-height: 520px;
+      }
     }
   }
 
