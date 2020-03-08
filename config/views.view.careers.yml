@@ -973,6 +973,7 @@ display:
         filter_groups: false
         header: false
         sorts: false
+        empty: false
       filter_groups:
         operator: AND
         groups:
@@ -985,7 +986,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
           content: '<h3 class="red">Consultancies</h3>'
           plugin_id: text_custom
@@ -1004,6 +1005,20 @@ display:
             label: ''
           granularity: second
           plugin_id: date
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'There are no consultancy positions open at this time. '
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
