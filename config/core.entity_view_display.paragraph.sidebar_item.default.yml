@@ -34,11 +34,11 @@ content:
     region: content
   field_view_reference:
     weight: 3
-    label: above
+    label: hidden
     settings:
-      view_title: inline
-      always_build_output: true
-      empty_view_title: inline
+      view_title: hidden
+      empty_view_title: hidden
+      always_build_output: false
     third_party_settings: {  }
     type: viewfield_default
     region: content

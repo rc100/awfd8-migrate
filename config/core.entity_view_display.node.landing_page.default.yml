@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.landing_page.field_legacy_id
     - field.field.node.landing_page.field_legacy_revision_id
     - field.field.node.landing_page.field_main_image
+    - field.field.node.landing_page.field_overview_type
     - field.field.node.landing_page.field_parent
     - field.field.node.landing_page.field_photo_credit
     - field.field.node.landing_page.field_project_text
@@ -81,14 +82,6 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_land_habitat:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_project_text:
     weight: 5
     label: above
@@ -105,7 +98,7 @@ content:
     region: content
   field_sidebar_item_paragraph:
     weight: 6
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -135,38 +128,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_tags_animal:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_community:
-    weight: 13
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_country:
-    weight: 17
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_economic:
-    weight: 14
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_tags_landing_page:
     type: entity_reference_label
     weight: 21
@@ -175,30 +136,6 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-  field_tags_policy:
-    weight: 18
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_projects:
-    weight: 15
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_region:
-    weight: 16
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_weight:
     weight: 7
     label: above
@@ -214,10 +151,19 @@ content:
 hidden:
   field_alternate_thumbnail: true
   field_heading: true
+  field_land_habitat: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_overview_type: true
   field_parent: true
   field_photo_credit: true
+  field_tags_animal: true
+  field_tags_community: true
+  field_tags_country: true
+  field_tags_economic: true
+  field_tags_policy: true
+  field_tags_projects: true
+  field_tags_region: true
   langcode: true
