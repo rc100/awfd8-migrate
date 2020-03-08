@@ -81,7 +81,6 @@ third_party_settings:
     group_quick_facts:
       children:
         - field_about
-        - field_conservation_status
         - field_facts_paragraph
       parent_name: ''
       weight: 3
@@ -176,6 +175,7 @@ third_party_settings:
         - field_featured
         - field_featured_text
         - field_weight
+        - field_conservation_status
         - field_alternate_thumbnail
       parent_name: ''
       weight: 11
@@ -247,7 +247,7 @@ content:
     type: text_textarea
     region: content
   field_alternate_thumbnail:
-    weight: 28
+    weight: 29
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -275,7 +275,7 @@ content:
     type: text_textarea
     region: content
   field_conservation_status:
-    weight: 27
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
