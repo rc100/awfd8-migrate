@@ -107,7 +107,7 @@
 
     // Find tabs
     items = []; //save elements
-    s.tabs = tabs = $("a[href^=#]",tabarea); //save tabs
+    s.tabs = tabs = $("a[href^=\\#]",tabarea); //save tabs
     tabs.each(function(){ //add items
       test = s.item(href(this));
       if(test.length) items=items.concat(test.get());
