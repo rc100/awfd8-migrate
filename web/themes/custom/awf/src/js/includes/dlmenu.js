@@ -356,7 +356,6 @@
   //add fixed white background
   function updatePos() {
     var scroll = $(window).scrollTop();
-    console.log(scroll);
     if (scroll > 10) {
       headerSection.addClass('fixed');
     } else {
@@ -365,7 +364,6 @@
   };
 
   $(document).on('click', function(e) {
-    console.log(e.target);
     var isMobile = menutoggle.is(':visible');
     if (isMobile) {
       // remove all the click listening by checking if it has toggle-class
