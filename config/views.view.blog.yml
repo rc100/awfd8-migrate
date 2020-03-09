@@ -443,8 +443,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_month_day_year
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: m/d/y
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -471,7 +471,7 @@ display:
           tokenize: false
           content:
             value: '<a href="/news" class="btn-orange-line">View More Stories</a>'
-            format: basic_html
+            format: full_html
           plugin_id: text
       title: ''
       pager:
