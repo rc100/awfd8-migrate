@@ -30,3 +30,8 @@ leaflet:
     - core/jquery.once
     - core/jquery
     - core/underscore
+
+showmore:
+  version: 1.0
+  js:
+    src/js/includes/show-more.js: {}
