@@ -80,7 +80,7 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('classy/node') }}
+
 <a href="{{ url }}">
   <article{{ attributes.addClass(classes) }} data-animals="{{ content.field_tags_animal.0['#title']|render|lower|clean_class }}" data-size="{{ content.field_size.0['#title']|render|lower|clean_class }}" data-danger="{{ content.field_conservation_status.0|render|lower|clean_class }}" data-species="{{ content.field_species.0['#title']|render|lower|clean_class }}">
 

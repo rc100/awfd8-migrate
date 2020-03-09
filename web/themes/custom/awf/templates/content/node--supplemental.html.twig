@@ -82,19 +82,20 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('classy/node') }}
+
 <article{{ attributes.addClass(classes) }}>
-
   {{ content.field_sidebar_image }}
-  <div{{ content_attributes.addClass('node__content') }}>
 
+  <div{{ content_attributes.addClass('node__content') }}>
     {# Do not display link #}
     {% if has_value == '1' %}
       {{ content|without('field_sidebar_image', 'field_remove_title', 'field_view_more') }}
     {# Display link #}
-    {% elseif has_value == '0' %}
+    {% elseif has_value == '0' or has_value == null %}
       {{ content|without('field_sidebar_image', 'field_remove_title') }}
     {% endif %}
   </div>
 
 </article>
+
+
