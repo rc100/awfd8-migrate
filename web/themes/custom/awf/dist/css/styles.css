@@ -397,6 +397,11 @@ svg {
 .text-right {
   float: right; }
 
+.subtext {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0 0 1.5rem 0; }
+
 /**
 * @file
 * Typographic styles.
@@ -3263,6 +3268,9 @@ a.share {
   width: 100%;
   height: 20px;
   position: absolute; }
+
+.paragraph--type--module .mb15 {
+  margin-bottom: 1.5rem; }
 
 .paragraph--type--module .full.mb15 {
   padding: 1rem 0; }
