@@ -1,0 +1,73 @@
+<div class="layout-container">
+
+  <header role="banner">
+    <div class="header-section">
+      <div class="inner-wrapper">
+        <a href="/" class="branding" rel="home" title="African Wildlife Foundation">
+          <span class="logo">African Wildlife Foundation</span>
+        </a>
+        <nav>
+          <div class="mainnav">
+            <div class="container">
+              <div class="row">
+                <button class="btn btn-navbar menu-toggle" type="button">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="region region-header">
+                  {{ page.header }}
+                  {{ page.nav_overlay }}
+                  <span class="region-donate"><a href="https://secure.awf.org/" class="donate">Donate</a></span>
+                </div>
+                <div class="search-content">
+                  <span><a id="search-toggle" class="icon-search" href="#">Search</a></span>
+                  {{ page.search_overlay }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+  <div class="preface">
+    {{ page.preface }}
+    {{ page.content_preface }}
+    {{ page.alert }}
+  </div>
+  {{ attach_library('awf/showmore') }}
+  <main role="main" class="{% if page.sidebar_second %}has-sidebar-right{% endif %}">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.postscript %}
+    <div class="postscript-section">
+      {{ page.postscript }}
+    </div>
+  {% endif %}
+  {% if page.footer %}
+    <footer class="section-footer" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
