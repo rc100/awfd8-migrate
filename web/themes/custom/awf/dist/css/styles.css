@@ -663,12 +663,13 @@ ul.contextual-links li {
     padding: 2rem; }
 
 .region-content article + aside {
-  min-width: 220px;
-  margin: 2rem 0; }
+  margin: 2rem 0;
+  min-width: 220px; }
   @media (min-width: 760px) {
     .region-content article + aside {
       margin: 0 0 0 2rem;
-      max-width: 220px; } }
+      max-width: 220px;
+      z-index: 1; } }
 
 .page-node-type-species .region-content,
 .page-node-type-species .region-content article {
@@ -3539,7 +3540,8 @@ a.share {
 
 .view-sidebar-news {
   background: #fff;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem; }
   .view-sidebar-news .views-field-title {
     font-weight: 600;
     font-size: 1.6rem; }
@@ -3555,10 +3557,6 @@ a.share {
     margin: 0 0 1rem; }
   .view-sidebar-news .carrot {
     color: #e7721f; }
-  .view-sidebar-news .tanbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
 
 .view-display-id-page_2 ul li {
   text-indent: 0 !important;

@@ -34,6 +34,7 @@
 .view-sidebar-news {
   background: $white;
   margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
 
   .views-field-title {
     font-weight: 600;
@@ -58,9 +59,5 @@
 
   .carrot {
     color: $awforange;
-  }
-
-  .tanbar {
-    display: flex;
   }
 }

@@ -14,12 +14,13 @@
   }
 
   article+aside {
-    min-width: 220px;
     margin: 2rem 0;
+    min-width: 220px;
 
     @include breakpoint($min760) {
       margin: 0 0 0 2rem;
       max-width: 220px;
+      z-index: 1;
     }
   }
 
