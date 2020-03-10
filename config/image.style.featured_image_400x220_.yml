@@ -1,0 +1,15 @@
+uuid: 97352c4a-bfdd-418b-82cf-d13007af7d23
+langcode: en
+status: true
+dependencies: {  }
+name: featured_image_400x220_
+label: 'Featured Image (400x220)'
+effects:
+  032412d5-2fc5-4492-aa28-9d6c7c5773b4:
+    uuid: 032412d5-2fc5-4492-aa28-9d6c7c5773b4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 220
+      anchor: center-center

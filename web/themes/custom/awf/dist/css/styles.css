@@ -164,6 +164,21 @@ input[type="button"] {
   max-width: 1024px;
   margin: 0 auto; }
 
+
+.image-wrapper {
+  overflow: hidden;
+  display: block; }
+  
+  .image-wrapper img {
+    display: block;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+  
+  .image-wrapper:hover img,
+  .image-wrapper:focus img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+
 /**
  * @file
  * Accessibility features.
@@ -2515,6 +2530,8 @@ ul.gray-bullets li {
   .block-our-call .field--type-link {
     width: 175px;
     display: inline-block; }
+  .block-our-call .field--name-field-link a {
+    color: white; }
 
 .layout-sidebar-second .block.basic-text {
   background: #fff;
@@ -3355,7 +3372,7 @@ a.share {
   position: relative;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  max-width: 1024px;
+  max-width: 1070px;
   margin: 0 auto; }
   @media (min-width: 760px) {
     .view-recent-blogs {
@@ -3392,7 +3409,7 @@ a.share {
           width: calc(95% / 3);
           margin-bottom: 0; } }
     .view-recent-blogs .view-content .views-field-title {
-      margin-top: 1rem; }
+      margin-top: 2rem; }
     .view-recent-blogs .view-content .views-field-created {
       font-size: 1.4rem;
       font-weight: 600;
@@ -4092,6 +4109,8 @@ a.share {
     .page-node-type-species .sub-menu li {
       list-style: none;
       display: inline-block; }
+      .page-node-type-species .sub-menu li:before {
+        display: none !important; }
   .page-node-type-species .overview .field--name-field-about {
     font-size: 1.8rem;
     line-height: 2.8rem;

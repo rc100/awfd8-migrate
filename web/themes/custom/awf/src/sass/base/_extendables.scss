@@ -25,3 +25,22 @@
     opacity: 0;
   }
 }
+
+
+%image-wrapper,
+.image-wrapper {
+  overflow: hidden;
+  display: block;
+
+  img {
+    display: block;
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
