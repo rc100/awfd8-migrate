@@ -10,7 +10,7 @@ field_name: field_status
 entity_type: node
 bundle: career
 label: Status
-description: ''
+description: 'Select whether or not this career opportunity is currently active. If this is an upcoming opportunity, uncheck the box and fill out the inactive text field.'
 required: false
 translatable: true
 default_value:

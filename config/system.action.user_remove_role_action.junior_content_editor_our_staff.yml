@@ -1,0 +1,14 @@
+uuid: 9ab457a8-85c2-4ef8-a513-dd9edf3f1472
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.junior_content_editor_our_staff
+  module:
+    - user
+id: user_remove_role_action.junior_content_editor_our_staff
+label: 'Remove the junior content editor - our staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: junior_content_editor_our_staff

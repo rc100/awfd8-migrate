@@ -1,0 +1,17 @@
+uuid: dc8070de-0c99-440f-aef2-611dc42e69c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: horizontal_image
+label: 'Horizontal Image (740x600)'
+effects:
+  9e62a889-0a9a-45b9-90d6-af83ae1ef475:
+    uuid: 9e62a889-0a9a-45b9-90d6-af83ae1ef475
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 740
+      height: 600
+      crop_type: focal_point

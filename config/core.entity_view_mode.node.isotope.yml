@@ -1,0 +1,10 @@
+uuid: 9ca2aea7-8577-405c-b0ce-9999431403fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.isotope
+label: Isotope
+targetEntityType: node
+cache: true

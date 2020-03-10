@@ -1,0 +1,67 @@
+uuid: a11e0c63-fe15-46ac-8f6e-fc0667f15783
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_history_list
+    - node.type.page
+    - paragraphs.paragraphs_type.history_list
+  module:
+    - entity_reference_revisions
+id: node.page.field_history_list
+field_name: field_history_list
+entity_type: node
+bundle: page
+label: Decade
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      history_list: history_list
+    target_bundles_drag_drop:
+      animal_habitat:
+        weight: 13
+        enabled: false
+      bullet_point:
+        weight: 14
+        enabled: false
+      facts:
+        weight: 15
+        enabled: false
+      history:
+        weight: 16
+        enabled: false
+      history_list:
+        enabled: true
+        weight: 17
+      item:
+        weight: 18
+        enabled: false
+      history_list_item:
+        weight: 19
+        enabled: false
+      module:
+        weight: 19
+        enabled: false
+      overview_facts:
+        weight: 20
+        enabled: false
+      schedule:
+        weight: 21
+        enabled: false
+      sidebar_item:
+        weight: 22
+        enabled: false
+      solution:
+        weight: 23
+        enabled: false
+      solution_bulletpoint:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+uuid: 218b8764-e26f-4018-b4e7-edd5e3bc2819
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: vertical_image
+label: 'Vertical Image (515x600)'
+effects:
+  c4b1a643-0e3f-43ee-ae68-b11383cf71d8:
+    uuid: c4b1a643-0e3f-43ee-ae68-b11383cf71d8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 515
+      height: 600
+      crop_type: focal_point

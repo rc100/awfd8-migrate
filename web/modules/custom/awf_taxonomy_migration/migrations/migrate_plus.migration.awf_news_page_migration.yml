@@ -40,14 +40,16 @@ process:
     plugin: migration_lookup
     migration: awf_taxonomy_term_migration
     source: field_tags_region
-  field_news_date: 
+  field_date:
     -
-      plugin: asg_array_to_string
+      plugin: sub_process
       source: field_date
-    -
-      plugin: format_date
-      from_format: 'Y-m-d H:i:s'
-      to_format: 'Y-m-d\TH:i:s'
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d'
+          source: value
   field_news_published_location: field_sub_heading
   field_news_featured_image:
     plugin: sub_process

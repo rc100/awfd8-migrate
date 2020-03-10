@@ -1,0 +1,28 @@
+uuid: 3801c99b-be28-448b-8808-32b2059111ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_block
+    - field.storage.block_content.field_background_image
+    - media.type.image
+id: block_content.call_to_action_block.field_background_image
+field_name: field_background_image
+entity_type: block_content
+bundle: call_to_action_block
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: fe5c505a-ce3f-4467-9d4e-eecdd31789f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.junior_administrator
+  module:
+    - user
+id: user_add_role_action.junior_administrator
+label: 'Add the junior administrator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: junior_administrator

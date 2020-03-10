@@ -4,15 +4,21 @@ status: true
 dependencies:
   config:
     - field.field.node.species.body
+    - field.field.node.species.field_about
     - field.field.node.species.field_alternate_thumbnail
+    - field.field.node.species.field_behaviors
     - field.field.node.species.field_challenges
     - field.field.node.species.field_conservation_status
+    - field.field.node.species.field_diet
     - field.field.node.species.field_facts_paragraph
     - field.field.node.species.field_featured
     - field.field.node.species.field_featured_text
     - field.field.node.species.field_gallery
     - field.field.node.species.field_habitat_paragraph
+    - field.field.node.species.field_habitats
     - field.field.node.species.field_heading
+    - field.field.node.species.field_horizontal_image
+    - field.field.node.species.field_image
     - field.field.node.species.field_kml
     - field.field.node.species.field_legacy_alias
     - field.field.node.species.field_legacy_id
@@ -32,6 +38,7 @@ dependencies:
     - field.field.node.species.field_tags_animal
     - field.field.node.species.field_tags_country
     - field.field.node.species.field_tags_region
+    - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
     - node.type.species
   module:
@@ -39,7 +46,6 @@ dependencies:
     - file
     - image
     - metatag
-    - options
     - text
     - user
     - viewfield
@@ -48,8 +54,15 @@ targetEntityType: node
 bundle: species
 mode: default
 content:
+  field_about:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_alternate_thumbnail:
-    weight: 11
+    weight: 7
     label: hidden
     settings:
       image_style: ''
@@ -57,22 +70,33 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_behaviors:
+    type: entity_reference_revisions_entity_view
+    weight: 18
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_challenges:
-    weight: 8
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_conservation_status:
-    weight: 4
-    label: hidden
-    settings: {  }
+  field_diet:
+    type: entity_reference_revisions_entity_view
+    weight: 19
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: list_default
     region: content
   field_facts_paragraph:
-    weight: 7
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -81,14 +105,14 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_featured_text:
-    weight: 14
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_gallery:
-    weight: 17
+    weight: 13
     label: above
     settings:
       view_title: hidden
@@ -99,22 +123,42 @@ content:
     region: content
   field_habitat_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 18
+    weight: 14
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_heading:
-    weight: 0
-    label: hidden
-    settings: {  }
+  field_habitats:
+    type: entity_reference_revisions_entity_view
+    weight: 20
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: text_default
+    region: content
+  field_horizontal_image:
+    weight: 21
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image:
+    weight: 16
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: content
   field_kml:
-    weight: 15
+    weight: 11
     label: above
     settings:
       use_description_as_link_text: true
@@ -122,7 +166,7 @@ content:
     type: file_default
     region: content
   field_main_image:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       image_style: ''
@@ -131,7 +175,7 @@ content:
     type: image
     region: content
   field_meta_tags:
-    weight: 16
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -139,23 +183,15 @@ content:
     region: content
   field_overview_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-  field_photo_credit:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_project_text:
-    weight: 13
+    weight: 9
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -163,7 +199,7 @@ content:
     region: content
   field_sidebar_items_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 19
+    weight: 15
     label: above
     settings:
       view_mode: default
@@ -171,7 +207,7 @@ content:
     third_party_settings: {  }
     region: content
   field_solution_paragraph:
-    weight: 12
+    weight: 8
     label: hidden
     settings:
       view_mode: default
@@ -180,33 +216,45 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solutions:
-    weight: 9
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sound:
-    weight: 6
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: file_url_plain
     region: content
   field_tags_animal:
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_vertical_image:
+    weight: 22
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
 hidden:
   body: true
+  field_conservation_status: true
   field_featured: true
+  field_heading: true
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_photo_credit: true
   field_size: true
   field_species: true
   field_tags_africa: true

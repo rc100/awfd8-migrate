@@ -40,6 +40,7 @@
 
 {%
   set classes = [
+    'subhead',
     'field',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
@@ -47,16 +48,8 @@
   ]
 %}
 
-{% if content|render|striptags %}
-  <div{{ attributes.addClass(classes) }}>
-    {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
-{% endif %}
+{% for item in items %}
+  <h2{{ item.attributes.addClass(classes) }}>
+    {{ item.content }}
+  </h2>
+{% endfor %}

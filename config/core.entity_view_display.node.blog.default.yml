@@ -19,7 +19,6 @@ dependencies:
     - node.type.blog
   module:
     - link
-    - metatag
     - text
     - user
 id: node.blog.default
@@ -35,7 +34,7 @@ content:
     third_party_settings: {  }
     region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -49,7 +48,7 @@ content:
     third_party_settings: {  }
     region: content
   field_image_link_view_more:
-    weight: 4
+    weight: 3
     label: above
     settings:
       trim_length: 80
@@ -60,64 +59,9 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_land_habitat:
-    weight: 10
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_meta_tags:
-    weight: 15
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  field_tags_africa:
-    weight: 13
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_community:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_tags_country:
-    weight: 8
+    weight: 4
     label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_economic:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_projects:
-    weight: 14
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_tags_region:
-    weight: 9
-    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -126,5 +70,12 @@ content:
 hidden:
   field_blog_legacy_alias: true
   field_blog_legacy_id: true
+  field_land_habitat: true
+  field_meta_tags: true
+  field_tags_africa: true
+  field_tags_community: true
+  field_tags_economic: true
+  field_tags_projects: true
+  field_tags_region: true
   langcode: true
   links: true

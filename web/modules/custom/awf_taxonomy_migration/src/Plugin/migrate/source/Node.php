@@ -57,14 +57,16 @@ class Node extends D7Node {
 
 			// Map the old metatag names to the new d8 ones
 			$map = $this->metaTagsMap();
-			foreach($resultsArray as $resultKey => $resultValue) {
+			if(is_array($resultsArray)){
+				foreach($resultsArray as $resultKey => $resultValue) {
 
-				if(is_array($resultValue)){
-					$resultValue = implode(', ', $resultValue);
-				}
+					if(is_array($resultValue)){
+						$resultValue = implode(', ', $resultValue);
+					}
 
-				if (!empty($map[$resultKey])) {
-					$newResults[$map[$resultKey]] = $resultValue;
+					if (!empty($map[$resultKey])) {
+						$newResults[$map[$resultKey]] = $resultValue;
+					}
 				}
 			}
 

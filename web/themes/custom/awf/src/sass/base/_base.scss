@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // z-index: 0;
 }
 
 html {
@@ -12,6 +13,7 @@ html {
   text-size-adjust: 100%;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -179,7 +181,7 @@ svg {
   position: relative;
 }
 
-.right {
+.right:not(.map) {
   display: flex;
 
   justify-content: flex-end;
@@ -188,4 +190,14 @@ svg {
 .more {
   font-size: 1.2rem;
   font-style: italic;
+}
+
+.text-right {
+  float: right;
+}
+
+.subtext {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0 0 1.5rem 0;
 }

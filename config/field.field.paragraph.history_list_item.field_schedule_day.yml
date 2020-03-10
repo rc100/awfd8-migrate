@@ -1,0 +1,21 @@
+uuid: 42a1d61f-be63-4e46-8c0a-5156e4af6699
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_schedule_day
+    - paragraphs.paragraphs_type.history_list_item
+  module:
+    - text
+id: paragraph.history_list_item.field_schedule_day
+field_name: field_schedule_day
+entity_type: paragraph
+bundle: history_list_item
+label: Year
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

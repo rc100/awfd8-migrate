@@ -17,6 +17,7 @@ source:
 process:
   rid: rid
   uid: uid
+  # redirect_source/path: source
   redirect_source/path: source
   redirect_source/query:
     plugin: d7_redirect_source_query

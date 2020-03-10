@@ -1,0 +1,14 @@
+uuid: 0280bdf2-d617-44f9-836f-e019f70362f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.media_relations
+  module:
+    - user
+id: user_remove_role_action.media_relations
+label: 'Remove the media relations role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: media_relations

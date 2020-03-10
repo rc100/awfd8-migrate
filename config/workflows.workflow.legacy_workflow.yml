@@ -29,27 +29,37 @@ type_settings:
       default_revision: true
       weight: 0
   transitions:
-    draft:
-      label: Draft
-      from:
-        - draft
-      to: needs_review
-      weight: -2
-    needs_review_to_draft:
-      label: 'Needs Review'
-      from:
-        - needs_review
-      to: draft
-      weight: 0
-    needs_review_to_publish:
-      label: 'Needs Review'
+    approve_review:
+      label: 'Approve Review'
       from:
         - needs_review
       to: published
-      weight: 1
+      weight: 3
+    create_new_draft:
+      label: 'New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: -2
+    needs_review:
+      label: 'Needs Review'
+      from:
+        - draft
+        - needs_review
+        - published
+      to: needs_review
+      weight: 2
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: -1
   entity_types:
     node:
       - blog
       - career
       - news
-  default_moderation_state: draft
+  default_moderation_state: published

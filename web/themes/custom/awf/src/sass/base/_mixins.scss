@@ -173,7 +173,7 @@
 @mixin button-body {
   z-index: 1;
   position: relative;
-  padding-top: 10px;
+  padding-top: 13px;
   padding-bottom: 13px;
   text-align: center;
   @include text-decoration-none;
@@ -429,5 +429,24 @@
       font-size: 10px;
       margin-left: 8px;
     }
+  }
+}
+
+@mixin fullbackground($color) {
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220vw;
+    background-color: $color;
+    margin-left: -100vw;
+    overflow: hidden;
+    z-index: -1;
   }
 }

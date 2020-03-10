@@ -1,0 +1,14 @@
+uuid: 3d229ba6-0bed-4cbf-9515-e75e66ad7032
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.partner_administration
+  module:
+    - user
+id: user_add_role_action.partner_administration
+label: 'Add the partner administration role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: partner_administration

@@ -13,10 +13,34 @@
   width: 100%;
 }
 
+%content-width-wide {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 %fadein-selector {
   transition: opacity 300ms ease 50ms;
 
   &.js-transparent {
     opacity: 0;
+  }
+}
+
+
+%image-wrapper,
+.image-wrapper {
+  overflow: hidden;
+  display: block;
+
+  img {
+    display: block;
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.05);
+    }
   }
 }

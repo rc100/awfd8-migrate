@@ -1,4 +1,154 @@
-!function(e){function n(a){if(t[a])return t[a].exports;var s=t[a]={exports:{},id:a,loaded:!1};return e[a].call(s.exports,s,s.exports,n),s.loaded=!0,s.exports}var t={};return n.m=e,n.c=t,n.p="",n(0)}([function(e,n,t){t(2),t(4),t(5),t(6),function(e){e(function(){})}(jQuery)},,function(e,n,t){var a,s,i;!function(o){function l(){o('<a class="sub-nav-toggle"><span class="element-invisible">Open Sub-navigation</span></a>').insertAfter("#block-mainmenu li.menu-item--expanded > a.menu-link"),o("#block-mainmenu li.menu-item--expanded > .menu").prepend('<a class="sub-nav-toggle-back">Back</a>')}function r(){var e=d.is(":visible"),n=o(".sub-nav-toggle"),t=o(".sub-nav-toggle-back"),a=o("#block-mainmenu .menu li.menu-item.menu-item--expanded a.menu-link"),s=o("#block-mainmenu .menu li.menu-item .menu-link"),i=o("#block-mainmenu .menu .main-navigation"),l=(o("#block-mainmenu .menu li.menu-item--expanded .main-navigation"),o("a.sub-nav-toggle-back"));l.text(o(this).parent().parent().find("a.menu-link:first-child").text()),e?(f.addClass("mobile-menu"),v.addClass("mobile"),a.addClass("expanded-link"),d.off("click keyup").on("click keyup",function(){d.hasClass("open")?u():(v.addClass("open").attr("aria-expanded","true"),d.addClass("open").attr("aria-expanded","true"),f.addClass("open").attr("aria-expanded","true"),g.addClass("stay-open stay-open-menu"),b.addClass("open-menu"),h.addClass("fixed"),c=o(window).scrollTop())}),n.off("click keyup").on("click keyup",function(){o(this).hasClass("open")?(o(this).removeClass("open"),o(this).siblings(".menu-link.expanded-link").removeClass("sheep"),o(this).siblings(".menu").removeClass("open").attr("aria-expanded","false"),o(this).closest(".menu").removeClass("subnav")):(t.addClass("open"),o(".menu-link.expanded-link").removeClass("previous-link"),o(this).siblings(".menu-link.expanded-link").addClass("previous-link"),t.text(o(".menu-link.expanded-link.previous-link").text()),o(this).addClass("open"),o(this).siblings(".menu").addClass("open").attr("aria-expanded","true"),o(this).closest(".menu").addClass("subnav"))}),t.off("click keyup").on("click keyup",function(){o(".menu-link.expanded-link").removeClass("previous-link"),t.text(o(this).parent().parent().parent().siblings("a.menu-link.expanded-link").text()),o(this).removeClass("open"),o(this).parent().removeClass("open"),o(this).parent().siblings(n).removeClass("open").attr("aria-expanded","false"),o(this).closest(".subnav").removeClass("subnav")})):(v.removeClass("open mobile").attr("aria-expanded",""),d.removeClass("open").attr("aria-expanded",""),f.removeClass("open mobile-menu").attr("aria-expanded",""),g.removeClass("stay-open stay-open-menu"),b.removeClass("open-menu"),i.removeClass("subnav"),n.removeClass("open").siblings(".menu").attr("aria-expanded","").removeClass("open").closest(".menu").removeClass("subnav")),s.on("focus",function(){o(this).parents(".menu-item").addClass("open")}),s.on("blur",function(){o(this).parents(".menu-item").removeClass("open")})}function u(){v.removeClass("open").attr("aria-expanded","false"),d.removeClass("open").attr("aria-expanded","false"),f.removeClass("open").attr("aria-expanded","false"),g.removeClass("stay-open stay-open-menu"),b.removeClass("open-menu");var e=d.is(":visible");e||o("nav.navigation.menu--main-menu > ul.menu > li.menu-item").removeClass("is-open")}function m(){u(),o(".search-block-form.open").removeClass("open");var e=d.is(":visible");e||C.removeClass("is-open")}function p(){var e=o(window).scrollTop();console.log(e),e>10?h.addClass("fixed"):h.removeClass("fixed")}o(".menu").on("mouseenter focus",".menu-item--expanded > a",function(e){var n=o(this);n.toggleClass("has-focus"),n.parents(".menu-item").attr("aria-expanded","true")}).on("mouseleave blur",".menu-item--expanded > a",function(e){var n=o(this);n.toggleClass("has-focus"),setTimeout(function(){"true"!==n.siblings("li.menu-item > .menu").attr("data-has-focus")&&n.parents("li.menu-item").attr("aria-expanded","false")},100)}).on("mouseenter focusin","li.menu-item > .menu",function(e){var n=o(this);n.attr("data-has-focus","true")}).on("mouseleave focusout","li.menu-item > .menu",function(e){var n=o(this);setTimeout(function(){0===n.find(":focus").length&&(n.attr("data-has-focus","false"),0===n.siblings("li.menu-item a.has-focus").length&&n.parents(".menu-item--expanded").attr("aria-expanded","false"))},100)}),o('a[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=o(this.hash);if(e=e.length?e:o("[name="+this.hash.slice(1)+"]"),e.length)return o("html, body").animate({scrollTop:e.offset().top},1e3),!1}}),/*!
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/**
+	 * @file
+	 * Common javascript file for loading scripts.
+	 *
+	 */
+
+	// Import scripts.
+	// require('./includes/eqheights');
+	// require('./includes/accordion');
+	// require('./includes/table');
+	// require('./includes/throttle');
+	// require('./includes/viewport');
+	__webpack_require__(2);
+	// require('./includes/menu');
+	__webpack_require__(4);
+	// require('./includes/shorten');
+	// require('./includes/skip-links');
+	__webpack_require__(5);
+	// require('./includes/tabs');
+	// require('./includes/sticky');
+	__webpack_require__(6);
+	// Lazysizes documentation: https://github.com/aFarkas/lazysizes.
+
+	// require('lazysizes');
+
+	(function ($) {
+	  // DOC READY
+	  $(function () {
+
+
+	    // Place code here or in a includes script file and require above.
+
+	    // Example of throttling.
+	    // $(window).on('resize', throttle(function () {
+	    //   console.log('resize');
+	    // }));
+
+	  });
+	})(jQuery);
+
+	// Example Drupal behavior.
+	// - Reinitialize something after an AJAX call.
+	// - using Drupal settings that are sent from php.
+	// To understand behaviors, see https://drupal.org/node/756722#behaviors.
+	// (function ($, Drupal) {
+	//   Drupal.behaviors.my_custom_behavior = {
+	//     attach: function (context, settings) {
+	//       // Do something Drupally
+	//     }
+	//   };
+	// })(jQuery, Drupal);
+
+
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function($) {
+
+	  $('.menu').on('mouseenter focus', '.menu-item--expanded > a', function(e) {
+	    var el = $(this);
+	    el.toggleClass('has-focus');
+	    // Show sub-menu
+	    el.parents('.menu-item').attr('aria-expanded', 'true');
+	  }).on('mouseleave blur', '.menu-item--expanded > a', function(e) {
+	    var el = $(this);
+	    el.toggleClass('has-focus');
+	    // Only hide sub-menu after a short delay, so links get a chance to catch focus from tabbing
+	    setTimeout(function() {
+	      if (el.siblings('li.menu-item > .menu').attr('data-has-focus') !== 'true') {
+	        el.parents('li.menu-item').attr('aria-expanded', 'false');
+	      }
+	    }, 100);
+	  }).on('mouseenter focusin', 'li.menu-item > .menu', function(e) {
+	    var el = $(this);
+	    el.attr('data-has-focus', 'true');
+	  }).on('mouseleave focusout', 'li.menu-item > .menu', function(e) {
+	    var el = $(this);
+	    setTimeout(function() {
+	      // Check if anything else has picked up focus (i.e. next link in sub-menu)
+	      if (el.find(':focus').length === 0) {
+	        el.attr('data-has-focus', 'false');
+	        // Hide sub-menu on the way out if parent link doesn't have focus now
+	        if (el.siblings('li.menu-item a.has-focus').length === 0) {
+	          el.parents('.menu-item--expanded').attr('aria-expanded', 'false');
+	        }
+	      }
+	    }, 100);
+	  });
+
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+
+	  /*!
 	   * hoverIntent v1.8.1 // 2014.08.11 // jQuery v1.9.1+
 	   * http://briancherne.github.io/jquery-hoverIntent/
 	   *
@@ -6,4 +156,453 @@
 	   * means you are free to use hoverIntent as long as this header is left intact.
 	   * Copyright 2007, 2014 Brian Cherne
 	   */
-function(o){"use strict";s=[t(3)],a=o,i="function"==typeof a?a.apply(n,s):a,!(void 0!==i&&(e.exports=i))}(function(e){"use strict";var n,t,a={interval:100,sensitivity:6,timeout:0},s=0,i=function(e){n=e.pageX,t=e.pageY},o=function(e,a,s,l){return Math.sqrt((s.pX-n)*(s.pX-n)+(s.pY-t)*(s.pY-t))<l.sensitivity?(a.off(s.event,i),delete s.timeoutId,s.isActive=!0,e.pageX=n,e.pageY=t,delete s.pX,delete s.pY,l.over.apply(a[0],[e])):(s.pX=n,s.pY=t,s.timeoutId=setTimeout(function(){o(e,a,s,l)},l.interval),void 0)},l=function(e,n,t,a){return delete n.data("hoverIntent")[t.id],a.apply(n[0],[e])};e.fn.hoverIntent=function(n,t,r){var u=s++,m=e.extend({},a);e.isPlainObject(n)?(m=e.extend(m,n),e.isFunction(m.out)||(m.out=m.over)):m=e.isFunction(t)?e.extend(m,{over:n,out:t,selector:r}):e.extend(m,{over:n,out:n,selector:t});var p=function(n){var t=e.extend({},n),a=e(this),s=a.data("hoverIntent");s||a.data("hoverIntent",s={});var r=s[u];r||(s[u]=r={id:u}),r.timeoutId&&(r.timeoutId=clearTimeout(r.timeoutId));var p=r.event="mousemove.hoverIntent.hoverIntent"+u;if("mouseenter"===n.type){if(r.isActive)return;r.pX=t.pageX,r.pY=t.pageY,a.off(p,i).on(p,i),r.timeoutId=setTimeout(function(){o(t,a,r,m)},m.interval)}else{if(!r.isActive)return;a.off(p,i),r.timeoutId=setTimeout(function(){l(t,a,r,m.out)},m.timeout)}};return this.on({"mouseenter.hoverIntent":p,"mouseleave.hoverIntent":p},m.selector)}});var c=0,d=o(".menu-toggle"),f=o("#block-mainmenu"),v=o(".region-header"),h=o(".header-section"),g=o("#header"),b=o("html, body"),C=o(".search-block-form"),k=o(".search-content");k.addClass("headerItems"),o("#search-toggle").on("click",function(e){return C.toggleClass("is-open"),u(),C.parent(".toggle-class").toggleClass("toggle-class"),!C.hasClass("is-open")||C.find('input[type="text"]').focus(),!1});var x=o("nav.navigation.menu--main-menu > ul.menu > li.menu-item.menu-item--expanded > a");x.on("click",function(e){e.preventDefault(),C.removeClass("is-open"),m(),o(this).parent("li.menu-item.menu-item--expanded").toggleClass("is-open")}),o(document).on("click",function(e){console.log(e.target);var n=d.is(":visible");n?o(e.target).parents().hasClass("mobile-menu")||o(e.target).hasClass("mobile-menu")||o(e.target).hasClass("menu-toggle")||m():o(e.target).parents().hasClass("is-open")||o(e.target).hasClass("is-open")||m()}),o(document).scroll(p),o(document).ready(l),o(document).ready(r),o(window).resize(r)}(jQuery)},function(e,n){e.exports=jQuery},function(e,n){!function(e){e(function(){e("body").has(".share-container").each(function(){setTimeout(function(){["facebook","twitter","linkedin","sharethis"].forEach(function(n){e('.st-btn[data-network="'+n+'"').attr({title:"social "+n.charAt(0).toUpperCase()+n.slice(1),"aria-label":"Open "+n+" sharing modal",tabindex:"0",role:"content-info"}),e('.st-btn[data-network="'+n+'"').keypress(function(n){n.which&&13==n.which&&e(this).click()})}),e(".sharethis-inline-share-buttons").is(":empty")&&(e(".share").addClass("no-social"),e(".sharethis-inline-share-buttons").append('<div class="no-social">Your browser may be blocking social sharing.</div>'))},100)}),e(".share-container a.share").on("click",function(n){n.preventDefault(),e(this).toggleClass("share-enabled")})})}(jQuery)},function(e,n){!function(e,n){n.behaviors.formInput={attach:function(n,t){$webformEmailInput=e("form.webform-submission-newsletter-form .form-item input"),$webformEmailInput.on("keyup",function(){e(this).val()?e(this).parent().addClass("with-value"):e(this).parent().removeClass("with-value")})}}}(jQuery,Drupal)},function(e,n){!function(e){e(function(){e(".btn-orange-line").length&&e(".btn-orange-line").append('<span class="line -right"></span><span class="line -top"></span><span class="line -left"></span><span class="line -bottom"></span>')})}(jQuery)}]);
+
+	  /* hoverIntent is similar to jQuery's built-in "hover" method except that
+	   * instead of firing the handlerIn function immediately, hoverIntent checks
+	   * to see if the user's mouse has slowed down (beneath the sensitivity
+	   * threshold) before firing the event. The handlerOut function is only
+	   * called after a matching handlerIn.
+	   *
+	   * // basic usage ... just like .hover()
+	   * .hoverIntent( handlerIn, handlerOut )
+	   * .hoverIntent( handlerInOut )
+	   *
+	   * // basic usage ... with event delegation!
+	   * .hoverIntent( handlerIn, handlerOut, selector )
+	   * .hoverIntent( handlerInOut, selector )
+	   *
+	   * // using a basic configuration object
+	   * .hoverIntent( config )
+	   *
+	   * @param  handlerIn   function OR configuration object
+	   * @param  handlerOut  function OR selector for delegation OR undefined
+	   * @param  selector    selector OR undefined
+	   * @author Brian Cherne <brian(at)cherne(dot)net>
+	   */
+
+	  (function(factory) {
+	    'use strict';
+	    if (true) {
+	      !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (jQuery && !jQuery.fn.hoverIntent) {
+	      factory(jQuery);
+	    }
+	  })(function($) {
+	    'use strict';
+
+	    // default configuration values
+	    var _cfg = {
+	      interval: 100,
+	      sensitivity: 6,
+	      timeout: 0
+	    };
+
+	    // counter used to generate an ID for each instance
+	    var INSTANCE_COUNT = 0;
+
+	    // current X and Y position of mouse, updated during mousemove tracking (shared across instances)
+	    var cX, cY;
+
+	    // saves the current pointer position coordinates based on the given mousemove event
+	    var track = function(ev) {
+	      cX = ev.pageX;
+	      cY = ev.pageY;
+	    };
+
+	    // compares current and previous mouse positions
+	    var compare = function(ev, $el, s, cfg) {
+	      // compare mouse positions to see if pointer has slowed enough to trigger `over` function
+	      if (Math.sqrt((s.pX - cX) * (s.pX - cX) + (s.pY - cY) * (s.pY - cY)) < cfg.sensitivity) {
+	        $el.off(s.event, track);
+	        delete s.timeoutId;
+	        // set hoverIntent state as active for this element (permits `out` handler to trigger)
+	        s.isActive = true;
+	        // overwrite old mouseenter event coordinates with most recent pointer position
+	        ev.pageX = cX;
+	        ev.pageY = cY;
+	        // clear coordinate data from state object
+	        delete s.pX;
+	        delete s.pY;
+	        return cfg.over.apply($el[0], [ev]);
+	      } else {
+	        // set previous coordinates for next comparison
+	        s.pX = cX;
+	        s.pY = cY;
+	        // use self-calling timeout, guarantees intervals are spaced out properly (avoids JavaScript timer bugs)
+	        s.timeoutId = setTimeout(function() { compare(ev, $el, s, cfg); }, cfg.interval);
+	      }
+	    };
+
+	    // triggers given `out` function at configured `timeout` after a mouseleave and clears state
+	    var delay = function(ev, $el, s, out) {
+	      delete $el.data('hoverIntent')[s.id];
+	      return out.apply($el[0], [ev]);
+	    };
+
+	    $.fn.hoverIntent = function(handlerIn, handlerOut, selector) {
+	      // instance ID, used as a key to store and retrieve state information on an element
+	      var instanceId = INSTANCE_COUNT++;
+
+	      // extend the default configuration and parse parameters
+	      var cfg = $.extend({}, _cfg);
+	      if ($.isPlainObject(handlerIn)) {
+	        cfg = $.extend(cfg, handlerIn);
+	        if (!$.isFunction(cfg.out)) {
+	          cfg.out = cfg.over;
+	        }
+	      } else if ($.isFunction(handlerOut)) {
+	        cfg = $.extend(cfg, { over: handlerIn, out: handlerOut, selector: selector });
+	      } else {
+	        cfg = $.extend(cfg, { over: handlerIn, out: handlerIn, selector: handlerOut });
+	      }
+
+	      // A private function for handling mouse 'hovering'
+	      var handleHover = function(e) {
+	        // cloned event to pass to handlers (copy required for event object to be passed in IE)
+	        var ev = $.extend({}, e);
+
+	        // the current target of the mouse event, wrapped in a jQuery object
+	        var $el = $(this);
+
+	        // read hoverIntent data from element (or initialize if not present)
+	        var hoverIntentData = $el.data('hoverIntent');
+	        if (!hoverIntentData) { $el.data('hoverIntent', (hoverIntentData = {})); }
+
+	        // read per-instance state from element (or initialize if not present)
+	        var state = hoverIntentData[instanceId];
+	        if (!state) { hoverIntentData[instanceId] = state = { id: instanceId }; }
+
+	        // state properties:
+	        // id = instance ID, used to clean up data
+	        // timeoutId = timeout ID, reused for tracking mouse position and delaying "out" handler
+	        // isActive = plugin state, true after `over` is called just until `out` is called
+	        // pX, pY = previously-measured pointer coordinates, updated at each polling interval
+	        // event = string representing the namespaced event used for mouse tracking
+
+	        // clear any existing timeout
+	        if (state.timeoutId) { state.timeoutId = clearTimeout(state.timeoutId); }
+
+	        // namespaced event used to register and unregister mousemove tracking
+	        var mousemove = state.event = 'mousemove.hoverIntent.hoverIntent' + instanceId;
+
+	        // handle the event, based on its type
+	        if (e.type === 'mouseenter') {
+	          // do nothing if already active
+	          if (state.isActive) { return; }
+	          // set "previous" X and Y position based on initial entry point
+	          state.pX = ev.pageX;
+	          state.pY = ev.pageY;
+	          // update "current" X and Y position based on mousemove
+	          $el.off(mousemove, track).on(mousemove, track);
+	          // start polling interval (self-calling timeout) to compare mouse coordinates over time
+	          state.timeoutId = setTimeout(function() { compare(ev, $el, state, cfg); }, cfg.interval);
+	        } else { // "mouseleave"
+	          // do nothing if not already active
+	          if (!state.isActive) { return; }
+	          // unbind expensive mousemove event
+	          $el.off(mousemove, track);
+	          // if hoverIntent state is true, then call the mouseOut function after the specified delay
+	          state.timeoutId = setTimeout(function() { delay(ev, $el, state, cfg.out); }, cfg.timeout);
+	        }
+	      };
+
+	      // listen for mouseenter and mouseleave
+	      return this.on({ 'mouseenter.hoverIntent': handleHover, 'mouseleave.hoverIntent': handleHover }, cfg.selector);
+	    };
+	  });
+
+	  function awfMobileMenuParts() {
+	    // $('#block-mainmenu li.menu-item--expanded').append('<a class="sub-nav-toggle"><span class="element-invisible">Open Sub-navigation</span></a>');
+	    $('<a class="sub-nav-toggle"><span class="element-invisible">Open Sub-navigation</span></a>').insertAfter('#block-mainmenu li.menu-item--expanded > a.menu-link');
+	    $('#block-mainmenu li.menu-item--expanded > .menu').prepend('<a class="sub-nav-toggle-back">' + 'Back' + '</a>');
+	  }
+
+	  var windowOffset = 0;
+	  var menutoggle = $('.menu-toggle');
+	  var menublock = $('#block-mainmenu');
+	  var headergroup = $('.region-header');
+	  var headerSection = $('.header-section');
+	  var header = $('#header');
+	  // var isMobile = function() {
+	  //   if(menutoggle.css('visibility') == 'visible') {
+	  //     return true;
+	  //   } else {
+	  //     return false;
+	  //   };
+	  // }
+	  var framework = $('html, body');
+
+	  // search section
+	  var searchSection = $('.search-block-form');
+	  var searchContent = $('.search-content');
+	  searchContent.addClass('headerItems');
+
+	  function awfMobileMenu() {
+
+	    var isMobile = menutoggle.is(':visible');
+	    var subnavtoggle = $('.sub-nav-toggle');
+	    var subnavtoggleback = $('.sub-nav-toggle-back');
+	    var menuExpandedlink = $('#block-mainmenu .menu li.menu-item.menu-item--expanded a.menu-link');
+	    var menulink = $('#block-mainmenu .menu li.menu-item .menu-link');
+	    var menuset = $('#block-mainmenu .menu .main-navigation');
+	    var subnav = $('#block-mainmenu .menu li.menu-item--expanded .main-navigation');
+	    var subNavBack = $('a.sub-nav-toggle-back');
+	    subNavBack.text($(this).parent().parent().find('a.menu-link:first-child').text());
+
+	    if (isMobile) {
+	      menublock.addClass('mobile-menu');
+	      headergroup.addClass('mobile');
+	      menuExpandedlink.addClass('expanded-link');
+
+	      // Add in click open on the main nav with accessibility
+	      menutoggle.off('click keyup').on('click keyup', function() {
+	        if (menutoggle.hasClass('open')) {
+	          hideHeaderNavs();
+	        } else {
+	          headergroup.addClass('open').attr('aria-expanded', 'true');
+	          menutoggle.addClass('open').attr('aria-expanded', 'true');
+	          menublock.addClass('open').attr('aria-expanded', 'true');
+	          header.addClass('stay-open stay-open-menu');
+	          framework.addClass('open-menu');
+	          headerSection.addClass('fixed');
+	          windowOffset = $(window).scrollTop();
+
+	        }
+	      });
+
+	      subnavtoggle.off('click keyup').on('click keyup', function() {
+	        if ($(this).hasClass('open')) {
+	          $(this).removeClass('open');
+	          $(this).siblings('.menu-link.expanded-link').removeClass('sheep');
+	          $(this).siblings('.menu').removeClass('open').attr('aria-expanded', 'false');
+	          $(this).closest('.menu').removeClass('subnav');
+	        } else {
+	          subnavtoggleback.addClass('open');
+	          $('.menu-link.expanded-link').removeClass('previous-link');
+	          $(this).siblings('.menu-link.expanded-link').addClass('previous-link');
+	          subnavtoggleback.text($('.menu-link.expanded-link.previous-link').text());
+	          $(this).addClass('open');
+	          $(this).siblings('.menu').addClass('open').attr('aria-expanded', 'true');
+	          $(this).closest('.menu').addClass('subnav');
+	        }
+	      });
+
+	      subnavtoggleback.off('click keyup').on('click keyup', function() {
+	        $('.menu-link.expanded-link').removeClass('previous-link');
+	        subnavtoggleback.text($(this).parent().parent().parent().siblings('a.menu-link.expanded-link').text());
+	        $(this).removeClass('open');
+	        $(this).parent().removeClass('open');
+	        $(this).parent().siblings(subnavtoggle).removeClass('open').attr('aria-expanded', 'false');
+	        $(this).closest('.subnav').removeClass('subnav');
+	      });
+	    } else {
+	      // $(window).scrollTop(windowOffset);
+	      headergroup.removeClass('open mobile').attr('aria-expanded', '');
+	      menutoggle.removeClass('open').attr('aria-expanded', '');
+
+	      menublock.removeClass('open mobile-menu').attr('aria-expanded', '');
+	      header.removeClass('stay-open stay-open-menu');
+	      framework.removeClass('open-menu');
+	      menuset.removeClass('subnav');
+	      subnavtoggle.removeClass('open').siblings('.menu').attr('aria-expanded', '').removeClass('open').closest('.menu').removeClass('subnav');
+	    }
+
+	    menulink.on('focus', function() {
+	      $(this).parents('.menu-item').addClass('open');
+	    });
+	    menulink.on('blur', function() {
+	      $(this).parents('.menu-item').removeClass('open');
+	    });
+
+	  }
+
+	  function hideHeaderNavs() {
+	    headergroup.removeClass('open').attr('aria-expanded', 'false');
+	    menutoggle.removeClass('open').attr('aria-expanded', 'false');
+	    menublock.removeClass('open').attr('aria-expanded', 'false');
+	    header.removeClass('stay-open stay-open-menu');
+	    framework.removeClass('open-menu');
+	    var isMobile = menutoggle.is(':visible');
+	    if (!isMobile) {
+	      $('nav.navigation.menu--main-menu > ul.menu > li.menu-item').removeClass('is-open');
+	    }
+	  };
+	  //search button
+	  $('#search-toggle').on('click', function(e) {
+	    searchSection.toggleClass('is-open');
+	    hideHeaderNavs();
+	    searchSection.parent('.toggle-class').toggleClass('toggle-class');
+	    !searchSection.hasClass('is-open') || searchSection.find('input[type="text"]').focus();
+
+	    return false;
+	  });
+
+	  function closeAllHeaderItems() {
+	    hideHeaderNavs();
+	    $('.search-block-form.open').removeClass('open');
+
+	    var isMobile = menutoggle.is(':visible');
+	    if (!isMobile) {
+	      searchSection.removeClass('is-open');
+
+	    }
+	  };
+
+	  var headerNavs = $('nav.navigation.menu--main-menu > ul.menu > li.menu-item.menu-item--expanded > a');
+
+	  headerNavs.on('click', function(e) {
+	    e.preventDefault();
+	    searchSection.removeClass('is-open');
+	    closeAllHeaderItems();
+	    $(this).parent('li.menu-item.menu-item--expanded').toggleClass('is-open');
+	  });
+
+	  //add fixed white background
+	  function updatePos() {
+	    var scroll = $(window).scrollTop();
+	    if (scroll > 10) {
+	      headerSection.addClass('fixed');
+	    } else {
+	      headerSection.removeClass('fixed');
+	    }
+	  };
+
+	  $(document).on('click', function(e) {
+	    var isMobile = menutoggle.is(':visible');
+	    if (isMobile) {
+	      // remove all the click listening by checking if it has toggle-class
+	      if ($(e.target).parents().hasClass('mobile-menu') || $(e.target).hasClass('mobile-menu') || $(e.target).hasClass('menu-toggle')) {} else {
+	        closeAllHeaderItems();
+	      }
+	    } else {
+	      if ($(e.target).parents().hasClass('is-open') || $(e.target).hasClass('is-open')) {} else {
+	        closeAllHeaderItems();
+	      }
+
+	    }
+	  });
+
+	  $(document).scroll(updatePos);
+	  $(document).ready(awfMobileMenuParts);
+	  $(document).ready(awfMobileMenu);
+	  $(window).resize(awfMobileMenu);
+
+
+	}(jQuery));
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+	module.exports = jQuery;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	/**
+	 * @file
+	 * Add Sharing behavior to share links.
+	 *
+	 */
+
+	(function ($) {
+	  // DOC READY
+	  $(function () {
+	    $('body').has('.share-container').each(function(){
+	      setTimeout(function(){
+	        //--------------------------
+	        // SHARETHIS a11y
+	        //--------------------------
+
+	        // Loop through an array of data-network names
+	        ['facebook', 'twitter', 'linkedin', 'sharethis'].forEach(function( platform ) {
+	          // Adds a11y to sharing icons
+	          $('.st-btn[data-network="' + platform + '"').attr({
+	            'title' : 'social ' + platform.charAt(0).toUpperCase() + platform.slice(1) + '',
+	            'aria-label' : 'Open ' + platform + ' sharing modal',
+	            'tabindex' : '0',
+	            'role' : 'content-info',
+	          });
+
+	          // Adds enter key functionality to work like a click
+	          $('.st-btn[data-network="' + platform + '"').keypress( function( e ) {
+	            if ( e.which && e.which == 13 ) { //  13 is character code for enter
+	              // event.preventDefault();
+	              $(this).click();
+	            }
+	          });
+	        });
+
+	// 	// Checks to see if container is empty because of browser social blocking
+	        if ($('.sharethis-inline-share-buttons').is(':empty')) {
+	          $('.share').addClass('no-social');
+	          $('.sharethis-inline-share-buttons').append('<div class="no-social">Your browser may be blocking social sharing.</div>');
+	        }
+	      }, 100);
+	    });
+	    $('.share-container a.share').on('click',function(e){
+	      e.preventDefault();
+	      $(this).toggleClass('share-enabled');
+	    });
+	  });
+
+	})(jQuery);
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+	/**
+	 * @file
+	 * Form alters for accessibility.
+	 *
+	 */
+	(function ($, Drupal) {
+	  Drupal.behaviors.formInput = {
+	    attach: function (context, settings) {
+	      // Do something Drupally
+	      $webformEmailInput = $("form.webform-submission-newsletter-form .form-item input");
+	        
+	        // if($webformInput.val()) {
+	        //   $(this).parent('div').addClass('something');
+	        // }
+	      $webformEmailInput.on("keyup", function() {
+	        if($(this).val()) {
+	          $(this).parent().addClass("with-value");
+	        } else {
+	          $(this).parent().removeClass("with-value");
+	        }
+	      });
+	    }
+	  };
+	})(jQuery, Drupal);
+
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+	/**
+	 * @file
+	 * Adding SVG loading animation to button
+	 */
+
+	(function ($) {
+	  // DOC READY
+	  $(function () {
+
+	    if($('.btn-orange-line').length) {
+	      $('.btn-orange-line').append('<span class="line -right"></span><span class="line -top"></span><span class="line -left"></span><span class="line -bottom"></span>');
+	    };
+	  
+
+	  });
+	})(jQuery);
+
+
+/***/ })
+/******/ ]);

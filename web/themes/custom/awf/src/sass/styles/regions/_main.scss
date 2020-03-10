@@ -11,6 +11,7 @@ main .layout-content {
 .layout-container {
   background-color: $ltgray;
 
+  .page-node-type-species &,
   .path-frontpage & {
     background-color: $white;
   }

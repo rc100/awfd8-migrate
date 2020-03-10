@@ -1,0 +1,8 @@
+uuid: 9fadb984-59fb-46e0-b476-3579943c1190
+langcode: en
+status: true
+dependencies: {  }
+id: long_month_day_year
+label: 'Long Month, Day, Year'
+locked: false
+pattern: 'F j, Y'

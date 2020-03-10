@@ -9,7 +9,8 @@
       margin-left: 1.25rem;
       text-indent: -2rem;
       padding-left: 2rem;
-
+    }
+    li:not(.pager__item){
       &:before {
         background-color: $tan;
         border-radius: 50%;

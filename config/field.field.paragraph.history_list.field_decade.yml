@@ -1,0 +1,19 @@
+uuid: 53326b68-fbc3-4f8f-9698-2ff821c750ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_decade
+    - paragraphs.paragraphs_type.history_list
+id: paragraph.history_list.field_decade
+field_name: field_decade
+entity_type: paragraph
+bundle: history_list
+label: Decade
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

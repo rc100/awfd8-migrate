@@ -1,0 +1,14 @@
+uuid: 3e527297-aa07-4f49-903c-d32c072c5984
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.junior_administrator
+  module:
+    - user
+id: user_remove_role_action.junior_administrator
+label: 'Remove the junior administrator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: junior_administrator

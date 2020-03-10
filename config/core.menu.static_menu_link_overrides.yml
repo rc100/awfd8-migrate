@@ -11,5 +11,23 @@ definitions:
     parent: ''
     expanded: false
     enabled: false
+  file_entity__types:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    weight: 0
+  entity__media_type__collection:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_structure
+    weight: 0
+    expanded: false
+  plugin__plugin_type__list:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_structure
+    expanded: false
+    weight: 0
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

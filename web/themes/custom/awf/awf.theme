@@ -67,6 +67,7 @@ function awf_preprocess_html(&$variables) {
 function awf_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['author_about'] = $node->getOwner()->field_about_the_author->view();
+  $variables['user_picture'] = $node->getOwner()->user_picture->view('compact');
 }
 
 /**
@@ -86,5 +87,17 @@ function awf_preprocess_block(&$vars) {
   $request = \Drupal::request();
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $vars["page_title"] = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+}
+
+/**
+ * Implements template_preprocess_HOOK() for fields.
+ */
+function awf_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+
+  // Add caret class to specified link fields.
+  if ($field_name == 'field_view_more') {
+    $variables['items'][0]['content']['#options']['attributes']['class'][] = 'caret';
   }
 }
