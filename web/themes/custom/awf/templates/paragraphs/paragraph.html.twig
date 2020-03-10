@@ -54,5 +54,9 @@
         {{ content }}
       {% endblock %}
     </div>
+    {% if paragraph.id() == 9476 %}
+    {{ attach_library('awf/showmore') }}
+    <button class="archive-button carrot }}">Archive</button>
+    {% endif %}
   {% endblock paragraph %}
 {% endif %}
