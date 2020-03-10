@@ -209,8 +209,8 @@
       data=$(this).data("idTabs");
       delete data["idTabs."+s.event];
       $(this).data("idTabs",data);
-      tabs = s.tabs || $("a[href^=#]",this); //save tabs
-      if(!tabs.length && $(this).is("a[href^=#]")) tabs = $(this);
+      tabs = s.tabs || $("a[href^=\\#]",this); //save tabs
+      if(!tabs.length && $(this).is("a[href^=\\#]")) tabs = $(this);
       tabs.trigger(e);
     });
   };
@@ -220,7 +220,7 @@
     // Save self since clicked tab may not be the first tab in the tabarea
     var self=this, ret=false, s=e.data.s;
     // Find first tab within each tabset
-    $("a[href="+href(this)+"]:first",s.area).each(function(){
+    $('a[href="'+href(this)+'"]:first',s.area).each(function(){
       var t = $(this).data(s.data); //tab's settings
       if(t) ret=idTabs.showtab.call(t.tabarea==s.tabarea?self:this,t,e)||ret;
     });
@@ -266,7 +266,7 @@
 // Matching tabs
   idTabs.tab = function(id){
     if(!id) return $([]);
-    return $("a[href="+id+"]",this.tabarea);
+    return $("a[href='"+id+"']",this.tabarea);
   };
 
 // Matching items
