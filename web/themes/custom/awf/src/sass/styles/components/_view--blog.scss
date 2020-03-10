@@ -4,7 +4,7 @@
   position: relative;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  max-width: 1024px;
+  max-width: 1070px;
   margin: 0 auto;
 
   @include breakpoint($min760) {
@@ -42,7 +42,7 @@
     }
 
     .views-field-title {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     .views-field-created {
