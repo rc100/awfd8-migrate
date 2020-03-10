@@ -19,3 +19,4 @@ permissions:
   - 'use custom search blocks'
   - 'use text format filtered_html'
   - 'view any homepage_compaign bean'
+  - 'view media'

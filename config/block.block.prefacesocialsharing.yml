@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: "<front>\r\n/wildlife-conservation/*"
     negate: true
     context_mapping: {  }
