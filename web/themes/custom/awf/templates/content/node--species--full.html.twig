@@ -110,7 +110,7 @@
       {{ content.field_facts_paragraph }}
     </div>
 
-    {% if content.field_overview_paragraph or content.field_image or content.field_challenges %}
+    {% if content.field_overview_paragraph or content.field_image|render|striptags or content.field_challenges %}
       <div class="challenges two-col" id="challenges">
         <div class="left">
           {{ content.field_overview_paragraph }}
@@ -129,7 +129,7 @@
         <div>{{ content.field_solutions }}</div>
         <div>{{ content.field_solution_paragraph }}</div>
 
-        {% if content.field_vertical_image or content.field_horizontal_image %}
+        {% if content.field_vertical_image|render|striptags or content.field_horizontal_image|render|striptags %}
           <div class="images two-col">
             <div class="left">
               {{ content.field_vertical_image }}
@@ -142,7 +142,7 @@
       </div>
     {% endif %}
 
-    {% if content.field_behaviors or content.field_diet %}
+    {% if content.field_behaviors|render|striptags or content.field_diet|render|striptags %}
       <div class="behaviors-diet" id="behaviors-diet">
         {% if content.field_behaviors %}
           <div class="left">
