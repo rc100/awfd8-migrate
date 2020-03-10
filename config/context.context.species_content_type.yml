@@ -53,22 +53,6 @@ reactions:
         unique: 0
         context_id: species_content_type
         uuid: 69bf766b-18ea-4c78-848d-5b47d55037d6
-      a69241e8-1492-417d-9a08-cf794c3cd1fa:
-        id: 'block_content:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
-        label: 'Where We Work'
-        provider: block_content
-        label_display: visible
-        status: true
-        info: ''
-        view_mode: full
-        region: content
-        weight: '1'
-        context_mapping: {  }
-        theme: awf
-        css_class: ''
-        unique: 0
-        context_id: species_content_type
-        uuid: a69241e8-1492-417d-9a08-cf794c3cd1fa
       fe922635-2d79-4ee9-ba13-ac1e052f7c0e:
         id: system_main_block
         label: 'Main page content'
