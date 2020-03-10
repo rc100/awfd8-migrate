@@ -312,6 +312,7 @@
 
   .field--type-image {
     margin: 0;
+    padding: 0px;
   }
 
   @include breakpoint($min1024) {
