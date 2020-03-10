@@ -79,6 +79,9 @@
       &:focus {
         span.field--listing-date {
           text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
 
@@ -293,7 +296,8 @@
       &:hover,
       &:focus {
         .field--listing-date {
-          text-decoration: none;
+          text-decoration: underline;
+          text-decoration-color: white;
         }
       }
     }
@@ -308,6 +312,7 @@
   .field--listing-title {
     margin-bottom: 12px;
     display: block;
+
   }
 
   .field--type-image {
@@ -330,6 +335,10 @@
 
     .field--listing-date {
       margin-bottom: 0;
+      color: #333;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 

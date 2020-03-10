@@ -1805,6 +1805,8 @@ ul.gray-bullets li {
           color: #4b3e36; }
       .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:hover span.field--listing-date, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:focus span.field--listing-date {
         text-decoration: none; }
+        .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:hover span.field--listing-date:hover, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:focus span.field--listing-date:hover {
+          text-decoration: none; }
     .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a:hover, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a:active {
       color: #4b3e36;
       text-decoration: none; }
@@ -1949,7 +1951,9 @@ ul.gray-bullets li {
       .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .view-display-id-attachment_1 a .field--listing-title:hover, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .view-display-id-attachment_1 a .field--listing-title:focus {
         color: #4b3e36; }
     .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .view-display-id-attachment_1 a .field--listing-date, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .view-display-id-attachment_1 a:hover .field--listing-date, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .view-display-id-attachment_1 a:focus .field--listing-date {
-      text-decoration: none; }
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+              text-decoration-color: white; }
   .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .field--listing-date {
     font-weight: 700;
     font-size: 1.3rem;
@@ -1971,7 +1975,10 @@ ul.gray-bullets li {
       top: 0;
       right: 0; }
     .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .field--listing-date {
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      color: #333; }
+      .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .field--listing-date:hover {
+        text-decoration: none; } }
   .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .views-row .image-wrapper {
     margin-bottom: 15px; }
   .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .views-row:hover .image-wrapper img, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .views-row:focus .image-wrapper img {
