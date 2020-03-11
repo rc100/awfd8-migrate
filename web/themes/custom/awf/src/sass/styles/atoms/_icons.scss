@@ -16,7 +16,7 @@
 // Circle icons
 .icon--agriculture {
   &:before {
-    background-image: url('../images/icon--aggriculture.png');
+    background-image: url('../images/icon--agriculture.png');
   }
 }
 
@@ -105,8 +105,10 @@
   }
 }
 
+.icon--action-plan,
 .icon--job,
-.icon--jobs {
+.icon--jobs,
+.icon--wildlife {
   &:before {
     background-image: url('../images/icon--jobs.png');
   }
@@ -160,7 +162,8 @@
   }
 }
 
-.icon--primary-ecosystem {
+.icon--primary-ecosystem,
+.icon--primary-ecosystems {
   &:before {
     background-image: url('../images/icon--primary-ecosystem.png');
   }

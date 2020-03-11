@@ -1547,7 +1547,7 @@ hr.tight {
   background-image: url("../images/icon-globe.png"); }
 
 .icon--agriculture:before {
-  background-image: url("../images/icon--aggriculture.png"); }
+  background-image: url("../images/icon--agriculture.png"); }
 
 .icon--animals:before {
   background-image: url("../images/icon--animals.png"); }
@@ -1592,8 +1592,10 @@ hr.tight {
 .icon--in-the-field:before {
   background-image: url("../images/icon--in-the-field.png"); }
 
+.icon--action-plan:before,
 .icon--job:before,
-.icon--jobs:before {
+.icon--jobs:before,
+.icon--wildlife:before {
   background-image: url("../images/icon--jobs.png"); }
 
 .icon--key-landmarks:before {
@@ -1620,7 +1622,8 @@ hr.tight {
 .icon--population:before {
   background-image: url("../images/icon--population.png"); }
 
-.icon--primary-ecosystem:before {
+.icon--primary-ecosystem:before,
+.icon--primary-ecosystems:before {
   background-image: url("../images/icon--primary-ecosystem.png"); }
 
 .icon--protected-area:before {
@@ -3462,6 +3465,11 @@ a.share {
       float: right;
       width: 50%; } }
 
+.paragraph--type--sidebar-item {
+  margin-bottom: 2.5rem; }
+  .paragraph--type--sidebar-item .field {
+    margin: 0; }
+
 .paragraph--type--solution-bulletpoint {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3696,7 +3704,6 @@ a.share {
 
 .view-sidebar-news {
   background: #fff;
-  margin-bottom: 2.5rem;
   padding-bottom: 2rem; }
   .view-sidebar-news .views-field-title {
     font-weight: 600;
@@ -3711,8 +3718,70 @@ a.share {
     padding: 0 2rem; }
   .view-sidebar-news p {
     margin: 0 0 1rem; }
+  .view-sidebar-news .caret,
   .view-sidebar-news .carrot {
     color: #e7721f; }
+  .view-sidebar-news .view-footer .tanbar {
+    background: #dad9d4;
+    height: 40px;
+    width: 100%;
+    margin-bottom: -2rem;
+    padding: 0 2rem 0 0;
+    z-index: 3; }
+  .view-sidebar-news .view-footer p {
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 0; }
+  .view-sidebar-news .view-footer a {
+    float: right;
+    width: auto;
+    padding: 8px 10px; }
+  .view-sidebar-news .view-footer .square.news {
+    background-image: url("../images/square/globe.png");
+    display: inline-block;
+    float: left;
+    height: 40px;
+    width: 40px; }
+
+.view-reasons {
+  padding: 2rem;
+  background: #fff; }
+  .view-reasons .views-field-title {
+    font-weight: 600;
+    font-size: 1.6rem; }
+  .view-reasons p {
+    line-height: 22.5px; }
+  .view-reasons .donatebtn {
+    background: #329a94;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 6px;
+    text-align: center;
+    min-width: 160px;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .view-reasons .donatebtn:hover, .view-reasons .donatebtn:focus {
+      text-decoration: none; }
+    .view-reasons .donatebtn:before {
+      content: '';
+      background-image: url("../images/heart.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 13px;
+      background-size: contain;
+      position: absolute;
+      left: 5.5rem;
+      display: inline-block; }
 
 .view-display-id-page_2 ul li {
   text-indent: 0 !important;

@@ -33,7 +33,6 @@
 
 .view-sidebar-news {
   background: $white;
-  margin-bottom: 2.5rem;
   padding-bottom: 2rem;
 
   .views-field-title {
@@ -57,7 +56,39 @@
     margin: 0 0 1rem;
   }
 
+  .caret,
   .carrot {
     color: $awforange;
+  }
+
+  .view-footer {
+    .tanbar {
+      background: #dad9d4;
+      height: 40px;
+      width: 100%;
+      margin-bottom: -2rem;
+      padding: 0 2rem 0 0;
+      z-index: 3;
+    }
+
+    p {
+      display: inline-block;
+      padding: 8px 10px;
+      margin: 0;
+    }
+
+    a {
+      float: right;
+      width: auto;
+      padding: 8px 10px;
+    }
+
+    .square.news {
+      background-image: url('../images/square/globe.png');
+      display: inline-block;
+      float: left;
+      height: 40px;
+      width: 40px;
+    }
   }
 }

@@ -574,6 +574,7 @@ display:
         pager: false
         fields: false
         css_class: false
+        footer: false
       fields:
         field_news_featured_image:
           id: field_news_featured_image
@@ -872,7 +873,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: 'caret italic'
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -884,6 +885,20 @@ display:
           entity_type: node
           plugin_id: entity_link
       css_class: view-sidebar-news
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"tanbar bottom\">\r\n  <span class=\"square news\"></span>\r\n  <p>News</p>\r\n  <a class=\"italic carrot\" href=\"/news\">All news</a>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
