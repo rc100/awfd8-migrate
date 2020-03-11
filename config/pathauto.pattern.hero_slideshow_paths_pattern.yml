@@ -1,0 +1,22 @@
+uuid: abfc48bc-76cb-4486-8e67-15989e10369c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: hero_slideshow_paths_pattern
+label: 'Hero Slideshow Paths Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  9183f8be-1696-43c1-be1d-3111ce624290:
+    id: node_type
+    bundles:
+      hero_slideshow: hero_slideshow
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9183f8be-1696-43c1-be1d-3111ce624290
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: 5b57efa4-7313-4880-a24b-0a2e080d9e4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: species_page_path_pattern
+label: 'Species Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'wildlife-conservation/[node:field_tags_animal]'
+selection_criteria:
+  9797fe04-2948-4fb1-9cb1-f3886129e6f4:
+    id: node_type
+    bundles:
+      species: species
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9797fe04-2948-4fb1-9cb1-f3886129e6f4
+selection_logic: and
+weight: -7
+relationships: {  }

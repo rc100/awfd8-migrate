@@ -1,0 +1,22 @@
+uuid: 4e400618-dca1-4f40-8775-c196228ddbf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: staff_page_paths_pattern
+label: 'Staff Page Paths Pattern'
+type: 'canonical_entities:node'
+pattern: 'about/staff/[node:title]'
+selection_criteria:
+  ee4e26a4-86ee-4018-92e4-d34833a57ab3:
+    id: node_type
+    bundles:
+      staff: staff
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ee4e26a4-86ee-4018-92e4-d34833a57ab3
+selection_logic: and
+weight: -5
+relationships: {  }

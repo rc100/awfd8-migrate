@@ -1,0 +1,22 @@
+uuid: c854740d-7f1b-4845-97eb-240bd2ac0e6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: region_page_path_pattern
+label: 'Region Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'region/[node:field_tags_region]'
+selection_criteria:
+  38fb6cf2-65ec-4e90-9ba8-6ac3428032c9:
+    id: node_type
+    bundles:
+      region: region
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 38fb6cf2-65ec-4e90-9ba8-6ac3428032c9
+selection_logic: and
+weight: -5
+relationships: {  }

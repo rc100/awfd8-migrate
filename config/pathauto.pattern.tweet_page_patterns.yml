@@ -1,0 +1,22 @@
+uuid: f7e57e3e-afc3-416a-8cd9-f735c2d52c5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tweet_page_patterns
+label: 'Tweet Page Patterns'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  7752f427-93cd-403d-9df2-08eb0607fdce:
+    id: node_type
+    bundles:
+      tweet: tweet
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7752f427-93cd-403d-9df2-08eb0607fdce
+selection_logic: and
+weight: -5
+relationships: {  }

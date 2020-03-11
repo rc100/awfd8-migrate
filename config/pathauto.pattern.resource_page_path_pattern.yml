@@ -1,0 +1,22 @@
+uuid: a666e239-e51b-4bab-9e25-5beb47222245
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: resource_page_path_pattern
+label: 'Resource Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'about/resources/[node:title]'
+selection_criteria:
+  e3ef31ae-3f46-490b-a07c-c8c89e2e2875:
+    id: node_type
+    bundles:
+      resource: resource
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e3ef31ae-3f46-490b-a07c-c8c89e2e2875
+selection_logic: and
+weight: -5
+relationships: {  }

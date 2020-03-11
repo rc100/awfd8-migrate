@@ -1,0 +1,22 @@
+uuid: 9f0408ac-45d8-4419-a1e6-3e485965c602
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: fact_path_pattern
+label: 'Fact Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  6739be30-29ad-4008-856f-c3d8cba8fe53:
+    id: node_type
+    bundles:
+      fact: fact
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6739be30-29ad-4008-856f-c3d8cba8fe53
+selection_logic: and
+weight: -5
+relationships: {  }

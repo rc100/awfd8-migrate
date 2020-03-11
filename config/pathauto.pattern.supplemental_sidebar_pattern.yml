@@ -1,0 +1,22 @@
+uuid: fb14bd55-a98f-4e42-9c72-129252570882
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: supplemental_sidebar_pattern
+label: 'Supplemental Sidebar Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  f67e65ed-d450-4ae6-ad5f-f89599acaaf4:
+    id: node_type
+    bundles:
+      supplemental: supplemental
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f67e65ed-d450-4ae6-ad5f-f89599acaaf4
+selection_logic: and
+weight: -5
+relationships: {  }

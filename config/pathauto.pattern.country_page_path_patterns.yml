@@ -1,0 +1,22 @@
+uuid: a25fd91e-c30c-4335-9451-fa84d231bf85
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: country_page_path_patterns
+label: 'Country Page Path Patterns'
+type: 'canonical_entities:node'
+pattern: 'country/[node:field_tags_country]'
+selection_criteria:
+  7daf77ea-035b-44a3-b234-74592c043f75:
+    id: node_type
+    bundles:
+      country: country
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7daf77ea-035b-44a3-b234-74592c043f75
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+uuid: c0067fba-98fe-4de4-b6e4-39598a34897c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: history_path_pattern
+label: 'History Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'nofollow/[node:title]'
+selection_criteria:
+  3fa3aa1f-5265-4dc1-ac3d-52622bc4488d:
+    id: node_type
+    bundles:
+      history: history
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3fa3aa1f-5265-4dc1-ac3d-52622bc4488d
+selection_logic: and
+weight: -5
+relationships: {  }

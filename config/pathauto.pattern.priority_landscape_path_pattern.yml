@@ -1,0 +1,22 @@
+uuid: ffe2d819-90d7-4647-be5a-6e578964b06f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: priority_landscape_path_pattern
+label: 'Priority Landscape Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'landscape/[node:title]'
+selection_criteria:
+  37be1f66-53be-40f4-820b-6acdfc6670e4:
+    id: node_type
+    bundles:
+      landscape: landscape
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 37be1f66-53be-40f4-820b-6acdfc6670e4
+selection_logic: and
+weight: -5
+relationships: {  }
