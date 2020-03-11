@@ -2684,6 +2684,11 @@ ul.gray-bullets li {
 .block-awf-homepage-redesign-mission > .field {
   margin: 0; }
 
+.block-general-inquiries,
+.block-media-inquiries {
+  background: #fff;
+  padding: 2rem; }
+
 .block-our-call {
   padding-top: 10rem;
   padding-bottom: 10rem;
