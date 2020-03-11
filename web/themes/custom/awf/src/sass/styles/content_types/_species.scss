@@ -3,6 +3,10 @@
 .page-node-type-species {
   color: #4B3E36;
 
+  .preface {
+    margin-top: -10rem;
+  }
+
   h2 {
     font-family: $crimson;
     font-size: 3.2rem;
@@ -381,6 +385,7 @@
 
     #PageMap {
       min-height: 475px;
+
       @include breakpoint($min760) {
         min-height: 520px;
       }

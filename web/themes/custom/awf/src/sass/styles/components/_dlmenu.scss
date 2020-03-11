@@ -740,7 +740,7 @@ body.path-notfrontpage {
   margin-top: 100px;
 }
 
-.path-notfrontpage .header-section {
+.path-notfrontpage:not(.page-node-type-species) .header-section {
   background: $white;
   transition: background .2s ease-in;
 
