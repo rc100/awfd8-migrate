@@ -60,7 +60,7 @@ display:
           default_row_class: false
           type: ul
           wrapper_class: ''
-          class: carrot
+          class: ''
       row:
         type: fields
       fields:
@@ -228,7 +228,7 @@ display:
           tokenize: false
           content:
             value: "<hr/>\r\n<h5>About</h5>\r\n<p>AWF Blogs bring you to the critical landscapes we work in, where conservation benefits both wildlife and people alike. The blogs are written by our staff - men and women who have dedicated their lives to Africa's wildlife, people and wild lands.</p>"
-            format: basic_html
+            format: full_html
           plugin_id: text
       empty: {  }
       relationships:

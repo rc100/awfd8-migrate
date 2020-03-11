@@ -1,0 +1,51 @@
+uuid: a35f27b0-ef0f-4b96-8908-988d4a8c4baa
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+name: blog
+label: Blog
+group: 'Content Type'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+    negate: 0
+    uuid: 078c83ce-6d50-4b24-8d97-1aabe6a08b7c
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /blog
+    negate: 0
+    uuid: b2b62338-4026-4a53-ad23-c46f745dca54
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      9d5452fa-15c5-4c3c-90dc-37e975a034fb:
+        id: 'views_block:blog_terms-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: blog
+        uuid: 9d5452fa-15c5-4c3c-90dc-37e975a034fb
+    id: blocks
+    saved: false
+    uuid: 8d31b29d-6e5b-423a-b96b-fc005929109d
+    include_default_blocks: 1
+weight: 0
