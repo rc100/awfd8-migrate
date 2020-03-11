@@ -1,0 +1,47 @@
+// View - Reasons
+
+.view-reasons {
+  padding: 2rem;
+  background: $white;
+
+  .views-field-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  p {
+    line-height: 22.5px;
+  }
+
+  .donatebtn {
+    background: $teal;
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 6px;
+    text-align: center;
+    min-width: 160px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+      background-image: url('../images/heart.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 13px;
+      background-size: contain;
+      position: absolute;
+      left: 5.5rem;
+      display: inline-block;
+    }
+  }
+}
