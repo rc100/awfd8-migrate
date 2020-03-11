@@ -100,8 +100,6 @@
     }
 
     .image-wrapper {
-      background: #ff0;
-
       @include breakpoint($min1024) {
         height: 320px;
       }
