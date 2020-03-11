@@ -80,3 +80,13 @@ ul.contextual-links li {
     top: 79px;
   }
 }
+
+.user-logged-in {
+  .sub-menu {
+    margin-top: 0 !important;
+  }
+
+  .sticky-nav {
+    top: 179px !important;
+  }
+}

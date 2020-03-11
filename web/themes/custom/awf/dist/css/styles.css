@@ -544,6 +544,12 @@ ul.contextual-links li {
   .user-logged-in .header-section .region-header .menu--main-menu .menu-item--expanded.is-open > ul.menu {
     top: 79px; }
 
+.user-logged-in .sub-menu {
+  margin-top: 0 !important; }
+
+.user-logged-in .sticky-nav {
+  top: 179px !important; }
+
 .path-frontpage {
   /*  Nav */ }
   .path-frontpage.home {
@@ -4363,6 +4369,13 @@ a.share {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 500px; }
+  .page-node-type-species .menu-container {
+    max-width: 1175px;
+    width: 100%;
+    z-index: 5; }
+  .page-node-type-species .sticky-nav {
+    position: fixed;
+    top: 12rem; }
   .page-node-type-species .sub-menu {
     position: relative;
     z-index: 1;
