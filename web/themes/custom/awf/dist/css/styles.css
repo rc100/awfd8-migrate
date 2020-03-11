@@ -1813,14 +1813,12 @@ ul.gray-bullets li {
     .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a:hover, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content p a:active {
       color: #4b3e36;
       text-decoration: none; }
-    .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .image-wrapper {
-      background: #ff0; }
-      @media (min-width: 1024px) {
-        .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .image-wrapper {
-          height: 320px; } }
-      @media (min-width: 1320px) {
-        .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .image-wrapper {
-          height: 450px; } }
+    @media (min-width: 1024px) {
+      .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .image-wrapper {
+        height: 320px; } }
+    @media (min-width: 1320px) {
+      .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .image-wrapper {
+        height: 450px; } }
     .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content .field--listing-title {
       font-size: 18px;
       line-height: 1.2; }
