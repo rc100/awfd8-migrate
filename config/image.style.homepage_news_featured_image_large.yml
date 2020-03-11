@@ -1,0 +1,15 @@
+uuid: da80b8b9-3507-401b-a790-bec87facf534
+langcode: en
+status: true
+dependencies: {  }
+name: homepage_news_featured_image_large
+label: 'Homepage News Featured Image - Large (745x455)'
+effects:
+  0d7f9824-f299-48a5-8727-4078fe91a71f:
+    uuid: 0d7f9824-f299-48a5-8727-4078fe91a71f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 745
+      height: 455
+      anchor: center-center
