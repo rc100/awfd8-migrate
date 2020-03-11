@@ -218,6 +218,7 @@
   var menublock = $('#block-mainmenu');
   var headergroup = $('.region-header');
   var headerSection = $('.header-section');
+  var submenuSection = $('.menu-container');
   var header = $('#header');
   // var isMobile = function() {
   //   if(menutoggle.css('visibility') == 'visible') {
@@ -375,6 +376,15 @@
         closeAllHeaderItems();
       }
 
+    }
+  });
+
+  $(window).scroll(function() {
+    var distanceFromTop = $(this).scrollTop();
+    if (distanceFromTop >= $('.region-preface').height()) {
+      $('.menu-container').addClass('sticky-nav');
+    } else {
+      $('.menu-container').removeClass('sticky-nav');
     }
   });
 

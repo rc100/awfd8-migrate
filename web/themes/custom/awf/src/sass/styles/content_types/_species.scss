@@ -49,6 +49,17 @@
   }
 
   // Submenu
+  .menu-container {
+    max-width: 1175px;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .sticky-nav {
+    position: fixed;
+    top: 12rem;
+  }
+
   .sub-menu {
     @include fullbackground(#4B3E36);
     margin-top: -2rem;
@@ -391,5 +402,4 @@
       }
     }
   }
-
 }
