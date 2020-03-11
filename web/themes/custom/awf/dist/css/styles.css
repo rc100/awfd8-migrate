@@ -3344,23 +3344,23 @@ ul.gray-bullets li {
 body.path-notfrontpage {
   margin-top: 100px; }
 
-.path-notfrontpage .header-section {
+.path-notfrontpage:not(.page-node-type-species) .header-section {
   background: #fff;
   -webkit-transition: background .2s ease-in;
   transition: background .2s ease-in; }
-  .path-notfrontpage .header-section .logo {
+  .path-notfrontpage:not(.page-node-type-species) .header-section .logo {
     background: url("../images/awf_logo_orange.svg") 0 0/100% no-repeat !important; }
-  .path-notfrontpage .header-section .region-header .menu--main-menu > .menu > li > a,
-  .path-notfrontpage .header-section .mainnav .icon-search:before {
+  .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a,
+  .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before {
     color: #4b3e36; }
-    .path-notfrontpage .header-section .region-header .menu--main-menu > .menu > li > a:focus, .path-notfrontpage .header-section .region-header .menu--main-menu > .menu > li > a:hover, .path-notfrontpage .header-section .region-header .menu--main-menu > .menu > li > a:active,
-    .path-notfrontpage .header-section .mainnav .icon-search:before:focus,
-    .path-notfrontpage .header-section .mainnav .icon-search:before:hover,
-    .path-notfrontpage .header-section .mainnav .icon-search:before:active {
+    .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:focus, .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:hover, .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:active,
+    .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before:focus,
+    .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before:hover,
+    .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before:active {
       color: #e97200; }
-  .path-notfrontpage .header-section .menu-toggle span {
+  .path-notfrontpage:not(.page-node-type-species) .header-section .menu-toggle span {
     background: #4b3e36; }
-    .path-notfrontpage .header-section .menu-toggle span:focus, .path-notfrontpage .header-section .menu-toggle span:hover, .path-notfrontpage .header-section .menu-toggle span:active {
+    .path-notfrontpage:not(.page-node-type-species) .header-section .menu-toggle span:focus, .path-notfrontpage:not(.page-node-type-species) .header-section .menu-toggle span:hover, .path-notfrontpage:not(.page-node-type-species) .header-section .menu-toggle span:active {
       color: #e97200; }
 
 .share-container {
@@ -3681,6 +3681,9 @@ a.share {
   @media (min-width: 760px) {
     .page-node-type-species .view-hero .views-field-title {
       max-width: 1200px; } }
+
+.page-node-type-species .view-hero .views-field-field-main-image img {
+  min-height: 750px; }
 
 .view-hero-project {
   background-image: url("../images/hero/africa.jpg");
@@ -4324,6 +4327,8 @@ a.share {
 
 .page-node-type-species {
   color: #4B3E36; }
+  .page-node-type-species .preface {
+    margin-top: -10rem; }
   .page-node-type-species h2 {
     font-family: "Crimson Text", Georgia, "Times New Roman", "DejaVu Serif", serif;
     font-size: 3.2rem;
