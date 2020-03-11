@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\pathauto\Entity\PathautoPattern;
+
 /**
  * Implements hook_file_mimetype_mapping_alter().
  */
@@ -8,4 +10,40 @@ function custom_awf_file_mimetype_mapping_alter(&$mapping) {
     $mapping['mimetypes']['geojson'] = 'application/geo+json';  
     // Add new extension '.geojson' and map it to the 'application/geo+json' MIME type.
     $mapping['extensions']['geojson'] = 'geojson'; 
+}
+
+function custom_awf_pathauto_pattern_alter(PathautoPattern &$pattern, array $context){
+
+	//test context for module type and action. we want node, and update / insert action
+	if($context['module'] == 'node' && ( $context['op'] == 'insert' || $context['op'] == 'update' )) {
+
+		$node = $context['data']['node'];
+		$replacements = [];
+
+		//test for node type
+		switch ($node->getType()) {
+			case 'page':
+				$value = $node->get('field_about_page')->getValue();
+				if($value[0]['value']){
+					$replacements[] = 'about/[node:title]';
+					$replacements = implode('/', $replacements);
+				}
+				break;
+			
+			default:
+
+				break;
+		}
+
+		//replace the existing pattern with the new one via mb_regex_set_options()
+		if($replacements) {
+			$regex = '/\[node:title(\:[^]]*)?\]/';
+			$pattern->setPattern(preg_replace($regex, 
+				$replacements . '$1', $pattern->getPattern()));
+
+		}
+
+	}
+
+
 }
