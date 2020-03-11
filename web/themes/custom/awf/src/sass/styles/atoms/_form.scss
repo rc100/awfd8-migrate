@@ -477,3 +477,91 @@ input[type="button"] {
     }
   }
 }
+
+.webform-client-form.webform-client-form-330 {
+  border: 2px solid hotpink;
+  .webform-component-select.webform-component--title{
+    .chzn-container {
+       width: 95%!important;
+    }
+
+  }
+  .form-item.webform-component-file {
+    div.relative.left {
+      float: none!important;
+    }
+    .form-managed-file{
+      .form-file {
+        width: 100%!important;
+        position: relative;
+        opacity: 1;
+        height: auto;
+        max-height: none;
+        top: 0;
+        z-index: 10;
+      }
+      span.file {
+        width: 100%;
+        margin-top: 0;
+        a{
+          padding: 11px;
+          display: block;
+        }
+      }
+    }
+
+    .awf-drug-n-drop-area,
+    .awf-pseudo-file-input {
+      display: none;
+    }
+    #edit-submitted-attach-file-upload-button,
+    #edit-submitted-attach-file-remove-button {
+      width: 200px;
+      margin-top: 2px!important;
+      right: 0;
+      z-index: 15;
+      background: #329a94!important;
+      font-size: 11px;
+    }
+    #edit-submitted-attach-file-remove-button {
+      margin-top: 0!important
+    }
+    #edit-submitted-attach-file-upload-button {
+      &.inactive {
+        background: #dad9d4!important
+      }
+    }
+  }
+  #edit_submitted_country_of_residence_chzn {
+    @include breakpoint($min760) {
+      width: 80%!important;
+    }
+  }
+  #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate {
+    label {
+      float: left;
+      width: 30%;
+      padding: 5px 0 0 10px;
+    }
+  }
+  .webform-component-email .email {
+    @include breakpoint($min760) {
+      width: 90%!important;
+    }
+  }
+  .webform-component--available-start-date .webform-datepicker .form-type-select {
+    width: 100%;
+    display: block;
+    @include breakpoint($min760) {
+      width: 29%!important;
+      margin-right: .6em!important;
+    }
+    .chzn-container.chzn-container-single {
+      display: block!important;
+      width: auto!important;
+    }
+  }
+  .career-field-hear .webform-component-select .chzn-container.chzn-container-single {
+    width: 100%!important;
+  }
+}

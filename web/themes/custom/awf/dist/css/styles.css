@@ -1528,6 +1528,64 @@ select {
         margin-top: -10px;
         vertical-align: bottom; } }
 
+.webform-client-form.webform-client-form-330 {
+  border: 2px solid hotpink; }
+  .webform-client-form.webform-client-form-330 .webform-component-select.webform-component--title .chzn-container {
+    width: 95% !important; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file div.relative.left {
+    float: none !important; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file .form-file {
+    width: 100% !important;
+    position: relative;
+    opacity: 1;
+    height: auto;
+    max-height: none;
+    top: 0;
+    z-index: 10; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file {
+    width: 100%;
+    margin-top: 0; }
+    .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file a {
+      padding: 11px;
+      display: block; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-drug-n-drop-area,
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-pseudo-file-input {
+    display: none; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button,
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
+    width: 200px;
+    margin-top: 2px !important;
+    right: 0;
+    z-index: 15;
+    background: #329a94 !important;
+    font-size: 11px; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
+    margin-top: 0 !important; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button.inactive {
+    background: #dad9d4 !important; }
+  @media (min-width: 760px) {
+    .webform-client-form.webform-client-form-330 #edit_submitted_country_of_residence_chzn {
+      width: 80% !important; } }
+  .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate label, .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field .field-label, .field .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field-label {
+    float: left;
+    width: 30%;
+    padding: 5px 0 0 10px; }
+  @media (min-width: 760px) {
+    .webform-client-form.webform-client-form-330 .webform-component-email .email {
+      width: 90% !important; } }
+  .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
+    width: 100%;
+    display: block; }
+    @media (min-width: 760px) {
+      .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
+        width: 29% !important;
+        margin-right: 0.6em !important; } }
+    .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select .chzn-container.chzn-container-single {
+      display: block !important;
+      width: auto !important; }
+  .webform-client-form.webform-client-form-330 .career-field-hear .webform-component-select .chzn-container.chzn-container-single {
+    width: 100% !important; }
+
 hr {
   color: #e5e5e5;
   background-color: #e5e5e5;
@@ -3503,6 +3561,16 @@ a.share {
       background-repeat: no-repeat;
       background-size: 40px 40px;
       display: inline-block; }
+
+.view-blog-terms {
+  background: #fff;
+  padding: 2rem; }
+  .view-blog-terms ul li {
+    line-height: 2;
+    width: 100%; }
+    .view-blog-terms ul li:before {
+      font-size: 1.85rem;
+      bottom: -.15rem; }
 
 .view-recent-blogs {
   position: relative;
