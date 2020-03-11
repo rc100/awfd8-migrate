@@ -1,0 +1,61 @@
+uuid: 3418644f-f2e5-4b12-bbbf-a8023c440343
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: news
+label: News
+group: 'Content Type'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: 0
+    uuid: dfeef79d-1fb7-4888-928f-e3a7fefbe862
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      33fdad67-75db-40fa-8dbd-582f38c14ecd:
+        id: 'block_content:8f88fc82-7a40-4a65-a5f9-8e26fe9efccb'
+        label: 'General Inquiries'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: news
+        uuid: 33fdad67-75db-40fa-8dbd-582f38c14ecd
+      b943339a-4c7a-4573-a449-6492753e91ac:
+        id: 'block_content:7f9f95fb-86da-44d3-b8f4-34f4eec0ad08'
+        label: 'Media Inquiries'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: news
+        uuid: b943339a-4c7a-4573-a449-6492753e91ac
+    id: blocks
+    saved: false
+    uuid: e002ab34-e440-43c1-9218-c7aa2d8fbcaa
+    include_default_blocks: 1
+weight: 0
