@@ -1,0 +1,22 @@
+uuid: 7d40a1e2-029b-4096-a933-d8697b86b0a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: careers_page_path_pattern
+label: 'Careers Page Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'about/careers/[node:title]'
+selection_criteria:
+  7bd60612-79e2-4975-884d-6c26540b1c78:
+    id: node_type
+    bundles:
+      career: career
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7bd60612-79e2-4975-884d-6c26540b1c78
+selection_logic: and
+weight: -5
+relationships: {  }
