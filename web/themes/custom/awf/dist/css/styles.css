@@ -3880,6 +3880,22 @@ a.share {
 .view-display-id-page_2 a:focus {
   text-decoration: none; }
 
+#webform-submission-apply-for-a-position-at-awf-add-form h4 {
+  color: #329a94;
+  font-size: 2.3rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0; }
+
+#webform-submission-apply-for-a-position-at-awf-add-form #edit-header {
+  margin-bottom: -2rem; }
+
+#webform-submission-apply-for-a-position-at-awf-add-form .form-item {
+  background: white;
+  padding: 2rem; }
+
+#webform-submission-apply-for-a-position-at-awf-add-form .webform-progress {
+  display: none; }
+
 .webform-submission-leadership-gift-form-form,
 .webform-submission-main-donate-form-form,
 .webform-submission-get-involved-form {
