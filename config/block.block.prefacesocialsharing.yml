@@ -11,7 +11,7 @@ dependencies:
     - awf
 id: prefacesocialsharing
 theme: awf
-region: content_preface
+region: disabled
 weight: 0
 provider: null
 plugin: 'block_content:183f4486-a5c6-4d64-890f-46783901aedb'
