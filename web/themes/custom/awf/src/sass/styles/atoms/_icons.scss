@@ -2,16 +2,15 @@
 
 .country--icon {
   &:before {
-    background-image: url('../images/icon-globe.png');
+    background-image: url('../images/icon--globe.png');
   }
 }
 
 .calendar--icon {
   &:before {
-    background-image: url('../images/icon-globe.png');
+    background-image: url('../images/icon--calendar.png');
   }
 }
-
 
 // Circle icons
 .icon--agriculture {

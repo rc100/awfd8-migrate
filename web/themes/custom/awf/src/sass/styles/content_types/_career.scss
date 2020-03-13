@@ -10,15 +10,8 @@
   }
 
   .blog-details {
-    display: flex;
-    align-items: flex-end;
-    padding-top: 7px;
-    margin-bottom: 7px;
-    flex-direction: column;
-
-    @include breakpoint($min760) {
-      flex-direction: row;
-    }
+    display: inline-flex;
+    padding-top: 0.5rem;
   }
 
   .bottom-info {
@@ -26,6 +19,18 @@
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @include breakpoint($min500) {
+      flex-wrap: nowrap;
+    }
+
+    .date {
+      text-align: right;
+      width: 100%;
+    }
+
   }
 
   .field--name-field-date,
@@ -33,6 +38,10 @@
   .field--name-body,
   .learn-more {
     display: inline-block;
+  }
+
+  .field--name-field-location {
+    margin: 0.25rem 0;
   }
 
   .country--icon::before,
@@ -46,24 +55,43 @@
   }
 
   &.node--view-mode-full {
+
+    .blog-details {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 7px;
+      margin-bottom: 7px;
+      flex-direction: column;
+
+      @include breakpoint($min760) {
+        flex-direction: row;
+      }
+    }
+
     .blog-details {
       min-height: 105px;
+      padding-top: 2rem;
     }
 
     .left span {
       align-items: center;
-      display: inline-flex;
+      display: inline-block;
       width: 100%;
     }
 
     .right {
-      justify-content: flex-end;
+      justify-content: center;
       display: inline-flex;
+      margin-top: 2rem;
     }
 
     .field--name-body {
       padding: 0 2rem;
       margin: 0;
+    }
+
+    .field--name-field-date {
+      display: inline
     }
 
     .all {

@@ -11,12 +11,6 @@
     padding: 0;
   }
 
-  // .block-preface-social-sharing {
-  //   margin-left: auto;
-  //   width: 330px;
-  // }
-
-
   .page-node-type-species & {
     max-width: 1150px;
   }
@@ -26,10 +20,12 @@
     height: 0;
     visibility: hidden;
     width: 50%;
+    margin-bottom: 2rem;
 
     @include breakpoint($min760) {
       height: auto;
       visibility: visible;
+      margin-bottom: 0;
     }
   }
 
