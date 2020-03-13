@@ -15,9 +15,14 @@
 
   .paragraph--type--history-list-item {
     display: flex;
+    flex-direction: column;
+
+    @include breakpoint($min760) {
+      flex-direction: row;
+    }
   }
 
-  .field--name-field-year-and-description > .field__item {
+  .field--name-field-year-and-description>.field__item {
     border-bottom: 1px solid #E5E5E5;
     margin-bottom: 1.5rem;
 
@@ -31,17 +36,18 @@
     background: $maroon;
     color: $white;
     display: flex;
-    height: 120px;
-    min-width: 120px;
-    min-height: 120px;
-    margin-right: 3rem;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 
     @include breakpoint($min760) {
       background-image: url('../images/schedule.png');
       background-size: 120px 120px;
       background-repeat: no-repeat;
+      height: 120px;
+      margin-right: 3rem;
+      min-width: 120px;
+      min-height: 120px;
     }
   }
 
@@ -59,7 +65,7 @@
     }
 
     &:before {
-      background-color: $maroon;
+      background-color: $maroon !important;
     }
   }
 }
