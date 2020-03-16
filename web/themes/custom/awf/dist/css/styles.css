@@ -4109,11 +4109,14 @@ a.share {
 
 .page-node-type-blog .field--name-field-tags-country .field__item {
   display: inline-block;
-  margin: 0; }
+  margin: 0 .25rem 0 0; }
+  .page-node-type-blog .field--name-field-tags-country .field__item:after {
+    content: ','; }
+  .page-node-type-blog .field--name-field-tags-country .field__item:last-of-type::after {
+    content: none; }
 
-.page-node-type-blog .field--name-field-tags-country .field__items {
-  display: inline-block;
-  margin: 0 .5rem 0 0; }
+.page-node-type-blog .field--name-field-tags-country.field__items {
+  display: inline; }
 
 .page-node-type-blog .field--name-user-picture img {
   width: 112px; }
