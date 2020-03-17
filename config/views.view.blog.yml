@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_date
     - field.storage.node.field_featured_image
     - image.style.featured_image_400x220_
-    - node.type.blog
+    - node.type.news
     - system.menu.main
     - taxonomy.vocabulary.species
   module:
@@ -155,7 +155,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            blog: blog
+            news: news
           group: 1
           exposed: false
           expose:
