@@ -27,8 +27,8 @@ leaflet:
     src/js/includes/boot-maps.js: {}
   dependencies:
     - core/drupal
-    - core/jquery.once
     - core/jquery
+    - core/jquery.once
     - core/underscore
 
 showmore:
