@@ -59,6 +59,7 @@ function awf_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'landing-subpage';
     }
   }
+
 }
 
 /**
@@ -88,6 +89,11 @@ function awf_preprocess_block(&$vars) {
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $vars["page_title"] = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
+
+  if($vars['plugin_id'] == 'block-views-block-gallery-entity-block-1' ) {
+    $vars['#attached']['library'][] = 'galleryBlock';
+  }
+
 }
 
 /**
