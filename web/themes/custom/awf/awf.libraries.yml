@@ -39,5 +39,10 @@ showmore:
 wildlife-grid:
   version: 1.0
   js:
-    src/js/includes/isotope.pkgd.min.js: {}  
-    src/js/includes/wildlife-grid.js: {}   
+    src/js/includes/isotope.pkgd.min.js: {}
+    src/js/includes/wildlife-grid.js: {}
+
+galleryBlock:
+  js:
+    node_modules/owl.carousel/src/js/owl.carousel.js: {}
+    src/js/carousel.js: {}

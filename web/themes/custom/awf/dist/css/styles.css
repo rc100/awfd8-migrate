@@ -3906,6 +3906,45 @@ a.share {
 .view-display-id-page_2 a:focus {
   text-decoration: none; }
 
+/* removing defaults */
+.jcarousel-wrapper.jcarousel-skin-default.jcarousel-visible-3 {
+  width: 100%; }
+
+.jcarousel-wrapper.jcarousel-skin-default {
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 190px; }
+  .jcarousel-wrapper.jcarousel-skin-default .jcarousel img {
+    min-height: 178px; }
+
+.view-id-gallery_entity {
+  padding: 30px 35px 30px 30px;
+  background: #e3e2df;
+  margin-bottom: 15px; }
+  .view-id-gallery_entity .field--name-filename {
+    display: none; }
+  .view-id-gallery_entity .jcarousel li {
+    margin-right: 20px;
+    width: 270px;
+    height: 190px; }
+
+#popoutWrapper {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(189, 186, 187, 0.75);
+  top: 0px;
+  left: 0px; }
+  #popoutWrapper #popoutInner {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin-left: 15%; }
+
 #webform-submission-apply-for-a-position-at-awf-add-form h4 {
   color: #329a94;
   font-size: 2.3rem;
