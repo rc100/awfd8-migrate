@@ -27,8 +27,8 @@ leaflet:
     src/js/includes/boot-maps.js: {}
   dependencies:
     - core/drupal
-    - core/jquery.once
     - core/jquery
+    - core/jquery.once
     - core/underscore
 
 showmore:
@@ -39,5 +39,5 @@ showmore:
 wildlife-grid:
   version: 1.0
   js:
-    src/js/includes/isotope.pkgd.min.js: {}  
-    src/js/includes/wildlife-grid.js: {}   
+    src/js/includes/isotope.pkgd.min.js: {}
+    src/js/includes/wildlife-grid.js: {}
