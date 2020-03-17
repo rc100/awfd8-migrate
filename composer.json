@@ -60,7 +60,6 @@
         "drupal/migrate_tools": "^4.4",
         "drupal/migrate_upgrade": "^3.0",
         "drupal/omega_tools": "^5.0@alpha",
-        "drupal/owlcarousel2": "^1.0@RC",
         "drupal/panels": "^4.4",
         "drupal/paragraphs": "^1.10",
         "drupal/pathauto": "^1.5",
