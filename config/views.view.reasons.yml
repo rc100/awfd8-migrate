@@ -198,7 +198,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/donate" class="donatebtn center">{{ field_view_more__title }}</a>'
+            text: '<a href="https://secure.awf.org/membership" class="donatebtn center">{{ field_view_more__title }}</a>'
             make_link: false
             path: ''
             absolute: false
