@@ -1409,8 +1409,13 @@ div.top-border-red {
   top: -25px
 }
 
+.page-node-3032.landing-overview .region-content-preface:before {
+  background: #222 url(../../images/wherewework.jpg) 0 0 repeat-x;
+  background-size: cover;
+}
+
 div#module-15 {
-  background: #222 url(../img/bkg/wherewework.jpg) 0 0 repeat-x;
+  /*background: #222 url(../../images/wherewework.jpg) 0 0 repeat-x;*/
   background-size: cover;
   padding-bottom: 0;
   width: 100%;
@@ -1433,11 +1438,12 @@ div#module-15 a.map-close, div#module-15 a.map-open {
 div#module-15 div.content-tabs, div#module-15 div.intro-text {
   left: 0;
   position: absolute;
-  top: 49px
+  top: 19px
 }
 
 div#module-15 div.intro-text {
-  display: none
+  display: none;
+  width: 100%;
 }
 
 div#module-15 div.nine.columns .intro-text {
@@ -1510,8 +1516,15 @@ div#module-15 div.content-tabs div {
   background: #edece9;
   clear: left;
   height: 481px;
-  padding: 20px;
   min-height: 600px
+}
+
+div#module-15 div.content-tabs .maplist {
+  padding: 20px;
+}
+
+div#module-15 div.content-tabs ul {
+  border-bottom: none;
 }
 
 div#module-15 div.content-tabs ul.inline li {
@@ -1538,8 +1551,15 @@ div#module-15 div#content-map .dot {
   width: 40px
 }
 
+.page-node-3032 section {
+  width: 100%;
+}
+.page-node-3032 .view-hero .views-row {
+  flex-direction: column;
+}
+
 div#module-15 div#content-map .dot span {
-  background: #ff9900 url(../img/maps/dot.png) 10px 10px no-repeat;
+  background: transparent url(../../images/dot.png) 10px 10px no-repeat;
   display: block;
   height: 40px;
   width: 40px;
@@ -1556,7 +1576,7 @@ div#module-15 div#content-map .dot span {
 }
 
 div#module-15 div#content-map .dot.active span {
-  background: transparent url(../img/maps/dot-active.png) 0 0 no-repeat;
+  background: transparent url(../../images/dot-active.png) 0 0 no-repeat;
   -webkit-animation: pulsateOnce .5s ease-out;
   -moz-animation: pulsateOnce .5s ease-out;
   -ms-animation: pulsateOnce .5s ease-out;
@@ -1571,6 +1591,7 @@ div#module-15 div#content-map .dot.active span {
 
 div#module-15 div#content-map #tooltip {
   background-color: #fff;
+  color: #000;
   cursor: pointer;
   display: none;
   height: auto;
@@ -1583,6 +1604,10 @@ div#module-15 div#content-map #tooltip {
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, .35);
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, .35);
   box-shadow: 0 3px 7px rgba(0, 0, 0, .35)
+}
+
+.bold {
+  font-weight: bold;
 }
 
 div#module-15 div#content-map #tooltip img {
@@ -3109,7 +3134,7 @@ div.email-popup-overlay {
 }
 
 .sprite {
-  background-image: url(/sites/all/themes/awf/img/SPRITES/main-sprite.png);
+  background-image: url(../../images/main-sprite.png);
   background-repeat: no-repeat;
   display: inline-block;
   float: left
