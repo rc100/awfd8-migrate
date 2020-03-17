@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - ctools
+    - system
 name: landing_page
 label: 'Landing Page'
 group: Hero
@@ -19,6 +20,12 @@ conditions:
     uuid: b7126d9e-362f-4f00-b990-679a56af6e6d
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /where-we-work
+    negate: 1
+    uuid: 8daed534-2e1b-4995-bb1f-84eaf50c1883
+    context_mapping: {  }
 reactions:
   blocks:
     blocks:

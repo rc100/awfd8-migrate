@@ -532,20 +532,7 @@ display:
           entity_field: title
           plugin_id: standard
       title: '<none>'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: "<ul class=\"countrytabs\">\r\n  <li><a href=\"#countries\">Countries</a></li>\r\n  <li><a href=\"#collapse\" class=\"collapse flip-h\"><span class=\"sprite arrow-down-dark\"></span></a></li>\r\n</ul>"
-            format: full_html
-          plugin_id: text
+      header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }

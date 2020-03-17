@@ -20,21 +20,6 @@ conditions:
 reactions:
   blocks:
     blocks:
-      0965b0b2-08e0-425d-9f88-ed5916212f4a:
-        id: 'views_block:country_map-block_1'
-        label: ''
-        provider: views
-        label_display: 0
-        views_label: ''
-        items_per_page: none
-        region: content_preface
-        weight: '1'
-        context_mapping: {  }
-        theme: awf
-        css_class: ''
-        unique: 0
-        context_id: landing_page_work
-        uuid: 0965b0b2-08e0-425d-9f88-ed5916212f4a
       e7082642-438a-4c9b-b1c9-047980dfff10:
         id: 'views_block:hero-block_4'
         label: ''
