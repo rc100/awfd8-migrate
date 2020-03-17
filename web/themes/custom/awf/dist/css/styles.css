@@ -273,7 +273,7 @@ html {
 
 body {
   color: #333;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "Source Sans Pro", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 1.6;
   overflow-x: hidden; }
@@ -4107,9 +4107,16 @@ a.share {
   .webform-submission-get-involved-form input:hover[type="submit"] {
     background-color: #329a94; }
 
-.page-node-type-blog .field--name-field-tags-country.field__items {
+.page-node-type-blog .field--name-field-tags-country .field__item {
   display: inline-block;
-  margin: 0; }
+  margin: 0 .25rem 0 0; }
+  .page-node-type-blog .field--name-field-tags-country .field__item:after {
+    content: ','; }
+  .page-node-type-blog .field--name-field-tags-country .field__item:last-of-type::after {
+    content: none; }
+
+.page-node-type-blog .field--name-field-tags-country.field__items {
+  display: inline; }
 
 .page-node-type-blog .field--name-user-picture img {
   width: 112px; }
@@ -4375,17 +4382,20 @@ a.share {
     margin-top: -10rem; }
   .page-node-type-species h2 {
     font-family: "Crimson Text", Georgia, "Times New Roman", "DejaVu Serif", serif;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     font-weight: 400;
     line-height: 4.6rem;
-    letter-spacing: -0.46px; }
+    letter-spacing: -0.46px;
+    margin-bottom: 2rem; }
   .page-node-type-species .field--name-field-body h2,
   .page-node-type-species h2.subhead,
   .page-node-type-species .solutions .field--name-field-solution-heading {
+    border-bottom: 1px solid #C7C4BB;
     font-family: "Crimson Text", Georgia, "Times New Roman", "DejaVu Serif", serif;
     font-size: 2.6rem;
     font-weight: 400;
-    line-height: 3rem; }
+    line-height: 3rem;
+    padding-bottom: 2rem; }
   .page-node-type-species #block-awf-page-title {
     display: none; }
   .page-node-type-species .two-col {
@@ -4396,8 +4406,9 @@ a.share {
   .page-node-type-species .right {
     width: 100%;
     max-width: 100%; }
-  .page-node-type-species .left {
-    max-width: 600px; }
+  @media (min-width: 1024px) {
+    .page-node-type-species .left {
+      max-width: 600px; } }
   .page-node-type-species .right {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -4406,18 +4417,28 @@ a.share {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 500px; }
+    margin-left: 0; }
+    @media (min-width: 1024px) {
+      .page-node-type-species .right {
+        margin-left: 2rem;
+        max-width: 500px; } }
   .page-node-type-species .menu-container {
-    max-width: 1175px;
+    max-width: 1240px;
     width: 100%;
     z-index: 5; }
   .page-node-type-species .sticky-nav {
     position: fixed;
     top: 12rem; }
+    .page-node-type-species .sticky-nav .sub-menu {
+      left: -4.75rem;
+      margin-top: -2rem; }
+      @media (min-width: 1200px) {
+        .page-node-type-species .sticky-nav .sub-menu {
+          left: 0; } }
   .page-node-type-species .sub-menu {
     position: relative;
     z-index: 1;
-    margin-top: -2rem; }
+    margin-top: -4rem; }
     .page-node-type-species .sub-menu:before {
       content: "";
       display: block;
@@ -4447,7 +4468,13 @@ a.share {
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly;
       position: relative;
-      min-height: 50px; }
+      min-height: 50px;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      @media (min-width: 760px) {
+        .page-node-type-species .sub-menu ul {
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap; } }
     .page-node-type-species .sub-menu li {
       list-style: none;
       display: inline-block; }
@@ -4459,11 +4486,6 @@ a.share {
     margin: 7.5rem auto 0;
     max-width: 645px;
     text-align: center; }
-    .page-node-type-species .overview .field--name-field-about h2 {
-      margin-bottom: 3rem;
-      font-size: 3.2rem;
-      letter-spacing: -0.46px;
-      line-height: 4.6rem; }
   .page-node-type-species .overview .field--name-field-facts-paragraph {
     border: 1px solid #dad9d4;
     display: -webkit-box;
@@ -4521,7 +4543,6 @@ a.share {
           -ms-flex-positive: 1;
               flex-grow: 1; }
   .page-node-type-species .challenges {
-    padding-bottom: 5rem;
     padding-top: 5rem; }
     .page-node-type-species .challenges:after {
       clear: both;
@@ -4531,13 +4552,19 @@ a.share {
       .page-node-type-species .challenges {
         padding-bottom: 10rem;
         padding-top: 10rem; } }
-    .page-node-type-species .challenges .two-col {
+    .page-node-type-species .challenges.two-col {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
       @media (min-width: 760px) {
-        .page-node-type-species .challenges .two-col {
+        .page-node-type-species .challenges.two-col {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; } }
+      @media (min-width: 1024px) {
+        .page-node-type-species .challenges.two-col {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
@@ -4546,8 +4573,19 @@ a.share {
       background: #4B3E36;
       padding: 4rem;
       color: #fff;
-      position: absolute;
-      margin-top: 6rem; }
+      position: relative;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 100%;
+      max-width: 90%;
+      margin: -4rem auto 0; }
+      @media (min-width: 760px) {
+        .page-node-type-species .challenges .field--name-field-overview-paragraph {
+          position: absolute;
+          width: auto;
+          max-width: inherit;
+          margin-top: 6rem; } }
       .page-node-type-species .challenges .field--name-field-overview-paragraph .paragraph--type--overview-facts {
         border-bottom: 1px solid #979797;
         padding-bottom: 3rem;
@@ -4571,7 +4609,33 @@ a.share {
         padding-bottom: 0;
         border-bottom: 0; }
     .page-node-type-species .challenges .field--name-field-image {
-      margin-left: 4rem; }
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+      @media (min-width: 760px) {
+        .page-node-type-species .challenges .field--name-field-image {
+          margin-left: 4rem; } }
+      .page-node-type-species .challenges .field--name-field-image img {
+        margin-left: -50vw;
+        right: 50%;
+        width: 150vw;
+        max-width: inherit;
+        -o-object-fit: cover;
+           object-fit: cover; }
+        @media (min-width: 760px) {
+          .page-node-type-species .challenges .field--name-field-image img {
+            margin-left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%; } }
+    .page-node-type-species .challenges .left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
     .page-node-type-species .challenges .right {
       margin-top: 4.5rem; }
     .page-node-type-species .challenges .field--name-field-challenges {
@@ -4610,7 +4674,8 @@ a.share {
       display: none; }
       @media (min-width: 760px) {
         .page-node-type-species .solutions .field--name-field-solution-icon {
-          display: inline-block; } }
+          display: inline-block;
+          visibility: hidden; } }
     .page-node-type-species .solutions .field--name-field-solution-paragraph {
       -webkit-column-count: 1;
          -moz-column-count: 1;
@@ -4693,6 +4758,8 @@ a.share {
       height: 75%; }
     .page-node-type-species .habitats h2 {
       color: #fff; }
+    .page-node-type-species .habitats h2.subhead, .page-node-type-species .habitats .solutions .field--name-field-solution-heading, .page-node-type-species .solutions .habitats .field--name-field-solution-heading {
+      display: inline-block; }
     .page-node-type-species .habitats .map {
       height: 100%;
       min-height: 475px;

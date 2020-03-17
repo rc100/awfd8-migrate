@@ -59,3 +59,8 @@ wherewework:
     - core/drupal
     - core/jquery
 
+wildlife-grid:
+  version: 1.0
+  js:
+    src/js/includes/isotope.pkgd.min.js: {}
+    src/js/includes/wildlife-grid.js: {}

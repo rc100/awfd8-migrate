@@ -2,9 +2,21 @@
 
 .page-node-type-blog {
 
-  .field--name-field-tags-country.field__items {
+  .field--name-field-tags-country .field__item {
     display: inline-block;
-    margin: 0;
+    margin: 0 .25rem 0 0;
+
+    &:after {
+      content: ',';
+    }
+
+    &:last-of-type::after {
+      content: none;
+    }
+  }
+
+  .field--name-field-tags-country.field__items {
+    display: inline;
   }
 
   .field--name-field-about-the-author .field__label {

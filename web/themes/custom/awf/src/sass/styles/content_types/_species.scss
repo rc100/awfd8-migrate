@@ -9,18 +9,21 @@
 
   h2 {
     font-family: $crimson;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     font-weight: 400;
     line-height: 4.6rem;
     letter-spacing: -0.46px;
+    margin-bottom: 2rem;
   }
 
   .field--name-field-body h2,
   h2.subhead {
+    border-bottom: 1px solid #C7C4BB;
     font-family: $crimson;
     font-size: 2.6rem;
     font-weight: 400;
     line-height: 3rem;
+    padding-bottom: 2rem;
   }
 
   // Layout
@@ -39,18 +42,25 @@
   }
 
   .left {
-    max-width: 600px;
+    @include breakpoint($min1024) {
+      max-width: 600px;
+    }
   }
 
   .right {
     justify-content: flex-start;
     flex-direction: column;
-    max-width: 500px;
+    margin-left: 0;
+
+    @include breakpoint($min1024) {
+      margin-left: 2rem;
+      max-width: 500px;
+    }
   }
 
   // Submenu
   .menu-container {
-    max-width: 1175px;
+    max-width: 1240px;
     width: 100%;
     z-index: 5;
   }
@@ -58,11 +68,22 @@
   .sticky-nav {
     position: fixed;
     top: 12rem;
+
+    // Fixed and flex do something funky together.
+    // Recenter it when fixed.
+    .sub-menu {
+      left: -4.75rem;
+      margin-top: -2rem;
+
+      @include breakpoint($min1200) {
+        left: 0;
+      }
+    }
   }
 
   .sub-menu {
     @include fullbackground(#4B3E36);
-    margin-top: -2rem;
+    margin-top: -4rem;
 
     a {
       color: #FFFEF9;
@@ -78,6 +99,11 @@
       justify-content: space-evenly;
       position: relative;
       min-height: 50px;
+      flex-wrap: wrap;
+
+      @include breakpoint($min760) {
+        flex-wrap: nowrap;
+      }
     }
 
     li {
@@ -100,12 +126,12 @@
       max-width: 645px;
       text-align: center;
 
-      h2 {
-        margin-bottom: 3rem;
-        font-size: 3.2rem;
-        letter-spacing: -0.46px;
-        line-height: 4.6rem;
-      }
+      // h2 {
+      //   margin-bottom: 3rem;
+      //   font-size: 4.2rem;
+      //   letter-spacing: -0.46px;
+      //   line-height: 4.6rem;
+      // }
     }
 
     .field--name-field-facts-paragraph {
@@ -185,7 +211,6 @@
   // Challenges
   .challenges {
     @include clearfix;
-    padding-bottom: 5rem;
     padding-top: 5rem;
 
     @include breakpoint($min760) {
@@ -193,10 +218,14 @@
       padding-top: 10rem;
     }
 
-    .two-col {
+    &.two-col {
       flex-direction: column;
 
       @include breakpoint($min760) {
+        flex-direction: column;
+      }
+
+      @include breakpoint($min1024) {
         flex-direction: row;
       }
     }
@@ -206,8 +235,18 @@
       background: #4B3E36;
       padding: 4rem;
       color: $white;
-      position: absolute;
-      margin-top: 6rem;
+      position: relative;
+      order: 2;
+      width: 100%;
+      max-width: 90%;
+      margin: -4rem auto 0;
+
+      @include breakpoint($min760) {
+        position: absolute;
+        width: auto;
+        max-width: inherit;
+        margin-top: 6rem;
+      }
 
       .paragraph--type--overview-facts {
         border-bottom: 1px solid #979797;
@@ -244,7 +283,31 @@
 
     // Image
     .field--name-field-image {
-      margin-left: 4rem;
+      order: 1;
+
+      @include breakpoint($min760) {
+        margin-left: 4rem;
+      }
+
+      img {
+        margin-left: -50vw;
+        right: 50%;
+        width: 150vw;
+        max-width: inherit;
+        object-fit: cover;
+
+        @include breakpoint($min760) {
+          margin-left: 0;
+          right: 0;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
     }
 
     // Right text block
@@ -290,6 +353,7 @@
 
       @include breakpoint($min760) {
         display: inline-block;
+        visibility: hidden;
       }
     }
 
@@ -382,6 +446,10 @@
 
     h2 {
       color: $white;
+    }
+
+    h2.subhead {
+      display: inline-block;
     }
 
     .map {
