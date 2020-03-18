@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{% set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'block-' ~ configuration.label|clean_class
+] %}
+{{ attach_library('awf/wherewework') }}
+<section id="countries-map" class="lighttan-back"><a id="main-content"></a>
+  <div id="module-15" class="container scroll">
+
+    <a href="#" rel="toggle" class="sprite map-open"></a>
+    <a href="#" rel="toggle" class="sprite map-close"></a>
+
+    <div class="row">
+      <div class="nine columns omega">
+        <div id="content-map">
+          <img alt="" src="/themes/custom/awf/src/images/countries.png" class="map countries">
+          <div id="tooltip">
+            <div class="left-column">
+              <div class="bubble">
+                <span class="sprite bubble-label"></span>
+                <p class="center white">Congo</p>
+              </div>
+            </div>
+            <div class="right-column">
+              <p class="title bold"></p>
+              <p class="desc"></p>
+              <p>
+                <a href="#" class="more">&gt; Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="seven columns alpha">
+        <div class="content-tabs">
+          <ul class="tabs">
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#collapse" class="collapse flip-h"><span class="sprite arrow-down-dark"></span></a></li>
+          </ul>
+          <div id="countries" class="maplist">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
