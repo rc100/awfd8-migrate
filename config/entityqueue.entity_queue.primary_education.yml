@@ -1,0 +1,26 @@
+uuid: 781fe17d-91c0-4a4a-a4c2-c5c0030b6073
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: primary_education
+label: 'Primary Education'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: file
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

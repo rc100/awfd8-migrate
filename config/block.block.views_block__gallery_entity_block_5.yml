@@ -1,0 +1,30 @@
+uuid: 22428710-8a4c-407e-96c6-f0ab9cf39360
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery_entity
+  module:
+    - system
+    - views
+  theme:
+    - awf
+id: views_block__gallery_entity_block_5
+theme: awf
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:gallery_entity-block_5'
+settings:
+  id: 'views_block:gallery_entity-block_5'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /community/community-conservation
+    negate: false
+    context_mapping: {  }

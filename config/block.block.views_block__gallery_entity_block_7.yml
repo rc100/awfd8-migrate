@@ -1,0 +1,30 @@
+uuid: 276779f7-282d-42c7-9627-3e3c97871565
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery_entity
+  module:
+    - system
+    - views
+  theme:
+    - awf
+id: views_block__gallery_entity_block_7
+theme: awf
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:gallery_entity-block_7'
+settings:
+  id: 'views_block:gallery_entity-block_7'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /community/primary-education
+    negate: false
+    context_mapping: {  }

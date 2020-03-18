@@ -1,0 +1,26 @@
+uuid: 1da78bc0-47b4-41b4-95b2-f41df37e3f2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: land_use_planning
+label: 'Land Use Planning'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: file
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

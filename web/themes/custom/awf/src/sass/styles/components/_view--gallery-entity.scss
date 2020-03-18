@@ -2,6 +2,7 @@
 /* removing defaults */
 .jcarousel-wrapper.jcarousel-skin-default.jcarousel-visible-3 {
 	width: 100%;
+	left: 3px;
 }
 .jcarousel-wrapper.jcarousel-skin-default {
 	width: 100%;
@@ -11,6 +12,25 @@
 	.jcarousel img {
 		min-height: 178px;
 	}
+	.jcarousel-control-prev {
+		top: 80px;
+		left: -45px;
+	}
+	.jcarousel-control-next {
+		top: 80px;
+		right: -45px;
+	}
+}
+
+
+.jcarousel-skin-default .jcarousel-control-prev, .jcarousel-skin-default .jcarousel-control-next {
+	top: 80px;
+}
+.jcarousel-skin-default .jcarousel-control-next {
+	right: -45px;
+}
+.jcarousel-skin-default .jcarousel-control-prev {
+	left: -45px;
 }
 
 .view-id-gallery_entity {

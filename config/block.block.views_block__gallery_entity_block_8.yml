@@ -1,0 +1,30 @@
+uuid: b240cea1-2b5f-4c9e-926a-2565815d1cf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery_entity
+  module:
+    - system
+    - views
+  theme:
+    - awf
+id: views_block__gallery_entity_block_8
+theme: awf
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:gallery_entity-block_8'
+settings:
+  id: 'views_block:gallery_entity-block_8'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /community/sustainable-agriculture
+    negate: false
+    context_mapping: {  }
