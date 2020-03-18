@@ -1,0 +1,42 @@
+uuid: 7eb511f0-ba0f-4c52-a7e5-86dd88ad8476
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: landing_page_work
+label: 'Landing Page - Where We Work'
+group: Hero
+description: 'Landing page for Where We Work'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /where-we-work
+    negate: 0
+    uuid: 6c31ec9a-b69f-403c-be2f-eafd694ff888
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      e7082642-438a-4c9b-b1c9-047980dfff10:
+        id: 'views_block:hero-block_4'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_preface
+        weight: '-1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: landing_page_work
+        uuid: e7082642-438a-4c9b-b1c9-047980dfff10
+    id: blocks
+    saved: false
+    uuid: e82028d4-4b53-46e7-9d44-947e0d2f8e91
+    include_default_blocks: 1
+weight: 0

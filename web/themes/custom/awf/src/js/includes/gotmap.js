@@ -11,7 +11,6 @@
 	//--
 	$[__name] = function(el, options) {
 	try {
-		
 		//-- Plugin gymnastics - Part 1/3
 		//---------------------------------------------
 		var self = this; // prevent from loosing the scope
@@ -36,7 +35,6 @@
 		//---------------------------------------------
 		function ignite() {
 			//- Start maps
-
 			self.el.each(function() {
 
 				var nHeight = $(this).height();
