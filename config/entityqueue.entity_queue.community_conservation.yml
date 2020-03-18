@@ -1,0 +1,26 @@
+uuid: 2c2af07a-714d-48b2-a924-91f4d72ca9a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: community_conservation
+label: 'Community Conservation'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: file
+  handler: 'default:file'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

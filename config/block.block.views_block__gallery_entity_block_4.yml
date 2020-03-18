@@ -1,0 +1,30 @@
+uuid: c4f9f885-6f56-4313-81c2-a927442d48d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery_entity
+  module:
+    - system
+    - views
+  theme:
+    - awf
+id: views_block__gallery_entity_block_4
+theme: awf
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:gallery_entity-block_4'
+settings:
+  id: 'views_block:gallery_entity-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/land-protection/land-use-planning\r\n/land-habitat-protection/land-use-planning"
+    negate: false
+    context_mapping: {  }

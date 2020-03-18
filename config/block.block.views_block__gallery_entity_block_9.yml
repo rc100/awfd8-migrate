@@ -1,0 +1,30 @@
+uuid: 74699d9f-568a-403c-930c-669f00142687
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.gallery_entity
+  module:
+    - system
+    - views
+  theme:
+    - awf
+id: views_block__gallery_entity_block_9
+theme: awf
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:gallery_entity-block_9'
+settings:
+  id: 'views_block:gallery_entity-block_9'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /community/sustainable-tourism
+    negate: false
+    context_mapping: {  }
