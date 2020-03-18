@@ -4020,15 +4020,6 @@ a.share {
     top: 80px;
     right: -45px; }
 
-.jcarousel-skin-default .jcarousel-control-prev, .jcarousel-skin-default .jcarousel-control-next {
-  top: 80px; }
-
-.jcarousel-skin-default .jcarousel-control-next {
-  right: -45px; }
-
-.jcarousel-skin-default .jcarousel-control-prev {
-  left: -45px; }
-
 .view-id-gallery_entity {
   padding: 30px 35px 30px 30px;
   background: #e3e2df;
@@ -4039,6 +4030,27 @@ a.share {
     margin-right: 20px;
     width: 270px;
     height: 190px; }
+
+.view-id-gallery_entity.view-display-id-block_11 {
+  background: none;
+  padding: 0px; }
+  .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default {
+    width: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 190px; }
+    .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li {
+      background: white;
+      width: 135px; }
+      .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li .field {
+        margin: 0px; }
+      .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li .field--name-uri {
+        height: 90px;
+        overflow: hidden; }
+    .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel img {
+      width: 135px;
+      min-height: 70px; }
 
 #popoutWrapper {
   display: block;
