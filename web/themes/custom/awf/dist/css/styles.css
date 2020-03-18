@@ -3908,7 +3908,8 @@ a.share {
 
 /* removing defaults */
 .jcarousel-wrapper.jcarousel-skin-default.jcarousel-visible-3 {
-  width: 100%; }
+  width: 100%;
+  left: 3px; }
 
 .jcarousel-wrapper.jcarousel-skin-default {
   width: 100%;
@@ -3918,6 +3919,21 @@ a.share {
   height: 190px; }
   .jcarousel-wrapper.jcarousel-skin-default .jcarousel img {
     min-height: 178px; }
+  .jcarousel-wrapper.jcarousel-skin-default .jcarousel-control-prev {
+    top: 80px;
+    left: -45px; }
+  .jcarousel-wrapper.jcarousel-skin-default .jcarousel-control-next {
+    top: 80px;
+    right: -45px; }
+
+.jcarousel-skin-default .jcarousel-control-prev, .jcarousel-skin-default .jcarousel-control-next {
+  top: 80px; }
+
+.jcarousel-skin-default .jcarousel-control-next {
+  right: -45px; }
+
+.jcarousel-skin-default .jcarousel-control-prev {
+  left: -45px; }
 
 .view-id-gallery_entity {
   padding: 30px 35px 30px 30px;
