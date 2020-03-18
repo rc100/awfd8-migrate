@@ -11,7 +11,7 @@
 		self.el = el = $(el); // store the passed element
 		$(self.el).data(__name, self); // store the plugin instance into the element
 		//---------------------------------------------
-		
+
 		//-- init
 		//----------------------------------------------
 
@@ -31,12 +31,12 @@
 			ele: 'PageMap',
 			mapCenter: [-0.7909904981540058, 17.841796875]
 		}
-		
+
 		self.initialize = function() {
 			self.options = $.extend({}, self.defaults, options); //merging defaults with passed arguments
 			ignite();
 		};
-		
+
 		//-- Vars
 		//---------------------------------------------
 		var aCoords = {},
@@ -45,7 +45,7 @@
 		aInitCoords,
 		pMap,
 		pMapGeoJ;
-		
+
 		//-- Start
 		//---------------------------------------------
 		function ignite(){
@@ -54,11 +54,11 @@
 
 		//-- Events
 		//---------------------------------------------
-				
+
 		function bindEvents(){
 			self.options.callback();
 		}
-		
+
 		function staticMap() {
 			//- Get static img
 			var sImgSrc = self.el.attr('data-static');
@@ -127,5 +127,5 @@
 	}
 	//-- Plugin gymnastics - Part 3/3
 	//---------------------------------------------
-	$.pluginMutator(__name);
+	//$.pluginMutator(__name);
 })(jQuery);

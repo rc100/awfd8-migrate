@@ -121,7 +121,6 @@
       var sortValue = $(this).attr('data-sort-value');
       sortValue = sortValue.split(',');
       $grid.isotope({ sortBy: sortValue });
-      console.log(sortValue);
     });
 
     // Bind button click for the Layout Bar

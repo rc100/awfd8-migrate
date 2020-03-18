@@ -7,7 +7,7 @@
 */
 (function($) {
 	//Define the plugin's name here
-	var __name = 'gotmap';
+	var __name = 'gotmapLeaflet';
 	//--
 	$[__name] = function(el, options) {
 	try {
@@ -17,18 +17,18 @@
 		self.el = el = $(el); // store the passed element
 		$(self.el).data(__name, self); // store the plugin instance into the element
 		//---------------------------------------------
-		
-		
+
+
 		//-- init
 		//---------------------------------------------
 		self.defaults = {};
-		
+
 		self.initialize = function() {
 			self.options = $.extend({}, self.defaults, options); //merging defaults with passed arguments
 			//-
 
 			ignite();
-			
+
 		};
 
 		//-- Start
@@ -46,7 +46,7 @@
 				new $.maps(eNode,{
 					height: nHeight,
 					callback: function() {
-						
+
 					}
 				});
 			});
@@ -58,8 +58,8 @@
 		dumpError(e);
 	};
 	}
-	
+
 	//-- Plugin gymnastics - Part 3/3
 	//---------------------------------------------
-	$.pluginMutator(__name);
+	//$.pluginMutator(__name);
 })(jQuery);

@@ -39,6 +39,7 @@ type_settings:
       label: 'New Draft'
       from:
         - draft
+        - needs_review
         - published
       to: draft
       weight: -2
@@ -56,6 +57,12 @@ type_settings:
         - published
       to: published
       weight: -1
+    publish_direct:
+      label: 'Publish Direct'
+      from:
+        - draft
+      to: published
+      weight: 4
   entity_types:
     node:
       - blog
