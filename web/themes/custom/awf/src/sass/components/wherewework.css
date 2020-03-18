@@ -1409,6 +1409,7 @@ div.top-border-red {
   top: -25px
 }
 
+section#countries-map #module-15,
 .page-node-3032.landing-overview .region-content-preface:before {
   background: #222 url(../../images/wherewework.jpg) 0 0 repeat-x;
   background-size: cover;
@@ -1486,6 +1487,18 @@ div#module-15 div.content-tabs {
   width: 400px
 }
 
+body.user-logged-in #countries-map div#module-15 div.content-tabs div.content-tabs {
+  width: 380px;
+  top: 0 !important;
+}
+
+section#countries-map div#module-15 .row {
+  width: 100%;
+  max-width: 940px;
+  min-width: 720px;
+  margin: 0 auto;
+}
+
 div#module-15 div.content-tabs ul.tabs li {
   float: left;
   list-style: none
@@ -1521,6 +1534,9 @@ div#module-15 div.content-tabs div {
 
 div#module-15 div.content-tabs .maplist {
   padding: 20px;
+}
+body.user-logged-in section#countries-map div#module-15 .maplist .maplist {
+  padding: 0;
 }
 
 div#module-15 div.content-tabs ul {
