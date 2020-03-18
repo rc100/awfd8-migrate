@@ -75,6 +75,9 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      padding-top: 18px;
+      height: 65px;
+      padding-right: 10px;
     }
   }
 
@@ -103,7 +106,7 @@
 
   [class^='tile-size'],
   [class^='tile-danger'] {
-    background: $maroon url(/sites/all/themes/awf/img/box/marker.jpg) 0 0 no-repeat;
+    background: $maroon url('../images/marker.jpg') 0 0 no-repeat;
     width: 220px;
     height: 228px;
     display: flex;
@@ -116,6 +119,23 @@
     a {
       color: $white;
       text-decoration: none;
+    }
+  }
+
+  .jumpto-size,
+  .jumpto-danger {
+    color: #8e8e8e;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+
+    a {
+      color: $black;
     }
   }
 
