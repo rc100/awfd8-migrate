@@ -2908,7 +2908,7 @@ ul.gray-bullets li {
       text-indent: -9999px;
       overflow: hidden;
       background: url("../images/awf_logo_custom.png") 0 0/100% no-repeat; }
-  .header-section .menu-item--active-trail a {
+  .header-section .menu-item--active-trail > a {
     color: #e97200 !important; }
   .header-section-nav {
     position: absolute;
