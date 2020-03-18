@@ -1,0 +1,44 @@
+uuid: 2b633b4e-1247-40c2-aa2a-3d8c222fd611
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: country
+label: Country
+group: 'Content Type'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      country: country
+    negate: 0
+    uuid: ec3545b5-9a65-4871-b713-c563f76692d8
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      871586a7-00f1-4357-beac-0c0642892904:
+        id: 'views_block:country_map-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: preface
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: country
+        uuid: 871586a7-00f1-4357-beac-0c0642892904
+    id: blocks
+    saved: false
+    uuid: 911b9ef9-e1d4-4f78-adb6-d3beb92ed658
+    include_default_blocks: 1
+weight: 0
