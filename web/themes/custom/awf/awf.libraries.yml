@@ -8,6 +8,7 @@ global-styling:
   dependencies:
     - core/drupal
     - core/jquery
+    - core/jquery.once
 
 fonts:
   css:
@@ -39,6 +40,7 @@ showmore:
 wildlife-grid:
   version: 1.0
   js:
+    src/js/includes/imagesloaded.pkgd.min.js: {}
     src/js/includes/isotope.pkgd.min.js: {}
     src/js/includes/wildlife-grid.js: {}
 
