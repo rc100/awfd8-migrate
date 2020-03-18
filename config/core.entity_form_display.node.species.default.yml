@@ -40,7 +40,7 @@ dependencies:
     - field.field.node.species.field_tags_region
     - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
-    - image.style.thumbnail
+    - image.style.medium
     - image.style.vertical_image
     - node.type.species
   module:
@@ -401,11 +401,13 @@ content:
   field_main_image:
     weight: 23
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
       preview_link: true
       offsets: '50,50'
-    third_party_settings: {  }
+      progress_indicator: throbber
+    third_party_settings:
+      imce:
+        enabled: false
     type: image_focal_point
     region: content
   field_meta_tags:

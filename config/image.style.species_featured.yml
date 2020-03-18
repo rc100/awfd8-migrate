@@ -5,7 +5,7 @@ dependencies:
   module:
     - focal_point
 name: species_featured
-label: 'Species Featured (220x220)'
+label: 'Species Featured (220x180)'
 effects:
   d6bfba0b-4285-48d6-a614-ebeff2b76f4c:
     uuid: d6bfba0b-4285-48d6-a614-ebeff2b76f4c
@@ -13,5 +13,5 @@ effects:
     weight: 2
     data:
       width: 220
-      height: 220
+      height: 180
       crop_type: focal_point
