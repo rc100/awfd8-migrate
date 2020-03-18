@@ -1,6 +1,8 @@
 // View -- Wildlife Conservation page
 
 .view-display-id-page_2 {
+
+  // Resets
   ul li {
     text-indent: 0 !important;
     display: inline-block;
@@ -18,19 +20,132 @@
     margin: 0;
   }
 
-  .field--name-field-tags-animal {
-    background: #dad9d4;
-    color: #322c2a;
-    min-height: 40px;
-    width: 100%;
+  h1 {
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
 
-    .field__item {
-      padding: 12px 10px !important;
+  // Style header items
+  .view-header {
+    position: relative;
+    margin-bottom: 2rem;
+
+    a.active {
+      background: $red;
+      color: $white !important;
+    }
+
+    .select-size,
+    .select-danger {
+      margin-left: -4px;
+    }
+
+    .sorts {
+      position: relative;
+    }
+
+    ul#sort-bar {
+      background-color: $awftan;
+      display: inline-block;
+      height: 65px;
+      padding: 0;
+      width: 100%;
+
+      li {
+        border-right: 1px solid $offwhite;
+        margin-bottom: 0;
+        padding: 0;
+      }
+
+      li a {
+        color: $black;
+        display: block;
+        padding: 20px 23px;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #display-bar {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 
-  a:hover,
-  a:focus {
-    text-decoration: none;
+  // Style form item
+  form.big {
+    background-color: #fff;
+    display: block;
+    height: 65px;
+    left: 50%;
+    margin-bottom: 55px;
+    margin-left: -290px;
+    padding: 5px 15px;
+    position: relative;
+    width: 580px;
+
+    input[type=text] {
+      background-color: transparent;
+      border: 0;
+      color: #dad9d4;
+      float: left;
+      font-size: 36px;
+      padding: 3px 12px;
+      width: 490px;
+    }
+  }
+
+  [class^='tile-size'],
+  [class^='tile-danger'] {
+    background: $maroon url(/sites/all/themes/awf/img/box/marker.jpg) 0 0 no-repeat;
+    width: 220px;
+    height: 228px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.375rem;
+    padding: 2rem;
+    text-align: center;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  // Style the animal block
+  .isotope-item {
+    .field--name-field-tags-animal {
+      background: $awftan;
+      color: $brown;
+      min-height: 40px;
+      width: 100%;
+
+      .field__item {
+        padding: 12px 10px !important;
+      }
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    .node--view-mode-isotope {
+      &:after {
+        content: '';
+        display: block;
+        height: 20px;
+        width: 100%;
+        background-color: #EDECE8;
+      }
+    }
+
   }
 }

@@ -40,6 +40,10 @@
     @include breakpoint($min760) {
       flex-direction: row;
     }
+
+    .views-element-container {
+      width: 100%;
+    }
   }
 }
 
