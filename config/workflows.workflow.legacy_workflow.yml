@@ -39,6 +39,7 @@ type_settings:
       label: 'New Draft'
       from:
         - draft
+        - needs_review
         - published
       to: draft
       weight: -2
