@@ -83,12 +83,12 @@
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
   <div class="content-wrapper-top">
-    <div>{{ node.createdtime | date('m/j/y') }}</div>
+    <div>{{ node.createdtime | date('m/d/y') }}</div>
     {% if content.field_tags_country|render|striptags %}
       <div>{{ content.field_tags_country }}</div>
     {% endif %}
-    {% if node.owner.name.value|render|striptags %}
-      <div>{{ node.owner.name.value }}</div>
+    {% if node.owner.field_display_name.value|render|striptags %}
+      <div>{{ node.owner.field_display_name.value }}</div>
     {% endif %}
   </div>
   <div{{ content_attributes.addClass('node__content') }}>
