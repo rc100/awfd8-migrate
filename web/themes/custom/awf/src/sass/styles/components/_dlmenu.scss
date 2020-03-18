@@ -157,6 +157,10 @@
     }
   }
 
+  .menu-item--active-trail a {
+    color: $awforangedark !important;
+  }
+
   &-nav {
     position: absolute;
     top: 0;
@@ -246,7 +250,7 @@
 
         &:hover,
         &:focus {
-          color: $awforangedark !important;
+          color: $awforangedark;
           text-decoration: none;
         }
       }
@@ -766,19 +770,25 @@ body.path-notfrontpage {
   .mainnav .icon-search:before {
     color: $awfbrown;
 
-    &:focus,
     &:hover,
+    &:focus,
     &:active {
       color: $awforangedark;
     }
+  }
+
+  .region-header .menu--main-menu>.menu>li>a:hover,
+  .region-header .menu--main-menu>.menu>li>a:focus,
+  .region-header .menu--main-menu>.menu>li>a:active {
+    color: $awforangedark;
   }
 
   .menu-toggle span {
 
     background: $awfbrown;
 
-    &:focus,
     &:hover,
+    &:focus,
     &:active {
       color: $awforangedark;
     }
