@@ -1171,7 +1171,33 @@ select {
     line-height: 14px; }
 
 .block-webform-newsletter {
-  background: #4b3e36; }
+  background: #4b3e36;
+  overflow: hidden; }
+  .block-webform-newsletter:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    bottom: 0; }
+    @media (min-width: 760px) {
+      .block-webform-newsletter:after {
+        background: url("../../src/svg/pattern_EmailSignup.svg") 0 100% no-repeat;
+        left: 10%;
+        background-size: 120%;
+        top: 10%; } }
+    @media (min-width: 1024px) {
+      .block-webform-newsletter:after {
+        left: 25%;
+        background-size: 75%; } }
+    @media (min-width: 1200px) {
+      .block-webform-newsletter:after {
+        left: 30%;
+        background-size: 70%; } }
+    @media (min-width: 1320px) {
+      .block-webform-newsletter:after {
+        left: 40%;
+        background-size: 60%; } }
   .block-webform-newsletter form {
     background: #4b3e36;
     overflow: hidden;
@@ -1205,34 +1231,7 @@ select {
       z-index: 1; }
     @media (min-width: 760px) {
       .block-webform-newsletter form {
-        padding: 60px 0 85px; } }
-    @media (min-width: 1024px) {
-      .block-webform-newsletter form {
-        padding: 60px; } }
-    .block-webform-newsletter form:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: block;
-      bottom: 0; }
-      @media (min-width: 760px) {
-        .block-webform-newsletter form:after {
-          background: url("../../src/svg/pattern_EmailSignup.svg") 0 100% no-repeat;
-          left: 10%;
-          background-size: 120%; } }
-      @media (min-width: 1024px) {
-        .block-webform-newsletter form:after {
-          left: 25%;
-          background-size: 75%; } }
-      @media (min-width: 1200px) {
-        .block-webform-newsletter form:after {
-          left: 30%;
-          background-size: 70%; } }
-      @media (min-width: 1320px) {
-        .block-webform-newsletter form:after {
-          left: 40%;
-          background-size: 60%; } }
+        padding: 70px 60px 90px; } }
   .block-webform-newsletter .messages.error {
     z-index: 1;
     position: relative;
@@ -1488,20 +1487,21 @@ select {
       white-space: nowrap;
       padding: 0;
       margin: 0;
-      font-size: .85em;
+      font-size: 1.6rem;
       font-weight: normal;
       position: absolute !important;
       left: 5px;
-      top: 7px;
+      top: -.75rem;
       z-index: -1;
       -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
       transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease; }
     .webform-submission-newsletter-form .form-item.form-type-textfield.with-value input,
-    .webform-submission-newsletter-form .form-item.form-type-email.with-value input,
+    .webform-submission-newsletter-form .form-item.form-type-email.with-value input {
+      color: #fff;
+      font-size: 11.2px; }
     .webform-submission-newsletter-form .form-item.form-type-textfield input:focus,
     .webform-submission-newsletter-form .form-item.form-type-email input:focus {
-      color: #fff;
-      font-size: .85em; }
+      color: #fff; }
     .webform-submission-newsletter-form .form-item.form-type-textfield.with-value label, .webform-submission-newsletter-form .form-item.form-type-textfield.with-value .field .field-label, .field .webform-submission-newsletter-form .form-item.form-type-textfield.with-value .field-label,
     .webform-submission-newsletter-form .form-item.form-type-email.with-value label,
     .webform-submission-newsletter-form .form-item.form-type-email.with-value .field .field-label,
@@ -1524,8 +1524,10 @@ select {
     .webform-submission-newsletter-form .form-item.form-type-email:focus label,
     .webform-submission-newsletter-form .form-item.form-type-email:focus .field .field-label,
     .field .webform-submission-newsletter-form .form-item.form-type-email:focus .field-label {
-      top: -20px;
-      font-size: .55em; }
+      top: -30px;
+      font-size: 11.2px; }
+  .webform-submission-newsletter-form .form-required::after {
+    background-image: url("../../src/svg/required.svg"); }
   .webform-submission-newsletter-form .form-actions.form-wrapper {
     position: relative;
     display: block;
@@ -1536,63 +1538,73 @@ select {
         margin-top: -10px;
         vertical-align: bottom; } }
 
-.webform-client-form.webform-client-form-330 {
-  border: 2px solid hotpink; }
-  .webform-client-form.webform-client-form-330 .webform-component-select.webform-component--title .chzn-container {
-    width: 95% !important; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file div.relative.left {
-    float: none !important; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file .form-file {
-    width: 100% !important;
-    position: relative;
-    opacity: 1;
-    height: auto;
-    max-height: none;
-    top: 0;
-    z-index: 10; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file {
-    width: 100%;
-    margin-top: 0; }
-    .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file a {
-      padding: 11px;
-      display: block; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-drug-n-drop-area,
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-pseudo-file-input {
-    display: none; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button,
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
-    width: 200px;
-    margin-top: 2px !important;
-    right: 0;
-    z-index: 15;
-    background: #329a94 !important;
-    font-size: 11px; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
-    margin-top: 0 !important; }
-  .webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button.inactive {
-    background: #dad9d4 !important; }
-  @media (min-width: 760px) {
-    .webform-client-form.webform-client-form-330 #edit_submitted_country_of_residence_chzn {
-      width: 80% !important; } }
-  .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate label, .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field .field-label, .field .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field-label {
-    float: left;
-    width: 30%;
-    padding: 5px 0 0 10px; }
-  @media (min-width: 760px) {
-    .webform-client-form.webform-client-form-330 .webform-component-email .email {
-      width: 90% !important; } }
-  .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
-    width: 100%;
+.webform-client-form.webform-client-form-330 .webform-component-select.webform-component--title .chzn-container {
+  width: 95% !important; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file div.relative.left {
+  float: none !important; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file .form-file {
+  width: 100% !important;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  max-height: none;
+  top: 0;
+  z-index: 10; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file {
+  width: 100%;
+  margin-top: 0; }
+  .webform-client-form.webform-client-form-330 .form-item.webform-component-file .form-managed-file span.file a {
+    padding: 11px;
     display: block; }
-    @media (min-width: 760px) {
-      .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
-        width: 29% !important;
-        margin-right: 0.6em !important; } }
-    .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select .chzn-container.chzn-container-single {
-      display: block !important;
-      width: auto !important; }
-  .webform-client-form.webform-client-form-330 .career-field-hear .webform-component-select .chzn-container.chzn-container-single {
-    width: 100% !important; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-drug-n-drop-area,
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file .awf-pseudo-file-input {
+  display: none; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button,
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
+  width: 200px;
+  margin-top: 2px !important;
+  right: 0;
+  z-index: 15;
+  background: #329a94 !important;
+  font-size: 11px; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-remove-button {
+  margin-top: 0 !important; }
+
+.webform-client-form.webform-client-form-330 .form-item.webform-component-file #edit-submitted-attach-file-upload-button.inactive {
+  background: #dad9d4 !important; }
+
+@media (min-width: 760px) {
+  .webform-client-form.webform-client-form-330 #edit_submitted_country_of_residence_chzn {
+    width: 80% !important; } }
+
+.webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate label, .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field .field-label, .field .webform-client-form.webform-client-form-330 #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate .field-label {
+  float: left;
+  width: 30%;
+  padding: 5px 0 0 10px; }
+
+@media (min-width: 760px) {
+  .webform-client-form.webform-client-form-330 .webform-component-email .email {
+    width: 90% !important; } }
+
+.webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
+  width: 100%;
+  display: block; }
+  @media (min-width: 760px) {
+    .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select {
+      width: 29% !important;
+      margin-right: .6em !important; } }
+  .webform-client-form.webform-client-form-330 .webform-component--available-start-date .webform-datepicker .form-type-select .chzn-container.chzn-container-single {
+    display: block !important;
+    width: auto !important; }
+
+.webform-client-form.webform-client-form-330 .career-field-hear .webform-component-select .chzn-container.chzn-container-single {
+  width: 100% !important; }
 
 hr {
   color: #e5e5e5;
