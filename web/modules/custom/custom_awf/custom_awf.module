@@ -20,26 +20,23 @@ function custom_awf_pathauto_pattern_alter(PathautoPattern &$pattern, array $con
 		$node = $context['data']['node'];
 		$replacements = [];
 
-		//test for node type
-		switch ($node->getType()) {
-			case 'page':
-				$value = $node->get('field_about_page')->getValue();
-				if($value[0]['value']){
-					$replacements[] = 'about/[node:title]';
-					$replacements = implode('/', $replacements);
-				}
-				break;
-			
-			default:
+		// get the content type
+		if ($node->getType() == 'page' ) {
 
-				break;
+			//get the field value
+			$value = $node->get('field_about_page')->getValue();
+			if(isset($value[0]['value']) && $value[0]['value']) {
+
+				$replacements = 'about/[node:title]';
+			}
 		}
 
-		//replace the existing pattern with the new one via mb_regex_set_options()
+		// check for replacements.
 		if($replacements) {
-			$regex = '/\[node:title(\:[^]]*)?\]/';
-			$pattern->setPattern(preg_replace($regex, 
-				$replacements . '$1', $pattern->getPattern()));
+
+			//replace the existing pattern
+			$regex = '/\[node:title\]/';
+			$pattern->setPattern(preg_replace($regex, $replacements, $pattern->getPattern()));
 
 		}
 

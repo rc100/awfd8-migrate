@@ -7,16 +7,16 @@ dependencies:
 id: donate_page_path_pattern
 label: 'Donate Page Path Pattern'
 type: 'canonical_entities:node'
-pattern: 'donate/[node:title]'
+pattern: '/donate/[node:title]'
 selection_criteria:
-  e557f001-9028-4607-9876-aeb433662a73:
+  f1fd9a4f-13ea-4a86-a5e7-e5505a771b4e:
     id: node_type
     bundles:
       donate_page: donate_page
     negate: false
     context_mapping:
       node: node
-    uuid: e557f001-9028-4607-9876-aeb433662a73
+    uuid: f1fd9a4f-13ea-4a86-a5e7-e5505a771b4e
 selection_logic: and
-weight: -5
+weight: -8
 relationships: {  }
