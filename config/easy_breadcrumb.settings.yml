@@ -16,6 +16,6 @@ _core:
 include_invalid_paths: true
 excluded_paths: ''
 replaced_titles: ''
-custom_paths: ''
+custom_paths: '/about/* :: About AWF|/about'
 segments_separator: null
 title_segment_as_link: false
