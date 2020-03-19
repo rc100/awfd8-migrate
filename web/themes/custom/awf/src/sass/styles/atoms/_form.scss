@@ -166,43 +166,41 @@ input[type="button"] {
 
 .block-webform-newsletter {
   background: $awfbrown;
+  overflow: hidden;
+
+  &:after {
+    @include form-body-after;
+    bottom: 0;
+
+    @include breakpoint($min760) {
+      background: url('../../src/svg/pattern_EmailSignup.svg') 0 100% no-repeat;
+      left: 10%;
+      background-size: 120%;
+      top: 10%;
+    }
+
+    @include breakpoint($min1024) {
+      left: 25%;
+      background-size: 75%;
+    }
+
+    @include breakpoint($min1200) {
+      left: 30%;
+      background-size: 70%;
+    }
+
+    @include breakpoint($min1320) {
+      left: 40%;
+      background-size: 60%;
+    }
+  }
 
   form {
     background: $awfbrown;
     @include form-body;
 
     @include breakpoint($min760) {
-      padding: 60px 0 85px;
-    }
-
-    @include breakpoint($min1024) {
-      padding: 60px;
-    }
-
-    &:after {
-      @include form-body-after;
-      bottom: 0;
-
-      @include breakpoint($min760) {
-        background: url('../../src/svg/pattern_EmailSignup.svg') 0 100% no-repeat;
-        left: 10%;
-        background-size: 120%;
-      }
-
-      @include breakpoint($min1024) {
-        left: 25%;
-        background-size: 75%;
-      }
-
-      @include breakpoint($min1200) {
-        left: 30%;
-        background-size: 70%;
-      }
-
-      @include breakpoint($min1320) {
-        left: 40%;
-        background-size: 60%;
-      }
+      padding: 70px 60px 90px;
     }
   }
 
@@ -433,22 +431,25 @@ input[type="button"] {
       white-space: nowrap;
       padding: 0;
       margin: 0;
-      font-size: .85em;
+      font-size: 1.6rem;
       font-weight: normal;
       position: absolute !important;
       left: 5px;
-      top: 7px;
+      top: -.75rem;
       z-index: -1;
       -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
       transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
     }
 
     &.form-type-textfield.with-value input,
-    &.form-type-email.with-value input,
+    &.form-type-email.with-value input {
+      color: $white;
+      font-size: 11.2px;
+    }
+
     &.form-type-textfield input:focus,
     &.form-type-email input:focus {
       color: $white;
-      font-size: .85em;
     }
 
     &.form-type-textfield.with-value label,
@@ -459,10 +460,13 @@ input[type="button"] {
     &.form-type-email:hover label,
     &.form-type-textfield:focus label,
     &.form-type-email:focus label {
-      top: -20px;
-      font-size: .55em;
+      top: -30px;
+      font-size: 11.2px;
     }
+  }
 
+  .form-required::after {
+    background-image: url('../../src/svg/required.svg');
   }
 
   .form-actions.form-wrapper {
@@ -479,20 +483,21 @@ input[type="button"] {
 }
 
 .webform-client-form.webform-client-form-330 {
-  border: 2px solid hotpink;
-  .webform-component-select.webform-component--title{
+  .webform-component-select.webform-component--title {
     .chzn-container {
-       width: 95%!important;
+      width: 95% !important;
     }
 
   }
+
   .form-item.webform-component-file {
     div.relative.left {
-      float: none!important;
+      float: none !important;
     }
-    .form-managed-file{
+
+    .form-managed-file {
       .form-file {
-        width: 100%!important;
+        width: 100% !important;
         position: relative;
         opacity: 1;
         height: auto;
@@ -500,10 +505,12 @@ input[type="button"] {
         top: 0;
         z-index: 10;
       }
+
       span.file {
         width: 100%;
         margin-top: 0;
-        a{
+
+        a {
           padding: 11px;
           display: block;
         }
@@ -514,29 +521,34 @@ input[type="button"] {
     .awf-pseudo-file-input {
       display: none;
     }
+
     #edit-submitted-attach-file-upload-button,
     #edit-submitted-attach-file-remove-button {
       width: 200px;
-      margin-top: 2px!important;
+      margin-top: 2px !important;
       right: 0;
       z-index: 15;
-      background: #329a94!important;
+      background: #329a94 !important;
       font-size: 11px;
     }
+
     #edit-submitted-attach-file-remove-button {
-      margin-top: 0!important
+      margin-top: 0 !important
     }
+
     #edit-submitted-attach-file-upload-button {
       &.inactive {
-        background: #dad9d4!important
+        background: #dad9d4 !important
       }
     }
   }
+
   #edit_submitted_country_of_residence_chzn {
     @include breakpoint($min760) {
-      width: 80%!important;
+      width: 80% !important;
     }
   }
+
   #edit-submitted-willing-to-relocate .form-item-submitted-willing-to-relocate {
     label {
       float: left;
@@ -544,24 +556,29 @@ input[type="button"] {
       padding: 5px 0 0 10px;
     }
   }
+
   .webform-component-email .email {
     @include breakpoint($min760) {
-      width: 90%!important;
+      width: 90% !important;
     }
   }
+
   .webform-component--available-start-date .webform-datepicker .form-type-select {
     width: 100%;
     display: block;
+
     @include breakpoint($min760) {
-      width: 29%!important;
-      margin-right: .6em!important;
+      width: 29% !important;
+      margin-right: .6em !important;
     }
+
     .chzn-container.chzn-container-single {
-      display: block!important;
-      width: auto!important;
+      display: block !important;
+      width: auto !important;
     }
   }
+
   .career-field-hear .webform-component-select .chzn-container.chzn-container-single {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
