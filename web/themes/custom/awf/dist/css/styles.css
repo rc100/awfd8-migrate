@@ -3591,6 +3591,38 @@ a.share {
       float: right;
       width: 50%; } }
 
+.paragraph--type--module .two-col .right {
+  max-width: 100%;
+  display: inline-block; }
+
+.paragraph--type--module .field--name-field-media-image {
+  padding: 0;
+  margin: 0; }
+
+.paragraph--type--module .archive-button {
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0 7rem 0;
+  text-transform: uppercase; }
+  .paragraph--type--module .archive-button:before {
+    display: none; }
+  .paragraph--type--module .archive-button:after {
+    color: #868485;
+    content: "› ";
+    font-size: 3rem;
+    font-style: normal;
+    float: left;
+    position: relative;
+    margin-right: 0.75rem;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    width: 50px; }
+
 .paragraph--type--sidebar-item {
   margin-bottom: 2.5rem; }
   .paragraph--type--sidebar-item .field {
