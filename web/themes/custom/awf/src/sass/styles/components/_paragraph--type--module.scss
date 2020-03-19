@@ -66,4 +66,40 @@
       width: 50%;
     }
   }
+
+  .two-col .right {
+    max-width: 100%;
+    display: inline-block;
+  }
+
+  .field--name-field-media-image {
+    padding: 0;
+    margin: 0;
+  }
+
+  .archive-button {
+    background-color: transparent;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: center;
+    margin: 1rem 0 7rem 0;
+    text-transform: uppercase;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      color: #868485;
+      content: "› ";
+      font-size: 3rem;
+      font-style: normal;
+      float: left;
+      position: relative;
+      margin-right: 0.75rem;
+      transform: rotate(90deg);
+      width: 50px;
+    }
+  }
 }

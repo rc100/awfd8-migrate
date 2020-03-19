@@ -51,8 +51,25 @@
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
-        {{ content }}
+        {% if content.field_image %}
+          <div class="two-col">
+            <div class="left">
+              {{ content.field_image}}
+            </div>
+            <div class="right">
+        {% endif %}
+            {{ content|without('field_image') }}
+        {% if content.field_image %}
+            </div>
+          </div>
+        {% endif %}
       {% endblock %}
+      <div>
+      {% if paragraph.id() == 9476 %}
+        {{ attach_library('awf/showmore') }}
+        <button class="archive-button carrot">Archive</button>
+      {% endif %}
+      </div>
     </div>
   {% endblock paragraph %}
 {% endif %}
