@@ -53,5 +53,17 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token }}">
+      <!-- Neverbounce -->
+    <script type="text/javascript">
+      _NBSettings = {
+        apiKey: 'public_9c0a5718e304982d67179d5972cc5254',
+        ajaxMode: true,
+        blockThrottledAttempts: true,
+        displayPoweredBy: false,
+        selector: '#edit-email-address',
+        throttleRejectMessage: "Too many attempts, please try again later"
+      };
+    </script>
+    <script type="text/javascript" src="https://cdn.neverbounce.com/widget/dist/NeverBounce.js"></script>
   </body>
 </html>
