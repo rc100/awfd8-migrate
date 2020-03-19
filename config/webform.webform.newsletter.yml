@@ -1,3 +1,4 @@
+uuid: 1d3fdecd-dc9f-47af-a1db-5fed7842f598
 langcode: en
 status: open
 dependencies: {  }
@@ -175,5 +176,52 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
-uuid: 1d3fdecd-dc9f-47af-a1db-5fed7842f598
+handlers:
+  remote_post:
+    id: remote_post
+    label: 'Remote post'
+    handler_id: remote_post
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      method: POST
+      type: x-www-form-urlencoded
+      excluded_data:
+        serial: serial
+        sid: sid
+        uuid: uuid
+        token: token
+        uri: uri
+        created: created
+        completed: completed
+        changed: changed
+        in_draft: in_draft
+        current_page: current_page
+        remote_addr: remote_addr
+        uid: uid
+        langcode: langcode
+        webform_id: webform_id
+        entity_type: entity_type
+        entity_id: entity_id
+        locked: locked
+        sticky: sticky
+        notes: notes
+      custom_data: ''
+      custom_options: ''
+      debug: false
+      completed_url: 'https://secure.awf.org/springboard-api/springboard-forms/submit?api_key=0d5e65f7024df04e1acfdd6ab5ec44b1&form_id=156'
+      completed_custom_data: ''
+      updated_url: ''
+      updated_custom_data: ''
+      deleted_url: ''
+      deleted_custom_data: ''
+      draft_created_url: ''
+      draft_created_custom_data: ''
+      draft_updated_url: ''
+      draft_updated_custom_data: ''
+      converted_url: ''
+      converted_custom_data: ''
+      message: ''
+      messages: {  }
+      error_url: ''
