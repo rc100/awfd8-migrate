@@ -1,14 +1,14 @@
-uuid: 81a541bc-7a7a-46f7-a81c-cf20d2381c9c
+uuid: 3fefae8c-ae87-4d70-9fe9-f538b4ef2b8b
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - system
-name: landing_page
-label: 'Landing Page'
-group: Hero
-description: 'The brown-backed section that appears under the hero on the Overview type Landing Pages.'
+name: gallery
+label: 'Gallery - Wildlife Conservation page'
+group: Gallery
+description: 'This should place gallery blocks'
 requireAllConditions: true
 disabled: false
 conditions:
@@ -17,23 +17,23 @@ conditions:
     bundles:
       landing_page: landing_page
     negate: 0
-    uuid: b7126d9e-362f-4f00-b990-679a56af6e6d
+    uuid: e8821593-6501-4f10-b6c3-c6ea8cf31e25
     context_mapping:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: /where-we-work
-    negate: 1
-    uuid: 8daed534-2e1b-4995-bb1f-84eaf50c1883
+    pages: /wildlife-conservation
+    negate: 0
+    uuid: 4d8adafb-7e48-48ab-b750-34e742501ebe
     context_mapping: {  }
 reactions:
   blocks:
     blocks:
-      e0dbfa71-8914-4d8d-b01b-c910d7374d20:
-        id: 'views_block:hero-block_3'
+      85dd9a3e-e529-4e4a-a5ad-01bbcce1ede0:
+        id: 'views_block:gallery_entity_overview-block_1'
         label: ''
         provider: views
-        label_display: 0
+        label_display: visible
         views_label: ''
         items_per_page: none
         region: content_preface
@@ -42,10 +42,10 @@ reactions:
         theme: awf
         css_class: ''
         unique: 0
-        context_id: landing_page
-        uuid: e0dbfa71-8914-4d8d-b01b-c910d7374d20
+        context_id: gallery
+        uuid: 85dd9a3e-e529-4e4a-a5ad-01bbcce1ede0
     id: blocks
     saved: false
-    uuid: f906dbd8-8210-46b9-ac58-f1a378f98180
+    uuid: c1ead37c-8e8c-4b34-9269-f7b61a102f74
     include_default_blocks: 1
-weight: -5
+weight: -1

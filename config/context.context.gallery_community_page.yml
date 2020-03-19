@@ -1,0 +1,51 @@
+uuid: 9a6a6f6c-fc94-459e-9212-20f71cdc0617
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+name: gallery_community_page
+label: 'Gallery - Community Page'
+group: Gallery
+description: 'Gallery blocks for the Community page'
+requireAllConditions: true
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: 0
+    uuid: 70ed01c5-8615-4e15-9b7a-6b05684aadf3
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /community
+    negate: 0
+    uuid: 7804fb45-64d7-4eeb-92d5-df71400708c0
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      a203ac5c-0d16-4192-8778-3b73ea2fa0d5:
+        id: 'views_block:gallery_entity_overview-block_3'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: '20'
+        region: content_preface
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: gallery_community_page
+        uuid: a203ac5c-0d16-4192-8778-3b73ea2fa0d5
+    id: blocks
+    saved: false
+    uuid: 50b9f002-7944-44fd-9d4d-8f5fd56baca5
+    include_default_blocks: 0
+weight: 0

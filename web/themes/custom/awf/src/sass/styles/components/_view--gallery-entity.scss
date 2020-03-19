@@ -73,6 +73,34 @@
 	}
 }
 
+.view-id-gallery_entity.view-display-id-block_11 {
+	background: none;
+	padding: 0px;
+		.jcarousel-wrapper.jcarousel-skin-default {
+			width: 100%;
+			border: none;
+			box-shadow: none;
+			height: 190px;
+		.jcarousel {
+			li {
+				background: white;
+				width: 135px;
+				.field {
+					margin: 0px;
+				}
+				.field--name-uri {
+					height: 90px;
+					overflow: hidden;
+				}
+			}
+			img {
+				width: 135px;
+				min-height: 70px;
+			}
+		}
+	}
+}
+
 #popoutWrapper {
 	display: block;
 	position: absolute;

@@ -4107,6 +4107,27 @@ a.share {
         line-height: 17px;
         font-weight: 600; }
 
+.view-id-gallery_entity.view-display-id-block_11 {
+  background: none;
+  padding: 0px; }
+  .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default {
+    width: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 190px; }
+    .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li {
+      background: white;
+      width: 135px; }
+      .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li .field {
+        margin: 0px; }
+      .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel li .field--name-uri {
+        height: 90px;
+        overflow: hidden; }
+    .view-id-gallery_entity.view-display-id-block_11 .jcarousel-wrapper.jcarousel-skin-default .jcarousel img {
+      width: 135px;
+      min-height: 70px; }
+
 #popoutWrapper {
   display: block;
   position: absolute;

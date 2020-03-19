@@ -1,0 +1,25 @@
+uuid: b82152a9-2f01-42ff-b4e6-b3f752d9fc2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: policy
+label: Policy
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_page: landing_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

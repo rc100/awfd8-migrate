@@ -1,14 +1,14 @@
-uuid: 81a541bc-7a7a-46f7-a81c-cf20d2381c9c
+uuid: 685a0ca2-da52-47a0-b632-a8e13162806d
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - system
-name: landing_page
-label: 'Landing Page'
-group: Hero
-description: 'The brown-backed section that appears under the hero on the Overview type Landing Pages.'
+name: gallery_land_habitat_protection
+label: 'Gallery - Land Habitat Protection'
+group: Gallery
+description: 'Gallery blocks for Land and Habitat Protection page'
 requireAllConditions: true
 disabled: false
 conditions:
@@ -17,23 +17,23 @@ conditions:
     bundles:
       landing_page: landing_page
     negate: 0
-    uuid: b7126d9e-362f-4f00-b990-679a56af6e6d
+    uuid: 6bbd0770-226a-47f8-b0a9-6347b0ad512c
     context_mapping:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: /where-we-work
-    negate: 1
-    uuid: 8daed534-2e1b-4995-bb1f-84eaf50c1883
+    pages: /land-habitat-protection
+    negate: 0
+    uuid: 4f2262ee-9345-49a3-9505-490619758be6
     context_mapping: {  }
 reactions:
   blocks:
     blocks:
-      e0dbfa71-8914-4d8d-b01b-c910d7374d20:
-        id: 'views_block:hero-block_3'
+      96aa0762-1b9a-4826-8883-af366f925a72:
+        id: 'views_block:gallery_entity_overview-block_2'
         label: ''
         provider: views
-        label_display: 0
+        label_display: visible
         views_label: ''
         items_per_page: none
         region: content_preface
@@ -42,10 +42,10 @@ reactions:
         theme: awf
         css_class: ''
         unique: 0
-        context_id: landing_page
-        uuid: e0dbfa71-8914-4d8d-b01b-c910d7374d20
+        context_id: gallery_land_habitat_protection
+        uuid: 96aa0762-1b9a-4826-8883-af366f925a72
     id: blocks
     saved: false
-    uuid: f906dbd8-8210-46b9-ac58-f1a378f98180
-    include_default_blocks: 1
-weight: -5
+    uuid: a2796558-0fe3-4e24-9083-ae1b669da5ca
+    include_default_blocks: 0
+weight: 0
