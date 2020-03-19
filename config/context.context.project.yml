@@ -41,4 +41,4 @@ reactions:
     saved: false
     uuid: f92b3050-7240-4a69-9cd7-ccef6ec11d47
     include_default_blocks: 1
-weight: 0
+weight: -3

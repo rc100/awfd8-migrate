@@ -1,0 +1,25 @@
+uuid: d07f617c-211b-4a7c-b1e7-682db2e8d23c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: land_habitat_protection
+label: 'Land Habitat Protection'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_page: landing_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

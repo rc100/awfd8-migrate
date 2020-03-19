@@ -39,4 +39,4 @@ reactions:
     saved: false
     uuid: e82028d4-4b53-46e7-9d44-947e0d2f8e91
     include_default_blocks: 1
-weight: 0
+weight: -4

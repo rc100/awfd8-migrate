@@ -1,0 +1,25 @@
+uuid: 03405feb-dc92-4fb3-b2e2-15371d0be38a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: community
+label: community
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      landing_page: landing_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false
