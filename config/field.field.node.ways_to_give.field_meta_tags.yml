@@ -1,0 +1,21 @@
+uuid: 16c060c2-631f-41d7-b1a8-6f17d6c7b6ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.ways_to_give
+  module:
+    - metatag
+id: node.ways_to_give.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: ways_to_give
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

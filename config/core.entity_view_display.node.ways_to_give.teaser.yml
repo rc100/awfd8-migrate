@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.ways_to_give.field_legacy_alias
     - field.field.node.ways_to_give.field_legacy_id
     - field.field.node.ways_to_give.field_legacy_revision_id
+    - field.field.node.ways_to_give.field_meta_tags
     - field.field.node.ways_to_give.field_view_more
     - field.field.node.ways_to_give.field_weight
     - node.type.ways_to_give
@@ -23,6 +24,7 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   field_view_more: true
   field_weight: true
   langcode: true

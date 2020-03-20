@@ -29,5 +29,47 @@ definitions:
     parent: system.admin_structure
     expanded: false
     weight: 0
+  'admin_toolbar_tools__extra_links:node__add__article':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:node__add__fact':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__hero_slideshow':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__history':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__landscape':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__region':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:node__add__tweet':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:node.add'
+    weight: 0
+    expanded: false
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

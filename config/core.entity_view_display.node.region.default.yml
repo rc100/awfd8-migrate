@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.region.field_legacy_id
     - field.field.node.region.field_legacy_revision_id
     - field.field.node.region.field_main_image
+    - field.field.node.region.field_meta_tags
     - field.field.node.region.field_photo_credit
     - field.field.node.region.field_project_text
     - field.field.node.region.field_sidebar_item_paragraph
@@ -231,5 +232,6 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   langcode: true
   links: true

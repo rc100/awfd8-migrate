@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.donate_page.body
+    - field.field.node.donate_page.field_donate_heading
+    - field.field.node.donate_page.field_form_url
+    - field.field.node.donate_page.field_legacy_alias
+    - field.field.node.donate_page.field_legacy_id
+    - field.field.node.donate_page.field_legacy_revision_id
+    - field.field.node.donate_page.field_meta_tags
+    - field.field.node.donate_page.field_supporting_information
     - node.type.donate_page
   module:
     - text
@@ -29,6 +36,12 @@ content:
     region: content
 hidden:
   field_description: true
+  field_donate_heading: true
   field_form_url: true
   field_heading: true
+  field_legacy_alias: true
+  field_legacy_id: true
+  field_legacy_revision_id: true
+  field_meta_tags: true
+  field_supporting_information: true
   langcode: true

@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.career.field_legacy_id
     - field.field.node.career.field_legacy_revision_id
     - field.field.node.career.field_location
+    - field.field.node.career.field_meta_tags
     - field.field.node.career.field_status
     - field.field.node.career.field_sub_heading
     - node.type.career
@@ -20,6 +21,7 @@ dependencies:
     - content_moderation
     - datetime
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -141,6 +143,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_meta_tags:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_status:
     weight: 15

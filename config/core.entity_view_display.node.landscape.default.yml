@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.landscape.field_legacy_id
     - field.field.node.landscape.field_legacy_revision_id
     - field.field.node.landscape.field_main_image
+    - field.field.node.landscape.field_meta_tags
     - field.field.node.landscape.field_photo_credit
     - field.field.node.landscape.field_project_text
     - field.field.node.landscape.field_resource_text
@@ -51,7 +52,7 @@ content:
     third_party_settings: {  }
     region: content
   field_alternate_thumbnail:
-    weight: 10
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -60,7 +61,7 @@ content:
     type: image
     region: content
   field_bullet_point_paragraph:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -69,28 +70,28 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_challenges:
-    weight: 5
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_description:
-    weight: 18
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_featured_text:
-    weight: 24
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_kml:
-    weight: 23
+    weight: 9
     label: above
     settings:
       use_description_as_link_text: true
@@ -98,14 +99,14 @@ content:
     type: file_default
     region: content
   field_resource_text:
-    weight: 17
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sidebar_item_paragraph:
-    weight: 3
+    weight: 2
     label: above
     settings:
       view_mode: default
@@ -123,7 +124,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_solutions:
-    weight: 15
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -138,6 +139,7 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
   field_photo_credit: true
   field_project_text: true
   field_sub_heading: true

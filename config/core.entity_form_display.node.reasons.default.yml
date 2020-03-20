@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.reasons.field_legacy_alias
     - field.field.node.reasons.field_legacy_id
     - field.field.node.reasons.field_legacy_revision_id
+    - field.field.node.reasons.field_meta_tags
     - field.field.node.reasons.field_tags_africa
     - field.field.node.reasons.field_tags_animal
     - field.field.node.reasons.field_tags_community
@@ -21,6 +22,7 @@ dependencies:
     - content_moderation
     - field_group
     - link
+    - metatag
     - path
     - text
 third_party_settings:
@@ -105,6 +107,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_tags_africa:
     weight: 10

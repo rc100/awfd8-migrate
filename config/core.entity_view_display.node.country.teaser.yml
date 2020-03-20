@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.country.field_legacy_id
     - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
+    - field.field.node.country.field_meta_tags
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
     - field.field.node.country.field_sidebar_item_paragraph
@@ -73,6 +74,7 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
   field_order_number: true
   field_photo_credit: true
   field_project_text: true

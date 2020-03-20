@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.project.field_legacy_alias
     - field.field.node.project.field_legacy_id
     - field.field.node.project.field_main_image
+    - field.field.node.project.field_meta_tags
     - field.field.node.project.field_photo_credit
     - field.field.node.project.field_show_comments
     - field.field.node.project.field_sidebar_item
@@ -42,12 +43,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_alternate_thumbnail:
-    weight: 8
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -63,7 +64,7 @@ content:
     type: text_default
     region: content
   field_kml:
-    weight: 9
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -71,7 +72,7 @@ content:
     type: file_default
     region: content
   field_sidebar_item:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -80,14 +81,14 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_sub_heading_formatted:
-    weight: 5
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_weight:
-    weight: 7
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -100,6 +101,7 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_main_image: true
+  field_meta_tags: true
   field_photo_credit: true
   field_show_comments: true
   field_tags_africa: true
