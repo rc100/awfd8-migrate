@@ -111,18 +111,3 @@ function awf_preprocess_field(&$variables) {
 }
 
 
-function awf_preprocess_node_add_list(&$variables) {
-
-  print('asg found');
-  die
-
-  $types = [
-    'article'
-  ];
-
-  foreach($types as $type) {
-    unset($vars['content'][$type]);
-    unset($vars['types'][$type]);
-  }
-}
-

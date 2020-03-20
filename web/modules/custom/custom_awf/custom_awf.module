@@ -41,6 +41,23 @@ function custom_awf_pathauto_pattern_alter(PathautoPattern &$pattern, array $con
 		}
 
 	}
+}
 
 
+function custom_awf_preprocess_node_add_list(&$vars) {
+
+  $types = [
+    'article',
+    'tweet',
+    'hero_slideshow',
+    'region',
+    'history',
+    'fact',
+    'landscape'
+  ];
+
+  foreach($types as $type) {
+    unset($vars['content'][$type]);
+    unset($vars['types'][$type]);
+  }
 }
