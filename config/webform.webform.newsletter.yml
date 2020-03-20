@@ -12,7 +12,7 @@ id: newsletter
 title: Newsletter
 description: ''
 category: ''
-elements: "newsletter:\n  '#type': webform_markup\n  '#markup': '<h4>Sign up for our Newsletter</h4>'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#autocomplete': 'off'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#autocomplete': 'off'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#autocomplete': 'off'\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Sign Up Now'"
+elements: "newsletter:\n  '#type': webform_markup\n  '#markup': '<h4>Sign up for our Newsletter</h4>'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#autocomplete': 'off'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#autocomplete': 'off'\n  '#required': true\nmail:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Sign Up Now'"
 css: ''
 javascript: ''
 settings:
@@ -186,7 +186,7 @@ handlers:
     weight: 0
     settings:
       method: POST
-      type: x-www-form-urlencoded
+      type: json
       excluded_data:
         serial: serial
         sid: sid
