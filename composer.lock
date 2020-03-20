@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80c59a6c3671f28e92a918324cb03427",
+    "content-hash": "210ca41fb73f6c8587c43f3420ace770",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7350,6 +7350,54 @@
             }
         },
         {
+            "name": "drupal/search_api_attachments",
+            "version": "1.0.0-beta15",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_attachments.git",
+                "reference": "8.x-1.0-beta15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-8.x-1.0-beta15.zip",
+                "reference": "8.x-1.0-beta15",
+                "shasum": "48614e024e2d2d308f309325423829364595ebd9"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta15",
+                    "datestamp": "1574416084",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "izus",
+                    "homepage": "https://www.drupal.org/user/514568"
+                }
+            ],
+            "description": "Extract and index file fields content.",
+            "homepage": "https://www.drupal.org/project/search_api_attachments",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api_attachments"
+            }
+        },
+        {
             "name": "drupal/search_api_pantheon",
             "version": "1.0.0",
             "source": {
@@ -14666,6 +14714,7 @@
         "drupal/plupload": 10,
         "drupal/purge": 10,
         "drupal/rules": 15,
+        "drupal/search_api_attachments": 10,
         "drupal/smtp": 10,
         "drupal/view_unpublished": 15,
         "drupal/viewfield": 10,
