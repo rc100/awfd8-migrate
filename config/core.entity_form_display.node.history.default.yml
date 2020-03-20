@@ -7,9 +7,12 @@ dependencies:
     - field.field.node.history.field_legacy_alias
     - field.field.node.history.field_legacy_id
     - field.field.node.history.field_legacy_revision_id
+    - field.field.node.history.field_meta_tags
     - node.type.history
   module:
+    - content_moderation
     - field_group
+    - metatag
     - paragraphs
     - path
 third_party_settings:
@@ -72,6 +75,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_meta_tags:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   langcode:
     type: language_select

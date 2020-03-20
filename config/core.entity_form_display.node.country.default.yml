@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.country.field_legacy_id
     - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
+    - field.field.node.country.field_meta_tags
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
     - field.field.node.country.field_sidebar_item_paragraph
@@ -39,6 +40,7 @@ dependencies:
     - field_group
     - file
     - image
+    - metatag
     - paragraphs
     - path
     - text
@@ -359,6 +361,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_meta_tags:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_photo_credit:
     weight: 4

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.fact.field_legacy_alias
     - field.field.node.fact.field_legacy_id
     - field.field.node.fact.field_legacy_revision_id
+    - field.field.node.fact.field_meta_tags
     - field.field.node.fact.field_tags_africa
     - field.field.node.fact.field_tags_animal
     - field.field.node.fact.field_tags_community
@@ -40,6 +41,7 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   field_tags_africa: true
   field_tags_animal: true
   field_tags_community: true

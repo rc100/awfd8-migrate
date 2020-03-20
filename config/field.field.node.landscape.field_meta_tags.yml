@@ -1,0 +1,21 @@
+uuid: ef2f092e-3b16-4e0f-bc7b-7deadc74c288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.landscape
+  module:
+    - metatag
+id: node.landscape.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: landscape
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -13,6 +13,7 @@ require_once dirname(__FILE__) . '/includes/theme.inc';
  * Implements template_preprocess for the template.
  */
 function awf_preprocess_html(&$variables) {
+
   if ($node = \Drupal::request()->attributes->get('node')) {
     $variables['attributes']['class'][] = 'page-node-' . $node->id();
   }
@@ -108,3 +109,20 @@ function awf_preprocess_field(&$variables) {
     $variables['items'][0]['content']['#options']['attributes']['class'][] = 'caret';
   }
 }
+
+
+function awf_preprocess_node_add_list(&$variables) {
+
+  print('asg found');
+  die
+
+  $types = [
+    'article'
+  ];
+
+  foreach($types as $type) {
+    unset($vars['content'][$type]);
+    unset($vars['types'][$type]);
+  }
+}
+

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.history.field_legacy_alias
     - field.field.node.history.field_legacy_id
     - field.field.node.history.field_legacy_revision_id
+    - field.field.node.history.field_meta_tags
     - node.type.history
   module:
     - user
@@ -21,5 +22,6 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   langcode: true
   links: true

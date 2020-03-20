@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.project.field_legacy_alias
     - field.field.node.project.field_legacy_id
     - field.field.node.project.field_main_image
+    - field.field.node.project.field_meta_tags
     - field.field.node.project.field_photo_credit
     - field.field.node.project.field_show_comments
     - field.field.node.project.field_sidebar_item
@@ -29,9 +30,11 @@ dependencies:
     - image.style.thumbnail
     - node.type.project
   module:
+    - content_moderation
     - field_group
     - file
     - image
+    - metatag
     - paragraphs
     - path
     - text
@@ -213,6 +216,12 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_meta_tags:
+    weight: 143
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_photo_credit:
     weight: 124
     settings:
@@ -312,6 +321,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

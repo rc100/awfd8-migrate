@@ -1,0 +1,21 @@
+uuid: de70476d-8aa7-4d27-bcf1-c782474bbb48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.history
+  module:
+    - metatag
+id: node.history.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: history
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.safari.field_legacy_revision_id
     - field.field.node.safari.field_location
     - field.field.node.safari.field_main_image
+    - field.field.node.safari.field_meta_tags
     - field.field.node.safari.field_pricing_information
     - field.field.node.safari.field_primary_tag
     - field.field.node.safari.field_safari_capaciy
@@ -93,7 +94,7 @@ third_party_settings:
         - field_solutions
         - field_challenges
       parent_name: ''
-      weight: 20
+      weight: 7
       format_type: html_element
       format_settings:
         id: ''
@@ -166,7 +167,7 @@ content:
     type: text_default
     region: content
   field_primary_tag:
-    weight: 113
+    weight: 8
     label: above
     settings:
       link: true
@@ -183,7 +184,7 @@ content:
     region: content
   field_schedule_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 8
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -191,7 +192,7 @@ content:
     third_party_settings: {  }
     region: content
   field_sidebar_item_paragraph:
-    weight: 7
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -218,6 +219,7 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   field_status: true
   field_tags_africa: true
   field_tags_animal: true

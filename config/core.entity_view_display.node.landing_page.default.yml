@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.landing_page.field_legacy_id
     - field.field.node.landing_page.field_legacy_revision_id
     - field.field.node.landing_page.field_main_image
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_overview_type
     - field.field.node.landing_page.field_parent
     - field.field.node.landing_page.field_photo_credit
@@ -60,7 +61,7 @@ content:
     type: text_default
     region: content
   field_description:
-    weight: 19
+    weight: 11
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -90,7 +91,7 @@ content:
     type: text_default
     region: content
   field_resource_text:
-    weight: 20
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -130,7 +131,7 @@ content:
     region: content
   field_tags_landing_page:
     type: entity_reference_label
-    weight: 21
+    weight: 13
     region: content
     label: above
     settings:
@@ -156,6 +157,7 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
   field_overview_type: true
   field_parent: true
   field_photo_credit: true

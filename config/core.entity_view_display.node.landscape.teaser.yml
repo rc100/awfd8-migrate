@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.landscape.field_legacy_id
     - field.field.node.landscape.field_legacy_revision_id
     - field.field.node.landscape.field_main_image
+    - field.field.node.landscape.field_meta_tags
     - field.field.node.landscape.field_photo_credit
     - field.field.node.landscape.field_project_text
     - field.field.node.landscape.field_resource_text
@@ -56,6 +57,7 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
   field_photo_credit: true
   field_project_text: true
   field_resource_text: true

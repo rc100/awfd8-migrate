@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.safari.field_legacy_revision_id
     - field.field.node.safari.field_location
     - field.field.node.safari.field_main_image
+    - field.field.node.safari.field_meta_tags
     - field.field.node.safari.field_pricing_information
     - field.field.node.safari.field_primary_tag
     - field.field.node.safari.field_safari_capaciy
@@ -35,6 +36,7 @@ dependencies:
     - datetime
     - field_group
     - image
+    - metatag
     - paragraphs
     - path
     - text
@@ -243,6 +245,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_meta_tags:
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_pricing_information:
     weight: 37

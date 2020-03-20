@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.ways_to_give.field_legacy_alias
     - field.field.node.ways_to_give.field_legacy_id
     - field.field.node.ways_to_give.field_legacy_revision_id
+    - field.field.node.ways_to_give.field_meta_tags
     - field.field.node.ways_to_give.field_view_more
     - field.field.node.ways_to_give.field_weight
     - node.type.ways_to_give
@@ -14,6 +15,7 @@ dependencies:
     - content_moderation
     - field_group
     - link
+    - metatag
     - path
 third_party_settings:
   field_group:
@@ -71,6 +73,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_meta_tags:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_view_more:
     weight: 2

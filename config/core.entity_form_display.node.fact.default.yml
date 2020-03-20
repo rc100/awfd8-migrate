@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.fact.field_legacy_alias
     - field.field.node.fact.field_legacy_id
     - field.field.node.fact.field_legacy_revision_id
+    - field.field.node.fact.field_meta_tags
     - field.field.node.fact.field_tags_africa
     - field.field.node.fact.field_tags_animal
     - field.field.node.fact.field_tags_community
@@ -18,7 +19,9 @@ dependencies:
     - field.field.node.fact.field_tags_region
     - node.type.fact
   module:
+    - content_moderation
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -113,6 +116,12 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_meta_tags:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_tags_africa:
     weight: 10
     settings: {  }
@@ -161,6 +170,12 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

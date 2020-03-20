@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.country.field_legacy_id
     - field.field.node.country.field_legacy_revision_id
     - field.field.node.country.field_main_image
+    - field.field.node.country.field_meta_tags
     - field.field.node.country.field_photo_credit
     - field.field.node.country.field_project_text
     - field.field.node.country.field_sidebar_item_paragraph
@@ -47,12 +48,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_alternate_thumbnail:
-    weight: 112
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -62,7 +63,7 @@ content:
     region: content
   field_bullet_point_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 126
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -70,7 +71,7 @@ content:
     third_party_settings: {  }
     region: content
   field_challenges:
-    weight: 130
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -78,7 +79,7 @@ content:
     region: content
   field_facts_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 125
+    weight: 3
     label: above
     settings:
       view_mode: default
@@ -86,7 +87,7 @@ content:
     third_party_settings: {  }
     region: content
   field_featured:
-    weight: 137
+    weight: 13
     label: above
     settings:
       format: default
@@ -96,14 +97,14 @@ content:
     type: boolean
     region: content
   field_featured_text:
-    weight: 134
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_kml:
-    weight: 136
+    weight: 12
     label: above
     settings:
       use_description_as_link_text: true
@@ -111,7 +112,7 @@ content:
     type: file_default
     region: content
   field_landscape_text:
-    weight: 133
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -119,7 +120,7 @@ content:
     region: content
   field_sidebar_item_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 129
+    weight: 7
     label: above
     settings:
       view_mode: default
@@ -128,7 +129,7 @@ content:
     region: content
   field_solution_bpoint_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 128
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -137,7 +138,7 @@ content:
     region: content
   field_solution_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 127
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -145,14 +146,14 @@ content:
     third_party_settings: {  }
     region: content
   field_solutions_description:
-    weight: 131
+    weight: 9
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -164,6 +165,7 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
   field_photo_credit: true
   field_project_text: true
   field_sub_heading: true

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.donate_page.field_legacy_alias
     - field.field.node.donate_page.field_legacy_id
     - field.field.node.donate_page.field_legacy_revision_id
+    - field.field.node.donate_page.field_meta_tags
     - field.field.node.donate_page.field_supporting_information
     - node.type.donate_page
   module:
@@ -58,5 +59,6 @@ hidden:
   field_legacy_alias: true
   field_legacy_id: true
   field_legacy_revision_id: true
+  field_meta_tags: true
   langcode: true
   links: true

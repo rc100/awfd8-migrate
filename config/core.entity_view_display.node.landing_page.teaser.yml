@@ -16,6 +16,8 @@ dependencies:
     - field.field.node.landing_page.field_legacy_id
     - field.field.node.landing_page.field_legacy_revision_id
     - field.field.node.landing_page.field_main_image
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_overview_type
     - field.field.node.landing_page.field_parent
     - field.field.node.landing_page.field_photo_credit
     - field.field.node.landing_page.field_project_text
@@ -54,6 +56,8 @@ hidden:
   field_legacy_id: true
   field_legacy_revision_id: true
   field_main_image: true
+  field_meta_tags: true
+  field_overview_type: true
   field_parent: true
   field_photo_credit: true
   field_project_text: true
