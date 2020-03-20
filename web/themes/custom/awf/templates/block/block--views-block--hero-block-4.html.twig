@@ -60,7 +60,10 @@
       </div>
       <div class="seven columns alpha">
         <div class="intro-text">
-          {{ content }}
+          {% for row in content['#view'].result %}
+            <h1>{{ content['#view'].field['title'].value(row) }}</h1>
+            {{ content['#view'].field['body_1'].value(row)|raw }}
+          {% endfor %}
         </div>
         <div class="content-tabs">
           <ul class="tabs">
