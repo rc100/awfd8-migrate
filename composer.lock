@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebde3bb21d3e63f9b68c90c174f8cacc",
+    "content-hash": "4489c6ec9a08b58bf70dddc64cef6ed8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4274,69 +4274,6 @@
             }
         },
         {
-            "name": "drupal/custom_search",
-            "version": "1.0.0-beta6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/custom_search.git",
-                "reference": "8.x-1.0-beta6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/custom_search-8.x-1.0-beta6.zip",
-                "reference": "8.x-1.0-beta6",
-                "shasum": "b22e321aeab667c77b315cd79974ab0805b473e7"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta6",
-                    "datestamp": "1491185284",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mario Steinitz",
-                    "homepage": "https://www.drupal.org/user/2536014"
-                },
-                {
-                    "name": "jdanthinne",
-                    "homepage": "https://www.drupal.org/user/313766"
-                },
-                {
-                    "name": "jpontani",
-                    "homepage": "https://www.drupal.org/user/1014606"
-                },
-                {
-                    "name": "rajeshwari10",
-                    "homepage": "https://www.drupal.org/user/3270754"
-                },
-                {
-                    "name": "rooby",
-                    "homepage": "https://www.drupal.org/user/350381"
-                }
-            ],
-            "description": "This module alters the default search box in many ways.",
-            "homepage": "https://www.drupal.org/project/custom_search",
-            "support": {
-                "source": "https://git.drupalcode.org/project/custom_search"
-            }
-        },
-        {
             "name": "drupal/date_popup",
             "version": "1.0.0",
             "source": {
@@ -7338,216 +7275,6 @@
             }
         },
         {
-            "name": "drupal/search_api",
-            "version": "1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "9f03dd5a4d9ee7c58d47aabc33d9229793d1195f"
-            },
-            "require": {
-                "drupal/core": "^8.5"
-            },
-            "require-dev": {
-                "drupal/search_api_autocomplete": "@dev",
-                "drupal/search_api_db": "*"
-            },
-            "suggest": {
-                "drupal/facets": "Adds the ability to create faceted searches.",
-                "drupal/search_api_autocomplete": "Allows adding autocomplete suggestions to search fields.",
-                "drupal/search_api_solr": "Adds support for using Apache Solr as a backend."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1562599986",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Seidl",
-                    "homepage": "https://www.drupal.org/u/drunken-monkey"
-                },
-                {
-                    "name": "Nick Veenhof",
-                    "homepage": "https://www.drupal.org/u/nick_vh"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/790418/committers"
-                }
-            ],
-            "description": "Provides a generic framework for modules offering search capabilities.",
-            "homepage": "https://www.drupal.org/project/search_api",
-            "support": {
-                "source": "http://git.drupal.org/project/search_api.git",
-                "issues": "https://www.drupal.org/project/issues/search_api",
-                "irc": "irc://irc.freenode.org/drupal-search-api"
-            }
-        },
-        {
-            "name": "drupal/search_api_attachments",
-            "version": "1.0.0-beta14",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/search_api_attachments.git",
-                "reference": "8.x-1.0-beta14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_attachments-8.x-1.0-beta14.zip",
-                "reference": "8.x-1.0-beta14",
-                "shasum": "ced89509f2660fc5c0c6fc0ceddac8cf54d341c7"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/search_api": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-beta14",
-                    "datestamp": "1562252286",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "izus",
-                    "homepage": "https://www.drupal.org/user/514568"
-                }
-            ],
-            "description": "Extract and index file fields content.",
-            "homepage": "https://www.drupal.org/project/search_api_attachments",
-            "support": {
-                "source": "https://git.drupalcode.org/project/search_api_attachments"
-            }
-        },
-        {
-            "name": "drupal/search_api_solr",
-            "version": "2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "8.x-2.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "e1c22328bcb4fb74ca84384fb4ac8af75dc7a618"
-            },
-            "require": {
-                "drupal/core": "^8.5",
-                "drupal/search_api": "~1.11",
-                "ext-json": "*",
-                "maennchen/zipstream-php": "0.4.*",
-                "php": "^7.0",
-                "solarium/solarium": "~4.2.0"
-            },
-            "conflict": {
-                "drupal/core": "<8.5",
-                "drupal/search_api_solr_multilingual": "*"
-            },
-            "require-dev": {
-                "drupal/devel": "*",
-                "drupal/facets": "1.x-dev",
-                "drupal/geofield": "1.x-dev",
-                "drupal/search_api_autocomplete": "1.x-dev",
-                "drupal/search_api_location": "1.x-dev",
-                "phayes/geophp": "^1.2"
-            },
-            "suggest": {
-                "drupal/facets": "Provides facetted search.",
-                "drupal/search_api_autocomplete": "Provides auto complete for search boxes.",
-                "drupal/search_api_location": "Provides location searches."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1553881385",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Markus Kalkbrenner",
-                    "homepage": "https://www.drupal.org/u/mkalkbrenner"
-                },
-                {
-                    "name": "Other contributors",
-                    "homepage": "https://www.drupal.org/node/982682/committers"
-                },
-                {
-                    "name": "amateescu",
-                    "homepage": "https://www.drupal.org/user/729614"
-                },
-                {
-                    "name": "cspitzlay",
-                    "homepage": "https://www.drupal.org/user/419305"
-                },
-                {
-                    "name": "drunken monkey",
-                    "homepage": "https://www.drupal.org/user/205582"
-                },
-                {
-                    "name": "mkalkbrenner",
-                    "homepage": "https://www.drupal.org/user/124705"
-                }
-            ],
-            "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
-            "homepage": "https://www.drupal.org/project/search_api_solr",
-            "support": {
-                "source": "http://git.drupal.org/project/search_api_solr.git",
-                "issues": "https://www.drupal.org/project/issues/search_api_solr",
-                "irc": "https://drupalchat.me/channel/search"
-            }
-        },
-        {
             "name": "drupal/smtp",
             "version": "1.0.0-beta6",
             "source": {
@@ -9719,58 +9446,6 @@
                 "write"
             ],
             "time": "2018-02-06T08:27:03+00:00"
-        },
-        {
-            "name": "maennchen/zipstream-php",
-            "version": "v0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "89e0cdb3c9ecabef4da988852003781a7802afb7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/89e0cdb3c9ecabef4da988852003781a7802afb7",
-                "reference": "89e0cdb3c9ecabef4da988852003781a7802afb7",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">= 5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZipStream\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paul Duncan",
-                    "email": "pabs@pablotron.org"
-                },
-                {
-                    "name": "Jesse Donat",
-                    "email": "donatj@gmail.com"
-                },
-                {
-                    "name": "Jonatan Männchen",
-                    "email": "jonatan@maennchen.ch"
-                }
-            ],
-            "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
-            "keywords": [
-                "stream",
-                "zip"
-            ],
-            "time": "2016-09-13T10:29:17+00:00"
         },
         {
             "name": "mandrill/mandrill",
@@ -11987,64 +11662,6 @@
             "time": "2015-10-13T18:44:15+00:00"
         },
         {
-            "name": "solarium/solarium",
-            "version": "4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
-                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0",
-                "symfony/event-dispatcher": "^2.7 || ^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "^3.8 || ^6.2",
-                "php-coveralls/php-coveralls": "^1.0",
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^1.4",
-                "zendframework/zendframework": "^3.0"
-            },
-            "suggest": {
-                "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Solarium\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "See GitHub contributors",
-                    "homepage": "https://github.com/basdenooijer/solarium/contributors"
-                }
-            ],
-            "description": "PHP Solr client",
-            "homepage": "http://www.solarium-project.org",
-            "keywords": [
-                "php",
-                "search",
-                "solr"
-            ],
-            "time": "2018-11-24T09:20:30+00:00"
-        },
-        {
             "name": "squizlabs/php_codesniffer",
             "version": "3.5.3",
             "source": {
@@ -12736,16 +12353,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.36",
+            "version": "v3.4.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "f9031c22ec127d4a2450760f81a8677fe8a10177"
+                "reference": "2f67a869aef3eecf42e7f8be4a8b86c92308686c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f9031c22ec127d4a2450760f81a8677fe8a10177",
-                "reference": "f9031c22ec127d4a2450760f81a8677fe8a10177",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/2f67a869aef3eecf42e7f8be4a8b86c92308686c",
+                "reference": "2f67a869aef3eecf42e7f8be4a8b86c92308686c",
                 "shasum": ""
             },
             "require": {
@@ -12795,7 +12412,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-24T15:33:53+00:00"
+            "time": "2020-02-04T08:04:52+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -14769,7 +14386,6 @@
         "drupal/captcha": 10,
         "drupal/context": 10,
         "drupal/context_ui": 10,
-        "drupal/custom_search": 10,
         "drupal/diff": 5,
         "drupal/entityqueue": 10,
         "drupal/file_entity": 10,
@@ -14781,7 +14397,6 @@
         "drupal/plupload": 10,
         "drupal/purge": 10,
         "drupal/rules": 15,
-        "drupal/search_api_attachments": 10,
         "drupal/smtp": 10,
         "drupal/view_unpublished": 15,
         "drupal/viewfield": 10,
