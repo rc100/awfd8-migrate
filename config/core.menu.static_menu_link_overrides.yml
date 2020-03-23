@@ -36,11 +36,11 @@ definitions:
     expanded: false
     weight: 0
   'admin_toolbar_tools__extra_links:node__add__fact':
-    enabled: false
+    enabled: true
     menu_name: admin
     parent: 'admin_toolbar_tools.extra_links:node.add'
-    weight: 0
     expanded: false
+    weight: 0
   'admin_toolbar_tools__extra_links:node__add__hero_slideshow':
     enabled: false
     menu_name: admin

@@ -52,7 +52,6 @@ function custom_awf_preprocess_node_add_list(&$vars) {
     'hero_slideshow',
     'region',
     'history',
-    'fact',
     'landscape'
   ];
 
