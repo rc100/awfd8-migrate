@@ -9,6 +9,20 @@ use Drupal\Core\Form\FormStateInterface;
 
 require_once dirname(__FILE__) . '/includes/theme.inc';
 
+/*
+// BrightEdge:
+// Your access to and use of BrightEdge Link Equity Manager is governed by the
+// Infrastructure Product Terms located at:
+// www.brightedge.com/infrastructure-product-terms.
+// Customer acknowledges and agrees it has read, understands and agrees to be
+// bound by the Infrastructure Product Terms.
+//
+// IXF: save the be_ixf_client.php file to your server, then use "require" to
+// include it in your template.
+*/
+use BrightEdge\BEIXFClient;
+require_once dirname(__FILE__) . '/includes/be_ixf_client.php';
+
 /**
  * Implements template_preprocess for the template.
  */
@@ -63,6 +77,21 @@ function awf_preprocess_html(&$variables) {
     }
   }
 
+  // BrightEdge.
+  // IXF: the following array and constructor must be placed before any HTML is
+  // written to the page.
+  $be_ixf_config = [
+    BEIXFClient::$CAPSULE_MODE_CONFIG => BEIXFClient::$REMOTE_PROD_CAPSULE_MODE,
+    BEIXFClient::$ACCOUNT_ID_CONFIG => "f00000000165670",
+    // IXF: By default, all URL parameters are ignored. If you have URL
+    // parameters that add value to page content. Add them to this config value,
+    // separated by the pipe character (|).
+    BEIXFClient::$WHITELIST_PARAMETER_LIST_CONFIG => "ixf",
+  ];
+  $be_ixf = new BEIXFClient($be_ixf_config);
+  $variables['brightedge_head_open'] = $be_ixf->getHeadOpen();
+  $variables['brightedge_body_open'] = $be_ixf->getBodyOpen();
+  $variables['brightedge_body_close'] = $be_ixf->close();
 }
 
 /**
@@ -109,5 +138,3 @@ function awf_preprocess_field(&$variables) {
     $variables['items'][0]['content']['#options']['attributes']['class'][] = 'caret';
   }
 }
-
-
