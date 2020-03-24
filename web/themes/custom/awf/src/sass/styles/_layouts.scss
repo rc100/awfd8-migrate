@@ -53,6 +53,15 @@
 
   @include breakpoint($min760) {
     flex-direction: row;
+    padding: 2rem 0;
+  }
+
+  .left {
+    @include breakpoint($min760) {
+      img {
+        padding-right: 2rem;
+      }
+    }
   }
 
   .right {
@@ -60,7 +69,6 @@
     max-width: 100%;
 
     @include breakpoint($min760) {
-      margin-left: 2rem;
       max-width: 220px;
     }
 
