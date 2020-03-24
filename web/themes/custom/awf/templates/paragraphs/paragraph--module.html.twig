@@ -51,7 +51,7 @@
   {% block paragraph %}
     <div{{ attributes.addClass(classes) }}>
       {% block content %}
-        {% if content.field_image %}
+        {% if content.field_image|render|striptags %}
           <div class="two-col">
             <div class="left">
               {{ content.field_image}}
@@ -59,7 +59,7 @@
             <div class="right">
         {% endif %}
             {{ content|without('field_image') }}
-        {% if content.field_image %}
+        {% if content.field_image|render|striptags %}
             </div>
           </div>
         {% endif %}
