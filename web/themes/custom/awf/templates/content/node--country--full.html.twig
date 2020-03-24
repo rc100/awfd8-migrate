@@ -140,6 +140,7 @@
 
       <article{{ attributes.addClass(classes) }}>
         {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_solution_bullet_heading', 'field_solutions_description', 'field_solution_bpoint_paragraph', 'field_bullet_point_paragraph','field_sidebar_item_paragraph', 'field_kml') }}
+        {{ drupal_entity('webform', 'get_involved') }}
       </article>
 
   <!-- If there is a sidebar, enable two col styles-->

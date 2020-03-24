@@ -69,7 +69,9 @@
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
  */
+ */ https://www.drupal.org/project/twig_tweak/issues/2783633 for checking the value of a twig_tweak view.
 #}
+{% set view = drupal_view('supplemental', 'promo')|render  %}
 {%
   set classes = [
     'node',
@@ -87,9 +89,10 @@
   </div>
 </article>
 
-{% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags %}
+{% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags or view|striptags|trim %}
 <aside>
   <div>
+    {{ drupal_view('supplemental', 'promo') }}
     {{ content.field_sidebar_item_paragraph }}
     {{ content.field_sidebar_item }}
   </div>
