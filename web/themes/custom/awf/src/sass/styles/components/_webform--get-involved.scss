@@ -5,7 +5,7 @@
 .webform-submission-get-involved-form {
   background-color: #ddd;
   min-height: 360px;
-  padding: 20px 20px 57px 20px;
+  position: relative;
 
   .fieldset-legend {
     display: none;
@@ -88,21 +88,26 @@
     top: 0px;
   }
 
+  ul.check {
+    list-style: none;
+  }
+
   ul.check li {
     color: #696969;
     font-size: 14px;
     margin-bottom: 10px;
-    padding-left: 25px;
   }
 
   ul.check li::before {
     background-color: transparent;
+    background-size: contain;
     background-image: url('../images/check.png');
     background-position: center center;
     border-radius: 0;
+    content: '';
+    display: inline-block;
     width: 22px;
     height: 22px;
-    background-size: contain;
     margin-right: 0.5rem;
   }
 
@@ -120,6 +125,8 @@
   }
 
   .form-actions {
+    position: relative;
+
     &:before {
       content: '';
       background-image: url('../images/heart.png');
@@ -130,7 +137,7 @@
       height: 22px;
       background-size: contain;
       position: absolute;
-      left: 5.5rem;
+      left: 3rem;
       display: inline-block;
       z-index: 3;
       margin-top: 1.25rem;
@@ -142,7 +149,7 @@
     color: $white;
     font-size: 1.6rem;
     text-transform: uppercase;
-    max-width: 200px;
+    max-width: 175px;
 
     &:before {
       content: '';
@@ -158,5 +165,73 @@
 
   input:hover[type="submit"] {
     background-color: $teal;
+  }
+
+  .webform-flexbox {
+    margin: 0;
+
+    @include breakpoint($min760) {
+      margin: 0 -.5em;
+    }
+
+    .webform-flexbox {
+      flex-direction: column;
+      margin: 0;
+      padding: 2rem;
+
+      @include breakpoint($min760) {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  .webform-flex--container {
+    height: 100%;
+  }
+
+  #edit-flexbox-left {
+    background: $white;
+    padding: 2rem;
+    height: 100%;
+  }
+
+  #edit-currency-explanation {
+    visibility: hidden;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .webform-flex.webform-flex--1:nth-child(2) {
+    width: 55%;
+  }
+
+  .webform-flex.webform-flex--1:nth-child(3) {
+    position: relative;
+
+    @include breakpoint($min760) {
+      width: 25%;
+      right: 5%;
+      position: absolute;
+      top: 27%;
+    }
+
+    @include breakpoint($min1024) {
+      right: 8%;
+      top: 30%;
+    }
+  }
+
+  .article-wrapper & {
+    .webform-flex.webform-flex--1:nth-child(3) {
+      position: relative;
+      right: 0;
+      width: 100%;
+    }
+
+    #edit-currency-explanation {
+      height: 4rem;
+    }
   }
 }

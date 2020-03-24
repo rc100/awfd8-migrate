@@ -1,0 +1,19 @@
+// View -- Supplemental
+// To display the global promo in the sidebar.
+
+.view-supplemental {
+  background: $white;
+  margin-bottom: 2rem;
+
+  h6 {
+    margin-bottom: 8px;
+  }
+
+  .views-field-title {
+    padding: 2rem 2rem 0;
+  }
+
+  .views-field-body {
+    padding: 0 2rem 2rem;
+  }
+}

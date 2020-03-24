@@ -56,6 +56,7 @@
   }
 
   .right {
+    flex-direction: column;
     max-width: 100%;
 
     @include breakpoint($min760) {
@@ -73,9 +74,11 @@
 
     >div:last-child {
       margin-bottom: 2rem;
+      margin-top: 0;
 
       @include breakpoint($min760) {
         margin-bottom: 0;
+        margin-top: 0;
       }
     }
   }
