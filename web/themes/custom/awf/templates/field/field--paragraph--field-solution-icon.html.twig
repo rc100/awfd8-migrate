@@ -50,7 +50,7 @@
 
 {% for item in items %}
   <div{{ item.attributes.addClass(classes) }}>
-    <div class="icon icon--{{item.content|render|lower|clean_class}}">
+    <div class="icon icon--{{item.content|render|lower|clean_class }}">
       <span class="element-invisible">{{ item.content }}</span>
     </div>
   </div>

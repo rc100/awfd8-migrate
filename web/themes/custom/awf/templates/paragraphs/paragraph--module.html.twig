@@ -54,22 +54,22 @@
         {% if content.field_image|render|striptags %}
           <div class="two-col">
             <div class="left">
-              {{ content.field_image}}
-            </div>
+              {{ content.field_image }}
+            </div><!-- /.left -->
             <div class="right">
         {% endif %}
             {{ content|without('field_image') }}
         {% if content.field_image|render|striptags %}
-            </div>
-          </div>
+            </div><!-- /.right -->
+          </div><!-- /two-col -->
         {% endif %}
       {% endblock %}
-      <div>
       {% if paragraph.id() == 9476 %}
-        {{ attach_library('awf/showmore') }}
-        <button class="archive-button carrot">Archive</button>
+        <div>
+          {{ attach_library('awf/showmore') }}
+          <button class="archive-button carrot">Archive</button>
+        </div><!-- /.empty -->
       {% endif %}
-      </div>
-    </div>
+    </div><!-- /.classes -->
   {% endblock paragraph %}
 {% endif %}
