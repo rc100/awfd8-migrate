@@ -37,13 +37,28 @@ reactions:
         views_label: ''
         items_per_page: none
         region: sidebar_second
-        weight: '0'
+        weight: '1'
         context_mapping: {  }
         theme: awf
         css_class: ''
         unique: 0
         context_id: blog
         uuid: 9d5452fa-15c5-4c3c-90dc-37e975a034fb
+      c2efab6e-e7d5-4beb-b8fa-e4534990ed98:
+        id: 'views_block:supplemental-promo'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: blog
+        uuid: c2efab6e-e7d5-4beb-b8fa-e4534990ed98
     id: blocks
     saved: false
     uuid: 8d31b29d-6e5b-423a-b96b-fc005929109d
