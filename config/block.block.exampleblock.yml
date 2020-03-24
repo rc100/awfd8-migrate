@@ -7,7 +7,7 @@ dependencies:
 id: exampleblock
 theme: awf
 region: disabled
-weight: 0
+weight: -14
 provider: null
 plugin: 'block_content:e0ad7bab-0ea5-484a-9055-34ab73c034fc'
 settings:

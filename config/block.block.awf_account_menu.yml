@@ -13,7 +13,7 @@ _core:
 id: awf_account_menu
 theme: awf
 region: disabled
-weight: -8
+weight: -17
 provider: null
 plugin: 'system_menu_block:account'
 settings:

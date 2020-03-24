@@ -11,7 +11,7 @@ dependencies:
 id: views_block__partners_block_2
 theme: awf
 region: disabled
-weight: 0
+weight: -13
 provider: null
 plugin: 'views_block:partners-block_2'
 settings:

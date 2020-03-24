@@ -19,8 +19,9 @@ require_once dirname(__FILE__) . '/includes/theme.inc';
 //
 // IXF: save the be_ixf_client.php file to your server, then use "require" to
 // include it in your template.
-*/
+ */
 use BrightEdge\BEIXFClient;
+
 require_once dirname(__FILE__) . '/includes/be_ixf_client.php';
 
 /**

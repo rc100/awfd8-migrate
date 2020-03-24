@@ -71,7 +71,7 @@
  */
  */ https://www.drupal.org/project/twig_tweak/issues/2783633 for checking the value of a twig_tweak view.
 #}
-{% set view = drupal_view('supplemental', 'promo')|render  %}
+{% set view = drupal_view('supplemental', 'promo')|render %}
 {%
   set classes = [
     'node',
@@ -89,12 +89,16 @@
   </div>
 </article>
 
-{% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags or view|striptags|trim %}
-<aside>
-  <div>
-    {{ drupal_view('supplemental', 'promo') }}
-    {{ content.field_sidebar_item_paragraph }}
-    {{ content.field_sidebar_item }}
-  </div>
-</aside>
+{# Don't print on homepage or safari page, but print everywhere else. #}
+{% if node.id == 4 or node.id == 4985 %}
+{% else %}
+  {% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags or view|striptags|trim %}
+  <aside>
+    <div>
+      {{ drupal_view('supplemental', 'promo') }}
+      {{ content.field_sidebar_item_paragraph }}
+      {{ content.field_sidebar_item }}
+    </div>
+  </aside>
+  {% endif %}
 {% endif %}

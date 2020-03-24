@@ -3326,14 +3326,15 @@ ul.gray-bullets li {
               color: #e97200; }
           .region-header .menu--main-menu > .menu > li > a {
             color: #fff;
-            font-weight: 700; }
+            font-weight: 600; }
             .fixed .region-header .menu--main-menu > .menu > li > a {
               color: #4b3e36; }
               .fixed .region-header .menu--main-menu > .menu > li > a:hover, .fixed .region-header .menu--main-menu > .menu > li > a:active, .fixed .region-header .menu--main-menu > .menu > li > a.active {
                 color: #e97200; }
           .region-header .menu--main-menu > .menu > li > ul {
-            padding: 10px 20px 20px;
-            width: 800px;
+            padding: 2rem 3rem 2rem;
+            width: 100%;
+            max-width: 950px;
             background: #fff;
             position: fixed;
             margin: 100px auto 0;
@@ -3345,7 +3346,7 @@ ul.gray-bullets li {
             opacity: 0; }
             .region-header .menu--main-menu > .menu > li > ul li a {
               text-transform: none;
-              font-weight: 300; }
+              font-size: 1.3rem; }
             .region-header .menu--main-menu > .menu > li > ul > li {
               display: inline-block;
               vertical-align: top;
@@ -3353,7 +3354,8 @@ ul.gray-bullets li {
               .region-header .menu--main-menu > .menu > li > ul > li + li {
                 margin-left: 4%; }
               .region-header .menu--main-menu > .menu > li > ul > li > a {
-                font-weight: 700; }
+                font-weight: 700;
+                font-size: 1.4rem; }
             .region-header .menu--main-menu > .menu > li > ul a {
               font-size: 1.4rem; }
           .region-header .menu--main-menu > .menu > li:nth-child(3) > ul {
@@ -3423,7 +3425,8 @@ body.path-notfrontpage {
     background: url("../images/awf_logo_orange.svg") 0 0/100% no-repeat !important; }
   .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a,
   .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before {
-    color: #4b3e36; }
+    color: #4b3e36;
+    font-weight: 800; }
     .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:hover, .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:focus, .path-notfrontpage:not(.page-node-type-species) .header-section .region-header .menu--main-menu > .menu > li > a:active,
     .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before:hover,
     .path-notfrontpage:not(.page-node-type-species) .header-section .mainnav .icon-search:before:focus,
