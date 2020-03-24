@@ -157,7 +157,7 @@
     }
   }
 
-  .menu-item--active-trail > a {
+  .menu-item--active-trail>a {
     color: $awforangedark !important;
   }
 
@@ -626,7 +626,7 @@
 
         &>a {
           color: $white;
-          font-weight: 700;
+          font-weight: 600;
 
           .fixed & {
             @include nav-item-link;
@@ -634,8 +634,9 @@
         }
 
         >ul {
-          padding: 10px 20px 20px;
-          width: 800px;
+          padding: 2rem 3rem 2rem;
+          width: 100%;
+          max-width: 950px;
           background: #fff;
           position: fixed;
           margin: 100px auto 0;
@@ -648,7 +649,8 @@
 
           li a {
             text-transform: none;
-            font-weight: 300;
+            // font-weight: 300;
+            font-size: 1.3rem;
           }
 
           >li {
@@ -661,7 +663,9 @@
             }
 
             &>a {
+              // font-weight: 600;
               font-weight: 700;
+              font-size: 1.4rem;
             }
           }
 
@@ -769,6 +773,7 @@ body.path-notfrontpage {
   .region-header .menu--main-menu>.menu>li>a,
   .mainnav .icon-search:before {
     color: $awfbrown;
+    font-weight: 800;
 
     &:hover,
     &:focus,
