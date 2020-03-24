@@ -401,9 +401,9 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 .more {
   font-size: 1.2rem;
@@ -416,6 +416,9 @@ svg {
   font-weight: 500;
   font-size: 1.125rem;
   margin: 0 0 1.5rem 0; }
+
+.nomargin {
+  margin: 0 !important; }
 
 /**
 * @file
@@ -736,6 +739,10 @@ ul.contextual-links li {
           -ms-flex-direction: row;
               flex-direction: row; } }
   .two-col .right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 100%; }
     @media (min-width: 760px) {
       .two-col .right {
@@ -746,10 +753,12 @@ ul.contextual-links li {
     .two-col .right > div:first-of-type {
       margin-top: 0; }
     .two-col .right > div:last-child {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      margin-top: 0; }
       @media (min-width: 760px) {
         .two-col .right > div:last-child {
-          margin-bottom: 0; } }
+          margin-bottom: 0;
+          margin-top: 0; } }
   .two-col article > div {
     padding: 3rem 3.5rem; }
 
@@ -992,6 +1001,18 @@ blockquote {
     text-decoration: none; }
   .btn-teal:hover, .btn-teal:focus, .btn-teal:active {
     text-decoration: none; }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 8px 20px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.btn.golden {
+  background: #878475;
+  color: #fff; }
 
 /**
  * @file
@@ -4175,6 +4196,16 @@ a.share {
     width: 70%;
     margin-left: 15%; }
 
+.view-supplemental {
+  background: #fff;
+  margin-bottom: 2rem; }
+  .view-supplemental h6, .view-supplemental .page-node-type-blog .field--name-field-about-the-author .field__label, .page-node-type-blog .field--name-field-about-the-author .view-supplemental .field__label {
+    margin-bottom: 8px; }
+  .view-supplemental .views-field-title {
+    padding: 2rem 2rem 0; }
+  .view-supplemental .views-field-body {
+    padding: 0 2rem 2rem; }
+
 #webform-submission-apply-for-a-position-at-awf-add-form h4 {
   color: #329a94;
   font-size: 2.3rem;
@@ -4196,7 +4227,7 @@ a.share {
 .webform-submission-get-involved-form {
   background-color: #ddd;
   min-height: 360px;
-  padding: 20px 20px 57px 20px; }
+  position: relative; }
   .webform-submission-leadership-gift-form-form .fieldset-legend,
   .webform-submission-main-donate-form-form .fieldset-legend,
   .webform-submission-get-involved-form .fieldset-legend {
@@ -4300,23 +4331,28 @@ a.share {
     left: 12px;
     position: absolute;
     top: 0px; }
+  .webform-submission-leadership-gift-form-form ul.check,
+  .webform-submission-main-donate-form-form ul.check,
+  .webform-submission-get-involved-form ul.check {
+    list-style: none; }
   .webform-submission-leadership-gift-form-form ul.check li,
   .webform-submission-main-donate-form-form ul.check li,
   .webform-submission-get-involved-form ul.check li {
     color: #696969;
     font-size: 14px;
-    margin-bottom: 10px;
-    padding-left: 25px; }
+    margin-bottom: 10px; }
   .webform-submission-leadership-gift-form-form ul.check li::before,
   .webform-submission-main-donate-form-form ul.check li::before,
   .webform-submission-get-involved-form ul.check li::before {
     background-color: transparent;
+    background-size: contain;
     background-image: url("../images/check.png");
     background-position: center center;
     border-radius: 0;
+    content: '';
+    display: inline-block;
     width: 22px;
     height: 22px;
-    background-size: contain;
     margin-right: 0.5rem; }
   .webform-submission-leadership-gift-form-form .form-type-number,
   .webform-submission-main-donate-form-form .form-type-number,
@@ -4336,22 +4372,26 @@ a.share {
   .webform-submission-get-involved-form .form-number:focus {
     -webkit-box-shadow: 0 0 6px #666;
             box-shadow: 0 0 6px #666; }
-  .webform-submission-leadership-gift-form-form .form-actions:before,
-  .webform-submission-main-donate-form-form .form-actions:before,
-  .webform-submission-get-involved-form .form-actions:before {
-    content: '';
-    background-image: url("../images/heart.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 0;
-    width: 22px;
-    height: 22px;
-    background-size: contain;
-    position: absolute;
-    left: 5.5rem;
-    display: inline-block;
-    z-index: 3;
-    margin-top: 1.25rem; }
+  .webform-submission-leadership-gift-form-form .form-actions,
+  .webform-submission-main-donate-form-form .form-actions,
+  .webform-submission-get-involved-form .form-actions {
+    position: relative; }
+    .webform-submission-leadership-gift-form-form .form-actions:before,
+    .webform-submission-main-donate-form-form .form-actions:before,
+    .webform-submission-get-involved-form .form-actions:before {
+      content: '';
+      background-image: url("../images/heart.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 0;
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      position: absolute;
+      left: 3rem;
+      display: inline-block;
+      z-index: 3;
+      margin-top: 1.25rem; }
   .webform-submission-leadership-gift-form-form .webform-button--submit,
   .webform-submission-main-donate-form-form .webform-button--submit,
   .webform-submission-get-involved-form .webform-button--submit {
@@ -4359,7 +4399,7 @@ a.share {
     color: #fff;
     font-size: 1.6rem;
     text-transform: uppercase;
-    max-width: 200px; }
+    max-width: 175px; }
     .webform-submission-leadership-gift-form-form .webform-button--submit:before,
     .webform-submission-main-donate-form-form .webform-button--submit:before,
     .webform-submission-get-involved-form .webform-button--submit:before {
@@ -4375,6 +4415,79 @@ a.share {
   .webform-submission-main-donate-form-form input:hover[type="submit"],
   .webform-submission-get-involved-form input:hover[type="submit"] {
     background-color: #329a94; }
+  .webform-submission-leadership-gift-form-form .webform-flexbox,
+  .webform-submission-main-donate-form-form .webform-flexbox,
+  .webform-submission-get-involved-form .webform-flexbox {
+    margin: 0; }
+    @media (min-width: 760px) {
+      .webform-submission-leadership-gift-form-form .webform-flexbox,
+      .webform-submission-main-donate-form-form .webform-flexbox,
+      .webform-submission-get-involved-form .webform-flexbox {
+        margin: 0 -.5em; } }
+    .webform-submission-leadership-gift-form-form .webform-flexbox .webform-flexbox,
+    .webform-submission-main-donate-form-form .webform-flexbox .webform-flexbox,
+    .webform-submission-get-involved-form .webform-flexbox .webform-flexbox {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: 0;
+      padding: 2rem; }
+      @media (min-width: 760px) {
+        .webform-submission-leadership-gift-form-form .webform-flexbox .webform-flexbox,
+        .webform-submission-main-donate-form-form .webform-flexbox .webform-flexbox,
+        .webform-submission-get-involved-form .webform-flexbox .webform-flexbox {
+          padding: 2rem 0; } }
+  .webform-submission-leadership-gift-form-form .webform-flex--container,
+  .webform-submission-main-donate-form-form .webform-flex--container,
+  .webform-submission-get-involved-form .webform-flex--container {
+    height: 100%; }
+  .webform-submission-leadership-gift-form-form #edit-flexbox-left,
+  .webform-submission-main-donate-form-form #edit-flexbox-left,
+  .webform-submission-get-involved-form #edit-flexbox-left {
+    background: #fff;
+    padding: 2rem;
+    height: 100%; }
+  .webform-submission-leadership-gift-form-form #edit-currency-explanation,
+  .webform-submission-main-donate-form-form #edit-currency-explanation,
+  .webform-submission-get-involved-form #edit-currency-explanation {
+    visibility: hidden; }
+    .webform-submission-leadership-gift-form-form #edit-currency-explanation p,
+    .webform-submission-main-donate-form-form #edit-currency-explanation p,
+    .webform-submission-get-involved-form #edit-currency-explanation p {
+      margin: 0; }
+  .webform-submission-leadership-gift-form-form .webform-flex.webform-flex--1:nth-child(2),
+  .webform-submission-main-donate-form-form .webform-flex.webform-flex--1:nth-child(2),
+  .webform-submission-get-involved-form .webform-flex.webform-flex--1:nth-child(2) {
+    width: 55%; }
+  .webform-submission-leadership-gift-form-form .webform-flex.webform-flex--1:nth-child(3),
+  .webform-submission-main-donate-form-form .webform-flex.webform-flex--1:nth-child(3),
+  .webform-submission-get-involved-form .webform-flex.webform-flex--1:nth-child(3) {
+    position: relative; }
+    @media (min-width: 760px) {
+      .webform-submission-leadership-gift-form-form .webform-flex.webform-flex--1:nth-child(3),
+      .webform-submission-main-donate-form-form .webform-flex.webform-flex--1:nth-child(3),
+      .webform-submission-get-involved-form .webform-flex.webform-flex--1:nth-child(3) {
+        width: 25%;
+        right: 5%;
+        position: absolute;
+        top: 27%; } }
+    @media (min-width: 1024px) {
+      .webform-submission-leadership-gift-form-form .webform-flex.webform-flex--1:nth-child(3),
+      .webform-submission-main-donate-form-form .webform-flex.webform-flex--1:nth-child(3),
+      .webform-submission-get-involved-form .webform-flex.webform-flex--1:nth-child(3) {
+        right: 8%;
+        top: 30%; } }
+  .article-wrapper .webform-submission-leadership-gift-form-form .webform-flex.webform-flex--1:nth-child(3), .article-wrapper
+  .webform-submission-main-donate-form-form .webform-flex.webform-flex--1:nth-child(3), .article-wrapper
+  .webform-submission-get-involved-form .webform-flex.webform-flex--1:nth-child(3) {
+    position: relative;
+    right: 0;
+    width: 100%; }
+  .article-wrapper .webform-submission-leadership-gift-form-form #edit-currency-explanation, .article-wrapper
+  .webform-submission-main-donate-form-form #edit-currency-explanation, .article-wrapper
+  .webform-submission-get-involved-form #edit-currency-explanation {
+    height: 4rem; }
 
 .page-node-type-blog .content-wrapper-top {
   padding-bottom: 0 !important;
