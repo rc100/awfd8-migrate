@@ -1,28 +1,26 @@
-uuid: 3418644f-f2e5-4b12-bbbf-a8023c440343
+uuid: 863fe9f3-ffd3-40f6-8fb6-c7778676e5f9
 langcode: en
 status: true
 dependencies:
   module:
-    - ctools
-name: news
+    - system
+name: news_landing_page
 label: News
-group: 'Content Type'
+group: 'Landing Pages'
 description: ''
 requireAllConditions: false
 disabled: false
 conditions:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      news: news
+  request_path:
+    id: request_path
+    pages: /news
     negate: 0
-    uuid: dfeef79d-1fb7-4888-928f-e3a7fefbe862
-    context_mapping:
-      node: '@node.node_route_context:node'
+    uuid: 8fb560a2-b0d9-457d-9f56-02766444f04b
+    context_mapping: {  }
 reactions:
   blocks:
     blocks:
-      33fdad67-75db-40fa-8dbd-582f38c14ecd:
+      3272fa59-6dc2-4e5e-bf80-73a0225673f4:
         id: 'block_content:8f88fc82-7a40-4a65-a5f9-8e26fe9efccb'
         label: 'General Inquiries'
         provider: block_content
@@ -36,9 +34,9 @@ reactions:
         theme: awf
         css_class: ''
         unique: 0
-        context_id: news
-        uuid: 33fdad67-75db-40fa-8dbd-582f38c14ecd
-      b943339a-4c7a-4573-a449-6492753e91ac:
+        context_id: news_landing_page
+        uuid: 3272fa59-6dc2-4e5e-bf80-73a0225673f4
+      54e41bbb-6ef1-4e16-9a71-a777cd77b673:
         id: 'block_content:7f9f95fb-86da-44d3-b8f4-34f4eec0ad08'
         label: 'Media Inquiries'
         provider: block_content
@@ -52,9 +50,9 @@ reactions:
         theme: awf
         css_class: ''
         unique: 0
-        context_id: news
-        uuid: b943339a-4c7a-4573-a449-6492753e91ac
-      c8d19f26-8101-4c27-97ae-99eb49a7b8c8:
+        context_id: news_landing_page
+        uuid: 54e41bbb-6ef1-4e16-9a71-a777cd77b673
+      4c5b5b33-0a15-4583-8b38-a8a155033999:
         id: 'views_block:supplemental-promo'
         label: ''
         provider: views
@@ -67,10 +65,10 @@ reactions:
         theme: awf
         css_class: ''
         unique: 0
-        context_id: news
-        uuid: c8d19f26-8101-4c27-97ae-99eb49a7b8c8
+        context_id: news_landing_page
+        uuid: 4c5b5b33-0a15-4583-8b38-a8a155033999
     id: blocks
     saved: false
-    uuid: e002ab34-e440-43c1-9218-c7aa2d8fbcaa
+    uuid: b8d00f59-d913-4dc8-ba4f-19e4b99d1492
     include_default_blocks: 1
 weight: 0

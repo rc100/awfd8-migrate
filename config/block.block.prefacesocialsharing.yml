@@ -12,7 +12,7 @@ dependencies:
 id: prefacesocialsharing
 theme: awf
 region: disabled
-weight: 0
+weight: -10
 provider: null
 plugin: 'block_content:183f4486-a5c6-4d64-890f-46783901aedb'
 settings:

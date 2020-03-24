@@ -1,0 +1,58 @@
+uuid: 319cce98-4270-4fdf-9f9f-36da00954cb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: safaris
+label: Safaris
+group: 'Landing Pages'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /about/safaris
+    negate: 0
+    uuid: 0ec904a7-805a-4754-81e1-2a6108ba623d
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      d902858a-5e8f-43f8-8ec5-b9baf41a49fd:
+        id: 'views_block:supplemental-promo'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: safaris
+        uuid: d902858a-5e8f-43f8-8ec5-b9baf41a49fd
+      a2eabdeb-49dc-4e7b-933a-5c80f6d86ac7:
+        id: 'block_content:1f60c7e2-4b2a-4d67-a0db-8afc3d53cbcf'
+        label: 'Contact Info - Safari'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: safaris
+        uuid: a2eabdeb-49dc-4e7b-933a-5c80f6d86ac7
+    id: blocks
+    saved: false
+    uuid: 002acaa3-ed97-4890-ba73-5b2c1d9fcff7
+    include_default_blocks: 1
+weight: 0

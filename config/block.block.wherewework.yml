@@ -11,7 +11,7 @@ dependencies:
 id: wherewework
 theme: awf
 region: disabled
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:252d20cb-41f3-4eda-857c-1ae8bf77f8ce'
 settings:

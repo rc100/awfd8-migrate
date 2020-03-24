@@ -11,8 +11,8 @@ dependencies:
     - awf
 id: contactinfosafari
 theme: awf
-region: sidebar_second
-weight: 0
+region: disabled
+weight: -6
 provider: null
 plugin: 'block_content:1f60c7e2-4b2a-4d67-a0db-8afc3d53cbcf'
 settings:

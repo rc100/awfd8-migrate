@@ -11,7 +11,7 @@ _core:
 id: awf_branding
 theme: awf
 region: disabled
-weight: -6
+weight: -15
 provider: null
 plugin: system_branding_block
 settings:
