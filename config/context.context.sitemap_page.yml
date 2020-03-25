@@ -1,0 +1,147 @@
+uuid: 3fbe01c1-11e7-4579-9324-b8caa6acddf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: sitemap_page
+label: 'Sitemap Page'
+group: 'Landing Pages'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "/node/3964\r\n/sitemap"
+    negate: 0
+    uuid: 21d9beda-81f9-4b20-8fa5-5678a66890f3
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      a8cd487d-c26d-494b-8cf8-397bacd6a70f:
+        id: 'views_block:sitemap-block_6'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '3'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: a8cd487d-c26d-494b-8cf8-397bacd6a70f
+      1750b51c-2f82-423d-8311-c0e716f399e8:
+        id: 'views_block:sitemap-block_7'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '4'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 1750b51c-2f82-423d-8311-c0e716f399e8
+      2db1ec8c-5501-468d-81b0-3826d291d947:
+        id: 'views_block:sitemap-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-3'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 2db1ec8c-5501-468d-81b0-3826d291d947
+      15e660fd-1585-4b85-a177-954863b84f82:
+        id: 'views_block:sitemap-block_2'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-2'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 15e660fd-1585-4b85-a177-954863b84f82
+      7b904294-9f8a-4720-b3e6-0f0b49cf5fc1:
+        id: 'views_block:sitemap-block_3'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 7b904294-9f8a-4720-b3e6-0f0b49cf5fc1
+      417c5d68-eaf0-4d50-9ee1-5ee904f83b0f:
+        id: 'views_block:sitemap-block_4'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 417c5d68-eaf0-4d50-9ee1-5ee904f83b0f
+      ca0f5c9c-252a-4ead-81ea-42c98b08c283:
+        id: 'views_block:sitemap-block_5'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: ca0f5c9c-252a-4ead-81ea-42c98b08c283
+      85eee3f0-1c62-4f4f-a9a2-717ceab283ce:
+        id: 'views_block:sitemap-block_8'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '2'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: sitemap_page
+        uuid: 85eee3f0-1c62-4f4f-a9a2-717ceab283ce
+    id: blocks
+    saved: false
+    uuid: 0e4c9bee-bab4-4b29-b0ea-8b87e34749c2
+    include_default_blocks: 1
+weight: 0

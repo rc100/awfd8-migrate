@@ -11,14 +11,10 @@ dependencies:
     - node.type.project
     - node.type.region
     - node.type.species
-    - taxonomy.vocabulary.community
     - taxonomy.vocabulary.economic
-    - taxonomy.vocabulary.land_habitat
-    - taxonomy.vocabulary.landing_page_types
-  content:
-    - 'taxonomy_term:landing_page_types:e44010fb-1456-4b99-bf5a-0bc0db6de1d8'
   module:
     - node
+    - options
     - taxonomy
     - user
 id: sitemap
@@ -199,7 +195,18 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h4>Donate</h4>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -239,20 +246,9 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<h5>Wildlife Conservation</h5>\r\n<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/wildlife-conservation\">Wildlife Conservation Overview</a></li>\r\n<li><a href=\"[site:url]/wildlife-conservation/all\">All Wildlife</a></li>"
+          content: "<h4>What We Do</h4>\r\n<h5>Wildlife Conservation</h5>\r\n<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/wildlife-conservation\">Wildlife Conservation Overview</a></li>\r\n<li><a href=\"[site:url]/wildlife-conservation/all\">All Wildlife</a></li>"
           plugin_id: text_custom
-      footer:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'sitemap:block_2'
-          inherit_arguments: false
-          plugin_id: view
+      footer: {  }
       filters:
         status:
           value: '1'
@@ -385,16 +381,16 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_tags_landing_page_target_id:
-          id: field_tags_landing_page_target_id
-          table: node__field_tags_landing_page
-          field: field_tags_landing_page_target_id
+        field_parent_value:
+          id: field_parent_value
+          table: node__field_parent
+          field: field_parent_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
-            551: 551
+            land-protection: land-protection
           group: 1
           exposed: false
           expose:
@@ -425,57 +421,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
-          vid: landing_page_types
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_land_habitat_target_id:
-          id: field_land_habitat_target_id
-          table: node__field_land_habitat
-          field: field_land_habitat_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: 'not empty'
-          value: {  }
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: land_habitat
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          plugin_id: list_field
       defaults:
         filters: false
         filter_groups: false
@@ -497,24 +443,12 @@ display:
           tokenize: false
           content: "<h5>Land & Habitat Protection</h5>\r\n<ul><li><a href=\"[site:url] habitat-protection\">Land & Habitat Protection Overview</a></li></ul>"
           plugin_id: text_custom
-      footer:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'sitemap:block_3'
-          inherit_arguments: false
-          plugin_id: view
+      footer: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -581,16 +515,16 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_tags_landing_page_target_id:
-          id: field_tags_landing_page_target_id
-          table: node__field_tags_landing_page
-          field: field_tags_landing_page_target_id
+        field_parent_value:
+          id: field_parent_value
+          table: node__field_parent
+          field: field_parent_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
-            - 551
+            community: community
           group: 1
           exposed: false
           expose:
@@ -621,62 +555,13 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: landing_page_types
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_tags_community_target_id:
-          id: field_tags_community_target_id
-          table: node__field_tags_community
-          field: field_tags_community_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: 'not empty'
-          value: {  }
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: community
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          plugin_id: list_field
       defaults:
         filters: false
         filter_groups: false
         header: false
         footer: false
+        group_by: false
       filter_groups:
         operator: AND
         groups:
@@ -694,24 +579,13 @@ display:
           tokenize: false
           content: "<h5>Community Empowerment</h5>\r\n<ul><li><a href=\"[site:url]/community\">Community Empowerment Overview</a></li></ul>"
           plugin_id: text_custom
-      footer:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'sitemap:block_4'
-          inherit_arguments: false
-          plugin_id: view
+      footer: {  }
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -739,6 +613,7 @@ display:
         filters: false
         filter_groups: false
         footer: false
+        group_by: false
       filters:
         status:
           value: '1'
@@ -795,52 +670,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_tags_landing_page_target_id:
-          id: field_tags_landing_page_target_id
-          table: node__field_tags_landing_page
-          field: field_tags_landing_page_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            551: 551
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: landing_page_types
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
         field_tags_economic_target_id:
           id: field_tags_economic_target_id
           table: node__field_tags_economic
@@ -880,7 +709,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
+          type: textfield
           limit: true
           vid: economic
           hierarchy: false
@@ -891,18 +720,8 @@ display:
         groups:
           1: AND
       display_description: ''
-      footer:
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'sitemap:block_5'
-          inherit_arguments: false
-          plugin_id: view
+      footer: {  }
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1156,7 +975,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/projects/all\">All Projects</a></li>"
+          content: '<h4>About AWF</h4>'
           plugin_id: text_custom
     cache_metadata:
       max-age: -1
@@ -1263,7 +1082,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/projects/all\">All Projects</a></li>"
+          content: '<h4>Projects</h4>'
           plugin_id: text_custom
       defaults:
         header: false

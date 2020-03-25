@@ -1,0 +1,25 @@
+uuid: 9f70c966-ed9b-46e3-a162-e24a974bf773
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:71f54fda-00d1-468c-93fa-b9d8404b515e'
+  module:
+    - block_content
+  theme:
+    - awf
+id: relatedcontent
+theme: awf
+region: postscript
+weight: -23
+provider: null
+plugin: 'block_content:71f54fda-00d1-468c-93fa-b9d8404b515e'
+settings:
+  id: 'block_content:71f54fda-00d1-468c-93fa-b9d8404b515e'
+  label: 'Related Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
