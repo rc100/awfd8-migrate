@@ -396,10 +396,6 @@
 
     .left {
       max-width: 520px;
-
-      @include breakpoint($min760) {
-        margin-top: -50px;
-      }
     }
 
     .right {

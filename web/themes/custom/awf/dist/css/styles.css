@@ -5286,9 +5286,6 @@ a.share {
         z-index: -1; }
     .page-node-type-species .solutions .left {
       max-width: 520px; }
-      @media (min-width: 760px) {
-        .page-node-type-species .solutions .left {
-          margin-top: -50px; } }
     .page-node-type-species .solutions .right {
       margin-top: 75px;
       max-width: 100%; }
