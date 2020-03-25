@@ -12,7 +12,7 @@ dependencies:
 id: awf_webform_newsletter
 theme: awf
 region: content
-weight: -5
+weight: -10
 provider: null
 plugin: webform_block
 settings:

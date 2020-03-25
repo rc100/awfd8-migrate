@@ -9,7 +9,7 @@ _core:
 id: awf_local_actions
 theme: awf
 region: content
-weight: -9
+weight: -14
 provider: null
 plugin: local_actions_block
 settings:

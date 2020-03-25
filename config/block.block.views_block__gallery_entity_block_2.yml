@@ -12,7 +12,7 @@ dependencies:
 id: views_block__gallery_entity_block_2
 theme: awf
 region: content
-weight: -13
+weight: -18
 provider: null
 plugin: 'views_block:gallery_entity-block_2'
 settings:
