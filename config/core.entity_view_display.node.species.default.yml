@@ -65,7 +65,7 @@ content:
     weight: 7
     label: hidden
     settings:
-      image_style: ''
+      image_style: species_featured
       image_link: ''
     third_party_settings: {  }
     type: image
