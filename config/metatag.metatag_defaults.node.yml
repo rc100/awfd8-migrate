@@ -1,0 +1,13 @@
+uuid: e82a9a1a-194c-4052-9743-96723290c1c2
+langcode: en
+status: true
+dependencies: {  }
+id: node
+label: Content
+tags:
+  icon_192x192: themes/custom/awf/android-chrome-192x192.png
+  shortcut_icon: themes/custom/awf/favicon.ico
+  mask-icon: themes/custom/awf/safari-pinned-tab.svg
+  apple_touch_icon_180x180: themes/custom/awf/apple-touch-icon.png
+  icon_32x32: themes/custom/awf/favicon-32x32.png
+  icon_16x16: themes/custom/awf/favicon-16x16.png
