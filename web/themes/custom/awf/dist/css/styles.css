@@ -750,7 +750,8 @@ ul.contextual-links li {
     max-width: 100%; }
     @media (min-width: 760px) {
       .two-col .right {
-        max-width: 220px; } }
+        max-width: 220px;
+        margin-left: 2rem; } }
     .two-col .right > div {
       margin: 2rem 0; }
     .two-col .right > div:first-of-type {
