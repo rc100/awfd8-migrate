@@ -4,7 +4,7 @@ mail: marketingadmin@awf.org
 slogan: ''
 page:
   403: ''
-  404: ''
+  404: /node/3962
   front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
