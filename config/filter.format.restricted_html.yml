@@ -48,23 +48,17 @@ filters:
     status: false
     weight: -39
     settings: {  }
-  filter_html_image_secure:
-    id: filter_html_image_secure
-    provider: filter
-    status: false
-    weight: -42
-    settings: {  }
   filter_align:
     id: filter_align
     provider: filter
     status: false
     weight: -45
     settings: {  }
-  filter_caption:
-    id: filter_caption
+  filter_html_escape:
+    id: filter_html_escape
     provider: filter
     status: false
-    weight: -44
+    weight: -47
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
@@ -72,11 +66,17 @@ filters:
     status: true
     weight: -41
     settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
+  filter_caption:
+    id: filter_caption
     provider: filter
     status: false
-    weight: -47
+    weight: -44
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -42
     settings: {  }
   media_embed:
     id: media_embed
