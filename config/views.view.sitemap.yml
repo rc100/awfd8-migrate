@@ -205,7 +205,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h4>Donate</h4>'
+          content: "<h4>Donate</h4>\r\n<hr />"
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -221,106 +221,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Wildlife
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      title: 'Wildlife Details'
-      defaults:
-        title: false
-        header: false
-        footer: false
-        filters: false
-        filter_groups: false
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: "<h4>What We Do</h4>\r\n<h5>Wildlife Conservation</h5>\r\n<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/wildlife-conservation\">Wildlife Conservation Overview</a></li>\r\n<li><a href=\"[site:url]/wildlife-conservation/all\">All Wildlife</a></li>"
-          plugin_id: text_custom
-      footer: {  }
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            species: species
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    display_plugin: block
-    id: block_2
-    display_title: 'Land & Habitat'
+  attachment_1:
+    display_plugin: attachment
+    id: attachment_1
+    display_title: 'Attachment: Land & Habitat'
     position: 2
     display_options:
       display_extenders: {  }
@@ -427,6 +331,7 @@ display:
         filter_groups: false
         header: false
         footer: false
+        fields: false
       filter_groups:
         operator: AND
         groups:
@@ -444,6 +349,57 @@ display:
           content: "<h5>Land & Habitat Protection</h5>\r\n<ul><li><a href=\"[site:url] habitat-protection\">Land & Habitat Protection Overview</a></li></ul>"
           plugin_id: text_custom
       footer: {  }
+      displays:
+        block_1: block_1
+      attachment_position: after
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -452,10 +408,10 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_3:
-    display_plugin: block
-    id: block_3
-    display_title: 'Community Empowerment'
+  attachment_2:
+    display_plugin: attachment
+    id: attachment_2
+    display_title: 'Attachment: Community Empowerment'
     position: 3
     display_options:
       display_extenders: {  }
@@ -581,6 +537,232 @@ display:
           plugin_id: text_custom
       footer: {  }
       group_by: true
+      attachment_position: after
+      displays:
+        block_1: block_1
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  attachment_3:
+    display_plugin: attachment
+    id: attachment_3
+    display_title: 'Attachment: Where We Work'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            country: country
+            landscape: landscape
+            region: region
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      defaults:
+        filters: false
+        filter_groups: false
+        header: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<h5>Where We Work</h5>\r\n<p><a href=\"[site:url]/where-we-work\">Where We Work Overview</a></p>"
+          plugin_id: text_custom
+      sorts:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: standard
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+      attachment_position: after
+      displays:
+        block_1: block_1
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Wildlife
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Wildlife Details'
+      defaults:
+        title: false
+        header: false
+        footer: false
+        filters: false
+        filter_groups: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<h4>What We Do</h4>\r\n<hr />\r\n<h5>Wildlife Conservation</h5>\r\n<ul class=\"four columns alpha\">\r\n<li><a href=\"[site:url]/wildlife-conservation\">Wildlife Conservation Overview</a></li>\r\n<li><a href=\"[site:url]/wildlife-conservation/all\">All Wildlife</a></li>"
+          plugin_id: text_custom
+      footer: {  }
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            species: species
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -731,130 +913,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_5:
-    display_plugin: block
-    id: block_5
-    display_title: 'Where We Work'
-    position: 5
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            country: country
-            landscape: landscape
-            region: region
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      defaults:
-        filters: false
-        filter_groups: false
-        header: false
-        sorts: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: "<h5>Where We Work</h5>\r\n<p><a href=\"[site:url]/where-we-work\">Where We Work Overview</a></p>"
-          plugin_id: text_custom
-      sorts:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: type
-          plugin_id: standard
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
   block_6:
     display_plugin: block
     id: block_6
@@ -975,7 +1033,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h4>About AWF</h4>'
+          content: "<h4>About AWF</h4>\r\n<hr />"
           plugin_id: text_custom
     cache_metadata:
       max-age: -1
@@ -1082,7 +1140,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h4>Projects</h4>'
+          content: "<h4>Projects</h4>\r\n<hr />"
           plugin_id: text_custom
       defaults:
         header: false
