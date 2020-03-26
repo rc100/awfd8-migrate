@@ -1,0 +1,44 @@
+// View -- Sitemap
+// /sitemap
+
+.view-sitemap {
+  hr {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  ul {
+    column-count: 1;
+    @include breakpoint($min760) {
+      column-count: 3;
+    }
+  }
+
+  .block-main-page-content & ul li {
+    text-indent: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .view-header li a {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+
+  .block-main-page-content & ul li:before {
+    display: none;
+  }
+
+  .views-field-title {
+    display: inline;
+  }
+
+  .attachment-after .views-element-container {
+    padding-top: 3rem;
+  }
+
+  &.view-display-id-block_7 ul,
+  .attachment-after ul {
+    column-count: 1;
+  }
+}
