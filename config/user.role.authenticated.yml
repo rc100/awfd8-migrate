@@ -20,3 +20,4 @@ permissions:
   - 'use custom search'
   - 'use custom search blocks'
   - 'use text format filtered_html'
+  - 'use text format restricted_html'
