@@ -687,7 +687,8 @@ ul.contextual-links li {
 .region-content article {
   background: #fff;
   max-width: 940px;
-  height: auto; }
+  height: auto;
+  width: 100%; }
   .region-content article > div {
     padding: 2rem; }
 
@@ -4164,6 +4165,44 @@ a.share {
       left: 5.5rem;
       display: inline-block; }
 
+.view-sitemap hr {
+  margin-top: 0;
+  margin-bottom: 4rem; }
+
+.view-sitemap ul {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1; }
+  @media (min-width: 760px) {
+    .view-sitemap ul {
+      -webkit-column-count: 3;
+         -moz-column-count: 3;
+              column-count: 3; } }
+
+.block-main-page-content .view-sitemap ul li {
+  text-indent: 0;
+  margin-left: 0;
+  padding-left: 0; }
+
+.view-sitemap .view-header li a {
+  display: inline-block;
+  padding-bottom: 0.5rem; }
+
+.block-main-page-content .view-sitemap ul li:before {
+  display: none; }
+
+.view-sitemap .views-field-title {
+  display: inline; }
+
+.view-sitemap .attachment-after .views-element-container {
+  padding-top: 3rem; }
+
+.view-sitemap.view-display-id-block_7 ul,
+.view-sitemap .attachment-after ul {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1; }
+
 .view-display-id-page_2 ul li {
   text-indent: 0 !important;
   display: inline-block;
@@ -4394,6 +4433,8 @@ a.share {
     padding: 2rem 2rem 0; }
   .view-supplemental .views-field-body {
     padding: 0 2rem 2rem; }
+  .view-supplemental .views-field-field-sidebar-image img {
+    width: 100%; }
 
 #webform-submission-apply-for-a-position-at-awf-add-form h4 {
   color: #329a94;
