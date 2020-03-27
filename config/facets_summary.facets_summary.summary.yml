@@ -1,0 +1,97 @@
+uuid: 66511269-8fd2-4394-a8db-1639e0924ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.solr_index
+    - views.view.search
+  module:
+    - search_api
+id: summary
+name: Summary
+facets:
+  community:
+    checked: true
+    label: Community
+    separator: ', '
+    show_count: true
+    weight: 0
+  countries:
+    checked: true
+    label: Countries
+    separator: ', '
+    show_count: true
+    weight: 0
+  economic:
+    checked: true
+    label: Economic
+    separator: ', '
+    show_count: true
+    weight: 0
+  land_habitat:
+    checked: true
+    label: 'Land & Habitat'
+    separator: ', '
+    show_count: true
+    weight: 0
+  landscapes:
+    checked: true
+    label: Landscapes
+    separator: ', '
+    show_count: true
+    weight: 0
+  projects:
+    checked: true
+    label: Projects
+    separator: ', '
+    show_count: true
+    weight: 0
+  regions:
+    checked: true
+    label: Regions
+    separator: ', '
+    show_count: true
+    weight: 0
+  resources:
+    checked: true
+    label: Resources
+    separator: ', '
+    show_count: true
+    weight: 0
+  wildlife:
+    checked: true
+    label: Wildlife
+    separator: ', '
+    show_count: true
+    weight: 0
+facet_source_id: 'search_api:views_block__search__block_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '30'
+    settings:
+      link_text: ''
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '20'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '10'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text

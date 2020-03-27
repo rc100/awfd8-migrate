@@ -8,11 +8,10 @@ dependencies:
   - drupal:taxonomy
   - drupal:views
   - facets
-# core: 8.x
+core: 8.x
 hidden: true
 
-# Information added by Drupal.org packaging script on 2019-03-29
-version: '8.x-2.7'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2020-02-13
+version: '8.x-1.4'
 project: 'search_api_solr'
-datestamp: 1553881501
+datestamp: 1581606081
