@@ -1,0 +1,10 @@
+uuid: 17f71958-43a8-4400-80b4-73c81e3572ca
+langcode: en
+status: true
+dependencies: {  }
+id: user
+label: User
+tags:
+  title: '[user:name] | [site:name]'
+  abstract: '[user:name]'
+  description: '[user:name]'
