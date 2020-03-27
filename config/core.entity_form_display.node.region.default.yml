@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.region.body
     - field.field.node.region.field_alternate_thumbnail
     - field.field.node.region.field_bullet_point_paragraph
@@ -30,13 +31,12 @@ dependencies:
     - field.field.node.region.field_tags_region
     - field.field.node.region.field_tooltip_text
     - field.field.node.region.field_weight
-    - image.style.thumbnail
     - node.type.region
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - file
-    - image
     - metatag
     - paragraphs
     - path
@@ -213,10 +213,16 @@ content:
   field_alternate_thumbnail:
     weight: 22
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_bullet_point_paragraph:
     weight: 20
@@ -272,10 +278,16 @@ content:
   field_image:
     weight: 17
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_kml:
     weight: 15
@@ -309,10 +321,16 @@ content:
   field_main_image:
     weight: 123
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 132

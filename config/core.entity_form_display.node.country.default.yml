@@ -34,14 +34,12 @@ dependencies:
     - field.field.node.country.field_tags_region
     - field.field.node.country.field_tooltip_text
     - field.field.node.country.field_weight
-    - image.style.thumbnail
     - node.type.country
   module:
     - content_moderation
     - entity_browser
     - field_group
     - file
-    - image
     - metatag
     - paragraphs
     - path
@@ -254,10 +252,16 @@ content:
   field_alternate_thumbnail:
     weight: 24
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_bullet_point_paragraph:
     type: entity_reference_paragraphs
@@ -313,10 +317,16 @@ content:
   field_image:
     weight: 60
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_kml:
     weight: 58

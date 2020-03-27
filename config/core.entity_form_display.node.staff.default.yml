@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.staff.body
     - field.field.node.staff.field_heading
     - field.field.node.staff.field_image
@@ -18,12 +19,11 @@ dependencies:
     - field.field.node.staff.field_tags_country
     - field.field.node.staff.field_tags_economic
     - field.field.node.staff.field_tags_region
-    - image.style.thumbnail
     - node.type.staff
   module:
     - content_moderation
+    - entity_browser
     - field_group
-    - image
     - metatag
     - path
     - text
@@ -79,10 +79,16 @@ content:
   field_image:
     weight: 3
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_land_habitat:
     weight: 12

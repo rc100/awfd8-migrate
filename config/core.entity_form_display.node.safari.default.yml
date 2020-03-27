@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.safari.body
     - field.field.node.safari.field_bushtracks_safari
     - field.field.node.safari.field_challenges
@@ -29,13 +30,12 @@ dependencies:
     - field.field.node.safari.field_tags_country
     - field.field.node.safari.field_tags_economic
     - field.field.node.safari.field_tags_region
-    - image.style.thumbnail
     - node.type.safari
   module:
     - content_moderation
     - datetime
+    - entity_browser
     - field_group
-    - image
     - metatag
     - paragraphs
     - path
@@ -197,10 +197,16 @@ content:
   field_image:
     weight: 35
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_land_habitat:
     weight: 29
@@ -241,10 +247,16 @@ content:
   field_main_image:
     weight: 2
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 102
