@@ -1833,6 +1833,47 @@
         "description": "Provides a way to patch Composer packages."
     },
     {
+        "name": "desandro/imagesloaded",
+        "version": "v4.1.4",
+        "version_normalized": "4.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/desandro/imagesloaded.git",
+            "reference": "67c4e57453120935180c45c6820e7d3fbd2ea1f9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/desandro/imagesloaded/zipball/67c4e57453120935180c45c6820e7d3fbd2ea1f9",
+            "reference": "67c4e57453120935180c45c6820e7d3fbd2ea1f9",
+            "shasum": ""
+        },
+        "time": "2018-01-02T16:53:35+00:00",
+        "type": "component",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David DeSandro",
+                "homepage": "http://desandro.com/",
+                "role": "developer"
+            }
+        ],
+        "description": "JavaScript is all like _You images done yet or what?_",
+        "homepage": "http://imagesloaded.desandro.com",
+        "keywords": [
+            "dom",
+            "images",
+            "javascript",
+            "jquery-plugin",
+            "library",
+            "loaded",
+            "ui"
+        ]
+    },
+    {
         "name": "dflydev/dot-access-configuration",
         "version": "v1.0.3",
         "version_normalized": "1.0.3.0",
@@ -4598,6 +4639,158 @@
         }
     },
     {
+        "name": "drupal/dropzonejs",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/dropzonejs.git",
+            "reference": "8.x-2.0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-2.0.zip",
+            "reference": "8.x-2.0",
+            "shasum": "3a0e5270b6dd1944391effb7939b7b34b76a8219"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "require-dev": {
+            "drupal/entity_browser": "*"
+        },
+        "suggest": {
+            "enyo/dropzone": "Required to user drupal/dropzonejs. Dropzone is an easy to use drag'n'drop library."
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0",
+                "datestamp": "1579100883",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Janez Urevc",
+                "homepage": "https://drupal.org/u/slashrsm",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Christian Fritsch",
+                "homepage": "https://drupal.org/u/chrfritsch",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Primoz Hmeljak",
+                "homepage": "https://drupal.org/u/Primsi",
+                "role": "Maintainer"
+            },
+            {
+                "name": "See other contributors",
+                "homepage": "https://www.drupal.org/node/1998478/committers",
+                "role": "contributor"
+            },
+            {
+                "name": "slashrsm",
+                "homepage": "https://www.drupal.org/user/744628"
+            },
+            {
+                "name": "wouters_f",
+                "homepage": "https://www.drupal.org/user/721548"
+            },
+            {
+                "name": "zkday",
+                "homepage": "https://www.drupal.org/user/888644"
+            }
+        ],
+        "description": "Drupal integration for DropzoneJS - An open source library that provides drag’n’drop file uploads with image previews.",
+        "homepage": "https://www.drupal.org/project/dropzonejs",
+        "keywords": [
+            "DropzoneJS",
+            "Drupal"
+        ],
+        "support": {
+            "source": "https://www.drupal.org/project/dropzonejs",
+            "issues": "https://www.drupal.org/project/issues/dropzonejs",
+            "irc": "irc://irc.freenode.org/drupal-contribute"
+        }
+    },
+    {
+        "name": "drupal/dropzonejs_eb_widget",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "require": {
+            "drupal/core": "*",
+            "drupal/dropzonejs": "self.version",
+            "drupal/entity_browser": "*"
+        },
+        "type": "metapackage",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0",
+                "datestamp": "1579100883",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Drupal Media Team",
+                "homepage": "https://www.drupal.org/user/3260690"
+            },
+            {
+                "name": "Drupal media CI",
+                "homepage": "https://www.drupal.org/user/3057985"
+            },
+            {
+                "name": "Primsi",
+                "homepage": "https://www.drupal.org/user/282629"
+            },
+            {
+                "name": "chr.fritsch",
+                "homepage": "https://www.drupal.org/user/2103716"
+            },
+            {
+                "name": "slashrsm",
+                "homepage": "https://www.drupal.org/user/744628"
+            },
+            {
+                "name": "wouters_f",
+                "homepage": "https://www.drupal.org/user/721548"
+            },
+            {
+                "name": "zkday",
+                "homepage": "https://www.drupal.org/user/888644"
+            }
+        ],
+        "description": "DropzoneJS Entity browser widget",
+        "homepage": "https://www.drupal.org/project/dropzonejs",
+        "support": {
+            "source": "https://git.drupalcode.org/project/dropzonejs"
+        }
+    },
+    {
         "name": "drupal/easy_breadcrumb",
         "version": "1.12.0",
         "version_normalized": "1.12.0.0",
@@ -4796,6 +4989,100 @@
             "source": "https://git.drupalcode.org/project/embed",
             "issues": "https://www.drupal.org/project/issues/embed",
             "irc": "irc://irc.freenode.org/drupal-media"
+        }
+    },
+    {
+        "name": "drupal/entity_browser",
+        "version": "2.4.0",
+        "version_normalized": "2.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/entity_browser.git",
+            "reference": "8.x-2.4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.4.zip",
+            "reference": "8.x-2.4",
+            "shasum": "28dd5eb28284ff218ad3aed2414817e9fa5b7bb9"
+        },
+        "require": {
+            "drupal/core": "^8.7.7 || ^9"
+        },
+        "require-dev": {
+            "drupal/embed": "~1.0",
+            "drupal/entity_embed": "~1.0",
+            "drupal/entityqueue": "~1.0",
+            "drupal/inline_entity_form": "~1.0",
+            "drupal/paragraphs": "~1.0",
+            "drupal/token": "~1.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.4",
+                "datestamp": "1579563787",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Janez Urevc",
+                "homepage": "https://github.com/slashrsm",
+                "role": "Maintainer"
+            },
+            {
+                "name": "Primoz Hmeljak",
+                "homepage": "https://github.com/primsi",
+                "role": "Maintainer"
+            },
+            {
+                "name": "See other contributors",
+                "homepage": "https://www.drupal.org/node/1943336/committers",
+                "role": "contributor"
+            },
+            {
+                "name": "Drupal Media Team",
+                "homepage": "https://www.drupal.org/user/3260690"
+            },
+            {
+                "name": "Primsi",
+                "homepage": "https://www.drupal.org/user/282629"
+            },
+            {
+                "name": "marcingy",
+                "homepage": "https://www.drupal.org/user/77320"
+            },
+            {
+                "name": "oknate",
+                "homepage": "https://www.drupal.org/user/471638"
+            },
+            {
+                "name": "samuel.mortenson",
+                "homepage": "https://www.drupal.org/user/2582268"
+            },
+            {
+                "name": "slashrsm",
+                "homepage": "https://www.drupal.org/user/744628"
+            }
+        ],
+        "description": "Entity browsing and selecting component.",
+        "homepage": "http://drupal.org/project/entity_browser",
+        "support": {
+            "source": "https://git.drupalcode.org/project/entity_browser",
+            "issues": "https://www.drupal.org/project/issues/entity_browser",
+            "irc": "irc://irc.freenode.org/drupal-contribute"
         }
     },
     {
@@ -5286,6 +5573,63 @@
         }
     },
     {
+        "name": "drupal/file_browser",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/file_browser.git",
+            "reference": "8.x-1.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/file_browser-8.x-1.2.zip",
+            "reference": "8.x-1.2",
+            "shasum": "18f85c02508885afeec50f74fd3b997b7cd577fe"
+        },
+        "require": {
+            "drupal/core": "~8",
+            "drupal/dropzonejs": "^2",
+            "drupal/dropzonejs_eb_widget": "*",
+            "drupal/embed": "^1",
+            "drupal/entity_browser": "^2 || ^1",
+            "drupal/entity_embed": "^1"
+        },
+        "require-dev": {
+            "drupal/coder": "~8.3"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.2",
+                "datestamp": "1569940086",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "samuel.mortenson",
+                "homepage": "https://www.drupal.org/user/2582268"
+            }
+        ],
+        "description": "This module provides a default Entity Browser that lets you browse and select your files in a nice-looking, mobile-ready Masonry based interface, and upload files using the Dropzonejs module.",
+        "homepage": "https://www.drupal.org/project/file_browser",
+        "support": {
+            "source": "https://git.drupalcode.org/project/file_browser"
+        }
+    },
+    {
         "name": "drupal/file_entity",
         "version": "2.0.0-beta7",
         "version_normalized": "2.0.0.0-beta7",
@@ -5576,6 +5920,56 @@
         ],
         "support": {
             "source": "https://git.drupalcode.org/project/honeypot"
+        }
+    },
+    {
+        "name": "drupal/image_browser",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/image_browser.git",
+            "reference": "8.x-1.4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/image_browser-8.x-1.4.zip",
+            "reference": "8.x-1.4",
+            "shasum": "3710740bca6b656b1bebade793151c1633b65a7b"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/entity_browser": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.4",
+                "datestamp": "1530696220",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "cong.nguyen",
+                "homepage": "https://www.drupal.org/user/1197416"
+            }
+        ],
+        "description": "Provide Image Browser service like Media in Drupal 7.x",
+        "homepage": "https://www.drupal.org/project/image_browser",
+        "support": {
+            "source": "https://git.drupalcode.org/project/image_browser"
         }
     },
     {
@@ -9083,6 +9477,44 @@
             "emailvalidator",
             "validation",
             "validator"
+        ]
+    },
+    {
+        "name": "enyo/dropzone",
+        "version": "v5.7.0",
+        "version_normalized": "5.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/enyo/dropzone.git",
+            "reference": "5b82186d5f18540a1d13b6f4914fdc6220617ef5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/enyo/dropzone/zipball/5b82186d5f18540a1d13b6f4914fdc6220617ef5",
+            "reference": "5b82186d5f18540a1d13b6f4914fdc6220617ef5",
+            "shasum": ""
+        },
+        "time": "2020-02-14T13:09:09+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Matias Meno",
+                "email": "m@tias.me",
+                "homepage": "http://www.matiasmeno.com"
+            }
+        ],
+        "description": "Handles drag and drop of files for you.",
+        "homepage": "http://www.dropzonejs.com",
+        "keywords": [
+            "drag and drop",
+            "dragndrop",
+            "file upload",
+            "upload"
         ]
     },
     {
