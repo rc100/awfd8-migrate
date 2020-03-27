@@ -1,0 +1,172 @@
+uuid: 9be498e9-bced-4d29-b2f9-726d2637c7bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: search
+label: Search
+group: Search
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: 0
+    uuid: 7d1bf01a-2a06-4c25-986a-7c32d6dd14f5
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      2d81f871-e6ab-4032-8723-14d1bf228bb1:
+        id: 'facet_block:projects'
+        label: Projects
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '-4'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 2d81f871-e6ab-4032-8723-14d1bf228bb1
+      2916664f-5c80-40d8-bb2a-f6475463d0cc:
+        id: 'facet_block:resources'
+        label: Resources
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '-3'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 2916664f-5c80-40d8-bb2a-f6475463d0cc
+      d9f7b682-ac9f-4b1b-936c-1ce58dbe1e9c:
+        id: 'facet_block:wildlife'
+        label: Wildlife
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '-2'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: d9f7b682-ac9f-4b1b-936c-1ce58dbe1e9c
+      df630faf-bfdd-4074-b55f-8b47cf3dc631:
+        id: 'facet_block:community'
+        label: Community
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '-1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: df630faf-bfdd-4074-b55f-8b47cf3dc631
+      3c10edd1-6a76-4839-8507-2bceef89dd13:
+        id: 'facet_block:economic'
+        label: Economic
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 3c10edd1-6a76-4839-8507-2bceef89dd13
+      0a6f3994-8588-45ed-a21d-04ee49dbd2a3:
+        id: 'facet_block:land_habitat'
+        label: 'Land & Habitat'
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 0a6f3994-8588-45ed-a21d-04ee49dbd2a3
+      bf4f61f3-09e4-4d99-9dae-52d9ffbad26f:
+        id: 'facet_block:landscapes'
+        label: Landscapes
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '2'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: bf4f61f3-09e4-4d99-9dae-52d9ffbad26f
+      b3986a98-2ab8-49bc-8783-8aedec01add3:
+        id: 'facet_block:regions'
+        label: Regions
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '3'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: b3986a98-2ab8-49bc-8783-8aedec01add3
+      61f72790-c403-4f40-bedc-90e910eb876a:
+        id: 'facet_block:countries'
+        label: Countries
+        provider: facets
+        label_display: visible
+        region: sidebar_second
+        weight: '4'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 61f72790-c403-4f40-bedc-90e910eb876a
+      6f0f51db-298f-4e72-a2fc-cee35658cb12:
+        id: 'views_block:search-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: 6f0f51db-298f-4e72-a2fc-cee35658cb12
+      a6cd9fca-2551-4f6b-baca-da21198d1cfc:
+        id: 'facets_summary_block:summary'
+        label: Summary
+        provider: facets_summary
+        label_display: visible
+        region: sidebar_second
+        weight: '-5'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: a6cd9fca-2551-4f6b-baca-da21198d1cfc
+    id: blocks
+    saved: false
+    uuid: 8330459d-f848-428f-857b-9c0b80055724
+    include_default_blocks: 1
+weight: 0
