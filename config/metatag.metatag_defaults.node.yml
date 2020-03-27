@@ -5,9 +5,11 @@ dependencies: {  }
 id: node
 label: Content
 tags:
-  icon_192x192: themes/custom/awf/android-chrome-192x192.png
-  shortcut_icon: themes/custom/awf/favicon.ico
-  mask-icon: themes/custom/awf/safari-pinned-tab.svg
+  title: '[current-page:title] | [site:name]'
+  description: '[node:summary]'
   apple_touch_icon_180x180: themes/custom/awf/apple-touch-icon.png
+  icon_192x192: themes/custom/awf/android-chrome-192x192.png
   icon_32x32: themes/custom/awf/favicon-32x32.png
+  mask-icon: themes/custom/awf/safari-pinned-tab.svg
+  shortcut_icon: themes/custom/awf/favicon.ico
   icon_16x16: themes/custom/awf/favicon-16x16.png
