@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_legacy_alias
@@ -10,12 +11,11 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
     - comment
     - content_moderation
-    - image
+    - entity_browser
     - metatag
     - path
     - text
@@ -64,11 +64,17 @@ content:
     type: number
     region: content
   field_image:
-    type: image_image
+    type: entity_browser_file
     weight: 4
     region: content
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_meta_tags:
@@ -147,7 +153,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

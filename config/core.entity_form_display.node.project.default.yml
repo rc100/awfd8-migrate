@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.project.body
     - field.field.node.project.field_alternate_thumbnail
     - field.field.node.project.field_basic_legacy_revision_id
@@ -27,13 +28,12 @@ dependencies:
     - field.field.node.project.field_tags_projects
     - field.field.node.project.field_tags_region
     - field.field.node.project.field_weight
-    - image.style.thumbnail
     - node.type.project
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - file
-    - image
     - metatag
     - paragraphs
     - path
@@ -152,10 +152,16 @@ content:
   field_alternate_thumbnail:
     weight: 137
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_basic_legacy_revision_id:
     weight: 142
@@ -211,10 +217,16 @@ content:
   field_main_image:
     weight: 123
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 143

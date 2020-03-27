@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.species.body
     - field.field.node.species.field_about
     - field.field.node.species.field_alternate_thumbnail
@@ -41,14 +42,13 @@ dependencies:
     - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
     - image.style.medium
-    - image.style.vertical_image
     - node.type.species
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - file
     - focal_point
-    - image
     - imce
     - metatag
     - paragraphs
@@ -251,10 +251,16 @@ content:
   field_alternate_thumbnail:
     weight: 29
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_behaviors:
     type: entity_reference_paragraphs
@@ -354,20 +360,30 @@ content:
   field_horizontal_image:
     weight: 11
     settings:
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: horizontal_image
-      progress_indicator: throbber
-    third_party_settings:
-      imce:
-        enabled: false
-    type: image_image
+    third_party_settings: {  }
+    type: entity_browser_file
     region: content
   field_image:
     weight: 27
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_kml:
     weight: 10
@@ -515,12 +531,16 @@ content:
   field_vertical_image:
     weight: 10
     settings:
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: vertical_image
-      progress_indicator: throbber
-    third_party_settings:
-      imce:
-        enabled: false
-    type: image_image
+    third_party_settings: {  }
+    type: entity_browser_file
     region: content
   field_weight:
     weight: 27

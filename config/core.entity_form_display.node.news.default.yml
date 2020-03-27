@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.news.body
     - field.field.node.news.field_date
     - field.field.node.news.field_legacy_alias
@@ -20,15 +21,14 @@ dependencies:
     - field.field.node.news.field_tags_projects
     - field.field.node.news.field_tags_region
     - field.field.node.news.field_view_more
-    - image.style.thumbnail
     - node.type.news
     - workflows.workflow.legacy_workflow
   module:
     - content_moderation
     - datetime
+    - entity_browser
     - field_group
     - file
-    - image
     - link
     - metatag
     - path
@@ -50,7 +50,6 @@ third_party_settings:
       label: 'Featured Image'
     group_tags:
       children:
-        - field_news_tags
         - field_tags_country
         - field_tags_region
         - field_tags_community
@@ -110,10 +109,16 @@ content:
   field_news_featured_image:
     weight: 125
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_news_files:
     weight: 128
@@ -125,10 +130,16 @@ content:
   field_news_images:
     weight: 129
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_news_legacy_alias:
     weight: 132
