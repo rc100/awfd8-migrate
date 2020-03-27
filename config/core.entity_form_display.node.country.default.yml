@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.browse_files
     - field.field.node.country.body
     - field.field.node.country.field_alternate_thumbnail
     - field.field.node.country.field_bullet_point_paragraph
@@ -37,6 +38,7 @@ dependencies:
     - node.type.country
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - file
     - image
@@ -170,7 +172,6 @@ third_party_settings:
       label: 'Sidebar Items'
     group_featured:
       children:
-        - field_field_featured
         - field_featured
         - field_weight
         - field_alternate_thumbnail
@@ -357,10 +358,16 @@ content:
   field_main_image:
     weight: 3
     settings:
-      progress_indicator: throbber
+      entity_browser: browse_files
+      field_widget_remove: true
+      selection_mode: selection_append
+      view_mode: thumbnail
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 101

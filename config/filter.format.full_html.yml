@@ -97,7 +97,7 @@ filters:
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic
-    status: true
+    status: false
     weight: -44
     settings:
       settings_source: global
