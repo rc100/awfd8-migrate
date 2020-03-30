@@ -1,0 +1,34 @@
+{
+  "name": "drupal/site_audit",
+  "description": "Drupal static site analysis platform",
+  "type": "drupal-drush",
+  "homepage": "https://www.drupal.org/project/site_audit",
+  "license": "GLP-2.0+",
+  "authors": [
+    { "name": "Jon Peck", "email": "jpeck@fluxsauce.com" }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/site_audit"
+  },
+  "require": {
+    "php": ">5.5.0",
+    "phpmd/phpmd" : "@stable",
+    "sebastian/phpcpd": "*",
+    "squizlabs/php_codesniffer": "*",
+    "drupal/coder": "^8.2",
+    "phploc/phploc": "*",
+    "sebastian/phpdcd": "*",
+    "symfony/process": "^2.7",
+    "ext-simplexml": ">5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.7.*",
+    "drush/drush": "^8.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "Unish": "vendor/drush/drush/tests/"
+    }
+  },
+  "keywords": ["standards", "audit", "code review", "drupal", "analysis", "reports", "drush"]
+}
