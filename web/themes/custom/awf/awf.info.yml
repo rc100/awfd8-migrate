@@ -18,7 +18,6 @@ libraries-override:
 libraries:
   - awf/global-styling
   - awf/fonts
-  - awf/galleryBlock
 
 # Regions
 regions:
