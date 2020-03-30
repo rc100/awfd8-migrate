@@ -152,19 +152,6 @@ reactions:
         unique: 0
         context_id: search
         uuid: 6f0f51db-298f-4e72-a2fc-cee35658cb12
-      a6cd9fca-2551-4f6b-baca-da21198d1cfc:
-        id: 'facets_summary_block:summary'
-        label: Summary
-        provider: facets_summary
-        label_display: visible
-        region: sidebar_second
-        weight: '-5'
-        context_mapping: {  }
-        theme: awf
-        css_class: ''
-        unique: 0
-        context_id: search
-        uuid: a6cd9fca-2551-4f6b-baca-da21198d1cfc
     id: blocks
     saved: false
     uuid: 8330459d-f848-428f-857b-9c0b80055724
