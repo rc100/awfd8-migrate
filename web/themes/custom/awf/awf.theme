@@ -123,9 +123,6 @@ function awf_preprocess_block(&$vars) {
     $vars["page_title"] = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
 
-  if ($vars['plugin_id'] == 'block-views-block-gallery-entity-block-1') {
-    $vars['#attached']['library'][] = 'galleryBlock';
-  }
 }
 
 /**
