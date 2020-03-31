@@ -3782,9 +3782,17 @@ a.share {
           -ms-flex-direction: row;
               flex-direction: row; } }
   .paragraph--type--module .row .three.columns {
-    width: 17.021304%; }
+    width: 100%; }
+    @media (min-width: 760px) {
+      .paragraph--type--module .row .three.columns {
+        width: 17.021304%; } }
+    .paragraph--type--module .row .three.columns img {
+      width: 100%; }
   .paragraph--type--module .row .twelve.columns {
-    width: 74.468205%; }
+    width: 100%; }
+    @media (min-width: 760px) {
+      .paragraph--type--module .row .twelve.columns {
+        width: 74.468205%; } }
   .paragraph--type--module .row .thirteen.columns {
     width: 80.851194%; }
 
@@ -4105,19 +4113,24 @@ a.share {
     color: #e7721f; }
   .view-sidebar-news .view-footer .tanbar {
     background: #dad9d4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: 40px;
-    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: -2rem;
     padding: 0 2rem 0 0;
+    width: 100%;
     z-index: 3; }
   .view-sidebar-news .view-footer p {
     display: inline-block;
     padding: 8px 10px;
-    margin: 0; }
-  .view-sidebar-news .view-footer a {
-    float: right;
-    width: auto;
-    padding: 8px 10px; }
+    margin: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 100%; }
   .view-sidebar-news .view-footer .square.news {
     background-image: url("../images/square/globe.png");
     display: inline-block;
@@ -5411,7 +5424,9 @@ a.share {
       position: absolute;
       z-index: 1; }
     .node--type-supplemental .field--name-field-sidebar-image img {
-      height: 100%; }
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
     .node--type-supplemental .field--name-field-sidebar-image .media--type-image {
       height: 100%; }
   .node--type-supplemental:hover .field--name-field-sidebar-image:before, .node--type-supplemental:focus .field--name-field-sidebar-image:before {
