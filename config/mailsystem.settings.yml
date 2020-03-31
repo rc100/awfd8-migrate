@@ -1,0 +1,9 @@
+defaults:
+  formatter: mandrill_mail
+  sender: mandrill_mail
+theme: current
+modules:
+  mandrill:
+    none:
+      formatter: mandrill_test_mail
+      sender: mandrill_test_mail
