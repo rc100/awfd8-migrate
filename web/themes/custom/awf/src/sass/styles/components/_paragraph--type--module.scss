@@ -37,11 +37,23 @@
     }
 
     .three.columns {
-      width: 17.021304%;
+      width: 100%;
+
+      @include breakpoint($min760) {
+        width: 17.021304%;
+      }
+
+      img {
+        width: 100%;
+      }
     }
 
     .twelve.columns {
-      width: 74.468205%;
+      width: 100%;
+
+      @include breakpoint($min760) {
+        width: 74.468205%;
+      }
     }
 
     .thirteen.columns {
