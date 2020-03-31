@@ -126,6 +126,7 @@ class ComposerStaticInit23aafb4ce84bc9abc9aadc7e2d857fe2
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
+            'PantheonSystems\\CDNBehatHelpers\\' => 32,
         ),
         'M' => 
         array (
@@ -444,6 +445,10 @@ class ComposerStaticInit23aafb4ce84bc9abc9aadc7e2d857fe2
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'PantheonSystems\\CDNBehatHelpers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/web/modules/contrib/pantheon_advanced_page_cache/tests/behat/helper_classes',
         ),
         'Masterminds\\' => 
         array (
@@ -5124,6 +5129,9 @@ class ComposerStaticInit23aafb4ce84bc9abc9aadc7e2d857fe2
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PantheonSystems\\CDNBehatHelpers\\AgeTracker' => __DIR__ . '/../..' . '/web/modules/contrib/pantheon_advanced_page_cache/tests/behat/helper_classes/AgeTracker.php',
+        'PantheonSystems\\CDNBehatHelpers\\Contexts\\FeatureContext' => __DIR__ . '/../..' . '/web/modules/contrib/pantheon_advanced_page_cache/tests/behat/helper_classes/Contexts/FeatureContext.php',
+        'PantheonSystems\\CDNBehatHelpers\\tests\\AgeTrackerTest' => __DIR__ . '/../..' . '/web/modules/contrib/pantheon_advanced_page_cache/tests/behat/helper_classes/tests/AgeTrackerTest.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',

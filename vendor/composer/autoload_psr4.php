@@ -63,6 +63,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src/Prophecy'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'PantheonSystems\\CDNBehatHelpers\\' => array($baseDir . '/web/modules/contrib/pantheon_advanced_page_cache/tests/behat/helper_classes'),
     'Masterminds\\' => array($vendorDir . '/masterminds/html5/src'),
     'Mailchimp\\http\\' => array($vendorDir . '/thinkshout/mailchimp-api-php/src/http'),
     'Mailchimp\\' => array($vendorDir . '/thinkshout/mailchimp-api-php/src'),
