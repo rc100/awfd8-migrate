@@ -1,0 +1,15 @@
+mandrill_api_key: N5VsXgHUJFY7zq5UDuOMfQ
+mandrill_from_email: null
+mandrill_from_name: null
+mandrill_subaccount: null
+mandrill_filter_format: null
+mandrill_track_opens: null
+mandrill_track_clicks: null
+mandrill_url_strip_qs: null
+mandrill_mail_key_blacklist: null
+mandrill_log_defaulted_sends: null
+mandrill_analytics_domains: null
+mandrill_analytics_campaign: null
+mandrill_process_async: null
+mandrill_batch_log_queued: null
+mandrill_queue_worker_timeout: null
