@@ -1,12 +1,20 @@
 defaults:
-  formatter: sendgrid_integration
-  sender: sendgrid_integration
+  formatter: mandrill_mail
+  sender: mandrill_mail
 theme: current
 modules:
   mandrill:
     none:
       formatter: mandrill_test_mail
       sender: mandrill_test_mail
+  webform:
+    none:
+      formatter: mandrill_test_mail
+      sender: mandrill_test_mail
+  user:
+    none:
+      formatter: mandrill_mail
+      sender: mandrill_mail
   sendgrid_integration:
     none:
       formatter: sendgrid_integration
