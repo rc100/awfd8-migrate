@@ -409,12 +409,12 @@ class EntityViewsData implements EntityHandlerInterface, EntityViewsDataInterfac
    *   A reference to a specific entity table (for example data_table) inside
    *   the views data.
    */
-  protected function mapFieldDefinition($table, $field_name, FieldDefinitionInterface $field_definition, TableMappingInterface $table_mapping, &$table_data) {
+  protected function mapFieldDefinition($table, $field_name, FieldDefinitionInterface $field_definition = null, TableMappingInterface $table_mapping, &$table_data) {
     // Create a dummy instance to retrieve property definitions.
     $field_column_mapping = $table_mapping->getColumnNames($field_name);
-    $field_schema = $this->getFieldStorageDefinitions()[$field_name]->getSchema();
+    $field_schema = !empty($this->getFieldStorageDefinitions()[$field_name]) ? $this->getFieldStorageDefinitions()[$field_name]->getSchema() : null;
 
-    $field_definition_type = $field_definition->getType();
+    $field_definition_type = !empty($field_definition) ? $field_definition->getType() : null;
     // Add all properties to views table data. We need an entry for each
     // column of each field, with the first one given special treatment.
     // @todo Introduce concept of the "main" column for a field, rather than
