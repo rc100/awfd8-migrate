@@ -158,6 +158,11 @@
                 ".htaccess",
                 "web.config"
             ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Drupal Views Check For Null Values": "https://www.drupal.org/files/issues/2019-07-08/view_module_add_check_for_null_values.patch"
+            }
         }
     },
     "config": {
