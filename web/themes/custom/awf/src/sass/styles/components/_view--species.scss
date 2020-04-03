@@ -102,8 +102,9 @@
 
   // Style form item
   form.big {
+
+    display: none;
     background-color: #fff;
-    display: block;
     height: 65px;
     left: 50%;
     margin-bottom: 55px;
@@ -120,6 +121,10 @@
       font-size: 36px;
       padding: 3px 12px;
       width: 490px;
+    }
+
+    @include breakpoint($min760) {
+      display: block;
     }
   }
 
