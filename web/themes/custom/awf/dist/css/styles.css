@@ -4941,6 +4941,12 @@ a.share {
     font-weight: 600;
     margin: 0 0 0 5.75rem; }
 
+.page-node-type-donate-page .region.region-sidebar-second > div {
+  margin-bottom: 2rem; }
+
+.page-node-type-donate-page .view-supplemental {
+  margin-bottom: 0; }
+
 .page-node-type-landing-page .article-block {
   margin-bottom: 20px; }
 
