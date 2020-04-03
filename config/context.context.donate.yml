@@ -1,0 +1,91 @@
+uuid: 362afe92-b998-4ed1-9a53-b812a3063e0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: donate
+label: Donate
+group: 'Content Type'
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "/donate\r\n/donate/*"
+    negate: 0
+    uuid: a8a0ffae-24c4-40dc-ac60-558ab0a7c33c
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      d6b7c45d-ebff-4ed3-9cfb-72dfaa9e3a92:
+        id: 'block_content:153d8c07-9059-449f-a586-db47f6a193fb'
+        label: 'Need Help?'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: donate
+        uuid: d6b7c45d-ebff-4ed3-9cfb-72dfaa9e3a92
+      8bdc7931-684f-435e-abc4-effe158c3566:
+        id: 'block_content:64cc3aaa-5d44-432f-a38b-75a33a06383a'
+        label: 'Threats block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: donate
+        uuid: 8bdc7931-684f-435e-abc4-effe158c3566
+      bdb0b8f5-0ba2-4e68-89f6-fe7d62949e4c:
+        id: 'block_content:b28d7dda-6134-475a-a832-ed7042251019'
+        label: 'Donate Securely '
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '2'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: donate
+        uuid: bdb0b8f5-0ba2-4e68-89f6-fe7d62949e4c
+      b7568700-2d09-42e7-a3de-8d3f4ffca0ef:
+        id: 'block_content:4717a64a-920f-413d-ada9-4958806dd525'
+        label: 'Other Ways to Give'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: sidebar_second
+        weight: '-1'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: donate
+        uuid: b7568700-2d09-42e7-a3de-8d3f4ffca0ef
+    id: blocks
+    saved: false
+    uuid: 18cccd52-3a46-46a4-843b-21f1fed0b20f
+    include_default_blocks: 0
+weight: -9
