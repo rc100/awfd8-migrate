@@ -41,6 +41,7 @@
         "drupal/features": "^3.8",
         "drupal/field_group": "^1.0",
         "drupal/file_browser": "^1.2",
+        "drupal/file_entity": "^2.0@beta",
         "drupal/focal_point": "^1.2",
         "drupal/google_tag": "^1.2",
         "drupal/honeypot": "^1.30",
