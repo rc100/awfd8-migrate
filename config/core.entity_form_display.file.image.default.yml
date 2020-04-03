@@ -16,10 +16,9 @@ dependencies:
     - field.field.file.image.field_tags_projects
     - field.field.file.image.field_tags_region
     - field.field.file.image.field_title_text
-    - file_entity.type.image
   module:
     - entity_reference_revisions
-    - path
+    - file
     - text
 _core:
   default_config_hash: HYzof_QiEoo7449yRhD_uJoLXMEAmSafqexxGS9OmjQ
