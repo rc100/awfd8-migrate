@@ -25,6 +25,25 @@
     padding-bottom: 1.25rem;
   }
 
+  article {
+    width: 100%;
+    background: $ltgray;
+
+    .node__content {
+      display: inline-flex;
+      width: 100%;
+
+      @include breakpoint($min760) {
+        display: inherit;
+      }
+    }
+
+    @include breakpoint($min760) {
+      background: $white;
+      width: inherit;
+    }
+  }
+
   // Style header items
   .view-header {
     position: relative;
@@ -142,13 +161,32 @@
   // Style the animal block
   .isotope-item {
     .field--name-field-tags-animal {
+      align-items: center;
       background: $awftan;
       color: $brown;
+      display: flex;
       min-height: 40px;
       width: 100%;
 
       .field__item {
-        padding: 12px 10px !important;
+        padding: 12px 25px !important;
+
+        @include breakpoint($min760) {
+          padding: 12px 10px !important;
+        }
+      }
+
+    }
+
+    .field--name-field-main-image img {
+      height: 70px;
+      width: auto;
+      object-fit: cover;
+
+      @include breakpoint($min760) {
+        height: inherit;
+        min-height: 183px;
+        width: 100%;
       }
     }
 
@@ -161,9 +199,13 @@
       &:after {
         content: '';
         display: block;
-        height: 20px;
+        height: 1.5rem;
         width: 100%;
         background-color: #EDECE8;
+
+        @include breakpoint($min760) {
+          height: 2rem;
+        }
       }
     }
 
