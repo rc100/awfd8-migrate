@@ -564,17 +564,17 @@
     },
     {
         "name": "composer/ca-bundle",
-        "version": "1.2.5",
-        "version_normalized": "1.2.5.0",
+        "version": "1.2.6",
+        "version_normalized": "1.2.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149"
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/62e8fc2dc550e5d6d8c9360c7721662670f58149",
-            "reference": "62e8fc2dc550e5d6d8c9360c7721662670f58149",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
             "shasum": ""
         },
         "require": {
@@ -587,7 +587,7 @@
             "psr/log": "^1.0",
             "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
         },
-        "time": "2019-12-11T14:44:42+00:00",
+        "time": "2020-01-13T10:02:55+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5743,6 +5743,80 @@
         }
     },
     {
+        "name": "drupal/geoip",
+        "version": "2.0.0-beta1",
+        "version_normalized": "2.0.0.0-beta1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/geoip.git",
+            "reference": "8.x-2.0-beta1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/geoip-8.x-2.0-beta1.zip",
+            "reference": "8.x-2.0-beta1",
+            "shasum": "04b4935436af838f2b3490e905a5ef1a6cc996e7"
+        },
+        "require": {
+            "drupal/address": "*",
+            "drupal/core": "~8.0",
+            "geoip2/geoip2": "~2.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0-beta1",
+                "datestamp": "1542289080",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "3014113: Debug lookup form for testing plugins": "https://www.drupal.org/files/issues/2018-11-16/debug-lookup-3014113-1.patch"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "das-peter",
+                "homepage": "https://www.drupal.org/user/762870"
+            },
+            {
+                "name": "drewish",
+                "homepage": "https://www.drupal.org/user/34869"
+            },
+            {
+                "name": "frankcarey",
+                "homepage": "https://www.drupal.org/user/112063"
+            },
+            {
+                "name": "mglaman",
+                "homepage": "https://www.drupal.org/user/2416470"
+            },
+            {
+                "name": "zroger",
+                "homepage": "https://www.drupal.org/user/67977"
+            }
+        ],
+        "description": "API module for interacting with geolocation services.",
+        "homepage": "http://drupal.org/project/geoip",
+        "support": {
+            "source": "https://git.drupalcode.org/project/geoip"
+        }
+    },
+    {
         "name": "drupal/google_tag",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
@@ -9643,6 +9717,61 @@
         ]
     },
     {
+        "name": "geoip2/geoip2",
+        "version": "v2.10.0",
+        "version_normalized": "2.10.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/GeoIP2-php.git",
+            "reference": "419557cd21d9fe039721a83490701a58c8ce784a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/419557cd21d9fe039721a83490701a58c8ce784a",
+            "reference": "419557cd21d9fe039721a83490701a58c8ce784a",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "maxmind-db/reader": "~1.5",
+            "maxmind/web-service-common": "~0.6",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "phpunit/phpunit": "5.*",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "time": "2019-12-12T18:48:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GeoIp2\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory J. Oschwald",
+                "email": "goschwald@maxmind.com",
+                "homepage": "https://www.maxmind.com/"
+            }
+        ],
+        "description": "MaxMind GeoIP2 PHP API",
+        "homepage": "https://github.com/maxmind/GeoIP2-php",
+        "keywords": [
+            "IP",
+            "geoip",
+            "geoip2",
+            "geolocation",
+            "maxmind"
+        ]
+    },
+    {
         "name": "grasmash/expander",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -10039,7 +10168,8 @@
                 "name": "Jakub Onderka",
                 "email": "jakub.onderka@gmail.com"
             }
-        ]
+        ],
+        "abandoned": "php-parallel-lint/php-console-color"
     },
     {
         "name": "jakub-onderka/php-console-highlighter",
@@ -10087,7 +10217,8 @@
                 "homepage": "http://www.acci.cz/"
             }
         ],
-        "description": "Highlight PHP code in terminal"
+        "description": "Highlight PHP code in terminal",
+        "abandoned": "php-parallel-lint/php-console-highlighter"
     },
     {
         "name": "jcalderonzumba/gastonjs",
@@ -10563,6 +10694,116 @@
             "serializer",
             "xml"
         ]
+    },
+    {
+        "name": "maxmind-db/reader",
+        "version": "v1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+            "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "conflict": {
+            "ext-maxminddb": "<1.6.0,>=2.0.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpcov": "^3.0",
+            "phpunit/phpunit": "5.*",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "suggest": {
+            "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+            "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+            "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+        },
+        "time": "2019-12-19T22:59:03+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MaxMind\\Db\\": "src/MaxMind/Db"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory J. Oschwald",
+                "email": "goschwald@maxmind.com",
+                "homepage": "https://www.maxmind.com/"
+            }
+        ],
+        "description": "MaxMind DB Reader API",
+        "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+        "keywords": [
+            "database",
+            "geoip",
+            "geoip2",
+            "geolocation",
+            "maxmind"
+        ]
+    },
+    {
+        "name": "maxmind/web-service-common",
+        "version": "v0.6.0",
+        "version_normalized": "0.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maxmind/web-service-common-php.git",
+            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/40c928bb0194c45088b369a17f9baef9c3fc7460",
+            "reference": "40c928bb0194c45088b369a17f9baef9c3fc7460",
+            "shasum": ""
+        },
+        "require": {
+            "composer/ca-bundle": "^1.0.3",
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.*",
+            "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0",
+            "squizlabs/php_codesniffer": "3.*"
+        },
+        "time": "2019-12-12T15:56:05+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MaxMind\\Exception\\": "src/Exception",
+                "MaxMind\\WebService\\": "src/WebService"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Gregory Oschwald",
+                "email": "goschwald@maxmind.com"
+            }
+        ],
+        "description": "Internal MaxMind Web Service API",
+        "homepage": "https://github.com/maxmind/web-service-common-php"
     },
     {
         "name": "mikey179/vfsstream",

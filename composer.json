@@ -42,6 +42,7 @@
         "drupal/field_group": "^1.0",
         "drupal/file_browser": "^1.2",
         "drupal/focal_point": "^1.2",
+        "drupal/geoip": "^2.0",
         "drupal/google_tag": "^1.2",
         "drupal/honeypot": "^1.30",
         "drupal/image_browser": "^1.4",
@@ -158,6 +159,12 @@
                 ".htaccess",
                 "web.config"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/geoip": {
+                "3014113: Debug lookup form for testing plugins": "https://www.drupal.org/files/issues/2018-11-16/debug-lookup-3014113-1.patch"
+            }
         }
     },
     "config": {
