@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains awf_geolocate.module.
+ */
+
+/**
+ * Check if current user is in the UK.
+ */
+function awf_geolocate_user_in_uk($ip = NULL) {
+
+  // @todo Debug only - force IP to be from UK.
+  $ip = '185.86.151.11';
+
+  $country_code = awf_geolocate_get_country_code($ip);
+  $result = ($country_code == 'GB') ? TRUE : FALSE;
+
+  return $result;
+}
+
+/**
+ * Get the country code from an IP address (defaults to IP of current request).
+ */
+function awf_geolocate_get_country_code($ip = NULL) {
+
+  if (empty($ip)) {
+    $ip = \Drupal::request()->getClientIp();
+  }
+
+  // Get country code from IP, using GeoIP contrib.
+  $geolocator = \Drupal::service('geoip.geolocation');
+  $country_code = $geolocator->geolocate($ip);
+
+  return $country_code;
+}
