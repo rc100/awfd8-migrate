@@ -43,6 +43,7 @@
         "drupal/file_browser": "^1.2",
         "drupal/file_entity": "^2.0@beta",
         "drupal/focal_point": "^1.2",
+        "drupal/geoip": "^2.0",
         "drupal/google_tag": "^1.2",
         "drupal/honeypot": "^1.30",
         "drupal/image_browser": "^1.4",
@@ -161,6 +162,7 @@
                 "web.config"
             ]
         },
+        "enable-patching": true,
         "patches": {
             "drupal/core": {
                 "Drupal Views Check For Null Values": "https://www.drupal.org/files/issues/2019-07-08/view_module_add_check_for_null_values.patch"
