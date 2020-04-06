@@ -4234,6 +4234,22 @@ a.share {
   text-align: center;
   padding-bottom: 1.25rem; }
 
+.view-display-id-page_2 article {
+  width: 100%;
+  background: #edece9; }
+  .view-display-id-page_2 article .node__content {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%; }
+    @media (min-width: 760px) {
+      .view-display-id-page_2 article .node__content {
+        display: inherit; } }
+  @media (min-width: 760px) {
+    .view-display-id-page_2 article {
+      background: #fff;
+      width: inherit; } }
+
 .view-display-id-page_2 .view-header {
   position: relative;
   margin-bottom: 2rem; }
@@ -4272,8 +4288,8 @@ a.share {
     padding-right: 10px; }
 
 .view-display-id-page_2 form.big {
+  display: none;
   background-color: #fff;
-  display: block;
   height: 65px;
   left: 50%;
   margin-bottom: 55px;
@@ -4289,6 +4305,9 @@ a.share {
     font-size: 36px;
     padding: 3px 12px;
     width: 490px; }
+  @media (min-width: 760px) {
+    .view-display-id-page_2 form.big {
+      display: block; } }
 
 .view-display-id-page_2 [class^='tile-size'],
 .view-display-id-page_2 [class^='tile-danger'] {
@@ -4327,12 +4346,32 @@ a.share {
     color: #333; }
 
 .view-display-id-page_2 .isotope-item .field--name-field-tags-animal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #dad9d4;
   color: #322c2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 40px;
   width: 100%; }
   .view-display-id-page_2 .isotope-item .field--name-field-tags-animal .field__item {
-    padding: 12px 10px !important; }
+    padding: 12px 25px !important; }
+    @media (min-width: 760px) {
+      .view-display-id-page_2 .isotope-item .field--name-field-tags-animal .field__item {
+        padding: 12px 10px !important; } }
+
+.view-display-id-page_2 .isotope-item .field--name-field-main-image img {
+  height: 70px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  @media (min-width: 760px) {
+    .view-display-id-page_2 .isotope-item .field--name-field-main-image img {
+      height: inherit;
+      min-height: 183px;
+      width: 100%; } }
 
 .view-display-id-page_2 .isotope-item a:hover,
 .view-display-id-page_2 .isotope-item a:focus {
@@ -4341,9 +4380,12 @@ a.share {
 .view-display-id-page_2 .isotope-item .node--view-mode-isotope:after {
   content: '';
   display: block;
-  height: 20px;
+  height: 1.5rem;
   width: 100%;
   background-color: #EDECE8; }
+  @media (min-width: 760px) {
+    .view-display-id-page_2 .isotope-item .node--view-mode-isotope:after {
+      height: 2rem; } }
 
 /* removing defaults */
 .jcarousel-wrapper.jcarousel-skin-default.jcarousel-visible-3 {
@@ -4898,6 +4940,12 @@ a.share {
     font-size: 1.6rem;
     font-weight: 600;
     margin: 0 0 0 5.75rem; }
+
+.page-node-type-donate-page .region.region-sidebar-second > div {
+  margin-bottom: 2rem; }
+
+.page-node-type-donate-page .view-supplemental {
+  margin-bottom: 0; }
 
 .page-node-type-landing-page .article-block {
   margin-bottom: 20px; }
