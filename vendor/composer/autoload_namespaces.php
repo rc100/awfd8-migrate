@@ -11,6 +11,7 @@ return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
     'Solarium\\' => array($vendorDir . '/solarium/solarium/library'),
+    'Smtpapi' => array($vendorDir . '/sendgrid/smtpapi/lib'),
     'Mandrill' => array($vendorDir . '/mandrill/mandrill/src'),
     'Mailchimp' => array($baseDir . '/web/modules/contrib/mailchimp/src'),
     'KubAT\\PhpSimple\\HtmlDomParser' => array($vendorDir . '/kub-at/php-simple-html-dom-parser/src'),
