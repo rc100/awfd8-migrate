@@ -53,7 +53,6 @@ module:
   field_ui: 0
   file: 0
   file_browser: 0
-  file_entity: 0
   filter: 0
   focal_point: 0
   google_tag: 0

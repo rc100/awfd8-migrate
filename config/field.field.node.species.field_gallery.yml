@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_gallery
     - node.type.species
-    - views.view.galleries_file
   module:
     - viewfield
 id: node.species.field_gallery
@@ -16,13 +15,7 @@ label: Gallery
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    token_help: ''
-    display_id: block_1
-    arguments: ''
-    items_to_display: ''
-    target_uuid: cdf17465-8bf4-42a5-b5c8-8f1cc8b9c593
+default_value: {  }
 default_value_callback: ''
 settings:
   force_default: false

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.project.body
     - field.field.node.project.field_alternate_thumbnail
     - field.field.node.project.field_basic_legacy_revision_id
@@ -31,7 +30,6 @@ dependencies:
     - node.type.project
   module:
     - content_moderation
-    - entity_browser
     - field_group
     - file
     - metatag
@@ -149,20 +147,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_alternate_thumbnail:
-    weight: 137
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
-    region: content
   field_basic_legacy_revision_id:
     weight: 142
     settings:
@@ -213,20 +197,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_main_image:
-    weight: 123
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 143
@@ -390,4 +360,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_alternate_thumbnail: true
+  field_main_image: true

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.staff.body
     - field.field.node.staff.field_heading
     - field.field.node.staff.field_image
@@ -22,7 +21,6 @@ dependencies:
     - node.type.staff
   module:
     - content_moderation
-    - entity_browser
     - field_group
     - metatag
     - path
@@ -75,20 +73,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_image:
-    weight: 3
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
     region: content
   field_land_habitat:
     weight: 12
@@ -229,4 +213,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_image: true

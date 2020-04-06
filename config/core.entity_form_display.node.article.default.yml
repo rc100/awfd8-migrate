@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_article_legacy_alias
@@ -15,7 +14,6 @@ dependencies:
   module:
     - comment
     - content_moderation
-    - entity_browser
     - metatag
     - path
     - text
@@ -63,20 +61,6 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_image:
-    type: entity_browser_file
-    weight: 4
-    region: content
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_meta_tags:
     weight: 123
     settings: {  }
@@ -156,4 +140,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_image: true

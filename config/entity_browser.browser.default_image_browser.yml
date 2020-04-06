@@ -1,40 +1,34 @@
-uuid: d5587cbe-62cb-4477-8118-14ef500414cd
-langcode: und
+uuid: 6592036f-ae85-447c-901e-0909830155fa
+langcode: en
 status: true
 dependencies:
   config:
-    - views.view.dexp_image_browser
-  enforced:
-    module:
-      - file_browser
+    - views.view.image_entity
   module:
     - dropzonejs_eb_widget
     - views
-_core:
-  default_config_hash: N3y52bEZkiYEw6HW7b1KtTa3p_cZCsW75tHh8Mnbuz0
-name: browse_files
-label: 'Browser for files'
+name: default_image_browser
+label: 'Default Image Browser'
 display: modal
 display_configuration:
   width: '900'
-  height: '768'
-  link_text: 'Select files'
+  height: '700'
+  link_text: 'Select entities'
   auto_open: false
 selection_display: multi_step_display
 selection_display_configuration:
   entity_type: file
-  display: thumbnail
-  display_settings:
-    image_style: file_entity_browser_small
+  display: label
+  display_settings: {  }
   select_text: 'Use selected'
   selection_hidden: false
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  735d146c-a4b2-4327-a057-d109e0905e05:
+  da3833d2-fe31-4f52-90aa-333dd4466275:
     settings:
-      upload_location: 'public://'
-      dropzone_description: 'Click or drop files here to upload them'
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
       max_filesize: 100M
       extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
       clientside_resize: false
@@ -45,17 +39,17 @@ widgets:
       thumbnail_method: contain
       submit_text: 'Select entities'
       auto_select: false
-    uuid: 735d146c-a4b2-4327-a057-d109e0905e05
-    weight: 0
-    label: 'Upload files'
+    uuid: da3833d2-fe31-4f52-90aa-333dd4466275
+    weight: 1
+    label: 'Upload New File'
     id: dropzonejs
-  07b225c2-fd50-4fb8-a341-47abbb48f19d:
+  e270b0e9-5bb4-4be8-b07e-13093a668783:
     settings:
-      view: dexp_image_browser
-      view_display: image_browser
+      view: image_entity
+      view_display: entity_browser_1
       submit_text: 'Select entities'
       auto_select: false
-    uuid: 07b225c2-fd50-4fb8-a341-47abbb48f19d
-    weight: 3
-    label: 'List existing files'
+    uuid: e270b0e9-5bb4-4be8-b07e-13093a668783
+    weight: 2
+    label: 'View Library'
     id: view
