@@ -16,6 +16,7 @@ dependencies:
   module:
     - entityqueue
     - file
+    - image_browser
     - jcarousel
     - user
 id: gallery_entity
@@ -81,17 +82,17 @@ display:
       row:
         type: fields
       fields:
-        rendered_entity:
-          id: rendered_entity
+        image_browser_preview:
+          id: image_browser_preview
           table: file_managed
-          field: rendered_entity
+          field: image_browser_preview
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
+            alter_text: true
             text: ''
             make_link: false
             path: ''
@@ -126,12 +127,11 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          view_mode: default
           entity_type: file
-          plugin_id: rendered_entity
+          plugin_id: image_browser_preview
       filters: {  }
       sorts: {  }
       title: 'Gallery Entity'
@@ -158,11 +158,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.land_habitat_gallery'
         - entity_field_info
         - views_data
@@ -180,11 +175,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.land_habitat_gallery'
         - entity_field_info
         - views_data
@@ -216,11 +206,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.community_livelihood'
         - entity_field_info
         - views_data
@@ -252,11 +237,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.protected_area_expansion'
         - entity_field_info
         - views_data
@@ -288,11 +268,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.protected_area_management'
         - entity_field_info
         - views_data
@@ -324,11 +299,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.land_use_planning'
         - entity_field_info
         - views_data
@@ -360,11 +330,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.community_conservation'
         - entity_field_info
         - views_data
@@ -396,11 +361,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.impact_investing'
         - entity_field_info
         - views_data
@@ -432,11 +392,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.primary_education'
         - entity_field_info
         - views_data
@@ -468,11 +423,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.sustainable_agriculture'
         - entity_field_info
         - views_data
@@ -504,11 +454,6 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.file.audio.thumbnail'
-        - 'config:core.entity_view_display.file.document.thumbnail'
-        - 'config:core.entity_view_display.file.image.default'
-        - 'config:core.entity_view_display.file.image.thumbnail'
-        - 'config:core.entity_view_display.file.video.thumbnail'
         - 'config:entityqueue.entity_queue.sustainable_tourism'
         - entity_field_info
         - views_data
