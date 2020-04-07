@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.hero_slideshow.body
     - field.field.node.hero_slideshow.field_main_image
     - field.field.node.hero_slideshow.field_meta_tags
@@ -15,7 +14,6 @@ dependencies:
     - node.type.hero_slideshow
   module:
     - content_moderation
-    - entity_browser
     - image
     - link
     - metatag
@@ -42,20 +40,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_main_image:
-    weight: 123
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
-    region: content
   field_meta_tags:
     weight: 126
     settings: {  }
@@ -154,4 +138,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_main_image: true

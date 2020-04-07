@@ -1,0 +1,3 @@
+settings:
+  notify_update: true
+  notify_apply: false

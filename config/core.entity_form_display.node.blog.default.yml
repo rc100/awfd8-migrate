@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.blog.field_tags_projects
     - field.field.node.blog.field_tags_region
     - node.type.blog
-    - workflows.workflow.legacy_workflow
   module:
     - content_moderation
     - link

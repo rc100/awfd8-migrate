@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.safari.body
     - field.field.node.safari.field_bushtracks_safari
     - field.field.node.safari.field_challenges
@@ -34,7 +33,6 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - entity_browser
     - field_group
     - metatag
     - paragraphs
@@ -194,20 +192,6 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_image:
-    weight: 35
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
-    region: content
   field_land_habitat:
     weight: 29
     settings: {  }
@@ -243,20 +227,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_main_image:
-    weight: 2
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 102
@@ -432,4 +402,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_image: true
+  field_main_image: true

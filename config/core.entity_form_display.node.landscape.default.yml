@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files
     - field.field.node.landscape.body
     - field.field.node.landscape.field_alternate_thumbnail
     - field.field.node.landscape.field_bullet_point_paragraph
@@ -36,7 +35,6 @@ dependencies:
     - node.type.landscape
   module:
     - content_moderation
-    - entity_browser
     - field_group
     - file
     - metatag
@@ -204,20 +202,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_alternate_thumbnail:
-    weight: 28
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
-    region: content
   field_bullet_point_paragraph:
     weight: 23
     settings:
@@ -277,20 +261,6 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_image:
-    weight: 33
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
-    region: content
   field_kml:
     weight: 31
     settings:
@@ -319,20 +289,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_main_image:
-    weight: 21
-    settings:
-      entity_browser: browse_files
-      field_widget_remove: true
-      selection_mode: selection_append
-      view_mode: thumbnail
-      field_widget_edit: false
-      field_widget_replace: false
-      open: false
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: entity_browser_file
     region: content
   field_meta_tags:
     weight: 101
@@ -509,3 +465,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_alternate_thumbnail: true
+  field_image: true
+  field_main_image: true
