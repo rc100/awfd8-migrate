@@ -89,8 +89,8 @@
   </div>
 </article>
 
-{# Don't print on homepage or safari page, but print everywhere else. #}
-{% if node.id == 4 or node.id == 4985 %}
+{# Don't print on homepage, safari page, or search page but print everywhere else. #}
+{% if node.id == 4 or node.id == 4985 or node.id == 7983 %}
 {% else %}
   {% if content.field_sidebar_item_paragraph|render|striptags or content.field_sidebar_item|render|striptags or view|striptags|trim %}
   <aside>
