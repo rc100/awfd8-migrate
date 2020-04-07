@@ -3297,7 +3297,7 @@ ul.gray-bullets li {
     font-size: 0;
     position: absolute;
     right: 50px;
-    top: 38px; }
+    top: 45px; }
     @media (min-width: 1024px) {
       .mainnav .icon-search {
         position: absolute;
@@ -3334,7 +3334,7 @@ ul.gray-bullets li {
       @media (min-width: 1024px) {
         .mainnav .search-block-form.is-open {
           right: 110px;
-          margin-top: -8px; } }
+          margin-top: -16px; } }
       .mainnav .search-block-form.is-open:after {
         display: none;
         content: none; }
@@ -3571,8 +3571,8 @@ ul.gray-bullets li {
   @media (min-width: 1024px) {
     .region-donate {
       background: transparent;
-      padding: 10px 0 0;
-      top: 0; } }
+      padding: 0;
+      top: 0.5rem; } }
 
 .donate {
   display: block;
