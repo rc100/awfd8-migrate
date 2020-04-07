@@ -4,4 +4,4 @@ description: Get geolocation of user, based on their IP and modify site content 
 core: 8.x
 package: custom
 dependencies:
-  - geoip
+  - smart_ip

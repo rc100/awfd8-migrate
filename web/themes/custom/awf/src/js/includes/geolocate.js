@@ -33,6 +33,10 @@
           });
         }
       }
+      // Hide newsletter signup form for users in the EU.
+      if ($('body').hasClass('in-eu')) {
+        $('#block-awf-webform-newsletter').hide();
+      }
     }
   };
 })(jQuery, Drupal);

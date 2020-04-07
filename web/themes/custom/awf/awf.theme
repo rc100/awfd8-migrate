@@ -103,6 +103,15 @@ function awf_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'in-uk';
     }
   }
+
+  // Add 'in-eu' class to <body> if user is in the EU.
+  if (function_exists('awf_geolocate_user_in_eu')) {
+    $in_eu = awf_geolocate_user_in_eu();
+
+    if ($in_eu) {
+      $variables['attributes']['class'][] = 'in-eu';
+    }
+  }
 }
 
 /**
