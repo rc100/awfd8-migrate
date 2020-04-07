@@ -186,3 +186,4 @@ hidden:
   field_news_legacy_alias: true
   field_news_legacy_id: true
   langcode: true
+  search_api_excerpt: true
