@@ -4180,7 +4180,8 @@ a.share {
 
 .view-search {
   background: white;
-  padding: 2rem; }
+  padding: 2rem;
+  top: -4rem; }
   .view-search .views-row {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 2rem;
@@ -4191,9 +4192,11 @@ a.share {
       display: none; }
     .view-search .view-filters .form--inline .form-item {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      width: 100%; }
       .view-search .view-filters .form--inline .form-item .form-text {
         background: #fff;
+        border: 1px solid #878475;
         display: block;
         height: 42px;
         margin: 0;
@@ -4202,37 +4205,40 @@ a.share {
         width: 100%;
         line-height: 40px;
         padding: 5px 40px 5px 10px; }
-    .view-search .view-filters .form--inline .views-submit-button {
-      margin: 0; }
-      .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE {
-        border: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        display: block;
-        font-size: 0;
-        height: 34px;
-        line-height: 38px;
-        margin: 0;
-        opacity: 1;
-        padding: 0;
-        position: absolute;
-        right: 1px;
-        text-indent: -9999px;
-        bottom: 43%;
-        width: 31px;
-        z-index: 2;
-        font-family: "awf" !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased; }
-        .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:before {
-          content: "\e986"; }
-        .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:hover, .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:focus {
-          opacity: 1; }
+    .view-search .view-filters .form--inline .form-submit {
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      display: block;
+      font-size: 0;
+      height: 40px;
+      line-height: 38px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 1px;
+      text-indent: -9999px;
+      top: 1px;
+      width: 35px; }
+    .view-search .view-filters .form--inline .form-actions:before {
+      content: "\e986";
+      font-family: "awf" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      height: 18px;
+      z-index: 5;
+      width: auto;
+      pointer-events: none;
+      padding: 1.25rem 1rem 1rem; }
     .view-search .view-filters .form--inline #edit-reset---ZjZVxBag68 {
       display: none; }
 
