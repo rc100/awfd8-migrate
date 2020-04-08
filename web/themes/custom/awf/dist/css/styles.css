@@ -4178,6 +4178,64 @@ a.share {
       left: 5.5rem;
       display: inline-block; }
 
+.view-search {
+  background: white;
+  padding: 2rem; }
+  .view-search .views-row {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; }
+  .view-search .view-filters .form--inline {
+    position: relative; }
+    .view-search .view-filters .form--inline label, .view-search .view-filters .form--inline .field .field-label, .field .view-search .view-filters .form--inline .field-label {
+      display: none; }
+    .view-search .view-filters .form--inline .form-item {
+      margin: 0;
+      padding: 0; }
+      .view-search .view-filters .form--inline .form-item .form-text {
+        background: #fff;
+        display: block;
+        height: 42px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        line-height: 40px;
+        padding: 5px 40px 5px 10px; }
+    .view-search .view-filters .form--inline .views-submit-button {
+      margin: 0; }
+      .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE {
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: block;
+        font-size: 0;
+        height: 34px;
+        line-height: 38px;
+        margin: 0;
+        opacity: 1;
+        padding: 0;
+        position: absolute;
+        right: 1px;
+        text-indent: -9999px;
+        bottom: 43%;
+        width: 31px;
+        z-index: 2;
+        font-family: "awf" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased; }
+        .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:before {
+          content: "\e986"; }
+        .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:hover, .view-search .view-filters .form--inline .views-submit-button #edit-submit-search--9gxMcgJZ7mE:focus {
+          opacity: 1; }
+    .view-search .view-filters .form--inline #edit-reset---ZjZVxBag68 {
+      display: none; }
+
 .view-sitemap hr {
   margin-top: 0;
   margin-bottom: 4rem; }
