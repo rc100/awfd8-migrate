@@ -33,18 +33,18 @@
     });
 
     //Add Divs for Endangered
-    $( '[data-danger="0"]' ).first().parent().before( '<li class="tile-danger-0 node--view-mode-isotope"><a name="varied">Varied</a></li>' );
-    $( '[data-danger="1"]' ).first().parent().before( '<li class="tile-danger-1 node--view-mode-isotope"><a name="critically">Critically-Endangered</li>' );
-    $( '[data-danger="2"]' ).first().parent().before( '<li class="tile-danger-2 node--view-mode-isotope"><a name="endangered">Endangered</a></li>' );
-    $( '[data-danger="3"]' ).first().parent().before( '<li class="tile-danger-3 node--view-mode-isotope"><a name="vulnerable">Vulnerable</a></li>' );
-    $( '[data-danger="4"]' ).first().parent().before( '<li class="tile-danger-4 node--view-mode-isotope"><a name="near">Near-threatened</a></li>' );
-    $( '[data-danger="5"]' ).first().parent().before( '<li class="tile-danger-5 node--view-mode-isotope"><a name="least">Least Threatened</a></li>' );
+    $( '[data-danger="0"]' ).first().parent().before( '<li class="tile-danger-0 node--view-mode-isotope" data-danger="0" data-species="aaaa"><a name="varied">Varied</a></li>' );
+    $( '[data-danger="1"]' ).first().parent().before( '<li class="tile-danger-1 node--view-mode-isotope" data-danger="1" data-species="aaaa"><a name="critically">Critically-Endangered</a></li>' );
+    $( '[data-danger="2"]' ).first().parent().before( '<li class="tile-danger-2 node--view-mode-isotope" data-danger="2" data-species="aaaa"><a name="endangered">Endangered</a></li>' );
+    $( '[data-danger="3"]' ).first().parent().before( '<li class="tile-danger-3 node--view-mode-isotope" data-danger="3" data-species="aaaa"><a name="vulnerable">Vulnerable</a></li>' );
+    $( '[data-danger="4"]' ).first().parent().before( '<li class="tile-danger-4 node--view-mode-isotope" data-danger="4" data-species="aaaa"><a name="near">Near-threatened</a></li>' );
+    $( '[data-danger="5"]' ).first().parent().before( '<li class="tile-danger-5 node--view-mode-isotope" data-danger="5" data-species="aaaa"><a name="least">Least Threatened</a></li>' );
 
     //Add Divs for Size
-    $( '[data-size="extra-large"]' ).first().parent().before( '<li class="tile-size-0 node--view-mode-isotope"><a name="extra">Extra-Large</a></li>' );
-    $( '[data-size="large"]' ).first().parent().before( '<li class="tile-size-1 node--view-mode-isotope"><a name="large">Large</a></li>' );
-    $( '[data-size="medium"]' ).first().parent().before( '<li class="tile-size-2 node--view-mode-isotope"><a name="medium">Medium</a></li>' );
-    $( '[data-size="small"]' ).first().parent().before( '<li class="tile-size-3 node--view-mode-isotope"><a name="small">Small</a></li>' );
+    $( '[data-size="extra-large"]' ).first().parent().before( '<li class="tile-size-0 node--view-mode-isotope" data-size="extra-large" data-species="aaaa"><a name="extra">Extra-Large</a></li>' );
+    $( '[data-size="large"]' ).first().parent().before( '<li class="tile-size-1 node--view-mode-isotope" data-size="large" data-species="aaaaa"><a name="large">Large</a></li>' );
+    $( '[data-size="medium"]' ).first().parent().before( '<li class="tile-size-2 node--view-mode-isotope" data-size="medium" data-species="aaaaaa"><a name="medium">Medium</a></li>' );
+    $( '[data-size="small"]' ).first().parent().before( '<li class="tile-size-3 node--view-mode-isotope" data-size="small" data-species="aaaaaaa"><a name="small">Small</a></li>' );
 
     //Hide these by default
     $('.jumpto-size').hide();
@@ -76,8 +76,7 @@
     var qsRegex;
 
     //Init isotope
-    var $grid = $('.item-list').imagesLoaded( function() {
-      $grid.isotope({
+    var $grid = $('.item-list').isotope({
         itemSelector: '.node--view-mode-isotope',
         masonry: {
           columnWidth: 220,
@@ -92,7 +91,6 @@
           danger: '[data-danger]'
         }
       });
-    });
 
     // use value of search field to filter
     var $quicksearch = $('.quicksearch').keyup( debounce( function() {
