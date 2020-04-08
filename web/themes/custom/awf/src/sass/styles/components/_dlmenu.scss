@@ -463,9 +463,14 @@
         padding: 4px;
         margin-left: 20px;
 
+        br {
+          display: none;
+        }
+
         @include breakpoint($min760) {
           width: 82%;
           margin-left: 0;
+          margin-top: 0;
         }
 
         input {
