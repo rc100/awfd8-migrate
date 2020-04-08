@@ -1,0 +1,25 @@
+uuid: 5fb27fd0-c706-4425-894f-1a526823dd39
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a0fcdfdb-1013-4847-af3b-ed685b75bc75'
+  module:
+    - block_content
+  theme:
+    - awf
+id: searchbarblock
+theme: awf
+region: nav_overlay
+weight: 0
+provider: null
+plugin: 'block_content:a0fcdfdb-1013-4847-af3b-ed685b75bc75'
+settings:
+  id: 'block_content:a0fcdfdb-1013-4847-af3b-ed685b75bc75'
+  label: 'Search Bar Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

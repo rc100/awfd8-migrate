@@ -25,7 +25,7 @@ reactions:
         label: Projects
         provider: facets
         label_display: visible
-        region: sidebar_second
+        region: disabled
         weight: '-4'
         context_mapping: {  }
         theme: awf
@@ -38,8 +38,8 @@ reactions:
         label: Resources
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '-3'
+        region: disabled
+        weight: '4'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -51,8 +51,8 @@ reactions:
         label: Wildlife
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '-2'
+        region: disabled
+        weight: '3'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -64,8 +64,8 @@ reactions:
         label: Community
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '-1'
+        region: disabled
+        weight: '2'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -77,8 +77,8 @@ reactions:
         label: Economic
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '0'
+        region: disabled
+        weight: '1'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -90,8 +90,8 @@ reactions:
         label: 'Land & Habitat'
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '1'
+        region: disabled
+        weight: '0'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -103,8 +103,8 @@ reactions:
         label: Landscapes
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '2'
+        region: disabled
+        weight: '-1'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -116,8 +116,8 @@ reactions:
         label: Regions
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '3'
+        region: disabled
+        weight: '-2'
         context_mapping: {  }
         theme: awf
         css_class: ''
@@ -129,8 +129,8 @@ reactions:
         label: Countries
         provider: facets
         label_display: visible
-        region: sidebar_second
-        weight: '4'
+        region: disabled
+        weight: '-3'
         context_mapping: {  }
         theme: awf
         css_class: ''
