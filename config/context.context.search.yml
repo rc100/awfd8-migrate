@@ -152,6 +152,22 @@ reactions:
         unique: 0
         context_id: search
         uuid: 6f0f51db-298f-4e72-a2fc-cee35658cb12
+      f8e0953f-fd9a-4fdf-8aa1-230434b17f32:
+        id: 'block_content:4bc7a16f-c6ac-4a98-a3a7-2324d82ec2ed'
+        label: 'search code'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: awf
+        css_class: ''
+        unique: 0
+        context_id: search
+        uuid: f8e0953f-fd9a-4fdf-8aa1-230434b17f32
     id: blocks
     saved: false
     uuid: 8330459d-f848-428f-857b-9c0b80055724
