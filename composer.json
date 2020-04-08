@@ -79,6 +79,7 @@
         "drupal/search_api_pantheon": "~1.0",
         "drupal/sendgrid_integration": "^1.2",
         "drupal/site_audit": "^2.2",
+        "drupal/smart_ip": "^3.7",
         "drupal/smtp": "^1.0@beta",
         "drupal/token": "^1.5",
         "drupal/token_filter": "^1.1",
@@ -161,6 +162,7 @@
                 "web.config"
             ]
         },
+        "enable-patching": true,
         "patches": {
             "drupal/core": {
                 "Drupal Views Check For Null Values": "https://www.drupal.org/files/issues/2019-07-08/view_module_add_check_for_null_values.patch"

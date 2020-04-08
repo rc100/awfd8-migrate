@@ -41,6 +41,171 @@
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
     <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a31b9ef0c3a12001239dcd5&product=inline-share-buttons"></script>
+    <!-- Quantcast Choice. Consent Manager Tag -->
+    <script type="text/javascript" , async=true>
+      var env = 'dev'; // Change me for different environments!
+      var __cmp = (function () {
+        return typeof (__cmp) == "function" ? __cmp : function (c) {
+          var b = arguments;
+          if (!b.length) {
+            return __cmp.a;
+          }
+          else if (c == '__cmp')
+            return false;
+          else {
+            if (typeof __cmp.a === 'undefined') {
+              __cmp.a = [];
+            }
+            __cmp.a.push([].slice.apply(b));
+          }
+        }
+      })();
+
+      var elem = document.createElement('script');
+      elem.src = "https://quantcast.mgr.consensu.org/cmp.js";
+      elem.async = true;
+      elem.type = "text/javascript";
+      var scpt = document.getElementsByTagName('script')[0];
+      scpt.parentNode.insertBefore(elem, scpt);
+
+      window.__cmp('init', {
+        'Display UI': 'inEU', /* JIM L-MUST CHANGE TO "inEU" WHEN NOT TESTING. Values can be "always" (all locations), "inEU" (EU users only) or "never" (UI will never be shown)*/
+        'Min Days Between UI Displays': 1, /* Number of days  */
+        'Publisher Name': 'African Wildlife Foundation', /* Make sure you replace with your company name here */
+        'Publisher Logo': 'https://www.awf.org/sites/all/themes/awf/img/newlogo_brown_web.png', /* Make sure this is a path on your servers that is not likely to change */
+        'Initial Screen Title Text': 'We value your privacy',
+        'Initial Screen Body Text': 'African Wildlife Foundation and our partners use technology such as cookies on our site to personalize content and ads, provide social media features, and analyze our traffic to provide you with the best possible experience when browsing our sites. Click below to consent to the use of this technology by African Wildlife Foundation and these 3rd parties across the web. You can change your mind and revisit your consent choices at anytime by returning to this site.',
+        'Initial Screen Reject Button Text': 'I Do Not Accept',
+        'Initial Screen Accept Button Text': 'I Accept',
+        'Initial Screen Purpose Link Text': 'Show Purposes',
+        'Purpose Screen Header Title Text': 'Manage Page',
+        'Purpose Screen Title Text': 'Purposes For Which We Use Your Data',
+        'Purpose Screen Body Text': 'African Wildlife Foundation and our partners use technology such as cookies on our site to personalize content and ads, provide social media features, and analyze our traffic to provide you with the best possible experience when browsing our sites. You can toggle your consent preference on or off based on purpose for all companies listed under each purpose to the use of this technology across the web. You can change your mind and revisit your consent choices at anytime by returning to this site.',
+        'Purpose Screen Enable All Button Text': 'Enable all purposes',
+        'Purpose Screen Vendor Link Text': 'See full vendor list',
+        'Purpose Screen Cancel Button Text': 'Cancel',
+        'Purpose Screen Save and Exit Button Text': 'Save & Exit',
+        'Vendor Screen Title Text': 'We value your privacy',
+        'Vendor Screen Body Text': 'African Wildlife Foundation and our partners use technology such as cookies on our site to personalize content and ads, provide social media features, and analyze our traffic. You can toggle your consent preference on or off  for each company to the use of this technology across the web. You can change your mind and revisit your consent choices at anytime by returning to this site.',
+        'Vendor Screen Reject All Button Text': 'Reject All',
+        'Vendor Screen Accept All Button Text': 'Accept All',
+        'Vendor Screen Purposes Link Text': 'Back to purposes',
+        'Vendor Screen Cancel Button Text': 'Cancel',
+        'Vendor Screen Save and Exit Button Text': 'Save & Exit'
+     });
+
+     negativeSignal = false;
+     cmpInterval = setInterval(function() {
+          var el = document.querySelector("#qcCmpUi > div > div > button.qc-cmp-button.qc-cmp-secondary-button");
+          if (el ) {
+              el.setAttribute ("onclick", null);
+              el.addEventListener("click", function(event) {
+                  window.__cmpui("setAndSaveAllConsent", false);
+                  negativeSignal = true;
+              });
+              clearInterval(cmpInterval);
+          }
+      }, 250);
+
+      window.__cmp('setConsentUiCallback', function() {
+          clearInterval(cmpInterval);
+          if (negativeSignal) {
+              if(env == "dev") {
+                window.location = "http://dev.awf.org";
+              } else if(env == "stage") {
+                window.location = "http://stage.awf.org";
+              } else {
+                window.location = "https://www.awf.org";
+              }
+          }
+      });
+    </script>
+    <!-- End Quantcast Choice. Consent Manager Tag -->
+
+    <style>
+      /* ### BUTTON COLOUR ### */
+      .qc-cmp-button,
+      .qc-cmp-button.qc-cmp-secondary-button:hover {
+          background-color: #329A94 !important;
+          border-color: #329A94 !important;
+      }
+      .qc-cmp-button:hover,
+      .qc-cmp-button.qc-cmp-secondary-button {
+          background-color: transparent !important;
+          border-color: #329A94 !important;
+      }
+      /* ### BUTTON FONT COLOUR ### */
+      .qc-cmp-button,
+      .qc-cmp-button.qc-cmp-secondary-button:hover {
+          color: #ffffff !important;
+      }
+      .qc-cmp-button:hover,
+      .qc-cmp-button.qc-cmp-secondary-button {
+          color: #000000 !important;
+      }
+      /* ### LINK COLOUR ### */
+      .qc-cmp-alt-action,
+      .qc-cmp-link {
+          color: #000000 !important;
+      }
+      .qc-cmp-alt-action:hover,
+      .qc-cmp-link:hover {
+          color: #f0723a !important;
+      }
+      /* ### TEXT COLOUR ### */
+      .qc-cmp-main-messaging,
+      .qc-cmp-messaging,
+      .qc-cmp-sub-title,
+      .qc-cmp-privacy-settings-title,
+      .qc-cmp-purpose-list,
+      .qc-cmp-tab,
+      .qc-cmp-title,
+      .qc-cmp-vendor-list,
+      .qc-cmp-vendor-list-title {
+          color: #322c2a !important;
+      }
+      /* ### TEXT FONT FAMILY ### */
+      .qc-cmp-alt-action,
+      .qc-cmp-button,
+      .qc-cmp-main-messaging,
+      .qc-cmp-messaging,
+      .qc-cmp-sub-title,
+      .qc-cmp-link,
+      .qc-cmp-privacy-settings-title,
+      .qc-cmp-purpose-list,
+      .qc-cmp-tab,
+      .qc-cmp-title,
+      .qc-cmp-vendor-list {
+          font-family: Source Sans Pro; !important;
+      }
+      /* ###BASE TEXT FONT SIZE ### */
+      .qc-cmp-alt-action,
+      .qc-cmp-button,
+      .qc-cmp-main-messaging,
+      .qc-cmp-messaging,
+      .qc-cmp-purpose-list,
+      .qc-cmp-tab,
+      .qc-cmp-vendor-list {
+          font-size: 14px !important;
+      }
+      /* ### TAB HOVER COLOUR ### */
+      .qc-cmp-tab:hover {
+          background-color: #000000 !important;
+          color: #ffffff !important;
+      }
+      /* ### TOGGLE ON COLOUR ### */
+      .qc-cmp-small-toggle.qc-cmp-toggle-on,
+      .qc-cmp-toggle.qc-cmp-toggle-on {
+          background-color: #329A94 !important;
+          border-color: #000000 !important;
+      }
+      /* ### TOGGLE OFF COLOUR ### */
+      .qc-cmp-small-toggle,
+      .qc-cmp-toggle {
+          background-color: #a6a9ae !important;
+          border-color: #a6a9ae !important;
+      }
+    </style>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {{ brightedge_body_open|raw }}

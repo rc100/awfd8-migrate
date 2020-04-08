@@ -25,7 +25,7 @@ use BrightEdge\BEIXFClient;
 require_once dirname(__FILE__) . '/includes/be_ixf_client.php';
 
 /**
- * Implements template_preprocess for the template.
+ * Implements template_preprocess_html().
  */
 function awf_preprocess_html(&$variables) {
 
@@ -93,10 +93,63 @@ function awf_preprocess_html(&$variables) {
   $variables['brightedge_head_open'] = $be_ixf->getHeadOpen();
   $variables['brightedge_body_open'] = $be_ixf->getBodyOpen();
   $variables['brightedge_body_close'] = $be_ixf->close();
+
+  // Geolocation functionality (using awf_geolocation module).
+  if (function_exists('awf_geolocate_user_in_uk')) {
+    $in_uk = awf_geolocate_user_in_uk();
+
+    // Add 'in-uk' class to <body> if user is in the UK (based on their IP).
+    if ($in_uk) {
+      $variables['attributes']['class'][] = 'in-uk';
+    }
+  }
+
+  // Add 'in-eu' class to <body> if user is in the EU.
+  if (function_exists('awf_geolocate_user_in_eu')) {
+    $in_eu = awf_geolocate_user_in_eu();
+
+    if ($in_eu) {
+      $variables['attributes']['class'][] = 'in-eu';
+    }
+  }
 }
 
 /**
- * Implements template_preprocess for the template.
+ * Implements template_preprocess_page().
+ */
+function awf_preprocess_page(&$variables) {
+  $variables['donate_url'] = 'https://secure.awf.org/';
+
+  // Geolocation functionality (using awf_geolocation module).
+  if (function_exists('awf_geolocate_user_in_uk')) {
+    $in_uk = awf_geolocate_user_in_uk();
+
+    // Override Donate URL if user is in the UK.
+    if ($in_uk) {
+      $variables['donate_url'] = 'https://secure.awf.org/donate-uk';
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function awf_preprocess_region(&$variables) {
+  // Geolocation functionality (using awf_geolocation module).
+  $variables['in_uk'] = '';
+
+  if (function_exists('awf_geolocate_user_in_uk')) {
+    $in_uk = awf_geolocate_user_in_uk();
+
+    // Add template variable indicating if user is in the UK.
+    if ($in_uk) {
+      $variables['in_uk'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_node().
  */
 function awf_preprocess_node(&$variables) {
   $node = $variables['node'];
@@ -105,7 +158,7 @@ function awf_preprocess_node(&$variables) {
 }
 
 /**
- * Implements theme_suggestions_page_alter() for theming.
+ * Implements theme_suggestions_page_alter().
  */
 function awf_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add content type suggestions.
@@ -115,7 +168,7 @@ function awf_theme_suggestions_page_alter(array &$suggestions, array $variables)
 }
 
 /**
- * Implements theme_preprocess_block() for theming.
+ * Implements theme_preprocess_block().
  */
 function awf_preprocess_block(&$vars) {
   $request = \Drupal::request();
@@ -126,7 +179,7 @@ function awf_preprocess_block(&$vars) {
 }
 
 /**
- * Implements template_preprocess_HOOK() for fields.
+ * Implements template_preprocess_field().
  */
 function awf_preprocess_field(&$variables) {
   $field_name = $variables['field_name'];
