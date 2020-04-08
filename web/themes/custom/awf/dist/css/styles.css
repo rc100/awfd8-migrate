@@ -4181,7 +4181,7 @@ a.share {
 .view-search {
   background: white;
   padding: 2rem;
-  top: -4rem; }
+  margin-top: -4rem; }
   .view-search .views-row {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 2rem;
