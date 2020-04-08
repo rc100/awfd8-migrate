@@ -3349,10 +3349,13 @@ ul.gray-bullets li {
         width: 76%;
         padding: 4px;
         margin-left: 20px; }
+        .mainnav .search-block-form.is-open .form-item br {
+          display: none; }
         @media (min-width: 760px) {
           .mainnav .search-block-form.is-open .form-item {
             width: 82%;
-            margin-left: 0; } }
+            margin-left: 0;
+            margin-top: 0; } }
         .mainnav .search-block-form.is-open .form-item input {
           font-size: 16px;
           padding: 5px;
