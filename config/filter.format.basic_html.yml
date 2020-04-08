@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - convert_media_tags_to_markup
     - editor
     - media
     - token_filter
@@ -61,3 +62,9 @@ filters:
     weight: 0
     settings:
       replace_empty: '0'
+  convert_legacy_media_tags_to_markup:
+    id: convert_legacy_media_tags_to_markup
+    provider: convert_media_tags_to_markup
+    status: true
+    weight: 0
+    settings: {  }
