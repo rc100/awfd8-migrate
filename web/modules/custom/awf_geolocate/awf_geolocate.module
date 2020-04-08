@@ -22,6 +22,27 @@ function awf_geolocate_user_in_uk($ip = NULL) {
 }
 
 /**
+ * Check if an IP address is in the EU (defaults to IP of current request).
+ * This is not currently possible w/ the GeoIP contrib.
+ */
+function awf_geolocate_user_in_eu($ip = NULL) {
+
+  if (empty($ip)) {
+    $ip = \Drupal::request()->getClientIp();
+  }
+
+  // @todo Debug only - force IP to be from EU or not (UK).
+  //$ip = '185.86.151.11'; // UK ip.
+  //$ip = '176.56.238.3'; // EU ip.
+
+  // Get EU info from IP, using Smart IP contrib.
+  $location = SmartIp::query($ip);
+  $in_eu = (isset($location['isEuCountry']) && $location['isEuCountry']) ? TRUE : FALSE;
+
+  return $in_eu;
+}
+
+/**
  * Get the country code from an IP address (defaults to IP of current request).
  */
 function awf_geolocate_get_country_code($ip = NULL) {
@@ -39,25 +60,4 @@ function awf_geolocate_get_country_code($ip = NULL) {
   $country_code = (isset($location['countryCode'])) ? $location['countryCode'] : NULL;
 
   return $country_code;
-}
-
-/**
- * Check if an IP address is in the EU (defaults to IP of current request).
- * This is not currently possible w/ the GeoIP contrib.
- */
-function awf_geolocate_user_in_eu($ip = NULL) {
-
-  if (empty($ip)) {
-    $ip = \Drupal::request()->getClientIp();
-  }
-
-  // @todo Debug only - force IP to be from EU or not (UK).
-  //$ip = '185.86.151.11'; // UK ip.
-  $ip = '176.56.238.3'; // EU ip.
-
-  // Get EU info from IP, using Smart IP contrib.
-  $location = SmartIp::query($ip);
-  $in_eu = (isset($location['isEuCountry']) && $location['isEuCountry']) ? TRUE : FALSE;
-
-  return $in_eu;
 }
