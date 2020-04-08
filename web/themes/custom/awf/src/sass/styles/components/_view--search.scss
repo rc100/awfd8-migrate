@@ -4,14 +4,13 @@
 .view-search {
   background: white;
   padding: 2rem;
+  top: -4rem;
 
   .views-row {
     border-bottom: 1px solid $verylightgray;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
   }
-
-
 
   .view-filters {
     .form--inline {
@@ -24,9 +23,11 @@
       .form-item {
         margin: 0;
         padding: 0;
+        width: 100%;
 
         .form-text {
           background: #fff;
+          border: 1px solid $tan;
           display: block;
           height: 42px;
           margin: 0;
@@ -38,30 +39,28 @@
         }
       }
 
-      .views-submit-button {
+      .form-submit {
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        display: block;
+        font-size: 0;
+        height: 40px;
+        line-height: 38px;
         margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 1px;
+        text-indent: -9999px;
+        top: 1px;
+        width: 35px;
+      }
 
-        #edit-submit-search--9gxMcgJZ7mE {
-          border: 0;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-          box-shadow: none;
-          display: block;
-          font-size: 0;
-          height: 34px;
-          line-height: 38px;
-          margin: 0;
-          opacity: 1;
-          padding: 0;
-          position: absolute;
-          right: 1px;
-          text-indent: -9999px;
-          bottom: 43%;
-          width: 31px;
-          z-index: 2;
-
-
-
+      .form-actions {
+        &:before {
+          content: "\e986";
           font-family: "awf" !important;
           speak: none;
           font-style: normal;
@@ -70,15 +69,14 @@
           text-transform: none;
           line-height: 1;
           -webkit-font-smoothing: antialiased;
-          &:before {
-            content: "\e986";
-          }
-
-
-          &:hover,
-          &:focus {
-            opacity: 1;
-          }
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          height: 18px;
+          z-index: 5;
+          width: auto;
+          pointer-events: none;
+          padding: 1.25rem 1rem 1rem;
         }
       }
 
