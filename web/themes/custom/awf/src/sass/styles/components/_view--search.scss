@@ -1,0 +1,90 @@
+// View -- Search page
+// /search
+
+.view-search {
+  background: white;
+  padding: 2rem;
+
+  .views-row {
+    border-bottom: 1px solid $verylightgray;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+
+
+  .view-filters {
+    .form--inline {
+      position: relative;
+
+      label {
+        display: none;
+      }
+
+      .form-item {
+        margin: 0;
+        padding: 0;
+
+        .form-text {
+          background: #fff;
+          display: block;
+          height: 42px;
+          margin: 0;
+          padding: 0;
+          position: relative;
+          width: 100%;
+          line-height: 40px;
+          padding: 5px 40px 5px 10px;
+        }
+      }
+
+      .views-submit-button {
+        margin: 0;
+
+        #edit-submit-search--9gxMcgJZ7mE {
+          border: 0;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          display: block;
+          font-size: 0;
+          height: 34px;
+          line-height: 38px;
+          margin: 0;
+          opacity: 1;
+          padding: 0;
+          position: absolute;
+          right: 1px;
+          text-indent: -9999px;
+          bottom: 43%;
+          width: 31px;
+          z-index: 2;
+
+
+
+          font-family: "awf" !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          &:before {
+            content: "\e986";
+          }
+
+
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+
+      #edit-reset---ZjZVxBag68 {
+        display: none;
+      }
+    }
+  }
+}
