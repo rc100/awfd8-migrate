@@ -1,0 +1,43 @@
+data_source: maxmind_geoip2_bin_db
+roles_to_geolocate:
+  anonymous: anonymous
+  authenticated: authenticated
+  administrator: '0'
+  editor: '0'
+  blogger: '0'
+  junior_administrator: '0'
+  human_resources: '0'
+  junior_content_editor_our_staff: '0'
+  communications: '0'
+  media_relations: '0'
+  partner_administration: '0'
+save_user_location_creation: true
+roles_in_debug_mode:
+  anonymous: false
+  authenticated: false
+  administrator: false
+  editor: false
+  blogger: false
+  junior_administrator: false
+  human_resources: false
+  junior_content_editor_our_staff: false
+  communications: false
+  media_relations: false
+  partner_administration: false
+roles_in_debug_mode_ip:
+  anonymous: ''
+  authenticated: ''
+  administrator: ''
+  editor: ''
+  blogger: ''
+  junior_administrator: ''
+  human_resources: ''
+  junior_content_editor_our_staff: ''
+  communications: ''
+  media_relations: ''
+  partner_administration: ''
+allowed_pages: ''
+eu_visitor_dont_save: true
+timezone_format: identifier
+_core:
+  default_config_hash: 9Cx1wODaajnKKoHf-A1qO1Kh9Rgsbey-_19WUFDZPZA

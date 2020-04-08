@@ -527,17 +527,17 @@
     },
     {
         "name": "composer/ca-bundle",
-        "version": "1.2.6",
-        "version_normalized": "1.2.6.0",
+        "version": "1.2.7",
+        "version_normalized": "1.2.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+            "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-            "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+            "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
             "shasum": ""
         },
         "require": {
@@ -550,7 +550,7 @@
             "psr/log": "^1.0",
             "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
         },
-        "time": "2020-01-13T10:02:55+00:00",
+        "time": "2020-04-08T08:27:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5714,80 +5714,6 @@
         "homepage": "https://www.drupal.org/project/focal_point",
         "support": {
             "source": "https://git.drupalcode.org/project/focal_point"
-        }
-    },
-    {
-        "name": "drupal/geoip",
-        "version": "2.0.0-beta1",
-        "version_normalized": "2.0.0.0-beta1",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/project/geoip.git",
-            "reference": "8.x-2.0-beta1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geoip-8.x-2.0-beta1.zip",
-            "reference": "8.x-2.0-beta1",
-            "shasum": "04b4935436af838f2b3490e905a5ef1a6cc996e7"
-        },
-        "require": {
-            "drupal/address": "*",
-            "drupal/core": "~8.0",
-            "geoip2/geoip2": "~2.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.0-beta1",
-                "datestamp": "1542289080",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Beta releases are not covered by Drupal security advisories."
-                }
-            },
-            "patches_applied": {
-                "3014113: Debug lookup form for testing plugins": "https://www.drupal.org/files/issues/2018-11-16/debug-lookup-3014113-1.patch"
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "bojanz",
-                "homepage": "https://www.drupal.org/user/86106"
-            },
-            {
-                "name": "das-peter",
-                "homepage": "https://www.drupal.org/user/762870"
-            },
-            {
-                "name": "drewish",
-                "homepage": "https://www.drupal.org/user/34869"
-            },
-            {
-                "name": "frankcarey",
-                "homepage": "https://www.drupal.org/user/112063"
-            },
-            {
-                "name": "mglaman",
-                "homepage": "https://www.drupal.org/user/2416470"
-            },
-            {
-                "name": "zroger",
-                "homepage": "https://www.drupal.org/user/67977"
-            }
-        ],
-        "description": "API module for interacting with geolocation services.",
-        "homepage": "http://drupal.org/project/geoip",
-        "support": {
-            "source": "https://git.drupalcode.org/project/geoip"
         }
     },
     {
