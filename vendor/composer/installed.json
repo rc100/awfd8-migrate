@@ -8159,22 +8159,19 @@
     },
     {
         "name": "drupal/rules",
-        "version": "3.0.0-alpha5",
-        "version_normalized": "3.0.0.0-alpha5",
+        "version": "dev-3.x",
+        "version_normalized": "dev-3.x",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/rules.git",
-            "reference": "8.x-3.0-alpha5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/rules-8.x-3.0-alpha5.zip",
-            "reference": "8.x-3.0-alpha5",
-            "shasum": "7c88959b047986783aa9d4afc992093df08ce0ee"
+            "reference": "74253f2af617d594908c6966b205d70c5002224b"
         },
         "require": {
-            "drupal/core": "~8.0",
-            "drupal/typed_data": "*"
+            "drupal/core": "^8.7",
+            "drupal/typed_data": "1.x-dev"
+        },
+        "require-dev": {
+            "drupal/typed_data": "1.x-dev"
         },
         "type": "drupal-module",
         "extra": {
@@ -8182,15 +8179,20 @@
                 "dev-3.x": "3.x-dev"
             },
             "drupal": {
-                "version": "8.x-3.0-alpha5",
-                "datestamp": "1566193991",
+                "version": "8.x-3.x-dev",
+                "datestamp": "1586288645",
                 "security-coverage": {
                     "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "drush": {
+                "services": {
+                    "drush.services.yml": "^9"
                 }
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
             "GPL-2.0+"
@@ -8212,7 +8214,8 @@
         "description": "React on events and conditionally evaluate actions.",
         "homepage": "https://www.drupal.org/project/rules",
         "support": {
-            "source": "https://git.drupalcode.org/project/rules"
+            "source": "https://git.drupalcode.org/project/rules",
+            "issues": "https://www.drupal.org/project/issues/rules"
         }
     },
     {
@@ -8942,21 +8945,15 @@
     },
     {
         "name": "drupal/typed_data",
-        "version": "1.0.0-alpha4",
-        "version_normalized": "1.0.0.0-alpha4",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/typed_data.git",
-            "reference": "8.x-1.0-alpha4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/typed_data-8.x-1.0-alpha4.zip",
-            "reference": "8.x-1.0-alpha4",
-            "shasum": "3f1db6d65098b03fc4ef9702305c3fd4ec88e0d5"
+            "reference": "520e6cd52f96cdc6c07e7fc4021819752df57c34"
         },
         "require": {
-            "drupal/core": "^8.7"
+            "drupal/core": "^8.7.7 || ^9"
         },
         "type": "drupal-module",
         "extra": {
@@ -8964,15 +8961,15 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.0-alpha4",
-                "datestamp": "1579072387",
+                "version": "8.x-1.0-alpha4+5-dev",
+                "datestamp": "1582352766",
                 "security-coverage": {
                     "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
+                    "message": "Dev releases are not covered by Drupal security advisories."
                 }
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
             "GPL-2.0+"
@@ -8987,10 +8984,11 @@
                 "homepage": "https://www.drupal.org/user/16747"
             }
         ],
-        "description": "Extends the core Typed Data API with new APIS and features.",
+        "description": "Extends the core Typed Data API with new APIs and features.",
         "homepage": "https://www.drupal.org/project/typed_data",
         "support": {
-            "source": "https://git.drupalcode.org/project/typed_data"
+            "source": "https://git.drupalcode.org/project/typed_data",
+            "issues": "https://www.drupal.org/project/issues/typed_data"
         }
     },
     {
