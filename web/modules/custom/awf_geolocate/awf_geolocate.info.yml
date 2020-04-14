@@ -1,0 +1,7 @@
+name: AWF Geolocate
+type: module
+description: Get geolocation of user, based on their IP and modify site content accordingly.
+core: 8.x
+package: custom
+dependencies:
+  - smart_ip

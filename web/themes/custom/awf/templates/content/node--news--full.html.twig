@@ -82,17 +82,8 @@
 %}
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
-  <div class="content-wrapper-top">
-    <div>{{ node.createdtime | date('m/d/y') }}</div>
-    {% if content.field_tags_country|render|striptags %}
-      <div>{{ content.field_tags_country }}</div>
-    {% endif %}
-    {% if node.owner.field_display_name.value|render|striptags %}
-      <div>{{ node.owner.field_display_name.value }}</div>
-    {% endif %}
-  </div>
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_sidebar_item_paragraph', 'field_tags_country') }}
+    {{ content|without('field_sidebar_item_paragraph') }}
   </div>
   {% if author_about|render|striptags %}
     <div class="user">
