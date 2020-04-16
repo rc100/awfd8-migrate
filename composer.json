@@ -90,6 +90,7 @@
         "drupal/views_bulk_operations": "^3.3",
         "drupal/views_data_export": "^1.0@beta",
         "drupal/webform": "^5.5",
+        "drupal/workbench_email": "^1.6",
         "drupal/workflow": "^1.1",
         "drupal/workflow_ui": "^1.1",
         "drupal/xmlsitemap": "^1.0@alpha",
