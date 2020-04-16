@@ -2,7 +2,7 @@ data_source: maxmind_geoip2_bin_db
 roles_to_geolocate:
   anonymous: anonymous
   authenticated: authenticated
-  administrator: '0'
+  administrator: administrator
   editor: '0'
   blogger: '0'
   junior_administrator: '0'
@@ -11,9 +11,9 @@ roles_to_geolocate:
   communications: '0'
   media_relations: '0'
   partner_administration: '0'
-save_user_location_creation: true
+save_user_location_creation: false
 roles_in_debug_mode:
-  anonymous: false
+  anonymous: true
   authenticated: false
   administrator: false
   editor: false
@@ -25,7 +25,7 @@ roles_in_debug_mode:
   media_relations: false
   partner_administration: false
 roles_in_debug_mode_ip:
-  anonymous: ''
+  anonymous: 185.217.117.229
   authenticated: ''
   administrator: ''
   editor: ''
@@ -37,7 +37,7 @@ roles_in_debug_mode_ip:
   media_relations: ''
   partner_administration: ''
 allowed_pages: ''
-eu_visitor_dont_save: true
+eu_visitor_dont_save: false
 timezone_format: identifier
 _core:
   default_config_hash: 9Cx1wODaajnKKoHf-A1qO1Kh9Rgsbey-_19WUFDZPZA

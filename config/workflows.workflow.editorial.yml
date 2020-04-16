@@ -21,6 +21,11 @@ type_settings:
       published: false
       default_revision: false
       weight: -5
+    needs_review:
+      published: false
+      default_revision: false
+      label: 'Needs Review'
+      weight: 6
     published:
       label: Published
       published: true
@@ -52,6 +57,12 @@ type_settings:
       from:
         - draft
         - published
+    needs_approval:
+      label: 'Needs Approval'
+      from:
+        - draft
+      to: needs_review
+      weight: 5
     publish:
       label: Publish
       to: published

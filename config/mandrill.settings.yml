@@ -14,6 +14,6 @@ mandrill_mail_key_blacklist: ''
 mandrill_process_async: false
 _core:
   default_config_hash: 1voH1sN6U7SgNMXT8tdbT3CU2TtoqtB_xIKmn8i0VnM
-mandrill_from_email: seangleason720@yahoo.com
-mandrill_from_name: 'Sean gleason'
+mandrill_from_email: jlouden@awf.org
+mandrill_from_name: Testing
 mandrill_analytics_domains: ''

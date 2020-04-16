@@ -8,6 +8,15 @@ dependencies:
     - node.type.news
   module:
     - content_moderation
+    - workbench_email
+  enforced:
+    config:
+      - workbench_email.workbench_email_template.content_update_notification_need
+third_party_settings:
+  workbench_email:
+    workbench_email_templates:
+      needs_review:
+        content_update_notification_need: content_update_notification_need
 id: legacy_workflow
 label: 'Legacy Workflow'
 type: content_moderation
@@ -57,12 +66,6 @@ type_settings:
         - published
       to: published
       weight: -1
-    publish_direct:
-      label: 'Publish Direct'
-      from:
-        - draft
-      to: published
-      weight: 4
   entity_types:
     node:
       - blog

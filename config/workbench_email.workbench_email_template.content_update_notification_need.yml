@@ -1,0 +1,25 @@
+uuid: 4b36315c-5255-4fe0-a56b-f318af85f9fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+    - node.type.career
+    - node.type.news
+id: content_update_notification_need
+label: 'Content Update Notification - Needs Review'
+subject: 'Content Update Notification - Needs Review'
+recipient_types:
+  fixed_email:
+    id: fixed_email
+    provider: workbench_email
+    status: true
+    settings:
+      recipients: sean.gleason@u.group
+bundles:
+  'node:blog': 'node:blog'
+  'node:career': 'node:career'
+  'node:news': 'node:news'
+body:
+  value: 'Please notice the content [node:title] has been moved to Needs Review state. '
+  format: plain_text
