@@ -43,9 +43,11 @@ dependencies:
     - field.field.node.species.field_weight
     - image.style.vertical_image
     - node.type.species
+    - responsive_image.styles.species_image
   module:
     - entity_reference_revisions
     - image
+    - responsive_image
     - text
     - user
     - viewfield
@@ -133,12 +135,12 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_image:
-    type: image
+    type: responsive_image
     weight: 6
     region: content
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: species_image
       image_link: ''
     third_party_settings: {  }
   field_main_image:
@@ -215,3 +217,4 @@ hidden:
   field_weight: true
   langcode: true
   links: true
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+uuid: 93d18ff1-11bb-4dd0-8cbc-c4ff2e4aed86
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_d_1440x440_
+    - image.style.hero_m_485x380_
+    - image.style.hero_t_745x380_
+  theme:
+    - awf
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_d_1440x440_
+  -
+    breakpoint_id: awf.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_t_745x380_
+  -
+    breakpoint_id: awf.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_m_485x380_
+breakpoint_group: awf
+fallback_image_style: '_original image_'

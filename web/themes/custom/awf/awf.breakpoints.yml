@@ -1,13 +1,13 @@
 awf.mobile:
   label: Mobile
-  mediaQuery: 'all and (max-width: 759px)'
+  mediaQuery: 'all and (max-width: 499px)'
   weight: 0
   multipliers:
     - 1x
     - 2x
 awf.tablet:
   label: Tablet
-  mediaQuery: 'all and (min-width: 760px) and (max-width: 1023px)'
+  mediaQuery: 'all and (min-width: 500px) and (max-width: 1023px)'
   weight: 2
   multipliers:
     - 1x
