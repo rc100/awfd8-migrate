@@ -1,0 +1,52 @@
+uuid: 7e534d4d-d031-415f-a042-bd1e28f5b9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_ip
+name: detect_eu
+label: detect_eu
+group: geolocation
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  countries:
+    id: countries
+    countries:
+      AT: AT
+      BE: BE
+      BG: BG
+      HR: HR
+      CY: CY
+      CZ: CZ
+      DK: DK
+      EE: EE
+      FI: FI
+      FR: FR
+      DE: DE
+      GR: GR
+      HU: HU
+      IE: IE
+      IT: IT
+      LV: LV
+      LT: LT
+      LU: LU
+      MT: MT
+      NL: NL
+      PL: PL
+      PT: PT
+      RO: RO
+      SK: SK
+      SI: SI
+      ES: ES
+      SE: SE
+    negate: '0'
+    uuid: fcb3ea84-aeca-4928-a397-67f016a7bf22
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: in-eu
+    saved: false
+weight: 0

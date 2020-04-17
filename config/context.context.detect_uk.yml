@@ -1,0 +1,26 @@
+uuid: 00a8e6a9-1d7b-46cf-9569-d9e13b7b044d
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_ip
+name: detect_uk
+label: detect_uk
+group: geolocation
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  countries:
+    id: countries
+    countries:
+      GB: GB
+    negate: '0'
+    uuid: 2150fcd4-29c4-4dea-8cf6-88850d14d715
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: in-uk
+    saved: false
+weight: 0
