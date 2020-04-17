@@ -1,0 +1,17 @@
+uuid: a837cbd0-bb5b-4f70-9084-560e4d22b6f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: species_image_t_868x986_
+label: 'Species Image (T 868x986)'
+effects:
+  5135e035-0d0c-4863-842c-1096d45bac4d:
+    uuid: 5135e035-0d0c-4863-842c-1096d45bac4d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 868
+      height: 986
+      crop_type: focal_point

@@ -1,0 +1,24 @@
+uuid: 259232b6-0015-4ff2-beed-e831143aeda9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.species_image
+    - image.style.species_image_t_868x986_
+  theme:
+    - awf
+id: species_image
+label: 'Species Image'
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: species_image
+  -
+    breakpoint_id: awf.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: species_image_t_868x986_
+breakpoint_group: awf
+fallback_image_style: species_image

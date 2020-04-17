@@ -5,7 +5,7 @@ dependencies:
   module:
     - focal_point
 name: vertical_image
-label: 'Vertical Image (515x600)'
+label: 'Vertical Image (T 515x600)'
 effects:
   c4b1a643-0e3f-43ee-ae68-b11383cf71d8:
     uuid: c4b1a643-0e3f-43ee-ae68-b11383cf71d8
