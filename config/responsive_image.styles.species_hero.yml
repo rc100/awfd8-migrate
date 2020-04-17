@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.hero_d_1440x750_
-    - image.style.hero_m_400x750_
-    - image.style.hero_t_760x750_
+    - image.style.hero_m_485x380_
+    - image.style.species_hero_d_1440x750_
+    - image.style.species_hero_t_760x750_
   theme:
     - awf
 id: species_hero
@@ -15,16 +15,16 @@ image_style_mappings:
     breakpoint_id: awf.desktop
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: hero_d_1440x750_
+    image_mapping: species_hero_d_1440x750_
   -
     breakpoint_id: awf.tablet
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: hero_t_760x750_
+    image_mapping: species_hero_t_760x750_
   -
     breakpoint_id: awf.mobile
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: hero_m_400x750_
+    image_mapping: hero_m_485x380_
 breakpoint_group: awf
 fallback_image_style: '_original image_'
