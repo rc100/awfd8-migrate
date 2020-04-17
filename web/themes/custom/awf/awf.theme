@@ -93,59 +93,6 @@ function awf_preprocess_html(&$variables) {
   $variables['brightedge_head_open'] = $be_ixf->getHeadOpen();
   $variables['brightedge_body_open'] = $be_ixf->getBodyOpen();
   $variables['brightedge_body_close'] = $be_ixf->close();
-
-  // Geolocation functionality (using awf_geolocation module).
-  if (function_exists('awf_geolocate_user_in_uk')) {
-    $in_uk = awf_geolocate_user_in_uk();
-
-    // Add 'in-uk' class to <body> if user is in the UK (based on their IP).
-    if ($in_uk) {
-      $variables['attributes']['class'][] = 'in-uk';
-    }
-  }
-
-  // Add 'in-eu' class to <body> if user is in the EU.
-  if (function_exists('awf_geolocate_user_in_eu')) {
-    $in_eu = awf_geolocate_user_in_eu();
-
-    if ($in_eu) {
-      $variables['attributes']['class'][] = 'in-eu';
-    }
-  }
-}
-
-/**
- * Implements template_preprocess_page().
- */
-function awf_preprocess_page(&$variables) {
-  $variables['donate_url'] = 'https://secure.awf.org/';
-
-  // Geolocation functionality (using awf_geolocation module).
-  if (function_exists('awf_geolocate_user_in_uk')) {
-    $in_uk = awf_geolocate_user_in_uk();
-
-    // Override Donate URL if user is in the UK.
-    if ($in_uk) {
-      $variables['donate_url'] = 'https://secure.awf.org/donate-uk';
-    }
-  }
-}
-
-/**
- * Implements template_preprocess_page().
- */
-function awf_preprocess_region(&$variables) {
-  // Geolocation functionality (using awf_geolocation module).
-  $variables['in_uk'] = '';
-
-  if (function_exists('awf_geolocate_user_in_uk')) {
-    $in_uk = awf_geolocate_user_in_uk();
-
-    // Add template variable indicating if user is in the UK.
-    if ($in_uk) {
-      $variables['in_uk'] = TRUE;
-    }
-  }
 }
 
 /**
