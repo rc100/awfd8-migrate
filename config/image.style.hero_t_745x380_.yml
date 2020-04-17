@@ -1,0 +1,17 @@
+uuid: d3879e88-9c68-432e-b371-036f46808ae9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_t_745x380_
+label: 'Hero (T 745x380)'
+effects:
+  b5d3f105-bedf-47a1-b167-4a6c371764b4:
+    uuid: b5d3f105-bedf-47a1-b167-4a6c371764b4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 745
+      height: 380
+      crop_type: focal_point

@@ -1,0 +1,30 @@
+uuid: 2503bfd8-503c-4098-a60e-30f1ad9c993f
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_d_1440x750_
+    - image.style.hero_m_400x750_
+    - image.style.hero_t_760x750_
+  theme:
+    - awf
+id: species_hero
+label: 'Species Hero'
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_d_1440x750_
+  -
+    breakpoint_id: awf.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_t_760x750_
+  -
+    breakpoint_id: awf.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_m_400x750_
+breakpoint_group: awf
+fallback_image_style: '_original image_'

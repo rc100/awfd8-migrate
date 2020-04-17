@@ -41,11 +41,13 @@ dependencies:
     - field.field.node.species.field_vertical_image
     - field.field.node.species.field_weight
     - node.type.species
+    - responsive_image.styles.vertical_image
   module:
     - entity_reference_revisions
     - file
     - image
     - metatag
+    - responsive_image
     - text
     - user
     - viewfield
@@ -143,10 +145,10 @@ content:
     weight: 21
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: horizontal_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_image:
     weight: 16
@@ -169,10 +171,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: species_hero
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_meta_tags:
     weight: 12
@@ -241,10 +243,10 @@ content:
     weight: 22
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: vertical_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
 hidden:
   body: true
@@ -263,3 +265,4 @@ hidden:
   field_weight: true
   langcode: true
   links: true
+  search_api_excerpt: true

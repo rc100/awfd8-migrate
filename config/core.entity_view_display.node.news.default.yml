@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.news.field_tags_region
     - field.field.node.news.field_view_more
     - node.type.news
+    - responsive_image.styles.news_image
   module:
     - datetime
     - field_group
@@ -28,6 +29,7 @@ dependencies:
     - image
     - link
     - metatag
+    - responsive_image
     - text
     - user
 third_party_settings:
@@ -86,10 +88,10 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: news_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_news_files:
     weight: 5

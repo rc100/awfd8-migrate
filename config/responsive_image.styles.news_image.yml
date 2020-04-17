@@ -1,0 +1,24 @@
+uuid: 7f0815b8-de49-4859-a699-3800dd720985
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.page_news_featured_image_d_656x_
+    - image.style.page_news_featured_image_m_405x247_
+  theme:
+    - awf
+id: news_image
+label: 'News Image'
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: page_news_featured_image_d_656x_
+  -
+    breakpoint_id: awf.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: page_news_featured_image_m_405x247_
+breakpoint_group: awf
+fallback_image_style: page_news_featured_image_d_656x_

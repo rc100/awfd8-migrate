@@ -17,12 +17,15 @@ dependencies:
     - node.type.landscape
     - node.type.project
     - node.type.species
+    - responsive_image.styles.hero
+    - responsive_image.styles.species_hero
     - taxonomy.vocabulary.landing_page_types
   content:
     - 'taxonomy_term:landing_page_types:d5ca32ec-b640-4481-929d-ce74a8e1bb6d'
   module:
     - image
     - node
+    - responsive_image
     - taxonomy
     - text
     - user
@@ -132,9 +135,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: ''
+            responsive_image_style: hero
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -1409,9 +1412,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: ''
+            responsive_image_style: species_hero
             image_link: ''
           group_column: ''
           group_columns: {  }

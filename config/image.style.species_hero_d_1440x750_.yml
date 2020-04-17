@@ -1,0 +1,17 @@
+uuid: 722ec12f-c968-4760-9f89-18ee830e7d25
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: species_hero_d_1440x750_
+label: 'Species Hero (D 1440x750)'
+effects:
+  cf50f5f0-abba-4274-abdf-de60e3cd885f:
+    uuid: cf50f5f0-abba-4274-abdf-de60e3cd885f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 750
+      crop_type: focal_point

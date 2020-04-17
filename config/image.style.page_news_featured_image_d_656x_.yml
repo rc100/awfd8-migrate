@@ -1,0 +1,17 @@
+uuid: 42e85982-28b8-428b-93fc-38a0f2e4878b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: page_news_featured_image_d_656x_
+label: 'Page News Featured Image (D 656x400)'
+effects:
+  33344823-68d4-4fb4-b7f2-4b17c5113716:
+    uuid: 33344823-68d4-4fb4-b7f2-4b17c5113716
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 656
+      height: 400
+      crop_type: focal_point

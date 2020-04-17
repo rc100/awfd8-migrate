@@ -5,7 +5,7 @@ dependencies:
   module:
     - focal_point
 name: full_cta
-label: 'Full CTA (1440x400)'
+label: 'Full CTA (D 1440x400)'
 effects:
   030f9119-e53a-4143-b6bc-33e60af30b3d:
     uuid: 030f9119-e53a-4143-b6bc-33e60af30b3d

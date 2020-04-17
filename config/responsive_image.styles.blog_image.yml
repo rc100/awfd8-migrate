@@ -1,0 +1,24 @@
+uuid: b1465666-8d8e-4d2f-ac79-73bb1b267373
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.page_news_featured_image_d_656x_
+    - image.style.page_news_featured_image_m_405x247_
+  theme:
+    - awf
+id: blog_image
+label: 'Blog Image'
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: page_news_featured_image_d_656x_
+  -
+    breakpoint_id: awf.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: page_news_featured_image_m_405x247_
+breakpoint_group: awf
+fallback_image_style: page_news_featured_image_d_656x_
