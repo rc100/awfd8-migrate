@@ -11,11 +11,11 @@ roles_to_geolocate:
   communications: '0'
   media_relations: '0'
   partner_administration: '0'
-save_user_location_creation: false
+save_user_location_creation: true
 roles_in_debug_mode:
   anonymous: true
-  authenticated: false
-  administrator: false
+  authenticated: true
+  administrator: true
   editor: false
   blogger: false
   junior_administrator: false
@@ -26,8 +26,8 @@ roles_in_debug_mode:
   partner_administration: false
 roles_in_debug_mode_ip:
   anonymous: 185.217.117.229
-  authenticated: ''
-  administrator: ''
+  authenticated: 185.217.117.229
+  administrator: 185.217.117.229
   editor: ''
   blogger: ''
   junior_administrator: ''
