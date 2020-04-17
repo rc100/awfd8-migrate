@@ -1,0 +1,17 @@
+uuid: 7841f0b2-ff57-406e-8a0d-768053f4202d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: vertical_image_405x472_
+label: 'Vertical Image (D 405x472)'
+effects:
+  c3042aee-bf8b-4a1e-8510-75996a7b88a6:
+    uuid: c3042aee-bf8b-4a1e-8510-75996a7b88a6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 405
+      height: 472
+      crop_type: focal_point

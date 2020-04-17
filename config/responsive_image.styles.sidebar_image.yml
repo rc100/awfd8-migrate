@@ -1,9 +1,11 @@
 uuid: 5d3bc75d-bca6-43ba-b9b9-ab71968cc859
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  theme:
+    - awf
 id: sidebar_image
 label: 'Sidebar Image'
 image_style_mappings: {  }
-breakpoint_group: responsive_image
+breakpoint_group: awf
 fallback_image_style: '_original image_'

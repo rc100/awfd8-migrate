@@ -1,0 +1,17 @@
+uuid: 376aae6a-ea24-47a6-966a-2b8e8e23d36a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: species_image
+label: 'Species Image (D 540x614)'
+effects:
+  8494bb34-b6f3-47c4-b7d9-5732958c3639:
+    uuid: 8494bb34-b6f3-47c4-b7d9-5732958c3639
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 540
+      height: 614
+      crop_type: focal_point

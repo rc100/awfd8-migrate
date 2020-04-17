@@ -1,0 +1,25 @@
+uuid: 90164f45-67f4-4862-a366-9567d840cf4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.horizontal_image
+    - image.style.vertical_image
+    - image.style.vertical_image_405x472_
+  theme:
+    - awf
+id: horizontal_image
+label: 'Horizontal Image'
+image_style_mappings:
+  -
+    breakpoint_id: awf.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: vertical_image_405x472_
+  -
+    breakpoint_id: awf.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: vertical_image
+breakpoint_group: awf
+fallback_image_style: horizontal_image
