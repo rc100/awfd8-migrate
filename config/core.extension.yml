@@ -57,6 +57,7 @@ module:
   file_browser: 0
   filter: 0
   focal_point: 0
+  google_analytics: 0
   google_tag: 0
   help: 0
   history: 0
@@ -104,6 +105,7 @@ module:
   redirect: 0
   redirect_domain: 0
   reroute_email: 0
+  responsive_image: 0
   rest: 0
   search_api: 0
   search_api_attachments: 0
