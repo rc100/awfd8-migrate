@@ -3,19 +3,19 @@ roles_to_geolocate:
   anonymous: anonymous
   authenticated: authenticated
   administrator: administrator
-  editor: '0'
-  blogger: '0'
-  junior_administrator: '0'
-  human_resources: '0'
-  junior_content_editor_our_staff: '0'
-  communications: '0'
-  media_relations: '0'
-  partner_administration: '0'
+  editor: editor
+  blogger: blogger
+  junior_administrator: junior_administrator
+  human_resources: human_resources
+  junior_content_editor_our_staff: junior_content_editor_our_staff
+  communications: communications
+  media_relations: media_relations
+  partner_administration: partner_administration
 save_user_location_creation: true
 roles_in_debug_mode:
-  anonymous: true
-  authenticated: true
-  administrator: true
+  anonymous: false
+  authenticated: false
+  administrator: false
   editor: false
   blogger: false
   junior_administrator: false

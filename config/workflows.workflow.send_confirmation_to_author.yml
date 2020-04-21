@@ -1,0 +1,50 @@
+uuid: 2f4fd303-9cae-4a85-a5b4-fac6d3d92aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  enforced:
+    config:
+      - workbench_email.workbench_email_template.publish_confirmation_to_author
+  module:
+    - content_moderation
+    - workbench_email
+third_party_settings:
+  workbench_email:
+    workbench_email_templates:
+      publish:
+        publish_confirmation_to_author: publish_confirmation_to_author
+id: send_confirmation_to_author
+label: 'Send Confirmation to Author'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 0
+    needs_review:
+      published: false
+      default_revision: false
+      label: 'Needs Review'
+      weight: 2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 1
+  transitions:
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - needs_review
+        - published
+  entity_types:
+    node:
+      - article
+  default_moderation_state: draft

@@ -5,12 +5,12 @@ theme: current
 modules:
   mandrill:
     none:
-      formatter: mandrill_test_mail
-      sender: mandrill_test_mail
+      formatter: mandrill_mail
+      sender: mandrill_mail
   webform:
     none:
-      formatter: mandrill_test_mail
-      sender: mandrill_test_mail
+      formatter: mandrill_mail
+      sender: mandrill_mail
   user:
     none:
       formatter: mandrill_mail

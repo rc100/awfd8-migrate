@@ -1,0 +1,61 @@
+uuid: 398c4c16-4429-43d5-8bd4-ffba219c197f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.blog
+    - node.type.news
+id: publish_confirmation_to_author
+label: 'Publish Confirmation to Author'
+subject: 'AWF Website: Published'
+recipient_types:
+  author:
+    id: author
+    provider: workbench_email
+    status: true
+    settings: {  }
+  entity_reference_user:
+    id: entity_reference_user
+    provider: workbench_email
+    status: true
+    settings:
+      fields:
+        - 'node:revision_uid'
+        - 'node:uid'
+  last_revision_author:
+    id: last_revision_author
+    provider: workbench_email
+    status: true
+    settings: {  }
+  fixed_email:
+    id: fixed_email
+    provider: workbench_email
+    status: true
+    settings:
+      recipients: ''
+  role:
+    id: role
+    provider: workbench_email
+    status: true
+    settings:
+      roles: {  }
+  email:
+    id: email
+    provider: workbench_email
+    status: true
+    settings:
+      fields: {  }
+  roles_with_access:
+    id: roles_with_access
+    provider: workbench_email
+    status: true
+    settings:
+      roles: {  }
+bundles:
+  'node:article': 'node:article'
+  'node:blog': 'node:blog'
+  'node:news': 'node:news'
+body:
+  value: "<p>Hi,&nbsp;The story was published on the website. Here's the link:</p>\r\n"
+  format: full_html
