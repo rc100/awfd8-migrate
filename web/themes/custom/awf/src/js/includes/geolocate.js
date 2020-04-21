@@ -40,7 +40,7 @@
         $('#footer-message .footer-message-inner').text('African Wildlife Foundation is a registered charity in England and Wales 1128297 and a company limited by guarantee registered in England and Wales 6302494');
       }
       // Hide newsletter signup form for users in the EU.
-      if ($('body').hasClass('in-eu')) {
+      if ($('body').hasClass('in-eu') || $('body').hasClass('in-uk')) {
         $('#block-awf-webform-newsletter').hide();
       }
     }
