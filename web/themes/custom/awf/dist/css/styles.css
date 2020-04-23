@@ -2086,10 +2086,11 @@ ul.gray-bullets li {
       line-height: 1.5;
       display: block;
       margin-bottom: 0;
-      color: #e97200; }
+      color: #e97200;
+      text-decoration: none; }
       .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:hover h4,
       .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a:focus h4 {
-        text-decoration: underline; }
+        text-decoration: underline !important; }
       .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a .field--listing-title {
         color: #e97200 !important; }
         .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a .field--listing-title:hover, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 > .view-content a .field--listing-title:focus {
@@ -2276,7 +2277,7 @@ ul.gray-bullets li {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
   .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .views-row:hover .field--listing-title, .view-homepage-multi-view.view-id-homepage_multi_view.view-display-id-block_1 .views-row:focus .field--listing-title {
-    text-decoration: underline; }
+    text-decoration: none; }
 
 .section-campaign .inner-wrapper {
   display: -webkit-box;
