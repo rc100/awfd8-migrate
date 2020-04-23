@@ -305,12 +305,15 @@
     @include view-field-field-date;
   }
 
+  .field--listing-title {
+    font-weight: 400;
+  }
+
   .field--listing-date,
   .views-field.views-field-type,
   .field--listing-title {
     margin-bottom: 12px;
     display: block;
-
   }
 
   .field--type-image {
