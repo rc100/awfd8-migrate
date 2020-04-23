@@ -65,10 +65,11 @@
       display: block;
       margin-bottom: 0;
       color: $highlight;
+      text-decoration: none;
 
       &:hover h4,
       &:focus h4 {
-        text-decoration: underline;
+        text-decoration: underline !important;
       }
 
       .field--listing-title {
@@ -355,7 +356,7 @@
       }
 
       .field--listing-title {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
