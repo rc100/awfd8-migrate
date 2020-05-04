@@ -50,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a31b9ef0c3a12001239dcd5&product=inline-share-buttons"></script>
     <!-- Quantcast Choice. Consent Manager Tag -->
     <script type="text/javascript" , async=true>
-      var env = 'dev'; // Change me for different environments!
+      var env = 'live'; // Change me for different environments!
       var __cmp = (function () {
         return typeof (__cmp) == "function" ? __cmp : function (c) {
           var b = arguments;
@@ -118,9 +118,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           clearInterval(cmpInterval);
           if (negativeSignal) {
               if(env == "dev") {
-                window.location = "http://dev.awf.org";
+                window.location = "https://dev.awf.org";
               } else if(env == "stage") {
-                window.location = "http://stage.awf.org";
+                window.location = "https://test.awf.org";
               } else {
                 window.location = "https://www.awf.org";
               }
