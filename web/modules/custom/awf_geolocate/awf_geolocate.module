@@ -5,59 +5,69 @@
  * Contains awf_geolocate.module.
  */
 
-use Drupal\smart_ip\SmartIp;
-
 /**
- * Check if current user is in the UK.
+ * Check if the user is in the UK or EU.
+ *
+ * Adapted js-based geolocation check from eu_cookie_compliance contrib,
+ * in order to handle caching issues. From eu_cookie_compliance_user_in_eu().
  */
-function awf_geolocate_user_in_uk($ip = NULL) {
+function awf_geolocate_user_in_uk_eu() {
+  $geoip_match_uk = FALSE;
+  $geoip_match_eu = FALSE;
+  $country_code = NULL;
 
-  // @todo Debug only - force IP to be from UK.
-  //$ip = '185.86.151.11';
+  $uk_countries = [
+    'GB', 'UK',
+  ];
 
-  $country_code = awf_geolocate_get_country_code($ip);
-  $result = ($country_code == 'GB') ? TRUE : FALSE;
+  // Removed "NULL" from this array.
+  $eu_countries = [
+    'AT', 'AX', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'EL', 'ES',
+    'EU', 'FI', 'FR', 'GB', 'GF', 'GI', 'GP', 'GR', 'HR', 'HU', 'IE', 'IS',
+    'IT', 'LI', 'LT', 'LU', 'LV', 'ME', 'MF', 'MQ', 'MT', 'NL', 'NO', 'PL',
+    'PT', 'RE', 'RO', 'SE', 'SI', 'SK', 'YT', 'UK',
+  ];
 
-  return $result;
-}
+  $ip_address = Drupal::request()->getClientIp();
 
-/**
- * Check if an IP address is in the EU (defaults to IP of current request).
- * This is not currently possible w/ the GeoIP contrib.
- */
-function awf_geolocate_user_in_eu($ip = NULL) {
+  // Try to get country_code by php extension.
+  //$country_code = extension_loaded('geoip') ? geoip_country_code_by_name($ip_address) : '';
 
-  if (empty($ip)) {
-    $ip = \Drupal::request()->getClientIp();
+  // Try to get country_code by smart_ip module.
+  if (Drupal::moduleHandler()->moduleExists('smart_ip')) {
+    $location_service = \Drupal::service('smart_ip.smart_ip_location');
+    $smart_ip_session = $location_service->get();
+    $country_code = isset($smart_ip_session['countryCode']) ? $smart_ip_session['countryCode'] : NULL;
   }
 
-  // @todo Debug only - force IP to be from EU or not (UK).
-  //$ip = '185.86.151.11'; // UK ip.
-  //$ip = '176.56.238.3'; // EU ip.
+  // Try to get country_code by geoip module.
+  // elseif (Drupal::moduleHandler()->moduleExists('geoip')) {
+  //   $geo_location_service = \Drupal::service('geoip.geolocation');
+  //   $geo_ip_session = $geo_location_service->geolocate($ip_address);
+  //   $country_code = !empty($geo_ip_session) ? $geo_ip_session : NULL;
+  // }
 
-  // Get EU info from IP, using Smart IP contrib.
-  $location = SmartIp::query($ip);
-  $in_eu = (isset($location['isEuCountry']) && $location['isEuCountry']) ? TRUE : FALSE;
+  // If the CloudFlare provided country header is available, use it as a
+  // fallback. See:
+  // https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-
+  // if (empty($country_code) && (isset($_SERVER['HTTP_CF_IPCOUNTRY']))) {
+  //   $country_code = $_SERVER['HTTP_CF_IPCOUNTRY'];
+  // }
 
-  return $in_eu;
-}
+  if (!empty($country_code)) {
+    if (in_array($country_code, $uk_countries)) {
+      $geoip_match_uk = TRUE;
+    }
 
-/**
- * Get the country code from an IP address (defaults to IP of current request).
- */
-function awf_geolocate_get_country_code($ip = NULL) {
-
-  if (empty($ip)) {
-    $ip = \Drupal::request()->getClientIp();
+    //if (in_array($country_code, $eu_countries) || $country_code == '' || $country_code == '-') {
+    if (in_array($country_code, $eu_countries)) {
+      $geoip_match_eu = TRUE;
+    }
   }
 
-  // Get country code from IP, using GeoIP contrib.
-  //$geolocator = \Drupal::service('geoip.geolocation');
-  //$country_code = $geolocator->geolocate($ip);
-
-  // Get country code from IP, using Smart IP contrib.
-  $location = SmartIp::query($ip);
-  $country_code = (isset($location['countryCode'])) ? $location['countryCode'] : NULL;
-
-  return $country_code;
+  return [
+    'country' => $country_code,
+    'in_uk'   => $geoip_match_uk,
+    'in_eu'   => $geoip_match_eu,
+  ];
 }
