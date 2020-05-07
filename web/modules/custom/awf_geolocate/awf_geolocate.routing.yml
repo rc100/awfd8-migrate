@@ -1,0 +1,2 @@
+route_callbacks:
+  - '\Drupal\awf_geolocate\Routing\CheckIfUkEuCountryJs::routes'
