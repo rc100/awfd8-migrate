@@ -33,16 +33,97 @@ if (file_exists($local_settings)) {
 }
 
 
-/**
- * Always install the 'standard' profile to stop the installer from
- * modifying settings.php.
+
+$cli = (php_sapi_name() === 'cli');
+
+ /**
+ * Pantheon-specific settings
  */
-$settings['install_profile'] = 'standard';
 
-$migration_connection = __DIR__ . "/settings.migrate-on-pantheon.php";
-if (file_exists($migration_connection) ) {
-	include $migration_connection;
+if (defined('PANTHEON_ENVIRONMENT')) {
+		
+  $variables = array (
+	  'https' => true,
+	  'domains' => 
+	  array (
+	    'canonical' => 'www.awf.org',
+	    'synonyms' => 
+	    array (
+	      0 => 'devawf-awfd8-sandbox.pantheonsite.io'
+	    ),
+	    'additional' => 
+	    array (
+	      0 => 'awf.org',
+	    ),
+	  ),
+	  'redis' => false,
+	);
+
+	// Extract Pantheon environmental configuration.
+	extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
+
+  if (PANTHEON_ENVIRONMENT != 'live') {
+    // Place for settings for the non-live environment
+
+  	if (isset($variables)) {
+      if (isset($variables['domains']['canonical'])) {
+        if (!$cli) {
+          $location = false;
+
+          // Get current protocol
+          $protocol = 'https';
+
+          if (aray_key_exists('https', $variables) && $variables['https']) {
+            if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
+              $protocol = 'https';
+            }
+          }
+
+          // Default redirect
+          $redirect = "$protocol://{$variables['domains']['canonical']}{$_SERVER['REQUEST_URI']}";
+
+          if ($_SERVER['HTTP_HOST'] == $variables['domains']['canonical']) {
+            $redirect = false;
+          }
+
+          if (isset($variables['domains']['synonyms']) && is_array($variables['domains']['synonyms'])) {
+            if (in_array($_SERVER['HTTP_HOST'], $variables['domains']['synonyms'])) {
+              $redirect = false;
+            }
+          }
+
+          if (strpos($_SERVER['REQUEST_URI'], '/blog/wp-content/uploads/') !== FALSE) {
+            $_SERVER['REQUEST_URI'] = str_replace('/blog/wp-content/uploads/','/sites/default/files/pictures/',$_SERVER['REQUEST_URI']);
+            $redirect = "$protocol://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; 
+          }
+
+          if ($redirect) {
+            header("HTTP/1.0 301 Moved Permanently");
+            header("Location: $redirect");
+            exit();
+          }
+        }
+      }
+    }
+
+
+  }
+
+  if (PANTHEON_ENVIRONMENT == 'dev') {
+
+  }
+
+  if (PANTHEON_ENVIRONMENT == 'test') {
+    // Place for settings for the test environment
+  }
+  if (PANTHEON_ENVIRONMENT == 'live') {
+    // Place for settings for the live environment
+
+    // Redirect to canonical domain
+  }
+
+
+
+
 }
-
-
 
