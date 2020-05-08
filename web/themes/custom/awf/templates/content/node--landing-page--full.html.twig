@@ -122,7 +122,7 @@
 
     <article{{ attributes.addClass(classes) }}>
       {{ content|without('field_solution_paragraph', 'body', 'field_challenges', 'field_bullet_point_paragraph','field_sidebar_item_paragraph', 'field_description', 'field_solutions', 'field_tags_policy', 'field_tags_landing_page', 'field_tags_community', 'field_overview_type') }}
-      {{ drupal_entity('webform', 'get_involved') }}
+     {#  {{ drupal_entity('webform', 'get_involved') }} #}
     </article>
 
   <!-- If there is a sidebar, enable two col styles-->
