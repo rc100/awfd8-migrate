@@ -33,9 +33,6 @@ if (file_exists($local_settings)) {
 }
 
 
-
-$cli = (php_sapi_name() === 'cli');
-
  /**
  * Pantheon-specific settings
  */
@@ -45,17 +42,17 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   $variables = array (
 	  'https' => true,
 	  'domains' => 
-	  array (
-	    'canonical' => 'www.awf.org',
-	    'synonyms' => 
-	    array (
-	      0 => 'devawf-awfd8-sandbox.pantheonsite.io'
-	    ),
-	    'additional' => 
-	    array (
-	      0 => 'awf.org',
-	    ),
-	  ),
+  	  array (
+  	    'canonical' => 'www.awf.org',
+  	    'synonyms' => 
+  	    array (
+  	      0 => 'devawf-awfd8-sandbox.pantheonsite.io'
+  	    ),
+  	    'additional' => 
+  	    array (
+  	      0 => 'awf.org',
+  	    ),
+  	  ),
 	  'redis' => false,
 	);
 
@@ -67,45 +64,44 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
   	if (isset($variables)) {
       if (isset($variables['domains']['canonical'])) {
-        if (!$cli) {
-          $location = false;
 
-          // Get current protocol
-          $protocol = 'https';
+        $location = false;
 
-          if (aray_key_exists('https', $variables) && $variables['https']) {
-            if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
-              $protocol = 'https';
-            }
-          }
+        // Get current protocol
+        $protocol = 'http';
 
-          // Default redirect
-          $redirect = "$protocol://{$variables['domains']['canonical']}{$_SERVER['REQUEST_URI']}";
-
-          if ($_SERVER['HTTP_HOST'] == $variables['domains']['canonical']) {
-            $redirect = false;
-          }
-
-          if (isset($variables['domains']['synonyms']) && is_array($variables['domains']['synonyms'])) {
-            if (in_array($_SERVER['HTTP_HOST'], $variables['domains']['synonyms'])) {
-              $redirect = false;
-            }
-          }
-
-          if (strpos($_SERVER['REQUEST_URI'], '/blog/wp-content/uploads/') !== FALSE) {
-            $_SERVER['REQUEST_URI'] = str_replace('/blog/wp-content/uploads/','/sites/default/files/pictures/',$_SERVER['REQUEST_URI']);
-            $redirect = "$protocol://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; 
-          }
-
-          if ($redirect) {
-            header("HTTP/1.0 301 Moved Permanently");
-            header("Location: $redirect");
-            exit();
+        if (array_key_exists('https', $variables) && $variables['https']) {
+          if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
+            $protocol = 'https';
           }
         }
+
+        // Default redirect
+        $redirect = "$protocol://{$variables['domains']['canonical']}{$_SERVER['REQUEST_URI']}";
+
+        if ($_SERVER['HTTP_HOST'] == $variables['domains']['canonical']) {
+          $redirect = false;
+        }
+
+        if (isset($variables['domains']['synonyms']) && is_array($variables['domains']['synonyms'])) {
+          if (in_array($_SERVER['HTTP_HOST'], $variables['domains']['synonyms'])) {
+            $redirect = false;
+          }
+        }
+
+        if (strpos($_SERVER['REQUEST_URI'], '/blog/wp-content/uploads/') !== FALSE) {
+          $_SERVER['REQUEST_URI'] = str_replace('/blog/wp-content/uploads/','/sites/default/files/pictures/',$_SERVER['REQUEST_URI']);
+          $redirect = "$protocol://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; 
+        }
+
+        if ($redirect) {
+          header("HTTP/1.0 301 Moved Permanently");
+          header("Location: $redirect");
+          exit();
+        }
+
       }
     }
-
 
   }
 
