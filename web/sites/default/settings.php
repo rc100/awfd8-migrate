@@ -47,7 +47,10 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   	    'synonyms' => 
     	    array (
     	      0 => 'devawf-awfd8-sandbox.pantheonsite.io',
-            1 => 'dev-awfd8-sandbox.pantheonsite.io'
+            1 => 'dev-awfd8-sandbox.pantheonsite.io',
+            2 => 'test-awfd8-sandbox.pantheonsite.io',
+            3 => 'dev.awf.org',
+            4 => 'test.awf.org'
     	    ),
   	    'additional' => 
     	    array (
@@ -60,7 +63,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 	// Extract Pantheon environmental configuration.
 	extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
-  // Place for settings for the non-live environment
+  // Force redirects just on live site
 
 	if (isset($variables)) {
     if (isset($variables['domains']['canonical'])) {
